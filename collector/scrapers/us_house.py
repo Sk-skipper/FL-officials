@@ -1,10 +1,14 @@
 """U.S. House directory: https://www.house.gov/representatives"""
+import logging
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
 from collector.normalize import clean_text
 from collector.scrapers.base import BaseScraper
+from collector.scrapers.congress import add_house_photos, fetch_legislators
+
+logger = logging.getLogger(__name__)
 
 _DEFAULT_COLUMNS = ["district", "name", "party", "office room", "phone", "committee assignment"]
 
@@ -46,4 +50,9 @@ def parse_us_house(html: str, base_url: str, state: str = "Florida") -> list[dic
 
 class USHouseScraper(BaseScraper):
     def collect(self) -> list[dict]:
-        return self.fetch_and_parse(self.source_url, lambda html: parse_us_house(html, self.source_url))
+        records = self.fetch_and_parse(self.source_url, lambda html: parse_us_house(html, self.source_url))
+        try:
+            add_house_photos(records, fetch_legislators(self.client))
+        except Exception as exc:  # photos are a bonus: never lose the directory because they failed
+            logger.warning("Could not add U.S. House photos (%s: %s)", type(exc).__name__, exc)
+        return records

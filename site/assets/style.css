@@ -197,14 +197,14 @@ td .contact a { white-space: nowrap; overflow-wrap: normal; }
 
 .mini-list { list-style: none; margin: 12px 0 0; padding: 0; }
 .mini-list li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 0; border-top: 1px solid var(--border); }
-.mini-list li > div { min-width: 0; }
+.mini-list li > div { min-width: 0; flex: 1; }
 .mini-list a { font-weight: 600; }
 .mini-list p { font-size: 0.875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .mini-list > li > span { font-size: 0.875rem; flex-shrink: 0; }
 
 /* profile */
 .back { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; margin-bottom: 18px; }
-.profile-head { margin-bottom: 24px; }
+.profile-head { margin-bottom: 24px; display: flex; align-items: center; gap: 20px; }
 .profile-head .lede { margin-top: 8px; color: var(--muted); font-size: 1.15rem; }
 .profile-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: start; margin-top: 8px; }
 .rows { margin: 12px 0 0; }
@@ -218,6 +218,43 @@ td .contact a { white-space: nowrap; overflow-wrap: normal; }
 .contact-list li > svg { font-size: 20px; color: var(--muted); margin-top: 2px; }
 .contact-list li > div { min-width: 0; }
 .contact-list a { font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+
+/* portraits */
+.avatar { --s: 40px; position: relative; display: inline-flex; flex: none; align-items: center; justify-content: center; width: var(--s); height: var(--s); border-radius: 50%; overflow: hidden; background: var(--navy); color: #fff; font: 600 calc(var(--s) * 0.38) var(--sans); letter-spacing: 0.02em; box-shadow: 0 0 0 1px var(--border); user-select: none; }
+.avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 12%; background: var(--tint); }
+.avatar.blank { background: var(--tint); color: var(--navy); }
+.avatar.xs { --s: 30px; }
+.avatar.sm { --s: 36px; }
+.avatar.lg { --s: 60px; }
+.avatar.xl { --s: 112px; box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--border); }
+.name-cell { display: flex; align-items: center; gap: 10px; min-width: 0; }
+
+/* county map */
+.map-layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 20px; align-items: start; }
+.map-card { position: sticky; top: 16px; }
+.map-wrap { position: relative; width: 100%; max-width: 520px; margin: 0 auto; }
+.map-wrap svg { display: block; width: 100%; height: auto; }
+.county-shape { fill: var(--tint); stroke: #fff; stroke-width: 0.9; stroke-linejoin: round; cursor: pointer; outline: none; transition: fill 0.12s; }
+.county-shape.has-officials { fill: #c4d2e8; }
+.county-shape:hover { fill: #8aa5cf; }
+.county-shape:focus-visible { stroke: var(--focus); stroke-width: 3; }
+.county-shape.selected { fill: var(--navy); }
+.pins { position: absolute; inset: 0; pointer-events: none; }
+.pin { position: absolute; transform: translate(-50%, -50%); padding: 0; border: 2px solid #fff; border-radius: 50%; background: none; cursor: pointer; pointer-events: auto; box-shadow: 0 1px 4px rgba(19, 41, 75, 0.35); }
+.pin:hover { z-index: 2; transform: translate(-50%, -50%) scale(1.25); }
+.pin:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; }
+.map-note { margin-top: 12px; text-align: center; }
+.map-panel .panel-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 16px; }
+.panel-actions { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 16px; font-size: 0.9rem; font-weight: 600; }
+.link-button { padding: 0; border: 0; background: none; color: var(--navy-600); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.link-button:hover { color: var(--red); }
+.group { margin-top: 20px; font: 600 0.78rem var(--sans); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.people { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.person a { display: flex; align-items: center; gap: 12px; height: 100%; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+.person a:hover { border-color: var(--navy-600); box-shadow: 0 6px 18px rgba(19, 41, 75, 0.1); color: var(--text); }
+.person a > span:last-child { display: grid; gap: 2px; justify-items: start; min-width: 0; }
+.person-name { font: 600 1rem var(--serif); color: var(--navy); }
+.section-title { margin: 32px 0 14px; }
 
 /* counties */
 .county-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -277,4 +314,13 @@ td .contact a { white-space: nowrap; overflow-wrap: normal; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+@media (max-width: 860px) {
+  .map-layout { grid-template-columns: 1fr; }
+  .map-card { position: static; }
+}
+@media (max-width: 560px) {
+  .people { grid-template-columns: 1fr; }
+  .profile-head { flex-direction: column; align-items: flex-start; }
 }

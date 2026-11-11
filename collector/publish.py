@@ -23,7 +23,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from collector.geo import FLORIDA_COUNTIES
-from collector.normalize import normalize_email, normalize_party, normalize_phone, normalize_url, parse_district
+from collector.normalize import (
+    normalize_email,
+    normalize_party,
+    normalize_phone,
+    normalize_photo_url,
+    normalize_url,
+    parse_district,
+)
 from collector.validate import validate_record
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -53,12 +60,12 @@ NOT_YET_COVERED = [
 CSV_COLUMNS = [
     "id", "full_name", "first_name", "middle_name", "last_name", "office_title", "government_level",
     "selection_method", "party", "district", "jurisdiction", "county", "municipality", "counties",
-    "phone", "email", "official_website", "verification_status", "last_verified", "source_name", "source_url",
+    "phone", "email", "official_website", "photo_url", "verification_status", "last_verified", "source_name", "source_url",
 ]
 
 REQUIRED = {"full_name", "last_name", "office_title", "jurisdiction"}
 TEXT_FIELDS = {"full_name", "first_name", "middle_name", "last_name", "office_title", "jurisdiction", "municipality"}
-CORRECTABLE = TEXT_FIELDS | {"party", "district", "phone", "email", "official_website", "selection_method"}
+CORRECTABLE = TEXT_FIELDS | {"party", "district", "phone", "email", "official_website", "photo_url", "selection_method"}
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
@@ -97,6 +104,8 @@ def _correct(record: dict, fields: dict, record_id: str) -> None:
             clean = normalize_email(value)
         elif name == "official_website":
             clean = normalize_url(value)
+        elif name == "photo_url":
+            clean = normalize_photo_url(value)
         elif name == "party":
             clean = normalize_party(value)
         elif name == "selection_method":

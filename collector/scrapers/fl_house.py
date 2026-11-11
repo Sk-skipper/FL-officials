@@ -11,6 +11,7 @@ _MEMBER_HREF = re.compile(r"MemberId=(\d+)", re.I)
 _DISTRICT = re.compile(r"District:?\s*(\d{1,3})", re.I)
 _PARTY = re.compile(r"\b(Republican|Democratic|Democrat|No Party Affiliation|NPA|Independent)\b|\((R|D)\)", re.I)
 _HEADING = ["h1", "h2", "h3", "h4", "h5", "h6", "strong", "b"]
+_NOT_A_PORTRAIT = re.compile(r"logo|icon|placeholder|spacer|blank|pixel|default|no[-_]?(photo|image)", re.I)
 
 
 def _member_ids(node: Tag) -> set[str]:
@@ -39,6 +40,15 @@ def _name_from(card: Tag, link: Tag) -> str:
     return clean_text(link.get_text(" "))
 
 
+def _photo_from(card: Tag, base_url: str) -> str | None:
+    """The member's portrait: the first image in the card that is not an icon or placeholder."""
+    for img in card.find_all("img"):
+        src = (img.get("src") or img.get("data-src") or "").strip()
+        if src and not src.startswith("data:") and not _NOT_A_PORTRAIT.search(src):
+            return urljoin(base_url, src)
+    return None
+
+
 def parse_fl_house(html: str, base_url: str) -> list[dict]:
     """Each member is a card containing a link with MemberId=<n>, a name,
     a party and a district number."""
@@ -65,6 +75,7 @@ def parse_fl_house(html: str, base_url: str) -> list[dict]:
             "district": _DISTRICT.search(text).group(1),
             "jurisdiction": "Florida",
             "official_website": urljoin(base_url, link["href"]),
+            "photo_url": _photo_from(card, base_url),
             "source_url": base_url,
         }
     return list(records.values())

@@ -227,3 +227,39 @@ export function formatNumber(value) {
 export function plural(count, singular, pluralForm = `${singular}s`) {
   return `${formatNumber(count)} ${count === 1 ? singular : pluralForm}`;
 }
+
+/** Portraits are only shown from https addresses, so a page never mixes secure and insecure content. */
+export function photoUrl(url) {
+  return typeof url === "string" && /^https:\/\/[^\s]+$/i.test(url) ? url : null;
+}
+
+/** "Maria G. Castillo" -> "MC", used when a photo is missing or fails to load. */
+export function initials(name) {
+  const words = String(name || "")
+    .replace(/\b(?:jr|sr|ii|iii|iv)\b\.?/gi, "")
+    .split(/[\s,]+/)
+    .filter((word) => /^[A-Za-zÀ-ɏ]/.test(word));
+  if (!words.length) return "?";
+  const first = words[0][0];
+  const last = words.length > 1 ? words[words.length - 1][0] : "";
+  return (first + last).toUpperCase();
+}
+
+/**
+ * Who to show for a county on the map: officials tied to that county (`local`) and
+ * officials who represent the whole state (`statewide`). Each group is sorted by level, then name.
+ */
+export function countyRoster(records, county) {
+  const byLevel = (a, b) =>
+    LEVELS.indexOf(a.government_level) - LEVELS.indexOf(b.government_level) ||
+    String(a.last_name).localeCompare(String(b.last_name), "en");
+  return {
+    local: records.filter((r) => !r.statewide && inCounty(r, county)).sort(byLevel),
+    statewide: records.filter((r) => r.statewide).sort(byLevel),
+  };
+}
+
+/** How many officials are tied to each county (statewide officials are not counted). */
+export function countyCounts(records, counties) {
+  return Object.fromEntries(counties.map((name) => [name, records.filter((r) => !r.statewide && inCounty(r, name)).length]));
+}

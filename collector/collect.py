@@ -54,6 +54,7 @@ class SourceResult:
     status: str = "failed"
     found: int = 0
     kept: int = 0
+    with_photo: int = 0
     added: list = field(default_factory=list)
     removed: list = field(default_factory=list)
     changed: list = field(default_factory=list)
@@ -150,10 +151,12 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
         if result.failed_rows:
             state["last_error"] = result.error = f"{len(result.failed_rows)} row(s) could not be read"
         result.kept = len(new_records)
+        result.with_photo = sum(1 for r in new_records if r.get("photo_url"))
         return state, result
 
     result.kept_previous = bool(previous_records)
     result.kept = len(previous_records)
+    result.with_photo = sum(1 for r in previous_records if r.get("photo_url"))
     return state, result
 
 
@@ -177,11 +180,11 @@ def write_report(results: list[SourceResult], duplicates: list[tuple], by_id: di
                   "them, or **close** it to discard them.", ""]
     else:
         lines += ["No data changed.", ""]
-    lines += ["| Source | Result | Records | Added | Removed | Changed | Unreadable rows |",
-              "|---|---|---:|---:|---:|---:|---:|"]
+    lines += ["| Source | Result | Records | With photo | Added | Removed | Changed | Unreadable rows |",
+              "|---|---|---:|---:|---:|---:|---:|---:|"]
     labels = {"success": "OK", "partial": "OK, some rows unreadable", "failed": "Failed"}
     for r in results:
-        lines.append(f"| {r.name} | {labels.get(r.status, r.status)} | {r.kept} | {len(r.added)} | "
+        lines.append(f"| {r.name} | {labels.get(r.status, r.status)} | {r.kept} | {r.with_photo} | {len(r.added)} | "
                      f"{len(r.removed)} | {len(r.changed)} | {len(r.failed_rows)} |")
     lines.append("")
 

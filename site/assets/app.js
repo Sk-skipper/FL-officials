@@ -5,6 +5,8 @@ import {
   SOURCE_STATUS_LABELS,
   SORTABLE,
   VERIFICATION_LABELS,
+  countyCounts,
+  countyRoster,
   describe,
   districtLabel,
   escapeHtml as esc,
@@ -16,7 +18,9 @@ import {
   formatDateTime,
   formatNumber,
   inCounty,
+  initials,
   paginate,
+  photoUrl,
   plural,
   safeUrl,
   sortRecords,
@@ -147,6 +151,26 @@ function withData(container, loaders, render, label) {
     });
 }
 
+/** A round portrait. With no photo, or if the photo fails to load, it shows the person's initials. */
+function avatar(r, size = "md") {
+  const src = photoUrl(r.photo_url);
+  const letters = esc(initials(r.full_name));
+  if (!src) return `<span class="avatar ${size} blank" aria-hidden="true">${letters}</span>`;
+  return `<span class="avatar ${size}" data-initials="${letters}" aria-hidden="true"><img src="${esc(src)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"></span>`;
+}
+
+// <img> errors don't bubble, so listen in the capture phase.
+document.addEventListener(
+  "error",
+  (event) => {
+    const box = event.target instanceof HTMLImageElement ? event.target.closest(".avatar") : null;
+    if (!box) return;
+    box.classList.add("blank");
+    box.textContent = box.dataset.initials || "?";
+  },
+  true,
+);
+
 function levelBadge(level) {
   return `<span class="badge">${esc(LEVEL_LABELS[level] || level)}</span>`;
 }
@@ -169,7 +193,7 @@ function profileHref(r) {
 function officialList(records, dateField) {
   return `<ul class="mini-list">${records
     .map(
-      (r) => `<li><div><a href="${profileHref(r)}">${esc(r.full_name)}</a><p class="muted">${esc(describe(r))}</p></div>
+      (r) => `<li>${avatar(r, "sm")}<div><a href="${profileHref(r)}">${esc(r.full_name)}</a><p class="muted">${esc(describe(r))}</p></div>
       <span class="muted tabular">${esc(formatDate(r[dateField]))}</span></li>`,
     )
     .join("")}</ul>`;
@@ -197,7 +221,7 @@ function officialsTable(records, sort) {
   const rows = records
     .map(
       (r) => `<tr>
-        <td class="strong"><a href="${profileHref(r)}">${esc(r.full_name)}</a></td>
+        <td class="strong"><span class="name-cell">${avatar(r, "sm")}<a href="${profileHref(r)}">${esc(r.full_name)}</a></span></td>
         <td>${esc(r.office_title)}</td>
         <td>${levelBadge(r.government_level)}</td>
         <td>${esc(r.jurisdiction)}</td>
@@ -211,8 +235,8 @@ function officialsTable(records, sort) {
   const cards = records
     .map(
       (r) => `<li>
-        <div class="card-top"><div><a class="card-name" href="${profileHref(r)}">${esc(r.full_name)}</a>
-        <p class="muted">${esc(describe(r))}</p></div>${levelBadge(r.government_level)}</div>
+        <div class="card-top"><div class="name-cell">${avatar(r, "sm")}<div><a class="card-name" href="${profileHref(r)}">${esc(r.full_name)}</a>
+        <p class="muted">${esc(describe(r))}</p></div></div>${levelBadge(r.government_level)}</div>
         <div>${partyText(r.party)}</div>
         <div>${contactLinks(r)}</div>
       </li>`,
@@ -498,10 +522,13 @@ function profile() {
     app.innerHTML = `
       <a class="back" href="officials.html">${ICON.back}Back to the directory</a>
       <header class="profile-head">
-        <h1>${esc(r.full_name)}</h1>
-        <p class="lede">${esc(describe(r))}</p>
-        <div class="badges">${levelBadge(r.government_level)}${selection}
-          <span class="badge green">${esc(VERIFICATION_LABELS[r.verification_status] || r.verification_status)}</span></div>
+        ${avatar(r, "xl")}
+        <div>
+          <h1>${esc(r.full_name)}</h1>
+          <p class="lede">${esc(describe(r))}</p>
+          <div class="badges">${levelBadge(r.government_level)}${selection}
+            <span class="badge green">${esc(VERIFICATION_LABELS[r.verification_status] || r.verification_status)}</span></div>
+        </div>
       </header>
       <div class="profile-grid">
         <section class="panel">
@@ -549,18 +576,132 @@ function profile() {
 }
 
 // -- counties ---------------------------------------------------------------------
+let mapRequest;
+function loadMap() {
+  if (!mapRequest) {
+    mapRequest = fetch("assets/florida-counties.json").then((response) => {
+      if (!response.ok) throw new Error(`The county map could not be loaded (${response.status}).`);
+      return response.json();
+    });
+    mapRequest.catch(() => (mapRequest = undefined));
+  }
+  return mapRequest;
+}
+
+function personCard(r) {
+  return `<li class="person"><a href="${profileHref(r)}">${avatar(r, "lg")}<span>
+    <span class="person-name">${esc(r.full_name)}</span>
+    <span class="muted small">${esc(r.office_title)}${r.district ? ` · ${esc(districtLabel(r.district))}` : ""}</span>
+    ${r.party ? `<span class="badge outline">${esc(r.party)}</span>` : ""}
+  </span></a></li>`;
+}
+
 function counties() {
   const app = $("#app");
-  withData(app, [loadOfficials, loadMeta], (records, meta) => {
+  withData(app, [loadOfficials, loadMeta, loadMap], (records, meta, map) => {
+    const counts = countyCounts(records, meta.counties);
+    const statewide = countyRoster(records, "").statewide;
+
+    // One portrait per county on the map: the first county-level official who has a photo.
+    const pins = map.counties
+      .map((c) => {
+        const official = countyRoster(records, c.name).local.find((r) => photoUrl(r.photo_url));
+        if (!official) return "";
+        const left = ((c.cx / map.width) * 100).toFixed(2);
+        const top = ((c.cy / map.height) * 100).toFixed(2);
+        return `<button type="button" class="pin" data-county="${esc(c.name)}" style="left:${left}%;top:${top}%"
+          aria-label="${esc(official.full_name)}, ${esc(c.name)} County">${avatar(official, "xs")}</button>`;
+      })
+      .join("");
+
+    const shapes = map.counties
+      .map(
+        (c) => `<path class="county-shape${counts[c.name] ? " has-officials" : ""}" data-county="${esc(c.name)}" d="${c.d}"
+          tabindex="0" role="button" aria-pressed="false"
+          aria-label="${esc(c.name)} County, ${plural(counts[c.name], "local official")}"><title>${esc(c.name)} County</title></path>`,
+      )
+      .join("");
+
+    app.innerHTML = `
+      <div class="map-layout">
+        <section class="panel map-card" aria-label="Map of Florida counties">
+          <div class="map-wrap">
+            <svg viewBox="0 0 ${map.width} ${map.height}" role="group" aria-label="Florida's 67 counties. Select a county to see its officials.">${shapes}</svg>
+            <div class="pins">${pins}</div>
+          </div>
+          <p class="muted small map-note">Select a county. Darker blue counties have officials listed. A portrait on the map is that county's
+          elected official, where their source publishes a photo.</p>
+        </section>
+        <section class="panel map-panel" id="map-panel" aria-live="polite"></section>
+      </div>
+      <h2 class="section-title">All counties</h2>
+      <div class="field narrow"><label for="county-filter">Find a county</label>
+        <div class="input-icon">${ICON.search}<input id="county-filter" type="search" placeholder="Type a county name"></div></div>
+      <div id="county-list"></div>`;
+
+    const grid = (list) => `<ul class="people">${list.map(personCard).join("")}</ul>`;
+    const panel = $("#map-panel");
+    let selected = "";
+
+    function showPanel() {
+      for (const shape of app.querySelectorAll(".county-shape")) {
+        const on = shape.dataset.county === selected;
+        shape.classList.toggle("selected", on);
+        shape.setAttribute("aria-pressed", String(on));
+      }
+      if (!selected) {
+        panel.innerHTML = `
+          <h2>Statewide officials</h2>
+          <p class="muted small">These officials represent all 67 counties. Select a county on the map to add the officials tied to it.</p>
+          ${statewide.length ? grid(statewide) : empty("No statewide officials yet", "None have been collected from an official source.")}`;
+        return;
+      }
+      const { local } = countyRoster(records, selected);
+      panel.innerHTML = `
+        <div class="panel-top">
+          <h2>${esc(selected)} County</h2>
+          <span class="panel-actions">
+            <a class="details" href="county.html?name=${encodeURIComponent(selected)}">Full county page${ICON.arrow}</a>
+            <button type="button" class="link-button" data-clear>Show statewide</button>
+          </span>
+        </div>
+        <h3 class="group">Elected in ${esc(selected)} County</h3>
+        ${local.length ? grid(local) : `<p class="muted small">No county-level officials are listed for ${esc(selected)} County yet.</p>`}
+        <h3 class="group">Represent all of Florida</h3>
+        ${grid(statewide)}
+        <p class="muted small fine">U.S. House and Florida Legislature members are not placed on the map, because their sources do not say
+        which counties each district covers.</p>`;
+    }
+
+    function select(name) {
+      selected = selected === name ? "" : name;
+      showPanel();
+    }
+
+    const mapCard = $(".map-card");
+    mapCard.addEventListener("click", (event) => {
+      const target = event.target.closest("[data-county]");
+      if (target) select(target.dataset.county);
+    });
+    mapCard.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      const target = event.target.closest(".county-shape");
+      if (!target) return;
+      event.preventDefault();
+      select(target.dataset.county);
+    });
+    panel.addEventListener("click", (event) => {
+      if (event.target.closest("[data-clear]")) {
+        selected = "";
+        showPanel();
+      }
+    });
+    showPanel();
+
     const summary = meta.counties.map((name) => {
       const here = records.filter((r) => inCounty(r, name));
       return { name, officials: here.length, towns: new Set(here.map((r) => r.municipality).filter(Boolean)).size };
     });
-    app.innerHTML = `
-      <div class="field narrow"><label for="county-filter">Find a county</label>
-        <div class="input-icon">${ICON.search}<input id="county-filter" type="search" placeholder="Type a county name"></div></div>
-      <div id="county-list"></div>
-      <p class="muted small">No map is shown yet: counties are listed so that no unverified boundary data is displayed.</p>`;
     const draw = (text) => {
       const visible = summary.filter((c) => fold(c.name).includes(fold(text.trim())));
       $("#county-list").innerHTML = visible.length

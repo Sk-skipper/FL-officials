@@ -171,6 +171,14 @@ def normalize_url(raw: object) -> str | None:
     return None
 
 
+def normalize_photo_url(raw: object) -> str | None:
+    """A photo link must be https, so the site never shows mixed content, and must look like a real address."""
+    text = clean_text(raw)
+    if re.match(r"^https://[^\s/]+\.[^\s]+$", text, re.I):
+        return text
+    return None
+
+
 def ascii_key(value: str | None) -> str:
     if not value:
         return ""

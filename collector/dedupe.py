@@ -6,7 +6,7 @@ from itertools import combinations
 from collector.normalize import ascii_key
 from collector.validate import ScrapedOfficial
 
-_FILLABLE = ("party", "phone", "email", "official_website", "middle_name", "county", "municipality")
+_FILLABLE = ("party", "phone", "email", "official_website", "photo_url", "middle_name", "county", "municipality")
 
 FIRST_NAME_THRESHOLD = 0.75
 SCORE_THRESHOLD = 0.7

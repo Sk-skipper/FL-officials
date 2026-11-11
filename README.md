@@ -9,8 +9,8 @@ server and no database, and hosting on GitHub Pages is free.
 - **GitHub Pages** hosts the site at `https://YOUR-NAME.github.io/REPO-NAME/`.
 
 The site has a homepage with search and statistics, a directory with search, filters, sorting and
-CSV/JSON downloads, a profile page for each official, a county explorer, a data sources status page,
-and a methodology page.
+CSV/JSON downloads, a profile page for each official (with a portrait where one is available), a
+clickable county map, a data sources status page, and a methodology page.
 
 ## Set it up (about 10 minutes)
 
@@ -92,8 +92,8 @@ fields to change. Use `null` to remove a wrong value:
 
 Corrections always win over collected data, and the profile is labelled "Corrected by the editors".
 You can correct `full_name`, `first_name`, `middle_name`, `last_name`, `office_title`, `party`,
-`district`, `jurisdiction`, `municipality`, `phone`, `email`, `official_website` and
-`selection_method`.
+`district`, `jurisdiction`, `municipality`, `phone`, `email`, `official_website`, `photo_url` and
+`selection_method`. A `photo_url` must start with `https://`; use `null` to remove a wrong photo.
 
 ### Add officials no source covers: `data/manual_officials.json`
 
@@ -115,6 +115,7 @@ you took it from:
       "phone": "954-555-0100",
       "email": "mayor@example.gov",
       "official_website": "https://www.example.gov/mayor",
+      "photo_url": "https://www.example.gov/images/mayor.jpg",
       "source_url": "https://www.example.gov/commission",
       "source_name": "City of West Park",
       "last_verified": "2026-11-10"
@@ -122,6 +123,9 @@ you took it from:
   ]
 }
 ```
+
+`photo_url` is optional and must start with `https://`. A county official with a photo appears as a
+portrait on the county map.
 
 `government_level` is `federal`, `state`, `county` or `municipal`. A `municipal` entry needs both
 `county` and `municipality`. Use `"selection_method": "appointed"` for appointed posts such as a
@@ -207,6 +211,7 @@ issue link only works with GitHub Pages. You can then delete `.github/workflows/
 site/                  the website (HTML, CSS, JavaScript; no build step)
   assets/lib.js        search, filters, sorting, exports
   assets/app.js        page behaviour
+  assets/florida-counties.json   county outlines for the map (Census Bureau data)
 data/
   sources.json         which pages to collect
   collected.json       written by the collector; don't edit by hand
@@ -214,6 +219,7 @@ data/
   manual_officials.json  officials you add yourself
   site.json            report link and contact email
 collector/             Python: source readers, validation, collect and publish steps
+tools/build-map.mjs    rebuilds the county map file (only needed if you want to change the map)
 tests/                 Python and JavaScript tests
 .github/workflows/     daily collection, deploy to Pages, tests
 ```
@@ -223,7 +229,13 @@ tests/                 Python and JavaScript tests
 - No phone numbers for state legislators: the Senate and House roster pages don't list them.
 - U.S. House and Florida House members appear on a county's page only if their source lists the
   counties in their district.
-- Counties are shown as a list, not a map.
+- The map shows counties only. Congressional and legislative districts are not drawn, so U.S. House and
+  Florida Legislature members are not placed on it: their sources do not say which counties each
+  district covers.
+- Portraits are linked from their source, not copied. Members of Congress come from a public-domain
+  image set matched by state, district and surname. Florida House photos are read from the roster page
+  and have not been checked against the live site; the "With photo" column in each collection report
+  shows how many records got one.
 - GitHub pauses scheduled workflows in repositories with no activity for 60 days. If daily
   collection stops, re-enable it on the *Actions* tab.
 

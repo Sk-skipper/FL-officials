@@ -20,7 +20,9 @@ _COUNTY_HREF = re.compile(r"countyInfo\.asp\?county=\w+", re.I)
 _TITLE_LINE = re.compile(r"\bSupervisor of Elections\b", re.I)
 _PHONE_LABEL = re.compile(r"^(?:Phone|Telephone|Office)\s*:?\s*(.+)$", re.I)
 _EMAIL_IN_TEXT = re.compile(r"[\w.+'-]+@[\w-]+(?:\.[\w-]+)+")
-_NOT_A_NAME = re.compile(r"\d|county|supervisor|elections|address|phone|fax|email|division|florida", re.I)
+_NOT_A_NAME = re.compile(
+    r"\d|county|supervisor|elections|address|phone|fax|email|division|florida|\b(?:contact|your|meet|welcome|office)\b", re.I
+)
 
 
 def parse_supervisor_index(html: str, base_url: str) -> list[tuple[str, str]]:

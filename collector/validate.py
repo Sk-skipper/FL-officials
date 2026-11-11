@@ -10,6 +10,7 @@ from collector.normalize import (
     clean_text,
     normalize_email,
     normalize_party,
+    normalize_photo_url,
     normalize_phone,
     normalize_url,
     parse_district,
@@ -41,6 +42,7 @@ class ScrapedOfficial(BaseModel):
     phone: str | None = None
     email: str | None = None
     official_website: str | None = None
+    photo_url: str | None = None
     source_url: str = Field(min_length=8, max_length=500)
 
     @model_validator(mode="before")
@@ -68,6 +70,7 @@ class ScrapedOfficial(BaseModel):
         data["phone"] = normalize_phone(data.get("phone"))
         data["email"] = normalize_email(data.get("email"))
         data["official_website"] = normalize_url(data.get("official_website"))
+        data["photo_url"] = normalize_photo_url(data.get("photo_url"))
         data["municipality"] = clean_text(data.get("municipality")) or None
 
         county_raw = clean_text(data.get("county"))
