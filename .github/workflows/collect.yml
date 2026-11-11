@@ -1,0 +1,74 @@
+name: Collect officials
+
+on:
+  schedule:
+    - cron: "17 10 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Collect one source only (its key from data/sources.json). Leave empty for all."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Collect
+        id: collect
+        env:
+          ONLY: ${{ inputs.only }}
+          SCRAPER_CONTACT: ${{ vars.SCRAPER_CONTACT }}
+        run: python -m collector.collect --report collection-report.md --only "$ONLY"
+
+      - name: Open a pull request with the changes
+        if: steps.collect.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data-update
+          add-paths: data/collected.json
+          commit-message: "Update officials from official sources"
+          title: "Data update: changes found in official sources"
+          body-path: collection-report.md
+          delete-branch: true
+
+      - name: Save refreshed verification dates and redeploy
+        if: steps.collect.outputs.changed == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/collected.json
+          if git diff --cached --quiet; then
+            echo "Nothing to save."
+            exit 0
+          fi
+          git commit -m "Refresh verification dates"
+          git push
+          gh workflow run deploy.yml --ref "${GITHUB_REF_NAME}"
+
+      - name: Mark the run as failed if a source failed
+        if: steps.collect.outputs.failed == 'true'
+        run: |
+          echo "::error::At least one source failed. See the report above; its previous records are still published."
+          exit 1
