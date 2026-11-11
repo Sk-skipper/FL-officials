@@ -5,8 +5,8 @@
       "url": "https://www.senate.gov/senators/",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-11T23:39:29+00:00",
+      "last_successful_collection": "2026-11-11T23:39:29+00:00",
       "last_error": null,
       "records": [
         {
@@ -29,6 +29,7 @@
           "phone": "(202) 224-3041",
           "email": null,
           "official_website": "https://www.moody.senate.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001244.jpg",
           "source_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -53,6 +54,7 @@
           "phone": "(202) 224-5274",
           "email": null,
           "official_website": "https://www.rickscott.senate.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001217.jpg",
           "source_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -64,8 +66,8 @@
       "url": "https://www.house.gov/representatives",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-11T23:39:29+00:00",
+      "last_successful_collection": "2026-11-11T23:39:29+00:00",
       "last_error": null,
       "records": [
         {
@@ -88,6 +90,7 @@
           "phone": "(202) 225-4136",
           "email": null,
           "official_website": "https://patronis.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/P000622.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -112,6 +115,7 @@
           "phone": "(202) 225-2176",
           "email": null,
           "official_website": "https://frost.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000476.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -136,6 +140,7 @@
           "phone": "(202) 225-1002",
           "email": null,
           "official_website": "https://webster.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000806.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -160,6 +165,7 @@
           "phone": "(202) 225-5755",
           "email": null,
           "official_website": "https://bilirakis.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001257.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -184,6 +190,7 @@
           "phone": "(202) 225-5961",
           "email": null,
           "official_website": "https://luna.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/L000596.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -208,6 +215,7 @@
           "phone": "(202) 225-3376",
           "email": null,
           "official_website": "https://castor.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/C001066.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -232,6 +240,7 @@
           "phone": "(202) 225-5626",
           "email": null,
           "official_website": "https://laurellee.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/L000597.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -256,6 +265,7 @@
           "phone": "(202) 225-5015",
           "email": null,
           "official_website": "https://buchanan.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001260.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -280,6 +290,7 @@
           "phone": "(202) 225-5792",
           "email": null,
           "official_website": "https://steube.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001214.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -304,6 +315,7 @@
           "phone": "(202) 225-1252",
           "email": null,
           "official_website": "https://franklin.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000472.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -328,6 +340,7 @@
           "phone": "(202) 225-2536",
           "email": null,
           "official_website": "https://donalds.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000032.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -352,6 +365,7 @@
           "phone": "(202) 225-5235",
           "email": null,
           "official_website": "https://dunn.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000628.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -376,6 +390,7 @@
           "phone": "(202) 225-3026",
           "email": null,
           "official_website": "https://mast.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001199.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -400,6 +415,7 @@
           "phone": "(202) 225-9890",
           "email": null,
           "official_website": "https://frankel.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000462.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -424,6 +440,7 @@
           "phone": "(202) 225-3001",
           "email": null,
           "official_website": "https://moskowitz.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001217.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -448,6 +465,7 @@
           "phone": "(202) 225-4506",
           "email": null,
           "official_website": "https://wilson.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000808.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -472,6 +490,7 @@
           "phone": "(202) 225-7931",
           "email": null,
           "official_website": "https://wassermanschultz.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000797.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -496,6 +515,7 @@
           "phone": "(202) 225-4211",
           "email": null,
           "official_website": "https://mariodiazbalart.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000600.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -520,6 +540,7 @@
           "phone": "(202) 225-3931",
           "email": null,
           "official_website": "https://salazar.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S000168.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -544,6 +565,7 @@
           "phone": "(202) 225-2778",
           "email": null,
           "official_website": "https://gimenez.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/G000593.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -568,6 +590,7 @@
           "phone": "(202) 225-5744",
           "email": null,
           "official_website": "https://cammack.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/C001039.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -592,6 +615,7 @@
           "phone": "(202) 225-0123",
           "email": null,
           "official_website": "https://bean.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001314.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -616,6 +640,7 @@
           "phone": "(202) 225-2501",
           "email": null,
           "official_website": "https://rutherford.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/R000609.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -640,6 +665,7 @@
           "phone": "(202) 225-2706",
           "email": null,
           "official_website": "https://fine.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000484.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -664,6 +690,7 @@
           "phone": "(202) 225-4035",
           "email": null,
           "official_website": "https://mills.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001216.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -688,6 +715,7 @@
           "phone": "(202) 225-3671",
           "email": null,
           "official_website": "https://haridopolos.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/H001099.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -712,6 +740,7 @@
           "phone": "(202) 225-9889",
           "email": null,
           "official_website": "https://soto.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001200.jpg",
           "source_url": "https://www.house.gov/representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -723,7 +752,7 @@
       "url": "https://www.flsenate.gov/Senators",
       "level": "state",
       "status": "failed",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-11T23:39:29+00:00",
       "last_successful_collection": null,
       "last_error": "No valid records were found. The page layout may have changed, or the page may need JavaScript.",
       "records": []
@@ -733,8 +762,8 @@
       "url": "https://www.flhouse.gov/Representatives",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-11T23:39:29+00:00",
+      "last_successful_collection": "2026-11-11T23:39:29+00:00",
       "last_error": null,
       "records": [
         {
@@ -757,6 +786,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4763&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4763.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -781,6 +811,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5089&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5089.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -805,6 +836,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5103&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5103.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -829,6 +861,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5102&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5102.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -853,6 +886,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5099&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5099.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -877,6 +911,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4793&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4793.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -901,6 +936,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4791&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4791.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -925,6 +961,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4789&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4789.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -949,6 +986,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5098&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5098.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -973,6 +1011,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4928&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4928.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -997,6 +1036,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4522&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4522.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1021,6 +1061,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4011&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4011.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1045,6 +1086,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4767&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4767.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1069,6 +1111,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4792&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4792.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1093,6 +1136,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4794&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4794.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1117,6 +1161,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4796&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4796.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1141,6 +1186,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5105&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5105.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1165,6 +1211,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4800&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4800.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1189,6 +1236,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4929&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4929.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1213,6 +1261,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5086&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5086.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1237,6 +1286,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4798&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4798.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1261,6 +1311,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4902&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4902.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1285,6 +1336,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4898&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4898.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1309,6 +1361,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5083&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5083.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1333,6 +1386,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4797&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4797.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1357,6 +1411,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4263&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4263.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1381,6 +1436,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4652&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4652.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1405,6 +1461,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4865&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4865.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1429,6 +1486,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4869&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4869.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1453,6 +1511,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4866&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4866.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1477,6 +1536,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4905&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4905.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1501,6 +1561,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4906&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4906.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1525,6 +1586,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5076&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5076.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1549,6 +1611,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4907&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4907.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1573,6 +1636,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5088&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5088.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1597,6 +1661,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5090&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5090.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1621,6 +1686,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4909&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4909.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1645,6 +1711,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4901&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4901.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1669,6 +1736,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4868&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4868.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1693,6 +1761,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4910&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4910.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1717,6 +1786,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4911&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4911.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1741,6 +1811,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4912&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4912.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1765,6 +1836,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4770&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4770.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1789,6 +1861,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5063&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5063.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1813,6 +1886,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4867&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4867.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1837,6 +1911,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5087&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5087.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1861,6 +1936,32 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5064&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5064.jpg",
+          "source_url": "https://www.flhouse.gov/Representatives",
+          "last_verified": "2026-11-11",
+          "updated_on": "2026-11-11"
+        },
+        {
+          "id": "state-representative-district-33-daniel-mcdow",
+          "full_name": "Daniel McDow",
+          "first_name": "Daniel",
+          "middle_name": null,
+          "last_name": "McDow",
+          "office_title": "State Representative",
+          "government_level": "state",
+          "selection_method": "elected",
+          "party": "Democratic",
+          "district": "33",
+          "district_number": 33,
+          "jurisdiction": "Florida",
+          "statewide": false,
+          "county": null,
+          "counties": [],
+          "municipality": null,
+          "phone": null,
+          "email": null,
+          "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5120&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5120.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1885,6 +1986,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4870.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1909,6 +2011,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5093&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5093.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1933,6 +2036,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5095&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5095.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1957,6 +2061,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5097&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5097.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -1981,6 +2086,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5104&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5104.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2005,6 +2111,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5106&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5106.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2029,6 +2136,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4764&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4764.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2053,6 +2161,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5065&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5065.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2077,6 +2186,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4269&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4269.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2101,6 +2211,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5119&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5119.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2125,6 +2236,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5109&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5109.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2149,6 +2261,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4877&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4877.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2173,6 +2286,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4915&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4915.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2197,6 +2311,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4916&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4916.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2221,6 +2336,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5085&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5085.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2245,6 +2361,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4917&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4917.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2269,6 +2386,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4918&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4918.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2293,6 +2411,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4864&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4864.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2317,6 +2436,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4879&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4879.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2341,6 +2461,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5110&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5110.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2365,6 +2486,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5070&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5070.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2389,6 +2511,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5108&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5108.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2413,6 +2536,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4758&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4758.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2437,6 +2561,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5075&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5075.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2461,6 +2586,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4882&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4882.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2485,6 +2611,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4885&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4885.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2509,6 +2636,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4210&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4210.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2533,6 +2661,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4886&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4886.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2557,6 +2686,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5081&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5081.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2581,6 +2711,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5107&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5107.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2605,6 +2736,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4778&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4778.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2629,6 +2761,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5084&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5084.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2653,6 +2786,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5082&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5082.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2677,6 +2811,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5073&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5073.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2701,6 +2836,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4888&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4888.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2725,6 +2861,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4779&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4779.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2749,6 +2886,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5074&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5074.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2773,6 +2911,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5077&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5077.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2797,6 +2936,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5100&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5100.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2821,6 +2961,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4756&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4756.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2845,6 +2986,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4919&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4919.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2869,6 +3011,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5078&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5078.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2893,6 +3036,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4920&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4920.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2917,6 +3061,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4780&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4780.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2941,6 +3086,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5079&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5079.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2965,6 +3111,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4921&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4921.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -2989,6 +3136,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4922&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4922.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3013,6 +3161,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4892&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4892.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3037,6 +3186,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5080&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5080.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3061,6 +3211,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4783&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4783.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3085,6 +3236,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4863&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4863.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3109,6 +3261,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4782&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4782.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3133,6 +3286,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4923&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4923.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3157,6 +3311,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5091&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5091.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3181,6 +3336,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4776&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4776.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3205,6 +3361,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4788&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4788.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3229,6 +3386,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5092&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5092.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3253,6 +3411,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4787&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4787.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3277,6 +3436,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5094&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5094.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3301,6 +3461,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4842&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4842.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3325,6 +3486,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4924&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4924.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3349,6 +3511,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4765&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4765.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3373,6 +3536,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5067&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5067.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3397,6 +3561,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4891&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4891.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3421,6 +3586,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4786&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4786.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3445,6 +3611,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5096&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5096.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3469,6 +3636,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5101&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5101.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3493,6 +3661,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4799&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4799.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3517,6 +3686,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4757&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4757.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3541,6 +3711,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4893&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4893.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3565,6 +3736,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4927&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4927.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3589,6 +3761,7 @@
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4843&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4843.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
           "last_verified": "2026-11-11",
           "updated_on": "2026-11-11"
@@ -3599,10 +3772,10 @@
       "name": "Florida Division of Elections: Supervisors of Elections",
       "url": "https://dos.elections.myflorida.com/supervisors/",
       "level": "county",
-      "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
+      "status": "failed",
+      "last_attempt": "2026-11-11T23:39:29+00:00",
       "last_successful_collection": "2026-11-11T03:12:58+00:00",
-      "last_error": null,
+      "last_error": "No valid records were found. The page layout may have changed, or the page may need JavaScript.",
       "records": [
         {
           "id": "supervisor-of-elections-alachua-county-contact-your",
