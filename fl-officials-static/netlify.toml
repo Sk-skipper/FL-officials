@@ -1,0 +1,8 @@
+# Optional: use this if you host on Netlify instead of GitHub Pages.
+# Collection still runs in GitHub Actions; Netlify rebuilds whenever the repository changes.
+[build]
+  publish = "site"
+  command = "pip install -r requirements.txt && python -m collector.publish"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"

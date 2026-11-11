@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About and methodology | Florida Government Officials Directory</title>
+  <meta name="description" content="Where the directory's data comes from, how it is checked, and how to report an error.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body data-page="about">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header id="site-header"></header>
+  <main id="main">
+    <div class="container page">
+      <article class="prose">
+        <h1>About and methodology</h1>
+        <p class="gap-top">This directory gathers public information about elected officials in Florida into one searchable place. It is an independent project and is not run by any government agency.</p>
+
+        <section id="origin">
+          <h2>Where the data comes from</h2>
+          <p>Every record is taken from an official government website: the Florida Senate, the Florida House of Representatives, the Florida Division of Elections, the U.S. Senate and the U.S. House of Representatives. County and municipal officials are added one source at a time. The <a href="sources.html">data sources page</a> lists each source and its current status.</p>
+          <p>Only information officials publish in their public role is collected: name, office, district, party, and office contact details.</p>
+        </section>
+
+        <section id="collection">
+          <h2>How information is collected</h2>
+          <p>An automated collector visits each source page, reads the published roster, and records what it finds. It identifies itself honestly to each website, follows each site's robots.txt rules, waits between requests, and never tries to get past logins or access restrictions.</p>
+          <p>Every record keeps a link to the page it came from, so you can always check the original.</p>
+        </section>
+
+        <section id="refresh">
+          <h2>How often records are refreshed</h2>
+          <p>Sources are collected again once a day. Each profile shows the date its record was last confirmed against its source.</p>
+        </section>
+
+        <section id="accuracy">
+          <h2>How accuracy is verified</h2>
+          <ul>
+            <li>Names, phone numbers, email addresses and web addresses are checked before they are stored. Values that fail the checks are dropped, not repaired.</li>
+            <li>Changes found by the collector are not published automatically. Each change, including officials who no longer appear on a source, is reviewed by a person first.</li>
+            <li>If a source fails, or suddenly lists far fewer people than before, the previous records are kept rather than replaced.</li>
+            <li>Likely duplicate records are flagged for review.</li>
+            <li>An "Elected office" label describes how the office is normally filled. An individual may have been appointed to finish a term after a vacancy.</li>
+          </ul>
+        </section>
+
+        <section id="missing">
+          <h2>How missing information is handled</h2>
+          <p>If a source does not publish a detail, the field is left empty and labelled "Not published by the source". Nothing is guessed, inferred, or filled in from unofficial sources.</p>
+        </section>
+
+        <section id="coverage">
+          <h2>What is and is not included</h2>
+          <div id="coverage"></div>
+        </section>
+
+        <section id="corrections">
+          <h2>Report incorrect information</h2>
+          <p id="report">If you find an error, contact the operator of this site with a link to the profile and, if you can, a link to an official page showing the correct information.</p>
+          <p>Corrections are checked against the official source before a record is changed. Because the directory mirrors official websites, the fastest fix is often for the office itself to update its own page; the change is then picked up at the next collection.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <noscript><p class="container">This directory needs JavaScript to search and display records. You can still
+  <a href="data/officials.csv">download the full list as a CSV file</a>.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Florida Government Officials Directory</title>
+  <meta name="description" content="Find federal, state, county, and municipal elected officials in Florida, with contact details sourced from official government websites.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header id="site-header"></header>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Florida Government Officials Directory</h1>
+        <p class="lede">Find who represents you at every level of government, with contact details taken directly from official government sources.</p>
+        <div class="hero-search">
+          <form role="search" id="home-search">
+            <label for="home-q" class="sr-only">Search officials, districts, counties, or cities</label>
+            <div class="input-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+              <input id="home-q" type="search" autocomplete="off" maxlength="100" placeholder="Search officials, districts, counties, or cities...">
+            </div>
+            <button class="button large" type="submit">Search</button>
+          </form>
+          <ul id="suggestions" class="suggestions" aria-label="Matching officials" hidden></ul>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="section" aria-labelledby="glance">
+        <h2 id="glance" class="sr-only">Directory at a glance</h2>
+        <div id="stats"></div>
+      </section>
+      <section class="section" aria-labelledby="levels">
+        <h2 id="levels">Browse by level of government</h2>
+        <div class="level-cards">
+          <a class="level-card" href="officials.html?level=federal">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 22V4m0 0c5-3 7 3 12 0v9c-5 3-7-3-12 0"/></svg></span>
+            <h3>Federal Government</h3><p>Florida's U.S. Senators and Representatives.</p>
+            <span class="foot"><span class="muted tabular" data-count="federal">&nbsp;</span><span class="go">View &rarr;</span></span>
+          </a>
+          <a class="level-card" href="officials.html?level=state">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18M6 18v-7m4 7v-7m4 7v-7m4 7v-7M12 2l8 5H4l8-5Z"/></svg></span>
+            <h3>Florida State Government</h3><p>Members of the Florida Senate and House.</p>
+            <span class="foot"><span class="muted tabular" data-count="state">&nbsp;</span><span class="go">View &rarr;</span></span>
+          </a>
+          <a class="level-card" href="officials.html?level=county">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01"/></svg></span>
+            <h3>County Government</h3><p>Officials elected in Florida's 67 counties.</p>
+            <span class="foot"><span class="muted tabular" data-count="county">&nbsp;</span><span class="go">View &rarr;</span></span>
+          </a>
+          <a class="level-card" href="officials.html?level=municipal">
+            <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18M5 22V8l6-4v18M11 22V10h8v12M15 14h.01M15 18h.01M8 10h.01M8 14h.01"/></svg></span>
+            <h3>Municipal Government</h3><p>Mayors, commissioners and council members.</p>
+            <span class="foot"><span class="muted tabular" data-count="municipal">&nbsp;</span><span class="go">View &rarr;</span></span>
+          </a>
+        </div>
+      </section>
+      <section class="section grid-2">
+        <div class="panel"><h2>Recently verified officials</h2><p class="muted small">Most recently confirmed against an official source.</p><div id="recent-verified"></div></div>
+        <div class="panel"><h2>Recently updated records</h2><p class="muted small">Records whose details most recently changed.</p><div id="recent-updated"></div></div>
+      </section>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <noscript><p class="container">This directory needs JavaScript to search and display records. You can still
+  <a href="data/officials.csv">download the full list as a CSV file</a>.</p></noscript>
+</body>
+</html>

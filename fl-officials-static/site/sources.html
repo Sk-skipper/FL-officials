@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data sources | Florida Government Officials Directory</title>
+  <meta name="description" content="The official government websites this directory is collected from, and their status.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body data-page="sources">
+  <a class="skip" href="#main">Skip to main content</a>
+  <header id="site-header"></header>
+  <main id="main">
+    <div class="container page">
+      <div class="page-intro">
+        <h1>Data sources</h1>
+        <p>Every record comes from one of the official government websites below. This page shows when each was last collected and whether the most recent attempt worked, including any error.</p>
+      </div>
+      <div id="app"></div>
+      <p class="muted small gap-top">The five initial sources list only offices filled by election. Any county or city source added later
+      either leaves out appointed staff or labels them as holding an appointed office.
+      Download the full directory as <a href="data/officials.csv" download>CSV</a> or <a href="data/officials.json" download>JSON</a>.</p>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <noscript><p class="container">This directory needs JavaScript to search and display records. You can still
+  <a href="data/officials.csv">download the full list as a CSV file</a>.</p></noscript>
+</body>
+</html>

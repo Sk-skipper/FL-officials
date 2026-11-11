@@ -1,0 +1,38 @@
+[
+  {
+    "key": "us_senate",
+    "name": "United States Senate",
+    "url": "https://www.senate.gov/senators/",
+    "level": "federal",
+    "scraper": "us_senate",
+    "config": {"data_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml"}
+  },
+  {
+    "key": "us_house",
+    "name": "United States House of Representatives",
+    "url": "https://www.house.gov/representatives",
+    "level": "federal",
+    "scraper": "us_house"
+  },
+  {
+    "key": "fl_senate",
+    "name": "Florida Senate",
+    "url": "https://www.flsenate.gov/Senators",
+    "level": "state",
+    "scraper": "fl_senate"
+  },
+  {
+    "key": "fl_house",
+    "name": "Florida House of Representatives",
+    "url": "https://www.flhouse.gov/Representatives",
+    "level": "state",
+    "scraper": "fl_house"
+  },
+  {
+    "key": "fl_supervisors",
+    "name": "Florida Division of Elections: Supervisors of Elections",
+    "url": "https://dos.elections.myflorida.com/supervisors/",
+    "level": "county",
+    "scraper": "fl_supervisors"
+  }
+]
