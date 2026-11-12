@@ -704,6 +704,7 @@ function countyExplorer(root, records, meta, map, { initial = "Broward", syncPar
         <ul class="legend small muted" aria-label="Map shading">
           <li><span class="swatch t1"></span>1–4 officials</li><li><span class="swatch t2"></span>5–10</li><li><span class="swatch t3"></span>11–49</li><li><span class="swatch t4"></span>50 or more</li><li><span class="swatch selected"></span>Selected</li>
         </ul>
+        <p class="small map-note"><a href="representatives.html">${ICON.pin} See which representative covers which part of each county on the district map</a></p>
         <p class="muted small map-note">Shading counts officials tied to each county: local offices plus the U.S. House, Florida Senate and Florida House
         members whose districts reach into it. Statewide officials represent every county and are listed in each.</p>
       </section>
@@ -778,7 +779,8 @@ function countyExplorer(root, records, meta, map, { initial = "Broward", syncPar
       <div class="panel-top">
         <div><h2>${esc(selected)} County</h2>
           <p class="muted small tabular">${plural(total, "elected official")}${open ? ` · ${plural(open, "vacant seat")}` : ""}${towns ? ` · ${plural(towns, "city", "cities")} listed` : ""}</p></div>
-        <a class="details" href="county.html?name=${encodeURIComponent(selected)}">Full county page${ICON.arrow}</a>
+        <span class="panel-actions"><a class="details" href="representatives.html">District map${ICON.arrow}</a>
+        <a class="details" href="county.html?name=${encodeURIComponent(selected)}">Full county page${ICON.arrow}</a></span>
       </div>
       ${coverage}
       <div class="roster-tools">
@@ -1110,13 +1112,17 @@ function reps() {
     let current = null; // { spec, group, rows }
 
     /** Pick a fill per district: party colours, or (nonpartisan offices) map colouring so neighbours differ. */
+    const oneParty = (holders) => new Set(holders.map((h) => h?.party || "")).size <= 1;
     function districtColors(features, holders, partisan) {
-      if (partisan && colorMode === "party") return features.map((f, i) => partyColor(holders[i]?.party, !holders[i]));
+      if (partisan && colorMode === "party" && !oneParty(holders)) return features.map((f, i) => partyColor(holders[i]?.party, !holders[i]));
       const boxes = features.map((f) => L.geoJSON(f).getBounds());
       const chosen = [];
       features.forEach((f, i) => {
         const taken = new Set(chosen.filter((c, j) => boxes[j].intersects(boxes[i])).map((c) => c));
-        chosen[i] = DISTRICT_COLORS.find((c) => !taken.has(c)) || DISTRICT_COLORS[i % DISTRICT_COLORS.length];
+        // Least-used colour that no overlapping neighbour has, so small layers get a different colour per district.
+        const uses = (c) => chosen.filter((x) => x === c).length;
+        const free = DISTRICT_COLORS.filter((c) => !taken.has(c));
+        chosen[i] = (free.length ? free : DISTRICT_COLORS).reduce((best, c) => (uses(c) < uses(best) ? c : best));
       });
       return chosen;
     }
@@ -1132,7 +1138,8 @@ function reps() {
 
     function legendPanel() {
       const { spec, rows } = current;
-      const partisan = spec.partisan && colorMode === "party";
+      const single = oneParty(rows.map((r) => r.holder));
+      const partisan = spec.partisan && colorMode === "party" && !single;
       const counts = {};
       for (const row of rows) {
         const key = row.holder ? partyLabel(row.holder.party) : "Vacant or not listed";
@@ -1141,7 +1148,8 @@ function reps() {
       const legend = partisan
         ? `<ul class="legend-row" aria-label="Party colours">${Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([label, n]) =>
             `<li><span class="swatch-dot" style="background:${partyColor(label === "Vacant or not listed" ? null : label, label === "Vacant or not listed")}"></span>${esc(label)} <span class="muted tabular">${n}</span></li>`).join("")}</ul>`
-        : `<p class="muted small">Colours only separate neighbouring districts. ${spec.partisan ? "" : "These offices are nonpartisan."}</p>`;
+        : `<p class="muted small">Colours only separate neighbouring districts. ${!spec.partisan ? "These offices are nonpartisan."
+            : single && rows[0]?.holder?.party ? `Every seat is held by ${esc({ Democratic: "a Democrat", Republican: "a Republican" }[rows[0].holder.party] || "the same party")}, so party colours would paint them all alike.` : ""}</p>`;
       panel.innerHTML = `
         <div class="panel-top"><div><h2>Who represents where</h2>
           <p class="muted small">${esc(spec.label)} · ${plural(rows.length, "district")}</p></div></div>
