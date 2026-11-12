@@ -235,7 +235,10 @@ td .contact a { white-space: nowrap; overflow-wrap: normal; }
 .map-wrap { position: relative; width: 100%; max-width: 520px; margin: 0 auto; }
 .map-wrap svg { display: block; width: 100%; height: auto; }
 .county-shape { fill: var(--tint); stroke: #fff; stroke-width: 0.9; stroke-linejoin: round; cursor: pointer; outline: none; transition: fill 0.12s; }
-.county-shape.has-officials { fill: #c4d2e8; }
+.county-shape.has-officials, .county-shape.t1 { fill: #c4d2e8; }
+.county-shape.t2 { fill: #a3b8da; }
+.county-shape.t3 { fill: #7f9bc9; }
+.county-shape.t4 { fill: #5a7bb5; }
 .county-shape:hover { fill: #8aa5cf; }
 .county-shape:focus-visible { stroke: var(--focus); stroke-width: 3; }
 .county-shape.selected { fill: var(--navy); }
@@ -255,6 +258,48 @@ td .contact a { white-space: nowrap; overflow-wrap: normal; }
 .person a > span:last-child { display: grid; gap: 2px; justify-items: start; min-width: 0; }
 .person-name { font: 600 1rem var(--serif); color: var(--navy); }
 .section-title { margin: 32px 0 14px; }
+
+/* county explorer */
+.section-lede { max-width: 720px; margin: -8px 0 16px; color: var(--muted); }
+.map-picker { margin-bottom: 12px; }
+.map-picker select { width: 100%; }
+.pin { display: block; }
+.legend { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin: 12px 0 0; padding: 0; }
+.legend li { display: inline-flex; align-items: center; gap: 6px; }
+.swatch { width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--border); }
+.swatch.t1 { background: #c4d2e8; }
+.swatch.t2 { background: #a3b8da; }
+.swatch.t3 { background: #7f9bc9; }
+.swatch.t4 { background: #5a7bb5; }
+.swatch.selected { background: var(--red); }
+.map-layout > .panel { margin-top: 0; }
+.county-shape.selected { fill: var(--red); }
+/* The marker sits above its county so the highlighted shape stays visible. */
+.pin.marker { transform: translate(-50%, calc(-100% - 6px)); }
+.pin.marker:hover { transform: translate(-50%, calc(-100% - 6px)) scale(1.15); }
+.pin.marker::after { content: ""; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%); border: 5px solid transparent; border-top: 6px solid #fff; }
+.map-panel .panel-top h2 { font-size: 1.6rem; }
+.roster-tools { margin-top: 16px; display: grid; gap: 4px; }
+.roster-tools .chips { margin-top: 8px; }
+.chip:disabled { opacity: 0.45; cursor: default; }
+.chip .tabular { opacity: 0.75; margin-left: 2px; }
+.roster-level { margin-top: 8px; }
+.roster-level .group { display: flex; align-items: center; gap: 8px; padding-top: 16px; border-top: 1px solid var(--border); }
+.roster-level:first-child .group { border-top: 0; }
+.count { display: inline-flex; min-width: 22px; justify-content: center; padding: 0 7px; border-radius: 99px; background: var(--tint); color: var(--navy); font: 600 0.75rem/1.6 var(--sans); letter-spacing: 0; text-transform: none; }
+.roster-section { margin-top: 14px; }
+.roster-section h4 { display: inline-flex; align-items: center; gap: 8px; margin: 0; font: 600 1rem var(--serif); color: var(--text); }
+details.roster-section { border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; }
+details.roster-section > summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+details.roster-section > summary::-webkit-details-marker { display: none; }
+details.roster-section > summary::after { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); margin: 0 4px 4px 0; transition: transform 0.15s; }
+details.roster-section[open] > summary::after { transform: rotate(-135deg); margin-bottom: -4px; }
+details.roster-section[open] > .people { margin-top: 12px; }
+.person.vacant > div { display: flex; align-items: center; gap: 12px; height: 100%; padding: 10px; border: 1px dashed var(--input); border-radius: var(--radius); background: var(--bg); }
+.person.vacant > div > span:last-child { display: grid; gap: 2px; }
+.person.vacant .person-name { color: var(--muted); }
+.notice { margin-top: 12px; padding: 10px 12px; border-left: 3px solid var(--amber); background: #fbf1df; border-radius: 0 var(--radius) var(--radius) 0; color: #5c3d00; }
+.about .bio-summary { margin-top: 10px; font-size: 1.02rem; color: #2c3a54; }
 
 /* counties */
 .county-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); }

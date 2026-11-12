@@ -18,11 +18,28 @@ logger = logging.getLogger(__name__)
 
 _COUNTY_HREF = re.compile(r"countyInfo\.asp\?county=\w+", re.I)
 _TITLE_LINE = re.compile(r"\bSupervisor of Elections\b", re.I)
+# The live pages print the name and title on one line: "Joe Scott, Supervisor".
+_NAME_COMMA_TITLE = re.compile(r"^(?P<name>[^,]+(?:,\s*(?:Jr|Sr|II|III|IV)\.?)?),\s*Supervisor(?: of Elections)?\.?$", re.I)
+_PHOTO_ALT = re.compile(r"photo of the current supervisor", re.I)
 _PHONE_LABEL = re.compile(r"^(?:Phone|Telephone|Office)\s*:?\s*(.+)$", re.I)
 _EMAIL_IN_TEXT = re.compile(r"[\w.+'-]+@[\w-]+(?:\.[\w-]+)+")
 _NOT_A_NAME = re.compile(
     r"\d|county|supervisor|elections|address|phone|fax|email|division|florida|\b(?:contact|your|meet|welcome|office)\b", re.I
 )
+
+
+_CF_EMAIL = re.compile(r"/cdn-cgi/l/email-protection#([0-9a-f]{4,})", re.I)
+
+
+def decode_cf_email(encoded: str) -> str | None:
+    """Cloudflare stores an address as hex bytes XORed with the first byte."""
+    try:
+        data = bytes.fromhex(encoded)
+    except ValueError:
+        return None
+    if len(data) < 2:
+        return None
+    return "".join(chr(b ^ data[0]) for b in data[1:])
 
 
 def parse_supervisor_index(html: str, base_url: str) -> list[tuple[str, str]]:
@@ -48,16 +65,23 @@ def parse_supervisor_page(html: str, county: str, page_url: str) -> dict:
     line next to a 'Supervisor of Elections' line, followed by labelled
     contact lines."""
     soup = BeautifulSoup(html, "lxml")
-    for tag in soup(["script", "style", "nav", "header", "footer"]):
+    for tag in soup(["script", "style", "nav", "header", "footer", "title", "head"]):
         tag.decompose()
     lines = [clean_text(line) for line in soup.get_text("\n").split("\n")]
     lines = [line for line in lines if line]
 
     name = None
+    for line in lines:
+        match = _NAME_COMMA_TITLE.match(line)
+        if match and _looks_like_name(match.group("name")):
+            name = clean_text(match.group("name"))
+            break
     for i, line in enumerate(lines):
+        if name:
+            break
         if not _TITLE_LINE.search(line):
             continue
-        # "Jane Q. Public, Supervisor of Elections" on one line
+        # "Jane Q. Public - Supervisor of Elections" on one line
         before = _TITLE_LINE.split(line)[0].strip(" ,-–:")
         if before and _looks_like_name(before):
             name = before
@@ -67,8 +91,6 @@ def parse_supervisor_page(html: str, county: str, page_url: str) -> dict:
             if 0 <= j < len(lines) and _looks_like_name(lines[j]):
                 name = lines[j]
                 break
-        if name:
-            break
 
     base = {"county": county, "source_url": page_url}
     if not name:
@@ -84,6 +106,15 @@ def parse_supervisor_page(html: str, county: str, page_url: str) -> dict:
     mailto = soup.find("a", href=re.compile(r"^mailto:", re.I))
     if mailto:
         email = normalize_email(mailto["href"])
+    if not email:
+        # The live site hides addresses behind Cloudflare's email protection.
+        for link in soup.find_all("a", href=_CF_EMAIL):
+            if email := normalize_email(decode_cf_email(_CF_EMAIL.search(link["href"]).group(1))):
+                break
+        if not email:
+            for tag in soup.find_all(attrs={"data-cfemail": True}):
+                if email := normalize_email(decode_cf_email(tag["data-cfemail"])):
+                    break
     if not email:
         for line in lines:
             if line.lower().startswith(("email", "e-mail")) and (m := _EMAIL_IN_TEXT.search(line)):
@@ -104,9 +135,17 @@ def parse_supervisor_page(html: str, county: str, page_url: str) -> dict:
         if website:
             break
 
+    photo = None
+    for img in soup.find_all("img", alt=_PHOTO_ALT):
+        src = (img.get("src") or "").strip()
+        if src and not src.startswith("data:"):
+            photo = urljoin(page_url, src.split("?")[0])
+            break
+
     return {
         **base,
         "name": name,
+        "photo_url": photo,
         "office_title": "Supervisor of Elections",
         "government_level": "county",
         "selection_method": "elected",

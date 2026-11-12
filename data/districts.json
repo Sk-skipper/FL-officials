@@ -1,0 +1,208 @@
+{
+  "_how_to": "Which counties each district covers, for offices whose source does not say. Used to place U.S. House and Florida House members on the county map. Edit a list to fix it; a record that already lists its counties is never changed.",
+  "U.S. Representative": {
+    "source": {
+      "name": "Florida Statutes, chapter 8 (2024): congressional district descriptions",
+      "url": "https://flsenate.gov/Laws/Statutes/2024/Chapter8/All"
+    },
+    "note": "Districts adopted in 2022 and in effect for members serving until January 2027.",
+    "districts": {
+      "1": [
+        "Escambia",
+        "Okaloosa",
+        "Santa Rosa",
+        "Walton"
+      ],
+      "2": [
+        "Bay",
+        "Calhoun",
+        "Franklin",
+        "Gadsden",
+        "Gulf",
+        "Holmes",
+        "Jackson",
+        "Jefferson",
+        "Lafayette",
+        "Leon",
+        "Liberty",
+        "Madison",
+        "Taylor",
+        "Wakulla",
+        "Walton",
+        "Washington"
+      ],
+      "3": [
+        "Alachua",
+        "Baker",
+        "Bradford",
+        "Columbia",
+        "Dixie",
+        "Gilchrist",
+        "Hamilton",
+        "Levy",
+        "Marion",
+        "Suwannee",
+        "Union"
+      ],
+      "4": [
+        "Clay",
+        "Duval",
+        "Nassau"
+      ],
+      "5": [
+        "Duval",
+        "St. Johns"
+      ],
+      "6": [
+        "Flagler",
+        "Lake",
+        "Marion",
+        "Putnam",
+        "St. Johns",
+        "Volusia"
+      ],
+      "7": [
+        "Orange",
+        "Seminole",
+        "Volusia"
+      ],
+      "8": [
+        "Brevard",
+        "Indian River",
+        "Orange"
+      ],
+      "9": [
+        "Orange",
+        "Osceola",
+        "Polk"
+      ],
+      "10": [
+        "Orange"
+      ],
+      "11": [
+        "Lake",
+        "Orange",
+        "Polk",
+        "Sumter"
+      ],
+      "12": [
+        "Citrus",
+        "Hernando",
+        "Marion",
+        "Pasco"
+      ],
+      "13": [
+        "Pinellas"
+      ],
+      "14": [
+        "Hillsborough",
+        "Pinellas"
+      ],
+      "15": [
+        "Hillsborough",
+        "Pasco",
+        "Polk"
+      ],
+      "16": [
+        "Hillsborough",
+        "Manatee"
+      ],
+      "17": [
+        "Charlotte",
+        "Lee",
+        "Sarasota"
+      ],
+      "18": [
+        "Collier",
+        "DeSoto",
+        "Glades",
+        "Hardee",
+        "Hendry",
+        "Highlands",
+        "Okeechobee",
+        "Polk"
+      ],
+      "19": [
+        "Collier",
+        "Lee"
+      ],
+      "20": [
+        "Broward",
+        "Palm Beach"
+      ],
+      "21": [
+        "Martin",
+        "Palm Beach",
+        "St. Lucie"
+      ],
+      "22": [
+        "Palm Beach"
+      ],
+      "23": [
+        "Broward",
+        "Palm Beach"
+      ],
+      "24": [
+        "Broward",
+        "Miami-Dade"
+      ],
+      "25": [
+        "Broward"
+      ],
+      "26": [
+        "Collier",
+        "Miami-Dade"
+      ],
+      "27": [
+        "Miami-Dade"
+      ],
+      "28": [
+        "Miami-Dade",
+        "Monroe"
+      ]
+    }
+  },
+  "State Representative": {
+    "source": {
+      "name": "Broward County Legislative Delegation",
+      "url": "https://broward.org/Legislative/Pages/membershipoverview.aspx"
+    },
+    "note": "Only Broward County's delegation (Districts 95–105) is mapped so far.",
+    "districts": {
+      "95": [
+        "Broward"
+      ],
+      "96": [
+        "Broward"
+      ],
+      "97": [
+        "Broward"
+      ],
+      "98": [
+        "Broward"
+      ],
+      "99": [
+        "Broward"
+      ],
+      "100": [
+        "Broward"
+      ],
+      "101": [
+        "Broward"
+      ],
+      "102": [
+        "Broward"
+      ],
+      "103": [
+        "Broward"
+      ],
+      "104": [
+        "Broward",
+        "Miami-Dade"
+      ],
+      "105": [
+        "Broward"
+      ]
+    }
+  }
+}

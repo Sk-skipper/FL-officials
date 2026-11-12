@@ -75,7 +75,9 @@ def parse_fl_house(html: str, base_url: str) -> list[dict]:
             "district": _DISTRICT.search(text).group(1),
             "jurisdiction": "Florida",
             "official_website": urljoin(base_url, link["href"]),
-            "photo_url": _photo_from(card, base_url),
+            # Member portraits live at a fixed address keyed by MemberId.
+            "photo_url": _photo_from(card, base_url)
+            or f"https://www.flhouse.gov/FileStores/Web/Imaging/Member/{member_id}.jpg",
             "source_url": base_url,
         }
     return list(records.values())

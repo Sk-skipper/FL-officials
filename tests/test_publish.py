@@ -110,8 +110,8 @@ def test_coverage_is_reported_honestly():
     *_, meta, _ = run_build()
     rows = {r["office_title"]: r for r in meta["coverage"]["rows"]}
     assert (rows["State Senator"]["collected"], rows["State Senator"]["expected"]) == (1, 40)
-    assert meta["coverage"]["tracked_percent"] == round(1 / 257 * 100, 1)
-    assert any("commissioners" in item for item in meta["coverage"]["not_yet_covered"])
+    assert meta["coverage"]["tracked_percent"] == round(1 / 262 * 100, 1)
+    assert any("Broward" in item for item in meta["coverage"]["not_yet_covered"])
 
 
 def test_publish_writes_all_site_files(tmp_path):
@@ -137,3 +137,34 @@ def test_invalid_json_gives_a_clear_error(tmp_path):
     (data / "corrections.json").write_text('{"oops": ')
     with pytest.raises(PublishError, match="corrections.json is not valid JSON"):
         publish(data, tmp_path / "out", NOW, env={})
+
+
+def test_profiles_districts_and_vacancies_fill_gaps_without_overwriting():
+    data = collected()
+    rep = {"id": "us-representative-district-25-debbie-wasserman-schultz", "full_name": "Debbie Wasserman Schultz",
+           "first_name": "Debbie", "middle_name": None, "last_name": "Wasserman Schultz", "office_title": "U.S. Representative",
+           "government_level": "federal", "selection_method": "elected", "party": "Democratic", "district": "25",
+           "district_number": 25, "jurisdiction": "Florida", "statewide": False, "county": None, "counties": [],
+           "municipality": None, "phone": "(202) 225-7931", "email": None, "official_website": None, "photo_url": None,
+           "source_url": "https://www.house.gov/representatives", "last_verified": "2026-11-11", "updated_on": "2026-11-11"}
+    data["sources"]["fl_senate"]["records"].append(rep)
+    profiles = {rep["id"]: {"photo_url": "https://example.org/w.jpg", "phone": "(202) 000-0000",
+                            "bio": {"born": "1966-09-27", "serving_since": "2005-01-04"},
+                            "sources": [{"name": "Dataset", "url": "https://example.org"}]}}
+    districts = {"U.S. Representative": {"source": {"name": "Statute"}, "districts": {"25": ["Broward"]}}}
+    vacancies = {"vacancies": [{"office_title": "U.S. Representative", "district": "20", "counties": ["Broward", "Palm Beach"],
+                                "source_url": "https://example.org/v"}]}
+    officials, _, meta, _ = build(data, {"officials": []}, {}, {}, NOW, env={},
+                                  profiles=profiles, districts=districts, vacancies=vacancies)
+    record = next(r for r in officials["officials"] if r["id"] == rep["id"])
+    assert record["photo_url"] == "https://example.org/w.jpg"
+    assert record["phone"] == "(202) 225-7931"  # the source's own number is kept
+    assert record["bio"] == {"born": "1966-09-27", "serving_since": "2005-01-04"}
+    assert record["counties"] == ["Broward"]
+    assert meta["vacancies"][0]["counties"] == ["Broward", "Palm Beach"]
+
+
+def test_manual_bio_is_validated():
+    entry = dict(MAYOR, bio={"favourite_food": "pizza"})
+    with pytest.raises(PublishError, match="unknown bio field"):
+        build(collected(), {"officials": [entry]}, {}, {}, NOW, env={})

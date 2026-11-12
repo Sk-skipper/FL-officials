@@ -6,6 +6,9 @@ Inputs (all in data/):
   collected.json         written by the collector; do not edit by hand
   manual_officials.json  officials you add yourself, e.g. county commissioners
   corrections.json       fixes to individual records, keyed by record id
+  profiles.json          portraits, bio facts and missing contact details (tools/enrich.py)
+  districts.json         which counties each congressional / Florida House district covers
+  vacancies.json         seats that are currently empty
   site.json              optional settings (report link, contact email)
 
 Outputs (in site/data/): officials.json, officials.csv, sources.json, meta.json
@@ -22,7 +25,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from collector.geo import FLORIDA_COUNTIES
+from collector.geo import FLORIDA_COUNTIES, canonical_county
 from collector.normalize import (
     normalize_email,
     normalize_party,
@@ -44,18 +47,25 @@ LEVELS = ("federal", "state", "county", "municipal")
 EXPECTED_SEATS = [
     ("federal", "U.S. Senator", 2),
     ("federal", "U.S. Representative", 28),
+    ("state", "Governor", 1),
+    ("state", "Lieutenant Governor", 1),
+    ("state", "Attorney General", 1),
+    ("state", "Chief Financial Officer", 1),
+    ("state", "Commissioner of Agriculture", 1),
     ("state", "State Senator", 40),
     ("state", "State Representative", 120),
     ("county", "Supervisor of Elections", 67),
 ]
 NOT_YET_COVERED = [
-    "Governor, Lieutenant Governor and Cabinet",
-    "County commissioners",
-    "Sheriffs, clerks of court, property appraisers and tax collectors",
-    "School board members",
-    "Judges and state attorneys",
-    "Mayors, city commissioners and council members (Florida has more than 400 municipalities)",
+    "County commissions and constitutional officers outside Broward County",
+    "School boards and judges outside Broward County",
+    "Councils in most Broward cities beyond the mayor (13 of 31 cities have at least one official listed)",
+    "Mayors and councils outside Broward County (Florida has 411 municipalities)",
+    "Special districts (water control, hospital, soil and water)",
 ]
+
+BIO_TEXT = {"born", "serving_since", "term_ends", "next_election", "summary", "note"}
+BIO_FIELDS = BIO_TEXT | {"previously"}
 
 CSV_COLUMNS = [
     "id", "full_name", "first_name", "middle_name", "last_name", "office_title", "government_level",
@@ -120,7 +130,72 @@ def _correct(record: dict, fields: dict, record_id: str) -> None:
     record["verification_status"] = "corrected"
 
 
-def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None):
+def _clean_bio(bio: object, where: str) -> dict:
+    if not isinstance(bio, dict):
+        raise PublishError(f"{where}: bio must be an object")
+    clean = {}
+    for key, value in bio.items():
+        if key not in BIO_FIELDS:
+            raise PublishError(f"{where}: unknown bio field '{key}'. Allowed: {', '.join(sorted(BIO_FIELDS))}")
+        if key == "previously":
+            if not isinstance(value, list) or not all(isinstance(v, str) for v in value):
+                raise PublishError(f"{where}: bio.previously must be a list of text")
+            clean[key] = [v.strip() for v in value if v.strip()]
+        elif isinstance(value, str) and value.strip():
+            clean[key] = value.strip()
+        elif value is not None:
+            raise PublishError(f"{where}: bio.{key} must be text")
+    return clean
+
+
+def _apply_profiles(by_id: dict, profiles: dict, warnings: list[str]) -> None:
+    """Fill gaps from data/profiles.json. Values the source published always win."""
+    for record_id, profile in profiles.items():
+        if record_id.startswith("_"):
+            continue
+        record = by_id.get(record_id)
+        if record is None:
+            continue  # profiles are generated for everyone collected; a departed official just has none
+        where = f"profiles.json, '{record_id}'"
+        for field, clean in (("photo_url", normalize_photo_url), ("phone", normalize_phone), ("email", normalize_email)):
+            if profile.get(field) and not record.get(field):
+                record[field] = clean(profile[field])
+        if profile.get("bio"):
+            record["bio"] = {**_clean_bio(profile["bio"], where), **(record.get("bio") or {})}
+        sources = [s for s in profile.get("sources", []) if isinstance(s, dict) and s.get("name")]
+        if sources:
+            record["bio_sources"] = sources
+
+
+def _apply_districts(records: list[dict], districts: dict) -> None:
+    """Give district-based officials the counties their district covers, when their source didn't say."""
+    for record in records:
+        table = districts.get(record.get("office_title"))
+        if not isinstance(table, dict) or record.get("counties") or record.get("county") or record.get("statewide"):
+            continue
+        found = (table.get("districts") or {}).get(record.get("district") or "")
+        if found:
+            record["counties"] = [c for c in (canonical_county(n) for n in found) if c]
+            record["counties_source"] = table.get("source")
+
+
+def _vacancies(raw: dict) -> list[dict]:
+    out = []
+    for index, entry in enumerate(raw.get("vacancies", []), start=1):
+        if not entry.get("office_title") or not entry.get("source_url"):
+            raise PublishError(f"vacancies.json, entry {index}: office_title and source_url are required")
+        counties = [c for c in (canonical_county(n) for n in entry.get("counties") or []) if c]
+        out.append({
+            "office_title": entry["office_title"], "government_level": entry.get("government_level"),
+            "district": entry.get("district"), "seat_label": entry.get("seat_label"),
+            "jurisdiction": entry.get("jurisdiction"), "counties": counties,
+            "note": entry.get("note"), "source_url": entry["source_url"],
+        })
+    return out
+
+
+def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
+          profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -140,11 +215,16 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         verified = entry.get("last_verified")
         if verified and not DATE.match(str(verified)):
             raise PublishError(f"manual_officials.json, entry {index}: last_verified must look like 2026-11-10")
-        records.append({
+        record = {
             "id": validated.record_id, **validated.model_dump(), "last_verified": verified,
             "updated_on": verified, "source_name": entry.get("source_name") or "Added by hand",
             "source_directory_url": None, "verification_status": "manual",
-        })
+        }
+        if entry.get("seat_label"):
+            record["seat_label"] = str(entry["seat_label"]).strip()
+        if entry.get("bio"):
+            record["bio"] = _clean_bio(entry["bio"], f"manual_officials.json, entry {index}")
+        records.append(record)
 
     unique = []
     for record in records:
@@ -154,6 +234,9 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         seen.add(record["id"])
         unique.append(record)
     by_id = {r["id"]: r for r in unique}
+
+    _apply_profiles(by_id, profiles or {}, warnings)
+    _apply_districts(unique, districts or {})
 
     for record_id, fields in corrections.items():
         if record_id.startswith("_"):
@@ -167,6 +250,8 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
 
     for record in unique:
         record.setdefault("correction_note", None)
+        record.setdefault("seat_label", None)
+        record.setdefault("bio", None)
     unique.sort(key=lambda r: (r["last_name"].lower(), (r.get("first_name") or "").lower(), r["id"]))
 
     by_level = {level: sum(r["government_level"] == level for r in unique) for level in LEVELS}
@@ -214,6 +299,8 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
                 "official in Florida: offices in the 'not yet covered' list are absent until they are added."
             ),
         },
+        "vacancies": _vacancies(vacancies or {}),
+        "municipalities": sorted({r["municipality"] for r in unique if r.get("municipality")}),
         "report_url": report_url or None,
         "contact_email": (site.get("contact_email") or "").strip() or None,
     }
@@ -249,6 +336,9 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         load_json(data_dir / "site.json", {}),
         now or datetime.now(timezone.utc),
         env,
+        profiles=load_json(data_dir / "profiles.json", {}),
+        districts=load_json(data_dir / "districts.json", {}),
+        vacancies=load_json(data_dir / "vacancies.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731

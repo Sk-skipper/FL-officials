@@ -21,7 +21,8 @@ def _key(name: str) -> str:
 _BY_KEY = {_key(c): c for c in FLORIDA_COUNTIES}
 _ALIASES = {"saintjohns": "St. Johns", "saintlucie": "St. Lucie", "dade": "Miami-Dade"}
 
-_PART_PREFIX = re.compile(r"^(?:parts?|portions?|a portion)\s+of\s+", re.I)
+# "Consists of Charlotte, DeSoto counties and parts of Lee, Polk counties" (Florida Senate roster).
+_PART_PREFIX = re.compile(r"^(?:consists\s+of\s+)?(?:(?:parts?|portions?|a portion)\s+of\s+)?", re.I)
 _SPLIT = re.compile(r",|;|/|&|\band\b", re.I)
 
 

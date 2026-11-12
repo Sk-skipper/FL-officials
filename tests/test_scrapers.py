@@ -126,6 +126,29 @@ def test_fl_senate_parser():
     assert first.phone is None  # the roster has no phone numbers, so none are stored
 
 
+# Shape of the live roster for the 2026-2028 term: term in the link path, portrait in the row,
+# counties written as a sentence.
+FL_SENATE_LIVE_HTML = """<table><thead><tr><th>Senator</th><th>District</th><th>Party</th><th>Counties</th></tr></thead><tbody>
+<tr><td><img src="/PublishedContent/Senators/2026-2028/Photos/S32_5520_Thumbnail.jpg">
+<a href="/Senators/2026-2028/S32">Osgood, Rosalind</a></td><td>32</td><td>Democrat</td><td>Consists of part of Broward county</td></tr>
+<tr><td><img src="/PublishedContent/Senators/2026-2028/Photos/S27_5342_Thumbnail.jpg">
+<a href="/Senators/2026-2028/S27">Albritton, Ben</a></td><td>27</td><td>Republican</td>
+<td>Consists of Charlotte, DeSoto, Hardee counties and parts of Lee, Polk counties</td></tr>
+<tr><td><img src="/PublishedContent/Senators/nophoto_thumbnail.jpg"><a href="/Senators/2026-2028/S39">Vacant</a></td>
+<td>39</td><td></td><td>Consists of part of Miami-Dade county</td></tr></tbody></table>"""
+
+
+def test_fl_senate_live_layout():
+    records = _validated(parse_fl_senate(FL_SENATE_LIVE_HTML, "https://www.flsenate.gov/Senators"))
+    assert [(r.full_name, r.district, r.party) for r in records] == [
+        ("Rosalind Osgood", "32", "Democratic"), ("Ben Albritton", "27", "Republican"),
+    ]
+    assert records[0].counties == ["Broward"]
+    assert records[1].counties == ["Charlotte", "DeSoto", "Hardee", "Lee", "Polk"]
+    assert records[0].photo_url == "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S32_5520_Thumbnail.jpg"
+    assert records[0].official_website == "https://www.flsenate.gov/Senators/2026-2028/S32"
+
+
 def test_fl_house_parser():
     records = _validated(parse_fl_house(FL_HOUSE_HTML, "https://www.flhouse.gov/Representatives"))
     assert [(r.full_name, r.party, r.district) for r in records] == [
@@ -171,6 +194,28 @@ def test_supervisor_index_and_page():
     assert record.email == "lnguyen@example.gov"
     assert record.official_website == "https://www.votealachua.example.gov"
     assert record.jurisdiction == "Alachua County"
+
+
+# Shape of the live Division of Elections page (Nov 2026): name and title on one line,
+# Cloudflare-protected email, portrait image. The page <title> must not be read as a name.
+SUPERVISOR_LIVE_HTML = """<html><head><title>Contact your Supervisor of Elections - Florida Division of Elections</title></head>
+<body><h1>Contact Your Supervisor</h1>
+<img src="images/photoBRO.jpg?=0" alt="Photo of the Current Supervisor of Elections">
+<img src="images/iconBRO.jpg?=0" alt="Logo for Supervisor of Elections">
+<p>Broward County Supervisor of Elections<br>Joe Scott, Supervisor<br>4650 NW 21st Avenue<br>Fort Lauderdale, FL 33309</p>
+<p>Phone: 954-357-7050<br>Fax: 954-357-7070<br>
+Email: <a href="/cdn-cgi/l/email-protection#afcac3caccdbc6c0c1dcefcdddc0d8ceddcbd9c0dbcadc81c8c0d9">[email&#160;protected]</a><br>
+Web Address: <a href="https://www.browardvotes.gov">https://www.browardvotes.gov</a></p></body></html>"""
+
+
+def test_supervisor_live_page_layout():
+    url = "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRO"
+    record = _validated([parse_supervisor_page(SUPERVISOR_LIVE_HTML, "Broward", url)])[0]
+    assert (record.full_name, record.first_name, record.last_name) == ("Joe Scott", "Joe", "Scott")
+    assert record.phone == "(954) 357-7050"
+    assert record.email == "elections@browardvotes.gov"
+    assert record.official_website == "https://www.browardvotes.gov"
+    assert record.photo_url == "https://dos.elections.myflorida.com/supervisors/images/photoBRO.jpg"
 
 
 def test_supervisor_page_without_a_recognisable_name_is_reported_not_guessed():

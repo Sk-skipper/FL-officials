@@ -1,0 +1,52 @@
+{
+  "_how_to": "Seats that are currently empty. They are shown on the map and county pages so a gap is never mistaken for missing data.",
+  "vacancies": [
+    {
+      "office_title": "U.S. Representative",
+      "government_level": "federal",
+      "district": "20",
+      "jurisdiction": "Florida",
+      "counties": [
+        "Broward",
+        "Palm Beach"
+      ],
+      "note": "Vacant since Sheila Cherfilus-McCormick resigned in April 2026.",
+      "source_url": "https://news.ballotpedia.org/2026/04/22/sheila-cherfilus-mccormicks-resignation-leaves-floridas-20th-congressional-district-vacant/"
+    },
+    {
+      "office_title": "State Senator",
+      "government_level": "state",
+      "district": "39",
+      "jurisdiction": "Florida",
+      "counties": [
+        "Miami-Dade"
+      ],
+      "note": "Listed as vacant on the Florida Senate roster.",
+      "source_url": "https://flsenate.gov/senators/list"
+    },
+    {
+      "office_title": "Circuit Judge",
+      "government_level": "county",
+      "district": "23",
+      "seat_label": "Group 23",
+      "jurisdiction": "17th Judicial Circuit (Broward County)",
+      "counties": [
+        "Broward"
+      ],
+      "note": "Listed as vacant by the Broward Supervisor of Elections.",
+      "source_url": "https://browardvotes.gov/candidates/elected-officials"
+    },
+    {
+      "office_title": "Circuit Judge",
+      "government_level": "county",
+      "district": "41",
+      "seat_label": "Group 41",
+      "jurisdiction": "17th Judicial Circuit (Broward County)",
+      "counties": [
+        "Broward"
+      ],
+      "note": "Listed as vacant by the Broward Supervisor of Elections.",
+      "source_url": "https://browardvotes.gov/candidates/elected-officials"
+    }
+  ]
+}

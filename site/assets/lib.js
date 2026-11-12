@@ -40,9 +40,11 @@ function haystack(record) {
         record.office_title,
         record.jurisdiction,
         record.district ? `district ${record.district}` : "",
+        record.seat_label,
         record.county,
         ...(record.counties || []),
         record.municipality,
+        record.party,
       ].join(" | "),
     );
     haystacks.set(record, text);
@@ -200,8 +202,14 @@ export function districtLabel(district) {
   return /^\d+$/.test(district) ? `District ${district}` : district;
 }
 
+/** The seat as people know it: "Group 5" for a judge, "Seat 4" for a city seat, else "District 12". */
+export function seatText(record) {
+  return record?.seat_label || districtLabel(record?.district);
+}
+
 export function describe(record) {
-  return [record.office_title, record.jurisdiction, districtLabel(record.district)].filter(Boolean).join(" · ");
+  const place = record.municipality && record.jurisdiction === record.municipality ? `City of ${record.municipality}` : record.jurisdiction;
+  return [record.office_title, place, seatText(record)].filter(Boolean).join(" · ");
 }
 
 export function formatDate(value, fallback = "Not recorded") {
@@ -211,6 +219,28 @@ export function formatDate(value, fallback = "Not recorded") {
   const date = match ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3])) : new Date(value);
   if (Number.isNaN(date.getTime())) return fallback;
   return date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+
+/** Bio dates can be a full date, a year and month, or a year: "2018-11" -> "Nov 2018". */
+export function formatPartialDate(value, fallback = "") {
+  if (!value) return fallback;
+  const text = String(value);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) return formatDate(text, fallback);
+  const month = /^(\d{4})-(\d{2})$/.exec(text);
+  if (month) {
+    return new Date(Number(month[1]), Number(month[2]) - 1, 1).toLocaleDateString("en-US", { year: "numeric", month: "short" });
+  }
+  return /^\d{4}$/.test(text) ? text : fallback || text;
+}
+
+/** Whole years between a YYYY-MM-DD date and `now`. */
+export function yearsSince(value, now = new Date()) {
+  const match = /^(\d{4})-(\d{2})(?:-(\d{2}))?$/.exec(String(value || ""));
+  if (!match) return null;
+  const [y, m, d] = [Number(match[1]), Number(match[2]), Number(match[3] || 1)];
+  let years = now.getFullYear() - y;
+  if (now.getMonth() + 1 < m || (now.getMonth() + 1 === m && now.getDate() < d)) years -= 1;
+  return years >= 0 ? years : null;
 }
 
 export function formatDateTime(value, fallback = "Never") {
@@ -261,5 +291,100 @@ export function countyRoster(records, county) {
 
 /** How many officials are tied to each county (statewide officials are not counted). */
 export function countyCounts(records, counties) {
+  return Object.fromEntries(counties.map((name) => [name, records.filter((r) => !r.statewide && inCounty(r, name)).length]));
+}
+
+// -- county roster grouping ------------------------------------------------------------
+
+const TITLE_RANK = [
+  "governor", "lieutenant governor", "attorney general", "chief financial officer", "commissioner of agriculture",
+  "mayor", "vice mayor", "deputy mayor", "assistant deputy mayor", "commissioner", "councilmember",
+  "county commissioner", "sheriff", "state attorney", "public defender", "clerk", "property appraiser", "tax collector",
+  "supervisor of elections",
+];
+
+function titleRank(title) {
+  const t = fold(title);
+  const exact = TITLE_RANK.indexOf(t);
+  if (exact !== -1) return exact;
+  const partial = TITLE_RANK.findIndex((rank) => t.startsWith(rank));
+  return partial === -1 ? TITLE_RANK.length : partial;
+}
+
+function seatNumber(record) {
+  if (typeof record.district_number === "number") return record.district_number;
+  const match = /\d+/.exec(record.seat_label || record.district || "");
+  return match ? Number(match[0]) : 0;
+}
+
+export function rosterOrder(a, b) {
+  return (
+    titleRank(a.office_title) - titleRank(b.office_title) ||
+    seatNumber(a) - seatNumber(b) ||
+    String(a.last_name).localeCompare(String(b.last_name), "en")
+  );
+}
+
+const CONSTITUTIONAL = /^(sheriff|clerk|property appraiser|tax collector|supervisor of elections|state attorney|public defender)/i;
+
+/** Which part of a county's roster a record belongs in. */
+export function rosterSection(record) {
+  const title = record.office_title || "";
+  switch (record.government_level) {
+    case "federal":
+      return /senator/i.test(title) ? "U.S. Senate" : "U.S. House of Representatives";
+    case "state":
+      if (/^state senator/i.test(title)) return "Florida Senate";
+      if (/^state representative/i.test(title)) return "Florida House of Representatives";
+      return "Governor and Cabinet";
+    case "county":
+      if (/county commissioner/i.test(title)) return "County Commission";
+      if (CONSTITUTIONAL.test(title)) return "Constitutional officers";
+      if (/school board/i.test(title)) return "School Board";
+      if (/circuit judge/i.test(title)) return "Circuit Court judges";
+      if (/county court judge/i.test(title)) return "County Court judges";
+      return "Other county offices";
+    case "municipal":
+      return record.municipality || "Municipal";
+    default:
+      return "Other";
+  }
+}
+
+const SECTION_ORDER = [
+  "U.S. Senate", "U.S. House of Representatives", "Governor and Cabinet", "Florida Senate", "Florida House of Representatives",
+  "County Commission", "Constitutional officers", "School Board", "Circuit Court judges", "County Court judges", "Other county offices",
+];
+
+/**
+ * Everyone who represents a county, grouped by level and then by body:
+ * [{ level, sections: [{ name, items: [...records and vacancies] }] }]. Vacancies carry `vacant: true`.
+ */
+export function countyGroups(records, county, vacancies = []) {
+  const members = records.filter((r) => r.statewide || inCounty(r, county));
+  const empty = vacancies
+    .filter((v) => (v.counties || []).includes(county))
+    .map((v) => ({ ...v, vacant: true, full_name: "Vacant seat", last_name: "", id: `vacant-${v.office_title}-${v.district}` }));
+  return LEVELS.map((level) => {
+    const bySection = new Map();
+    for (const item of [...members, ...empty].filter((r) => r.government_level === level)) {
+      const name = rosterSection(item);
+      if (!bySection.has(name)) bySection.set(name, []);
+      bySection.get(name).push(item);
+    }
+    const sections = [...bySection.entries()]
+      .map(([name, items]) => ({ name, items: items.sort(rosterOrder) }))
+      .sort((a, b) => {
+        const ia = SECTION_ORDER.indexOf(a.name);
+        const ib = SECTION_ORDER.indexOf(b.name);
+        if (ia !== -1 || ib !== -1) return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+        return a.name.localeCompare(b.name, "en");
+      });
+    return { level, count: sections.reduce((n, s) => n + s.items.filter((i) => !i.vacant).length, 0), sections };
+  }).filter((group) => group.sections.length);
+}
+
+/** Officials tied to each county, including district-based members whose district reaches into it. */
+export function countyTotals(records, counties) {
   return Object.fromEntries(counties.map((name) => [name, records.filter((r) => !r.statewide && inCounty(r, name)).length]));
 }

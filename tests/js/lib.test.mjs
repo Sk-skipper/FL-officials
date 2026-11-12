@@ -98,3 +98,25 @@ test("formatting never invents values and blocks unsafe links", () => {
   assert.equal(formatDate(null), "Not recorded");
   assert.equal(formatDate("2026-11-10"), "Nov 10, 2026");
 });
+
+test("countyGroups places district members, statewide officials and vacancies in the right bodies", async () => {
+  const { countyGroups, seatText, formatPartialDate } = await import("../../site/assets/lib.js");
+  const people = [
+    { id: "s", full_name: "Sen A", last_name: "A", office_title: "U.S. Senator", government_level: "federal", statewide: true },
+    { id: "h", full_name: "Rep B", last_name: "B", office_title: "U.S. Representative", government_level: "federal", district: "25", district_number: 25, counties: ["Broward"] },
+    { id: "j", full_name: "Judge C", last_name: "C", office_title: "Circuit Judge", government_level: "county", county: "Broward", district: "5", seat_label: "Group 5" },
+    { id: "m", full_name: "Mayor D", last_name: "D", office_title: "Mayor", government_level: "municipal", county: "Broward", municipality: "West Park" },
+    { id: "c", full_name: "Comm E", last_name: "E", office_title: "Commissioner", government_level: "municipal", county: "Broward", municipality: "West Park" },
+    { id: "x", full_name: "Elsewhere", last_name: "X", office_title: "Mayor", government_level: "municipal", county: "Leon", municipality: "Tallahassee" },
+  ];
+  const groups = countyGroups(people, "Broward", [{ office_title: "U.S. Representative", government_level: "federal", district: "20", counties: ["Broward"] }]);
+  const federal = groups.find((g) => g.level === "federal");
+  assert.equal(federal.count, 2);
+  assert.deepEqual(federal.sections.map((s) => s.name), ["U.S. Senate", "U.S. House of Representatives"]);
+  assert.ok(federal.sections[1].items.some((i) => i.vacant));
+  const town = groups.find((g) => g.level === "municipal").sections;
+  assert.deepEqual(town.map((s) => s.name), ["West Park"]);
+  assert.deepEqual(town[0].items.map((i) => i.office_title), ["Mayor", "Commissioner"]);
+  assert.equal(seatText(people[2]), "Group 5");
+  assert.equal(formatPartialDate("2018-11"), "Nov 2018");
+});

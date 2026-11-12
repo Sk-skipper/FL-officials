@@ -5,8 +5,9 @@ import {
   SOURCE_STATUS_LABELS,
   SORTABLE,
   VERIFICATION_LABELS,
-  countyCounts,
+  countyGroups,
   countyRoster,
+  countyTotals,
   describe,
   districtLabel,
   escapeHtml as esc,
@@ -17,15 +18,18 @@ import {
   formatDate,
   formatDateTime,
   formatNumber,
+  formatPartialDate,
   inCounty,
   initials,
   paginate,
   photoUrl,
   plural,
   safeUrl,
+  seatText,
   sortRecords,
   telHref,
   toCsv,
+  yearsSince,
 } from "./lib.js";
 
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -225,7 +229,7 @@ function officialsTable(records, sort) {
         <td>${esc(r.office_title)}</td>
         <td>${levelBadge(r.government_level)}</td>
         <td>${esc(r.jurisdiction)}</td>
-        <td class="tabular">${r.district ? esc(districtLabel(r.district)) : '<span class="muted">—</span>'}</td>
+        <td class="tabular">${seatText(r) ? esc(seatText(r)) : '<span class="muted">—</span>'}</td>
         <td>${partyText(r.party)}</td>
         <td>${contactLinks(r)}</td>
         <td class="right"><a class="details" href="${profileHref(r)}" aria-label="View profile of ${esc(r.full_name)}">View profile${ICON.arrow}</a></td>
@@ -281,6 +285,11 @@ function home() {
       });
     })
     .catch(() => undefined);
+
+  const explorer = $("#explorer");
+  if (explorer) {
+    withData(explorer, [loadOfficials, loadMeta, loadMap], (records, meta, map) => countyExplorer(explorer, records, meta, map), "Loading the county map");
+  }
 
   const stats = $("#stats");
   withData(stats, [loadOfficials, loadMeta], (records, meta) => {
@@ -417,9 +426,9 @@ function directory() {
         <nav class="pager" aria-label="Pagination">
           <p class="muted tabular">Showing ${formatNumber(page.start + 1)}–${formatNumber(page.start + page.items.length)} of ${formatNumber(page.total)}</p>
           <div class="actions">
-            <button type="button" class="button outline small" data-page="${page.page - 1}"${page.page <= 1 ? " disabled" : ""}>Previous</button>
+            <button type="button" class="button outline small" data-goto="${page.page - 1}"${page.page <= 1 ? " disabled" : ""}>Previous</button>
             <span class="tabular">Page ${page.page} of ${page.pages}</span>
-            <button type="button" class="button outline small" data-page="${page.page + 1}"${page.page >= page.pages ? " disabled" : ""}>Next</button>
+            <button type="button" class="button outline small" data-goto="${page.page + 1}"${page.page >= page.pages ? " disabled" : ""}>Next</button>
           </div>
         </nav>`;
     }
@@ -452,9 +461,10 @@ function directory() {
         $(`[data-sort="${key}"]`)?.focus();
         return;
       }
-      const pageButton = event.target.closest("[data-page]");
+      // Not "[data-page]": <body data-page="directory"> would match every click and set the page to NaN.
+      const pageButton = event.target.closest("[data-goto]");
       if (pageButton && !pageButton.disabled) {
-        state.page = Number(pageButton.dataset.page);
+        state.page = Number(pageButton.dataset.goto) || 1;
         draw();
         $("#count").scrollIntoView({ block: "start" });
       }
@@ -531,6 +541,8 @@ function profile() {
         </div>
       </header>
       <div class="profile-grid">
+        <div class="stack">
+        ${aboutPanel(r)}
         <section class="panel">
           <h2>Office details</h2>
           <dl class="rows">
@@ -540,11 +552,17 @@ function profile() {
             ${row("Jurisdiction", esc(r.jurisdiction))}
             ${row(counties.length > 1 ? "Counties represented" : "County", countyLinks)}
             ${r.municipality ? row("Municipality", esc(r.municipality)) : ""}
-            ${row("District", esc(districtLabel(r.district)))}
+            ${row(r.seat_label ? "Seat" : "District", esc(seatText(r)))}
             ${row("Political party", esc(r.party || ""))}
             ${row("Last verified", esc(formatDate(r.last_verified, "")))}
           </dl>
+          ${r.counties_source ? `<p class="muted small fine">Counties in this district: ${
+            safeUrl(r.counties_source.url)
+              ? `<a href="${esc(r.counties_source.url)}" target="_blank" rel="noopener noreferrer">${esc(r.counties_source.name)}</a>`
+              : esc(r.counties_source.name)
+          }</p>` : ""}
         </section>
+        </div>
         <div class="stack">
           <section class="panel">
             <h2>Contact</h2>
@@ -575,6 +593,35 @@ function profile() {
   }, "Loading profile");
 }
 
+/** Basic facts about the person: born, time in office, term, earlier offices. */
+function aboutPanel(r) {
+  const bio = r.bio || {};
+  const facts = [];
+  if (bio.born) {
+    const age = yearsSince(bio.born);
+    facts.push(["Born", `${esc(formatPartialDate(bio.born))}${age !== null ? ` <span class="muted">(age ${age})</span>` : ""}`]);
+  }
+  if (bio.serving_since) {
+    const years = yearsSince(bio.serving_since);
+    const span = years === null ? "" : years < 1 ? " <span class=\"muted\">(newly in office)</span>" : ` <span class="muted">(${plural(years, "year")})</span>`;
+    facts.push(["In this office since", `${esc(formatPartialDate(bio.serving_since))}${span}`]);
+  }
+  if (bio.term_ends) facts.push(["Current term ends", esc(formatPartialDate(bio.term_ends))]);
+  if (bio.next_election) facts.push(["Next election", esc(bio.next_election)]);
+  if (bio.previously?.length) facts.push(["Previously", `<ul class="plain">${bio.previously.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>`]);
+  if (!facts.length && !bio.summary && !bio.note) return "";
+  const sources = (r.bio_sources || [])
+    .map((s) => (safeUrl(s.url) ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>` : esc(s.name)))
+    .join(", ");
+  return `<section class="panel about">
+    <h2>About ${esc(r.first_name || r.full_name)}</h2>
+    ${bio.summary ? `<p class="bio-summary">${esc(bio.summary)}</p>` : ""}
+    ${facts.length ? `<dl class="rows">${facts.map(([label, value]) => `<div class="row"><dt>${label}</dt><dd>${value}</dd></div>`).join("")}</dl>` : ""}
+    ${bio.note ? `<p class="notice small">${esc(bio.note)}</p>` : ""}
+    <p class="muted small fine">${sources ? `Bio facts from ${sources}, and the source below.` : "Bio facts from the source below."}</p>
+  </section>`;
+}
+
 // -- counties ---------------------------------------------------------------------
 let mapRequest;
 function loadMap() {
@@ -589,118 +636,215 @@ function loadMap() {
 }
 
 function personCard(r) {
+  if (r.vacant) {
+    return `<li class="person vacant"><div><span class="avatar lg blank" aria-hidden="true">—</span><span>
+      <span class="person-name">Vacant seat</span>
+      <span class="muted small">${esc(r.office_title)}${seatText(r) ? ` · ${esc(seatText(r))}` : ""}</span>
+      ${r.note ? `<span class="muted small">${esc(r.note)}</span>` : ""}
+    </span></div></li>`;
+  }
+  const seat = seatText(r);
   return `<li class="person"><a href="${profileHref(r)}">${avatar(r, "lg")}<span>
     <span class="person-name">${esc(r.full_name)}</span>
-    <span class="muted small">${esc(r.office_title)}${r.district ? ` · ${esc(districtLabel(r.district))}` : ""}</span>
+    <span class="muted small">${esc(r.office_title)}${seat ? ` · ${esc(seat)}` : ""}</span>
     ${r.party ? `<span class="badge outline">${esc(r.party)}</span>` : ""}
   </span></a></li>`;
+}
+
+const LONG_SECTION = 12;
+
+/**
+ * The county explorer: a clickable map of all 67 counties beside a full roster for the
+ * selected county, grouped by level and body. Used on the homepage and the Counties page.
+ */
+function countyExplorer(root, records, meta, map, { initial = "Broward", syncParam = "county" } = {}) {
+  const totals = countyTotals(records, meta.counties);
+  const vacancies = meta.vacancies || [];
+  const requested = params().get(syncParam);
+  let selected = meta.counties.find((c) => fold(c) === fold(requested || "")) || initial;
+  let level = "";
+  let filter = "";
+
+  const tier = (n) => (n >= 50 ? " t4" : n >= 11 ? " t3" : n >= 5 ? " t2" : n > 0 ? " t1" : "");
+  const shapes = map.counties
+    .map(
+      (c) => `<path class="county-shape${tier(totals[c.name])}" data-county="${esc(c.name)}" d="${c.d}"
+        tabindex="0" role="button" aria-pressed="false"
+        aria-label="${esc(c.name)} County, ${plural(totals[c.name], "official")} tied to the county"><title>${esc(c.name)} County · ${plural(totals[c.name], "official")}</title></path>`,
+    )
+    .join("");
+  const centres = Object.fromEntries(map.counties.map((c) => [c.name, c]));
+
+  root.innerHTML = `
+    <div class="map-layout">
+      <section class="panel map-card" aria-label="Map of Florida counties">
+        <div class="field map-picker"><label for="${syncParam}-pick">County</label>
+          <select id="${syncParam}-pick">${meta.counties.map((c) => `<option value="${esc(c)}">${esc(c)} County</option>`).join("")}</select></div>
+        <div class="map-wrap">
+          <svg viewBox="0 0 ${map.width} ${map.height}" role="group" aria-label="Florida's 67 counties. Select a county to see everyone who represents it.">${shapes}</svg>
+          <div class="pins"></div>
+        </div>
+        <ul class="legend small muted" aria-label="Map shading">
+          <li><span class="swatch t1"></span>1–4 officials</li><li><span class="swatch t2"></span>5–10</li><li><span class="swatch t3"></span>11–49</li><li><span class="swatch t4"></span>50 or more</li><li><span class="swatch selected"></span>Selected</li>
+        </ul>
+        <p class="muted small map-note">Shading counts officials tied to each county: local offices plus the U.S. House, Florida Senate and Florida House
+        members whose districts reach into it. Statewide officials represent every county and are listed in each.</p>
+      </section>
+      <section class="panel map-panel" aria-live="polite"></section>
+    </div>`;
+
+  const panel = $(".map-panel", root);
+  const pins = $(".pins", root);
+  const picker = $(`#${syncParam}-pick`, root);
+
+  function syncUrl() {
+    const next = params();
+    if (selected === initial) next.delete(syncParam);
+    else next.set(syncParam, selected);
+    const text = next.toString();
+    window.history.replaceState(null, "", `${window.location.pathname}${text ? `?${text}` : ""}${window.location.hash}`);
+  }
+
+  function drawPin() {
+    // One portrait marks the selected county: its leading county official with a photo.
+    const local = countyRoster(records, selected).local;
+    const lead =
+      local.find((r) => r.government_level === "county" && /county commissioner/i.test(r.office_title) && photoUrl(r.photo_url)) ||
+      local.find((r) => r.government_level === "county" && photoUrl(r.photo_url));
+    const c = centres[selected];
+    pins.innerHTML =
+      lead && c
+        ? `<a class="pin marker" href="${profileHref(lead)}" style="left:${((c.cx / map.width) * 100).toFixed(2)}%;top:${((c.cy / map.height) * 100).toFixed(2)}%"
+            aria-label="${esc(lead.full_name)}, ${esc(lead.office_title)}, ${esc(selected)} County">${avatar(lead, "sm")}</a>`
+        : "";
+  }
+
+  function matches(item) {
+    if (!filter) return true;
+    if (item.vacant) return fold([item.office_title, item.seat_label, item.district, "vacant"].join(" ")).includes(fold(filter));
+    return fold([item.full_name, item.office_title, item.municipality, item.jurisdiction, seatText(item), item.party].join(" ")).includes(fold(filter));
+  }
+
+  function drawPanel() {
+    const groups = countyGroups(records, selected, vacancies);
+    const total = groups.reduce((n, g) => n + g.count, 0);
+    const open = vacancies.filter((v) => (v.counties || []).includes(selected)).length;
+    const towns = groups.find((g) => g.level === "municipal")?.sections.length || 0;
+    const shown = groups
+      .filter((g) => !level || g.level === level)
+      .map((g) => ({ ...g, sections: g.sections.map((s) => ({ ...s, items: s.items.filter(matches) })).filter((s) => s.items.length) }))
+      .filter((g) => g.sections.length);
+
+    const body = shown
+      .map((g) => {
+        const sections = g.sections
+          .map((s) => {
+            const list = `<ul class="people">${s.items.map(personCard).join("")}</ul>`;
+            const head = `${esc(s.name)} <span class="count">${formatNumber(s.items.filter((i) => !i.vacant).length)}</span>`;
+            const collapse = g.level === "municipal" || s.items.length > LONG_SECTION;
+            return collapse
+              ? `<details class="roster-section"${filter ? " open" : ""}><summary><h4>${head}</h4></summary>${list}</details>`
+              : `<div class="roster-section"><h4>${head}</h4>${list}</div>`;
+          })
+          .join("");
+        return `<section class="roster-level"><h3 class="group">${esc(LEVEL_LABELS[g.level])} <span class="count">${formatNumber(g.count)}</span></h3>${sections}</section>`;
+      })
+      .join("");
+
+    const coverage =
+      selected === "Broward"
+        ? ""
+        : `<p class="muted small notice">County commissions, judges and city councils are filled in for Broward County first. Here you'll find
+           statewide officials, ${esc(selected)} County's members of Congress and Legislature, and its Supervisor of Elections.</p>`;
+
+    panel.innerHTML = `
+      <div class="panel-top">
+        <div><h2>${esc(selected)} County</h2>
+          <p class="muted small tabular">${plural(total, "elected official")}${open ? ` · ${plural(open, "vacant seat")}` : ""}${towns ? ` · ${plural(towns, "city", "cities")} listed` : ""}</p></div>
+        <a class="details" href="county.html?name=${encodeURIComponent(selected)}">Full county page${ICON.arrow}</a>
+      </div>
+      ${coverage}
+      <div class="roster-tools">
+        <div class="input-icon">${ICON.search}<input type="search" class="roster-filter" aria-label="Filter ${esc(selected)} County officials"
+          placeholder="Filter by name, office or city" value="${esc(filter)}"></div>
+        <div class="chips" role="group" aria-label="Filter by government level">
+          ${["", ...LEVELS].map((value) => {
+            const count = value ? groups.find((g) => g.level === value)?.count || 0 : total;
+            return `<button type="button" class="chip" data-level="${value}" aria-pressed="${value === level}"${value && !count ? " disabled" : ""}>${value ? LEVEL_LABELS[value] : "All"} <span class="tabular">${formatNumber(count)}</span></button>`;
+          }).join("")}
+        </div>
+      </div>
+      <div class="roster">${body || empty("No officials match", "Try a different name or office, or clear the filter.")}</div>`;
+  }
+
+  function select(name, { focusPanel = false } = {}) {
+    selected = name;
+    level = "";
+    filter = "";
+    for (const shape of root.querySelectorAll(".county-shape")) {
+      const on = shape.dataset.county === selected;
+      shape.classList.toggle("selected", on);
+      shape.setAttribute("aria-pressed", String(on));
+    }
+    picker.value = selected;
+    syncUrl();
+    drawPin();
+    drawPanel();
+    if (focusPanel && window.matchMedia("(max-width: 900px)").matches) panel.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  const mapCard = $(".map-card", root);
+  mapCard.addEventListener("click", (event) => {
+    const shape = event.target.closest(".county-shape");
+    if (shape) select(shape.dataset.county, { focusPanel: true });
+  });
+  mapCard.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const shape = event.target.closest(".county-shape");
+    if (!shape) return;
+    event.preventDefault();
+    select(shape.dataset.county, { focusPanel: true });
+  });
+  picker.addEventListener("change", () => select(picker.value));
+  panel.addEventListener("click", (event) => {
+    const chip = event.target.closest("[data-level]");
+    if (!chip || chip.disabled) return;
+    level = chip.dataset.level;
+    drawPanel();
+    $(`[data-level="${level}"]`, panel)?.focus();
+  });
+  let timer;
+  panel.addEventListener("input", (event) => {
+    if (!event.target.matches(".roster-filter")) return;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      filter = event.target.value.trim();
+      const caret = event.target.selectionStart;
+      drawPanel();
+      const box = $(".roster-filter", panel);
+      box.focus();
+      box.setSelectionRange(caret, caret);
+    }, 150);
+  });
+
+  select(selected);
 }
 
 function counties() {
   const app = $("#app");
   withData(app, [loadOfficials, loadMeta, loadMap], (records, meta, map) => {
-    const counts = countyCounts(records, meta.counties);
-    const statewide = countyRoster(records, "").statewide;
-
-    // One portrait per county on the map: the first county-level official who has a photo.
-    const pins = map.counties
-      .map((c) => {
-        const official = countyRoster(records, c.name).local.find((r) => photoUrl(r.photo_url));
-        if (!official) return "";
-        const left = ((c.cx / map.width) * 100).toFixed(2);
-        const top = ((c.cy / map.height) * 100).toFixed(2);
-        return `<button type="button" class="pin" data-county="${esc(c.name)}" style="left:${left}%;top:${top}%"
-          aria-label="${esc(official.full_name)}, ${esc(c.name)} County">${avatar(official, "xs")}</button>`;
-      })
-      .join("");
-
-    const shapes = map.counties
-      .map(
-        (c) => `<path class="county-shape${counts[c.name] ? " has-officials" : ""}" data-county="${esc(c.name)}" d="${c.d}"
-          tabindex="0" role="button" aria-pressed="false"
-          aria-label="${esc(c.name)} County, ${plural(counts[c.name], "local official")}"><title>${esc(c.name)} County</title></path>`,
-      )
-      .join("");
-
     app.innerHTML = `
-      <div class="map-layout">
-        <section class="panel map-card" aria-label="Map of Florida counties">
-          <div class="map-wrap">
-            <svg viewBox="0 0 ${map.width} ${map.height}" role="group" aria-label="Florida's 67 counties. Select a county to see its officials.">${shapes}</svg>
-            <div class="pins">${pins}</div>
-          </div>
-          <p class="muted small map-note">Select a county. Darker blue counties have officials listed. A portrait on the map is that county's
-          elected official, where their source publishes a photo.</p>
-        </section>
-        <section class="panel map-panel" id="map-panel" aria-live="polite"></section>
-      </div>
+      <div id="explorer"></div>
       <h2 class="section-title">All counties</h2>
       <div class="field narrow"><label for="county-filter">Find a county</label>
         <div class="input-icon">${ICON.search}<input id="county-filter" type="search" placeholder="Type a county name"></div></div>
       <div id="county-list"></div>`;
+    countyExplorer($("#explorer"), records, meta, map);
 
-    const grid = (list) => `<ul class="people">${list.map(personCard).join("")}</ul>`;
-    const panel = $("#map-panel");
-    let selected = "";
-
-    function showPanel() {
-      for (const shape of app.querySelectorAll(".county-shape")) {
-        const on = shape.dataset.county === selected;
-        shape.classList.toggle("selected", on);
-        shape.setAttribute("aria-pressed", String(on));
-      }
-      if (!selected) {
-        panel.innerHTML = `
-          <h2>Statewide officials</h2>
-          <p class="muted small">These officials represent all 67 counties. Select a county on the map to add the officials tied to it.</p>
-          ${statewide.length ? grid(statewide) : empty("No statewide officials yet", "None have been collected from an official source.")}`;
-        return;
-      }
-      const { local } = countyRoster(records, selected);
-      panel.innerHTML = `
-        <div class="panel-top">
-          <h2>${esc(selected)} County</h2>
-          <span class="panel-actions">
-            <a class="details" href="county.html?name=${encodeURIComponent(selected)}">Full county page${ICON.arrow}</a>
-            <button type="button" class="link-button" data-clear>Show statewide</button>
-          </span>
-        </div>
-        <h3 class="group">Elected in ${esc(selected)} County</h3>
-        ${local.length ? grid(local) : `<p class="muted small">No county-level officials are listed for ${esc(selected)} County yet.</p>`}
-        <h3 class="group">Represent all of Florida</h3>
-        ${grid(statewide)}
-        <p class="muted small fine">U.S. House and Florida Legislature members are not placed on the map, because their sources do not say
-        which counties each district covers.</p>`;
-    }
-
-    function select(name) {
-      selected = selected === name ? "" : name;
-      showPanel();
-    }
-
-    const mapCard = $(".map-card");
-    mapCard.addEventListener("click", (event) => {
-      const target = event.target.closest("[data-county]");
-      if (target) select(target.dataset.county);
-    });
-    mapCard.addEventListener("keydown", (event) => {
-      if (event.key !== "Enter" && event.key !== " ") return;
-      const target = event.target.closest(".county-shape");
-      if (!target) return;
-      event.preventDefault();
-      select(target.dataset.county);
-    });
-    panel.addEventListener("click", (event) => {
-      if (event.target.closest("[data-clear]")) {
-        selected = "";
-        showPanel();
-      }
-    });
-    showPanel();
-
+    const totals = countyTotals(records, meta.counties);
     const summary = meta.counties.map((name) => {
-      const here = records.filter((r) => inCounty(r, name));
-      return { name, officials: here.length, towns: new Set(here.map((r) => r.municipality).filter(Boolean)).size };
+      const here = records.filter((r) => !r.statewide && inCounty(r, name));
+      return { name, officials: totals[name], towns: new Set(here.map((r) => r.municipality).filter(Boolean)).size };
     });
     const draw = (text) => {
       const visible = summary.filter((c) => fold(c.name).includes(fold(text.trim())));

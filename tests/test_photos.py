@@ -148,7 +148,8 @@ def test_fl_house_ignores_icons_and_placeholders(src):
     <div class="team-box"><a href="/Sections/Representatives/details.aspx?MemberId=1&LegislativeTermId=91"><img src="{src}"></a>
     <h5>Okafor, Daniel</h5><p>District: 101</p></div>"""
     [record] = parse_fl_house(html, "https://www.flhouse.gov/Representatives")
-    assert record["photo_url"] is None
+    # The placeholder is skipped and the member's portrait address is used instead.
+    assert record["photo_url"] == "https://www.flhouse.gov/FileStores/Web/Imaging/Member/1.jpg"
 
 
 def test_fl_house_http_portrait_is_dropped_at_validation():

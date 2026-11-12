@@ -8,7 +8,9 @@ from collector.geo import parse_county_list
 from collector.normalize import clean_text
 from collector.scrapers.base import BaseScraper
 
-_MEMBER_HREF = re.compile(r"/Senators/[Ss](\d{1,2})(?:[/?#]|$)")
+# "/Senators/S12" or, since the 2026 term, "/Senators/2026-2028/S12".
+_MEMBER_HREF = re.compile(r"/Senators/(?:\d{4}-\d{4}/)?[Ss](\d{1,2})(?:[/?#]|$)")
+_NOT_A_PORTRAIT = re.compile(r"nophoto|placeholder|logo|icon", re.I)
 _PARTY_CELL = re.compile(r"^\(?(R|D|NPA|I|Republican|Democrat|Democratic|Independent|No Party Affiliation)\)?$", re.I)
 
 
@@ -40,6 +42,13 @@ def parse_fl_senate(html: str, base_url: str) -> list[dict]:
                 if len(found) > len(counties):
                     counties = found
 
+        photo = None
+        for img in row.find_all("img"):
+            src = (img.get("src") or "").strip()
+            if src and not src.startswith("data:") and not _NOT_A_PORTRAIT.search(src):
+                photo = urljoin(base_url, src)
+                break
+
         records[district] = {
             "name": name,
             "office_title": "State Senator",
@@ -50,6 +59,7 @@ def parse_fl_senate(html: str, base_url: str) -> list[dict]:
             "jurisdiction": "Florida",
             "counties": counties,
             "official_website": urljoin(base_url, link["href"]),
+            "photo_url": photo,
             "source_url": base_url,
         }
     return list(records.values())
