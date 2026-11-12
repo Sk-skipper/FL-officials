@@ -5,7 +5,9 @@
     "url": "https://www.senate.gov/senators/",
     "level": "federal",
     "scraper": "us_senate",
-    "config": {"data_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml"}
+    "config": {
+      "data_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml"
+    }
   },
   {
     "key": "us_house",
@@ -34,5 +36,12 @@
     "url": "https://dos.elections.myflorida.com/supervisors/",
     "level": "county",
     "scraper": "fl_supervisors"
+  },
+  {
+    "key": "broward_districts",
+    "name": "Broward County GIS: Electoral District Boundaries (district seats)",
+    "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
+    "level": "county",
+    "scraper": "broward_districts"
   }
 ]

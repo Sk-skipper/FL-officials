@@ -2,6 +2,7 @@
 import os
 
 from collector.scrapers.base import BaseScraper, PoliteHttpClient
+from collector.scrapers.broward_districts import BrowardDistrictsScraper
 from collector.scrapers.fl_house import FLHouseScraper
 from collector.scrapers.fl_senate import FLSenateScraper
 from collector.scrapers.fl_supervisors import FLSupervisorsScraper
@@ -13,6 +14,7 @@ SCRAPERS: dict[str, type[BaseScraper]] = {
     "fl_senate": FLSenateScraper,
     "fl_house": FLHouseScraper,
     "fl_supervisors": FLSupervisorsScraper,
+    "broward_districts": BrowardDistrictsScraper,
     "us_senate": USSenateScraper,
     "us_house": USHouseScraper,
     "county_directory": CountyDirectoryScraper,

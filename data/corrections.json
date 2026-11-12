@@ -4,5 +4,17 @@
     "phone": "(850) 487-5000",
     "email": "doe.jane@flsenate.gov",
     "note": "Confirmed with the senator's office on 2026-11-10"
+  },
+  "commissioner-district-1-john-herbst": {
+    "office_title": "Vice Mayor",
+    "note": "Title from City of Fort Lauderdale: Mayor & City Commission"
+  },
+  "commissioner-district-district-b-mario-bustamante": {
+    "office_title": "Vice Mayor",
+    "note": "Title from Broward County GIS: Electoral District Boundaries"
+  },
+  "commissioner-district-1-marlon-bolton": {
+    "office_title": "Vice Mayor",
+    "note": "Title from Broward County GIS: Electoral District Boundaries"
   }
 }

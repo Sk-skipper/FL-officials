@@ -168,3 +168,36 @@ def test_manual_bio_is_validated():
     entry = dict(MAYOR, bio={"favourite_food": "pizza"})
     with pytest.raises(PublishError, match="unknown bio field"):
         build(collected(), {"officials": [entry]}, {}, {}, NOW, env={})
+
+
+def test_wikipedia_only_fills_gaps_and_keeps_the_credit():
+    wiki = {
+        "_rejected": [],
+        SENATOR_ID: {
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Ana_Rivera",
+            "photo_url": "https://upload.wikimedia.org/ana.jpg",
+            "photo_credit": {"source": "Wikimedia Commons", "author": "A. Photographer", "license": "CC BY-SA 4.0",
+                             "license_url": "https://creativecommons.org/licenses/by-sa/4.0", "file_url": "https://commons.wikimedia.org/wiki/File:Ana.jpg"},
+            "born": "1970-01-02",
+        },
+    }
+    officials, *_ = build(collected(), {"officials": []}, {}, {}, NOW, env={}, wikipedia=wiki)
+    record = officials["officials"][0]
+    assert record["photo_url"] == "https://upload.wikimedia.org/ana.jpg"
+    assert record["photo_credit"]["license"] == "CC BY-SA 4.0"
+    assert record["bio"]["born"] == "1970-01-02"
+    assert record["wikipedia_url"] == "https://en.wikipedia.org/wiki/Ana_Rivera"
+
+    official = collected()
+    official["sources"]["fl_senate"]["records"][0]["photo_url"] = "https://www.flsenate.gov/ana.jpg"
+    officials, *_ = build(official, {"officials": []}, {}, {}, NOW, env={}, wikipedia=wiki)
+    assert officials["officials"][0]["photo_url"] == "https://www.flsenate.gov/ana.jpg"
+    assert officials["officials"][0]["photo_credit"] is None
+
+
+def test_wikipedia_photo_without_a_licence_is_not_used():
+    wiki = {SENATOR_ID: {"photo_url": "https://upload.wikimedia.org/ana.jpg", "photo_credit": {"source": "Wikimedia Commons"},
+                         "wikipedia_url": "https://evil.example/wiki"}}
+    officials, *_ = build(collected(), {"officials": []}, {}, {}, NOW, env={}, wikipedia=wiki)
+    record = officials["officials"][0]
+    assert record.get("photo_url") is None and record["wikipedia_url"] is None

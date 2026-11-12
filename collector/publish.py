@@ -7,6 +7,7 @@ Inputs (all in data/):
   manual_officials.json  officials you add yourself, e.g. county commissioners
   corrections.json       fixes to individual records, keyed by record id
   profiles.json          portraits, bio facts and missing contact details (tools/enrich.py)
+  wikipedia.json         last-resort portraits, birth dates and article links (tools/wikipedia.py)
   districts.json         which counties each congressional / Florida House district covers
   vacancies.json         seats that are currently empty
   site.json              optional settings (report link, contact email)
@@ -59,7 +60,9 @@ EXPECTED_SEATS = [
 NOT_YET_COVERED = [
     "County commissions and constitutional officers outside Broward County",
     "School boards and judges outside Broward County",
-    "Councils in most Broward cities beyond the mayor (13 of 31 cities have at least one official listed)",
+    "Dania Beach and Hillsboro Beach councils, and some seats in Cooper City, Hallandale Beach, Lauderhill, "
+    "Sea Ranch Lakes, West Park and Weston (Broward cities that held elections on November 3, 2026, may change "
+    "when the winners are sworn in)",
     "Mayors and councils outside Broward County (Florida has 411 municipalities)",
     "Special districts (water control, hospital, soil and water)",
 ]
@@ -157,7 +160,8 @@ def _apply_profiles(by_id: dict, profiles: dict, warnings: list[str]) -> None:
         if record is None:
             continue  # profiles are generated for everyone collected; a departed official just has none
         where = f"profiles.json, '{record_id}'"
-        for field, clean in (("photo_url", normalize_photo_url), ("phone", normalize_phone), ("email", normalize_email)):
+        for field, clean in (("photo_url", normalize_photo_url), ("phone", normalize_phone), ("email", normalize_email),
+                             ("party", normalize_party)):
             if profile.get(field) and not record.get(field):
                 record[field] = clean(profile[field])
         if profile.get("bio"):
@@ -165,6 +169,27 @@ def _apply_profiles(by_id: dict, profiles: dict, warnings: list[str]) -> None:
         sources = [s for s in profile.get("sources", []) if isinstance(s, dict) and s.get("name")]
         if sources:
             record["bio_sources"] = sources
+
+
+def _apply_wikipedia(by_id: dict, wiki: dict) -> None:
+    """Last resort, after official sources and profiles: a Commons portrait, a birth date, an article link."""
+    for record_id, entry in wiki.items():
+        record = by_id.get(record_id)
+        if record_id.startswith("_") or record is None or not isinstance(entry, dict):
+            continue
+        if entry.get("wikipedia_url", "").startswith("https://en.wikipedia.org/"):
+            record["wikipedia_url"] = entry["wikipedia_url"]
+        if entry.get("photo_url") and not record.get("photo_url"):
+            photo = normalize_photo_url(entry["photo_url"])
+            credit = entry.get("photo_credit") or {}
+            if photo and credit.get("license"):
+                record["photo_url"] = photo
+                record["photo_credit"] = {k: credit.get(k) for k in ("source", "author", "license", "license_url", "file_url")}
+        born = entry.get("born")
+        if born and DATE.match(born) and not (record.get("bio") or {}).get("born"):
+            record["bio"] = {**(record.get("bio") or {}), "born": born}
+            record["bio_sources"] = [*(record.get("bio_sources") or []),
+                                     {"name": "Wikidata", "url": "https://www.wikidata.org/"}]
 
 
 def _apply_districts(records: list[dict], districts: dict) -> None:
@@ -195,7 +220,8 @@ def _vacancies(raw: dict) -> list[dict]:
 
 
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
-          profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None):
+          profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
+          wikipedia: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -236,6 +262,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
     by_id = {r["id"]: r for r in unique}
 
     _apply_profiles(by_id, profiles or {}, warnings)
+    _apply_wikipedia(by_id, wikipedia or {})
     _apply_districts(unique, districts or {})
 
     for record_id, fields in corrections.items():
@@ -252,6 +279,8 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         record.setdefault("correction_note", None)
         record.setdefault("seat_label", None)
         record.setdefault("bio", None)
+        record.setdefault("photo_credit", None)
+        record.setdefault("wikipedia_url", None)
     unique.sort(key=lambda r: (r["last_name"].lower(), (r.get("first_name") or "").lower(), r["id"]))
 
     by_level = {level: sum(r["government_level"] == level for r in unique) for level in LEVELS}
@@ -339,6 +368,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         profiles=load_json(data_dir / "profiles.json", {}),
         districts=load_json(data_dir / "districts.json", {}),
         vacancies=load_json(data_dir / "vacancies.json", {}),
+        wikipedia=load_json(data_dir / "wikipedia.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731

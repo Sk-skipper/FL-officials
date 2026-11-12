@@ -39,6 +39,7 @@ class ScrapedOfficial(BaseModel):
     county: str | None = None
     counties: list[str] = []
     municipality: str | None = None
+    seat_label: str | None = Field(default=None, max_length=80)
     phone: str | None = None
     email: str | None = None
     official_website: str | None = None
@@ -72,6 +73,7 @@ class ScrapedOfficial(BaseModel):
         data["official_website"] = normalize_url(data.get("official_website"))
         data["photo_url"] = normalize_photo_url(data.get("photo_url"))
         data["municipality"] = clean_text(data.get("municipality")) or None
+        data["seat_label"] = clean_text(data.get("seat_label")) or None
 
         county_raw = clean_text(data.get("county"))
         if county_raw:

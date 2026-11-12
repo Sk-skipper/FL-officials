@@ -164,11 +164,351 @@
   },
   "State Representative": {
     "source": {
-      "name": "Broward County Legislative Delegation",
-      "url": "https://broward.org/Legislative/Pages/membershipoverview.aspx"
+      "name": "U.S. Census Bureau, TIGERweb: 2024 Florida House districts",
+      "url": "https://tigerweb.geo.census.gov/"
     },
-    "note": "Only Broward County's delegation (Districts 95–105) is mapped so far.",
+    "note": "Worked out from the district and county boundaries by tools/build_boundaries.py.",
     "districts": {
+      "1": [
+        "Escambia"
+      ],
+      "2": [
+        "Escambia",
+        "Santa Rosa"
+      ],
+      "3": [
+        "Okaloosa",
+        "Santa Rosa"
+      ],
+      "4": [
+        "Okaloosa"
+      ],
+      "5": [
+        "Calhoun",
+        "Holmes",
+        "Jackson",
+        "Walton",
+        "Washington"
+      ],
+      "6": [
+        "Bay"
+      ],
+      "7": [
+        "Dixie",
+        "Franklin",
+        "Gulf",
+        "Hamilton",
+        "Jefferson",
+        "Lafayette",
+        "Leon",
+        "Liberty",
+        "Suwannee",
+        "Taylor",
+        "Wakulla"
+      ],
+      "8": [
+        "Gadsden",
+        "Leon"
+      ],
+      "9": [
+        "Jefferson",
+        "Leon",
+        "Madison"
+      ],
+      "10": [
+        "Alachua",
+        "Baker",
+        "Bradford",
+        "Columbia",
+        "Union"
+      ],
+      "11": [
+        "Clay"
+      ],
+      "12": [
+        "Duval"
+      ],
+      "13": [
+        "Duval"
+      ],
+      "14": [
+        "Duval"
+      ],
+      "15": [
+        "Duval",
+        "Nassau"
+      ],
+      "16": [
+        "Duval"
+      ],
+      "17": [
+        "Duval"
+      ],
+      "18": [
+        "St. Johns"
+      ],
+      "19": [
+        "Flagler",
+        "St. Johns"
+      ],
+      "20": [
+        "Clay",
+        "Marion",
+        "Putnam",
+        "St. Johns"
+      ],
+      "21": [
+        "Alachua",
+        "Marion"
+      ],
+      "22": [
+        "Alachua",
+        "Gilchrist",
+        "Levy"
+      ],
+      "23": [
+        "Citrus",
+        "Marion"
+      ],
+      "24": [
+        "Marion"
+      ],
+      "25": [
+        "Lake"
+      ],
+      "26": [
+        "Lake"
+      ],
+      "27": [
+        "Lake",
+        "Marion",
+        "Volusia"
+      ],
+      "28": [
+        "Volusia"
+      ],
+      "29": [
+        "Volusia"
+      ],
+      "30": [
+        "Brevard",
+        "Volusia"
+      ],
+      "31": [
+        "Brevard"
+      ],
+      "32": [
+        "Brevard"
+      ],
+      "33": [
+        "Brevard"
+      ],
+      "34": [
+        "Brevard",
+        "Indian River"
+      ],
+      "35": [
+        "Orange",
+        "Osceola"
+      ],
+      "36": [
+        "Seminole"
+      ],
+      "37": [
+        "Orange",
+        "Seminole"
+      ],
+      "38": [
+        "Seminole"
+      ],
+      "39": [
+        "Orange",
+        "Seminole"
+      ],
+      "40": [
+        "Orange"
+      ],
+      "41": [
+        "Orange"
+      ],
+      "42": [
+        "Orange"
+      ],
+      "43": [
+        "Orange"
+      ],
+      "44": [
+        "Orange"
+      ],
+      "45": [
+        "Orange",
+        "Osceola"
+      ],
+      "46": [
+        "Osceola"
+      ],
+      "47": [
+        "Orange",
+        "Osceola"
+      ],
+      "48": [
+        "Polk"
+      ],
+      "49": [
+        "Polk"
+      ],
+      "50": [
+        "Polk"
+      ],
+      "51": [
+        "Polk"
+      ],
+      "52": [
+        "Hernando",
+        "Sumter"
+      ],
+      "53": [
+        "Hernando",
+        "Pasco"
+      ],
+      "54": [
+        "Pasco"
+      ],
+      "55": [
+        "Pasco"
+      ],
+      "56": [
+        "Pasco"
+      ],
+      "57": [
+        "Pinellas"
+      ],
+      "58": [
+        "Pinellas"
+      ],
+      "59": [
+        "Pinellas"
+      ],
+      "60": [
+        "Pinellas"
+      ],
+      "61": [
+        "Hillsborough",
+        "Manatee",
+        "Pinellas"
+      ],
+      "62": [
+        "Hillsborough",
+        "Manatee",
+        "Pinellas"
+      ],
+      "63": [
+        "Hillsborough"
+      ],
+      "64": [
+        "Hillsborough"
+      ],
+      "65": [
+        "Hillsborough"
+      ],
+      "66": [
+        "Hillsborough"
+      ],
+      "67": [
+        "Hillsborough"
+      ],
+      "68": [
+        "Hillsborough"
+      ],
+      "69": [
+        "Hillsborough"
+      ],
+      "70": [
+        "Hillsborough",
+        "Manatee"
+      ],
+      "71": [
+        "Manatee"
+      ],
+      "72": [
+        "Manatee"
+      ],
+      "73": [
+        "Sarasota"
+      ],
+      "74": [
+        "Sarasota"
+      ],
+      "75": [
+        "Charlotte",
+        "Sarasota"
+      ],
+      "76": [
+        "Charlotte",
+        "DeSoto",
+        "Lee"
+      ],
+      "77": [
+        "Lee"
+      ],
+      "78": [
+        "Lee"
+      ],
+      "79": [
+        "Lee"
+      ],
+      "80": [
+        "Collier",
+        "Lee"
+      ],
+      "81": [
+        "Collier"
+      ],
+      "82": [
+        "Collier",
+        "Hendry"
+      ],
+      "83": [
+        "Glades",
+        "Hardee",
+        "Highlands",
+        "Okeechobee"
+      ],
+      "84": [
+        "St. Lucie"
+      ],
+      "85": [
+        "Martin",
+        "St. Lucie"
+      ],
+      "86": [
+        "Martin",
+        "Palm Beach"
+      ],
+      "87": [
+        "Palm Beach"
+      ],
+      "88": [
+        "Palm Beach"
+      ],
+      "89": [
+        "Palm Beach"
+      ],
+      "90": [
+        "Palm Beach"
+      ],
+      "91": [
+        "Palm Beach"
+      ],
+      "92": [
+        "Palm Beach"
+      ],
+      "93": [
+        "Palm Beach"
+      ],
+      "94": [
+        "Palm Beach"
+      ],
       "95": [
         "Broward"
       ],
@@ -202,6 +542,52 @@
       ],
       "105": [
         "Broward"
+      ],
+      "106": [
+        "Miami-Dade"
+      ],
+      "107": [
+        "Miami-Dade"
+      ],
+      "108": [
+        "Miami-Dade"
+      ],
+      "109": [
+        "Miami-Dade"
+      ],
+      "110": [
+        "Miami-Dade"
+      ],
+      "111": [
+        "Miami-Dade"
+      ],
+      "112": [
+        "Miami-Dade"
+      ],
+      "113": [
+        "Miami-Dade"
+      ],
+      "114": [
+        "Miami-Dade"
+      ],
+      "115": [
+        "Miami-Dade"
+      ],
+      "116": [
+        "Miami-Dade"
+      ],
+      "117": [
+        "Miami-Dade"
+      ],
+      "118": [
+        "Miami-Dade"
+      ],
+      "119": [
+        "Miami-Dade"
+      ],
+      "120": [
+        "Miami-Dade",
+        "Monroe"
       ]
     }
   }

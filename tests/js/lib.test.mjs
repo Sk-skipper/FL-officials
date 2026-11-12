@@ -120,3 +120,56 @@ test("countyGroups places district members, statewide officials and vacancies in
   assert.equal(seatText(people[2]), "Group 5");
   assert.equal(formatPartialDate("2018-11"), "Nov 2018");
 });
+
+import { districtKey, featureAt, labelPoint, pointInGeometry, representativesFor } from "../../site/assets/lib.js";
+
+const square = (x, y, size = 1) => [[[x, y], [x + size, y], [x + size, y + size], [x, y + size], [x, y]]];
+
+test("pointInGeometry handles polygons, holes and multipolygons", () => {
+  const withHole = { type: "Polygon", coordinates: [square(0, 0, 10)[0], square(4, 4, 2)[0]] };
+  assert.equal(pointInGeometry(1, 1, withHole), true);
+  assert.equal(pointInGeometry(5, 5, withHole), false);
+  const multi = { type: "MultiPolygon", coordinates: [square(0, 0), square(5, 5)] };
+  assert.equal(pointInGeometry(5.5, 5.5, multi), true);
+  assert.equal(pointInGeometry(3, 3, multi), false);
+  assert.equal(featureAt({ features: [{ properties: { district: "7" }, geometry: multi }] }, 0.5, 0.5).properties.district, "7");
+});
+
+test("districtKey treats '04', 'District 4' and '4' as the same seat", () => {
+  assert.equal(districtKey("04"), "4");
+  assert.equal(districtKey("District 4"), "4");
+  assert.equal(districtKey("District b"), "B");
+  assert.equal(districtKey(null), "");
+});
+
+test("labelPoint stays inside an L-shaped district", () => {
+  const shape = { type: "Polygon", coordinates: [[[0, 0], [10, 0], [10, 1], [1, 1], [1, 10], [0, 10], [0, 0]]] };
+  const [x, y] = labelPoint(shape);
+  assert.equal(pointInGeometry(x, y, shape), true);
+});
+
+test("representativesFor picks each district's member and every at-large or countywide seat", () => {
+  const people = [
+    { id: "s", full_name: "Sen A", last_name: "A", office_title: "U.S. Senator", government_level: "federal", statewide: true },
+    { id: "h1", full_name: "Rep One", last_name: "One", office_title: "U.S. Representative", government_level: "federal", district: "23" },
+    { id: "h2", full_name: "Rep Two", last_name: "Two", office_title: "U.S. Representative", government_level: "federal", district: "25" },
+    { id: "g", full_name: "Gov G", last_name: "G", office_title: "Governor", government_level: "state", statewide: true },
+    { id: "c3", full_name: "Comm Three", last_name: "Three", office_title: "County Commissioner", government_level: "county", county: "Broward", district: "3" },
+    { id: "c4", full_name: "Comm Four", last_name: "Four", office_title: "County Commissioner", government_level: "county", county: "Broward", district: "4" },
+    { id: "sb2", full_name: "School Two", last_name: "Two", office_title: "School Board Member", government_level: "county", county: "Broward", district: "2" },
+    { id: "sb9", full_name: "School Nine", last_name: "Nine", office_title: "School Board Member", government_level: "county", county: "Broward", district: "9" },
+    { id: "sh", full_name: "Sheriff S", last_name: "S", office_title: "Sheriff", government_level: "county", county: "Broward" },
+    { id: "j", full_name: "Judge J", last_name: "J", office_title: "Circuit Judge", government_level: "county", county: "Broward", district: "5" },
+    { id: "m", full_name: "Mayor M", last_name: "M", office_title: "Mayor", government_level: "municipal", county: "Broward", municipality: "Hollywood", district: "At-Large" },
+    { id: "d1", full_name: "City One", last_name: "One", office_title: "Commissioner", government_level: "municipal", county: "Broward", municipality: "Hollywood", district: "1" },
+    { id: "d2", full_name: "City Two", last_name: "Two", office_title: "Commissioner", government_level: "municipal", county: "Broward", municipality: "Hollywood", district: "2" },
+    { id: "x", full_name: "Elsewhere", last_name: "E", office_title: "Mayor", government_level: "municipal", county: "Broward", municipality: "Davie" },
+  ];
+  const place = { county: "Broward", municipality: "Hollywood", congress: "25", commission: "04", school: "2",
+    schoolDistricts: ["1", "2", "3"], cityDistricts: ["1", "2"], cityDistrict: "2" };
+  const vacancies = [{ office_title: "U.S. Representative", government_level: "federal", district: "25", counties: ["Broward"] }];
+  const { groups, judges } = representativesFor(people, place, vacancies);
+  const ids = groups.flatMap((g) => g.sections.flatMap((s) => s.items.map((i) => i.id)));
+  assert.deepEqual(new Set(ids), new Set(["s", "h2", "vacant-U.S. Representative-25", "g", "c4", "sb2", "sb9", "sh", "m", "d2"]));
+  assert.deepEqual(judges.map((j) => j.id), ["j"]);
+});

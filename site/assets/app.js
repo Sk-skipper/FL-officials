@@ -9,9 +9,11 @@ import {
   countyRoster,
   countyTotals,
   describe,
+  districtKey,
   districtLabel,
   escapeHtml as esc,
   exportPayload,
+  featureAt,
   filterOptions,
   filterRecords,
   fold,
@@ -19,11 +21,15 @@ import {
   formatDateTime,
   formatNumber,
   formatPartialDate,
+  groupRoster,
   inCounty,
   initials,
+  labelPoint,
   paginate,
   photoUrl,
   plural,
+  pointInGeometry,
+  representativesFor,
   safeUrl,
   seatText,
   sortRecords,
@@ -82,6 +88,7 @@ const ICON = {
 };
 
 const NAV = [
+  { href: "representatives.html", label: "Your representatives", pages: ["reps"] },
   { href: "officials.html", label: "Officials", pages: ["directory", "official"] },
   { href: "counties.html", label: "Counties", pages: ["counties", "county"] },
   { href: "sources.html", label: "Data sources", pages: ["sources"] },
@@ -585,12 +592,23 @@ function profile() {
               ${row("Original record", sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">View the government page${ICON.external}<span class="sr-only">(opens in a new tab)</span></a>` : "")}
               ${row("Last verified", esc(formatDate(r.last_verified, "")))}
               ${r.correction_note ? row("Correction", esc(r.correction_note)) : ""}
+              ${safeUrl(r.wikipedia_url) ? row("More about them", `<a href="${esc(r.wikipedia_url)}" target="_blank" rel="noopener noreferrer">Wikipedia article${ICON.external}<span class="sr-only">(opens in a new tab)</span></a>`) : ""}
             </dl>
+            ${photoCredit(r)}
             <p class="small fine">See something wrong? ${report}<br><span class="muted">Record id: <code>${esc(r.id)}</code></span></p>
           </section>
         </div>
       </div>`;
   }, "Loading profile");
+}
+
+/** Credit line for a portrait that did not come from the official source (e.g. Wikimedia Commons). */
+function photoCredit(r) {
+  const c = r.photo_credit;
+  if (!c || !r.photo_url) return "";
+  const file = safeUrl(c.file_url) ? `<a href="${esc(c.file_url)}" target="_blank" rel="noopener noreferrer">${esc(c.source || "Photo")}</a>` : esc(c.source || "");
+  const licence = safeUrl(c.license_url) ? `<a href="${esc(c.license_url)}" target="_blank" rel="noopener noreferrer">${esc(c.license)}</a>` : esc(c.license || "");
+  return `<p class="muted small fine">Photo: ${esc(c.author || "Unknown author")}, ${licence}, via ${file}.</p>`;
 }
 
 /** Basic facts about the person: born, time in office, term, earlier offices. */
@@ -929,6 +947,267 @@ function county() {
   }, "Loading county");
 }
 
+// -- your representatives (map) ----------------------------------------------------
+const BOUNDARIES = {
+  counties: "fl-counties", cities: "fl-cities", congress: "fl-congress", senate: "fl-senate", house: "fl-house",
+  commission: "broward-commission", school: "broward-school", cityDistricts: "broward-city-districts",
+};
+const boundaryRequests = new Map();
+function loadBoundary(key) {
+  if (!boundaryRequests.has(key)) {
+    const request = fetch(`assets/boundaries/${BOUNDARIES[key]}.json`).then((response) => {
+      if (!response.ok) throw new Error(`The district map could not be loaded (${response.status}).`);
+      return response.json();
+    });
+    request.catch(() => boundaryRequests.delete(key));
+    boundaryRequests.set(key, request);
+  }
+  return boundaryRequests.get(key);
+}
+
+const isSeat = (r, district) => r.district != null && districtKey(r.district) === districtKey(district);
+/** The layers a visitor can show on the map, and who holds each district in them. */
+const MAP_LAYERS = [
+  { key: "commission", label: "County Commission", area: "Broward", holder: (r, p) => r.office_title === "County Commissioner" && r.county === "Broward" && isSeat(r, p.district), name: (p) => `County Commission District ${p.district}` },
+  { key: "school", label: "School Board", area: "Broward", holder: (r, p) => /school board/i.test(r.office_title) && r.county === "Broward" && isSeat(r, p.district), name: (p) => `School Board District ${p.district}` },
+  { key: "cityDistricts", label: "City commission districts", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.municipality && isSeat(r, p.district), name: (p) => `${p.municipality} District ${p.district}` },
+  { key: "cities", label: "Cities (mayors)", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.name && /^mayor$/i.test(r.office_title), name: (p) => p.name },
+  { key: "house", label: "Florida House", holder: (r, p) => /^state representative/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida House District ${p.district}` },
+  { key: "senate", label: "Florida Senate", holder: (r, p) => /^state senator/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida Senate District ${p.district}` },
+  { key: "congress", label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
+];
+const BROWARD_VIEW = [[26.33, -80.47], [25.95, -80.07]];
+
+/** Census Bureau geocoder, called with JSONP because it does not send CORS headers. Nothing is stored. */
+function geocode(address) {
+  return new Promise((resolve, reject) => {
+    const callback = `geocode${Date.now()}`;
+    const script = document.createElement("script");
+    const done = () => { clearTimeout(timer); delete window[callback]; script.remove(); };
+    const timer = setTimeout(() => { done(); reject(new Error("The address service did not answer. Try again, or click your home on the map.")); }, 15000);
+    window[callback] = (data) => { done(); resolve(data?.result?.addressMatches || []); };
+    script.onerror = () => { done(); reject(new Error("The address service could not be reached. Try again, or click your home on the map.")); };
+    const text = /\b(fl|florida)\b/i.test(address) ? address : `${address}, FL`;
+    script.src = `https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=${encodeURIComponent(text)}&benchmark=Public_AR_Current&format=jsonp&callback=${callback}`;
+    document.head.append(script);
+  });
+}
+
+function reps() {
+  const app = $("#app");
+  if (!window.L) {
+    app.innerHTML = `<section class="panel">${empty("The map could not be loaded", "Check your connection and reload the page.")}</section>`;
+    return;
+  }
+  withData(app, [loadOfficials, loadMeta, () => loadBoundary("counties")], (records, meta, counties) => {
+    app.innerHTML = `
+      <form class="rep-search panel" id="rep-form" role="search">
+        <label for="rep-address" class="strong">Your address</label>
+        <div class="rep-search-row">
+          <div class="input-icon">${ICON.search}<input id="rep-address" type="search" autocomplete="street-address" maxlength="160"
+            placeholder="e.g. 115 S Andrews Ave, Fort Lauderdale"></div>
+          <button class="button" type="submit">Find</button>
+          <button class="button outline" type="button" id="rep-locate">${ICON.pin}Use my location</button>
+        </div>
+        <p class="muted small">Your address goes only to the U.S. Census Bureau's address finder to place it on the map. This site does not store it.</p>
+      </form>
+      <div class="rep-layout">
+        <section class="panel flush rep-map-card" aria-label="Map of districts">
+          <div class="chips rep-layers" role="group" aria-label="Show districts on the map">
+            ${MAP_LAYERS.map((l) => `<button type="button" class="chip" data-layer="${l.key}" aria-pressed="false">${esc(l.label)}</button>`).join("")}
+          </div>
+          <div id="rep-map" class="rep-map"></div>
+          <p class="muted small rep-map-note">District lines: U.S. Census Bureau (Congress and the Legislature, 2022 plans) and Broward County GIS (county and city districts).
+          Florida redrew its congressional districts for members elected in November 2026; until they take office in January 2027 the 2022 districts apply.</p>
+        </section>
+        <section class="panel rep-panel" aria-live="polite" id="rep-panel"></section>
+      </div>`;
+
+    const map = L.map("rep-map", { scrollWheelZoom: false, zoomSnap: 0.5 });
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      maxZoom: 19, subdomains: "abcd",
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    }).addTo(map);
+    map.fitBounds(BROWARD_VIEW);
+    map.on("focus", () => map.scrollWheelZoom.enable());
+    map.on("blur", () => map.scrollWheelZoom.disable());
+
+    const panel = $("#rep-panel");
+    const shown = L.layerGroup().addTo(map);
+    const yours = L.layerGroup().addTo(map);
+    let pin = null;
+    let activeLayer = "";
+
+    const portrait = (r) =>
+      L.divIcon({ className: "rep-marker", html: avatar(r, "sm"), iconSize: [40, 40], iconAnchor: [20, 20] });
+
+    async function showLayer(key) {
+      activeLayer = activeLayer === key ? "" : key;
+      for (const chip of app.querySelectorAll("[data-layer]")) chip.setAttribute("aria-pressed", String(chip.dataset.layer === activeLayer));
+      shown.clearLayers();
+      if (!activeLayer) return;
+      const spec = MAP_LAYERS.find((l) => l.key === activeLayer);
+      let data = await loadBoundary(activeLayer);
+      if (spec.key === "cities") {
+        const broward = await loadBoundary("counties").then((c) => c.features.find((f) => f.properties.name === "Broward"));
+        data = { ...data, features: data.features.filter((f) => { const p = labelPoint(f.geometry); return p && pointInGeometry(p[0], p[1], broward.geometry); }) };
+      }
+      const group = L.geoJSON(data, {
+        style: { color: "#1f3d6b", weight: 1.5, fillColor: "#2457a6", fillOpacity: 0.06 },
+        onEachFeature: (feature, layer) => {
+          const holder = records.find((r) => spec.holder(r, feature.properties));
+          const title = spec.name(feature.properties);
+          layer.bindTooltip(`${esc(title)}${holder ? `<br><strong>${esc(holder.full_name)}</strong>` : ""}`, { sticky: true });
+          const at = labelPoint(feature.geometry);
+          if (holder && at) {
+            L.marker([at[1], at[0]], { icon: portrait(holder), title: `${holder.full_name}, ${title}`, keyboard: true })
+              .bindPopup(`<strong>${esc(holder.full_name)}</strong><br>${esc(holder.office_title)}<br><span class="muted">${esc(title)}</span><br><a href="${profileHref(holder)}">View profile</a>`)
+              .addTo(shown);
+          }
+        },
+      }).addTo(shown);
+      group.bringToBack();
+      if (!pin) map.fitBounds(spec.area === "Broward" ? BROWARD_VIEW : group.getBounds(), { padding: [10, 10] });
+    }
+
+    function intro() {
+      panel.innerHTML = `
+        <h2>Find who represents you</h2>
+        <p class="muted">Search an address, use your location, or click anywhere on the map. You'll see your members of Congress,
+        state legislators, statewide officials, county commissioner, school board member and city officials, each matched to the
+        district that contains the spot you chose.</p>
+        <p class="muted small gap-top">Want the big picture instead? Choose a layer above the map to see every district with its
+        representative's photo.</p>`;
+    }
+
+    async function lookup(lat, lon, label) {
+      if (pin) pin.remove();
+      pin = L.marker([lat, lon], { title: label || "Selected location" }).addTo(map);
+      panel.innerHTML = loading("Finding your districts");
+      const county = featureAt(counties, lon, lat)?.properties.name;
+      if (!county) {
+        panel.innerHTML = empty("That spot is outside Florida", "Choose a place inside Florida, or check the address.");
+        return;
+      }
+      const [cities, congress, senate, house] = await Promise.all(["cities", "congress", "senate", "house"].map(loadBoundary));
+      const place = {
+        county,
+        municipality: featureAt(cities, lon, lat)?.properties.name || null,
+        congress: featureAt(congress, lon, lat)?.properties.district,
+        senate: featureAt(senate, lon, lat)?.properties.district,
+        house: featureAt(house, lon, lat)?.properties.district,
+      };
+      const hits = [
+        { label: "U.S. House", feature: featureAt(congress, lon, lat) },
+        { label: "Florida Senate", feature: featureAt(senate, lon, lat) },
+        { label: "Florida House", feature: featureAt(house, lon, lat) },
+      ];
+      if (county === "Broward") {
+        const [commission, school, cityDistricts] = await Promise.all(["commission", "school", "cityDistricts"].map(loadBoundary));
+        const own = cityDistricts.features.filter((f) => f.properties.municipality === place.municipality);
+        const cityDistrict = own.find((f) => pointInGeometry(lon, lat, f.geometry));
+        Object.assign(place, {
+          commission: featureAt(commission, lon, lat)?.properties.district,
+          school: featureAt(school, lon, lat)?.properties.district,
+          schoolDistricts: school.features.map((f) => f.properties.district),
+          cityDistricts: own.map((f) => f.properties.district),
+          cityDistrict: cityDistrict?.properties.district,
+        });
+        hits.push({ label: "County Commission", feature: featureAt(commission, lon, lat) }, { label: "School Board", feature: featureAt(school, lon, lat) });
+        if (cityDistrict) hits.push({ label: `${place.municipality} Commission`, feature: cityDistrict });
+      }
+
+      yours.clearLayers();
+      const palette = ["#b3262e", "#1f3d6b", "#1c6a45", "#875800", "#6b2a7a", "#0b6e79", "#4a4a4a"];
+      hits.forEach((hit, i) => {
+        if (hit.feature) {
+          L.geoJSON(hit.feature, { style: { color: palette[i % palette.length], weight: 2.5, fillOpacity: 0.04, dashArray: i ? "6 4" : null }, interactive: false }).addTo(yours);
+        }
+      });
+      const { groups, judges } = representativesFor(records, place, meta.vacancies || []);
+      const tags = [
+        `<li><span class="badge">${esc(county)} County</span></li>`,
+        place.municipality ? `<li><span class="badge">${esc(place.municipality)}</span></li>` : `<li><span class="badge outline">Unincorporated</span></li>`,
+        ...hits.filter((h) => h.feature).map((h, i) => `<li><span class="badge outline"><span class="swatch-dot" style="background:${palette[i % palette.length]}"></span>${esc(h.label)} ${esc(districtLabel(h.feature.properties.district))}</span></li>`),
+      ].join("");
+      const body = groups
+        .map((g) => `<section class="roster-level"><h3 class="group">${esc(LEVEL_LABELS[g.level])} <span class="count">${formatNumber(g.count)}</span></h3>
+          ${g.sections.map((s) => `<div class="roster-section"><h4>${esc(s.name)}</h4><ul class="people">${s.items.map(personCard).join("")}</ul></div>`).join("")}</section>`)
+        .join("");
+      const partial = county === "Broward"
+        ? (!place.municipality ? "" : records.some((r) => r.municipality === place.municipality) ? "" :
+          `<p class="notice small">${esc(place.municipality)}'s commission isn't in the directory yet.</p>`)
+        : `<p class="notice small">Outside Broward County the directory covers federal, state and statewide officials and the Supervisor of Elections.
+           County commissions, school boards and city officials are being added Broward first.</p>`;
+      panel.innerHTML = `
+        <div class="panel-top"><div><h2>Your representatives</h2>
+          <p class="muted small">${esc(label || `${lat.toFixed(5)}, ${lon.toFixed(5)}`)}</p></div>
+          <a class="details" href="county.html?name=${encodeURIComponent(county)}">${esc(county)} County page${ICON.arrow}</a></div>
+        <ul class="tag-list">${tags}</ul>
+        ${partial}
+        <div class="roster">${body || empty("No officials found for this spot")}</div>
+        ${judges.length ? `<details class="roster-section fine"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
+          <p class="muted small">Judges and justices whose courts cover this spot. Most are appointed or elected to serve the whole county, circuit or state.</p>
+          ${groupRoster(judges).map((g) => g.sections.map((s) => `<h4 class="gap-top">${esc(s.name)} <span class="count">${formatNumber(s.items.length)}</span></h4>
+            ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
+              : `<ul class="people">${s.items.map(personCard).join("")}</ul>`}`).join("")).join("")}
+        </details>` : ""}`;
+      if (!activeLayer) {
+        const bounds = yours.getLayers().length ? L.featureGroup(yours.getLayers()).getBounds() : null;
+        const smallest = yours.getLayers().at(-1);
+        map.fitBounds((smallest?.getBounds?.() || bounds || L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2), { maxZoom: 15 });
+      }
+      const next = params();
+      next.set("lat", lat.toFixed(5));
+      next.set("lon", lon.toFixed(5));
+      window.history.replaceState(null, "", `${window.location.pathname}?${next}`);
+    }
+
+    $("#rep-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const address = $("#rep-address").value.trim();
+      if (!address) return;
+      panel.innerHTML = loading("Looking up the address");
+      try {
+        const found = await geocode(address);
+        if (!found.length) {
+          panel.innerHTML = empty("That address wasn't found", "Check the spelling and include the city, or click your home on the map.");
+          return;
+        }
+        const { x, y } = found[0].coordinates;
+        lookup(y, x, found[0].matchedAddress);
+      } catch (error) {
+        panel.innerHTML = empty("The address could not be looked up", esc(error.message));
+      }
+    });
+    $("#rep-locate").addEventListener("click", () => {
+      if (!navigator.geolocation) {
+        panel.innerHTML = empty("Your browser can't share its location", "Search an address or click the map instead.");
+        return;
+      }
+      panel.innerHTML = loading("Finding your location");
+      navigator.geolocation.getCurrentPosition(
+        (position) => lookup(position.coords.latitude, position.coords.longitude, "Your current location"),
+        () => { panel.innerHTML = empty("Your location wasn't shared", "Search an address or click the map instead."); },
+        { enableHighAccuracy: false, timeout: 15000 },
+      );
+    });
+    map.on("click", (event) => lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map"));
+    app.addEventListener("click", (event) => {
+      const chip = event.target.closest("[data-layer]");
+      if (chip) showLayer(chip.dataset.layer).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
+    });
+
+    const lat = Number(params().get("lat"));
+    const lon = Number(params().get("lon"));
+    if (lat && lon) lookup(lat, lon);
+    else {
+      intro();
+      showLayer("commission");
+    }
+  }, "Loading the map");
+}
+
 // -- sources ----------------------------------------------------------------------
 function sources() {
   const app = $("#app");
@@ -990,7 +1269,7 @@ function about() {
 }
 
 // -- start ------------------------------------------------------------------------
-const PAGES = { home, directory, profile, counties, county, sources, about };
+const PAGES = { home, directory, profile, counties, county, reps, sources, about };
 const page = document.body.dataset.page;
 renderChrome(page === "profile" ? "official" : page);
 PAGES[page]?.();

@@ -297,8 +297,8 @@ export function countyCounts(records, counties) {
 // -- county roster grouping ------------------------------------------------------------
 
 const TITLE_RANK = [
-  "governor", "lieutenant governor", "attorney general", "chief financial officer", "commissioner of agriculture",
-  "mayor", "vice mayor", "deputy mayor", "assistant deputy mayor", "commissioner", "councilmember",
+  "chief justice", "chief judge", "governor", "lieutenant governor", "attorney general", "chief financial officer", "commissioner of agriculture",
+  "mayor", "vice mayor", "deputy mayor", "assistant deputy mayor", "council president", "commissioner", "councilmember",
   "county commissioner", "sheriff", "state attorney", "public defender", "clerk", "property appraiser", "tax collector",
   "supervisor of elections",
 ];
@@ -336,6 +336,8 @@ export function rosterSection(record) {
     case "state":
       if (/^state senator/i.test(title)) return "Florida Senate";
       if (/^state representative/i.test(title)) return "Florida House of Representatives";
+      if (/supreme court/i.test(title)) return "Florida Supreme Court";
+      if (/district court of appeal/i.test(title)) return "District Court of Appeal";
       return "Governor and Cabinet";
     case "county":
       if (/county commissioner/i.test(title)) return "County Commission";
@@ -353,6 +355,7 @@ export function rosterSection(record) {
 
 const SECTION_ORDER = [
   "U.S. Senate", "U.S. House of Representatives", "Governor and Cabinet", "Florida Senate", "Florida House of Representatives",
+  "Florida Supreme Court", "District Court of Appeal",
   "County Commission", "Constitutional officers", "School Board", "Circuit Court judges", "County Court judges", "Other county offices",
 ];
 
@@ -362,18 +365,25 @@ const SECTION_ORDER = [
  */
 export function countyGroups(records, county, vacancies = []) {
   const members = records.filter((r) => r.statewide || inCounty(r, county));
-  const empty = vacancies
-    .filter((v) => (v.counties || []).includes(county))
-    .map((v) => ({ ...v, vacant: true, full_name: "Vacant seat", last_name: "", id: `vacant-${v.office_title}-${v.district}` }));
+  const empty = vacancies.filter((v) => (v.counties || []).includes(county));
+  return groupRoster([...members, ...empty.map(asVacancy)]);
+}
+
+function asVacancy(v) {
+  return { ...v, vacant: true, full_name: "Vacant seat", last_name: "", id: `vacant-${v.office_title}-${v.district}` };
+}
+
+/** Group records (and vacancies) by level, then by body, in roster order. */
+export function groupRoster(items) {
   return LEVELS.map((level) => {
     const bySection = new Map();
-    for (const item of [...members, ...empty].filter((r) => r.government_level === level)) {
+    for (const item of items.filter((r) => r.government_level === level)) {
       const name = rosterSection(item);
       if (!bySection.has(name)) bySection.set(name, []);
       bySection.get(name).push(item);
     }
     const sections = [...bySection.entries()]
-      .map(([name, items]) => ({ name, items: items.sort(rosterOrder) }))
+      .map(([name, list]) => ({ name, items: list.sort(rosterOrder) }))
       .sort((a, b) => {
         const ia = SECTION_ORDER.indexOf(a.name);
         const ib = SECTION_ORDER.indexOf(b.name);
@@ -387,4 +397,107 @@ export function countyGroups(records, county, vacancies = []) {
 /** Officials tied to each county, including district-based members whose district reaches into it. */
 export function countyTotals(records, counties) {
   return Object.fromEntries(counties.map((name) => [name, records.filter((r) => !r.statewide && inCounty(r, name)).length]));
+}
+
+// -- "Find your representatives" ---------------------------------------------------
+
+/** Ray casting on one ring of [lon, lat] points. */
+function inRing(lon, lat, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const [xi, yi] = ring[i];
+    const [xj, yj] = ring[j];
+    if (yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) inside = !inside;
+  }
+  return inside;
+}
+
+/** True when the point lies inside a GeoJSON Polygon or MultiPolygon (holes excluded). */
+export function pointInGeometry(lon, lat, geometry) {
+  if (!geometry) return false;
+  const polygons = geometry.type === "Polygon" ? [geometry.coordinates] : geometry.type === "MultiPolygon" ? geometry.coordinates : [];
+  return polygons.some((rings) => rings.length && inRing(lon, lat, rings[0]) && !rings.slice(1).some((hole) => inRing(lon, lat, hole)));
+}
+
+/** The first feature of a FeatureCollection that contains the point, or null. */
+export function featureAt(collection, lon, lat) {
+  return (collection?.features || []).find((f) => pointInGeometry(lon, lat, f.geometry)) || null;
+}
+
+/** "District 4", "Dist. 4", "04" and "4" all mean the same seat; "District A" is "A". */
+export function districtKey(value) {
+  const text = String(value ?? "").trim().replace(/^(district|dist\.?|seat|group)\s*/i, "");
+  return /^\d+$/.test(text) ? String(Number(text)) : text.toUpperCase();
+}
+
+const JUDGES = /judge|justice/i;
+
+/**
+ * Everyone who represents one place. `place` holds what the boundary files say about the point:
+ * { county, congress, senate, house, commission, school, municipality, cityDistrict,
+ *   cityDistricts: [every district key of that city], schoolDistricts: [district keys that are drawn] }.
+ * Returns { groups, judges }: groups as in countyGroups, and every judge and justice separately, since
+ * courts are better shown collapsed than mixed in with the officials people contact.
+ */
+export function representativesFor(records, place, vacancies = []) {
+  const same = (a, b) => a != null && b != null && districtKey(a) === districtKey(b);
+  const county = place.county;
+  const keep = (r) => {
+    const title = r.office_title || "";
+    switch (r.government_level) {
+      case "federal":
+        return /senator/i.test(title) || same(r.district, place.congress);
+      case "state":
+        if (/^state senator/i.test(title)) return same(r.district, place.senate);
+        if (/^state representative/i.test(title)) return same(r.district, place.house);
+        return r.statewide || (county && (r.counties || []).includes(county));
+      case "county":
+        if (r.county !== county) return false;
+        if (/county commissioner/i.test(title)) return same(r.district, place.commission);
+        if (/school board/i.test(title)) {
+          const drawn = (place.schoolDistricts || []).map(districtKey);
+          return same(r.district, place.school) || !drawn.includes(districtKey(r.district));
+        }
+        return true;
+      case "municipal": {
+        if (!place.municipality || r.municipality !== place.municipality) return false;
+        const seats = (place.cityDistricts || []).map(districtKey);
+        return !seats.includes(districtKey(r.district)) || same(r.district, place.cityDistrict);
+      }
+      default:
+        return false;
+    }
+  };
+  const chosen = records.filter(keep);
+  const judges = chosen.filter((r) => JUDGES.test(r.office_title));
+  const listed = chosen.filter((r) => !judges.includes(r));
+  const open = vacancies
+    .filter((v) => !JUDGES.test(v.office_title) && keep({ ...v, county: (v.counties || []).includes(county) ? county : null }))
+    .map(asVacancy);
+  return { groups: groupRoster([...listed, ...open]), judges };
+}
+
+/** A point inside a (Multi)Polygon to pin a label or portrait on: the centre of its largest part, or the nearest point inside it. */
+export function labelPoint(geometry) {
+  const polygons = geometry?.type === "Polygon" ? [geometry.coordinates] : geometry?.type === "MultiPolygon" ? geometry.coordinates : [];
+  if (!polygons.length) return null;
+  const box = (ring) => ring.reduce((b, [x, y]) => [Math.min(b[0], x), Math.min(b[1], y), Math.max(b[2], x), Math.max(b[3], y)], [Infinity, Infinity, -Infinity, -Infinity]);
+  const size = (b) => (b[2] - b[0]) * (b[3] - b[1]);
+  const largest = polygons.reduce((best, p) => (size(box(p[0])) > size(box(best[0])) ? p : best));
+  const b = box(largest[0]);
+  const centre = [(b[0] + b[2]) / 2, (b[1] + b[3]) / 2];
+  const part = { type: "Polygon", coordinates: largest };
+  if (pointInGeometry(centre[0], centre[1], part)) return centre;
+  let best = null;
+  const steps = 24;
+  for (let i = 1; i < steps; i++) {
+    for (let j = 1; j < steps; j++) {
+      const x = b[0] + ((b[2] - b[0]) * i) / steps;
+      const y = b[1] + ((b[3] - b[1]) * j) / steps;
+      if (!pointInGeometry(x, y, part)) continue;
+      const d = (x - centre[0]) ** 2 + (y - centre[1]) ** 2;
+      if (!best || d < best[2]) best = [x, y, d];
+    }
+  }
+  return best ? [best[0], best[1]] : largest[0][0];
 }

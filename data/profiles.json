@@ -2875,5 +2875,316 @@
         "url": "https://github.com/unitedstates/congress-legislators"
       }
     ]
+  },
+  "county-commissioner-district-1-nan-rich": {
+    "phone": "954-357-7001",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2028"
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-2-mark-bogen": {
+    "phone": "954-357-7002",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2026",
+      "term_ends": "2026-11-17",
+      "note": "Commission terms on the 2026 ballot end on November 17, 2026.",
+      "summary": "Serving as Mayor of Broward County, a title the Commission rotates each year."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-3-michael-udine": {
+    "phone": "954-357-7003",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2028"
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-4-lamar-fisher": {
+    "phone": "954-357-7004",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2026",
+      "term_ends": "2026-11-17",
+      "note": "Commission terms on the 2026 ballot end on November 17, 2026."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-5-steve-geller": {
+    "phone": "954-357-7005",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2028"
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-6-quentin-furr": {
+    "phone": "954-357-7006",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2026",
+      "term_ends": "2026-11-17",
+      "note": "Commission terms on the 2026 ballot end on November 17, 2026.",
+      "summary": "Grew up in the area he represents and taught at Flanagan High School in Pembroke Pines for many years. Served 12 years on the Hollywood City Commission (District 2) before joining the County Commission, and was Mayor of Broward County in 2018. Term-limited; Caryl Shuham won the District 6 seat in 2026.",
+      "previously": [
+        "Hollywood City Commissioner, District 2 (12 years)",
+        "Mayor of Broward County (2018)"
+      ]
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-7-alexandra-davis": {
+    "phone": "954-357-7007",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2028"
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-8-robert-mckinzie": {
+    "phone": "954-357-7008",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2026",
+      "term_ends": "2026-11-17",
+      "note": "Commission terms on the 2026 ballot end on November 17, 2026.",
+      "summary": "Serving as Vice Mayor of Broward County, a title the Commission rotates each year."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "county-commissioner-district-9-hazelle-rogers": {
+    "phone": "954-357-7009",
+    "party": "Democratic",
+    "bio": {
+      "next_election": "November 2028"
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-1-maura-bulman": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2026",
+      "term_ends": "2026-11-17",
+      "summary": "Re-elected in August 2026."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-2-rebecca-thompson": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2028"
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-3-sarah-leonardi": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2028",
+      "summary": "Board Chair (April 2026 listing)."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-4-lori-alhadeff": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2026",
+      "term_ends": "2026-11-17",
+      "summary": "Did not seek another term; Nicole Morst won the seat in August 2026."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-5-jeff-holness": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2028",
+      "summary": "Board Vice Chair (April 2026 listing)."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-6-adam-cervera": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2026",
+      "term_ends": "2026-11-17",
+      "summary": "Won the November 2026 runoff for another term."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-7-nora-rupert": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2026",
+      "term_ends": "2026-11-17",
+      "summary": "Cynthia Alceus Dominique won the open seat in August 2026."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-8-allen-zeman": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2026",
+      "term_ends": "2026-11-17",
+      "summary": "Countywide seat. Re-elected in August 2026."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "school-board-member-district-9-debra-hixon": {
+    "phone": "754-321-0000",
+    "bio": {
+      "next_election": "August 2028",
+      "summary": "Countywide seat."
+    },
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "Broward County Supervisor of Elections: Elected Officials",
+        "url": "https://browardvotes.gov/candidates/elected-officials"
+      }
+    ]
+  },
+  "commissioner-district-1-john-herbst": {
+    "phone": "954-828-5004",
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "City of Fort Lauderdale: Mayor & City Commission",
+        "url": "https://www.fortlauderdale.gov/government/city-commission/office-of-the-mayor-city-commission"
+      }
+    ]
+  },
+  "commissioner-district-2-steven-glassman": {
+    "phone": "954-828-5004",
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "City of Fort Lauderdale: Mayor & City Commission",
+        "url": "https://www.fortlauderdale.gov/government/city-commission/office-of-the-mayor-city-commission"
+      }
+    ]
+  },
+  "commissioner-district-3-pamela-beasley-pittman": {
+    "phone": "954-828-5004",
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "City of Fort Lauderdale: Mayor & City Commission",
+        "url": "https://www.fortlauderdale.gov/government/city-commission/office-of-the-mayor-city-commission"
+      }
+    ]
+  },
+  "commissioner-district-4-ben-sorensen": {
+    "phone": "954-828-5004",
+    "hand_written": true,
+    "sources": [
+      {
+        "name": "City of Fort Lauderdale: Mayor & City Commission",
+        "url": "https://www.fortlauderdale.gov/government/city-commission/office-of-the-mayor-city-commission"
+      }
+    ]
   }
 }

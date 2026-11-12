@@ -334,3 +334,46 @@ def test_javascript_only_pages_are_reported_not_rendered():
     scraper = BaseScraper("https://a.gov/list", {"requires_js": True}, client)
     with pytest.raises(FetchError, match="manual_officials.json"):
         scraper.fetch_and_parse("https://a.gov/list", lambda html: [])
+
+
+# -- Broward County GIS district seats ------------------------------------------------
+import json as _json
+
+from collector.scrapers.broward_districts import parse_broward_districts
+
+GIS_URL = "https://services.arcgis.com/example/FeatureServer/2"
+
+
+def _gis(*rows):
+    return _json.dumps({"features": [{"attributes": row} for row in rows]})
+
+
+def test_broward_districts_reads_district_seats_only():
+    payload = _gis(
+        {"electedoffice": "County Commissioner", "district": "County Commission District 3", "districtid": "3",
+         "repname1": "Dana Q. Fictional", "repimageurl1": "https://example.gov/dana.jpg", "districturl1": "https://example.gov/d3"},
+        {"electedoffice": "School Board", "district": "School Board District 9 [Countywide At-Large Seat]", "districtid": "9",
+         "repname1": "Dr. Lee Sample"},
+        {"electedoffice": "Town Council", "district": "Davie CIty Commission District 2", "districtid": "2",
+         "repname1": "Pat Example, ESQ.", "repimageurl1": "http://insecure.example/p.jpg"},
+        {"electedoffice": "City Commission", "district": "North Lauderdale City Commission District B", "districtid": "B",
+         "repname1": "Robin (Rob) Testcase"},
+        {"electedoffice": "Mayor", "district": "Davie", "repname1": "Morgan Mayor"},
+        {"electedoffice": "City Commission", "district": "Cooper City Commission District 1 (EXPIRED)", "districtid": "1", "repname1": "Old Member"},
+        {"electedoffice": "United States House of Representatives", "district": "US Congressional District 20", "districtid": "20", "repname1": "TO BE DETERMINED"},
+        {"electedoffice": "County Commissioner", "district": "County Commission District 4", "districtid": "4", "repname1": "VACANT"},
+    )
+    records = parse_broward_districts(payload, GIS_URL)
+    assert [r["office_title"] for r in records] == ["County Commissioner", "School Board Member", "Councilmember", "Commissioner"]
+    commissioner, school, council, city = records
+    assert commissioner["district"] == "3" and commissioner["county"] == "Broward" and commissioner["photo_url"] == "https://example.gov/dana.jpg"
+    assert school["seat_label"] == "District 9 (countywide)"
+    assert council["municipality"] == "Davie" and council["name"] == "Pat Example" and council["photo_url"] is None
+    assert city["district"] == "District B" and city["seat_label"] == "District B"
+    for raw in records:
+        assert validate_record(raw)[0] is not None
+
+
+def test_broward_districts_reports_service_errors():
+    with pytest.raises(FetchError):
+        parse_broward_districts(_json.dumps({"error": {"code": 499, "message": "Token Required"}}), GIS_URL)

@@ -369,3 +369,28 @@ details.roster-section[open] > .people { margin-top: 12px; }
   .people { grid-template-columns: 1fr; }
   .profile-head { flex-direction: column; align-items: flex-start; }
 }
+
+/* your representatives (map) */
+.hero-cta { margin-top: 16px; }
+.rep-search { display: grid; gap: 8px; margin-bottom: 20px; }
+.rep-search-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.rep-search-row .input-icon { flex: 1 1 280px; }
+.rep-search-row .button svg { margin-right: 6px; }
+.rep-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 20px; align-items: start; }
+.rep-layout > .panel { margin-top: 0; }
+.rep-map-card { position: sticky; top: 12px; }
+.rep-layers { margin: 0; padding: 12px; border-bottom: 1px solid var(--border); }
+.rep-map { height: min(68vh, 620px); min-height: 360px; background: var(--tint); }
+.rep-map-note { padding: 10px 12px; }
+.rep-marker { background: none; border: 0; }
+.rep-marker .avatar { box-shadow: 0 0 0 2px #fff, 0 2px 8px rgba(19, 41, 75, 0.35); }
+.leaflet-container { font: inherit; }
+.leaflet-popup-content { font-size: 0.875rem; line-height: 1.45; }
+.tag-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; padding: 0; }
+.swatch-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.rep-panel .people { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 900px) {
+  .rep-layout { grid-template-columns: minmax(0, 1fr); }
+  .rep-map-card { position: static; }
+  .rep-map { height: 58vh; }
+}
