@@ -968,15 +968,24 @@ function loadBoundary(key) {
 const isSeat = (r, district) => r.district != null && districtKey(r.district) === districtKey(district);
 /** The layers a visitor can show on the map, and who holds each district in them. */
 const MAP_LAYERS = [
-  { key: "commission", label: "County Commission", area: "Broward", holder: (r, p) => r.office_title === "County Commissioner" && r.county === "Broward" && isSeat(r, p.district), name: (p) => `County Commission District ${p.district}` },
+  { key: "commission", label: "County Commission", area: "Broward", partisan: true, holder: (r, p) => r.office_title === "County Commissioner" && r.county === "Broward" && isSeat(r, p.district), name: (p) => `County Commission District ${p.district}` },
   { key: "school", label: "School Board", area: "Broward", holder: (r, p) => /school board/i.test(r.office_title) && r.county === "Broward" && isSeat(r, p.district), name: (p) => `School Board District ${p.district}` },
   { key: "cityDistricts", label: "City commission districts", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.municipality && isSeat(r, p.district), name: (p) => `${p.municipality} District ${p.district}` },
   { key: "cities", label: "Cities (mayors)", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.name && /^mayor$/i.test(r.office_title), name: (p) => p.name },
-  { key: "house", label: "Florida House", holder: (r, p) => /^state representative/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida House District ${p.district}` },
-  { key: "senate", label: "Florida Senate", holder: (r, p) => /^state senator/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida Senate District ${p.district}` },
-  { key: "congress", label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
+  { key: "house", partisan: true, label: "Florida House", holder: (r, p) => /^state representative/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida House District ${p.district}` },
+  { key: "senate", partisan: true, label: "Florida Senate", holder: (r, p) => /^state senator/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida Senate District ${p.district}` },
+  { key: "congress", partisan: true, label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
 ];
 const BROWARD_VIEW = [[26.33, -80.47], [25.95, -80.07]];
+const FLORIDA_VIEW = [[31.0, -87.6], [24.4, -80.0]];
+// Validated with the dataviz palette checker (CVD and contrast) on the light surface.
+const PARTY_COLORS = { Republican: "#e34948", Democratic: "#2a78d6", other: "#6250d6", none: "#b9c0cc" };
+const DISTRICT_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"];
+const partyLabel = (party) => party || "Party not listed";
+function partyColor(party, vacant = false) {
+  if (vacant || !party || party === "Party not listed") return PARTY_COLORS.none;
+  return PARTY_COLORS[party] || PARTY_COLORS.other;
+}
 
 /** Census Bureau geocoder, called with JSONP because it does not send CORS headers. Nothing is stored. */
 function geocode(address) {
@@ -1024,9 +1033,9 @@ function reps() {
       </div>`;
 
     const map = L.map("rep-map", { scrollWheelZoom: false, zoomSnap: 0.5 });
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-      maxZoom: 19, subdomains: "abcd",
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
     map.fitBounds(BROWARD_VIEW);
     map.on("focus", () => map.scrollWheelZoom.enable());
@@ -1041,34 +1050,136 @@ function reps() {
     const portrait = (r) =>
       L.divIcon({ className: "rep-marker", html: avatar(r, "sm"), iconSize: [40, 40], iconAnchor: [20, 20] });
 
-    async function showLayer(key) {
-      activeLayer = activeLayer === key ? "" : key;
+    let colorMode = "party";
+    let markers = L.layerGroup();
+    let current = null; // { spec, group, rows }
+
+    /** Pick a fill per district: party colours, or (nonpartisan offices) map colouring so neighbours differ. */
+    function districtColors(features, holders, partisan) {
+      if (partisan && colorMode === "party") return features.map((f, i) => partyColor(holders[i]?.party, !holders[i]));
+      const boxes = features.map((f) => L.geoJSON(f).getBounds());
+      const chosen = [];
+      features.forEach((f, i) => {
+        const taken = new Set(chosen.filter((c, j) => boxes[j].intersects(boxes[i])).map((c) => c));
+        chosen[i] = DISTRICT_COLORS.find((c) => !taken.has(c)) || DISTRICT_COLORS[i % DISTRICT_COLORS.length];
+      });
+      return chosen;
+    }
+
+    function drawMarkers() {
+      if (!current) return;
+      const many = current.rows.length > 40;
+      const visible = !many || map.getZoom() >= 9;
+      if (visible && !map.hasLayer(markers)) markers.addTo(map);
+      if (!visible && map.hasLayer(markers)) markers.remove();
+    }
+    map.on("zoomend", drawMarkers);
+
+    function legendPanel() {
+      const { spec, rows } = current;
+      const partisan = spec.partisan && colorMode === "party";
+      const counts = {};
+      for (const row of rows) {
+        const key = row.holder ? partyLabel(row.holder.party) : "Vacant or not listed";
+        counts[key] = (counts[key] || 0) + 1;
+      }
+      const legend = partisan
+        ? `<ul class="legend-row" aria-label="Party colours">${Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([label, n]) =>
+            `<li><span class="swatch-dot" style="background:${partyColor(label === "Vacant or not listed" ? null : label, label === "Vacant or not listed")}"></span>${esc(label)} <span class="muted tabular">${n}</span></li>`).join("")}</ul>`
+        : `<p class="muted small">Colours only separate neighbouring districts. ${spec.partisan ? "" : "These offices are nonpartisan."}</p>`;
+      panel.innerHTML = `
+        <div class="panel-top"><div><h2>Who represents where</h2>
+          <p class="muted small">${esc(spec.label)} · ${plural(rows.length, "district")}</p></div></div>
+        <div class="layer-tools">
+          ${spec.partisan ? `<div class="chips" role="group" aria-label="Colour districts by">
+            <button type="button" class="chip" data-color="party" aria-pressed="${colorMode === "party"}">By party</button>
+            <button type="button" class="chip" data-color="district" aria-pressed="${colorMode === "district"}">By district</button></div>` : ""}
+          ${spec.area === "Broward" ? "" : `<div class="chips" role="group" aria-label="Zoom the map">
+            <button type="button" class="chip" data-zoom="broward">Broward</button>
+            <button type="button" class="chip" data-zoom="florida">All of Florida</button></div>`}
+        </div>
+        ${legend}
+        ${rows.length > 12 ? `<div class="input-icon gap-top">${ICON.search}<input type="search" class="district-filter" aria-label="Filter districts" placeholder="Filter by name, district or party"></div>` : ""}
+        <ul class="district-list">${rows.map((row, i) => `<li data-row="${i}">
+          <button type="button" class="district-row" data-focus="${i}">
+            <span class="swatch-bar" style="background:${row.color}"></span>
+            ${row.holder ? avatar(row.holder, "sm") : '<span class="avatar sm blank" aria-hidden="true">—</span>'}
+            <span><span class="strong">${esc(row.holder ? row.holder.full_name : "Vacant or not listed")}</span>
+              <span class="muted small">${esc(row.title)}${row.holder?.party ? ` · ${esc(partyLabel(row.holder.party))}` : ""}</span></span>
+          </button>
+          ${row.holder ? `<a class="small" href="${profileHref(row.holder)}">Profile</a>` : ""}</li>`).join("")}</ul>
+        <p class="muted small fine">Click a name here to zoom to that district. Click anywhere on the map, or search an address above, to see everyone who represents that spot.</p>`;
+    }
+
+    function highlight(index, on) {
+      const row = current?.rows[index];
+      if (!row) return;
+      row.layer.setStyle(on ? { weight: 3, color: "#13294b", fillOpacity: 0.55 } : { weight: 1.5, color: "#ffffff", fillOpacity: 0.38 });
+      if (on) row.layer.bringToFront();
+    }
+
+    async function showLayer(key, { keepView = false } = {}) {
+      activeLayer = key === activeLayer && !keepView ? "" : key;
       for (const chip of app.querySelectorAll("[data-layer]")) chip.setAttribute("aria-pressed", String(chip.dataset.layer === activeLayer));
       shown.clearLayers();
-      if (!activeLayer) return;
+      markers.clearLayers();
+      current = null;
+      if (!activeLayer) { intro(); return; }
       const spec = MAP_LAYERS.find((l) => l.key === activeLayer);
       let data = await loadBoundary(activeLayer);
       if (spec.key === "cities") {
         const broward = await loadBoundary("counties").then((c) => c.features.find((f) => f.properties.name === "Broward"));
         data = { ...data, features: data.features.filter((f) => { const p = labelPoint(f.geometry); return p && pointInGeometry(p[0], p[1], broward.geometry); }) };
       }
-      const group = L.geoJSON(data, {
-        style: { color: "#1f3d6b", weight: 1.5, fillColor: "#2457a6", fillOpacity: 0.06 },
-        onEachFeature: (feature, layer) => {
-          const holder = records.find((r) => spec.holder(r, feature.properties));
-          const title = spec.name(feature.properties);
-          layer.bindTooltip(`${esc(title)}${holder ? `<br><strong>${esc(holder.full_name)}</strong>` : ""}`, { sticky: true });
-          const at = labelPoint(feature.geometry);
-          if (holder && at) {
-            L.marker([at[1], at[0]], { icon: portrait(holder), title: `${holder.full_name}, ${title}`, keyboard: true })
-              .bindPopup(`<strong>${esc(holder.full_name)}</strong><br>${esc(holder.office_title)}<br><span class="muted">${esc(title)}</span><br><a href="${profileHref(holder)}">View profile</a>`)
-              .addTo(shown);
-          }
-        },
-      }).addTo(shown);
-      group.bringToBack();
-      if (!pin) map.fitBounds(spec.area === "Broward" ? BROWARD_VIEW : group.getBounds(), { padding: [10, 10] });
+      const features = [...data.features].sort((a, b) => spec.name(a.properties).localeCompare(spec.name(b.properties), "en", { numeric: true }));
+      const holders = features.map((f) => records.find((r) => spec.holder(r, f.properties)) || null);
+      const colors = districtColors(features, holders, spec.partisan);
+      const rows = features.map((f, i) => ({ feature: f, holder: holders[i], color: colors[i], title: spec.name(f.properties) }));
+      rows.forEach((row, i) => {
+        row.layer = L.geoJSON(row.feature, {
+          style: { color: "#ffffff", weight: 1.5, fillColor: row.color, fillOpacity: 0.38, dashArray: row.holder ? null : "4 4" },
+        }).addTo(shown);
+        const who = row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}` : "Vacant or not listed";
+        row.layer.bindTooltip(`${esc(row.title)}<br>${who}`, { sticky: true });
+        row.layer.on("mouseover", () => highlight(i, true));
+        row.layer.on("mouseout", () => highlight(i, false));
+        const at = labelPoint(row.feature.geometry);
+        if (row.holder && at) {
+          L.marker([at[1], at[0]], { icon: portrait(row.holder), title: `${row.holder.full_name}, ${row.title}`, keyboard: true })
+            .bindPopup(`<strong>${esc(row.holder.full_name)}</strong><br>${esc(row.holder.office_title)}<br><span class="muted">${esc(row.title)}</span><br><a href="${profileHref(row.holder)}">View profile</a>`)
+            .addTo(markers);
+        }
+      });
+      current = { spec, rows };
+      if (!pin) {
+        legendPanel();
+        if (!keepView) map.fitBounds(spec.area === "Broward" ? BROWARD_VIEW : L.featureGroup(rows.map((r) => r.layer)).getBounds(), { padding: [10, 10] });
+      }
+      drawMarkers();
     }
+
+    panel.addEventListener("click", (event) => {
+      const color = event.target.closest("[data-color]");
+      if (color && current) { colorMode = color.dataset.color; showLayer(current.spec.key, { keepView: true }); return; }
+      const zoom = event.target.closest("[data-zoom]");
+      if (zoom) { map.fitBounds(zoom.dataset.zoom === "broward" ? BROWARD_VIEW : FLORIDA_VIEW); return; }
+      const focus = event.target.closest("[data-focus]");
+      if (focus && current) {
+        const row = current.rows[Number(focus.dataset.focus)];
+        map.fitBounds(row.layer.getBounds(), { padding: [20, 20], maxZoom: 14 });
+        row.layer.openTooltip(row.layer.getBounds().getCenter());
+      }
+    });
+    panel.addEventListener("mouseover", (event) => { const r = event.target.closest("[data-focus]"); if (r) highlight(Number(r.dataset.focus), true); });
+    panel.addEventListener("mouseout", (event) => { const r = event.target.closest("[data-focus]"); if (r) highlight(Number(r.dataset.focus), false); });
+    panel.addEventListener("input", (event) => {
+      if (!event.target.matches(".district-filter") || !current) return;
+      const q = fold(event.target.value.trim());
+      current.rows.forEach((row, i) => {
+        const text = fold([row.title, row.holder?.full_name, row.holder && partyLabel(row.holder.party)].join(" "));
+        $(`[data-row="${i}"]`, panel).hidden = Boolean(q) && !text.includes(q);
+      });
+    });
 
     function intro() {
       panel.innerHTML = `
@@ -1201,10 +1312,7 @@ function reps() {
     const lat = Number(params().get("lat"));
     const lon = Number(params().get("lon"));
     if (lat && lon) lookup(lat, lon);
-    else {
-      intro();
-      showLayer("commission");
-    }
+    else showLayer("commission");
   }, "Loading the map");
 }
 

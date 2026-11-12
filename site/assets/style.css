@@ -394,3 +394,12 @@ details.roster-section[open] > .people { margin-top: 12px; }
   .rep-map-card { position: static; }
   .rep-map { height: 58vh; }
 }
+.layer-tools { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.layer-tools .chips { margin-top: 10px; }
+.legend-row { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 12px 0 0; padding: 0; font-size: 0.875rem; }
+.district-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; max-height: 52vh; overflow-y: auto; }
+.district-list li { display: flex; align-items: center; gap: 8px; }
+.district-row { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; padding: 6px 8px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); text-align: left; font: inherit; color: var(--text); cursor: pointer; }
+.district-row:hover, .district-row:focus-visible { border-color: var(--navy-600); }
+.district-row > span:last-child { display: grid; min-width: 0; }
+.swatch-bar { flex: none; width: 6px; align-self: stretch; border-radius: 3px; }
