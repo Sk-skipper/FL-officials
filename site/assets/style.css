@@ -39,7 +39,7 @@ p { margin: 0; }
 a { color: var(--navy-600); text-underline-offset: 3px; }
 a:hover { color: var(--red); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
-svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+svg:where(:not(.leaflet-pane svg)) { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 code { font-size: 0.85em; background: var(--tint); padding: 0.1em 0.35em; border-radius: 4px; overflow-wrap: anywhere; }
 
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
