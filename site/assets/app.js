@@ -1036,7 +1036,8 @@ function reps() {
           <div class="chips rep-layers" role="group" aria-label="Show districts on the map">
             ${MAP_LAYERS.map((l) => `<button type="button" class="chip" data-layer="${l.key}" aria-pressed="false">${esc(l.label)}</button>`).join("")}
           </div>
-          <div class="chips rep-borders" role="group" aria-label="Show district borders on top">
+          <div class="chips rep-borders" role="group" aria-label="Map background and district borders">
+            <button type="button" class="chip small-chip" data-streets aria-pressed="false">Street map</button>
             <span class="muted small">Borders:</span>
             ${MAP_LAYERS.map((l) => `<button type="button" class="chip small-chip" data-border="${l.key}" aria-pressed="false"><svg class="line-swatch" viewBox="0 0 24 6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke="${BORDER_STYLE[l.key].color}" stroke-width="2.5" ${BORDER_STYLE[l.key].dashArray ? `stroke-dasharray="${BORDER_STYLE[l.key].dashArray}"` : ""}/></svg>${esc(l.label.replace(" (mayors)", ""))}</button>`).join("")}
           </div>
@@ -1048,10 +1049,21 @@ function reps() {
       </div>`;
 
     const map = L.map("rep-map", { scrollWheelZoom: false, zoomSnap: 0.5 });
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    // A plain background (land, county lines, water) keeps the districts readable; streets are optional.
+    const streets = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    });
+    map.createPane("base").style.zIndex = 250;
+    const base = L.geoJSON(counties, {
+      pane: "base", interactive: false, attribution: "Boundaries: U.S. Census Bureau, Broward County GIS",
+      style: { color: "#c3cad6", weight: 1, fillColor: "#ffffff", fillOpacity: 1 },
     }).addTo(map);
+    function setStreets(on) {
+      if (on) { streets.addTo(map); base.setStyle({ fillOpacity: 0, opacity: 0.5 }); }
+      else { streets.remove(); base.setStyle({ fillOpacity: 1, opacity: 1 }); }
+      $("[data-streets]", app).setAttribute("aria-pressed", String(on));
+    }
     map.fitBounds(BROWARD_VIEW);
     map.on("focus", () => map.scrollWheelZoom.enable());
     map.on("blur", () => map.scrollWheelZoom.disable());
@@ -1060,6 +1072,12 @@ function reps() {
     const shown = L.layerGroup().addTo(map);
     const yours = L.layerGroup().addTo(map);
     let pin = null;
+    let lookupHits = null;
+    function showHit(index) {
+      yours.clearLayers();
+      const hit = lookupHits?.found[index];
+      if (hit) L.geoJSON(hit.feature, { style: { color: "#13294b", weight: 3, fill: false }, interactive: false }).addTo(yours);
+    }
     let activeLayer = "";
 
     const portrait = (r) =>
@@ -1184,6 +1202,9 @@ function reps() {
     async function showLayer(key, { keepView = false } = {}) {
       activeLayer = key === activeLayer && !keepView ? "" : key;
       for (const chip of app.querySelectorAll("[data-layer]")) chip.setAttribute("aria-pressed", String(chip.dataset.layer === activeLayer));
+      // The coloured layer already draws its own borders; don't stack a second copy on it.
+      if (borders.has(activeLayer)) await toggleBorder(activeLayer);
+      for (const chip of app.querySelectorAll("[data-border]")) chip.disabled = chip.dataset.border === activeLayer;
       shown.clearLayers();
       markers.clearLayers();
       current = null;
@@ -1230,6 +1251,18 @@ function reps() {
       }
     });
     panel.addEventListener("mouseover", (event) => { const r = event.target.closest("[data-focus]"); if (r) highlight(Number(r.dataset.focus), true); });
+    const hitTag = (event) => event.target.closest?.("[data-hit]");
+    panel.addEventListener("mouseover", (event) => { const t = hitTag(event); if (t) showHit(Number(t.dataset.hit)); });
+    panel.addEventListener("focusin", (event) => { const t = hitTag(event); if (t) showHit(Number(t.dataset.hit)); });
+    panel.addEventListener("mouseout", (event) => { if (hitTag(event) && lookupHits) showHit(lookupHits.current); });
+    panel.addEventListener("click", (event) => {
+      const t = hitTag(event);
+      if (!t || !lookupHits) return;
+      lookupHits.current = Number(t.dataset.hit);
+      for (const tag of panel.querySelectorAll("[data-hit]")) tag.setAttribute("aria-pressed", String(tag === t));
+      showHit(lookupHits.current);
+      map.fitBounds(L.geoJSON(lookupHits.found[lookupHits.current].feature).getBounds().pad(0.15), { maxZoom: 15 });
+    });
     panel.addEventListener("mouseout", (event) => { const r = event.target.closest("[data-focus]"); if (r) highlight(Number(r.dataset.focus), false); });
     panel.addEventListener("input", (event) => {
       if (!event.target.matches(".district-filter") || !current) return;
@@ -1287,18 +1320,16 @@ function reps() {
         if (cityDistrict) hits.push({ label: `${place.municipality} Commission`, feature: cityDistrict });
       }
 
-      yours.clearLayers();
-      const palette = ["#b3262e", "#1f3d6b", "#1c6a45", "#875800", "#6b2a7a", "#0b6e79", "#4a4a4a"];
-      hits.forEach((hit, i) => {
-        if (hit.feature) {
-          L.geoJSON(hit.feature, { style: { color: palette[i % palette.length], weight: 2.5, fillOpacity: 0.04, dashArray: i ? "6 4" : null }, interactive: false }).addTo(yours);
-        }
-      });
+      // One outline at a time: the most local district, or whichever label the visitor points at.
+      const found = hits.filter((h) => h.feature);
+      lookupHits = { found, current: found.length - 1 };
+      showHit(lookupHits.current);
       const { groups, judges } = representativesFor(records, place, meta.vacancies || []);
       const tags = [
         `<li><span class="badge">${esc(county)} County</span></li>`,
         place.municipality ? `<li><span class="badge">${esc(place.municipality)}</span></li>` : `<li><span class="badge outline">Unincorporated</span></li>`,
-        ...hits.filter((h) => h.feature).map((h, i) => `<li><span class="badge outline"><span class="swatch-dot" style="background:${palette[i % palette.length]}"></span>${esc(h.label)} ${esc(districtLabel(h.feature.properties.district))}</span></li>`),
+        ...found.map((h, i) => `<li><button type="button" class="badge outline hit-tag" data-hit="${i}" aria-pressed="${i === lookupHits.current}"
+          title="Show this district on the map">${esc(h.label)} ${esc(districtLabel(h.feature.properties.district))}</button></li>`),
       ].join("");
       const body = groups
         .map((g) => `<section class="roster-level"><h3 class="group">${esc(LEVEL_LABELS[g.level])} <span class="count">${formatNumber(g.count)}</span></h3>
@@ -1323,9 +1354,8 @@ function reps() {
               : `<ul class="people">${s.items.map(personCard).join("")}</ul>`}`).join("")).join("")}
         </details>` : ""}`;
       if (!activeLayer) {
-        const bounds = yours.getLayers().length ? L.featureGroup(yours.getLayers()).getBounds() : null;
-        const smallest = yours.getLayers().at(-1);
-        map.fitBounds((smallest?.getBounds?.() || bounds || L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2), { maxZoom: 15 });
+        const local = found.at(-1);
+        map.fitBounds((local ? L.geoJSON(local.feature).getBounds() : L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2), { maxZoom: 15 });
       }
       const next = params();
       next.set("lat", lat.toFixed(5));
@@ -1366,6 +1396,8 @@ function reps() {
     app.addEventListener("click", (event) => {
       const chip = event.target.closest("[data-layer]");
       if (chip) showLayer(chip.dataset.layer).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
+      const streetsButton = event.target.closest("[data-streets]");
+      if (streetsButton) setStreets(streetsButton.getAttribute("aria-pressed") !== "true");
       const border = event.target.closest("[data-border]");
       if (border) toggleBorder(border.dataset.border).catch((error) => { panel.innerHTML = empty("Those borders could not be loaded", esc(error.message)); });
     });

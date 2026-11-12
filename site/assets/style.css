@@ -380,7 +380,7 @@ details.roster-section[open] > .people { margin-top: 12px; }
 .rep-layout > .panel { margin-top: 0; }
 .rep-map-card { position: sticky; top: 12px; }
 .rep-layers { margin: 0; padding: 12px; border-bottom: 1px solid var(--border); }
-.rep-map { height: min(68vh, 620px); min-height: 360px; background: var(--tint); }
+.rep-map { height: min(68vh, 620px); min-height: 360px; background: #dfe8f1; }
 .rep-map-note { padding: 10px 12px; }
 .rep-marker { background: none; border: 0; }
 .rep-marker .avatar { box-shadow: 0 0 0 2px #fff, 0 2px 8px rgba(19, 41, 75, 0.35); }
@@ -408,3 +408,6 @@ details.roster-section[open] > .people { margin-top: 12px; }
 .line-swatch { width: 22px; height: 6px; stroke-width: 0; }
 .leaflet-tooltip.border-label { background: rgba(255, 255, 255, 0.85); border: 0; box-shadow: none; padding: 1px 5px; font-size: 0.72rem; font-weight: 600; }
 .leaflet-tooltip.border-label::before { display: none; }
+.hit-tag { cursor: pointer; font: inherit; font-size: 0.8rem; }
+.hit-tag[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.small-chip[data-streets] { margin-right: 8px; }
