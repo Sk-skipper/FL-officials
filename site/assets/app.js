@@ -62,8 +62,7 @@ const loadSources = () => load("sources.json");
 
 // -- shared pieces ----------------------------------------------------------------
 const ICON = {
-  landmark:
-    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18M6 18v-7m4 7v-7m4 7v-7m4 7v-7M12 2l8 5H4l8-5Z"/></svg>',
+  landmark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>',
   phone:
     '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>',
   mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
@@ -982,6 +981,16 @@ const FLORIDA_VIEW = [[31.0, -87.6], [24.4, -80.0]];
 const PARTY_COLORS = { Republican: "#e34948", Democratic: "#2a78d6", other: "#6250d6", none: "#b9c0cc" };
 const DISTRICT_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"];
 const partyLabel = (party) => party || "Party not listed";
+// Outline-only overlays: each layer gets its own ink and dash so it reads without relying on colour alone.
+const BORDER_STYLE = {
+  commission: { color: "#13294b", dashArray: null, short: (p) => `CC ${p.district}` },
+  school: { color: "#1c6a45", dashArray: "8 5", short: (p) => `SB ${p.district}` },
+  cityDistricts: { color: "#875800", dashArray: "2 5", short: (p) => `${p.municipality} ${p.district}` },
+  cities: { color: "#4a4a4a", dashArray: "10 4 2 4", short: (p) => p.name },
+  house: { color: "#6b2a7a", dashArray: "6 4", short: (p) => `House ${p.district}` },
+  senate: { color: "#0b6e79", dashArray: "12 6", short: (p) => `Senate ${p.district}` },
+  congress: { color: "#b3262e", dashArray: null, short: (p) => `CD ${p.district}` },
+};
 function partyColor(party, vacant = false) {
   if (vacant || !party || party === "Party not listed") return PARTY_COLORS.none;
   return PARTY_COLORS[party] || PARTY_COLORS.other;
@@ -1025,6 +1034,10 @@ function reps() {
           <div class="chips rep-layers" role="group" aria-label="Show districts on the map">
             ${MAP_LAYERS.map((l) => `<button type="button" class="chip" data-layer="${l.key}" aria-pressed="false">${esc(l.label)}</button>`).join("")}
           </div>
+          <div class="chips rep-borders" role="group" aria-label="Show district borders on top">
+            <span class="muted small">Borders:</span>
+            ${MAP_LAYERS.map((l) => `<button type="button" class="chip small-chip" data-border="${l.key}" aria-pressed="false"><svg class="line-swatch" viewBox="0 0 24 6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke="${BORDER_STYLE[l.key].color}" stroke-width="2.5" ${BORDER_STYLE[l.key].dashArray ? `stroke-dasharray="${BORDER_STYLE[l.key].dashArray}"` : ""}/></svg>${esc(l.label.replace(" (mayors)", ""))}</button>`).join("")}
+          </div>
           <div id="rep-map" class="rep-map"></div>
           <p class="muted small rep-map-note">District lines: U.S. Census Bureau (Congress and the Legislature, 2022 plans) and Broward County GIS (county and city districts).
           Florida redrew its congressional districts for members elected in November 2026; until they take office in January 2027 the 2022 districts apply.</p>
@@ -1049,6 +1062,48 @@ function reps() {
 
     const portrait = (r) =>
       L.divIcon({ className: "rep-marker", html: avatar(r, "sm"), iconSize: [40, 40], iconAnchor: [20, 20] });
+
+    /** A layer's features; city limits are limited to Broward, the only county with city officials so far. */
+    async function layerData(spec) {
+      const data = await loadBoundary(spec.key);
+      if (spec.key !== "cities") return data;
+      const broward = (await loadBoundary("counties")).features.find((f) => f.properties.name === "Broward");
+      return { ...data, features: data.features.filter((f) => { const p = labelPoint(f.geometry); return p && pointInGeometry(p[0], p[1], broward.geometry); }) };
+    }
+
+    // Border overlays, independent of the coloured layer.
+    const borders = new Map();
+    function drawBorderLabels() {
+      for (const entry of borders.values()) {
+        const visible = entry.count <= 40 || map.getZoom() >= 9; // 120 House labels would bury the statewide view
+        if (visible && !map.hasLayer(entry.labels)) entry.labels.addTo(map);
+        if (!visible && map.hasLayer(entry.labels)) entry.labels.remove();
+      }
+    }
+    async function toggleBorder(key) {
+      const button = $(`[data-border="${key}"]`, app);
+      if (borders.has(key)) {
+        const entry = borders.get(key);
+        entry.lines.remove();
+        entry.labels.remove();
+        borders.delete(key);
+        button.setAttribute("aria-pressed", "false");
+        return;
+      }
+      const spec = MAP_LAYERS.find((l) => l.key === key);
+      const style = BORDER_STYLE[key];
+      const data = await layerData(spec);
+      const lines = L.geoJSON(data, { style: { color: style.color, weight: 2.5, opacity: 0.9, fill: false, dashArray: style.dashArray }, interactive: false }).addTo(map);
+      const labels = L.layerGroup(data.features.map((f) => {
+        const at = labelPoint(f.geometry);
+        return at ? L.tooltip({ permanent: true, direction: "center", className: "border-label", interactive: false })
+          .setLatLng([at[1], at[0]]).setContent(`<span style="color:${style.color}">${esc(style.short(f.properties))}</span>`) : null;
+      }).filter(Boolean));
+      borders.set(key, { lines, labels, count: data.features.length });
+      button.setAttribute("aria-pressed", "true");
+      drawBorderLabels();
+    }
+    map.on("zoomend", drawBorderLabels);
 
     let colorMode = "party";
     let markers = L.layerGroup();
@@ -1126,11 +1181,7 @@ function reps() {
       current = null;
       if (!activeLayer) { intro(); return; }
       const spec = MAP_LAYERS.find((l) => l.key === activeLayer);
-      let data = await loadBoundary(activeLayer);
-      if (spec.key === "cities") {
-        const broward = await loadBoundary("counties").then((c) => c.features.find((f) => f.properties.name === "Broward"));
-        data = { ...data, features: data.features.filter((f) => { const p = labelPoint(f.geometry); return p && pointInGeometry(p[0], p[1], broward.geometry); }) };
-      }
+      const data = await layerData(spec);
       const features = [...data.features].sort((a, b) => spec.name(a.properties).localeCompare(spec.name(b.properties), "en", { numeric: true }));
       const holders = features.map((f) => records.find((r) => spec.holder(r, f.properties)) || null);
       const colors = districtColors(features, holders, spec.partisan);
@@ -1307,6 +1358,8 @@ function reps() {
     app.addEventListener("click", (event) => {
       const chip = event.target.closest("[data-layer]");
       if (chip) showLayer(chip.dataset.layer).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
+      const border = event.target.closest("[data-border]");
+      if (border) toggleBorder(border.dataset.border).catch((error) => { panel.innerHTML = empty("Those borders could not be loaded", esc(error.message)); });
     });
 
     const lat = Number(params().get("lat"));

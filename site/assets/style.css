@@ -62,7 +62,7 @@ code { font-size: 0.85em; background: var(--tint); padding: 0.1em 0.35em; border
 .topbar { height: 4px; background: linear-gradient(90deg, var(--navy) 0 85%, var(--red) 85% 100%); }
 .header-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
-.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: var(--radius); background: var(--navy); color: #fff; font-size: 20px; }
+.brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: linear-gradient(135deg, #2457a6, var(--navy)); color: #fff; font-size: 20px; box-shadow: 0 2px 6px rgba(19, 41, 75, 0.25); }
 .brand-name { font: 600 1.05rem/1.2 var(--serif); }
 .nav-desktop { display: flex; gap: 4px; }
 .nav-desktop a, .nav-mobile a { color: var(--muted); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 8px 12px; border-bottom: 2px solid transparent; }
@@ -403,3 +403,8 @@ details.roster-section[open] > .people { margin-top: 12px; }
 .district-row:hover, .district-row:focus-visible { border-color: var(--navy-600); }
 .district-row > span:last-child { display: grid; min-width: 0; }
 .swatch-bar { flex: none; width: 6px; align-self: stretch; border-radius: 3px; }
+.rep-borders { margin: 0; padding: 0 12px 12px; align-items: center; }
+.small-chip { height: 30px; padding: 0 10px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 6px; }
+.line-swatch { width: 22px; height: 6px; stroke-width: 0; }
+.leaflet-tooltip.border-label { background: rgba(255, 255, 255, 0.85); border: 0; box-shadow: none; padding: 1px 5px; font-size: 0.72rem; font-weight: 600; }
+.leaflet-tooltip.border-label::before { display: none; }
