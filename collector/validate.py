@@ -40,6 +40,7 @@ class ScrapedOfficial(BaseModel):
     counties: list[str] = []
     municipality: str | None = None
     seat_label: str | None = Field(default=None, max_length=80)
+    special_district: str | None = Field(default=None, max_length=80)  # key in data/special_districts.json
     phone: str | None = None
     email: str | None = None
     official_website: str | None = None

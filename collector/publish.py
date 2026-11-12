@@ -10,9 +10,10 @@ Inputs (all in data/):
   wikipedia.json         last-resort portraits, birth dates and article links (tools/wikipedia.py)
   districts.json         which counties each congressional / Florida House district covers
   vacancies.json         seats that are currently empty
+  special_districts.json special districts (water control, hospital, children's services...)
   site.json              optional settings (report link, contact email)
 
-Outputs (in site/data/): officials.json, officials.csv, sources.json, meta.json
+Outputs (in site/data/): officials.json, officials.csv, sources.json, meta.json (which also carries the special districts)
 
 Exits with an error if a correction or a hand-added record is invalid, so a
 bad edit stops the deploy instead of reaching the public site.
@@ -64,7 +65,8 @@ NOT_YET_COVERED = [
     "Sea Ranch Lakes, West Park and Weston (Broward cities that held elections on November 3, 2026, may change "
     "when the winners are sworn in)",
     "Mayors and councils outside Broward County (Florida has 411 municipalities)",
-    "Special districts (water control, hospital, soil and water)",
+    "Special districts outside Broward County, and board members for most Broward special districts "
+    "(listed so far: South Broward Drainage District, Children's Services Council, South Florida Water Management District)",
 ]
 
 BIO_TEXT = {"born", "serving_since", "term_ends", "next_election", "summary", "note"}
@@ -219,9 +221,36 @@ def _vacancies(raw: dict) -> list[dict]:
     return out
 
 
+SPECIAL_AREAS = {"mapped", "countywide", "regional"}
+
+
+def _special_districts(raw: dict) -> list[dict]:
+    out, keys = [], set()
+    for index, entry in enumerate(raw.get("districts", []), start=1):
+        where = f"special_districts.json, entry {index}"
+        for field in ("key", "name", "type", "area", "status"):
+            if not str(entry.get(field) or "").strip():
+                raise PublishError(f"{where}: '{field}' is required")
+        if entry["key"] in keys:
+            raise PublishError(f"{where}: key '{entry['key']}' is used twice")
+        if entry["area"] not in SPECIAL_AREAS:
+            raise PublishError(f"{where}: area must be one of {', '.join(sorted(SPECIAL_AREAS))}")
+        keys.add(entry["key"])
+        sources = [s for s in entry.get("sources", []) if isinstance(s, dict) and normalize_url(s.get("url"))]
+        if not sources:
+            raise PublishError(f"{where}: at least one source with a link is required")
+        out.append({
+            "key": entry["key"], "name": entry["name"], "type": entry["type"], "area": entry["area"],
+            "area_note": entry.get("area_note"), "status": entry["status"], "board": entry.get("board"),
+            "phone": normalize_phone(entry.get("phone")), "website": normalize_url(entry.get("website")),
+            "note": entry.get("note"), "sources": sources,
+        })
+    return out
+
+
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
-          wikipedia: dict | None = None):
+          wikipedia: dict | None = None, special: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -275,6 +304,11 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             continue
         _correct(by_id[record_id], fields, record_id)
 
+    special_districts = _special_districts(special or {})
+    special_keys = {d["key"] for d in special_districts}
+    for record in unique:
+        if record.get("special_district") and record["special_district"] not in special_keys:
+            raise PublishError(f"'{record['id']}': special_district '{record['special_district']}' is not in special_districts.json")
     for record in unique:
         record.setdefault("correction_note", None)
         record.setdefault("seat_label", None)
@@ -329,6 +363,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             ),
         },
         "vacancies": _vacancies(vacancies or {}),
+        "special_districts": special_districts,
         "municipalities": sorted({r["municipality"] for r in unique if r.get("municipality")}),
         "report_url": report_url or None,
         "contact_email": (site.get("contact_email") or "").strip() or None,
@@ -369,6 +404,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         districts=load_json(data_dir / "districts.json", {}),
         vacancies=load_json(data_dir / "vacancies.json", {}),
         wikipedia=load_json(data_dir / "wikipedia.json", {}),
+        special=load_json(data_dir / "special_districts.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731

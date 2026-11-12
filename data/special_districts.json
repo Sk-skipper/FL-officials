@@ -1,0 +1,495 @@
+{
+  "_how_to": "Special districts shown on the map and in address lookups. `key` matches the boundary file (site/assets/boundaries/broward-special.json) for mapped districts, and the `special_district` field of board members in manual_officials.json. `area`: mapped (has a boundary), countywide, or regional (covers part of the county; no boundary yet).",
+  "_checked": "2026-11-11",
+  "districts": [
+    {
+      "key": "South Broward",
+      "name": "South Broward Drainage District",
+      "type": "Drainage district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "954-680-3337",
+      "website": "https://www.sbdd.org/",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "Florida Auditor General: special district annual financial reports",
+          "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/south%20broward%20drainage%20district.htm"
+        }
+      ]
+    },
+    {
+      "key": "Central Broward",
+      "name": "Central Broward Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-432-5110",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "Florida Auditor General: special district annual financial reports",
+          "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/central%20broward%20water%20control%20district.htm"
+        }
+      ]
+    },
+    {
+      "key": "Indian Trace",
+      "name": "Indian Trace Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Five supervisors, elected first by landowners and later by registered voters living in the district (section 190.006, Florida Statutes).",
+      "phone": "954-275-5817",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Coral Bay",
+      "name": "Coral Bay Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Five supervisors, elected first by landowners and later by registered voters living in the district (section 190.006, Florida Statutes).",
+      "phone": "786-352-1110",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Turtle Run",
+      "name": "Turtle Run Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Five supervisors, elected first by landowners and later by registered voters living in the district (section 190.006, Florida Statutes).",
+      "phone": "786-352-1110",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Old Plantation",
+      "name": "Old Plantation Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-472-5596",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Plantation Acres",
+      "name": "Plantation Acres Improvement District",
+      "type": "Improvement district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-474-3092",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Pine Tree",
+      "name": "Pine Tree Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "Florida Auditor General: special district annual financial reports",
+          "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/pine%20tree%20water%20control%20district%20broward%20county.htm"
+        }
+      ]
+    },
+    {
+      "key": "Sunshine",
+      "name": "Sunshine Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "561-571-0010",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Coral Springs",
+      "name": "Coral Springs Improvement District",
+      "type": "Improvement district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-753-5841",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "NSID",
+      "name": "North Springs Improvement District",
+      "type": "Improvement district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-752-0400",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "North Lauderdale",
+      "name": "North Lauderdale Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-724-7070",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Tindall Hammock",
+      "name": "Tindall Hammock Irrigation and Soil Conservation District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board of supervisors chosen as the district's charter sets out, usually elected by landowners or residents.",
+      "phone": "954-524-8526",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Cocomar",
+      "name": "Cocomar Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "board": "A dependent district: a county or city governing body controls it.",
+      "phone": "954-275-5817",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Lauderdale Isles",
+      "name": "Lauderdale Isles Water Management District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "board": "A dependent district: a county or city governing body controls it.",
+      "phone": "954-327-9095",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Broward WCD #2",
+      "name": "Broward County Water Control District No. 2",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "board": "A dependent district: a county or city governing body controls it.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        }
+      ]
+    },
+    {
+      "key": "Broward WCD #3",
+      "name": "Broward County Water Control District No. 3",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "board": "A dependent district: a county or city governing body controls it.",
+      "phone": "954-831-0751",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Broward WCD #4",
+      "name": "Broward County Water Control District No. 4",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "board": "A dependent district: a county or city governing body controls it.",
+      "phone": "954-753-5841",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
+          "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        }
+      ]
+    },
+    {
+      "key": "Bonaventure",
+      "name": "Bonaventure",
+      "type": "Drainage district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board chosen as the district's charter sets out.",
+      "note": "Full legal name not yet confirmed; the label is Broward County GIS's.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        }
+      ]
+    },
+    {
+      "key": "Oakridge",
+      "name": "Oakridge",
+      "type": "Drainage district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board chosen as the district's charter sets out.",
+      "note": "Full legal name not yet confirmed; the label is Broward County GIS's.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        }
+      ]
+    },
+    {
+      "key": "West Lake",
+      "name": "West Lake",
+      "type": "Drainage district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board chosen as the district's charter sets out.",
+      "note": "Full legal name not yet confirmed; the label is Broward County GIS's.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        }
+      ]
+    },
+    {
+      "key": "Cypress Cove",
+      "name": "Cypress Cove",
+      "type": "Drainage district",
+      "area": "mapped",
+      "status": "independent",
+      "board": "Board chosen as the district's charter sets out.",
+      "note": "Full legal name not yet confirmed; the label is Broward County GIS's.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        }
+      ]
+    },
+    {
+      "key": "Twin Lakes",
+      "name": "Twin Lakes",
+      "type": "Drainage district",
+      "area": "mapped",
+      "status": "dependent",
+      "board": "A dependent district: a county or city governing body controls it.",
+      "note": "Full legal name not yet confirmed; the label is Broward County GIS's.",
+      "sources": [
+        {
+          "name": "Broward County GIS: Drainage Districts",
+          "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        }
+      ]
+    },
+    {
+      "key": "csc-broward",
+      "name": "Children's Services Council of Broward County",
+      "type": "Children's services council",
+      "area": "countywide",
+      "status": "independent",
+      "board": "Members appointed by the Governor, plus members who serve because of their office (School Board, school superintendent, a judge, health and children's agencies).",
+      "website": "https://www.cscbroward.org/",
+      "phone": "954-377-1000",
+      "sources": [
+        {
+          "name": "Children's Services Council of Broward County: Council Members",
+          "url": "https://www.cscbroward.org/council-members/"
+        },
+        {
+          "name": "Florida Auditor General: special district annual financial reports",
+          "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/childrens%20services%20council%20of%20broward%20county.htm"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd",
+      "name": "South Florida Water Management District",
+      "type": "Water management district",
+      "area": "countywide",
+      "status": "independent",
+      "board": "Nine-member governing board appointed by the Governor and confirmed by the Florida Senate. Listed here: the members who represent Broward.",
+      "website": "https://www.sfwmd.gov/",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: Governing Board",
+          "url": "https://www.sfwmd.gov/who-we-are/governing-board"
+        }
+      ]
+    },
+    {
+      "key": "nbhd",
+      "name": "North Broward Hospital District (Broward Health)",
+      "type": "Hospital district",
+      "area": "regional",
+      "area_note": "Northern and central Broward County",
+      "status": "independent",
+      "board": "Board of commissioners appointed by the Governor.",
+      "website": "https://www.browardhealth.org/",
+      "note": "Board members not listed yet.",
+      "sources": [
+        {
+          "name": "Florida Auditor General: special district annual financial reports",
+          "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/north%20broward%20hospital%20district.htm"
+        }
+      ]
+    },
+    {
+      "key": "sbhd",
+      "name": "South Broward Hospital District (Memorial Healthcare System)",
+      "type": "Hospital district",
+      "area": "regional",
+      "area_note": "Southern Broward County",
+      "status": "independent",
+      "board": "Board of commissioners appointed by the Governor.",
+      "website": "https://www.mhs.net/",
+      "note": "Board members not listed yet.",
+      "sources": [
+        {
+          "name": "Florida Auditor General: special district annual financial reports",
+          "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/south%20broward%20hospital%20district.htm"
+        }
+      ]
+    }
+  ]
+}

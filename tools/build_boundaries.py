@@ -10,6 +10,8 @@ Sources (all public government data):
     members elected through November 2026 represent).
   - Broward County GIS, "Electoral District Boundaries": County Commission, School Board and city
     commission districts. Expired districts are skipped.
+  - Broward County GIS, "DrainageDistricts": the water control, drainage and improvement districts
+    (special districts). `key` matches data/special_districts.json.
   - Broward County GIS, "BCCity_Boundaries": Broward's 31 municipalities, used instead of the
     Census outlines inside Broward because the county's are the legal limits.
 
@@ -35,6 +37,7 @@ TIGER = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb"
 BROWARD = "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services"
 ELECTORAL = f"{BROWARD}/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2"
 CITY_LIMITS = f"{BROWARD}/BCCity_Boundaries/FeatureServer/0"
+DRAINAGE = f"{BROWARD}/DrainageDistricts/FeatureServer/0"
 HEADERS = {"User-Agent": "fl-officials-directory/1.0 (boundary builder)"}
 
 STATEWIDE_OFFSET = 0.0005  # degrees, about 50 m
@@ -152,7 +155,14 @@ def build_broward(statewide_cities: dict) -> dict[str, dict]:
         f for f in statewide_cities["features"] if key(f["properties"]["name"]) not in names
     ] + broward_cities
 
+    special = []
+    for row in query(DRAINAGE, "1=1", "LABELNAME,DEPENDENT", LOCAL_OFFSET):
+        label = " ".join((row["properties"].get("LABELNAME") or "").split("\r\n")[0].split())
+        if label:
+            special.append(feature(row["geometry"], key=label, status="dependent" if row["properties"].get("DEPENDENT") == "D" else "independent"))
+
     return {
+        "broward-special": collection(special, "broward", "Water control, drainage and improvement districts (Broward County GIS)."),
         "broward-commission": collection(commission, "broward", "Broward County Commission districts (adopted 2022)."),
         "broward-school": collection(school, "broward", "Broward School Board districts 1–7. Seats 8 and 9 are countywide."),
         "broward-city-districts": collection(city, "broward", "City commission districts, for the cities that elect by district."),

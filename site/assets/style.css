@@ -411,3 +411,5 @@ details.roster-section[open] > .people { margin-top: 12px; }
 .hit-tag { cursor: pointer; font: inherit; font-size: 0.8rem; }
 .hit-tag[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
 .small-chip[data-streets] { margin-right: 8px; }
+.special-list { display: grid; gap: 10px; margin-top: 6px; }
+.special-list li { line-height: 1.45; }

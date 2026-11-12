@@ -3880,6 +3880,383 @@
       "source_name": "Broward County Supervisor of Elections: Elected Officials",
       "selection_method": "appointed",
       "last_verified": "2026-11-11"
+    },
+    {
+      "name": "Scott Hodges",
+      "office_title": "Chair, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 3",
+      "seat_label": "Zone 3",
+      "email": "shodges@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2028"
+      }
+    },
+    {
+      "name": "Jack McCluskey",
+      "office_title": "Vice Chair, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 6",
+      "seat_label": "Zone 6",
+      "email": "jmccluskey@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2028"
+      }
+    },
+    {
+      "name": "Robert Goggin IV",
+      "office_title": "Secretary, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 7",
+      "seat_label": "Zone 7",
+      "email": "rgoggin@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2026",
+        "note": "The district's page lists this term as ending in October 2026; a successor may since have taken office."
+      }
+    },
+    {
+      "name": "Alanna Mersinger",
+      "office_title": "Treasurer, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 2",
+      "seat_label": "Zone 2",
+      "email": "amersinger@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2026",
+        "note": "The district's page lists this term as ending in October 2026; a successor may since have taken office."
+      }
+    },
+    {
+      "name": "Clair E. Perdomo",
+      "office_title": "Commissioner, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 1",
+      "seat_label": "Zone 1",
+      "email": "cperdomo@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2028"
+      }
+    },
+    {
+      "name": "Sean Knowles",
+      "office_title": "Commissioner, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 5",
+      "seat_label": "Zone 5",
+      "email": "sknowles@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2026",
+        "note": "The district's page lists this term as ending in October 2026; a successor may since have taken office."
+      }
+    },
+    {
+      "name": "Mercedes B. Santana-Woodall",
+      "office_title": "Commissioner, South Broward Drainage District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sbdd.org/board-of-commissioners/",
+      "source_name": "South Broward Drainage District: Board of Commissioners",
+      "selection_method": "elected",
+      "last_verified": "2026-11-11",
+      "district": "Zone 4",
+      "seat_label": "Zone 4",
+      "email": "msantana-woodall@sbdd.org",
+      "phone": "954-680-3337",
+      "official_website": "https://www.sbdd.org/board-of-commissioners/",
+      "bio": {
+        "term_ends": "October 2026",
+        "note": "The district's page lists this term as ending in October 2026; a successor may since have taken office."
+      }
+    },
+    {
+      "name": "Jeffrey S. Wood",
+      "office_title": "Chair, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/"
+    },
+    {
+      "name": "Christine Thompson",
+      "office_title": "Vice Chair, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/"
+    },
+    {
+      "name": "Nan Rich",
+      "office_title": "Secretary, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/"
+    },
+    {
+      "name": "Lauren M. Alperstein",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Judicial appointee"
+      }
+    },
+    {
+      "name": "Alyssa Foganholi",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Appointed by the Governor"
+      }
+    },
+    {
+      "name": "Howard Hepburn",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Serves as Broward schools superintendent"
+      }
+    },
+    {
+      "name": "Debra Hixon",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Serves as a School Board member"
+      }
+    },
+    {
+      "name": "Julia Musella",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Appointed by the Governor"
+      }
+    },
+    {
+      "name": "Robert Shea",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Serves as a Department of Children and Families regional director"
+      }
+    },
+    {
+      "name": "Paula Thaqi",
+      "office_title": "Member, Children's Services Council of Broward County",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "party": "Nonpartisan",
+      "source_url": "https://www.cscbroward.org/council-members/",
+      "source_name": "Children's Services Council of Broward County: Council Members",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "phone": "954-377-1000",
+      "official_website": "https://www.cscbroward.org/council-members/",
+      "bio": {
+        "note": "Serves as director of the Florida Department of Health in Broward County"
+      }
+    },
+    {
+      "name": "Ron Bergeron Sr.",
+      "office_title": "Governing Board Member, South Florida Water Management District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Florida Water Management District",
+      "special_district": "sfwmd",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sfwmd.gov/who-we-are/governing-board",
+      "source_name": "South Florida Water Management District: Governing Board",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "official_website": "https://www.sfwmd.gov/who-we-are/governing-board",
+      "bio": {
+        "term_ends": "March 2030",
+        "summary": "Represents: Broward County.",
+        "note": "Appointed for August 2026 to March 2030; Senate confirmation pending."
+      }
+    },
+    {
+      "name": "Thomas Hurley",
+      "office_title": "Governing Board Member, South Florida Water Management District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Florida Water Management District",
+      "special_district": "sfwmd",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sfwmd.gov/who-we-are/governing-board",
+      "source_name": "South Florida Water Management District: Governing Board",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "official_website": "https://www.sfwmd.gov/who-we-are/governing-board",
+      "bio": {
+        "term_ends": "March 2029",
+        "summary": "Represents: At-large: St. Lucie, Martin, Palm Beach, Broward, Miami-Dade and Monroe."
+      }
+    },
+    {
+      "name": "Robert A. Spottswood Jr.",
+      "office_title": "Governing Board Member, South Florida Water Management District",
+      "government_level": "county",
+      "county": "Broward",
+      "jurisdiction": "South Florida Water Management District",
+      "special_district": "sfwmd",
+      "party": "Nonpartisan",
+      "source_url": "https://www.sfwmd.gov/who-we-are/governing-board",
+      "source_name": "South Florida Water Management District: Governing Board",
+      "selection_method": "appointed",
+      "last_verified": "2026-11-11",
+      "official_website": "https://www.sfwmd.gov/who-we-are/governing-board",
+      "bio": {
+        "term_ends": "March 2030",
+        "summary": "Represents: At-large: St. Lucie, Martin, Palm Beach, Broward, Miami-Dade and Monroe."
+      }
     }
   ]
 }

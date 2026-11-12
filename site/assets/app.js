@@ -951,7 +951,7 @@ function county() {
 // -- your representatives (map) ----------------------------------------------------
 const BOUNDARIES = {
   counties: "fl-counties", cities: "fl-cities", congress: "fl-congress", senate: "fl-senate", house: "fl-house",
-  commission: "broward-commission", school: "broward-school", cityDistricts: "broward-city-districts",
+  commission: "broward-commission", school: "broward-school", cityDistricts: "broward-city-districts", special: "broward-special",
 };
 const boundaryRequests = new Map();
 function loadBoundary(key) {
@@ -975,9 +975,12 @@ const MAP_LAYERS = [
   { key: "cities", label: "Cities (mayors)", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.name && /^mayor$/i.test(r.office_title), name: (p) => p.name },
   { key: "house", partisan: true, label: "Florida House", holder: (r, p) => /^state representative/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida House District ${p.district}` },
   { key: "senate", partisan: true, label: "Florida Senate", holder: (r, p) => /^state senator/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida Senate District ${p.district}` },
+  { key: "special", label: "Special districts", area: "Broward", holder: () => false, name: (p) => SPECIAL.get(p.key)?.name || p.key,
+    info: (p) => SPECIAL.get(p.key) || { name: p.key, type: "Special district", status: p.status } },
   { key: "congress", partisan: true, label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
 ];
 const BROWARD_VIEW = [[26.33, -80.47], [25.95, -80.07]];
+let SPECIAL = new Map(); // special district key -> details from meta.json
 const FLORIDA_VIEW = [[31.0, -87.6], [24.4, -80.0]];
 // Validated with the dataviz palette checker (CVD and contrast) on the light surface.
 const PARTY_COLORS = { Republican: "#e34948", Democratic: "#2a78d6", other: "#6250d6", none: "#b9c0cc" };
@@ -992,6 +995,7 @@ const BORDER_STYLE = {
   house: { color: "#6b2a7a", dashArray: "6 4", short: (p) => `House ${p.district}` },
   senate: { color: "#0b6e79", dashArray: "12 6", short: (p) => `Senate ${p.district}` },
   congress: { color: "#b3262e", dashArray: null, short: (p) => `CD ${p.district}` },
+  special: { color: "#2457a6", dashArray: "3 4", short: (p) => SPECIAL.get(p.key)?.name.replace(/ (Water Control|Improvement|Drainage|Community Development|Water Management|Irrigation and Soil Conservation) District$/, "") || p.key },
 };
 function partyColor(party, vacant = false) {
   if (vacant || !party || party === "Party not listed") return PARTY_COLORS.none;
@@ -1020,6 +1024,7 @@ function reps() {
     return;
   }
   withData(app, [loadOfficials, loadMeta, () => loadBoundary("counties")], (records, meta, counties) => {
+    SPECIAL = new Map((meta.special_districts || []).map((d) => [d.key, d]));
     app.innerHTML = `
       <form class="rep-search panel" id="rep-form" role="search">
         <label for="rep-address" class="strong">Your address</label>
@@ -1166,6 +1171,7 @@ function reps() {
       const legend = partisan
         ? `<ul class="legend-row" aria-label="Party colours">${Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([label, n]) =>
             `<li><span class="swatch-dot" style="background:${partyColor(label === "Vacant or not listed" ? null : label, label === "Vacant or not listed")}"></span>${esc(label)} <span class="muted tabular">${n}</span></li>`).join("")}</ul>`
+        : spec.key === "special" ? `<p class="muted small">Water control, drainage and improvement districts manage canals and stormwater. Countywide districts (Children's Services Council, South Florida Water Management District) and the two hospital districts appear when you look up an address.</p>`
         : `<p class="muted small">Colours only separate neighbouring districts. ${!spec.partisan ? "These offices are nonpartisan."
             : single && rows[0]?.holder?.party ? `Every seat is held by ${esc({ Democratic: "a Democrat", Republican: "a Republican" }[rows[0].holder.party] || "the same party")}, so party colours would paint them all alike.` : ""}</p>`;
       panel.innerHTML = `
@@ -1184,11 +1190,12 @@ function reps() {
         <ul class="district-list">${rows.map((row, i) => `<li data-row="${i}">
           <button type="button" class="district-row" data-focus="${i}">
             <span class="swatch-bar" style="background:${row.color}"></span>
-            ${row.holder ? avatar(row.holder, "sm") : '<span class="avatar sm blank" aria-hidden="true">—</span>'}
-            <span><span class="strong">${esc(row.holder ? row.holder.full_name : "Vacant or not listed")}</span>
-              <span class="muted small">${esc(row.title)}${row.holder?.party ? ` · ${esc(partyLabel(row.holder.party))}` : ""}</span></span>
+            ${row.info ? "" : row.holder ? avatar(row.holder, "sm") : '<span class="avatar sm blank" aria-hidden="true">—</span>'}
+            <span><span class="strong">${esc(row.info ? row.info.name : row.holder ? row.holder.full_name : "Vacant or not listed")}</span>
+              <span class="muted small">${row.info ? `${esc(row.info.type)} · ${esc(row.info.status)}${row.info.note ? " · name not confirmed" : ""}`
+                : `${esc(row.title)}${row.holder?.party ? ` · ${esc(partyLabel(row.holder.party))}` : ""}`}</span></span>
           </button>
-          ${row.holder ? `<a class="small" href="${profileHref(row.holder)}">Profile</a>` : ""}</li>`).join("")}</ul>
+          ${row.holder ? `<a class="small" href="${profileHref(row.holder)}">Profile</a>` : safeUrl(row.info?.website) ? `<a class="small" href="${esc(row.info.website)}" target="_blank" rel="noopener noreferrer">Website</a>` : ""}</li>`).join("")}</ul>
         <p class="muted small fine">Click a name here to zoom to that district. Click anywhere on the map, or search an address above, to see everyone who represents that spot.</p>`;
     }
 
@@ -1214,12 +1221,13 @@ function reps() {
       const features = [...data.features].sort((a, b) => spec.name(a.properties).localeCompare(spec.name(b.properties), "en", { numeric: true }));
       const holders = features.map((f) => records.find((r) => spec.holder(r, f.properties)) || null);
       const colors = districtColors(features, holders, spec.partisan);
-      const rows = features.map((f, i) => ({ feature: f, holder: holders[i], color: colors[i], title: spec.name(f.properties) }));
+      const rows = features.map((f, i) => ({ feature: f, holder: holders[i], color: colors[i], title: spec.name(f.properties), info: spec.info?.(f.properties) }));
       rows.forEach((row, i) => {
         row.layer = L.geoJSON(row.feature, {
           style: { color: "#ffffff", weight: 1.5, fillColor: row.color, fillOpacity: 0.38, dashArray: row.holder ? null : "4 4" },
         }).addTo(shown);
-        const who = row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}` : "Vacant or not listed";
+        const who = row.info ? `${esc(row.info.type)} · ${esc(row.info.status)}`
+          : row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}` : "Vacant or not listed";
         row.layer.bindTooltip(`${esc(row.title)}<br>${who}`, { sticky: true });
         row.layer.on("mouseover", () => highlight(i, true));
         row.layer.on("mouseout", () => highlight(i, false));
@@ -1273,6 +1281,21 @@ function reps() {
       });
     });
 
+    function specialSummary(place) {
+      const here = SPECIAL.get(place.special);
+      const others = [...SPECIAL.values()].filter((d) => d.area !== "mapped");
+      const item = (d, lead) => `<li><span class="strong">${esc(d.name)}</span> <span class="muted small">${esc(d.type)}${d.area_note ? ` · ${esc(d.area_note)}` : ""}</span>
+        ${lead ? `<br><span class="small">${esc(d.board || "")}</span>` : ""}
+        ${d.note ? `<br><span class="muted small">${esc(d.note)}</span>` : ""}
+        <span class="small">${[d.phone ? `<a href="${telHref(d.phone)}">${esc(d.phone)}</a>` : "", safeUrl(d.website) ? `<a href="${esc(d.website)}" target="_blank" rel="noopener noreferrer">Website</a>` : "",
+          ...(d.sources || []).slice(0, 1).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Source</a>`)].filter(Boolean).join(" · ")}</span></li>`;
+      return `<section class="special-box fine"><h3 class="group">Special districts</h3>
+        <p class="muted small">${here ? "Your water and drainage district:" : "This spot isn't inside a mapped water control or drainage district."}</p>
+        ${here ? `<ul class="plain special-list">${item(here, true)}</ul>` : ""}
+        <p class="muted small gap-top">Countywide and regional districts:</p>
+        <ul class="plain special-list">${others.map((d) => item(d, false)).join("")}</ul></section>`;
+    }
+
     function intro() {
       panel.innerHTML = `
         <h2>Find who represents you</h2>
@@ -1317,6 +1340,11 @@ function reps() {
           cityDistrict: cityDistrict?.properties.district,
         });
         hits.push({ label: "County Commission", feature: featureAt(commission, lon, lat) }, { label: "School Board", feature: featureAt(school, lon, lat) });
+        const specialLayer = await loadBoundary("special");
+        const specialHere = featureAt(specialLayer, lon, lat);
+        place.special = specialHere?.properties.key || null;
+        place.countywideSpecial = [...SPECIAL.values()].filter((d) => d.area === "countywide").map((d) => d.key);
+        if (specialHere) hits.push({ label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
         if (cityDistrict) hits.push({ label: `${place.municipality} Commission`, feature: cityDistrict });
       }
 
@@ -1346,6 +1374,7 @@ function reps() {
           <a class="details" href="county.html?name=${encodeURIComponent(county)}">${esc(county)} County page${ICON.arrow}</a></div>
         <ul class="tag-list">${tags}</ul>
         ${partial}
+        ${county === "Broward" ? specialSummary(place) : ""}
         <div class="roster">${body || empty("No officials found for this spot")}</div>
         ${judges.length ? `<details class="roster-section fine"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
           <p class="muted small">Judges and justices whose courts cover this spot. Most are appointed or elected to serve the whole county, circuit or state.</p>
