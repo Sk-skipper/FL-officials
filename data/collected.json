@@ -5,8 +5,8 @@
       "url": "https://www.senate.gov/senators/",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-12T01:31:28+00:00",
+      "last_successful_collection": "2026-11-12T01:31:28+00:00",
       "last_error": null,
       "records": [
         {
@@ -26,12 +26,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 224-3041",
           "email": null,
           "official_website": "https://www.moody.senate.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001244.jpg",
           "source_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-senator-florida-rick-scott",
@@ -50,12 +52,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 224-5274",
           "email": null,
           "official_website": "https://www.rickscott.senate.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001217.jpg",
           "source_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         }
       ]
     },
@@ -64,8 +68,8 @@
       "url": "https://www.house.gov/representatives",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-12T01:31:28+00:00",
+      "last_successful_collection": "2026-11-12T01:31:28+00:00",
       "last_error": null,
       "records": [
         {
@@ -85,12 +89,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-4136",
           "email": null,
           "official_website": "https://patronis.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/P000622.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-10-maxwell-frost",
@@ -109,12 +115,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-2176",
           "email": null,
           "official_website": "https://frost.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000476.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-11-daniel-webster",
@@ -133,12 +141,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-1002",
           "email": null,
           "official_website": "https://webster.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000806.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-12-gus-bilirakis",
@@ -157,12 +167,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5755",
           "email": null,
           "official_website": "https://bilirakis.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001257.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-13-anna-luna",
@@ -181,12 +193,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5961",
           "email": null,
           "official_website": "https://luna.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/L000596.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-14-kathy-castor",
@@ -205,12 +219,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-3376",
           "email": null,
           "official_website": "https://castor.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/C001066.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-15-laurel-lee",
@@ -229,12 +245,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5626",
           "email": null,
           "official_website": "https://laurellee.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/L000597.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-16-vern-buchanan",
@@ -253,12 +271,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5015",
           "email": null,
           "official_website": "https://buchanan.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001260.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-17-w-steube",
@@ -277,12 +297,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5792",
           "email": null,
           "official_website": "https://steube.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001214.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-18-scott-franklin",
@@ -301,12 +323,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-1252",
           "email": null,
           "official_website": "https://franklin.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000472.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-19-byron-donalds",
@@ -325,12 +349,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-2536",
           "email": null,
           "official_website": "https://donalds.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000032.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-2-neal-dunn",
@@ -349,12 +375,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5235",
           "email": null,
           "official_website": "https://dunn.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000628.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-21-brian-mast",
@@ -373,12 +401,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-3026",
           "email": null,
           "official_website": "https://mast.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001199.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-22-lois-frankel",
@@ -397,12 +427,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-9890",
           "email": null,
           "official_website": "https://frankel.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000462.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-23-jared-moskowitz",
@@ -421,12 +453,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-3001",
           "email": null,
           "official_website": "https://moskowitz.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001217.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-24-frederica-wilson",
@@ -445,12 +479,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-4506",
           "email": null,
           "official_website": "https://wilson.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000808.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-25-debbie-wasserman-schultz",
@@ -469,12 +505,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-7931",
           "email": null,
           "official_website": "https://wassermanschultz.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000797.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-26-mario-diaz-balart",
@@ -493,12 +531,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-4211",
           "email": null,
           "official_website": "https://mariodiazbalart.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000600.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-27-maria-salazar",
@@ -517,12 +557,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-3931",
           "email": null,
           "official_website": "https://salazar.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S000168.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-28-carlos-gimenez",
@@ -541,12 +583,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-2778",
           "email": null,
           "official_website": "https://gimenez.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/G000593.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-3-kat-cammack",
@@ -565,12 +609,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-5744",
           "email": null,
           "official_website": "https://cammack.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/C001039.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-4-aaron-bean",
@@ -589,12 +635,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-0123",
           "email": null,
           "official_website": "https://bean.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001314.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-5-john-rutherford",
@@ -613,12 +661,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-2501",
           "email": null,
           "official_website": "https://rutherford.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/R000609.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-6-randy-fine",
@@ -637,12 +687,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-2706",
           "email": null,
           "official_website": "https://fine.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000484.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-7-cory-mills",
@@ -661,12 +713,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-4035",
           "email": null,
           "official_website": "https://mills.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001216.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-8-mike-haridopolos",
@@ -685,12 +739,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-3671",
           "email": null,
           "official_website": "https://haridopolos.house.gov/",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/H001099.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "us-representative-district-9-darren-soto",
@@ -709,12 +765,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(202) 225-9889",
           "email": null,
           "official_website": "https://soto.house.gov",
+          "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001200.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         }
       ]
     },
@@ -723,8 +781,8 @@
       "url": "https://www.flsenate.gov/Senators",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-11T23:50:00+00:00",
-      "last_successful_collection": "2026-11-11T23:50:00+00:00",
+      "last_attempt": "2026-11-12T01:31:28+00:00",
+      "last_successful_collection": "2026-11-12T01:31:28+00:00",
       "last_error": null,
       "records": [
         {
@@ -748,13 +806,14 @@
             "Okaloosa"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S1",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S01_4804_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-10-john-lowndes",
@@ -776,13 +835,14 @@
             "Orange"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S10",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S10_5637_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-11-ralph-massullo",
@@ -806,13 +866,14 @@
             "Pasco"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S11",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S11_5603_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-12-colleen-burton",
@@ -833,13 +894,14 @@
             "Polk"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S12",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S12_5414_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-13-keith-truenow",
@@ -861,13 +923,14 @@
             "Orange"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S13",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S13_5492_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-14-brian-nathan",
@@ -888,13 +951,14 @@
             "Hillsborough"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S14",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S14_5606_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-15-lavon-bracy-davis",
@@ -915,13 +979,14 @@
             "Orange"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S15",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S15_5601_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-16-fentrice-driskell",
@@ -943,13 +1008,14 @@
             "Pinellas"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S16",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S16_5638_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-17-carlos-smith",
@@ -970,13 +1036,14 @@
             "Orange"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S17",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S17_5256_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-18-nick-diceglie",
@@ -997,13 +1064,14 @@
             "Pinellas"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S18",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S18_5365_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-19-debbie-mayfield",
@@ -1024,13 +1092,14 @@
             "Brevard"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S19",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S19_5199_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-2-jay-trumbull",
@@ -1057,13 +1126,14 @@
             "Okaloosa"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S2",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S02_5389_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-20-jim-boyd",
@@ -1085,13 +1155,14 @@
             "Manatee"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S20",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S20_5070_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-21-chris-nocco",
@@ -1113,13 +1184,14 @@
             "Pinellas"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S21",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S21_5631_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-22-james-buchanan",
@@ -1141,13 +1213,14 @@
             "Manatee"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S22",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S22_5632_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-23-danny-burgess",
@@ -1169,13 +1242,14 @@
             "Pasco"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S23",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S23_5169_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-24-mack-bernard",
@@ -1196,13 +1270,14 @@
             "Palm Beach"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S24",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S24_5570_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-25-kristen-arrington",
@@ -1224,13 +1299,14 @@
             "Orange"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S25",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S25_5494_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-26-david-silvers",
@@ -1251,13 +1327,14 @@
             "Palm Beach"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S26",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S26_5633_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-27-ben-albritton",
@@ -1282,13 +1359,14 @@
             "Polk"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S27",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S27_5342_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-28-lauren-melo",
@@ -1311,13 +1389,14 @@
             "Lee"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S28",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S28_5634_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-29-erin-grall",
@@ -1342,13 +1421,14 @@
             "St. Lucie"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S29",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S29_5426_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-3-corey-simon",
@@ -1381,13 +1461,14 @@
             "Wakulla"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S3",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S03_5522_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-30-lauren-book",
@@ -1409,13 +1490,14 @@
             "Palm Beach"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S30",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S30_5189_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-31-gayle-harrell",
@@ -1438,13 +1520,14 @@
             "St. Lucie"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S31",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S31_5348_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-32-rosalind-osgood",
@@ -1465,13 +1548,14 @@
             "Broward"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S32",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S32_5520_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-33-jonathan-martin",
@@ -1492,13 +1576,14 @@
             "Lee"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S33",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S33_5524_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-34-ashley-gantt",
@@ -1519,13 +1604,14 @@
             "Miami-Dade"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S34",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S34_5636_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-35-barbara-sharief",
@@ -1546,13 +1632,14 @@
             "Broward"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S35",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S35_5572_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-36-ileana-garcia",
@@ -1573,13 +1660,14 @@
             "Miami-Dade"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S36",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S36_5515_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-37-jason-pizzo",
@@ -1601,13 +1689,14 @@
             "Miami-Dade"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S37",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S37_5345_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-38-alexis-calatayud",
@@ -1628,13 +1717,14 @@
             "Miami-Dade"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S38",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S38_5525_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-4-clay-yarborough",
@@ -1656,13 +1746,14 @@
             "Duval"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S4",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S04_5394_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-40-ana-rodriguez",
@@ -1684,13 +1775,14 @@
             "Miami-Dade"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S40",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S40_5379_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-5-tracie-davis",
@@ -1711,13 +1803,14 @@
             "Duval"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S5",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S05_5385_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-6-jennifer-bradley",
@@ -1744,13 +1837,14 @@
             "Alachua"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S6",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S06_5476_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-7-thomas-leek",
@@ -1774,13 +1868,14 @@
             "Volusia"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S7",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S07_5232_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-8-jake-johansson",
@@ -1802,13 +1897,14 @@
             "Volusia"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S8",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S08_5635_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-senator-district-9-stan-mcclain",
@@ -1831,13 +1927,14 @@
             "Alachua"
           ],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S9",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S09_5571_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         }
       ]
     },
@@ -1846,8 +1943,8 @@
       "url": "https://www.flhouse.gov/Representatives",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-12T01:31:28+00:00",
+      "last_successful_collection": "2026-11-12T01:31:28+00:00",
       "last_error": null,
       "records": [
         {
@@ -1867,12 +1964,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4763&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4763.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-10-marshall-rawson",
@@ -1891,12 +1990,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5089&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5089.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-100-michael-ferguson",
@@ -1915,12 +2016,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5103&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5103.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-101-todd-delmay",
@@ -1939,12 +2042,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5102&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5102.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-102-mike-friend",
@@ -1963,12 +2068,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5099&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5099.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-103-robin-bartleman",
@@ -1987,12 +2094,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4793&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4793.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-104-felicia-robinson",
@@ -2011,12 +2120,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4791&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4791.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-105-marie-woodson",
@@ -2035,12 +2146,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4789&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4789.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-106-lucia-baez-geller",
@@ -2059,12 +2172,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5098&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5098.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-107-wallace-aristide",
@@ -2083,12 +2198,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4928&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4928.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-108-daphne-campbell",
@@ -2107,12 +2224,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4522&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4522.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-109-james-bush",
@@ -2131,12 +2250,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4011&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4011.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-11-sam-garrison",
@@ -2155,12 +2276,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4767&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4767.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-110-tom-fabricio",
@@ -2179,12 +2302,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4792&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4792.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-111-david-borrero",
@@ -2203,12 +2328,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4794&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4794.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-112-alex-rizo",
@@ -2227,12 +2354,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4796&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4796.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-113-gloria-romero-roses",
@@ -2251,12 +2380,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5105&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5105.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-114-demi-busatta",
@@ -2275,12 +2406,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4800&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4800.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-115-omar-blanco",
@@ -2299,12 +2432,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4929&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4929.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-116-ashley-perez-biliskov",
@@ -2323,12 +2458,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5086&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5086.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-117-kevin-chambliss",
@@ -2347,12 +2484,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4798&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4798.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-118-mike-redondo",
@@ -2371,12 +2510,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4902&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4902.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-119-juan-porras",
@@ -2395,12 +2536,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4898&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4898.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-12-terrance-freeman",
@@ -2419,12 +2562,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5083&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5083.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-120-james-mooney",
@@ -2443,12 +2588,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4797&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4797.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-13-audrey-gibson",
@@ -2467,12 +2614,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4263&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4263.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-14-kimberly-daniels",
@@ -2491,12 +2640,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4652&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4652.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-15-dean-black",
@@ -2515,12 +2666,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4865&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4865.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-16-kiyan-michael",
@@ -2539,12 +2692,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4869&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4869.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-17-jessica-baker",
@@ -2563,12 +2718,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4866&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4866.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-18-kim-kendall",
@@ -2587,12 +2744,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4905&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4905.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-19-sam-greco",
@@ -2611,12 +2770,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4906&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4906.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-2-jon-fay",
@@ -2635,12 +2796,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5076&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5076.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-20-judson-sapp",
@@ -2659,12 +2822,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4907&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4907.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-21-jacquelyn-randall",
@@ -2683,12 +2848,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5088&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5088.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-22-amy-trask",
@@ -2707,12 +2874,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5090&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5090.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-23-jj-grow",
@@ -2731,12 +2900,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4909&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4909.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-24-ryan-chamberlin",
@@ -2755,12 +2926,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4901&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4901.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-25-taylor-yarkosky",
@@ -2779,12 +2952,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4868&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4868.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-26-nan-cobb",
@@ -2803,12 +2978,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4910&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4910.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-27-richard-gentry",
@@ -2827,12 +3004,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4911&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4911.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-28-bill-partington",
@@ -2851,12 +3030,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4912&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4912.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-29-webster-barnaby",
@@ -2875,12 +3056,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4770&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4770.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-3-nathan-boyles",
@@ -2899,12 +3082,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5063&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5063.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-30-chase-tramont",
@@ -2923,12 +3108,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4867&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4867.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-31-matt-woodside",
@@ -2947,12 +3134,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5087&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5087.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-32-brian-hodgers",
@@ -2971,12 +3160,40 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5064&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5064.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
+        },
+        {
+          "id": "state-representative-district-33-daniel-mcdow",
+          "full_name": "Daniel McDow",
+          "first_name": "Daniel",
+          "middle_name": null,
+          "last_name": "McDow",
+          "office_title": "State Representative",
+          "government_level": "state",
+          "selection_method": "elected",
+          "party": "Democratic",
+          "district": "33",
+          "district_number": 33,
+          "jurisdiction": "Florida",
+          "statewide": false,
+          "county": null,
+          "counties": [],
+          "municipality": null,
+          "seat_label": null,
+          "phone": null,
+          "email": null,
+          "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5120&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5120.jpg",
+          "source_url": "https://www.flhouse.gov/Representatives",
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-34-robert-brackett",
@@ -2995,12 +3212,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4870.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-35-eric-gray",
@@ -3019,12 +3238,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5093&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5093.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-36-darryl-block",
@@ -3043,12 +3264,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5095&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5095.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-37-jane-aman",
@@ -3067,12 +3290,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5097&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5097.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-38-nik-dean",
@@ -3091,12 +3316,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5104&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5104.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-39-jarod-fox",
@@ -3115,12 +3342,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5106&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5106.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-4-patt-maney",
@@ -3139,12 +3368,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4764&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4764.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-40-rashon-young",
@@ -3163,12 +3394,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5065&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5065.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-41-bruce-antone",
@@ -3187,12 +3420,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4269&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4269.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-42-felipe-sousa-lazaballet",
@@ -3211,12 +3446,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5119&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5119.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-43-samuel-vilchez-santiago",
@@ -3235,12 +3472,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5109&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5109.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-44-jennifer-harris",
@@ -3259,12 +3498,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4877&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4877.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-45-leonard-spencer",
@@ -3283,12 +3524,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4915&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4915.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-46-jose-alvarez",
@@ -3307,12 +3550,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4916&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4916.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-47-anthony-nieves",
@@ -3331,12 +3576,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5085&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5085.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-48-jon-albert",
@@ -3355,12 +3602,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4917&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4917.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-49-jennifer-kincart-jonsson",
@@ -3379,12 +3628,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4918&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4918.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-5-shane-abbott",
@@ -3403,12 +3654,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4864&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4864.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-50-jennifer-canady",
@@ -3427,12 +3680,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4879&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4879.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-51-octavio-hernandez",
@@ -3451,12 +3706,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5110&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5110.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-52-samantha-scott",
@@ -3475,12 +3732,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5070&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5070.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-53-brian-hawkins",
@@ -3499,12 +3758,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5108&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5108.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-54-randall-maggard",
@@ -3523,12 +3784,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4758&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4758.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-55-walter-price",
@@ -3547,12 +3810,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5075&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5075.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-56-bradford-yeager",
@@ -3571,12 +3836,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4882&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4882.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-57-adam-anderson",
@@ -3595,12 +3862,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4885&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4885.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-58-kimberly-berfield",
@@ -3619,12 +3888,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4210&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4210.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-59-berny-jacques",
@@ -3643,12 +3914,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4886&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4886.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-6-tricia-berry",
@@ -3667,12 +3940,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5081&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5081.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-60-lindsay-polega-quigley",
@@ -3691,12 +3966,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5107&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5107.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-61-linda-chaney",
@@ -3715,12 +3992,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4778&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4778.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-62-kyandra-darling",
@@ -3739,12 +4018,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5084&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5084.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-63-jacqueline-coffie-leeks",
@@ -3763,12 +4044,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5082&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5082.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-64-luis-salazar",
@@ -3787,12 +4070,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5073&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5073.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-65-karen-gonzalez-pittman",
@@ -3811,12 +4096,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4888&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4888.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-66-traci-koster",
@@ -3835,12 +4122,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4779&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4779.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-67-luis-viera",
@@ -3859,12 +4148,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5074&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5074.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-68-ryan-gill",
@@ -3883,12 +4174,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5077&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5077.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-69-ashley-herrmann",
@@ -3907,12 +4200,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5100&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5100.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-7-jason-shoaf",
@@ -3931,12 +4226,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4756&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4756.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-70-michael-owen",
@@ -3955,12 +4252,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4919&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4919.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-71-jordan-varnadore",
@@ -3979,12 +4278,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5078&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5078.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-72-william-conerly",
@@ -4003,12 +4304,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4920&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4920.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-73-fiona-mcfarland",
@@ -4027,12 +4330,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4780&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4780.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-74-nick-pachota",
@@ -4051,12 +4356,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5079&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5079.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-75-danny-nix",
@@ -4075,12 +4382,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4921&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4921.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-76-vanessa-oliver",
@@ -4099,12 +4408,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4922&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4922.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-77-tiffany-esposito",
@@ -4123,12 +4434,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4892&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4892.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-78-susan-frantz",
@@ -4147,12 +4460,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5080&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5080.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-79-mike-giallombardo",
@@ -4171,12 +4486,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4783&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4783.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-8-gallop-franklin",
@@ -4195,12 +4512,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4863&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4863.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-80-adam-botana",
@@ -4219,12 +4538,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4782&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4782.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-81-yvette-benarroch",
@@ -4243,12 +4564,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4923&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4923.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-82-liesa-priddy",
@@ -4267,12 +4590,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5091&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5091.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-83-kaylee-tuck",
@@ -4291,12 +4616,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4776&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4776.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-84-dana-trabulsy",
@@ -4315,12 +4642,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4788&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4788.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-85-anthony-bonna",
@@ -4339,12 +4668,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5092&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5092.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-86-john-snyder",
@@ -4363,12 +4694,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4787&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4787.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-87-jon-maples",
@@ -4387,12 +4720,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5094&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5094.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-88-jervonte-edmonds",
@@ -4411,12 +4746,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4842&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4842.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-89-debra-tendrich",
@@ -4435,12 +4772,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4924&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4924.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-9-allison-tant",
@@ -4459,12 +4798,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4765&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4765.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-90-rob-long",
@@ -4483,12 +4824,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5067&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5067.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-91-peggy-gossett-seidman",
@@ -4507,12 +4850,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4891&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4891.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-92-kelly-skidmore",
@@ -4531,12 +4876,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4786&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4786.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-93-august-mangeney",
@@ -4555,12 +4902,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5096&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5096.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-94-elizabeth-holmes",
@@ -4579,12 +4928,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5101&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5101.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-95-christine-hunschofsky",
@@ -4603,12 +4954,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4799&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4799.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-96-dan-daley",
@@ -4627,12 +4980,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4757&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4757.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-97-lisa-dunkley",
@@ -4651,12 +5006,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4893&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4893.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-98-mitch-rosenwald",
@@ -4675,12 +5032,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4927&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4927.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-99-daryl-campbell",
@@ -4699,12 +5058,14 @@
           "county": null,
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": null,
           "email": null,
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4843&LegislativeTermId=92",
+          "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4843.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         }
       ]
     },
@@ -4713,8 +5074,8 @@
       "url": "https://dos.elections.myflorida.com/supervisors/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-11T03:12:58+00:00",
-      "last_successful_collection": "2026-11-11T03:12:58+00:00",
+      "last_attempt": "2026-11-12T01:31:28+00:00",
+      "last_successful_collection": "2026-11-12T01:31:28+00:00",
       "last_error": null,
       "records": [
         {
@@ -4734,13 +5095,14 @@
           "county": "Alachua",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 374-5252",
-          "email": null,
+          "email": "kbarton@alachuacounty.us",
           "official_website": "https://www.votealachua.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoALA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=ALA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-baker-county-christopher-milton",
@@ -4759,13 +5121,14 @@
           "county": "Baker",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(904) 259-6339",
-          "email": null,
+          "email": "vote@votebakerfl.gov",
           "official_website": "https://votebakerfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBAK.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BAK",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-bay-county-nina-ward",
@@ -4784,13 +5147,14 @@
           "county": "Bay",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 784-6100",
-          "email": null,
+          "email": "elections@bayvotesfl.gov",
           "official_website": "https://www.bayvotesfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBAY.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BAY",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-bradford-county-amanda-seyfang",
@@ -4809,13 +5173,14 @@
           "county": "Bradford",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(904) 966-6266",
-          "email": null,
+          "email": "bradsoe@votebradfordfl.gov",
           "official_website": "https://www.votebradfordfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBRA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-brevard-county-tim-bobanic",
@@ -4834,13 +5199,14 @@
           "county": "Brevard",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(321) 290-8683",
-          "email": null,
+          "email": "soe@votebrevard.gov",
           "official_website": "https://www.votebrevard.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBRE.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRE",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-broward-county-joe-scott",
@@ -4859,13 +5225,14 @@
           "county": "Broward",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(954) 357-7050",
-          "email": null,
+          "email": "elections@browardvotes.gov",
           "official_website": "https://www.browardvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBRO.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRO",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-calhoun-county-sharon-chason",
@@ -4884,13 +5251,14 @@
           "county": "Calhoun",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 674-8568",
-          "email": null,
+          "email": "soe@votecalhounfl.gov",
           "official_website": "https://www.votecalhounfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCAL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CAL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-charlotte-county-leah-valenti",
@@ -4909,13 +5277,14 @@
           "county": "Charlotte",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(941) 833-5400",
-          "email": null,
+          "email": "soe@soecharlottecountyfl.gov",
           "official_website": "https://www.soecharlottecountyfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCHA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CHA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-citrus-county-maureen-baird",
@@ -4934,13 +5303,14 @@
           "county": "Citrus",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 564-7120",
-          "email": null,
+          "email": "vote@votecitrus.gov",
           "official_website": "https://www.votecitrus.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCIT.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CIT",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-clay-county-chris-chambless",
@@ -4959,13 +5329,14 @@
           "county": "Clay",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(904) 269-6350",
-          "email": null,
+          "email": "mail@clayelections.gov",
           "official_website": "https://www.clayelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCLA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CLA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-collier-county-melissa-blazier",
@@ -4984,13 +5355,14 @@
           "county": "Collier",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(239) 252-8683",
-          "email": null,
+          "email": "supervisor.elections@colliervotes.gov",
           "official_website": "https://www.CollierVotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCLL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CLL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-columbia-county-tomi-brown",
@@ -5009,13 +5381,14 @@
           "county": "Columbia",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 758-1026",
-          "email": null,
+          "email": "vote@votecolumbiafl.gov",
           "official_website": "https://www.votecolumbiafl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCLM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CLM",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-desoto-county-debbie-wertz",
@@ -5034,13 +5407,14 @@
           "county": "DeSoto",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 993-4871",
-          "email": null,
+          "email": "dwertz@votedesotofl.gov",
           "official_website": "https://www.votedesotofl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDES.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DES",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-dixie-county-darbi-chaires",
@@ -5059,13 +5433,14 @@
           "county": "Dixie",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 498-1216",
-          "email": null,
+          "email": "elections@dixievotes.com",
           "official_website": "https://www.dixievotes.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDIX.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DIX",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-duval-county-jerry-holland",
@@ -5084,13 +5459,14 @@
           "county": "Duval",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(904) 255-8683",
-          "email": null,
+          "email": "jholland@coj.net",
           "official_website": "https://www.duvalelections.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDUV.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DUV",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-escambia-county-robert-bender",
@@ -5109,13 +5485,14 @@
           "county": "Escambia",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 595-3900",
-          "email": null,
+          "email": "soe@escambiavotes.gov",
           "official_website": "https://escambiavotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoESC.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=ESC",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-flagler-county-kaiti-lenhart",
@@ -5134,13 +5511,14 @@
           "county": "Flagler",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 313-4170",
-          "email": null,
+          "email": "info@flaglerelections.gov",
           "official_website": "https://www.flaglerelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoFLA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=FLA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-franklin-county-heather-riley",
@@ -5159,13 +5537,14 @@
           "county": "Franklin",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 653-9520",
-          "email": null,
+          "email": "heather@votefranklinfl.gov",
           "official_website": "https://www.votefranklinfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoFRA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=FRA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-gadsden-county-kenya-williams",
@@ -5184,13 +5563,14 @@
           "county": "Gadsden",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 627-9910",
-          "email": null,
+          "email": "info@gadsdensoefl.gov",
           "official_website": "https://www.gadsdensoefl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGAD.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GAD",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-gilchrist-county-lisa-darus",
@@ -5209,13 +5589,14 @@
           "county": "Gilchrist",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 463-3194",
-          "email": null,
+          "email": "elections@gilchrist.fl.us",
           "official_website": "https://www.votegilchrist.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGIL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GIL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-glades-county-aletris-farnam",
@@ -5234,13 +5615,14 @@
           "county": "Glades",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 946-6005",
-          "email": null,
+          "email": "vote@voteglades.gov",
           "official_website": "https://www.voteglades.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGLA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GLA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-gulf-county-rhonda-pierce",
@@ -5259,13 +5641,14 @@
           "county": "Gulf",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 229-6117",
-          "email": null,
+          "email": "gulfsoe@votegulf.gov",
           "official_website": "https://www.votegulf.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGUL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GUL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-hamilton-county-laura-hutto",
@@ -5284,13 +5667,14 @@
           "county": "Hamilton",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 792-1426",
-          "email": null,
+          "email": "elect@hamiltonvotesfl.gov",
           "official_website": "https://www.hamiltonvotesFL.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHAM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HAM",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-hardee-county-diane-smith",
@@ -5309,13 +5693,14 @@
           "county": "Hardee",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 773-6061",
-          "email": null,
+          "email": "info@hardeeflvotes.gov",
           "official_website": "https://hardeeflvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHAR.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HAR",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-hendry-county-sherry-taylor",
@@ -5334,13 +5719,14 @@
           "county": "Hendry",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 675-5230",
-          "email": null,
+          "email": "supervisor@hendryelections.gov",
           "official_website": "https://www.hendryelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHEN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HEN",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-hernando-county-denise-lavancher",
@@ -5359,13 +5745,14 @@
           "county": "Hernando",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 754-4125",
-          "email": null,
+          "email": "elections@hernandovotes.gov",
           "official_website": "https://www.hernandovotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHER.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HER",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-highlands-county-karen-healy",
@@ -5384,13 +5771,14 @@
           "county": "Highlands",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 402-6655",
-          "email": null,
+          "email": "vote@votehighlands.gov",
           "official_website": "https://www.votehighlands.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHIG.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HIG",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-hillsborough-county-craig-latimer",
@@ -5409,13 +5797,14 @@
           "county": "Hillsborough",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(813) 744-5900",
-          "email": null,
+          "email": "voter@votehillsborough.gov",
           "official_website": "https://www.votehillsborough.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHIL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HIL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-holmes-county-h-williams",
@@ -5434,13 +5823,14 @@
           "county": "Holmes",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 547-1107",
-          "email": null,
+          "email": "rusty@holmeselectionsfl.gov",
           "official_website": "https://www.holmeselectionsfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHOL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HOL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-indian-river-county-leslie-swan",
@@ -5459,13 +5849,14 @@
           "county": "Indian River",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(772) 226-4700",
-          "email": null,
+          "email": "info@voteindianriver.gov",
           "official_website": "https://www.voteindianriver.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoIND.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=IND",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-jackson-county-carol-dunaway",
@@ -5484,13 +5875,14 @@
           "county": "Jackson",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 482-9652",
-          "email": null,
+          "email": "email@votejacksonfl.gov",
           "official_website": "https://www.votejacksonfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoJAC.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=JAC",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-jefferson-county-michelle-milligan",
@@ -5509,13 +5901,14 @@
           "county": "Jefferson",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 997-3348",
-          "email": null,
+          "email": "mmilligan@jeffersonvotesfl.gov",
           "official_website": "https://www.jeffersonvotesfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoJEF.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=JEF",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-lafayette-county-travis-hart",
@@ -5534,13 +5927,14 @@
           "county": "Lafayette",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 294-1261",
-          "email": null,
+          "email": "travis@lafayettevotes.com",
           "official_website": "https://www.lafayettevotes.net",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLAF.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LAF",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-lake-county-alan-hays",
@@ -5559,13 +5953,14 @@
           "county": "Lake",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 343-9734",
-          "email": null,
+          "email": "hays@lakevotes.gov",
           "official_website": "https://www.lakevotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLAK.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LAK",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-lee-county-jenna-persons-mulicka",
@@ -5584,13 +5979,14 @@
           "county": "Lee",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(239) 533-8683",
-          "email": null,
+          "email": "elections@lee.vote",
           "official_website": "https://www.lee.vote",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLEE.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LEE",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-leon-county-mark-earley",
@@ -5609,13 +6005,14 @@
           "county": "Leon",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 606-8683",
-          "email": null,
+          "email": "vote@leonvotes.gov",
           "official_website": "https://www.leonvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLEO.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LEO",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-levy-county-tammy-jones",
@@ -5634,13 +6031,14 @@
           "county": "Levy",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 486-5163",
-          "email": null,
+          "email": "elections@votelevy.com",
           "official_website": "https://www.votelevy.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLEV.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LEV",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-liberty-county-grant-conyers",
@@ -5659,13 +6057,14 @@
           "county": "Liberty",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 643-5226",
-          "email": null,
+          "email": "vote@libertycountyflsoe.gov",
           "official_website": "https://libertycountyflsoe.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLIB.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LIB",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-madison-county-heath-driggers",
@@ -5684,13 +6083,14 @@
           "county": "Madison",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 973-6507",
-          "email": null,
+          "email": "hdriggers@votemadison.com",
           "official_website": "https://www.votemadison.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMAD.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MAD",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-manatee-county-scott-farrington",
@@ -5709,13 +6109,14 @@
           "county": "Manatee",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(941) 741-3823",
-          "email": null,
+          "email": "info@votemanatee.gov",
           "official_website": "https://www.votemanatee.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMAN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MAN",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-marion-county-wesley-wilcox",
@@ -5734,13 +6135,14 @@
           "county": "Marion",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 620-3290",
-          "email": null,
+          "email": "elections@votemarion.gov",
           "official_website": "https://votemarion.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMRN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MRN",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-martin-county-vicki-davis",
@@ -5759,13 +6161,14 @@
           "county": "Martin",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(772) 288-5637",
-          "email": null,
+          "email": "elections@martinvotes.gov",
           "official_website": "https://www.martinvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMRT.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MRT",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-miami-dade-county-alina-garcia",
@@ -5784,13 +6187,14 @@
           "county": "Miami-Dade",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(305) 499-8683",
-          "email": null,
+          "email": "soedade@votemiamidade.gov",
           "official_website": "https://www.votemiamidade.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDAD.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DAD",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-monroe-county-sherri-hodies",
@@ -5809,13 +6213,14 @@
           "county": "Monroe",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(305) 292-3416",
-          "email": null,
+          "email": "info@votemonroeflkeys.gov",
           "official_website": "https://votemonroeflkeys.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMON.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MON",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-nassau-county-janet-adkins",
@@ -5834,13 +6239,14 @@
           "county": "Nassau",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(904) 491-7500",
-          "email": null,
+          "email": "info@votenassaufl.gov",
           "official_website": "https://www.votenassaufl.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoNAS.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=NAS",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-okaloosa-county-paul-lux",
@@ -5859,13 +6265,14 @@
           "county": "Okaloosa",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 689-5600",
-          "email": null,
+          "email": "plux@myokaloosa.com",
           "official_website": "https://www.voteokaloosa.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoOKA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=OKA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-okeechobee-county-david-may",
@@ -5884,13 +6291,14 @@
           "county": "Okeechobee",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 763-4014",
-          "email": null,
+          "email": "elections@voteokeechobee.gov",
           "official_website": "https://www.voteokeechobee.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoOKE.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=OKE",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-orange-county-karen-dentel",
@@ -5909,13 +6317,14 @@
           "county": "Orange",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(407) 836-2070",
-          "email": null,
+          "email": "voter@ocfelections.gov",
           "official_website": "https://www.voteorangefl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoORA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=ORA",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-osceola-county-mary-arrington",
@@ -5934,13 +6343,14 @@
           "county": "Osceola",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(407) 742-6000",
-          "email": null,
+          "email": "soe@voteosceola.gov",
           "official_website": "https://www.voteosceola.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoOSC.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=OSC",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-palm-beach-county-wendy-link",
@@ -5959,13 +6369,14 @@
           "county": "Palm Beach",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(561) 656-6200",
-          "email": null,
+          "email": "info@votepalmbeach.gov",
           "official_website": "https://www.votepalmbeach.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPAL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PAL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-pasco-county-brian-corley",
@@ -5984,13 +6395,14 @@
           "county": "Pasco",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(800) 851-8754",
-          "email": null,
+          "email": "webcomment@pascovotes.gov",
           "official_website": "https://www.pascovotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPAS.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PAS",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-pinellas-county-julie-marcus",
@@ -6009,13 +6421,14 @@
           "county": "Pinellas",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(727) 464-8683",
-          "email": null,
+          "email": "election@votepinellas.gov",
           "official_website": "https://www.votepinellas.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPIN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PIN",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-polk-county-melony-bell",
@@ -6034,13 +6447,14 @@
           "county": "Polk",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(863) 534-5888",
-          "email": null,
+          "email": "info@polkelections.gov",
           "official_website": "https://www.polkelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPOL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=POL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-putnam-county-charles-overturf",
@@ -6059,13 +6473,14 @@
           "county": "Putnam",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 329-0224",
-          "email": null,
+          "email": "electionsoffice@voteputnamflorida.gov",
           "official_website": "https://www.voteputnamflorida.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPUT.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PUT",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-santa-rosa-county-tappie-villane",
@@ -6084,13 +6499,14 @@
           "county": "Santa Rosa",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 983-1900",
-          "email": null,
+          "email": "villane@santarosa.fl.gov",
           "official_website": "https://www.votesantarosa.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSAN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SAN",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-sarasota-county-ron-turner",
@@ -6109,13 +6525,14 @@
           "county": "Sarasota",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(941) 861-8600",
-          "email": null,
+          "email": "rturner@sarasotavotes.gov",
           "official_website": "https://www.sarasotavotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSAR.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SAR",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-seminole-county-amy-pennock",
@@ -6134,13 +6551,14 @@
           "county": "Seminole",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(407) 585-8683",
-          "email": null,
+          "email": "elections@voteseminole.gov",
           "official_website": "https://www.voteseminole.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSEM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SEM",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-st-johns-county-vicky-oakes",
@@ -6159,13 +6577,14 @@
           "county": "St. Johns",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(904) 823-2238",
-          "email": null,
+          "email": "elections@votesjc.gov",
           "official_website": "https://www.votesjc.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSTJ.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=STJ",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-st-lucie-county-gertrude-walker",
@@ -6184,13 +6603,14 @@
           "county": "St. Lucie",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(772) 462-1500",
-          "email": null,
+          "email": "elections@stlucievotes.gov",
           "official_website": "https://www.stlucievotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSTL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=STL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-sumter-county-william-keen",
@@ -6209,13 +6629,14 @@
           "county": "Sumter",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(352) 569-1540",
-          "email": null,
+          "email": "electioninfo@sumtercountyfl.gov",
           "official_website": "https://elections.sumtercountyfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSUM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SUM",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-suwannee-county-jennifer-kinsey",
@@ -6234,13 +6655,14 @@
           "county": "Suwannee",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 362-2616",
-          "email": null,
+          "email": "suwanneesoe@suwanneevotes.com",
           "official_website": "https://www.suwanneevotes.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSUW.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SUW",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-taylor-county-dana-southerland",
@@ -6259,13 +6681,14 @@
           "county": "Taylor",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 838-3515",
-          "email": null,
+          "email": "vote@taylorelections.com",
           "official_website": "https://www.taylorelectionsfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoTAY.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=TAY",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-union-county-deborah-osborne",
@@ -6284,13 +6707,14 @@
           "county": "Union",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 496-2236",
-          "email": null,
+          "email": "debbie.osborne@unionflvotes.com",
           "official_website": "https://www.unionflvotes.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoUNI.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=UNI",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-volusia-county-lisa-lewis",
@@ -6309,13 +6733,14 @@
           "county": "Volusia",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(386) 736-5930",
-          "email": null,
+          "email": "elections@volusia.org",
           "official_website": "https://VolusiaElections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoVOL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=VOL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-wakulla-county-joseph-morgan",
@@ -6334,13 +6759,14 @@
           "county": "Wakulla",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 926-7575",
-          "email": null,
+          "email": "jmorgan@wakullavotes.gov",
           "official_website": "https://www.wakullavotes.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoWAK.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=WAK",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-walton-county-ryan-messer",
@@ -6359,13 +6785,14 @@
           "county": "Walton",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 892-8112",
-          "email": null,
+          "email": "info@votewalton.gov",
           "official_website": "https://www.votewalton.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoWAL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=WAL",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         },
         {
           "id": "supervisor-of-elections-washington-county-deidra-pettis",
@@ -6384,13 +6811,14 @@
           "county": "Washington",
           "counties": [],
           "municipality": null,
+          "seat_label": null,
           "phone": "(850) 638-6230",
-          "email": null,
+          "email": "votewashingtonfl@wcsoe.gov",
           "official_website": "https://www.wcsoe.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoWAS.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=WAS",
-          "last_verified": "2026-11-11",
-          "updated_on": "2026-11-11"
+          "last_verified": "2026-11-12",
+          "updated_on": "2026-11-12"
         }
       ]
     },
@@ -6399,8 +6827,8 @@
       "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-12T01:22:18+00:00",
-      "last_successful_collection": "2026-11-12T01:22:18+00:00",
+      "last_attempt": "2026-11-12T01:31:28+00:00",
+      "last_successful_collection": "2026-11-12T01:31:28+00:00",
       "last_error": null,
       "records": [
         {
