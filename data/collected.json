@@ -5,8 +5,8 @@
       "url": "https://www.senate.gov/senators/",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-12T01:31:28+00:00",
-      "last_successful_collection": "2026-11-12T01:31:28+00:00",
+      "last_attempt": "2026-11-13T17:49:03+00:00",
+      "last_successful_collection": "2026-11-13T17:49:03+00:00",
       "last_error": null,
       "records": [
         {
@@ -32,7 +32,7 @@
           "official_website": "https://www.moody.senate.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001244.jpg",
           "source_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -58,7 +58,7 @@
           "official_website": "https://www.rickscott.senate.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001217.jpg",
           "source_url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         }
       ]
@@ -68,8 +68,8 @@
       "url": "https://www.house.gov/representatives",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-12T01:31:28+00:00",
-      "last_successful_collection": "2026-11-12T01:31:28+00:00",
+      "last_attempt": "2026-11-13T17:49:03+00:00",
+      "last_successful_collection": "2026-11-13T17:49:03+00:00",
       "last_error": null,
       "records": [
         {
@@ -95,7 +95,7 @@
           "official_website": "https://patronis.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/P000622.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -121,7 +121,7 @@
           "official_website": "https://frost.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000476.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -147,7 +147,7 @@
           "official_website": "https://webster.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000806.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -173,7 +173,7 @@
           "official_website": "https://bilirakis.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001257.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -199,7 +199,7 @@
           "official_website": "https://luna.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/L000596.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -225,7 +225,7 @@
           "official_website": "https://castor.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/C001066.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -251,7 +251,7 @@
           "official_website": "https://laurellee.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/L000597.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -277,7 +277,7 @@
           "official_website": "https://buchanan.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001260.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -303,7 +303,7 @@
           "official_website": "https://steube.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001214.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -329,7 +329,7 @@
           "official_website": "https://franklin.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000472.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -355,7 +355,7 @@
           "official_website": "https://donalds.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000032.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -381,7 +381,7 @@
           "official_website": "https://dunn.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000628.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -407,7 +407,7 @@
           "official_website": "https://mast.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001199.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -433,7 +433,7 @@
           "official_website": "https://frankel.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000462.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -459,7 +459,7 @@
           "official_website": "https://moskowitz.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001217.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -485,7 +485,7 @@
           "official_website": "https://wilson.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000808.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -511,7 +511,7 @@
           "official_website": "https://wassermanschultz.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/W000797.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -537,7 +537,7 @@
           "official_website": "https://mariodiazbalart.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/D000600.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -563,7 +563,7 @@
           "official_website": "https://salazar.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/S000168.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -589,7 +589,7 @@
           "official_website": "https://gimenez.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/G000593.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -615,7 +615,7 @@
           "official_website": "https://cammack.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/C001039.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -641,7 +641,7 @@
           "official_website": "https://bean.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/B001314.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -667,7 +667,7 @@
           "official_website": "https://rutherford.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/R000609.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -693,7 +693,7 @@
           "official_website": "https://fine.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/F000484.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -719,7 +719,7 @@
           "official_website": "https://mills.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/M001216.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -745,7 +745,7 @@
           "official_website": "https://haridopolos.house.gov/",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/H001099.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -771,7 +771,7 @@
           "official_website": "https://soto.house.gov",
           "photo_url": "https://unitedstates.github.io/images/congress/450x550/S001200.jpg",
           "source_url": "https://www.house.gov/representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         }
       ]
@@ -781,8 +781,8 @@
       "url": "https://www.flsenate.gov/Senators",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-12T01:31:28+00:00",
-      "last_successful_collection": "2026-11-12T01:31:28+00:00",
+      "last_attempt": "2026-11-13T17:49:03+00:00",
+      "last_successful_collection": "2026-11-13T17:49:03+00:00",
       "last_error": null,
       "records": [
         {
@@ -812,7 +812,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S1",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S01_4804_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -841,7 +841,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S10",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S10_5637_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -872,7 +872,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S11",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S11_5603_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -900,7 +900,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S12",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S12_5414_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -929,7 +929,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S13",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S13_5492_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -957,7 +957,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S14",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S14_5606_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -985,7 +985,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S15",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S15_5601_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1014,7 +1014,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S16",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S16_5638_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1042,7 +1042,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S17",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S17_5256_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1070,7 +1070,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S18",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S18_5365_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1098,7 +1098,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S19",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S19_5199_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1132,7 +1132,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S2",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S02_5389_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1161,7 +1161,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S20",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S20_5070_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1190,7 +1190,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S21",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S21_5631_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1219,7 +1219,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S22",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S22_5632_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1248,7 +1248,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S23",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S23_5169_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1276,7 +1276,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S24",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S24_5570_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1305,7 +1305,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S25",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S25_5494_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1333,7 +1333,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S26",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S26_5633_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1365,7 +1365,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S27",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S27_5342_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1395,7 +1395,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S28",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S28_5634_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1427,7 +1427,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S29",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S29_5426_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1467,7 +1467,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S3",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S03_5522_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1496,7 +1496,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S30",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S30_5189_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1526,7 +1526,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S31",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S31_5348_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1554,7 +1554,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S32",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S32_5520_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1582,7 +1582,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S33",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S33_5524_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1610,7 +1610,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S34",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S34_5636_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1638,7 +1638,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S35",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S35_5572_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1666,7 +1666,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S36",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S36_5515_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1695,7 +1695,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S37",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S37_5345_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1723,7 +1723,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S38",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S38_5525_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1752,7 +1752,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S4",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S04_5394_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1781,7 +1781,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S40",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S40_5379_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1809,7 +1809,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S5",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S05_5385_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1843,7 +1843,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S6",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S06_5476_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1874,7 +1874,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S7",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S07_5232_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1903,7 +1903,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S8",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S08_5635_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1933,7 +1933,7 @@
           "official_website": "https://www.flsenate.gov/Senators/2026-2028/S9",
           "photo_url": "https://www.flsenate.gov/PublishedContent/Senators/2026-2028/Photos/S09_5571_Thumbnail.jpg",
           "source_url": "https://www.flsenate.gov/Senators",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         }
       ]
@@ -1943,8 +1943,8 @@
       "url": "https://www.flhouse.gov/Representatives",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-12T01:31:28+00:00",
-      "last_successful_collection": "2026-11-12T01:31:28+00:00",
+      "last_attempt": "2026-11-13T17:49:03+00:00",
+      "last_successful_collection": "2026-11-13T17:49:03+00:00",
       "last_error": null,
       "records": [
         {
@@ -1970,7 +1970,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4763&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4763.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -1996,7 +1996,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5089&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5089.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2022,7 +2022,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5103&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5103.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2048,7 +2048,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5102&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5102.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2074,7 +2074,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5099&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5099.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2100,7 +2100,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4793&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4793.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2126,7 +2126,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4791&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4791.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2152,7 +2152,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4789&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4789.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2178,7 +2178,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5098&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5098.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2204,7 +2204,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4928&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4928.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2230,7 +2230,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4522&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4522.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2256,7 +2256,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4011&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4011.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2282,7 +2282,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4767&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4767.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2308,7 +2308,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4792&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4792.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2334,7 +2334,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4794&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4794.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2360,7 +2360,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4796&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4796.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2386,7 +2386,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5105&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5105.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2412,7 +2412,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4800&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4800.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2438,7 +2438,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4929&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4929.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2464,7 +2464,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5086&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5086.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2490,7 +2490,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4798&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4798.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2516,7 +2516,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4902&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4902.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2542,7 +2542,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4898&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4898.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2568,7 +2568,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5083&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5083.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2594,7 +2594,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4797&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4797.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2620,7 +2620,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4263&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4263.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2646,7 +2646,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4652&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4652.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2672,7 +2672,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4865&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4865.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2698,7 +2698,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4869&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4869.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2724,7 +2724,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4866&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4866.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2750,7 +2750,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4905&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4905.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2776,7 +2776,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4906&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4906.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2802,7 +2802,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5076&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5076.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2828,7 +2828,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4907&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4907.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2854,7 +2854,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5088&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5088.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2880,7 +2880,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5090&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5090.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2906,7 +2906,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4909&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4909.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2932,7 +2932,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4901&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4901.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2958,7 +2958,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4868&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4868.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -2984,7 +2984,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4910&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4910.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3010,7 +3010,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4911&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4911.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3036,7 +3036,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4912&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4912.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3062,7 +3062,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4770&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4770.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3088,7 +3088,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5063&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5063.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3114,7 +3114,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4867&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4867.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3140,7 +3140,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5087&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5087.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3166,14 +3166,14 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5064&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5064.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
           "id": "state-representative-district-33-daniel-mcdow",
-          "full_name": "Daniel McDow",
+          "full_name": "Daniel R. McDow",
           "first_name": "Daniel",
-          "middle_name": null,
+          "middle_name": "R.",
           "last_name": "McDow",
           "office_title": "State Representative",
           "government_level": "state",
@@ -3192,8 +3192,8 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5120&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5120.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
-          "updated_on": "2026-11-12"
+          "last_verified": "2026-11-13",
+          "updated_on": "2026-11-13"
         },
         {
           "id": "state-representative-district-34-robert-brackett",
@@ -3218,7 +3218,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4870&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4870.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3244,7 +3244,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5093&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5093.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3270,7 +3270,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5095&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5095.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3296,7 +3296,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5097&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5097.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3322,7 +3322,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5104&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5104.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3348,7 +3348,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5106&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5106.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3374,7 +3374,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4764&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4764.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3400,7 +3400,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5065&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5065.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3426,7 +3426,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4269&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4269.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3452,7 +3452,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5119&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5119.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3478,7 +3478,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5109&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5109.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3504,7 +3504,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4877&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4877.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3530,7 +3530,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4915&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4915.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3556,7 +3556,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4916&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4916.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3582,7 +3582,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5085&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5085.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3608,7 +3608,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4917&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4917.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3634,7 +3634,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4918&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4918.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3660,7 +3660,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4864&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4864.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3686,7 +3686,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4879&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4879.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3712,7 +3712,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5110&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5110.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3738,7 +3738,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5070&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5070.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3764,7 +3764,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5108&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5108.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3790,7 +3790,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4758&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4758.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3816,7 +3816,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5075&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5075.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3842,7 +3842,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4882&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4882.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3868,7 +3868,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4885&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4885.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3894,7 +3894,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4210&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4210.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3920,7 +3920,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4886&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4886.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3946,7 +3946,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5081&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5081.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3972,7 +3972,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5107&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5107.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -3998,7 +3998,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4778&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4778.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4024,7 +4024,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5084&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5084.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4050,7 +4050,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5082&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5082.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4076,7 +4076,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5073&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5073.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4102,7 +4102,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4888&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4888.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4128,7 +4128,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4779&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4779.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4154,7 +4154,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5074&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5074.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4180,7 +4180,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5077&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5077.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4206,7 +4206,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5100&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5100.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4232,7 +4232,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4756&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4756.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4258,7 +4258,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4919&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4919.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4284,7 +4284,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5078&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5078.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4310,7 +4310,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4920&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4920.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4336,7 +4336,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4780&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4780.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4362,7 +4362,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5079&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5079.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4388,7 +4388,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4921&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4921.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4414,7 +4414,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4922&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4922.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4440,7 +4440,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4892&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4892.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4466,7 +4466,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5080&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5080.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4492,7 +4492,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4783&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4783.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4518,7 +4518,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4863&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4863.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4544,7 +4544,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4782&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4782.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4570,7 +4570,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4923&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4923.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4596,7 +4596,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5091&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5091.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4622,7 +4622,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4776&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4776.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4648,7 +4648,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4788&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4788.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4674,7 +4674,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5092&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5092.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4700,7 +4700,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4787&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4787.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4726,7 +4726,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5094&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5094.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4752,7 +4752,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4842&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4842.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4778,7 +4778,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4924&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4924.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4804,7 +4804,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4765&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4765.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4830,7 +4830,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5067&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5067.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4856,7 +4856,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4891&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4891.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4882,7 +4882,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4786&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4786.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4908,7 +4908,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5096&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5096.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4934,7 +4934,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=5101&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/5101.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4960,7 +4960,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4799&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4799.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -4986,7 +4986,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4757&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4757.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5012,7 +5012,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4893&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4893.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5038,7 +5038,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4927&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4927.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5064,7 +5064,7 @@
           "official_website": "https://www.flhouse.gov/Sections/Representatives/details.aspx?MemberId=4843&LegislativeTermId=92",
           "photo_url": "https://www.flhouse.gov/FileStores/Web/Imaging/Member/4843.jpg",
           "source_url": "https://www.flhouse.gov/Representatives",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         }
       ]
@@ -5074,8 +5074,8 @@
       "url": "https://dos.elections.myflorida.com/supervisors/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-12T01:31:28+00:00",
-      "last_successful_collection": "2026-11-12T01:31:28+00:00",
+      "last_attempt": "2026-11-13T17:49:03+00:00",
+      "last_successful_collection": "2026-11-13T17:49:03+00:00",
       "last_error": null,
       "records": [
         {
@@ -5101,7 +5101,7 @@
           "official_website": "https://www.votealachua.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoALA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=ALA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5127,7 +5127,7 @@
           "official_website": "https://votebakerfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBAK.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BAK",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5153,7 +5153,7 @@
           "official_website": "https://www.bayvotesfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBAY.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BAY",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5179,7 +5179,7 @@
           "official_website": "https://www.votebradfordfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBRA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5205,7 +5205,7 @@
           "official_website": "https://www.votebrevard.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBRE.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRE",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5231,7 +5231,7 @@
           "official_website": "https://www.browardvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoBRO.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=BRO",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5257,7 +5257,7 @@
           "official_website": "https://www.votecalhounfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCAL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CAL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5283,7 +5283,7 @@
           "official_website": "https://www.soecharlottecountyfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCHA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CHA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5309,7 +5309,7 @@
           "official_website": "https://www.votecitrus.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCIT.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CIT",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5335,7 +5335,7 @@
           "official_website": "https://www.clayelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCLA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CLA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5361,7 +5361,7 @@
           "official_website": "https://www.CollierVotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCLL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CLL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5387,7 +5387,7 @@
           "official_website": "https://www.votecolumbiafl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoCLM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=CLM",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5413,7 +5413,7 @@
           "official_website": "https://www.votedesotofl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDES.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DES",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5439,7 +5439,7 @@
           "official_website": "https://www.dixievotes.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDIX.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DIX",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5465,7 +5465,7 @@
           "official_website": "https://www.duvalelections.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDUV.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DUV",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5491,7 +5491,7 @@
           "official_website": "https://escambiavotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoESC.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=ESC",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5517,7 +5517,7 @@
           "official_website": "https://www.flaglerelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoFLA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=FLA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5543,7 +5543,7 @@
           "official_website": "https://www.votefranklinfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoFRA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=FRA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5569,7 +5569,7 @@
           "official_website": "https://www.gadsdensoefl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGAD.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GAD",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5595,7 +5595,7 @@
           "official_website": "https://www.votegilchrist.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGIL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GIL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5621,7 +5621,7 @@
           "official_website": "https://www.voteglades.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGLA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GLA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5647,7 +5647,7 @@
           "official_website": "https://www.votegulf.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoGUL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=GUL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5673,7 +5673,7 @@
           "official_website": "https://www.hamiltonvotesFL.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHAM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HAM",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5699,7 +5699,7 @@
           "official_website": "https://hardeeflvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHAR.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HAR",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5725,7 +5725,7 @@
           "official_website": "https://www.hendryelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHEN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HEN",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5751,7 +5751,7 @@
           "official_website": "https://www.hernandovotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHER.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HER",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5777,7 +5777,7 @@
           "official_website": "https://www.votehighlands.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHIG.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HIG",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5803,7 +5803,7 @@
           "official_website": "https://www.votehillsborough.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHIL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HIL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5829,7 +5829,7 @@
           "official_website": "https://www.holmeselectionsfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoHOL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=HOL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5855,7 +5855,7 @@
           "official_website": "https://www.voteindianriver.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoIND.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=IND",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5881,7 +5881,7 @@
           "official_website": "https://www.votejacksonfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoJAC.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=JAC",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5907,7 +5907,7 @@
           "official_website": "https://www.jeffersonvotesfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoJEF.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=JEF",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5933,7 +5933,7 @@
           "official_website": "https://www.lafayettevotes.net",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLAF.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LAF",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5959,7 +5959,7 @@
           "official_website": "https://www.lakevotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLAK.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LAK",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -5985,7 +5985,7 @@
           "official_website": "https://www.lee.vote",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLEE.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LEE",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6011,7 +6011,7 @@
           "official_website": "https://www.leonvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLEO.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LEO",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6037,7 +6037,7 @@
           "official_website": "https://www.votelevy.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLEV.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LEV",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6063,7 +6063,7 @@
           "official_website": "https://libertycountyflsoe.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoLIB.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=LIB",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6089,7 +6089,7 @@
           "official_website": "https://www.votemadison.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMAD.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MAD",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6115,7 +6115,7 @@
           "official_website": "https://www.votemanatee.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMAN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MAN",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6141,7 +6141,7 @@
           "official_website": "https://votemarion.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMRN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MRN",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6167,7 +6167,7 @@
           "official_website": "https://www.martinvotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMRT.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MRT",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6193,7 +6193,7 @@
           "official_website": "https://www.votemiamidade.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoDAD.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=DAD",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6219,7 +6219,7 @@
           "official_website": "https://votemonroeflkeys.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoMON.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=MON",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6245,7 +6245,7 @@
           "official_website": "https://www.votenassaufl.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoNAS.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=NAS",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6271,7 +6271,7 @@
           "official_website": "https://www.voteokaloosa.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoOKA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=OKA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6297,7 +6297,7 @@
           "official_website": "https://www.voteokeechobee.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoOKE.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=OKE",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6323,7 +6323,7 @@
           "official_website": "https://www.voteorangefl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoORA.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=ORA",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6349,7 +6349,7 @@
           "official_website": "https://www.voteosceola.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoOSC.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=OSC",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6375,7 +6375,7 @@
           "official_website": "https://www.votepalmbeach.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPAL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PAL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6401,7 +6401,7 @@
           "official_website": "https://www.pascovotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPAS.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PAS",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6427,7 +6427,7 @@
           "official_website": "https://www.votepinellas.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPIN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PIN",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6453,7 +6453,7 @@
           "official_website": "https://www.polkelections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPOL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=POL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6479,7 +6479,7 @@
           "official_website": "https://www.voteputnamflorida.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoPUT.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=PUT",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6505,7 +6505,7 @@
           "official_website": "https://www.votesantarosa.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSAN.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SAN",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6531,7 +6531,7 @@
           "official_website": "https://www.sarasotavotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSAR.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SAR",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6557,7 +6557,7 @@
           "official_website": "https://www.voteseminole.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSEM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SEM",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6583,7 +6583,7 @@
           "official_website": "https://www.votesjc.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSTJ.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=STJ",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6609,7 +6609,7 @@
           "official_website": "https://www.stlucievotes.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSTL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=STL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6635,7 +6635,7 @@
           "official_website": "https://elections.sumtercountyfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSUM.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SUM",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6661,7 +6661,7 @@
           "official_website": "https://www.suwanneevotes.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoSUW.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=SUW",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6687,7 +6687,7 @@
           "official_website": "https://www.taylorelectionsfl.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoTAY.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=TAY",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6713,7 +6713,7 @@
           "official_website": "https://www.unionflvotes.com",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoUNI.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=UNI",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6739,7 +6739,7 @@
           "official_website": "https://VolusiaElections.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoVOL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=VOL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6765,7 +6765,7 @@
           "official_website": "https://www.wakullavotes.gov/",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoWAK.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=WAK",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6791,7 +6791,7 @@
           "official_website": "https://www.votewalton.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoWAL.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=WAL",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6817,7 +6817,7 @@
           "official_website": "https://www.wcsoe.gov",
           "photo_url": "https://dos.elections.myflorida.com/supervisors/images/photoWAS.jpg",
           "source_url": "https://dos.elections.myflorida.com/supervisors/countyInfo.asp?county=WAS",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         }
       ]
@@ -6827,8 +6827,8 @@
       "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-12T01:31:28+00:00",
-      "last_successful_collection": "2026-11-12T01:31:28+00:00",
+      "last_attempt": "2026-11-13T17:49:03+00:00",
+      "last_successful_collection": "2026-11-13T17:49:03+00:00",
       "last_error": null,
       "records": [
         {
@@ -6854,7 +6854,7 @@
           "official_website": "https://www.pompanobeachfl.gov/government/city-commission/district-1",
           "photo_url": "https://cdn.pompanobeachfl.gov/city/storage/images/commission/fesik-headshot.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6880,7 +6880,7 @@
           "official_website": "https://www.hollywoodfl.org/1074/Caryl-S-Shuham-District-1",
           "photo_url": "https://www.hollywoodfl.org/ImageRepository/Document?documentID=24722",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6906,7 +6906,7 @@
           "official_website": "https://www.fortlauderdale.gov/Government/City-Commission/Commissioner-John-C-Herbst-District-1",
           "photo_url": "https://www.fortlauderdale.gov/files/assets/public/v/2/city-commission/images/commissioner-john-c-herbst.jpeg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6932,7 +6932,7 @@
           "official_website": "https://www.tamarac.gov/944/Vice-Mayor---Marlon-D-Bolton-Dist-1",
           "photo_url": "https://www.tamarac.gov/ImageRepository/Document?documentId=12363",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6958,7 +6958,7 @@
           "official_website": "https://www.deerfield-beach.com/331/District-1-Commissioner",
           "photo_url": "https://www.deerfield-beach.com/ImageRepository/Document?documentId=19977",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -6984,7 +6984,7 @@
           "official_website": "https://www.ppines.com/157/Vice-Mayor-Thomas-Good-Jr",
           "photo_url": "https://www.ppines.com/ImageRepository/Document?documentID=7338",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7010,7 +7010,7 @@
           "official_website": "https://www.deerfield-beach.com/333/District-2-Commissioner",
           "photo_url": "https://www.deerfield-beach.com/ImageRepository/Document?documentId=19978",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7036,7 +7036,7 @@
           "official_website": "https://www.ppines.com/159/Commissioner-Jay-D-Schwartz",
           "photo_url": "https://www.ppines.com/images/InfoAdvanced/76/Schwarts.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7062,7 +7062,7 @@
           "official_website": "https://www.tamarac.gov/1279/Commissioner---Morey-Wright-District-2",
           "photo_url": "https://www.tamarac.gov/ImageRepository/Document?documentId=12366",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7088,7 +7088,7 @@
           "official_website": "https://hollywoodfl.org/132/Peter-D-Hernandez-District-2",
           "photo_url": "https://www.hollywoodfl.org/ImageRepository/Document?documentID=10414",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7114,7 +7114,7 @@
           "official_website": "https://www.pompanobeachfl.gov/government/city-commission/district-2",
           "photo_url": "https://cdn.pompanobeachfl.gov/city/storage/images/commission/eaton.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7140,7 +7140,7 @@
           "official_website": "https://www.fortlauderdale.gov/Government/City-Commission/Commissioner-Steven-Glassman-District-2",
           "photo_url": "https://www.fortlauderdale.gov/files/assets/public/v/1/city-commission/images/steven-glassman.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7166,7 +7166,7 @@
           "official_website": "https://www.pompanobeachfl.gov/government/city-commission/district-3",
           "photo_url": "https://cdn.pompanobeachfl.gov/city/storage/images/commission/Headshot-Alison.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7192,7 +7192,7 @@
           "official_website": "https://www.deerfield-beach.com/332/District-3-Commissioner",
           "photo_url": "https://www.deerfield-beach.com/ImageRepository/Document?documentId=19972",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7218,7 +7218,7 @@
           "official_website": "https://www.tamarac.gov/1444/Commissioner---Krystal-Patterson-Dist-3",
           "photo_url": "https://www.tamarac.gov/ImageRepository/Document?documentId=12365",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7244,7 +7244,7 @@
           "official_website": "https://www.ppines.com/158/Commissioner-Maria-Rodriguez",
           "photo_url": "https://www.ppines.com/ImageRepository/Document?documentId=21248",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7270,7 +7270,7 @@
           "official_website": "https://www.fortlauderdale.gov/Government/City-Commission/Commissioner-Pamela-Beasley-Pittman-District-3",
           "photo_url": "https://www.fortlauderdale.gov/files/assets/public/v/3/city-commission/images/pamela-beasley-pittman-d3-commissioner.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7296,7 +7296,7 @@
           "official_website": "https://fl-hollywood2.civicplus.com/134/Traci-Callari-District-3",
           "photo_url": "https://www.hollywoodfl.org/ImageRepository/Document?documentID=20867",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7322,7 +7322,7 @@
           "official_website": "https://www.hollywoodfl.org/136/Adam-Gruber-District-4",
           "photo_url": "https://www.hollywoodfl.org/ImageRepository/Document?documentId=20861",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7348,7 +7348,7 @@
           "official_website": "https://www.fortlauderdale.gov/Government/City-Commission/Vice-MayorCommissioner-Ben-Sorensen-District-4",
           "photo_url": "https://www.fortlauderdale.gov/files/assets/public/v/2/city-commission/images/commissioner-ben-sorensen.jpeg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7374,7 +7374,7 @@
           "official_website": "https://www.pompanobeachfl.gov/government/city-commission/district-4",
           "photo_url": "https://cdn.pompanobeachfl.gov/city/storage/images/commission/beverly_perkins_headshot.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7400,7 +7400,7 @@
           "official_website": "https://www.tamarac.gov/1280/Commissioner---Kicia-Daniel-District-4",
           "photo_url": "https://www.tamarac.gov/ImageRepository/Document?documentId=12364",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7426,7 +7426,7 @@
           "official_website": "https://www.ppines.com/161/Vice-Mayor-Michael-Hernandez",
           "photo_url": "https://www.ppines.com/ImageRepository/Document?documentId=22187",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7452,7 +7452,7 @@
           "official_website": "https://www.deerfield-beach.com/96/District-4-Commissioner",
           "photo_url": "https://www.deerfield-beach.com/ImageRepository/Document?documentId=19971",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7478,7 +7478,7 @@
           "official_website": "https://www.pompanobeachfl.gov/government/city-commission/district-5",
           "photo_url": "https://cdn.pompanobeachfl.gov/city/storage/images/commission/darlene-headshot.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7504,7 +7504,7 @@
           "official_website": "https://fl-hollywood2.civicplus.com/138/Kevin-Biederman-District-5",
           "photo_url": "https://fl-hollywood2.civicplus.com/ImageRepository/Document?documentID=20864",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7530,7 +7530,7 @@
           "official_website": "https://www.hollywoodfl.org/1441/Idelma-Quintana---District-6",
           "photo_url": "https://www.hollywoodfl.org/ImageRepository/Document?documentId=20863",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7556,7 +7556,7 @@
           "official_website": "https://www.nlauderdale.org/quick_links/city_commission/commissioner_luke_lewis.php",
           "photo_url": "https://www.nlauderdale.org/Resized_IMG_0028.jpeg?t=202305301600170",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7582,7 +7582,7 @@
           "official_website": "http://www.nlauderdale.org/quick_links/city_commission/commissioner_mario_bustamante.php",
           "photo_url": "https://nlauderdale.org/Mario_Bustamante_1524.jpg?t=202012281642590",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7608,7 +7608,7 @@
           "official_website": "https://nlauderdale.org/quick_links/city_commission/commissioner_regina_martin.php",
           "photo_url": "https://nlauderdale.org/vice%20mayor%20martin.jpg?t=202211280855160",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7634,7 +7634,7 @@
           "official_website": "https://www.nlauderdale.org/quick_links/city_commission/district_d_-_tba.php",
           "photo_url": "https://www.nlauderdale.org/City%20of%20N.Lauderdale%20Group%20-%20WEB-64%20-%20Copy%20(2).jpg?t=202305301632320",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7660,7 +7660,7 @@
           "official_website": "https://www.southwestranches.org/council/council-member-bob-hartmann/",
           "photo_url": "https://www.southwestranches.org/wp-content/uploads/2021/11/Bob-Hartmann-240x300-1.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7686,7 +7686,7 @@
           "official_website": "https://www.davie-fl.gov/1404/Michelle-Whitman",
           "photo_url": "https://www.davie-fl.gov/ImageRepository/Document?documentID=22112",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7712,7 +7712,7 @@
           "official_website": "https://www.davie-fl.gov/1882/17249/Daniel-J-Alfonso?activeLiveTab=widgets",
           "photo_url": "https://www.davie-fl.gov/ImageRepository/Document?documentId=24640",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7738,7 +7738,7 @@
           "official_website": "https://www.southwestranches.org/council/council-member-gary-jablonski/",
           "photo_url": "https://www.southwestranches.org/wp-content/uploads/2021/11/4-Gary-Jablonski.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7764,7 +7764,7 @@
           "official_website": "https://www.southwestranches.org/council/council-member-jim-allbritton/",
           "photo_url": "https://www.southwestranches.org/wp-content/uploads/2022/03/Jim-allbrittn.-blue-background1-resized-for-web.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7790,7 +7790,7 @@
           "official_website": "https://www.davie-fl.gov/156/Susan-Starkey",
           "photo_url": "https://www.davie-fl.gov/ImageRepository/Document?documentID=22113",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7816,7 +7816,7 @@
           "official_website": "https://www.southwestranches.org/council/council-member-david-s-kuczenski/",
           "photo_url": "https://www.southwestranches.org/wp-content/uploads/2024/07/david-kuczenski-for-web.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7842,7 +7842,7 @@
           "official_website": "https://www.davie-fl.gov/163/Marlon-Luis",
           "photo_url": "https://www.davie-fl.gov/ImageRepository/Document?documentID=22110",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7868,7 +7868,7 @@
           "official_website": "https://www.broward.org/district1",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/394c1a5b6fcd4dfabad7239c186d132f?v=45a2c859",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7894,7 +7894,7 @@
           "official_website": "https://www.broward.org/district2",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/376af4f01eb84effa75f283d75d99420?v=b93849d4",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7920,7 +7920,7 @@
           "official_website": "https://www.broward.org/district3",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/8a2f06c1745f4e3aa800985a7918dd26?v=16e4a5f0",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7946,7 +7946,7 @@
           "official_website": "https://www.broward.org/district4",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/16d89660e5304ba99eb70f046b023c5a?v=e321ed1d",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7972,7 +7972,7 @@
           "official_website": "https://www.broward.org/district5",
           "photo_url": "https://www.browardcdn.org/api/public/content/3c907f8274914caf89291ff67894d1ac?v=4c286f7e",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -7998,7 +7998,7 @@
           "official_website": "https://www.broward.org/district6",
           "photo_url": "https://www.browardcdn.org/api/public/content/16e3ba61804f4734ab58884f0fa53bde?v=dbf28142",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8024,7 +8024,7 @@
           "official_website": "https://www.broward.org/district7",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/f014903f653241a7942f596a6225279b?v=aa1e3f7a",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8050,7 +8050,7 @@
           "official_website": "https://www.broward.org/district8",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/c8ed42af19434eceb52bf33caea130de?v=8bc2862f",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8076,7 +8076,7 @@
           "official_website": "https://www.broward.org/district9",
           "photo_url": "https://bcf-p-001.sitecorecontenthub.cloud/api/public/content/ed3a18f0689d40dabe550c0d597d9ec9?v=e2583b0e",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8102,7 +8102,7 @@
           "official_website": "https://www.browardschools.com/district1",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1753131622/browardschoolscom/py0hn2umpnzhuv8lzmxd/D1-721.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8128,7 +8128,7 @@
           "official_website": "https://www.browardschools.com/district2",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1751291673/browardschoolscom/hibivrveodblujiudcqw/RebeccaThompsonBanner-D2.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8154,7 +8154,7 @@
           "official_website": "https://www.browardschools.com/district3",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1763489468/browardschoolscom/xtdvjssbdtreg9f9gc9z/District3-Chair.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8180,7 +8180,7 @@
           "official_website": "https://www.browardschools.com/district4",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1760375049/browardschoolscom/kybqvrfsqt9ndrthfwe3/D410-13-25.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8206,7 +8206,7 @@
           "official_website": "https://www.browardschools.com/district5",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1763489483/browardschoolscom/pkek9fmaxxarebbhqgwx/D5-VICECHAIR.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8232,7 +8232,7 @@
           "official_website": "https://www.browardschools.com/district6",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1751292584/browardschoolscom/q67qrvckki7vav37gowi/AdamCerveraDistrict6banner.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8258,7 +8258,7 @@
           "official_website": "https://www.browardschools.com/district7",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1730329707/browardschoolscom/bdnpbohhuujwbvnc6ns9/norarupertbanner.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8284,7 +8284,7 @@
           "official_website": "https://www.browardschools.com/seat8",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1730329727/browardschoolscom/cuwhlfmdzfdygk8bfwkc/dr-allen-zeman-seat-8.jpg",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         },
         {
@@ -8310,7 +8310,7 @@
           "official_website": "https://www.browardschools.com/seat9",
           "photo_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1751482498/browardschoolscom/kzhnlk8ct9jvraf4uocj/S9.png",
           "source_url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
-          "last_verified": "2026-11-12",
+          "last_verified": "2026-11-13",
           "updated_on": "2026-11-12"
         }
       ]
