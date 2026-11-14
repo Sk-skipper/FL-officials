@@ -10,8 +10,19 @@ Sources (all public government data):
     members elected through November 2026 represent).
   - Broward County GIS, "Electoral District Boundaries": County Commission, School Board and city
     commission districts. Expired districts are skipped.
+  - Broward County GIS, "DrainageDistricts": the water control, drainage and improvement districts
+    (special districts). `key` matches data/special_districts.json.
   - Broward County GIS, "BCCity_Boundaries": Broward's 31 municipalities, used instead of the
     Census outlines inside Broward because the county's are the legal limits.
+  - Miami-Dade County GIS, "Know Where To Vote": County Commission and School Board districts.
+  - Miami-Dade County GIS, "Community Development District": the county's community development
+    districts (special districts), with the ordinance that created each one.
+  - City of Miami GIS, "Commissioner Districts": the City of Miami's five commission districts.
+
+The county, school board, city district and special district layers are written as one file each for
+both counties (county-commission, school-board, city-districts, special-districts); every feature
+carries a `county`. Miami-Dade community development districts are also added to
+data/special_districts.json (key "md-cdd-<name>"), replacing the previous generated entries.
 
 Each output file is GeoJSON in longitude/latitude, simplified to about 10 m (Broward) or 50 m
 (statewide) so the whole set loads quickly in a browser. Every feature carries a `district` (or
@@ -35,6 +46,10 @@ TIGER = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb"
 BROWARD = "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services"
 ELECTORAL = f"{BROWARD}/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2"
 CITY_LIMITS = f"{BROWARD}/BCCity_Boundaries/FeatureServer/0"
+DRAINAGE = f"{BROWARD}/DrainageDistricts/FeatureServer/0"
+MD_VOTE = "https://gisweb.miamidade.gov/arcgis/rest/services/MD_KnowWhereToVote/MapServer"
+MD_CDD = "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/CommunityDevelopmentDistrict_gdb/FeatureServer/0"
+MIAMI_CITY = "https://gis.miami.gov/gis/rest/services/Maps/CommissionerDistricts/MapServer/0"
 HEADERS = {"User-Agent": "fl-officials-directory/1.0 (boundary builder)"}
 
 STATEWIDE_OFFSET = 0.0005  # degrees, about 50 m
@@ -44,6 +59,7 @@ COUNTY_OFFSET = 0.0001     # finer outlines, used only to work out which countie
 SOURCES = {
     "census": {"name": "U.S. Census Bureau, TIGERweb", "url": "https://tigerweb.geo.census.gov/"},
     "broward": {"name": "Broward County GIS: Electoral District Boundaries", "url": "https://geohub-bcgis.opendata.arcgis.com/"},
+    "local": {"name": "Broward County GIS, Miami-Dade County GIS and City of Miami GIS", "url": "https://gis-mdc.opendata.arcgis.com/"},
 }
 
 
@@ -129,11 +145,11 @@ def build_broward(statewide_cities: dict) -> dict[str, dict]:
             continue
         number = district_number(p.get("districtid"))
         if office == "County Commissioner":
-            commission.append(feature(row["geometry"], district=number))
+            commission.append(feature(row["geometry"], county="Broward", district=number))
         elif office == "School Board" and "At-Large" not in label:
-            school.append(feature(row["geometry"], district=number))
+            school.append(feature(row["geometry"], county="Broward", district=number))
         elif office in ("City Commission", "Town Council"):
-            city.append(feature(row["geometry"], municipality=_municipality(label), district=number))
+            city.append(feature(row["geometry"], county="Broward", municipality=_municipality(label), district=number))
 
     limits = query(CITY_LIMITS, "1=1", "*", LOCAL_OFFSET)
     by_city: dict[str, list] = {}
@@ -152,11 +168,52 @@ def build_broward(statewide_cities: dict) -> dict[str, dict]:
         f for f in statewide_cities["features"] if key(f["properties"]["name"]) not in names
     ] + broward_cities
 
+    special = []
+    for row in query(DRAINAGE, "1=1", "LABELNAME,DEPENDENT", LOCAL_OFFSET):
+        label = " ".join((row["properties"].get("LABELNAME") or "").split("\r\n")[0].split())
+        if label:
+            special.append(feature(row["geometry"], county="Broward", key=label,
+                                   status="dependent" if row["properties"].get("DEPENDENT") == "D" else "independent"))
+
     return {
+        "broward-special": collection(special, "broward", "Water control, drainage and improvement districts (Broward County GIS)."),
         "broward-commission": collection(commission, "broward", "Broward County Commission districts (adopted 2022)."),
         "broward-school": collection(school, "broward", "Broward School Board districts 1–7. Seats 8 and 9 are countywide."),
         "broward-city-districts": collection(city, "broward", "City commission districts, for the cities that elect by district."),
     }
+
+
+def cdd_key(name: str) -> str:
+    return "md-cdd-" + re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+
+
+def build_miamidade() -> tuple[dict[str, list], list[dict]]:
+    commission = [feature(f["geometry"], county="Miami-Dade", district=district_number(str(f["properties"]["ID"])))
+                  for f in query(f"{MD_VOTE}/4", "1=1", "ID", LOCAL_OFFSET)]
+    school = [feature(f["geometry"], county="Miami-Dade", district=district_number(str(f["properties"]["ID"])))
+              for f in query(f"{MD_VOTE}/8", "1=1", "ID", LOCAL_OFFSET)]
+    city = [feature(f["geometry"], county="Miami-Dade", municipality="Miami", district=district_number(str(f["properties"]["COMDISTID"])))
+            for f in query(MIAMI_CITY, "1=1", "COMDISTID", LOCAL_OFFSET)]
+    special, entries, parts = [], [], {}
+    for f in query(MD_CDD, "1=1", "NAME,ORD_NO,EXHBT_LINK", LOCAL_OFFSET):
+        p = f["properties"]
+        name = " ".join((p.get("NAME") or "").split())
+        if name:
+            parts.setdefault(name, []).append((shape(f["geometry"]), p))
+    for name, items in sorted(parts.items()):
+        key = cdd_key(name)
+        special.append(feature(mapping(unary_union([g for g, _ in items])), county="Miami-Dade", key=key, status="independent"))
+        p = items[0][1]
+        sources = [{"name": "Miami-Dade County GIS: Community Development District", "url": "https://gis-mdc.opendata.arcgis.com/"}]
+        if (p.get("EXHBT_LINK") or "").startswith("https://"):
+            sources.append({"name": f"Miami-Dade ordinance {p.get('ORD_NO') or ''} creating the district".replace("  ", " "), "url": p["EXHBT_LINK"]})
+        entries.append({
+            "key": key, "name": f"{name} Community Development District", "type": "Community development district",
+            "area": "mapped", "status": "independent", "county": "Miami-Dade",
+            "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+            "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.", "sources": sources,
+        })
+    return {"commission": commission, "school": school, "city": city, "special": special}, entries
 
 
 def _city_name(raw: str) -> str:
@@ -203,9 +260,27 @@ def main() -> None:
     print("Downloading statewide boundaries from the Census Bureau...")
     layers = build_statewide()
     print("Downloading Broward County districts...")
-    layers.update(build_broward(layers["fl-cities"]))
+    broward = build_broward(layers["fl-cities"])
+    print("Downloading Miami-Dade County districts...")
+    dade, cdds = build_miamidade()
+    combined = {
+        "county-commission": ("broward-commission", "commission", "County Commission districts (Broward 2022 plan; Miami-Dade)."),
+        "school-board": ("broward-school", "school", "School Board districts. Broward seats 8 and 9 are countywide."),
+        "city-districts": ("broward-city-districts", "city", "City commission districts, for the cities that elect by district."),
+        "special-districts": ("broward-special", "special", "Broward water control, drainage and improvement districts; "
+                                                            "Miami-Dade community development districts."),
+    }
+    for name, (b, d, note) in combined.items():
+        layers[name] = collection(broward[b]["features"] + dade[d], "local", note)
     for name, data in layers.items():
         write(name, data)
+    for old in ("broward-commission", "broward-school", "broward-city-districts", "broward-special"):
+        (OUT / f"{old}.json").unlink(missing_ok=True)
+    path = ROOT / "data" / "special_districts.json"
+    special = json.loads(path.read_text(encoding="utf-8"))
+    special["districts"] = [d for d in special["districts"] if not d["key"].startswith("md-cdd-")] + cdds
+    path.write_text(json.dumps(special, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"  data/special_districts.json: {len(cdds)} Miami-Dade community development districts")
 
     if args.counties:
         print("Working out which counties each district covers...")

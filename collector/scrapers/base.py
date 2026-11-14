@@ -94,6 +94,13 @@ class PoliteHttpClient:
 
     def get(self, url: str) -> str:
         """Fetch a page as text, or raise FetchError."""
+        return self._fetch(url).text
+
+    def get_bytes(self, url: str) -> bytes:
+        """Fetch a file (a PDF, say) as bytes, or raise FetchError."""
+        return self._fetch(url).content
+
+    def _fetch(self, url: str) -> requests.Response:
         self.check_allowed(url)
         host = urlsplit(url).netloc
         last_error = "unknown error"
@@ -119,7 +126,7 @@ class PoliteHttpClient:
                 raise FetchError(f"HTTP {status} for {url}: access is restricted and will not be bypassed")
             if status >= 400:
                 raise FetchError(f"HTTP {status} for {url}")
-            return response.text
+            return response
         raise FetchError(f"{url} failed after {self.max_retries + 1} attempts ({last_error})")
 
 

@@ -18,6 +18,7 @@ from collector.normalize import (
 )
 
 Level = Literal["federal", "state", "county", "municipal"]
+BIO_KEYS = {"next_election", "term_ends", "serving_since", "note"}
 SelectionMethod = Literal["elected", "appointed", "unknown"]
 
 
@@ -40,6 +41,8 @@ class ScrapedOfficial(BaseModel):
     counties: list[str] = []
     municipality: str | None = None
     seat_label: str | None = Field(default=None, max_length=80)
+    special_district: str | None = Field(default=None, max_length=80)  # key in data/special_districts.json
+    bio: dict[str, str] | None = None  # term facts the source states: next_election, term_ends, serving_since
     phone: str | None = None
     email: str | None = None
     official_website: str | None = None
@@ -74,6 +77,8 @@ class ScrapedOfficial(BaseModel):
         data["photo_url"] = normalize_photo_url(data.get("photo_url"))
         data["municipality"] = clean_text(data.get("municipality")) or None
         data["seat_label"] = clean_text(data.get("seat_label")) or None
+        bio = data.get("bio") if isinstance(data.get("bio"), dict) else {}
+        data["bio"] = {k: clean_text(v) for k, v in bio.items() if k in BIO_KEYS and clean_text(v)} or None
 
         county_raw = clean_text(data.get("county"))
         if county_raw:

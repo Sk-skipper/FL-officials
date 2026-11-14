@@ -42,6 +42,870 @@
     "name": "Broward County GIS: Electoral District Boundaries (district seats)",
     "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
     "level": "county",
-    "scraper": "broward_districts"
+    "scraper": "broward_districts",
+    "config": {
+      "mayor_cities": [
+        "Davie",
+        "Deerfield Beach",
+        "Hallandale Beach",
+        "Lauderdale Lakes",
+        "Plantation",
+        "Sea Ranch Lakes",
+        "Southwest Ranches",
+        "Sunrise",
+        "Tamarac",
+        "West Park",
+        "Weston"
+      ]
+    }
+  },
+  {
+    "key": "broward_soe",
+    "name": "Broward County Supervisor of Elections: Elected Officials",
+    "url": "https://browardvotes.gov/candidates/elected-officials",
+    "level": "county",
+    "scraper": "broward_soe"
+  },
+  {
+    "key": "miamidade_soe",
+    "name": "Miami-Dade County Supervisor of Elections: Elected Officials and Judicial Directory",
+    "url": "https://www.miamidade.gov/elections/library/reports/elected-officials.pdf",
+    "level": "county",
+    "scraper": "miamidade_soe",
+    "config": {
+      "judges_url": "https://www.miamidade.gov/elections/library/reports/judges.pdf"
+    }
+  },
+  {
+    "key": "fl_sheriffs",
+    "name": "Florida Sheriffs Association: Sheriff Directory",
+    "url": "https://flsheriffs.org/sheriffs/",
+    "level": "county",
+    "scraper": "fl_sheriffs",
+    "config": {
+      "skip_counties": [
+        "Broward",
+        "Miami-Dade"
+      ]
+    }
+  },
+  {
+    "key": "fl_clerks",
+    "name": "Florida Clerks of Court Operations Corporation: Clerks of the Circuit Court",
+    "url": "https://flccoc.org/about-us/clerks/",
+    "level": "county",
+    "scraper": "fl_clerks",
+    "config": {
+      "skip_counties": [
+        "Broward",
+        "Miami-Dade"
+      ]
+    }
+  },
+  {
+    "key": "fac_commissioners",
+    "name": "Florida Association of Counties: county commissioners",
+    "url": "https://www.fl-counties.com/directory-results/?group=156781",
+    "level": "county",
+    "scraper": "fac_commissioners",
+    "config": {
+      "skip_counties": [
+        "Broward",
+        "Miami-Dade"
+      ],
+      "board_sizes": [
+        5,
+        7
+      ]
+    }
+  },
+  {
+    "key": "city_miami_dade_aventura",
+    "name": "Aventura (Miami-Dade County): mayor and commission",
+    "url": "https://www.cityofaventura.com/200",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Aventura",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_bal_harbour",
+    "name": "Bal Harbour (Miami-Dade County): mayor and council",
+    "url": "https://balharbourfl.gov/government/village-mayor-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Bal Harbour",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_bay_harbor_islands",
+    "name": "Bay Harbor Islands (Miami-Dade County): mayor and council",
+    "url": "https://www.bayharborislands-fl.gov/215/Mayor-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Bay Harbor Islands",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_biscayne_park",
+    "name": "Biscayne Park (Miami-Dade County): mayor and commission",
+    "url": "http://biscayneparkfl.gov/index.asp?SEC=E84C0D63-86B0-4D67-AE8C-42A0DDAF43AB",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Biscayne Park",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_coral_gables",
+    "name": "Coral Gables (Miami-Dade County): mayor and commission",
+    "url": "https://www.coralgables.com/department/city-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Coral Gables",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_cutler_bay",
+    "name": "Cutler Bay (Miami-Dade County): mayor and council",
+    "url": "https://www.cutlerbay-fl.gov/town-council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Cutler Bay",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_el_portal",
+    "name": "El Portal (Miami-Dade County): mayor and council",
+    "url": "https://elportalvillage.com/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "El Portal",
+      "member_title": "Councilmember",
+      "seats": 5,
+      "menu_links": true
+    }
+  },
+  {
+    "key": "city_miami_dade_florida_city",
+    "name": "Florida City (Miami-Dade County): mayor and commission",
+    "url": "http://www.floridacityfl.gov/165/City-Commission-Members-Office",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Florida City",
+      "member_title": "Commissioner",
+      "seats": 5,
+      "extra_urls": [
+        "http://www.floridacityfl.gov/163/Mayors-Message"
+      ]
+    }
+  },
+  {
+    "key": "city_miami_dade_golden_beach",
+    "name": "Golden Beach (Miami-Dade County): mayor and council",
+    "url": "https://goldenbeach.us/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Golden Beach",
+      "member_title": "Councilmember",
+      "seats": 5,
+      "menu_links": true
+    }
+  },
+  {
+    "key": "city_miami_dade_homestead",
+    "name": "Homestead (Miami-Dade County): mayor and council",
+    "url": "http://www.cityofhomestead.com/89/Elected-Officials",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Homestead",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_key_biscayne",
+    "name": "Key Biscayne (Miami-Dade County): mayor and council",
+    "url": "https://www.keybiscayne.fl.gov/government/council/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Key Biscayne",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_medley",
+    "name": "Medley (Miami-Dade County): mayor and council",
+    "url": "https://www.townofmedley.com/town-council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Medley",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_miami",
+    "name": "Miami (Miami-Dade County): mayor and commission",
+    "url": "https://www.miami.gov/My-Government/City-Officials",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Miami",
+      "member_title": "Commissioner",
+      "seats": 6,
+      "menu_links": true
+    }
+  },
+  {
+    "key": "city_miami_dade_miami_beach",
+    "name": "Miami Beach (Miami-Dade County): mayor and commission",
+    "url": "https://www.miamibeachfl.gov/city-hall/elected-officials/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Miami Beach",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_miami_gardens",
+    "name": "Miami Gardens (Miami-Dade County): mayor and council",
+    "url": "http://www.miamigardens-fl.gov/269/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Miami Gardens",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_miami_lakes",
+    "name": "Miami Lakes (Miami-Dade County): mayor and council",
+    "url": "https://www.miamilakes-fl.gov/departments/town-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Miami Lakes",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_north_bay_village",
+    "name": "North Bay Village (Miami-Dade County): mayor and commission",
+    "url": "https://northbayvillage-fl.gov/commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "North Bay Village",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_north_miami",
+    "name": "North Miami (Miami-Dade County): mayor and council",
+    "url": "https://www.northmiamifl.gov/1401/North-Miami-Elected-Officials",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "North Miami",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_north_miami_beach",
+    "name": "North Miami Beach (Miami-Dade County): mayor and commission",
+    "url": "https://www.citynmb.com/385/Mayor-City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "North Miami Beach",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_opa_locka",
+    "name": "Opa-locka (Miami-Dade County): mayor and commission",
+    "url": "http://www.opalockafl.gov/171/Mayor-City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Opa-locka",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_palmetto_bay",
+    "name": "Palmetto Bay (Miami-Dade County): mayor and council",
+    "url": "http://www.palmettobay-fl.gov/376/Mayor-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Palmetto Bay",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_pinecrest",
+    "name": "Pinecrest (Miami-Dade County): mayor and council",
+    "url": "https://www.pinecrest-fl.gov/Government/Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Pinecrest",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_surfside",
+    "name": "Surfside (Miami-Dade County): mayor and commission",
+    "url": "http://www.townofsurfsidefl.gov/town-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Surfside",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_miami_dade_sweetwater",
+    "name": "Sweetwater (Miami-Dade County): mayor and commission",
+    "url": "http://www.cityofsweetwater.fl.gov/191/Elected-Officials",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Sweetwater",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_miami_dade_virginia_gardens",
+    "name": "Virginia Gardens (Miami-Dade County): mayor and council",
+    "url": "https://virginiagardens-fl.gov/mayor-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "Virginia Gardens",
+      "member_title": "Councilmember",
+      "seats": 6,
+      "loose": true
+    }
+  },
+  {
+    "key": "city_miami_dade_west_miami",
+    "name": "West Miami (Miami-Dade County): mayor and commission",
+    "url": "http://cityofwestmiamifl.com/index.asp?SEC=11625B96-B7DF-47FE-AD2E-97D2D1933ED9",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "West Miami",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_coconut_creek",
+    "name": "Coconut Creek (Broward County): mayor and commission",
+    "url": "https://www.coconutcreek.net/government/city-commission/city-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Coconut Creek",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_coral_springs",
+    "name": "Coral Springs (Broward County): mayor and commission",
+    "url": "https://www.coralsprings.gov/Government/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Coral Springs",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_fort_lauderdale",
+    "name": "Fort Lauderdale (Broward County): mayor and commission",
+    "url": "https://www.fortlauderdale.gov/Government/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Fort Lauderdale",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_hillsboro_beach",
+    "name": "Hillsboro Beach (Broward County): mayor and commission",
+    "url": "https://www.townofhillsborobeach.com/259/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Hillsboro Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_hollywood",
+    "name": "Hollywood (Broward County): mayor and commission",
+    "url": "https://www.hollywoodfl.org/89/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Hollywood",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_broward_lauderdale_by_the_sea",
+    "name": "Lauderdale-By-The-Sea (Broward County): mayor and commission",
+    "url": "https://lauderdalebythesea-fl.gov/187/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Lauderdale-By-The-Sea",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_lazy_lake",
+    "name": "Lazy Lake (Broward County): mayor and council",
+    "url": "https://lazylakefl.us/council-contact-info",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Lazy Lake",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_lighthouse_point",
+    "name": "Lighthouse Point (Broward County): mayor and commission",
+    "url": "https://lighthousepointfl.gov/215/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Lighthouse Point",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_margate",
+    "name": "Margate (Broward County): mayor and commission",
+    "url": "https://margatefl.com/287/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Margate",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_miramar",
+    "name": "Miramar (Broward County): mayor and commission",
+    "url": "https://www.miramarfl.gov/City-Government/Office-of-the-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Miramar",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_north_lauderdale",
+    "name": "North Lauderdale (Broward County): mayor and commission",
+    "url": "http://www.nlauderdale.org/quick_links/city_commission/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "North Lauderdale",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_oakland_park",
+    "name": "Oakland Park (Broward County): mayor and commission",
+    "url": "https://www.oaklandparkfl.gov/276/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Oakland Park",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_parkland",
+    "name": "Parkland (Broward County): mayor and commission",
+    "url": "https://cityofparkland.org/127/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Parkland",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_pembroke_park",
+    "name": "Pembroke Park (Broward County): mayor and commission",
+    "url": "https://www.tppfl.gov/162/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Pembroke Park",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_pembroke_pines",
+    "name": "Pembroke Pines (Broward County): mayor and commission",
+    "url": "https://www.ppines.com/745/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Pembroke Pines",
+      "member_title": "Commissioner",
+      "seats": 5,
+      "menu_links": true
+    }
+  },
+  {
+    "key": "city_broward_pompano_beach",
+    "name": "Pompano Beach (Broward County): mayor and commission",
+    "url": "https://www.pompanobeachfl.gov/government/city-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Pompano Beach",
+      "member_title": "Commissioner",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_broward_wilton_manors",
+    "name": "Wilton Manors (Broward County): mayor and commission",
+    "url": "https://wiltonmanors.gov/220/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Wilton Manors",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "board_sbdd",
+    "name": "South Broward Drainage District: Board of Commissioners",
+    "url": "https://www.sbdd.org/board-of-commissioners/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "jurisdiction": "South Broward Drainage District",
+      "special_district": "South Broward",
+      "member_title": "Commissioner",
+      "title_suffix": ", South Broward Drainage District",
+      "seats": 7,
+      "role_pattern": "^(chair|vice|secretary|treasurer|commissioner)"
+    }
+  },
+  {
+    "key": "board_csc_broward",
+    "name": "Children's Services Council of Broward County: Council Members",
+    "url": "https://www.cscbroward.org/council-members/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "jurisdiction": "Children's Services Council of Broward County",
+      "special_district": "csc-broward",
+      "member_title": "Member",
+      "title_suffix": ", Children's Services Council of Broward County",
+      "seats": 11,
+      "selection_method": "appointed",
+      "role_pattern": "(chair|secretary|appointee|superintendent|school board|director|member)"
+    }
+  },
+  {
+    "key": "board_sfwmd",
+    "name": "South Florida Water Management District: Governing Board",
+    "url": "https://www.sfwmd.gov/who-we-are/governing-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "jurisdiction": "South Florida Water Management District",
+      "special_district": "sfwmd",
+      "member_title": "Governing Board Member",
+      "title_suffix": ", South Florida Water Management District",
+      "seats": 9,
+      "selection_method": "appointed",
+      "role_pattern": "^(chair|vice chair|member)$"
+    }
+  },
+  {
+    "key": "school_charlotte",
+    "name": "Charlotte County School Board: board members",
+    "url": "https://www.yourcharlotteschools.net/72943_3",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Charlotte",
+      "jurisdiction": "Charlotte County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_citrus",
+    "name": "Citrus County School Board: board members",
+    "url": "https://www.citrusschools.org/meet-school-board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Citrus",
+      "jurisdiction": "Citrus County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_escambia",
+    "name": "Escambia County School Board: board members",
+    "url": "https://www.escambiaschools.org/domain/77",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Escambia",
+      "jurisdiction": "Escambia County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      },
+      "seat_name_lines": true
+    }
+  },
+  {
+    "key": "school_holmes",
+    "name": "Holmes County School Board: board members",
+    "url": "http://www.hdsb.org/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Holmes",
+      "jurisdiction": "Holmes County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_jackson",
+    "name": "Jackson County School Board: board members",
+    "url": "https://www.jcsb.org/421891_2",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Jackson",
+      "jurisdiction": "Jackson County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_liberty",
+    "name": "Liberty County School Board: board members",
+    "url": "https://www.lcsb.org/schoolboard",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Liberty",
+      "jurisdiction": "Liberty County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_orange",
+    "name": "Orange County School Board: board members",
+    "url": "https://www.ocps.net/school-board-members-home",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "jurisdiction": "Orange County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 8,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_palm_beach",
+    "name": "Palm Beach County School Board: board members",
+    "url": "https://www.palmbeachschools.org/school_board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Palm Beach County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 7,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_sumter",
+    "name": "Sumter County School Board: board members",
+    "url": "https://www.sumter.k12.fl.us/school-board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Sumter",
+      "jurisdiction": "Sumter County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
   }
 ]

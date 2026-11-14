@@ -298,9 +298,9 @@ export function countyCounts(records, counties) {
 
 const TITLE_RANK = [
   "chief justice", "chief judge", "governor", "lieutenant governor", "attorney general", "chief financial officer", "commissioner of agriculture",
-  "mayor", "vice mayor", "deputy mayor", "assistant deputy mayor", "council president", "commissioner", "councilmember",
+  "county mayor", "mayor", "vice mayor", "deputy mayor", "assistant deputy mayor", "council president", "commissioner", "councilmember",
   "county commissioner", "sheriff", "state attorney", "public defender", "clerk", "property appraiser", "tax collector",
-  "supervisor of elections",
+  "supervisor of elections", "chair", "vice chair", "secretary", "treasurer",
 ];
 
 function titleRank(title) {
@@ -340,7 +340,9 @@ export function rosterSection(record) {
       if (/district court of appeal/i.test(title)) return "District Court of Appeal";
       return "Governor and Cabinet";
     case "county":
-      if (/county commissioner/i.test(title)) return "County Commission";
+      if (record.special_district) return record.jurisdiction || "Special districts";
+      if (/county commissioner|county mayor|county council/i.test(title)) return "County Commission";
+      if (/community council/i.test(title)) return "Community Councils";
       if (CONSTITUTIONAL.test(title)) return "Constitutional officers";
       if (/school board/i.test(title)) return "School Board";
       if (/circuit judge/i.test(title)) return "Circuit Court judges";
@@ -357,6 +359,7 @@ const SECTION_ORDER = [
   "U.S. Senate", "U.S. House of Representatives", "Governor and Cabinet", "Florida Senate", "Florida House of Representatives",
   "Florida Supreme Court", "District Court of Appeal",
   "County Commission", "Constitutional officers", "School Board", "Circuit Court judges", "County Court judges", "Other county offices",
+  "Community Councils",
 ];
 
 /**
@@ -435,7 +438,8 @@ const JUDGES = /judge|justice/i;
 /**
  * Everyone who represents one place. `place` holds what the boundary files say about the point:
  * { county, congress, senate, house, commission, school, municipality, cityDistrict,
- *   cityDistricts: [every district key of that city], schoolDistricts: [district keys that are drawn] }.
+ *   cityDistricts: [every district key of that city], schoolDistricts: [district keys that are drawn],
+ *   special: key of the mapped special district at the point, countywideSpecial: [keys covering the whole county] }.
  * Returns { groups, judges }: groups as in countyGroups, and every judge and justice separately, since
  * courts are better shown collapsed than mixed in with the officials people contact.
  */
@@ -453,7 +457,10 @@ export function representativesFor(records, place, vacancies = []) {
         return r.statewide || (county && (r.counties || []).includes(county));
       case "county":
         if (r.county !== county) return false;
-        if (/county commissioner/i.test(title)) return same(r.district, place.commission);
+        if (r.special_district) return r.special_district === place.special || (place.countywideSpecial || []).includes(r.special_district);
+        // Counties without a district map (outside Broward and Miami-Dade) show their whole commission.
+        if (/county commissioner/i.test(title)) return place.commission == null || same(r.district, place.commission);
+        if (/community council/i.test(title)) return false; // no published boundaries to match an address to
         if (/school board/i.test(title)) {
           const drawn = (place.schoolDistricts || []).map(districtKey);
           return same(r.district, place.school) || !drawn.includes(districtKey(r.district));

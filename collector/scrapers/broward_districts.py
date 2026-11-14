@@ -2,9 +2,11 @@
 
 The layer lists, for every district polygon, the elected official and a link to their page. It is
 used for district seats only: the County Commission, the School Board and city commission districts.
-Mayors are skipped on purpose. When checked in November 2026, the layer named a former mayor for
-about a quarter of Broward's cities (mayors in many cities rotate yearly), while every district seat
-matched the city's own page.
+Mayors are skipped unless the source config lists the city in "mayor_cities". When checked in November
+2026, the layer named a former mayor for about a quarter of Broward's cities (mayors in many cities rotate
+yearly), while every district seat matched the city's own page. "mayor_cities" holds only cities whose
+own website cannot be collected (it blocks automated requests) and whose GIS mayor matched the city's
+page when checked; cities whose own site works are collected from it instead (city_roster sources).
 
 Rows marked EXPIRED (old district plans) and "TO BE DETERMINED" seats are skipped.
 """
@@ -38,7 +40,7 @@ def _https(url: str | None) -> str | None:
     return url if url and url.startswith("https://") else None
 
 
-def parse_broward_districts(payload: str, source_url: str) -> list[dict]:
+def parse_broward_districts(payload: str, source_url: str, mayor_cities: set[str] | frozenset = frozenset()) -> list[dict]:
     data = json.loads(payload)
     if "error" in data:
         raise FetchError(f"Broward County GIS returned an error: {data['error'].get('message')}")
@@ -48,6 +50,14 @@ def parse_broward_districts(payload: str, source_url: str) -> list[dict]:
         office, label = row.get("electedoffice") or "", clean_text(row.get("district"))
         name = _name(row.get("repname1") or "")
         district = clean_text(row.get("districtid")).lstrip("0") or None
+        if office == "Mayor" and _municipality(label) in mayor_cities and name and not re.search(r"vacant", name, re.I):
+            municipality = _municipality(label)
+            records.append({"name": name, "office_title": "Mayor", "selection_method": "elected", "source_url": source_url,
+                            "photo_url": _https(row.get("repimageurl1")), "official_website": row.get("districturl1"),
+                            "email": row.get("email1"), "phone": row.get("phone1"), "county": "Broward",
+                            "government_level": "municipal", "municipality": municipality, "jurisdiction": municipality,
+                            "party": "Nonpartisan"})
+            continue
         if "EXPIRED" in label.upper() or not name or re.search(r"to be determined|vacant", name, re.I) or not district:
             continue
         base = {
@@ -76,4 +86,4 @@ class BrowardDistrictsScraper(BaseScraper):
     def collect(self) -> list[dict]:
         query = urlencode({"where": "1=1", "outFields": FIELDS, "returnGeometry": "false", "f": "json"})
         url = f"{self.source_url.rstrip('/')}/query?{query}"
-        return parse_broward_districts(self.client.get(url), self.source_url)
+        return parse_broward_districts(self.client.get(url), self.source_url, set(self.config.get("mayor_cities") or []))

@@ -98,74 +98,53 @@ You can correct `full_name`, `first_name`, `middle_name`, `last_name`, `office_t
 `district`, `jurisdiction`, `municipality`, `phone`, `email`, `official_website`, `photo_url` and
 `selection_method`. A `photo_url` must start with `https://`; use `null` to remove a wrong photo.
 
-### Add officials no source covers: `data/manual_officials.json`
+### Hand-added officials: `data/manual_officials.json` (kept empty)
 
-Use this for county commissioners, city councils and similar. Every entry needs the official page
-you took it from:
+Every official comes from an automated source, so each record can be re-checked on every run and links to the
+page it came from. The file stays in place (publish still reads it) but is empty on purpose. To cover a new
+office, add a source instead (next section). Only use it as a last resort, with a `source_url` and a note on
+why no source can be collected; the README history shows the entry format.
 
-```json
-{
-  "officials": [
-    {
-      "name": "Jane Q. Public",
-      "office_title": "Mayor",
-      "government_level": "municipal",
-      "selection_method": "elected",
-      "party": "Nonpartisan",
-      "jurisdiction": "West Park",
-      "county": "Broward",
-      "municipality": "West Park",
-      "phone": "954-555-0100",
-      "email": "mayor@example.gov",
-      "official_website": "https://www.example.gov/mayor",
-      "photo_url": "https://www.example.gov/images/mayor.jpg",
-      "source_url": "https://www.example.gov/commission",
-      "source_name": "City of West Park",
-      "last_verified": "2026-11-10"
-    }
-  ]
-}
-```
+### Collect a county, city or special district automatically: `data/sources.json`
 
-`photo_url` is optional and must start with `https://`. A county official with a photo appears as a
-portrait on the county map.
+Most local sources use one of these scrapers:
 
-`government_level` is `federal`, `state`, `county` or `municipal`. A `municipal` entry needs both
-`county` and `municipality`. Use `"selection_method": "appointed"` for appointed posts such as a
-city manager, so they are labelled correctly.
+| Scraper | For | Notes |
+|---|---|---|
+| `broward_soe` | Broward Supervisor of Elections, every office on the ballot | judges, constitutional officers, state executives |
+| `miamidade_soe` | Miami-Dade Supervisor of Elections PDFs | officials list plus `config.judges_url` |
+| `broward_districts` | Broward County GIS district seats | `config.mayor_cities`: cities whose mayor is taken from GIS |
+| `city_roster` | a city's or board's own roster page | see below |
+| `county_directory` / `municipal_directory` | a page with a regular table | CSS selectors per field |
 
-### Collect a county or city page automatically: `data/sources.json`
-
-If a local government lists its officials in a regular table or list, you can add it as a source
-with CSS selectors that describe where each field is:
+`city_roster` reads a "Mayor and Commission" page the way a person would: it recognises "Mayor Jane Doe",
+"Jane Doe, Vice Mayor", a name above (or below) a title, and the member cards used by Granicus OpenCities
+sites (with photo, phone and email). For a city:
 
 ```json
 {
-  "key": "west_park_commission",
-  "name": "City of West Park: City Commission",
+  "key": "city_broward_example",
+  "name": "Example (Broward County): mayor and commission",
   "url": "https://www.example.gov/commission",
   "level": "municipal",
-  "scraper": "municipal_directory",
-  "config": {
-    "row_selector": "table.commission tbody tr",
-    "fields": {
-      "name": "td:nth-of-type(1)",
-      "title": "td:nth-of-type(2)",
-      "district": "td:nth-of-type(3)",
-      "phone": "td:nth-of-type(4)",
-      "email": "a[href^='mailto:']"
-    },
-    "title_must_contain": ["Mayor", "Commissioner"],
-    "county": "Broward",
-    "municipality": "West Park",
-    "selection_method": "elected"
-  }
+  "scraper": "city_roster",
+  "config": {"county": "Broward", "municipality": "Example", "member_title": "Commissioner", "seats": 5}
 }
 ```
 
-Use `"scraper": "county_directory"` and leave out `municipality` for a county page. Check the site's
-terms of use first. Pages that only show their content with JavaScript can't be collected this way,
-so add those officials by hand.
+Optional config: `extra_urls` (more pages, e.g. one per member), `menu_links` (names listed only in the site
+menu), `loose` (a name followed by an email address counts), `selector` (read only part of the page) and
+`exclude` (names to ignore). For a special district board add `jurisdiction`, `special_district` (a key in
+`special_districts.json`), `title_suffix` (", South Broward Drainage District") and `role_pattern` (a regex the
+line under each name must match). If the page yields more than two people fewer or more than `seats`, the
+source fails and the previous records stay published.
+
+To find a city's roster page, list the cities in a JSON file and run
+`python tools/find_council_pages.py cities.json`; it follows each homepage's links and reports the page that
+names the most members. Check its suggestion before adding the source.
+
+Sites that refuse automated requests (HTTP 403) or disallow them in robots.txt are never worked around; they
+stay under "Not yet covered" on the methodology page.
 
 ### Portraits and bio facts: `data/profiles.json`
 
@@ -177,9 +156,8 @@ and [Open States](https://github.com/openstates/people) for the Legislature. Clo
 python tools/enrich.py --congress ../congress-legislators --openstates ../people
 ```
 
-An entry is used only when the district and surname both match, and it only fills empty fields. Hand-added
-officials carry their own `bio` in `manual_officials.json` (`born`, `serving_since`, `term_ends`,
-`next_election`, `previously`, `summary`, `note`).
+An entry is used only when the district and surname both match, and it only fills empty fields. Scrapers can
+also return term facts (`next_election`, `term_ends`) published by their source.
 
 ### Wikipedia gap-filling: `data/wikipedia.json`
 
@@ -196,7 +174,10 @@ python -m collector.publish && python tools/wikipedia.py --review
 ### District maps: `site/assets/boundaries/`
 
 Built by `tools/build_boundaries.py` from the Census Bureau (Congress, Florida Senate and House, counties,
-cities) and Broward County GIS (County Commission, School Board, city commission districts, city limits). Run
+cities), Broward County GIS (County Commission, School Board, city commission and water control districts,
+city limits), Miami-Dade County GIS (County Commission, School Board, community development districts) and City
+of Miami GIS (its commission districts). It also adds Miami-Dade's community development districts to
+`data/special_districts.json`. Run
 it again after a redistricting; `--counties` also rewrites the Florida House county lists in `districts.json`
 and checks the method against the Senate roster and the congressional statute.
 
@@ -263,14 +244,16 @@ data/
   sources.json         which pages to collect
   collected.json       written by the collector; don't edit by hand
   corrections.json     your fixes
-  manual_officials.json  officials you add yourself
-  profiles.json        portraits and bio facts (tools/enrich.py) plus hand-written details
+  manual_officials.json  kept empty: every official comes from a source
+  profiles.json        portraits and bio facts (tools/enrich.py)
+  special_districts.json  special districts: details, sources, and which are mapped
   wikipedia.json       last-resort portraits, birth dates and article links (tools/wikipedia.py)
   site.json            report link and contact email
 collector/             Python: source readers, validation, collect and publish steps
 tools/build-map.mjs    rebuilds the county map file (only needed if you want to change the map)
 tools/build_boundaries.py  downloads district shapes for the representatives map
 tools/wikipedia.py     fills missing photos and birth dates from Wikipedia/Wikidata
+tools/find_council_pages.py  suggests each city's council roster page
 tests/                 Python and JavaScript tests
 .github/workflows/     daily collection, deploy to Pages, tests
 ```
@@ -282,8 +265,11 @@ tests/                 Python and JavaScript tests
   counties in their district.
 - The county map places U.S. House members using the counties in their district's legal description and
   Florida House members using the district maps. The representatives map matches by exact district.
-- Local offices (county commission, constitutional officers, school board, judges, city officials) are
-  filled in for Broward County first, from the Supervisor of Elections and each city's own website.
+- Local offices (county commission, constitutional officers, school board, judges, city officials, special
+  districts) are covered for Broward and Miami-Dade counties, from each county's Supervisor of Elections, county
+  GIS and each city's own website. A few cities' sites refuse automated requests; the methodology page lists them.
+- The representatives map suggests addresses with Esri's ArcGIS World Geocoder (no key needed for searches that
+  aren't stored) and falls back to the Census Bureau geocoder.
 - Portraits are linked from their source, not copied. Members of Congress come from a public-domain
   image set matched by state, district and surname. Florida House photos are read from the roster page
   and have not been checked against the live site; the "With photo" column in each collection report

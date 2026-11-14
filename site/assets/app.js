@@ -652,7 +652,7 @@ function loadMap() {
   return mapRequest;
 }
 
-function personCard(r) {
+function personCard(r, { contact = false } = {}) {
   if (r.vacant) {
     return `<li class="person vacant"><div><span class="avatar lg blank" aria-hidden="true">—</span><span>
       <span class="person-name">Vacant seat</span>
@@ -661,11 +661,16 @@ function personCard(r) {
     </span></div></li>`;
   }
   const seat = seatText(r);
-  return `<li class="person"><a href="${profileHref(r)}">${avatar(r, "lg")}<span>
+  const actions = contact ? [
+    r.phone ? `<a href="${telHref(r.phone)}" aria-label="Call ${esc(r.full_name)}" title="${esc(r.phone)}">${ICON.phone}</a>` : "",
+    r.email ? `<a href="mailto:${esc(r.email)}" aria-label="Email ${esc(r.full_name)}" title="${esc(r.email)}">${ICON.mail}</a>` : "",
+    safeUrl(r.official_website) ? `<a href="${esc(r.official_website)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(r.full_name)}'s official website" title="Official website">${ICON.globe}</a>` : "",
+  ].filter(Boolean).join("") : "";
+  return `<li class="person${actions ? " with-actions" : ""}"><a href="${profileHref(r)}">${avatar(r, "lg")}<span>
     <span class="person-name">${esc(r.full_name)}</span>
     <span class="muted small">${esc(r.office_title)}${seat ? ` · ${esc(seat)}` : ""}</span>
     ${r.party ? `<span class="badge outline">${esc(r.party)}</span>` : ""}
-  </span></a></li>`;
+  </span></a>${actions ? `<span class="person-actions">${actions}</span>` : ""}</li>`;
 }
 
 const LONG_SECTION = 12;
@@ -770,9 +775,9 @@ function countyExplorer(root, records, meta, map, { initial = "Broward", syncPar
       .join("");
 
     const coverage =
-      selected === "Broward"
+      LOCAL_COUNTIES.includes(selected)
         ? ""
-        : `<p class="muted small notice">County commissions, judges and city councils are filled in for Broward County first. Here you'll find
+        : `<p class="muted small notice">County commissions, judges and city councils are covered for Broward and Miami-Dade counties so far. Here you'll find
            statewide officials, ${esc(selected)} County's members of Congress and Legislature, and its Supervisor of Elections.</p>`;
 
     panel.innerHTML = `
@@ -951,8 +956,10 @@ function county() {
 // -- your representatives (map) ----------------------------------------------------
 const BOUNDARIES = {
   counties: "fl-counties", cities: "fl-cities", congress: "fl-congress", senate: "fl-senate", house: "fl-house",
-  commission: "broward-commission", school: "broward-school", cityDistricts: "broward-city-districts",
+  commission: "county-commission", school: "school-board", cityDistricts: "city-districts", special: "special-districts",
 };
+/** Counties mapped down to county, school board, city and special districts. */
+const LOCAL_COUNTIES = ["Broward", "Miami-Dade"];
 const boundaryRequests = new Map();
 function loadBoundary(key) {
   if (!boundaryRequests.has(key)) {
@@ -969,15 +976,21 @@ function loadBoundary(key) {
 const isSeat = (r, district) => r.district != null && districtKey(r.district) === districtKey(district);
 /** The layers a visitor can show on the map, and who holds each district in them. */
 const MAP_LAYERS = [
-  { key: "commission", label: "County Commission", area: "Broward", partisan: true, holder: (r, p) => r.office_title === "County Commissioner" && r.county === "Broward" && isSeat(r, p.district), name: (p) => `County Commission District ${p.district}` },
-  { key: "school", label: "School Board", area: "Broward", holder: (r, p) => /school board/i.test(r.office_title) && r.county === "Broward" && isSeat(r, p.district), name: (p) => `School Board District ${p.district}` },
-  { key: "cityDistricts", label: "City commission districts", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.municipality && isSeat(r, p.district), name: (p) => `${p.municipality} District ${p.district}` },
-  { key: "cities", label: "Cities (mayors)", area: "Broward", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.name && /^mayor$/i.test(r.office_title), name: (p) => p.name },
+  { key: "commission", label: "County Commission", area: "local", partisan: true, holder: (r, p) => r.office_title === "County Commissioner" && r.county === p.county && isSeat(r, p.district), name: (p) => `${p.county} Commission District ${p.district}` },
+  { key: "school", label: "School Board", area: "local", holder: (r, p) => /school board/i.test(r.office_title) && r.county === p.county && isSeat(r, p.district), name: (p) => `${p.county} School Board District ${p.district}` },
+  { key: "cityDistricts", label: "City commission districts", area: "local", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.municipality && isSeat(r, p.district), name: (p) => `${p.municipality} District ${p.district}` },
+  { key: "cities", label: "Cities (mayors)", area: "local", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.name && /^mayor$/i.test(r.office_title), name: (p) => p.name },
   { key: "house", partisan: true, label: "Florida House", holder: (r, p) => /^state representative/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida House District ${p.district}` },
   { key: "senate", partisan: true, label: "Florida Senate", holder: (r, p) => /^state senator/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida Senate District ${p.district}` },
+  { key: "special", label: "Special districts", area: "local", holder: () => false, name: (p) => SPECIAL.get(p.key)?.name || p.key,
+    info: (p) => SPECIAL.get(p.key) || { name: p.key, type: "Special district", status: p.status } },
   { key: "congress", partisan: true, label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
 ];
 const BROWARD_VIEW = [[26.33, -80.47], [25.95, -80.07]];
+const MIAMI_DADE_VIEW = [[25.98, -80.88], [25.23, -80.12]];
+const LOCAL_VIEW = [[26.33, -80.88], [25.23, -80.07]];
+const VIEWS = { broward: BROWARD_VIEW, "miami-dade": MIAMI_DADE_VIEW, local: LOCAL_VIEW, florida: [[31.0, -87.6], [24.4, -80.0]] };
+let SPECIAL = new Map(); // special district key -> details from meta.json
 const FLORIDA_VIEW = [[31.0, -87.6], [24.4, -80.0]];
 // Validated with the dataviz palette checker (CVD and contrast) on the light surface.
 const PARTY_COLORS = { Republican: "#e34948", Democratic: "#2a78d6", other: "#6250d6", none: "#b9c0cc" };
@@ -992,6 +1005,7 @@ const BORDER_STYLE = {
   house: { color: "#6b2a7a", dashArray: "6 4", short: (p) => `House ${p.district}` },
   senate: { color: "#0b6e79", dashArray: "12 6", short: (p) => `Senate ${p.district}` },
   congress: { color: "#b3262e", dashArray: null, short: (p) => `CD ${p.district}` },
+  special: { color: "#2457a6", dashArray: "3 4", short: (p) => SPECIAL.get(p.key)?.name.replace(/ (Water Control|Improvement|Drainage|Community Development|Water Management|Irrigation and Soil Conservation) District$/, "") || p.key },
 };
 function partyColor(party, vacant = false) {
   if (vacant || !party || party === "Party not listed") return PARTY_COLORS.none;
@@ -999,6 +1013,30 @@ function partyColor(party, vacant = false) {
 }
 
 /** Census Bureau geocoder, called with JSONP because it does not send CORS headers. Nothing is stored. */
+// Esri's World Geocoder answers browser requests directly (CORS) and needs no key for searches that are
+// not stored. It suggests addresses as the visitor types; the Census Bureau's geocoder is the fallback.
+const ARCGIS = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer";
+const FLORIDA_EXTENT = "-87.7,24.3,-79.8,31.1";
+async function suggestAddresses(text, signal) {
+  const url = `${ARCGIS}/suggest?f=json&text=${encodeURIComponent(text)}&searchExtent=${FLORIDA_EXTENT}&countryCode=USA&category=Address,Postal,Populated%20Place&maxSuggestions=6`;
+  const response = await fetch(url, { signal });
+  if (!response.ok) return [];
+  const data = await response.json();
+  return (data.suggestions || []).filter((s) => /\bFL\b|Florida/.test(s.text));
+}
+/** Coordinates for an address: Esri first (using the suggestion's key when there is one), then the Census Bureau. */
+async function findAddress(text, magicKey) {
+  try {
+    const url = `${ARCGIS}/findAddressCandidates?f=json&maxLocations=1&countryCode=USA&searchExtent=${FLORIDA_EXTENT}&outSR=4326`
+      + `&SingleLine=${encodeURIComponent(text)}${magicKey ? `&magicKey=${encodeURIComponent(magicKey)}` : ""}`;
+    const response = await fetch(url);
+    const best = response.ok ? (await response.json()).candidates?.[0] : null;
+    if (best && best.score >= 80) return { x: best.location.x, y: best.location.y, label: best.address };
+  } catch { /* fall through to the Census Bureau */ }
+  const census = await geocode(text);
+  return census.length ? { x: census[0].coordinates.x, y: census[0].coordinates.y, label: census[0].matchedAddress } : null;
+}
+
 function geocode(address) {
   return new Promise((resolve, reject) => {
     const callback = `geocode${Date.now()}`;
@@ -1020,16 +1058,20 @@ function reps() {
     return;
   }
   withData(app, [loadOfficials, loadMeta, () => loadBoundary("counties")], (records, meta, counties) => {
+    SPECIAL = new Map((meta.special_districts || []).map((d) => [d.key, d]));
     app.innerHTML = `
-      <form class="rep-search panel" id="rep-form" role="search">
+      <form class="rep-search panel" id="rep-form" role="search" autocomplete="off">
         <label for="rep-address" class="strong">Your address</label>
         <div class="rep-search-row">
-          <div class="input-icon">${ICON.search}<input id="rep-address" type="search" autocomplete="street-address" maxlength="160"
-            placeholder="e.g. 115 S Andrews Ave, Fort Lauderdale"></div>
+          <div class="input-icon combo">${ICON.search}<input id="rep-address" type="text" maxlength="160" role="combobox"
+            aria-autocomplete="list" aria-expanded="false" aria-controls="rep-suggest" spellcheck="false"
+            placeholder="Start typing, e.g. 111 NW 1st St, Miami">
+            <ul id="rep-suggest" class="suggest" role="listbox" aria-label="Suggested addresses" hidden></ul></div>
           <button class="button" type="submit">Find</button>
           <button class="button outline" type="button" id="rep-locate">${ICON.pin}Use my location</button>
         </div>
-        <p class="muted small">Your address goes only to the U.S. Census Bureau's address finder to place it on the map. This site does not store it.</p>
+        <p class="muted small">Addresses are suggested and placed on the map by Esri's ArcGIS World Geocoder, with the U.S. Census Bureau's
+        address finder as a fallback. This site does not store what you type.</p>
       </form>
       <div class="rep-layout">
         <section class="panel flush rep-map-card" aria-label="Map of districts">
@@ -1042,7 +1084,8 @@ function reps() {
             ${MAP_LAYERS.map((l) => `<button type="button" class="chip small-chip" data-border="${l.key}" aria-pressed="false"><svg class="line-swatch" viewBox="0 0 24 6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke="${BORDER_STYLE[l.key].color}" stroke-width="2.5" ${BORDER_STYLE[l.key].dashArray ? `stroke-dasharray="${BORDER_STYLE[l.key].dashArray}"` : ""}/></svg>${esc(l.label.replace(" (mayors)", ""))}</button>`).join("")}
           </div>
           <div id="rep-map" class="rep-map"></div>
-          <p class="muted small rep-map-note">District lines: U.S. Census Bureau (Congress and the Legislature, 2022 plans) and Broward County GIS (county and city districts).
+          <p class="muted small rep-map-note">District lines: U.S. Census Bureau (Congress and the Legislature, 2022 plans), Broward County GIS,
+          Miami-Dade County GIS and City of Miami GIS (county, school board, city and special districts).
           Florida redrew its congressional districts for members elected in November 2026; until they take office in January 2027 the 2022 districts apply.</p>
         </section>
         <section class="panel rep-panel" aria-live="polite" id="rep-panel"></section>
@@ -1056,7 +1099,7 @@ function reps() {
     });
     map.createPane("base").style.zIndex = 250;
     const base = L.geoJSON(counties, {
-      pane: "base", interactive: false, attribution: "Boundaries: U.S. Census Bureau, Broward County GIS",
+      pane: "base", interactive: false, attribution: "Boundaries: U.S. Census Bureau, Broward County GIS, Miami-Dade County GIS",
       style: { color: "#c3cad6", weight: 1, fillColor: "#ffffff", fillOpacity: 1 },
     }).addTo(map);
     function setStreets(on) {
@@ -1083,12 +1126,13 @@ function reps() {
     const portrait = (r) =>
       L.divIcon({ className: "rep-marker", html: avatar(r, "sm"), iconSize: [40, 40], iconAnchor: [20, 20] });
 
-    /** A layer's features; city limits are limited to Broward, the only county with city officials so far. */
+    /** A layer's features; city limits are limited to the counties with city officials. */
     async function layerData(spec) {
       const data = await loadBoundary(spec.key);
       if (spec.key !== "cities") return data;
-      const broward = (await loadBoundary("counties")).features.find((f) => f.properties.name === "Broward");
-      return { ...data, features: data.features.filter((f) => { const p = labelPoint(f.geometry); return p && pointInGeometry(p[0], p[1], broward.geometry); }) };
+      const local = (await loadBoundary("counties")).features.filter((f) => LOCAL_COUNTIES.includes(f.properties.name));
+      const countyOf = (f) => { const p = labelPoint(f.geometry); return p && local.find((c) => pointInGeometry(p[0], p[1], c.geometry))?.properties.name; };
+      return { ...data, features: data.features.map((f) => ({ ...f, properties: { ...f.properties, county: countyOf(f) } })).filter((f) => f.properties.county) };
     }
 
     // Border overlays, independent of the coloured layer.
@@ -1166,6 +1210,9 @@ function reps() {
       const legend = partisan
         ? `<ul class="legend-row" aria-label="Party colours">${Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([label, n]) =>
             `<li><span class="swatch-dot" style="background:${partyColor(label === "Vacant or not listed" ? null : label, label === "Vacant or not listed")}"></span>${esc(label)} <span class="muted tabular">${n}</span></li>`).join("")}</ul>`
+        : spec.key === "special" ? `<p class="muted small">In Broward, water control, drainage and improvement districts manage canals and stormwater; in Miami-Dade,
+            community development districts build and maintain roads, drainage and amenities for a neighbourhood. Countywide and regional districts
+            (children's services, water management, hospital and soil and water districts) appear when you look up an address.</p>`
         : `<p class="muted small">Colours only separate neighbouring districts. ${!spec.partisan ? "These offices are nonpartisan."
             : single && rows[0]?.holder?.party ? `Every seat is held by ${esc({ Democratic: "a Democrat", Republican: "a Republican" }[rows[0].holder.party] || "the same party")}, so party colours would paint them all alike.` : ""}</p>`;
       panel.innerHTML = `
@@ -1175,20 +1222,22 @@ function reps() {
           ${spec.partisan ? `<div class="chips" role="group" aria-label="Colour districts by">
             <button type="button" class="chip" data-color="party" aria-pressed="${colorMode === "party"}">By party</button>
             <button type="button" class="chip" data-color="district" aria-pressed="${colorMode === "district"}">By district</button></div>` : ""}
-          ${spec.area === "Broward" ? "" : `<div class="chips" role="group" aria-label="Zoom the map">
+          <div class="chips" role="group" aria-label="Zoom the map">
             <button type="button" class="chip" data-zoom="broward">Broward</button>
-            <button type="button" class="chip" data-zoom="florida">All of Florida</button></div>`}
+            <button type="button" class="chip" data-zoom="miami-dade">Miami-Dade</button>
+            ${spec.area === "local" ? "" : `<button type="button" class="chip" data-zoom="florida">All of Florida</button>`}</div>
         </div>
         ${legend}
         ${rows.length > 12 ? `<div class="input-icon gap-top">${ICON.search}<input type="search" class="district-filter" aria-label="Filter districts" placeholder="Filter by name, district or party"></div>` : ""}
         <ul class="district-list">${rows.map((row, i) => `<li data-row="${i}">
           <button type="button" class="district-row" data-focus="${i}">
             <span class="swatch-bar" style="background:${row.color}"></span>
-            ${row.holder ? avatar(row.holder, "sm") : '<span class="avatar sm blank" aria-hidden="true">—</span>'}
-            <span><span class="strong">${esc(row.holder ? row.holder.full_name : "Vacant or not listed")}</span>
-              <span class="muted small">${esc(row.title)}${row.holder?.party ? ` · ${esc(partyLabel(row.holder.party))}` : ""}</span></span>
+            ${row.info ? "" : row.holder ? avatar(row.holder, "sm") : '<span class="avatar sm blank" aria-hidden="true">—</span>'}
+            <span><span class="strong">${esc(row.info ? row.info.name : row.holder ? row.holder.full_name : "Vacant or not listed")}</span>
+              <span class="muted small">${row.info ? `${esc(row.info.type)} · ${esc(row.info.status)}${row.info.note ? " · name not confirmed" : ""}`
+                : `${esc(row.title)}${row.holder?.party ? ` · ${esc(partyLabel(row.holder.party))}` : ""}`}</span></span>
           </button>
-          ${row.holder ? `<a class="small" href="${profileHref(row.holder)}">Profile</a>` : ""}</li>`).join("")}</ul>
+          ${row.holder ? `<a class="small" href="${profileHref(row.holder)}">Profile</a>` : safeUrl(row.info?.website) ? `<a class="small" href="${esc(row.info.website)}" target="_blank" rel="noopener noreferrer">Website</a>` : ""}</li>`).join("")}</ul>
         <p class="muted small fine">Click a name here to zoom to that district. Click anywhere on the map, or search an address above, to see everyone who represents that spot.</p>`;
     }
 
@@ -1214,12 +1263,13 @@ function reps() {
       const features = [...data.features].sort((a, b) => spec.name(a.properties).localeCompare(spec.name(b.properties), "en", { numeric: true }));
       const holders = features.map((f) => records.find((r) => spec.holder(r, f.properties)) || null);
       const colors = districtColors(features, holders, spec.partisan);
-      const rows = features.map((f, i) => ({ feature: f, holder: holders[i], color: colors[i], title: spec.name(f.properties) }));
+      const rows = features.map((f, i) => ({ feature: f, holder: holders[i], color: colors[i], title: spec.name(f.properties), info: spec.info?.(f.properties) }));
       rows.forEach((row, i) => {
         row.layer = L.geoJSON(row.feature, {
           style: { color: "#ffffff", weight: 1.5, fillColor: row.color, fillOpacity: 0.38, dashArray: row.holder ? null : "4 4" },
         }).addTo(shown);
-        const who = row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}` : "Vacant or not listed";
+        const who = row.info ? `${esc(row.info.type)} · ${esc(row.info.status)}`
+          : row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}` : "Vacant or not listed";
         row.layer.bindTooltip(`${esc(row.title)}<br>${who}`, { sticky: true });
         row.layer.on("mouseover", () => highlight(i, true));
         row.layer.on("mouseout", () => highlight(i, false));
@@ -1233,7 +1283,7 @@ function reps() {
       current = { spec, rows };
       if (!pin) {
         legendPanel();
-        if (!keepView) map.fitBounds(spec.area === "Broward" ? BROWARD_VIEW : L.featureGroup(rows.map((r) => r.layer)).getBounds(), { padding: [10, 10] });
+        if (!keepView) map.fitBounds(spec.area === "local" ? LOCAL_VIEW : L.featureGroup(rows.map((r) => r.layer)).getBounds(), { padding: [10, 10] });
       }
       drawMarkers();
     }
@@ -1242,7 +1292,7 @@ function reps() {
       const color = event.target.closest("[data-color]");
       if (color && current) { colorMode = color.dataset.color; showLayer(current.spec.key, { keepView: true }); return; }
       const zoom = event.target.closest("[data-zoom]");
-      if (zoom) { map.fitBounds(zoom.dataset.zoom === "broward" ? BROWARD_VIEW : FLORIDA_VIEW); return; }
+      if (zoom) { map.fitBounds(VIEWS[zoom.dataset.zoom] || FLORIDA_VIEW); return; }
       const focus = event.target.closest("[data-focus]");
       if (focus && current) {
         const row = current.rows[Number(focus.dataset.focus)];
@@ -1272,6 +1322,21 @@ function reps() {
         $(`[data-row="${i}"]`, panel).hidden = Boolean(q) && !text.includes(q);
       });
     });
+
+    function specialSummary(place) {
+      const here = SPECIAL.get(place.special);
+      const others = [...SPECIAL.values()].filter((d) => d.area !== "mapped" && (!d.county || d.county === place.county));
+      const item = (d, lead) => `<li><span class="strong">${esc(d.name)}</span> <span class="muted small">${esc(d.type)}${d.area_note ? ` · ${esc(d.area_note)}` : ""}</span>
+        ${lead ? `<br><span class="small">${esc(d.board || "")}</span>` : ""}
+        ${d.note ? `<br><span class="muted small">${esc(d.note)}</span>` : ""}
+        <span class="small">${[d.phone ? `<a href="${telHref(d.phone)}">${esc(d.phone)}</a>` : "", safeUrl(d.website) ? `<a href="${esc(d.website)}" target="_blank" rel="noopener noreferrer">Website</a>` : "",
+          ...(d.sources || []).slice(0, 1).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Source</a>`)].filter(Boolean).join(" · ")}</span></li>`;
+      return `<section class="special-box fine"><h3 class="group">Special districts</h3>
+        <p class="muted small">${here ? "The special district mapped at this spot:" : "This spot isn't inside a mapped special district."}</p>
+        ${here ? `<ul class="plain special-list">${item(here, true)}</ul>` : ""}
+        <p class="muted small gap-top">Countywide and regional districts:</p>
+        <ul class="plain special-list">${others.map((d) => item(d, false)).join("")}</ul></section>`;
+    }
 
     function intro() {
       panel.innerHTML = `
@@ -1305,8 +1370,9 @@ function reps() {
         { label: "Florida Senate", feature: featureAt(senate, lon, lat) },
         { label: "Florida House", feature: featureAt(house, lon, lat) },
       ];
-      if (county === "Broward") {
-        const [commission, school, cityDistricts] = await Promise.all(["commission", "school", "cityDistricts"].map(loadBoundary));
+      if (LOCAL_COUNTIES.includes(county)) {
+        const mine = (layer) => ({ ...layer, features: layer.features.filter((f) => f.properties.county === county) });
+        const [commission, school, cityDistricts, specialLayer] = (await Promise.all(["commission", "school", "cityDistricts", "special"].map(loadBoundary))).map(mine);
         const own = cityDistricts.features.filter((f) => f.properties.municipality === place.municipality);
         const cityDistrict = own.find((f) => pointInGeometry(lon, lat, f.geometry));
         Object.assign(place, {
@@ -1317,6 +1383,10 @@ function reps() {
           cityDistrict: cityDistrict?.properties.district,
         });
         hits.push({ label: "County Commission", feature: featureAt(commission, lon, lat) }, { label: "School Board", feature: featureAt(school, lon, lat) });
+        const specialHere = featureAt(specialLayer, lon, lat);
+        place.special = specialHere?.properties.key || null;
+        place.countywideSpecial = [...SPECIAL.values()].filter((d) => d.area !== "mapped" && (!d.county || d.county === county)).map((d) => d.key);
+        if (specialHere) hits.push({ label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
         if (cityDistrict) hits.push({ label: `${place.municipality} Commission`, feature: cityDistrict });
       }
 
@@ -1325,6 +1395,14 @@ function reps() {
       lookupHits = { found, current: found.length - 1 };
       showHit(lookupHits.current);
       const { groups, judges } = representativesFor(records, place, meta.vacancies || []);
+      const local = LOCAL_COUNTIES.includes(county);
+      // Results are grouped the way ballots and civic tools group them: by level of government, most local last.
+      const tabs = [
+        ...groups.map((g) => ({ key: g.level, label: LEVEL_LABELS[g.level], count: g.count })),
+        ...(local ? [{ key: "special", label: "Special districts", count: null }] : []),
+        ...(judges.length ? [{ key: "courts", label: "Courts", count: judges.length }] : []),
+      ];
+      const total = groups.reduce((n, g) => n + g.count, 0);
       const tags = [
         `<li><span class="badge">${esc(county)} County</span></li>`,
         place.municipality ? `<li><span class="badge">${esc(place.municipality)}</span></li>` : `<li><span class="badge outline">Unincorporated</span></li>`,
@@ -1332,26 +1410,33 @@ function reps() {
           title="Show this district on the map">${esc(h.label)} ${esc(districtLabel(h.feature.properties.district))}</button></li>`),
       ].join("");
       const body = groups
-        .map((g) => `<section class="roster-level"><h3 class="group">${esc(LEVEL_LABELS[g.level])} <span class="count">${formatNumber(g.count)}</span></h3>
-          ${g.sections.map((s) => `<div class="roster-section"><h4>${esc(s.name)}</h4><ul class="people">${s.items.map(personCard).join("")}</ul></div>`).join("")}</section>`)
+        .map((g) => `<section class="roster-level" data-level="${g.level}"><h3 class="group">${esc(LEVEL_LABELS[g.level])} <span class="count">${formatNumber(g.count)}</span></h3>
+          ${g.sections.map((s) => `<div class="roster-section"><h4>${esc(s.name)}</h4><ul class="people">${s.items.map((r) => personCard(r, { contact: true })).join("")}</ul></div>`).join("")}</section>`)
         .join("");
-      const partial = county === "Broward"
-        ? (!place.municipality ? "" : records.some((r) => r.municipality === place.municipality) ? "" :
-          `<p class="notice small">${esc(place.municipality)}'s commission isn't in the directory yet.</p>`)
-        : `<p class="notice small">Outside Broward County the directory covers federal, state and statewide officials and the Supervisor of Elections.
-           County commissions, school boards and city officials are being added Broward first.</p>`;
+      const covered = !place.municipality || records.some((r) => r.municipality === place.municipality);
+      const partial = local
+        ? (covered ? "" : `<p class="notice small">${esc(place.municipality)}'s council isn't in the directory yet: its website couldn't be collected automatically.</p>`)
+        : `<p class="notice small">Outside Broward and Miami-Dade counties the directory covers federal, state and statewide officials and the
+           Supervisor of Elections. County commissions, school boards and city officials are being added county by county.</p>`;
       panel.innerHTML = `
-        <div class="panel-top"><div><h2>Your representatives</h2>
-          <p class="muted small">${esc(label || `${lat.toFixed(5)}, ${lon.toFixed(5)}`)}</p></div>
-          <a class="details" href="county.html?name=${encodeURIComponent(county)}">${esc(county)} County page${ICON.arrow}</a></div>
+        <div class="panel-top rep-results-top"><div><h2>Your representatives</h2>
+          <p class="muted small">${esc(label || `${lat.toFixed(5)}, ${lon.toFixed(5)}`)} · ${plural(total, "official")}</p></div>
+          <div class="rep-actions">
+            <button type="button" class="button outline small-button" data-copy-link>Copy link</button>
+            <a class="details" href="county.html?name=${encodeURIComponent(county)}">${esc(county)} County page${ICON.arrow}</a></div></div>
         <ul class="tag-list">${tags}</ul>
+        <div class="chips rep-filter" role="group" aria-label="Show officials by level">
+          <button type="button" class="chip" data-level-filter="" aria-pressed="true">All</button>
+          ${tabs.map((t) => `<button type="button" class="chip" data-level-filter="${t.key}" aria-pressed="false">${esc(t.label)}${t.count != null ? ` <span class="count">${formatNumber(t.count)}</span>` : ""}</button>`).join("")}
+        </div>
         ${partial}
         <div class="roster">${body || empty("No officials found for this spot")}</div>
-        ${judges.length ? `<details class="roster-section fine"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
+        ${local ? `<div data-level="special">${specialSummary(place)}</div>` : ""}
+        ${judges.length ? `<details class="roster-section fine" data-level="courts"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
           <p class="muted small">Judges and justices whose courts cover this spot. Most are appointed or elected to serve the whole county, circuit or state.</p>
           ${groupRoster(judges).map((g) => g.sections.map((s) => `<h4 class="gap-top">${esc(s.name)} <span class="count">${formatNumber(s.items.length)}</span></h4>
             ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
-              : `<ul class="people">${s.items.map(personCard).join("")}</ul>`}`).join("")).join("")}
+              : `<ul class="people">${s.items.map((r) => personCard(r, { contact: true })).join("")}</ul>`}`).join("")).join("")}
         </details>` : ""}`;
       if (!activeLayer) {
         const local = found.at(-1);
@@ -1363,22 +1448,80 @@ function reps() {
       window.history.replaceState(null, "", `${window.location.pathname}?${next}`);
     }
 
-    $("#rep-form").addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const address = $("#rep-address").value.trim();
-      if (!address) return;
+    // Address box: a combobox (WAI-ARIA pattern) with suggestions as you type.
+    const input = $("#rep-address");
+    const list = $("#rep-suggest");
+    let suggestions = [];
+    let active = -1;
+    let pending = null;
+    let timer = null;
+    const closeList = () => { list.hidden = true; input.setAttribute("aria-expanded", "false"); input.removeAttribute("aria-activedescendant"); active = -1; };
+    const renderList = () => {
+      if (!suggestions.length) { closeList(); return; }
+      list.innerHTML = suggestions.map((s, i) => `<li role="option" id="rep-suggest-${i}" data-suggest="${i}" aria-selected="${i === active}">${ICON.pin}<span>${esc(s.text.replace(/, USA$/, ""))}</span></li>`).join("");
+      list.hidden = false;
+      input.setAttribute("aria-expanded", "true");
+      if (active >= 0) input.setAttribute("aria-activedescendant", `rep-suggest-${active}`);
+      else input.removeAttribute("aria-activedescendant");
+    };
+    async function go(text, magicKey) {
+      closeList();
+      if (!text) return;
       panel.innerHTML = loading("Looking up the address");
       try {
-        const found = await geocode(address);
-        if (!found.length) {
+        const place = await findAddress(text, magicKey);
+        if (!place) {
           panel.innerHTML = empty("That address wasn't found", "Check the spelling and include the city, or click your home on the map.");
           return;
         }
-        const { x, y } = found[0].coordinates;
-        lookup(y, x, found[0].matchedAddress);
+        input.value = place.label.replace(/, USA$/, "");
+        lookup(place.y, place.x, input.value);
       } catch (error) {
         panel.innerHTML = empty("The address could not be looked up", esc(error.message));
       }
+    }
+    input.addEventListener("input", () => {
+      clearTimeout(timer);
+      const text = input.value.trim();
+      if (text.length < 3) { suggestions = []; closeList(); return; }
+      timer = setTimeout(async () => {
+        pending?.abort();
+        pending = new AbortController();
+        try {
+          suggestions = await suggestAddresses(text, pending.signal);
+          active = -1;
+          renderList();
+        } catch { /* typing again aborts the previous request */ }
+      }, 200);
+    });
+    input.addEventListener("keydown", (event) => {
+      if (list.hidden) return;
+      if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+        event.preventDefault();
+        // Down from the last option (or up from the first) returns to what was typed, as native comboboxes do.
+        if (event.key === "ArrowDown") active = active + 1 >= suggestions.length ? -1 : active + 1;
+        else active = active - 1 < -1 ? suggestions.length - 1 : active - 1;
+        renderList();
+      } else if (event.key === "Escape") {
+        closeList();
+      } else if (event.key === "Enter" && active >= 0) {
+        event.preventDefault();
+        go(suggestions[active].text, suggestions[active].magicKey);
+      }
+    });
+    input.addEventListener("blur", () => setTimeout(closeList, 150));
+    list.addEventListener("mousedown", (event) => {
+      const option = event.target.closest("[data-suggest]");
+      if (!option) return;
+      event.preventDefault();
+      const s = suggestions[Number(option.dataset.suggest)];
+      go(s.text, s.magicKey);
+    });
+    $("#rep-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const first = suggestions[0];
+      const text = input.value.trim();
+      go(text, first && first.text.toLowerCase().startsWith(text.toLowerCase().slice(0, 6)) ? first.magicKey : undefined);
     });
     $("#rep-locate").addEventListener("click", () => {
       if (!navigator.geolocation) {
@@ -1400,6 +1543,19 @@ function reps() {
       if (streetsButton) setStreets(streetsButton.getAttribute("aria-pressed") !== "true");
       const border = event.target.closest("[data-border]");
       if (border) toggleBorder(border.dataset.border).catch((error) => { panel.innerHTML = empty("Those borders could not be loaded", esc(error.message)); });
+      const filter = event.target.closest("[data-level-filter]");
+      if (filter) {
+        const level = filter.dataset.levelFilter;
+        for (const chip of panel.querySelectorAll("[data-level-filter]")) chip.setAttribute("aria-pressed", String(chip === filter));
+        for (const block of panel.querySelectorAll("[data-level]")) block.hidden = Boolean(level) && block.dataset.level !== level;
+        const courts = panel.querySelector('details[data-level="courts"]');
+        if (courts && level === "courts") courts.open = true;
+      }
+      const copy = event.target.closest("[data-copy-link]");
+      if (copy) {
+        navigator.clipboard?.writeText(window.location.href).then(() => { copy.textContent = "Link copied"; setTimeout(() => { copy.textContent = "Copy link"; }, 2000); },
+          () => { copy.textContent = "Copy the address bar"; });
+      }
     });
 
     const lat = Number(params().get("lat"));
@@ -1444,6 +1600,19 @@ function sources() {
 
 // -- about ------------------------------------------------------------------------
 function about() {
+  const list = $("#source-list");
+  if (list) {
+    withData(list, [loadSources], (sources) => {
+      const order = ["federal", "state", "county", "municipal"];
+      const byLevel = order.map((level) => [level, sources.filter((s) => s.level === level)]).filter(([, items]) => items.length);
+      list.innerHTML = byLevel.map(([level, items]) => `<details class="fine source-group"${level === "municipal" ? "" : " open"}>
+        <summary><strong>${esc(LEVEL_LABELS[level])}</strong> <span class="muted small">${plural(items.length, "source")} ·
+          ${formatNumber(items.reduce((n, s) => n + (s.records_collected || 0), 0))} records</span></summary>
+        <ul>${items.map((s) => `<li>${safeUrl(s.url) ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>` : esc(s.name)}
+          <span class="muted small">· ${plural(s.records_collected || 0, "record")}${s.status === "failed" ? " · last attempt failed" : ""}</span></li>`).join("")}</ul>
+      </details>`).join("");
+    }, "Loading sources");
+  }
   const box = $("#coverage");
   withData(box, [loadMeta], (meta) => {
     const c = meta.coverage;

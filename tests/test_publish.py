@@ -110,7 +110,7 @@ def test_coverage_is_reported_honestly():
     *_, meta, _ = run_build()
     rows = {r["office_title"]: r for r in meta["coverage"]["rows"]}
     assert (rows["State Senator"]["collected"], rows["State Senator"]["expected"]) == (1, 40)
-    assert meta["coverage"]["tracked_percent"] == round(1 / 262 * 100, 1)
+    assert meta["coverage"]["tracked_percent"] == round(1 / (262 + 67 + 67) * 100, 1)  # + sheriffs and clerks
     assert any("Broward" in item for item in meta["coverage"]["not_yet_covered"])
 
 
@@ -201,3 +201,28 @@ def test_wikipedia_photo_without_a_licence_is_not_used():
     officials, *_ = build(collected(), {"officials": []}, {}, {}, NOW, env={}, wikipedia=wiki)
     record = officials["officials"][0]
     assert record.get("photo_url") is None and record["wikipedia_url"] is None
+
+
+def _special(**extra):
+    return {"districts": [{"key": "sb", "name": "South Drain District", "type": "Drainage district", "area": "mapped",
+                           "status": "independent", "sources": [{"name": "County GIS", "url": "https://example.gov/gis"}], **extra}]}
+
+
+def test_special_districts_are_published_in_meta():
+    _, _, meta, _ = build(collected(), {"officials": []}, {}, {}, NOW, env={}, special=_special(phone="954 555 0100"))
+    assert meta["special_districts"][0]["name"] == "South Drain District"
+    assert meta["special_districts"][0]["phone"] == "(954) 555-0100"
+
+
+@pytest.mark.parametrize("extra, message", [({"area": "everywhere"}, "area must be"), ({"sources": []}, "source")])
+def test_bad_special_districts_stop_the_publish(extra, message):
+    with pytest.raises(PublishError, match=message):
+        build(collected(), {"officials": []}, {}, {}, NOW, env={}, special=_special(**extra))
+
+
+def test_board_member_must_name_a_known_special_district():
+    member = {"name": "Pat Fictional", "office_title": "Chair, South Drain District", "government_level": "county",
+              "county": "Broward", "jurisdiction": "South Drain District", "special_district": "nope",
+              "source_url": "https://example.gov/board"}
+    with pytest.raises(PublishError, match="special_district 'nope'"):
+        build(collected(), {"officials": [member]}, {}, {}, NOW, env={}, special=_special())

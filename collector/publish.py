@@ -10,9 +10,10 @@ Inputs (all in data/):
   wikipedia.json         last-resort portraits, birth dates and article links (tools/wikipedia.py)
   districts.json         which counties each congressional / Florida House district covers
   vacancies.json         seats that are currently empty
+  special_districts.json special districts (water control, hospital, children's services...)
   site.json              optional settings (report link, contact email)
 
-Outputs (in site/data/): officials.json, officials.csv, sources.json, meta.json
+Outputs (in site/data/): officials.json, officials.csv, sources.json, meta.json (which also carries the special districts)
 
 Exits with an error if a correction or a hand-added record is invalid, so a
 bad edit stops the deploy instead of reaching the public site.
@@ -56,15 +57,25 @@ EXPECTED_SEATS = [
     ("state", "State Senator", 40),
     ("state", "State Representative", 120),
     ("county", "Supervisor of Elections", 67),
+    ("county", "Sheriff", 67),
+    ("county", "Clerk of the Circuit Court", 67),
 ]
 NOT_YET_COVERED = [
-    "County commissions and constitutional officers outside Broward County",
-    "School boards and judges outside Broward County",
-    "Dania Beach and Hillsboro Beach councils, and some seats in Cooper City, Hallandale Beach, Lauderhill, "
-    "Sea Ranch Lakes, West Park and Weston (Broward cities that held elections on November 3, 2026, may change "
-    "when the winners are sworn in)",
-    "Mayors and councils outside Broward County (Florida has 411 municipalities)",
-    "Special districts (water control, hospital, soil and water)",
+    "County commissioners in 35 of the 65 counties outside Broward and Miami-Dade: the Florida Association of Counties "
+    "directory lists the wrong number of members for them (it keeps some former commissioners), so they are held back",
+    "Property appraisers and tax collectors outside Broward and Miami-Dade (no statewide list names them)",
+    "School boards outside Broward, Miami-Dade, Charlotte, Citrus, Escambia, Holmes, Jackson, Liberty, Orange, Palm Beach and "
+    "Sumter (most district websites load their board pages with JavaScript), and school superintendents",
+    "Judges outside Broward and Miami-Dade and the 1st, 2nd, 5th and 6th District Courts of Appeal",
+    "Mayors and councils outside Broward and Miami-Dade counties (Florida has 411 municipalities; the League of Cities "
+    "directory only answers its own website's search box)",
+    "Broward: Cooper City, Dania Beach and Lauderhill councils; Hallandale Beach, Lauderdale Lakes, Plantation, Sea Ranch Lakes, Sunrise, "
+    "West Park and Weston list only their mayor (their websites refuse automated requests or could not be read)",
+    "Miami-Dade: Doral, Hialeah, Hialeah Gardens, Indian Creek, Miami Shores, Miami Springs, South Miami and Sunny Isles Beach councils, "
+    "the mayors of Miami Lakes and North Miami, and one or two seats in Cutler Bay, Medley, North Miami and West Miami",
+    "Board members of most special districts, and special districts outside Broward and Miami-Dade (the state's official list "
+    "refuses automated requests)",
+    "Appointed state boards and commissions",
 ]
 
 BIO_TEXT = {"born", "serving_since", "term_ends", "next_election", "summary", "note"}
@@ -218,10 +229,76 @@ def _vacancies(raw: dict) -> list[dict]:
         })
     return out
 
+_FILL = ("party", "phone", "email", "official_website", "photo_url", "district", "district_number", "seat_label",
+         "middle_name", "bio")
+LEADERSHIP = {"Mayor": 0, "Council President": 0, "Chair": 0, "Vice Mayor": 1, "Deputy Mayor": 1,
+              "Council Vice President": 1, "Vice Chair": 1}
+
+
+def _fill(kept: dict, other: dict) -> None:
+    for field in _FILL:
+        if not kept.get(field) and other.get(field):
+            kept[field] = other[field]
+
+
+def _person_key(record: dict) -> tuple:
+    last = re.sub(r"[^a-z]", "", (record.get("last_name") or "").lower())
+    return record.get("municipality"), last, (record.get("first_name") or " ")[0].lower()
+
+
+def _merge_municipal(records: list[dict]) -> tuple[list[dict], dict[str, str]]:
+    """A council member can be listed by the city's own site and by the county's GIS, with different titles
+    ("Vice Mayor" vs "Commissioner, District 4"). Keep one record: the leadership title wins, and the record
+    that has no district takes it from the other. Returns the records and {dropped id: kept id}."""
+    groups: dict[tuple, list[dict]] = {}
+    for record in records:
+        if record["government_level"] == "municipal" and record.get("municipality"):
+            groups.setdefault(_person_key(record), []).append(record)
+    aliases, dropped = {}, set()
+    for group in groups.values():
+        if len(group) < 2:
+            continue
+        group.sort(key=lambda r: (LEADERSHIP.get(r["office_title"], 9), r["verification_status"] == "manual",
+                                  not r.get("district")))
+        kept = group[0]
+        for other in group[1:]:
+            _fill(kept, other)
+            aliases[other["id"]] = kept["id"]
+            dropped.add(id(other))
+    return [r for r in records if id(r) not in dropped], aliases
+
+
+SPECIAL_AREAS = {"mapped", "countywide", "regional"}
+
+
+def _special_districts(raw: dict) -> list[dict]:
+    out, keys = [], set()
+    for index, entry in enumerate(raw.get("districts", []), start=1):
+        where = f"special_districts.json, entry {index}"
+        for field in ("key", "name", "type", "area", "status"):
+            if not str(entry.get(field) or "").strip():
+                raise PublishError(f"{where}: '{field}' is required")
+        if entry["key"] in keys:
+            raise PublishError(f"{where}: key '{entry['key']}' is used twice")
+        if entry["area"] not in SPECIAL_AREAS:
+            raise PublishError(f"{where}: area must be one of {', '.join(sorted(SPECIAL_AREAS))}")
+        keys.add(entry["key"])
+        sources = [s for s in entry.get("sources", []) if isinstance(s, dict) and normalize_url(s.get("url"))]
+        if not sources:
+            raise PublishError(f"{where}: at least one source with a link is required")
+        out.append({
+            "key": entry["key"], "name": entry["name"], "type": entry["type"], "area": entry["area"],
+            "county": canonical_county(entry.get("county") or "") if entry.get("county") else None,
+            "area_note": entry.get("area_note"), "status": entry["status"], "board": entry.get("board"),
+            "phone": normalize_phone(entry.get("phone")), "website": normalize_url(entry.get("website")),
+            "note": entry.get("note"), "sources": sources,
+        })
+    return out
+
 
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
-          wikipedia: dict | None = None):
+          wikipedia: dict | None = None, special: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -253,13 +330,20 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         records.append(record)
 
     unique = []
+    first: dict[str, dict] = {}
     for record in records:
         if record["id"] in seen:
-            warnings.append(f"'{record['id']}' appears twice; the second copy was skipped")
+            kept = first[record["id"]]
+            if record["verification_status"] == "manual" or kept["verification_status"] == "manual":
+                warnings.append(f"'{record['id']}' appears twice; the second copy was skipped")
+            _fill(kept, record)  # two official sources list the same person in the same seat
             continue
         seen.add(record["id"])
+        first[record["id"]] = record
         unique.append(record)
+    unique, aliases = _merge_municipal(unique)
     by_id = {r["id"]: r for r in unique}
+    by_id.update({alias: by_id[target] for alias, target in aliases.items()})
 
     _apply_profiles(by_id, profiles or {}, warnings)
     _apply_wikipedia(by_id, wikipedia or {})
@@ -275,6 +359,11 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             continue
         _correct(by_id[record_id], fields, record_id)
 
+    special_districts = _special_districts(special or {})
+    special_keys = {d["key"] for d in special_districts}
+    for record in unique:
+        if record.get("special_district") and record["special_district"] not in special_keys:
+            raise PublishError(f"'{record['id']}': special_district '{record['special_district']}' is not in special_districts.json")
     for record in unique:
         record.setdefault("correction_note", None)
         record.setdefault("seat_label", None)
@@ -329,6 +418,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             ),
         },
         "vacancies": _vacancies(vacancies or {}),
+        "special_districts": special_districts,
         "municipalities": sorted({r["municipality"] for r in unique if r.get("municipality")}),
         "report_url": report_url or None,
         "contact_email": (site.get("contact_email") or "").strip() or None,
@@ -369,6 +459,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         districts=load_json(data_dir / "districts.json", {}),
         vacancies=load_json(data_dir / "vacancies.json", {}),
         wikipedia=load_json(data_dir / "wikipedia.json", {}),
+        special=load_json(data_dir / "special_districts.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731
