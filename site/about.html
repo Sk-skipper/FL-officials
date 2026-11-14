@@ -20,11 +20,40 @@
 
         <section id="origin">
           <h2>Where the data comes from</h2>
-          <p>Every record is taken from an official government website: the Florida Senate, the Florida House of Representatives, the Florida Division of Elections, the U.S. Senate and the U.S. House of Representatives. County and municipal officials are added one source at a time. The <a href="sources.html">data sources page</a> lists each source and its current status.</p>
+          <p>Every official in the directory is collected automatically from an official government source, and every record links to
+          the page it came from. Nothing is typed in by hand: when no official page can be collected, the office is listed under
+          "Not yet covered" below instead of being filled in manually.</p>
+          <p>The sources, in order of authority:</p>
+          <ul>
+            <li><strong>Legislatures and Congress:</strong> the Florida Senate, the Florida House of Representatives, the U.S. Senate and the U.S. House of Representatives publish their own member lists.</li>
+            <li><strong>Supervisors of Elections:</strong> the Florida Division of Elections lists all 67 Supervisors of Elections. The Broward and Miami-Dade
+            Supervisors of Elections publish every office on their ballots: the Governor and Cabinet, the Florida Supreme Court and the District Courts of Appeal,
+            circuit and county judges, the State Attorney and Public Defender, the sheriff, clerk, property appraiser and tax collector, the county commission
+            and mayor, the school board, Miami-Dade's community councils and the South Dade Soil and Water Conservation District.</li>
+            <li><strong>County GIS:</strong> Broward County's "Electoral District Boundaries" layer names who holds each County Commission, School Board and city
+            commission district seat. It also supplies the mayors of the few Broward cities whose websites refuse automated requests; those were checked against
+            each city's own page when they were added.</li>
+            <li><strong>City and town websites:</strong> each city's own "Mayor and Commission" or "Town Council" page, read by a collector that recognises the ways
+            these pages list their members ("Mayor Jane Doe", "Jane Doe, Vice Mayor", a name above a title). If a page suddenly lists far more or far fewer people
+            than the body has seats, nothing is changed and the page is flagged for a person to check.</li>
+            <li><strong>Special district websites:</strong> board pages of the South Broward Drainage District, the Children's Services Council of Broward County
+            and the South Florida Water Management District. Water control, drainage and improvement districts in Broward come from Broward County GIS, and
+            Miami-Dade's community development districts, with the ordinance that created each, from Miami-Dade County GIS.</li>
+          </ul>
+          <p>The full list of sources, with when each was last collected and whether it worked, is generated from the collector's own records:</p>
+          <div id="source-list" class="gap-top"></div>
           <p>Only information officials publish in their public role is collected: name, office, district, party, and office contact details.</p>
-          <p>Portraits are linked, not copied. For members of Congress they come from a public-domain image set built from the official Congressional Biographical Directory, matched to each member by state, district and surname. For other officials the portrait comes from the official's own government page, or from Broward County's GIS records, which link to those pages. Where no official photo could be found, a freely licensed photo from Wikimedia Commons (the image library behind Wikipedia) may be used; its author and licence are credited on the profile. Birth dates missing from official sources may likewise come from Wikidata, and profiles link to a Wikipedia article when one exists. These public, community-edited sources are used only to fill gaps, never to replace official information, and may occasionally be out of date. When there is no photo, or it fails to load, the person's initials are shown instead.</p>
-          <p>District maps come from the U.S. Census Bureau (Congress and the Florida Legislature) and Broward County GIS (County Commission, School Board and city commission districts). Address searches on the <a href="representatives.html">Your representatives</a> page are sent only to the Census Bureau's public address finder and are not stored.</p>
-          <p>County outlines on the <a href="counties.html">county map</a> come from U.S. Census Bureau boundary data. Congressional and legislative districts are not drawn, because the sources do not say which counties each district covers.</p>
+          <p>Portraits are linked, not copied. For members of Congress they come from a public-domain image set built from the official Congressional Biographical
+          Directory, matched to each member by state, district and surname. For other officials the portrait comes from the official's own government page or
+          county GIS records. Where no official photo could be found, a freely licensed photo from Wikimedia Commons (the image library behind Wikipedia) may be
+          used; its author and licence are credited on the profile. Birth dates missing from official sources may likewise come from Wikidata, and profiles link
+          to a Wikipedia article when one exists. These public, community-edited sources are used only to fill gaps, never to replace official information, and
+          may occasionally be out of date. When there is no photo, or it fails to load, the person's initials are shown instead.</p>
+          <p>District maps come from the U.S. Census Bureau (Congress, the Florida Legislature, counties and cities), Broward County GIS (County Commission,
+          School Board, city commission and water control districts and the legal city limits), Miami-Dade County GIS (County Commission, School Board and
+          community development districts) and City of Miami GIS (its commission districts). On the <a href="representatives.html">Your representatives</a>
+          page, what you type in the address box is sent to Esri's ArcGIS World Geocoder to suggest and place addresses, and to the Census Bureau's address
+          finder if Esri can't find it. Neither is told who you are, and this site stores nothing you type.</p>
         </section>
 
         <section id="collection">
@@ -35,7 +64,8 @@
 
         <section id="refresh">
           <h2>How often records are refreshed</h2>
-          <p>Sources are collected again once a day. Each profile shows the date its record was last confirmed against its source.</p>
+          <p>Every source is collected again once a day. Each profile shows the date its record was last confirmed against its source, and the
+          <a href="sources.html">data sources page</a> shows the status of every source.</p>
         </section>
 
         <section id="accuracy">
@@ -51,7 +81,8 @@
 
         <section id="missing">
           <h2>How missing information is handled</h2>
-          <p>If a source does not publish a detail, the field is left empty and labelled "Not published by the source". Nothing is guessed, inferred, or filled in from unofficial sources.</p>
+          <p>If a source does not publish a detail, the field is left empty and labelled "Not published by the source". Nothing is guessed or inferred.
+          The only exception is the gap-filling from Wikimedia Commons and Wikidata described above, which is always credited.</p>
         </section>
 
         <section id="coverage">

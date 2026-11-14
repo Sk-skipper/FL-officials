@@ -184,3 +184,15 @@ test("special district boards appear only for their own area, countywide boards 
   assert.deepEqual(new Set(ids({ special: "South Broward", countywideSpecial: ["csc"] })), new Set(["w", "c"]));
   assert.deepEqual(ids({ special: null, countywideSpecial: ["csc"] }), ["c"]);
 });
+
+test("representativesFor leaves out Miami-Dade community councils, which have no mapped boundaries", () => {
+  const people = [
+    { id: "mayor", full_name: "Mayor M", last_name: "M", office_title: "County Mayor", government_level: "county", county: "Miami-Dade" },
+    { id: "cc", full_name: "Council C", last_name: "C", office_title: "Community Council Member", government_level: "county", county: "Miami-Dade", district: "71-A" },
+    { id: "c5", full_name: "Comm Five", last_name: "Five", office_title: "County Commissioner", government_level: "county", county: "Miami-Dade", district: "5" },
+  ];
+  const { groups } = representativesFor(people, { county: "Miami-Dade", commission: "5", schoolDistricts: [] });
+  const names = groups.flatMap((g) => g.sections.flatMap((s) => s.items.map((i) => i.full_name)));
+  assert.deepEqual(names.sort(), ["Comm Five", "Mayor M"]);
+  assert.equal(groups[0].sections[0].name, "County Commission");
+});

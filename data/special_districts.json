@@ -24,7 +24,8 @@
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/south%20broward%20drainage%20district.htm"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Central Broward",
@@ -47,7 +48,8 @@
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/central%20broward%20water%20control%20district.htm"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Indian Trace",
@@ -66,7 +68,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Coral Bay",
@@ -85,7 +88,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Turtle Run",
@@ -104,7 +108,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Old Plantation",
@@ -123,7 +128,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Plantation Acres",
@@ -142,7 +148,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Pine Tree",
@@ -160,7 +167,8 @@
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/pine%20tree%20water%20control%20district%20broward%20county.htm"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Sunshine",
@@ -179,7 +187,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Coral Springs",
@@ -198,7 +207,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "NSID",
@@ -217,7 +227,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "North Lauderdale",
@@ -236,7 +247,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Tindall Hammock",
@@ -255,7 +267,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Cocomar",
@@ -274,7 +287,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Lauderdale Isles",
@@ -293,7 +307,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Broward WCD #2",
@@ -307,7 +322,8 @@
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Broward WCD #3",
@@ -326,7 +342,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Broward WCD #4",
@@ -345,7 +362,8 @@
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Bonaventure",
@@ -360,7 +378,8 @@
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Oakridge",
@@ -375,7 +394,8 @@
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "West Lake",
@@ -390,7 +410,8 @@
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Cypress Cove",
@@ -405,7 +426,8 @@
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "Twin Lakes",
@@ -420,7 +442,8 @@
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "csc-broward",
@@ -440,7 +463,8 @@
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/childrens%20services%20council%20of%20broward%20county.htm"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "sfwmd",
@@ -455,7 +479,8 @@
           "name": "South Florida Water Management District: Governing Board",
           "url": "https://www.sfwmd.gov/who-we-are/governing-board"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "nbhd",
@@ -472,7 +497,8 @@
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/north%20broward%20hospital%20district.htm"
         }
-      ]
+      ],
+      "county": "Broward"
     },
     {
       "key": "sbhd",
@@ -488,6 +514,2409 @@
         {
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/south%20broward%20hospital%20district.htm"
+        }
+      ],
+      "county": "Broward"
+    },
+    {
+      "key": "md-cdd-ah-at-turnpike-south",
+      "name": "AH at Turnpike South Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 12-60 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2012/121010.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-acacia-grove",
+      "name": "Acacia Grove Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-72 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/250734.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-acacia-grove-amendment-proposed",
+      "name": "Acacia Grove Amendment (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-antillia",
+      "name": "Antillia Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-103 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/221541.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-aventura-isles",
+      "name": "Aventura Isles Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 13-44 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2013/130625.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-bauer-drive",
+      "name": "Bauer Drive Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-3 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2021/212568.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-baywinds",
+      "name": "Baywinds Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-205 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2005/052766.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-beacon-lakes",
+      "name": "Beacon Lakes Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 17-40 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2017/171332.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-beacon-tradeport",
+      "name": "Beacon Tradeport Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 98-35 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=981168&file=false&fileAnalysis=false&yearFolder=Y1998"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-bellagio",
+      "name": "Bellagio Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 13-59 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2013/130694.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-biscayne-drive-estates",
+      "name": "Biscayne Drive Estates Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 26-40 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2026/260480.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-black-creek",
+      "name": "Black Creek Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-87 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/251259.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-bluewaters-subdivision",
+      "name": "Bluewaters Subdivision Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-73 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2004/040529.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-bonterra",
+      "name": "Bonterra Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 15-61 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2015/151420.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-campo-bello",
+      "name": "Campo Bello Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 20-7 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2019/192755.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-caribe-palm",
+      "name": "Caribe Palm Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-146 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=042458&file=false&fileAnalysis=false&yearFolder=Y2004"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-centre-lake",
+      "name": "Centre Lake Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 16-55 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2016/160872.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-gardens",
+      "name": "Century Gardens Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 18-119 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2018/181960.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-gardens-village",
+      "name": "Century Gardens Village Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 06-154 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/062895.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-gardens-at-tamiami",
+      "name": "Century Gardens at Tamiami Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 14-20 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2013/132577.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-parc",
+      "name": "Century Parc Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 01-101 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=012017&file=false&fileAnalysis=false&yearFolder=Y2001"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-parc-villas-east-proposed",
+      "name": "Century Parc Villas East (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-park-place",
+      "name": "Century Park Place Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 17-19 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2017/170084.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-park-south",
+      "name": "Century Park South Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 19-82 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2019/191921.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-century-park-square",
+      "name": "Century Park Square Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 24-49 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2024/240460.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-coco-palms",
+      "name": "Coco Palms Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 18-55 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2018/180577.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-coconut-cay",
+      "name": "Coconut Cay Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-164 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2005/051889.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-coral-keys-homes",
+      "name": "Coral Keys Homes Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 19-43 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2019/190609.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-coral-town-park-dissolved",
+      "name": "Coral Town Park (Dissolved) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 13-34 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2013/130624.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-coronado",
+      "name": "Coronado Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 06-22 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/060140.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-crestview-ii",
+      "name": "Crestview II Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-94 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2004/042466.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-crestview-west",
+      "name": "Crestview West Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 08-32 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2008/080166.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-crystal-cay",
+      "name": "Crystal Cay Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 20-28 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2020/200021.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-cutler-cay",
+      "name": "Cutler Cay Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-15 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/031363.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-downtown-doral",
+      "name": "Downtown Doral Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 08-77 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2008/081597.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-downtown-doral-expansion-proposed",
+      "name": "Downtown Doral Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-downtown-doral-south",
+      "name": "Downtown Doral South Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 18-144 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2018/182184.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-downtown-somi-proposed",
+      "name": "Downtown SoMi (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-east-homestead",
+      "name": "East Homestead Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 18-126 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2018/181963.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-east-palm-drive",
+      "name": "East Palm Drive Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-enclave-at-black-point-marina",
+      "name": "Enclave at Black Point Marina Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 06-137 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/062383.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-epmore",
+      "name": "Epmore Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-43 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/250437.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-epmore-expansion-proposed",
+      "name": "Epmore Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-eureka-grove",
+      "name": "Eureka Grove Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 19-56 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2019/191082.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-fontainbleau-lakes",
+      "name": "Fontainbleau Lakes Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 11-94 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2011/112269.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-grand-bay-at-doral",
+      "name": "Grand Bay at Doral Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 16-76 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2016/161126.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-hemingway-point",
+      "name": "Hemingway Point Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 12-18 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2012/120078.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-homestead-50",
+      "name": "Homestead 50 Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 06-136 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/062382.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-homestead-50-expansion-proposed",
+      "name": "Homestead 50 Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-interlaken",
+      "name": "Interlaken Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 15-82 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2015/151522.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-islands-at-doral-ne",
+      "name": "Islands at Doral (NE) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-17 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/033317.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-islands-at-doral-sw",
+      "name": "Islands at Doral (SW) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-37 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=030624&file=false&fileAnalysis=false&yearFolder=Y2003"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-islands-at-doral-iii",
+      "name": "Islands at Doral III Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 13-107 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2013/132104.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-islands-at-doral-townhomes",
+      "name": "Islands at Doral Townhomes Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-96 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2005/050961.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-juniper-cove",
+      "name": "Juniper Cove Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 21-139 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2021/212264.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-kendall-breeze",
+      "name": "Kendall Breeze Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 02-59 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=020913&file=false&fileAnalysis=false&yearFolder=Y2002"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-kendall-breeze-west",
+      "name": "Kendall Breeze West Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-144 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2004/041626.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-keys-cove",
+      "name": "Keys Cove Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-145 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2004/041628.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-keys-cove-ii",
+      "name": "Keys Cove II Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-133 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2005/051495.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-keys-edge",
+      "name": "Keys Edge Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 24-35 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2024/240275.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-kingman-gate",
+      "name": "Kingman Gate Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 24-2 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2023/232217.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-lake-frances",
+      "name": "Lake Frances Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 06-155 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/062699.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-lakes-by-the-bay-south",
+      "name": "Lakes by the Bay South Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-16 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/032542.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-landings-at-miami",
+      "name": "Landings at Miami Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 19-66 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2019/191495.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-landmark-at-doral",
+      "name": "Landmark at Doral Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-153 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2005/051891.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-le-jeune-gardens",
+      "name": "Le Jeune Gardens Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 26-18 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2026/260687.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-legacy-palm-drive",
+      "name": "Legacy Palm Drive Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-110 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/251962.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-los-cayos",
+      "name": "Los Cayos Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 23-35 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2023/230559.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-majorca-isles",
+      "name": "Majorca Isles Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 13-46 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2013/130871.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-miami-world-center",
+      "name": "Miami World Center Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 16-137 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2016/162701.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-midtown-miami",
+      "name": "Midtown Miami Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-271 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/033185.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-newton-road",
+      "name": "Newton Road Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-4 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2024/241923.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-newton-road-expansion-proposed",
+      "name": "Newton Road Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-north-dade",
+      "name": "North Dade Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 07-12 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/063693.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-ocean-gate-dissolved",
+      "name": "Ocean Gate (Dissolved) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 26-13 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/252464.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-old-town-floridian",
+      "name": "Old Town Floridian Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 21-27 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2021/210195.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-oleta-river-dissolved",
+      "name": "Oleta River (Dissolved) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 23-91 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2023/231686.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-palace-at-coral-gables",
+      "name": "Palace at Coral Gables Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 10-49 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2010/101645.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-palm-gate",
+      "name": "Palm Gate Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 26-14 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/252484.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-palm-glades",
+      "name": "Palm Glades Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-118 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/252043.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-palm-isle-at-doral-dissolved",
+      "name": "Palm Isle at Doral (Dissolved) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 11-88 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2011/111745.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-park-square-dissolved",
+      "name": "Park Square (Dissolved) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 14-71 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2014/141532.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-parker-pointe",
+      "name": "Parker Pointe Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 23-95 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2023/231503.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-pebblewalk-village-dissolved",
+      "name": "Pebblewalk Village (Dissolved) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 11-96 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2011/111997.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-pentathlon",
+      "name": "Pentathlon Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 02-58 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=020912&file=false&fileAnalysis=false&yearFolder=Y2002"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-pine-isle",
+      "name": "Pine Isle Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-143 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/221791.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-princeton-commons",
+      "name": "Princeton Commons Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 23-2 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/222586.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-princeton-commons-expansion-proposed",
+      "name": "Princeton Commons Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-quail-roost",
+      "name": "Quail Roost Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-3 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2024/241922.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-rancho-grande",
+      "name": "Rancho Grande Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-88 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/251260.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-rancho-grande-expansion-proposed",
+      "name": "Rancho Grande Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-regal-village",
+      "name": "Regal Village Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 23-59 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2023/231537.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-riverside-park",
+      "name": "Riverside Park Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-181 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/031801.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-san-diego-villas",
+      "name": "San Diego Villas Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 26-39 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2026/260479.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-san-simeon",
+      "name": "San Simeon Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 18-149 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2018/182629.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-sandero-landing-proposed",
+      "name": "Sandero Landing (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-sausalito-bay",
+      "name": "Sausalito Bay Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-104 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/030736.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-sawyer-s-landing",
+      "name": "Sawyer's Landing Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 21-2 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2020/202454.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-sebastian-isles",
+      "name": "Sebastian Isles Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-67 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/220980.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-sedona-point",
+      "name": "Sedona Point Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-101 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/221332.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-siena-north",
+      "name": "Siena North Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 21-40 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2021/210831.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-siena-north-expansion-proposed",
+      "name": "Siena North Expansion (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-silver-palms",
+      "name": "Silver Palms Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-206 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/032184.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-silver-palms-west",
+      "name": "Silver Palms West Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 25-119 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2025/252044.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-south-dade-townhomes-proposed",
+      "name": "South Dade Townhomes (Proposed) Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-south-dade-venture",
+      "name": "South Dade Venture Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 01-194 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=013246&file=false&fileAnalysis=false&yearFolder=Y2001"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-south-kendall",
+      "name": "South Kendall Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 08-33 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2008/080296.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-spicewood",
+      "name": "Spicewood Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-265 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/032841.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-stellar-north",
+      "name": "Stellar North Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-102 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/221369.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-stonegate",
+      "name": "Stonegate Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 02-258 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=023065&file=false&fileAnalysis=false&yearFolder=Y2002"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-summerville",
+      "name": "Summerville Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 04-147 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2004/041658.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-trails-at-monterey",
+      "name": "Trails at Monterey Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 02-124 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=021550&file=false&fileAnalysis=false&yearFolder=Y2002"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-tree-island-estates",
+      "name": "Tree Island Estates Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-207 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/032216.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-two-lakes",
+      "name": "Two Lakes Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 18-90 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2018/181482.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-valencia-acres",
+      "name": "Valencia Acres Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 03-208 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2003/032232.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-venetian-isles",
+      "name": "Venetian Isles Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 02-60 creating the district",
+          "url": "https://www.miamidade.gov/govaction/matter.asp?matter=020915&file=false&fileAnalysis=false&yearFolder=Y2002"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-venetian-parc",
+      "name": "Venetian Parc Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 08-76 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2008/081601.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-villa-portofino-east",
+      "name": "Villa Portofino East Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 06-156 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2006/062759.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-villa-portofino-west",
+      "name": "Villa Portofino West Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-204 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2005/052755.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-vizcaya-in-kendall",
+      "name": "Vizcaya in Kendall Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 05-95 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2004/042743.pdf"
+        }
+      ]
+    },
+    {
+      "key": "md-cdd-westview-north",
+      "name": "Westview North Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of supervisors, elected by landowners at first and later by residents (Chapter 190, Florida Statutes)",
+      "note": "Name as recorded in Miami-Dade County GIS; board members are not listed yet.",
+      "sources": [
+        {
+          "name": "Miami-Dade County GIS: Community Development District",
+          "url": "https://gis-mdc.opendata.arcgis.com/"
+        },
+        {
+          "name": "Miami-Dade ordinance 22-32 creating the district",
+          "url": "https://www.miamidade.gov/govaction/legistarfiles/Matters/Y2022/220137.pdf"
+        }
+      ]
+    },
+    {
+      "key": "south-dade-swcd",
+      "name": "South Dade Soil and Water Conservation District",
+      "type": "Soil and water conservation district",
+      "area": "regional",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "area_note": "Southern Miami-Dade County",
+      "board": "Five supervisors elected countywide on the Miami-Dade ballot (Chapter 582, Florida Statutes)",
+      "website": "https://southdadesoilandwater.org/",
+      "sources": [
+        {
+          "name": "Miami-Dade Supervisor of Elections: Elected Officials Information",
+          "url": "https://www.miamidade.gov/elections/library/reports/elected-officials.pdf"
+        }
+      ]
+    },
+    {
+      "key": "childrens-trust",
+      "name": "The Children's Trust",
+      "type": "Children's services council",
+      "area": "countywide",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of directors appointed by the Governor, the County and member institutions",
+      "website": "https://www.thechildrenstrust.org/",
+      "note": "Board members are not listed yet: the board page shows them a page at a time.",
+      "sources": [
+        {
+          "name": "The Children's Trust: Board of Directors",
+          "url": "https://www.thechildrenstrust.org/about-us/board-of-directors"
         }
       ]
     }

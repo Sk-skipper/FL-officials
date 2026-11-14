@@ -121,7 +121,7 @@ code { font-size: 0.85em; background: var(--tint); padding: 0.1em 0.35em; border
 /* controls */
 label { display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: 6px; }
 input, select, button { font: inherit; color: inherit; }
-input[type="search"], select {
+input[type="search"], input[role="combobox"], select {
   width: 100%; height: 42px; padding: 0 12px; border: 1px solid var(--input); border-radius: 6px; background: var(--surface);
 }
 select { padding-right: 32px; }
@@ -413,3 +413,26 @@ details.roster-section[open] > .people { margin-top: 12px; }
 .small-chip[data-streets] { margin-right: 8px; }
 .special-list { display: grid; gap: 10px; margin-top: 6px; }
 .special-list li { line-height: 1.45; }
+
+/* -- address combobox and results filters (representatives page) -- */
+.input-icon.combo { position: relative; }
+.suggest { position: absolute; z-index: 1000; top: calc(100% + 4px); left: 0; right: 0; margin: 0; padding: 4px; list-style: none;
+  background: var(--surface); border: 1px solid var(--input); border-radius: var(--radius); box-shadow: 0 10px 28px rgba(19, 41, 75, 0.16); }
+.suggest li { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 6px; cursor: pointer; font-size: 0.9375rem; }
+.suggest li svg { width: 16px; height: 16px; flex: none; color: var(--muted); }
+.suggest li:hover, .suggest li[aria-selected="true"] { background: var(--bg); color: var(--navy); }
+.rep-results-top { align-items: flex-start; }
+.rep-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.small-button { height: 32px; padding: 0 12px; font-size: 0.8125rem; }
+.rep-filter { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; margin: 14px -4px 4px; padding: 8px 4px; background: var(--surface);
+  border-bottom: 1px solid var(--border); overflow-x: auto; flex-wrap: nowrap; }
+.rep-filter .chip { flex: none; }
+.rep-filter .count { margin-left: 4px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.person.with-actions { position: relative; }
+.person.with-actions > a { padding-bottom: 46px; }
+.person-actions { position: absolute; bottom: 9px; left: 82px; display: flex; gap: 6px; }
+.person-actions a { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 99px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--navy-600); }
+.person-actions a:hover { border-color: var(--navy-600); background: var(--bg); }
+.person-actions svg { width: 15px; height: 15px; }
+/* end-reps-actions */

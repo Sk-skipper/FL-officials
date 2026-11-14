@@ -59,14 +59,15 @@ EXPECTED_SEATS = [
     ("county", "Supervisor of Elections", 67),
 ]
 NOT_YET_COVERED = [
-    "County commissions and constitutional officers outside Broward County",
-    "School boards and judges outside Broward County",
-    "Dania Beach and Hillsboro Beach councils, and some seats in Cooper City, Hallandale Beach, Lauderhill, "
-    "Sea Ranch Lakes, West Park and Weston (Broward cities that held elections on November 3, 2026, may change "
-    "when the winners are sworn in)",
-    "Mayors and councils outside Broward County (Florida has 411 municipalities)",
-    "Special districts outside Broward County, and board members for most Broward special districts "
-    "(listed so far: South Broward Drainage District, Children's Services Council, South Florida Water Management District)",
+    "County commissions, constitutional officers, school boards and judges outside Broward and Miami-Dade counties",
+    "Mayors and councils outside Broward and Miami-Dade counties (Florida has 411 municipalities)",
+    "Broward: Cooper City, Dania Beach and Lauderhill councils; Hallandale Beach, Lauderdale Lakes, Plantation, Sea Ranch Lakes, Sunrise, "
+    "West Park and Weston list only their mayor (their websites refuse automated requests or could not be read)",
+    "Miami-Dade: Doral, Hialeah, Hialeah Gardens, Indian Creek, Miami Shores, Miami Springs, South Miami and Sunny Isles Beach councils, "
+    "the mayors of Miami Lakes and North Miami, and one or two seats in Cutler Bay, Medley, North Miami and West Miami",
+    "Board members of most special districts: Broward's two hospital districts and its water control districts other than South Broward, "
+    "The Children's Trust, and Miami-Dade's community development districts (the districts themselves are listed and mapped)",
+    "Special districts outside Broward and Miami-Dade counties",
 ]
 
 BIO_TEXT = {"born", "serving_since", "term_ends", "next_election", "summary", "note"}
@@ -220,6 +221,44 @@ def _vacancies(raw: dict) -> list[dict]:
         })
     return out
 
+_FILL = ("party", "phone", "email", "official_website", "photo_url", "district", "district_number", "seat_label",
+         "middle_name", "bio")
+LEADERSHIP = {"Mayor": 0, "Council President": 0, "Chair": 0, "Vice Mayor": 1, "Deputy Mayor": 1,
+              "Council Vice President": 1, "Vice Chair": 1}
+
+
+def _fill(kept: dict, other: dict) -> None:
+    for field in _FILL:
+        if not kept.get(field) and other.get(field):
+            kept[field] = other[field]
+
+
+def _person_key(record: dict) -> tuple:
+    last = re.sub(r"[^a-z]", "", (record.get("last_name") or "").lower())
+    return record.get("municipality"), last, (record.get("first_name") or " ")[0].lower()
+
+
+def _merge_municipal(records: list[dict]) -> tuple[list[dict], dict[str, str]]:
+    """A council member can be listed by the city's own site and by the county's GIS, with different titles
+    ("Vice Mayor" vs "Commissioner, District 4"). Keep one record: the leadership title wins, and the record
+    that has no district takes it from the other. Returns the records and {dropped id: kept id}."""
+    groups: dict[tuple, list[dict]] = {}
+    for record in records:
+        if record["government_level"] == "municipal" and record.get("municipality"):
+            groups.setdefault(_person_key(record), []).append(record)
+    aliases, dropped = {}, set()
+    for group in groups.values():
+        if len(group) < 2:
+            continue
+        group.sort(key=lambda r: (LEADERSHIP.get(r["office_title"], 9), r["verification_status"] == "manual",
+                                  not r.get("district")))
+        kept = group[0]
+        for other in group[1:]:
+            _fill(kept, other)
+            aliases[other["id"]] = kept["id"]
+            dropped.add(id(other))
+    return [r for r in records if id(r) not in dropped], aliases
+
 
 SPECIAL_AREAS = {"mapped", "countywide", "regional"}
 
@@ -241,6 +280,7 @@ def _special_districts(raw: dict) -> list[dict]:
             raise PublishError(f"{where}: at least one source with a link is required")
         out.append({
             "key": entry["key"], "name": entry["name"], "type": entry["type"], "area": entry["area"],
+            "county": canonical_county(entry.get("county") or "") if entry.get("county") else None,
             "area_note": entry.get("area_note"), "status": entry["status"], "board": entry.get("board"),
             "phone": normalize_phone(entry.get("phone")), "website": normalize_url(entry.get("website")),
             "note": entry.get("note"), "sources": sources,
@@ -282,13 +322,20 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         records.append(record)
 
     unique = []
+    first: dict[str, dict] = {}
     for record in records:
         if record["id"] in seen:
-            warnings.append(f"'{record['id']}' appears twice; the second copy was skipped")
+            kept = first[record["id"]]
+            if record["verification_status"] == "manual" or kept["verification_status"] == "manual":
+                warnings.append(f"'{record['id']}' appears twice; the second copy was skipped")
+            _fill(kept, record)  # two official sources list the same person in the same seat
             continue
         seen.add(record["id"])
+        first[record["id"]] = record
         unique.append(record)
+    unique, aliases = _merge_municipal(unique)
     by_id = {r["id"]: r for r in unique}
+    by_id.update({alias: by_id[target] for alias, target in aliases.items()})
 
     _apply_profiles(by_id, profiles or {}, warnings)
     _apply_wikipedia(by_id, wikipedia or {})
