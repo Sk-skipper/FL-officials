@@ -81,8 +81,8 @@ class PoliteHttpClient:
             raise RobotsDisallowed(f"robots.txt disallows collecting {url}")
 
     # -- requests -----------------------------------------------------------
-    def _headers(self) -> dict[str, str]:
-        return {"User-Agent": self.user_agent, "Accept": "text/html,application/xhtml+xml,application/xml"}
+    def _headers(self, accept: str = "text/html,application/xhtml+xml,application/xml") -> dict[str, str]:
+        return {"User-Agent": self.user_agent, "Accept": accept}
 
     def _wait(self, host: str) -> None:
         last = self._last_request.get(host)
@@ -98,16 +98,17 @@ class PoliteHttpClient:
 
     def get_bytes(self, url: str) -> bytes:
         """Fetch a file (a PDF, say) as bytes, or raise FetchError."""
-        return self._fetch(url).content
+        return self._fetch(url, accept="application/pdf,application/octet-stream,*/*;q=0.8").content
 
-    def _fetch(self, url: str) -> requests.Response:
+    def _fetch(self, url: str, accept: str | None = None) -> requests.Response:
         self.check_allowed(url)
         host = urlsplit(url).netloc
         last_error = "unknown error"
         for attempt in range(self.max_retries + 1):
             self._wait(host)
             try:
-                response = self.session.get(url, headers=self._headers(), timeout=self.timeout_seconds)
+                headers = self._headers(accept) if accept else self._headers()
+                response = self.session.get(url, headers=headers, timeout=self.timeout_seconds)
             except requests.RequestException as exc:
                 last_error = f"{type(exc).__name__}: {exc}"
                 logger.warning("GET %s failed (%s), attempt %d", url, last_error, attempt + 1)
