@@ -32,6 +32,19 @@
       "file_url": "https://commons.wikimedia.org/wiki/File:Jeffrey_T._Kuntz.png"
     }
   },
+  "clerk-of-the-circuit-court-hillsborough-county-victor-crist": {
+    "name": "Victor D. Crist",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Victor_Crist",
+    "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Victor_Crist_Hillsborough.jpg/500px-Victor_Crist_Hillsborough.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "Hillsborough County, Florida, Clerk",
+      "license": "Public domain",
+      "license_url": null,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Victor_Crist_Hillsborough.jpg"
+    },
+    "born": "1957-06-21"
+  },
   "clerk-of-the-circuit-court-miami-dade-county-juan-fernandez-barquin": {
     "name": "Juan Fernandez-Barquin",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Juan_Fernandez-Barquin",
@@ -44,6 +57,11 @@
       "file_url": "https://commons.wikimedia.org/wiki/File:Juan_Fernandez-Barquin,_2023.jpg"
     },
     "born": "1983-03-06"
+  },
+  "commissioner-district-1-tom-keen": {
+    "name": "Tom Keen",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tom_Keen_(politician)",
+    "born": "1956-04-09"
   },
   "commissioner-of-agriculture-florida-wilton-simpson": {
     "name": "Wilton Simpson",
@@ -70,6 +88,19 @@
       "file_url": "https://commons.wikimedia.org/wiki/File:Councilman_Kevin_Burns.png"
     },
     "born": "1958-11-22"
+  },
+  "councilmember-district-7-luis-viera": {
+    "name": "Luis Viera",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Luis_Viera"
+  },
+  "county-commissioner-charlotte-county-stephen-deutsch": {
+    "name": "Stephen R. Deutsch",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Stephen_R._Deutsch"
+  },
+  "county-commissioner-collier-county-burt-saunders": {
+    "name": "Burt Saunders",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Burt_Saunders",
+    "born": "1948-11-07"
   },
   "county-commissioner-district-1-nan-rich": {
     "name": "Nan H. Rich",
@@ -118,6 +149,11 @@
       "file_url": "https://commons.wikimedia.org/wiki/File:Rene_Garcia_Headshot.jpg"
     }
   },
+  "county-commissioner-district-3-lee-constantine": {
+    "name": "Lee Constantine",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Lee_Constantine",
+    "born": "1952-11-06"
+  },
   "county-commissioner-district-4-lamar-fisher": {
     "name": "Lamar Fisher",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lamar_Fisher"
@@ -149,6 +185,16 @@
     },
     "born": "1977-11-23"
   },
+  "county-commissioner-leon-county-nick-maddox": {
+    "name": "Nick Maddox",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nick_Maddox_(American_football)",
+    "born": "1980-12-11"
+  },
+  "county-commissioner-walton-county-brad-drake": {
+    "name": "Brad Drake",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Brad_Drake",
+    "born": "1975-02-07"
+  },
   "county-mayor-miami-dade-county-daniella-cava": {
     "name": "Daniella Levine Cava",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Daniella_Levine_Cava",
@@ -161,6 +207,11 @@
       "file_url": "https://commons.wikimedia.org/wiki/File:Mayor-cava-headshot-high-res-2024.jpg"
     },
     "born": "1955-09-14"
+  },
+  "county-mayor-orange-county-jerry-demings": {
+    "name": "Jerry Demings",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jerry_Demings",
+    "born": "1959-06-12"
   },
   "governor-florida-ron-desantis": {
     "name": "Ron DeSantis",
@@ -205,6 +256,18 @@
     "name": "Jay Collins",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Jay_Collins",
     "born": "1976-04-28"
+  },
+  "mayor-daytona-beach-derrick-henry": {
+    "name": "Derrick L. Henry",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Derrick_L._Henry",
+    "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Official_portrait_of_Daytona_Beach_Mayor_Derrick_Henry.jpg/500px-Official_portrait_of_Daytona_Beach_Mayor_Derrick_Henry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "Office of the Mayor of Daytona Beach, Florida",
+      "license": "Public domain",
+      "license_url": null,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Daytona_Beach_Mayor_Derrick_Henry.jpg"
+    }
   },
   "mayor-district-at-large-angelo-castillo": {
     "name": "Angelo Castillo",
@@ -255,6 +318,11 @@
     "wikipedia_url": "https://en.wikipedia.org/wiki/Wayne_Messam",
     "born": "1975-06-07"
   },
+  "mayor-orlando-buddy-dyer": {
+    "name": "Buddy Dyer",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Buddy_Dyer",
+    "born": "1958-08-07"
+  },
   "mayor-pembroke-pines-angelo-castillo": {
     "name": "Angelo Castillo",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Angelo_Castillo",
@@ -266,6 +334,44 @@
       "license_url": null,
       "file_url": "https://commons.wikimedia.org/wiki/File:A_Castillo_Picture.jpg"
     }
+  },
+  "mayor-tallahassee-john-dailey": {
+    "name": "John E. Dailey",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/John_E._Dailey",
+    "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/John_E._Dailey.jpg/500px-John_E._Dailey.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "City of Tallahassee",
+      "license": "Public domain",
+      "license_url": null,
+      "file_url": "https://commons.wikimedia.org/wiki/File:John_E._Dailey.jpg"
+    },
+    "born": "1972-12-07"
+  },
+  "mayor-tampa-jane-castor": {
+    "name": "Jane Castor",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Jane_Castor",
+    "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Mayor_Jane_Castor_-Tampa.jpeg/500px-Mayor_Jane_Castor_-Tampa.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "City of Tampa",
+      "license": "Public domain",
+      "license_url": null,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mayor_Jane_Castor_-Tampa.jpeg"
+    }
+  },
+  "property-appraiser-lee-county-matt-caldwell": {
+    "name": "Matt Caldwell",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Matt_Caldwell",
+    "photo_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2020_Caldwell_Headshot.jpg/500px-2020_Caldwell_Headshot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "Dewey6427",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2020_Caldwell_Headshot.jpg"
+    },
+    "born": "1981-08-12"
   },
   "property-appraiser-miami-dade-county-tomas-regalado": {
     "name": "Tomas Regalado",
@@ -298,6 +404,19 @@
     "wikipedia_url": "https://en.wikipedia.org/wiki/Lori_Alhadeff",
     "born": "1975-02-11"
   },
+  "school-board-member-orange-county-public-schools-teresa-jacobs": {
+    "name": "Teresa Jacobs",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Teresa_Jacobs",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Portrait_Teresa_Jacobs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "OCFL",
+      "license": "Public domain",
+      "license_url": null,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Portrait_Teresa_Jacobs.jpg"
+    },
+    "born": "1958-04-06"
+  },
   "secretary-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-nan-rich": {
     "name": "Nan Rich",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Nan_Rich",
@@ -322,6 +441,47 @@
       "license_url": null,
       "file_url": "https://commons.wikimedia.org/wiki/File:Gregory_Tony.jpg"
     }
+  },
+  "sheriff-clay-county-michelle-cook": {
+    "name": "Michelle Cook",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Michelle_Cook_(sheriff)"
+  },
+  "sheriff-gadsden-county-morris-young": {
+    "name": "Morris A. Young",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Morris_A._Young"
+  },
+  "sheriff-hillsborough-county-chad-chronister": {
+    "name": "Chad Chronister",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Chad_Chronister",
+    "born": "1968-02-24"
+  },
+  "sheriff-orange-county-john-mina": {
+    "name": "John W. Mina",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/John_Mina",
+    "born": "1968-08-31"
+  },
+  "sheriff-palm-beach-county-ric-bradshaw": {
+    "name": "Ric L. Bradshaw",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ric_Bradshaw",
+    "born": "1948-03-14"
+  },
+  "sheriff-pinellas-county-bob-gualtieri": {
+    "name": "Bob Gualtieri",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bob_Gualtieri"
+  },
+  "sheriff-polk-county-grady-judd": {
+    "name": "Grady Judd",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Grady_Judd",
+    "born": "1954-03-10"
+  },
+  "sheriff-seminole-county-dennis-lemma": {
+    "name": "Dennis M. Lemma",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dennis_Lemma",
+    "born": "1971-11-18"
+  },
+  "sheriff-volusia-county-mike-chitwood": {
+    "name": "Mike Chitwood",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Mike_Chitwood"
   },
   "state-attorney-11th-judicial-circuit-miami-dade-county-katherine-rundle": {
     "name": "Katherine Fernandez Rundle",
@@ -663,5 +823,18 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
       "file_url": "https://commons.wikimedia.org/wiki/File:Dariel_Fernandez_Tax_Collector_Official_Portrait.png"
     }
+  },
+  "vice-mayor-tallahassee-curtis-richardson": {
+    "name": "Curtis Richardson",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Curtis_Richardson",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Curtis_Richardson.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "photo_credit": {
+      "source": "Wikimedia Commons",
+      "author": "City of Tallahassee",
+      "license": "Public domain",
+      "license_url": null,
+      "file_url": "https://commons.wikimedia.org/wiki/File:Curtis_Richardson.jpg"
+    },
+    "born": "1956-10-08"
   }
 }

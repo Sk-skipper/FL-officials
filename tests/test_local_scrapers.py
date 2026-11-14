@@ -251,3 +251,14 @@ def test_publish_keeps_one_holder_of_a_single_seat_office_preferring_the_county_
     people = officials["officials"]
     assert [(p["full_name"], p["source_name"], p["photo_url"]) for p in people] == [
         ("Tony Smith", "Franklin County Supervisor of Elections", "https://example.gov/p.jpg")]
+
+
+from collector.scrapers.miamidade_soe import commission_portrait
+
+
+def test_miamidade_portrait_is_the_image_naming_the_commissioner():
+    html = """<img src="/resources/images/commission/county-map.jpg" alt="Map of Miami-Dade County">
+      <img src="/resources/images/commission/district02/headshot.jpg" alt="Commissioner Dana Sample">"""
+    page = "https://www.miamidade.gov/global/government/commission/district02/home.page"
+    assert commission_portrait(html, page, "Sample") == "https://www.miamidade.gov/resources/images/commission/district02/headshot.jpg"
+    assert commission_portrait(html, page, "Other") is None

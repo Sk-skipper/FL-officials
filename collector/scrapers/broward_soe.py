@@ -16,7 +16,7 @@ FOURTH_DCA_COUNTIES = ["Broward", "Indian River", "Martin", "Okeechobee", "Palm 
 CIRCUIT = "17th Judicial Circuit (Broward County)"
 COUNTY = "Broward County"
 SKIP = ("President", "Vice President", "US Senate", "US Congress", "State Senate", "State House",
-        "Supervisor of Elections", "County Commission", "School Board")
+        "Supervisor of Elections", "School Board")
 STATEWIDE = {
     "Governor": "Governor", "Lieutenant Governor": "Lieutenant Governor", "Attorney General": "Attorney General",
     "Chief Financial Officer": "Chief Financial Officer",
@@ -47,9 +47,14 @@ def _next_election(status: list[str]) -> str | None:
     return None
 
 
-def _office(name: str) -> dict | None:
+def _office(name: str, district_text: str = "") -> dict | None:
     if name.startswith(SKIP) or name in SKIP:
         return None
+    if name == "County Commission":
+        # Broward GIS has the same seats with photos; this row adds the party, which GIS doesn't publish.
+        m = re.search(r"DIST(?:RICT)?\s*(\d+)", district_text, re.I)
+        return {"office_title": "County Commissioner", "government_level": "county", "jurisdiction": "Broward County",
+                "district": m.group(1) if m else None, "county": "Broward"}
     if name in STATEWIDE:
         return {"office_title": STATEWIDE[name], "government_level": "state", "jurisdiction": "Florida", "statewide": True}
     if name == "Florida Supreme Court Chief Justice":
@@ -82,7 +87,7 @@ def parse_broward_soe(html: str, source_url: str) -> list[dict]:
     records = []
     for row in soup.select("tr.ResultRow"):
         office_name = " ".join(_cell(row, "OfficeName"))
-        office = _office(office_name)
+        office = _office(office_name, " ".join(_cell(row, "District")))
         if office is None:
             continue
         if "_unknown" in office:
