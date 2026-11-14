@@ -208,3 +208,46 @@ def test_fac_commissioners_are_held_back_when_a_county_lists_too_many():
     assert sum(1 for r in kept if r.get("county") == "Leon") == 5
     held = [r for r in kept if "_error" in r]
     assert len(held) == 1 and "Palm Beach County" in held[0]["_error"] and "9 commissioners" in held[0]["_error"]
+
+
+from collector.scrapers.soe_officeholders import parse_officeholders
+
+
+def test_soe_officeholders_reads_names_with_party_and_the_office_above():
+    html = """<main><h3>Sheriff</h3><p>Pat Example (Republican)</p><p>Website</p>
+      <h3>Property Appraiser</h3><p>Lee Sample</p><p>(DEM)</p>
+      <h3>County Commission</h3><p>District 3</p><p>Jane Doe (R)</p>
+      <p>School Board District 2: Sam Roe (NOP)</p>
+      <h3>State Senator</h3><p>Skip Me (R)</p><h3>Superintendent of Schools</h3><p>Kim Teach (Rep)</p></main>"""
+    records = parse_officeholders(html, "https://vote.example.gov/officials", "Leon")
+    got = [(r["name"], r["office_title"], r.get("district"), r["party"]) for r in records]
+    assert got == [
+        ("Pat Example", "Sheriff", None, "Republican"),
+        ("Lee Sample", "Property Appraiser", None, "Democratic"),
+        ("Jane Doe", "County Commissioner", "3", "Republican"),
+        ("Sam Roe", "School Board Member", "2", "Nonpartisan"),
+        ("Kim Teach", "Superintendent of Schools", None, "Republican"),
+    ]
+    assert all(validate_record(r)[0] is not None for r in records)
+
+
+def test_soe_officeholders_fails_on_a_page_it_cannot_read():
+    with pytest.raises(FetchError, match="Only 0 county officials"):
+        parse_officeholders("<main><p>Loading...</p></main>", "https://vote.example.gov/officials", "Leon")
+
+
+def test_publish_keeps_one_holder_of_a_single_seat_office_preferring_the_county_source():
+    def rec(rid, first, last, source):
+        return {"id": rid, "full_name": f"{first} {last}", "first_name": first, "last_name": last, "office_title": "Sheriff",
+                "government_level": "county", "jurisdiction": "Franklin County", "county": "Franklin",
+                "source_url": "https://example.gov", "photo_url": "https://example.gov/p.jpg" if source == "assoc" else None}
+    collected = {"sources": {
+        "assoc": {"name": "Florida Sheriffs Association", "url": "https://a.example", "level": "county", "status": "success",
+                  "records": [rec("sheriff-a", "A.J.", "Smith", "assoc")]},
+        "soe": {"name": "Franklin County Supervisor of Elections", "url": "https://s.example", "level": "county", "status": "success",
+                "records": [rec("sheriff-b", "Tony", "Smith", "soe")]},
+    }}
+    officials, *_ = build(collected, {"officials": []}, {}, {}, datetime(2026, 11, 13, tzinfo=timezone.utc), {})
+    people = officials["officials"]
+    assert [(p["full_name"], p["source_name"], p["photo_url"]) for p in people] == [
+        ("Tony Smith", "Franklin County Supervisor of Elections", "https://example.gov/p.jpg")]

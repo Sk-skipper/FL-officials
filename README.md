@@ -115,6 +115,8 @@ Most local sources use one of these scrapers:
 | `miamidade_soe` | Miami-Dade Supervisor of Elections PDFs | officials list plus `config.judges_url` |
 | `broward_districts` | Broward County GIS district seats | `config.mayor_cities`: cities whose mayor is taken from GIS |
 | `city_roster` | a city's or board's own roster page | see below |
+| `soe_officeholders` | a county Supervisor of Elections' elected officials page | `config.county`; reads "Name (Party)" under each office |
+| `fl_sheriffs`, `fl_clerks`, `fac_commissioners` | statewide association rosters | `config.skip_counties`; commissioners need a matching board size |
 | `county_directory` / `municipal_directory` | a page with a regular table | CSS selectors per field |
 
 `city_roster` reads a "Mayor and Commission" page the way a person would: it recognises "Mayor Jane Doe",

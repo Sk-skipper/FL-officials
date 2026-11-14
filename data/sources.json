@@ -907,5 +907,65 @@
         "Chairman": "School Board Member"
       }
     }
+  },
+  {
+    "key": "soe_escambia",
+    "name": "Escambia County Supervisor of Elections: elected officials",
+    "url": "https://escambiavotes.gov/elected-officials-in-escambia-county",
+    "level": "county",
+    "scraper": "soe_officeholders",
+    "config": {
+      "county": "Escambia"
+    }
+  },
+  {
+    "key": "soe_franklin",
+    "name": "Franklin County Supervisor of Elections: elected officials",
+    "url": "https://www.votefranklinfl.gov/resources/elected_officials.php",
+    "level": "county",
+    "scraper": "soe_officeholders",
+    "config": {
+      "county": "Franklin"
+    }
+  },
+  {
+    "key": "soe_gadsden",
+    "name": "Gadsden County Supervisor of Elections: elected officials",
+    "url": "https://votegadsdenfl.gov/voter-info/federal-state-local-officials/",
+    "level": "county",
+    "scraper": "soe_officeholders",
+    "config": {
+      "county": "Gadsden"
+    }
+  },
+  {
+    "key": "soe_lee",
+    "name": "Lee County Supervisor of Elections: elected officials",
+    "url": "https://www.lee.vote/173/Elected-Officials",
+    "level": "county",
+    "scraper": "soe_officeholders",
+    "config": {
+      "county": "Lee"
+    }
+  },
+  {
+    "key": "soe_leon",
+    "name": "Leon County Supervisor of Elections: elected officials",
+    "url": "https://www.leonvotes.gov/Candidates/Elected-Officials",
+    "level": "county",
+    "scraper": "soe_officeholders",
+    "config": {
+      "county": "Leon"
+    }
+  },
+  {
+    "key": "soe_seminole",
+    "name": "Seminole County Supervisor of Elections: elected officials",
+    "url": "https://voteseminole.gov/elections/elected-officials/",
+    "level": "county",
+    "scraper": "soe_officeholders",
+    "config": {
+      "county": "Seminole"
+    }
   }
 ]
