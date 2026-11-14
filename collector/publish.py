@@ -57,17 +57,25 @@ EXPECTED_SEATS = [
     ("state", "State Senator", 40),
     ("state", "State Representative", 120),
     ("county", "Supervisor of Elections", 67),
+    ("county", "Sheriff", 67),
+    ("county", "Clerk of the Circuit Court", 67),
 ]
 NOT_YET_COVERED = [
-    "County commissions, constitutional officers, school boards and judges outside Broward and Miami-Dade counties",
-    "Mayors and councils outside Broward and Miami-Dade counties (Florida has 411 municipalities)",
+    "County commissioners in 35 of the 65 counties outside Broward and Miami-Dade: the Florida Association of Counties "
+    "directory lists the wrong number of members for them (it keeps some former commissioners), so they are held back",
+    "Property appraisers and tax collectors outside Broward and Miami-Dade (no statewide list names them)",
+    "School boards outside Broward, Miami-Dade, Charlotte, Citrus, Escambia, Holmes, Jackson, Liberty, Orange, Palm Beach and "
+    "Sumter (most district websites load their board pages with JavaScript), and school superintendents",
+    "Judges outside Broward and Miami-Dade and the 1st, 2nd, 5th and 6th District Courts of Appeal",
+    "Mayors and councils outside Broward and Miami-Dade counties (Florida has 411 municipalities; the League of Cities "
+    "directory only answers its own website's search box)",
     "Broward: Cooper City, Dania Beach and Lauderhill councils; Hallandale Beach, Lauderdale Lakes, Plantation, Sea Ranch Lakes, Sunrise, "
     "West Park and Weston list only their mayor (their websites refuse automated requests or could not be read)",
     "Miami-Dade: Doral, Hialeah, Hialeah Gardens, Indian Creek, Miami Shores, Miami Springs, South Miami and Sunny Isles Beach councils, "
     "the mayors of Miami Lakes and North Miami, and one or two seats in Cutler Bay, Medley, North Miami and West Miami",
-    "Board members of most special districts: Broward's two hospital districts and its water control districts other than South Broward, "
-    "The Children's Trust, and Miami-Dade's community development districts (the districts themselves are listed and mapped)",
-    "Special districts outside Broward and Miami-Dade counties",
+    "Board members of most special districts, and special districts outside Broward and Miami-Dade (the state's official list "
+    "refuses automated requests)",
+    "Appointed state boards and commissions",
 ]
 
 BIO_TEXT = {"born", "serving_since", "term_ends", "next_election", "summary", "note"}

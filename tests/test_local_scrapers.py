@@ -174,3 +174,37 @@ def test_publish_merges_a_member_listed_by_the_city_and_the_county_gis():
         "Vice Mayor", "4", "jdoe@example.gov", "https://city.example.gov/j.jpg")
     assert jane["phone"] == "(954) 555-0100"  # profile keyed by the merged-away id still applies
     assert not warnings
+
+
+from collector.scrapers.fl_county_officers import hold_back_stale_counties, parse_clerks, parse_fac, parse_sheriffs
+
+
+def test_statewide_sheriffs_and_clerks_skip_counties_with_their_own_source():
+    sheriffs = """<a href="https://flsheriffs.org/staff/a/" class="card:post »staff"><img src="https://flsheriffs.org/a.jpg">
+      <h2 class="card:post::heading">Sheriff Dr. Pat Example</h2><div class="card:post::role">Alachua</div></a>
+      <a href="https://flsheriffs.org/staff/b/" class="card:post »staff"><h2 class="card:post::heading">Sheriff Lee Sample</h2>
+      <div class="card:post::role">Broward</div></a>"""
+    records = parse_sheriffs(sheriffs, "https://flsheriffs.org/sheriffs/", {"Broward"})
+    assert [(r["name"], r["county"], r["photo_url"]) for r in records] == [("Pat Example", "Alachua", "https://flsheriffs.org/a.jpg")]
+    clerks = """<p><a href="https://bakerclerk.example">Baker County Clerk of Court - STACIE Q. MCEXAMPLE, ESQ.</a></p>
+      <p><a href="https://x.example">St. Johns County Clerk of Court & Comptroller - JANE DOE</a></p>"""
+    names = [(r["name"], r["county"]) for r in parse_clerks(clerks, "https://flccoc.org/about-us/clerks/", set())]
+    assert names == [("Stacie Q. McExample", "Baker"), ("Jane Doe", "St. Johns")]
+
+
+def _fac_box(name, position, county):
+    return f"""<div class="dirResultsBox"><div class="dirEntryName">{name}</div><div class="dirEntryPosition">{position}</div>
+      <div class="dirEntryAddress">{county}<br>1 Main St</div><span class="dirPhone">(850) 555-0100</span></div>"""
+
+
+def test_fac_commissioners_are_held_back_when_a_county_lists_too_many():
+    html = "".join(_fac_box(f"Member{i}, Pat", "Commissioner", "Leon County") for i in range(5))
+    html += "".join(_fac_box(f"Member{i}, Lee", "Commissioner", "Palm Beach County") for i in range(9))
+    html += _fac_box("Mayor, Mo", "Mayor", "Palm Beach County") + _fac_box("Clerk, Cy", "Staff Assistant", "Leon County")
+    html += '<a href="/directory-results/?group=1&cpage=2">2</a>'
+    records, pages = parse_fac(html, "https://www.fl-counties.com/directory-results/?group=1", set())
+    assert pages == ["https://www.fl-counties.com/directory-results/?group=1&cpage=2"]
+    kept = hold_back_stale_counties(records, {5, 7})
+    assert sum(1 for r in kept if r.get("county") == "Leon") == 5
+    held = [r for r in kept if "_error" in r]
+    assert len(held) == 1 and "Palm Beach County" in held[0]["_error"] and "9 commissioners" in held[0]["_error"]

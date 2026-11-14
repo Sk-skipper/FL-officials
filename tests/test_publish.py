@@ -110,7 +110,7 @@ def test_coverage_is_reported_honestly():
     *_, meta, _ = run_build()
     rows = {r["office_title"]: r for r in meta["coverage"]["rows"]}
     assert (rows["State Senator"]["collected"], rows["State Senator"]["expected"]) == (1, 40)
-    assert meta["coverage"]["tracked_percent"] == round(1 / 262 * 100, 1)
+    assert meta["coverage"]["tracked_percent"] == round(1 / (262 + 67 + 67) * 100, 1)  # + sheriffs and clerks
     assert any("Broward" in item for item in meta["coverage"]["not_yet_covered"])
 
 

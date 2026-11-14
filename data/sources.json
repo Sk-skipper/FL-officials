@@ -77,6 +77,49 @@
     }
   },
   {
+    "key": "fl_sheriffs",
+    "name": "Florida Sheriffs Association: Sheriff Directory",
+    "url": "https://flsheriffs.org/sheriffs/",
+    "level": "county",
+    "scraper": "fl_sheriffs",
+    "config": {
+      "skip_counties": [
+        "Broward",
+        "Miami-Dade"
+      ]
+    }
+  },
+  {
+    "key": "fl_clerks",
+    "name": "Florida Clerks of Court Operations Corporation: Clerks of the Circuit Court",
+    "url": "https://flccoc.org/about-us/clerks/",
+    "level": "county",
+    "scraper": "fl_clerks",
+    "config": {
+      "skip_counties": [
+        "Broward",
+        "Miami-Dade"
+      ]
+    }
+  },
+  {
+    "key": "fac_commissioners",
+    "name": "Florida Association of Counties: county commissioners",
+    "url": "https://www.fl-counties.com/directory-results/?group=156781",
+    "level": "county",
+    "scraper": "fac_commissioners",
+    "config": {
+      "skip_counties": [
+        "Broward",
+        "Miami-Dade"
+      ],
+      "board_sizes": [
+        5,
+        7
+      ]
+    }
+  },
+  {
     "key": "city_miami_dade_aventura",
     "name": "Aventura (Miami-Dade County): mayor and commission",
     "url": "https://www.cityofaventura.com/200",
@@ -691,6 +734,178 @@
       "seats": 9,
       "selection_method": "appointed",
       "role_pattern": "^(chair|vice chair|member)$"
+    }
+  },
+  {
+    "key": "school_charlotte",
+    "name": "Charlotte County School Board: board members",
+    "url": "https://www.yourcharlotteschools.net/72943_3",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Charlotte",
+      "jurisdiction": "Charlotte County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_citrus",
+    "name": "Citrus County School Board: board members",
+    "url": "https://www.citrusschools.org/meet-school-board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Citrus",
+      "jurisdiction": "Citrus County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_escambia",
+    "name": "Escambia County School Board: board members",
+    "url": "https://www.escambiaschools.org/domain/77",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Escambia",
+      "jurisdiction": "Escambia County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      },
+      "seat_name_lines": true
+    }
+  },
+  {
+    "key": "school_holmes",
+    "name": "Holmes County School Board: board members",
+    "url": "http://www.hdsb.org/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Holmes",
+      "jurisdiction": "Holmes County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_jackson",
+    "name": "Jackson County School Board: board members",
+    "url": "https://www.jcsb.org/421891_2",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Jackson",
+      "jurisdiction": "Jackson County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_liberty",
+    "name": "Liberty County School Board: board members",
+    "url": "https://www.lcsb.org/schoolboard",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Liberty",
+      "jurisdiction": "Liberty County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_orange",
+    "name": "Orange County School Board: board members",
+    "url": "https://www.ocps.net/school-board-members-home",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "jurisdiction": "Orange County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 8,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_palm_beach",
+    "name": "Palm Beach County School Board: board members",
+    "url": "https://www.palmbeachschools.org/school_board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Palm Beach County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 7,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_sumter",
+    "name": "Sumter County School Board: board members",
+    "url": "https://www.sumter.k12.fl.us/school-board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Sumter",
+      "jurisdiction": "Sumter County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
     }
   }
 ]

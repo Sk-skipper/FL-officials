@@ -18,7 +18,8 @@ Config for each source (data/sources.json):
       "extra_urls": [],                 # optional: more pages, e.g. one per commissioner
       "exclude": ["Jane Doe"],          # optional: names the page shows that do not hold a seat
       "menu_links": true,               # optional: also read links anywhere on the page ("Mayor Jane Doe")
-      "loose": true                     # optional: a name followed by an email address counts as a member
+      "loose": true,                    # optional: a name followed by an email address counts as a member
+      "title_map": {"Chair": "..."}     # optional: rename titles (a school board's "Chair" is still a board member)
     }
 
 Safety: if the page yields fewer than `seats - 2` or more than `seats + 2` people, nothing is returned
@@ -33,7 +34,7 @@ from bs4 import BeautifulSoup
 from collector.normalize import clean_text
 from collector.scrapers.base import BaseScraper, FetchError
 
-TITLE = (r"(?:Vice[- ]Mayor|Deputy[- ]Mayor|Mayor[- ]Pro[- ]Tem(?:pore)?|Mayor|Council[- ]?(?:member|Member|man|woman|person)"
+TITLE = (r"(?:(?:School )?Board Member|Vice[- ]Mayor|Deputy[- ]Mayor|Mayor[- ]Pro[- ]Tem(?:pore)?|Mayor|Council[- ]?(?:member|Member|man|woman|person)"
          r"|Commissioner|Council (?:Vice[- ])?President|(?:Vice[- ])?Chair(?:man|woman|person)?|Alderman|Village Trustee|Trustee)")
 _PARTICLE = r"(?:de|del|de la|la|van|von|da|dos|St\.)"
 _TOKEN = r"(?:(?:Mc|Mac|De|Di|Da|La|Le|Van|Von|O['’]|D['’])[A-Z][a-záéíóúñü]+|[A-ZÁÉÍÓÚÑ][a-záéíóúñü]+(?:['’][a-z]+)?(?:-[A-ZÁÉÍÓÚÑ]?[a-záéíóúñü]+)*|[A-Z]\.|[A-Z]{2,4}|\"[^\"]{2,20}\"|“[^”]{2,20}”|'[^']{2,20}'|\([A-Z][a-z]+\))"
@@ -76,6 +77,8 @@ def _clean_name(raw: str, strict: bool = True) -> str | None:
 
 def _title(raw: str, member_title: str) -> str:
     t = clean_text(raw).lower().replace("-", " ")
+    if "board member" in t:
+        return member_title
     if t.startswith("council") and ("president" in t):
         return "Council Vice President" if "vice" in t else "Council President"
     if t in ("vice mayor", "deputy mayor", "mayor"):
@@ -145,7 +148,11 @@ def page_lines(html: str, selector: str | None = None, url: str | None = None, m
     return lines
 
 
-def find_members(lines: list[str], member_title: str, exclude: set[str] | None = None, loose: bool = False) -> list[dict]:
+_SEAT_NAME = re.compile(rf"^(?:District|Seat|Group)\s*\d{{1,2}}\s*[,:\-–—]\s*(?P<name>{NAME})$")
+
+
+def find_members(lines: list[str], member_title: str, exclude: set[str] | None = None, loose: bool = False,
+                 seat_lines: bool = False) -> list[dict]:
     """Every (name, title, seat) the lines describe, best title per person."""
     exclude = {e.lower() for e in exclude or ()}
     found: dict[str, dict] = {}
@@ -179,6 +186,9 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
         m = _TITLE_FIRST.match(line) or _NAME_FIRST.match(line)
         if m:
             add(m["name"], m["title"], line)
+            continue
+        if seat_lines and (sm := _SEAT_NAME.match(line)):
+            add(sm["name"], member_title, line)  # "District 1, Jane Doe" (config "seat_name_lines")
             continue
         n = _NAME_ONLY.match(line)
         if not n:
@@ -326,7 +336,7 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
         lines = []
         for html, url in pages:
             lines += page_lines(html, config.get("selector"), url, bool(config.get("menu_links")))
-        members = find_members(lines, member_title, exclude, bool(config.get("loose")))
+        members = find_members(lines, member_title, exclude, bool(config.get("loose")), bool(config.get("seat_name_lines")))
     seats = int(config.get("seats") or 5)
     if not seats - 2 <= len(members) <= seats + 2:
         names = ", ".join(f"{m['name']} ({m['title']})" for m in members[:12])
@@ -342,7 +352,7 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
         seat = m["seat"]
         district = seat.split()[-1] if seat and seat.split()[0] in ("District", "Seat", "Group", "Ward", "Zone") else None
         record = {
-            "name": m["name"], "office_title": f"{m['title']}{suffix}", "government_level": level,
+            "name": m["name"], "office_title": (config.get("title_map") or {}).get(m["title"], f"{m['title']}{suffix}"), "government_level": level,
             "jurisdiction": jurisdiction, "county": config["county"],
             "district": (district if district and district.isdigit() and seat.startswith("District") else (seat if district else None)),
             "seat_label": seat, "party": config.get("party", "Nonpartisan"),

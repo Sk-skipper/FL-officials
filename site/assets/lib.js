@@ -341,7 +341,7 @@ export function rosterSection(record) {
       return "Governor and Cabinet";
     case "county":
       if (record.special_district) return record.jurisdiction || "Special districts";
-      if (/county commissioner|county mayor/i.test(title)) return "County Commission";
+      if (/county commissioner|county mayor|county council/i.test(title)) return "County Commission";
       if (/community council/i.test(title)) return "Community Councils";
       if (CONSTITUTIONAL.test(title)) return "Constitutional officers";
       if (/school board/i.test(title)) return "School Board";
@@ -458,7 +458,8 @@ export function representativesFor(records, place, vacancies = []) {
       case "county":
         if (r.county !== county) return false;
         if (r.special_district) return r.special_district === place.special || (place.countywideSpecial || []).includes(r.special_district);
-        if (/county commissioner/i.test(title)) return same(r.district, place.commission);
+        // Counties without a district map (outside Broward and Miami-Dade) show their whole commission.
+        if (/county commissioner/i.test(title)) return place.commission == null || same(r.district, place.commission);
         if (/community council/i.test(title)) return false; // no published boundaries to match an address to
         if (/school board/i.test(title)) {
           const drawn = (place.schoolDistricts || []).map(districtKey);
