@@ -38,6 +38,9 @@ from pathlib import Path
 
 import requests
 from shapely.geometry import mapping, shape
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from collector.geo import canonical_county  # noqa: E402
 from shapely.ops import unary_union
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -49,6 +52,7 @@ CITY_LIMITS = f"{BROWARD}/BCCity_Boundaries/FeatureServer/0"
 DRAINAGE = f"{BROWARD}/DrainageDistricts/FeatureServer/0"
 MD_VOTE = "https://gisweb.miamidade.gov/arcgis/rest/services/MD_KnowWhereToVote/MapServer"
 MD_CDD = "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/CommunityDevelopmentDistrict_gdb/FeatureServer/0"
+SFWMD_SD = "https://geoweb.sfwmd.gov/agsext1/rest/services/WaterManagementSystem/SFWMD_Special_Districts/FeatureServer/0"
 MIAMI_CITY = "https://gis.miami.gov/gis/rest/services/Maps/CommissionerDistricts/MapServer/0"
 HEADERS = {"User-Agent": "fl-officials-directory/1.0 (boundary builder)"}
 
@@ -216,6 +220,72 @@ def build_miamidade() -> tuple[dict[str, list], list[dict]]:
     return {"commission": commission, "school": school, "city": city, "special": special}, entries
 
 
+def _norm(name: str) -> str:
+    name = re.sub(r"\s*-\s*(broward|palm beach|st\.? lucie|lee|hendry|martin)$", "", name.strip(), flags=re.I)
+    return re.sub(r"[^a-z0-9]", "", name.lower().replace("number", "no").replace("#", "no"))
+
+
+def _title(name: str) -> str:
+    small = {"of", "and", "the", "at", "no"}
+    words = [w.capitalize() if w.lower() not in small or i == 0 else w.lower() for i, w in enumerate(name.split())]
+    return re.sub(r"\bSt\b", "St.", " ".join(words)).replace("No ", "No. ")
+
+
+SD_TYPES = {"DRAINAGE AND WATER CONTROL": "Water control district", "COMMUNITY DEVELOPMENT": "Community development district",
+            "INFRASTRUCTURE DEVELOPMENT": "Improvement district", "CONSERVATION, WATER AND/OR WASTEWATER SYSTEMS": "Conservation district"}
+
+
+def build_sfwmd(existing: list[dict]) -> tuple[list[dict], list[dict], dict[str, dict]]:
+    """South Florida Water Management District, "SFWMD Special Districts": every special district in its 16 counties
+    that manages water (drainage, water control, improvement and some community development districts), with the
+    district's status, functions, how its board is chosen, website and contacts.
+
+    Returns (new map features, new special_districts.json entries, {existing key: details to fill in}).
+    A district already mapped from a county's own GIS keeps that outline and only gains the details.
+    """
+    rows = query(SFWMD_SD, "ACTIVE='YES' OR ACTIVE IS NULL", "*", LOCAL_OFFSET)
+    known = {_norm(d["name"]): d["key"] for d in existing}
+    groups: dict[str, list[dict]] = {}
+    for row in rows:
+        name = " ".join((row["properties"].get("SPECIAL_DISTRICT_NAME") or "").split())
+        if name:
+            groups.setdefault(_norm(name), []).append(row)
+    features, entries, fills = [], [], {}
+    for norm, items in sorted(groups.items()):
+        p = items[0]["properties"]
+        name = _title(re.sub(r"\s*-\s*BROWARD$", "", p["SPECIAL_DISTRICT_NAME"].strip(), flags=re.I))
+        counties = sorted({_title(r["properties"].get("COUNTY") or "").replace("St. Lucie", "St. Lucie") for r in items if r["properties"].get("COUNTY")})
+        county = canonical_county(counties[0]) if counties else None
+        functions = (p.get("FUNCTIONS") or "").split(",")[0].strip().upper()
+        board = (p.get("BOARD_SELECTION") or "").strip().title() or None
+        details = {
+            "website": p.get("WEBSITE") if (p.get("WEBSITE") or "").startswith("http") else None,
+            "phone": p.get("CUST_SERVICE_1"), "email": p.get("EMAIL_1"),
+            "board": {"Elected": "Board elected by the district's landowners or voters", "Appointed": "Board appointed",
+                      "Appointed/Elected": "Board partly appointed, partly elected",
+                      "Same As Lga": "Governed by the county or city that created it"}.get(board or "", None),
+            "statute": p.get("STATUTORY_AUTHORITY"), "established": p.get("DATE_ESTABLISHED"),
+            "source": {"name": "South Florida Water Management District: SFWMD Special Districts",
+                       "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"},
+        }
+        if norm in known:
+            fills[known[norm]] = details
+            continue
+        key = "sfwmd-" + re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+        features.append(feature(mapping(unary_union([shape(r["geometry"]).buffer(0) for r in items])), county=county, key=key,
+                                status=(p.get("STATUS") or "independent").lower()))
+        entries.append({
+            "key": key, "name": name, "type": SD_TYPES.get(functions, "Special district"), "area": "mapped",
+            "status": "dependent" if (p.get("STATUS") or "").upper() == "DEPENDENT" else "independent", "county": county,
+            "area_note": ", ".join(counties) + (" counties" if len(counties) > 1 else " County") if counties else None,
+            "board": details["board"] or "Board chosen as the district's charter sets out.",
+            "phone": details["phone"], "website": details["website"],
+            "note": f"Created under {details['statute']}" + (f", {details['established']}" if details["established"] else "") + "." if details["statute"] else None,
+            "sources": [details["source"]],
+        })
+    return features, entries, fills
+
+
 def _city_name(raw: str) -> str:
     name = " ".join(w.capitalize() if w.isupper() or w.islower() else w for w in raw.strip().split())
     fixes = {"Lauderdale By The Sea": "Lauderdale-By-The-Sea", "Lauderdale-by-the-sea": "Lauderdale-By-The-Sea",
@@ -272,15 +342,31 @@ def main() -> None:
     }
     for name, (b, d, note) in combined.items():
         layers[name] = collection(broward[b]["features"] + dade[d], "local", note)
+    path = ROOT / "data" / "special_districts.json"
+    special = json.loads(path.read_text(encoding="utf-8"))
+    kept = [d for d in special["districts"] if not d["key"].startswith(("md-cdd-", "sfwmd-"))]
+    print("Downloading SFWMD special districts...")
+    sd_features, sd_entries, sd_fills = build_sfwmd(kept)
+    for d in kept:
+        fill = sd_fills.get(d["key"])
+        if not fill:
+            continue
+        d["website"] = d.get("website") or fill["website"]
+        d["phone"] = d.get("phone") or fill["phone"]
+        if fill["board"] and (not d.get("board") or d["board"].startswith("Board chosen")):
+            d["board"] = fill["board"]
+        if not any(s["url"] == fill["source"]["url"] for s in d["sources"]):
+            d["sources"].append(fill["source"])
+    layers["special-districts"]["features"] += sd_features
+    layers["special-districts"]["note"] += " South Florida Water Management District special districts in its 16 counties."
     for name, data in layers.items():
         write(name, data)
     for old in ("broward-commission", "broward-school", "broward-city-districts", "broward-special"):
         (OUT / f"{old}.json").unlink(missing_ok=True)
-    path = ROOT / "data" / "special_districts.json"
-    special = json.loads(path.read_text(encoding="utf-8"))
-    special["districts"] = [d for d in special["districts"] if not d["key"].startswith("md-cdd-")] + cdds
+    special["districts"] = kept + cdds + sd_entries
     path.write_text(json.dumps(special, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"  data/special_districts.json: {len(cdds)} Miami-Dade community development districts")
+    print(f"  data/special_districts.json: {len(cdds)} Miami-Dade community development districts, "
+          f"{len(sd_entries)} more from SFWMD, details added to {len(sd_fills)} already listed")
 
     if args.counties:
         print("Working out which counties each district covers...")

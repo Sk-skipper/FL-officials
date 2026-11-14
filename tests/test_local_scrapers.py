@@ -262,3 +262,14 @@ def test_miamidade_portrait_is_the_image_naming_the_commissioner():
     page = "https://www.miamidade.gov/global/government/commission/district02/home.page"
     assert commission_portrait(html, page, "Sample") == "https://www.miamidade.gov/resources/images/commission/district02/headshot.jpg"
     assert commission_portrait(html, page, "Other") is None
+
+
+def test_commission_menu_links_with_rotating_mayor_role():
+    html = """<nav><ul><li><a href="/cc/d1">District 1 | Jane Doe</a></li><li><a href="/cc/d2">District 2 | Sam Roe</a></li>
+      <li><a href="/cc/all">All Districts</a></li></ul></nav><main><p>Mayor Lee Poe</p><p>Vice Mayor Kim Moe, District 4</p></main>"""
+    records = parse_city_roster([(html, "https://county.example.gov/commissioners")], {
+        "county": "Palm Beach", "jurisdiction": "Palm Beach County", "government_level": "county", "member_title": "County Commissioner",
+        "seats": 4, "menu_links": True, "seat_name_lines": True, "title_map": {"Mayor": "County Commissioner", "Vice Mayor": "County Commissioner"}})
+    got = {(r["name"], r["office_title"], r["district"], r["seat_label"]) for r in records}
+    assert got == {("Jane Doe", "County Commissioner", "1", "District 1"), ("Sam Roe", "County Commissioner", "2", "District 2"),
+                   ("Lee Poe", "County Commissioner", None, "Mayor"), ("Kim Moe", "County Commissioner", "4", "Vice Mayor, District 4")}

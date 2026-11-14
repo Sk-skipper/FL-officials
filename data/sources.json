@@ -1297,5 +1297,25 @@
       "member_title": "Commissioner",
       "seats": 5
     }
+  },
+  {
+    "key": "county_palm_beach_commission",
+    "name": "Palm Beach County: Board of County Commissioners",
+    "url": "https://discover.pbc.gov/countycommissioners/Pages/default.aspx",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Palm Beach County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 7,
+      "menu_links": true,
+      "seat_name_lines": true,
+      "title_map": {
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
   }
 ]

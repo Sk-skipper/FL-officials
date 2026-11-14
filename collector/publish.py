@@ -77,8 +77,8 @@ NOT_YET_COVERED = [
     "West Park and Weston list only their mayor (their websites refuse automated requests or could not be read)",
     "Miami-Dade: Doral, Hialeah, Hialeah Gardens, Indian Creek, Miami Shores, Miami Springs, South Miami and Sunny Isles Beach councils, "
     "the mayors of Miami Lakes and North Miami, and one or two seats in Cutler Bay, Medley, North Miami and West Miami",
-    "Board members of most special districts, and special districts outside Broward and Miami-Dade (the state's official list "
-    "refuses automated requests)",
+    "Board members of most special districts, and special districts outside the South Florida Water Management District's "
+    "16 counties (the state's official list refuses automated requests)",
     "Appointed state boards and commissions",
 ]
 

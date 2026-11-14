@@ -686,7 +686,7 @@ function countyLeadership(records, county) {
   const byDistrict = (a, b) => (Number(a.district) || 99) - (Number(b.district) || 99) || a.last_name.localeCompare(b.last_name);
   const mayor = here.find((r) => r.office_title === "County Mayor") || null;
   const board = here.filter((r) => /^County (Commissioner|Council Member)$/.test(r.office_title)).sort(byDistrict);
-  const chair = mayor || board.find((r) => /\bchair\b/i.test(`${r.seat_label || ""} ${r.office_title}`) && !/vice/i.test(r.seat_label || "")) || null;
+  const chair = mayor || board.find((r) => /\b(chair|mayor)\b/i.test(r.seat_label || "") && !/vice/i.test(r.seat_label || "")) || null;
   const officers = OFFICER_ORDER.map((t) => here.find((r) => r.office_title === t)).filter(Boolean);
   const school = here.filter((r) => r.office_title === "School Board Member").sort(byDistrict);
   return { mayor, chair, board, officers, school };
@@ -753,9 +753,25 @@ function startSpotlight(root) {
   }
 }
 
-function leadershipPanel(records, county) {
+function specialBlock(meta, county) {
+  const list = (meta.special_districts || []).filter((d) => d.county === county).sort((a, b) => a.name.localeCompare(b.name));
+  if (!list.length) return "";
+  const types = {};
+  for (const d of list) types[d.type] = (types[d.type] || 0) + 1;
+  const elected = list.filter((d) => /elected/i.test(d.board || "") && !/appointed/i.test(d.board || "")).length;
+  return `<div class="leader-block"><h4>Special districts <span class="count">${formatNumber(list.length)}</span></h4>
+    <p class="muted small">Independent governments for one job, such as drainage, a hospital or a new neighbourhood's roads.
+      ${elected ? `${plural(elected, "district")} ${elected === 1 ? "has" : "have"} an elected board.` : ""}
+      <a href="representatives.html">See them on the map</a></p>
+    <ul class="type-chips">${Object.entries(types).sort((a, b) => b[1] - a[1]).map(([t, n]) => `<li>${esc(t)} <span class="count">${n}</span></li>`).join("")}</ul>
+    <details class="special-more"><summary>List all ${formatNumber(list.length)}</summary><ul class="plain special-list">
+      ${list.map((d) => `<li><span class="strong">${safeUrl(d.website) ? `<a href="${esc(d.website)}" target="_blank" rel="noopener noreferrer">${esc(d.name)}</a>` : esc(d.name)}</span>
+        <span class="muted small">${esc(d.type)}${d.board && !d.board.startsWith("Board chosen") ? ` · ${esc(d.board)}` : ""}</span></li>`).join("")}</ul></details></div>`;
+}
+
+function leadershipPanel(records, county, meta) {
   const { mayor, chair, board, officers, school } = countyLeadership(records, county);
-  if (!board.length && !officers.length && !mayor) return "";
+  if (!board.length && !officers.length && !mayor) return specialBlock(meta, county);
   const lead = [chair, ...board.filter((m) => m !== chair), ...officers].filter(Boolean);
   const bodyName = board.some((m) => m.office_title === "County Council Member") ? "County Council" : "Board of County Commissioners";
   return `<section class="leadership" aria-label="Who runs ${esc(county)} County">
@@ -770,6 +786,7 @@ function leadershipPanel(records, county) {
         <span class="strong">${esc(r.full_name)}</span></span></a></li>`).join("")}</ul></div>` : ""}
     ${school.length ? `<div class="leader-block"><h4>School Board</h4><p class="muted small">Runs the county's public schools.</p>
       ${dais(school, { label: `${county} County School Board`, size: "sm" })}</div>` : ""}
+    ${specialBlock(meta, county)}
   </section>`;
 }
 
@@ -861,8 +878,8 @@ function countyExplorer(root, records, meta, map, { initial = "Broward", syncPar
     const coverage =
       LOCAL_COUNTIES.includes(selected)
         ? ""
-        : `<p class="muted small notice">County commissions, judges and city councils are covered for Broward and Miami-Dade counties so far. Here you'll find
-           statewide officials, ${esc(selected)} County's members of Congress and Legislature, and its Supervisor of Elections.</p>`;
+        : `<p class="muted small notice">Broward and Miami-Dade are covered down to every city council and judge. Elsewhere the directory has each
+           county's sheriff, clerk and elections supervisor, and its commission, school board and largest cities where their own lists could be read.</p>`;
 
     panel.innerHTML = `
       <div class="panel-top">
@@ -872,7 +889,7 @@ function countyExplorer(root, records, meta, map, { initial = "Broward", syncPar
         <a class="details" href="county.html?name=${encodeURIComponent(selected)}">Full county page${ICON.arrow}</a></span>
       </div>
       ${coverage}
-      ${leadershipPanel(records, selected)}
+      ${leadershipPanel(records, selected, meta)}
       <details class="everyone"${filter || level ? " open" : ""}><summary><h3 class="group">Everyone who represents ${esc(selected)} County
         <span class="count">${formatNumber(total)}</span></h3><span class="muted small">Congress, the Legislature, statewide offices, judges, cities and districts</span></summary>
       <div class="roster-tools">
@@ -1048,7 +1065,8 @@ const BOUNDARIES = {
 };
 /** The "Show" dropdown, grouped by level of government. */
 const LAYER_GROUPS = [
-  ["Local (Broward and Miami-Dade)", ["commission", "school", "cityDistricts", "cities", "special"]],
+  ["Local (Broward and Miami-Dade)", ["commission", "school", "cityDistricts", "cities"]],
+  ["Special districts (South Florida)", ["special"]],
   ["State", ["house", "senate"]],
   ["Federal", ["congress"]],
 ];
@@ -1076,7 +1094,7 @@ const MAP_LAYERS = [
   { key: "cities", label: "Cities (mayors)", area: "local", holder: (r, p) => r.government_level === "municipal" && r.municipality === p.name && /^mayor$/i.test(r.office_title), name: (p) => p.name },
   { key: "house", partisan: true, label: "Florida House", holder: (r, p) => /^state representative/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida House District ${p.district}` },
   { key: "senate", partisan: true, label: "Florida Senate", holder: (r, p) => /^state senator/i.test(r.office_title) && isSeat(r, p.district), name: (p) => `Florida Senate District ${p.district}` },
-  { key: "special", label: "Special districts", area: "local", holder: () => false, name: (p) => SPECIAL.get(p.key)?.name || p.key,
+  { key: "special", label: "Special districts", area: "region", holder: () => false, name: (p) => SPECIAL.get(p.key)?.name || p.key,
     info: (p) => SPECIAL.get(p.key) || { name: p.key, type: "Special district", status: p.status } },
   { key: "congress", partisan: true, label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
 ];
@@ -1485,9 +1503,10 @@ function reps() {
         { label: "Florida Senate", feature: featureAt(senate, lon, lat) },
         { label: "Florida House", feature: featureAt(house, lon, lat) },
       ];
-      if (LOCAL_COUNTIES.includes(county)) {
+      const local = LOCAL_COUNTIES.includes(county);
+      if (local) {
         const mine = (layer) => ({ ...layer, features: layer.features.filter((f) => f.properties.county === county) });
-        const [commission, school, cityDistricts, specialLayer] = (await Promise.all(["commission", "school", "cityDistricts", "special"].map(loadBoundary))).map(mine);
+        const [commission, school, cityDistricts] = (await Promise.all(["commission", "school", "cityDistricts"].map(loadBoundary))).map(mine);
         const own = cityDistricts.features.filter((f) => f.properties.municipality === place.municipality);
         const cityDistrict = own.find((f) => pointInGeometry(lon, lat, f.geometry));
         Object.assign(place, {
@@ -1498,23 +1517,25 @@ function reps() {
           cityDistrict: cityDistrict?.properties.district,
         });
         hits.push({ label: "County Commission", feature: featureAt(commission, lon, lat) }, { label: "School Board", feature: featureAt(school, lon, lat) });
-        const specialHere = featureAt(specialLayer, lon, lat);
-        place.special = specialHere?.properties.key || null;
-        place.countywideSpecial = [...SPECIAL.values()].filter((d) => d.area !== "mapped" && (!d.county || d.county === county)).map((d) => d.key);
-        if (specialHere) hits.push({ label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
         if (cityDistrict) hits.push({ label: `${place.municipality} Commission`, feature: cityDistrict });
       }
+
+      // Special districts: mapped ones anywhere in South Florida, plus the county's countywide and regional ones.
+      const specialHere = featureAt(await loadBoundary("special"), lon, lat);
+      place.special = specialHere?.properties.key || null;
+      place.countywideSpecial = [...SPECIAL.values()].filter((d) => d.area !== "mapped" && (!d.county || d.county === county)).map((d) => d.key);
+      const hasSpecial = Boolean(place.special) || place.countywideSpecial.length > 0;
+      if (specialHere) hits.splice(local ? 5 : 3, 0, { label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
 
       // One outline at a time: the most local district, or whichever label the visitor points at.
       const found = hits.filter((h) => h.feature);
       lookupHits = { found, current: found.length - 1 };
       showHit(lookupHits.current);
       const { groups, judges } = representativesFor(records, place, meta.vacancies || []);
-      const local = LOCAL_COUNTIES.includes(county);
       // Results are grouped the way ballots and civic tools group them: by level of government, most local last.
       const tabs = [
         ...groups.map((g) => ({ key: g.level, label: LEVEL_LABELS[g.level], count: g.count })),
-        ...(local ? [{ key: "special", label: "Special districts", count: null }] : []),
+        ...(hasSpecial ? [{ key: "special", label: "Special districts", count: null }] : []),
         ...(judges.length ? [{ key: "courts", label: "Courts", count: judges.length }] : []),
       ];
       const total = groups.reduce((n, g) => n + g.count, 0);
@@ -1547,7 +1568,7 @@ function reps() {
         </div>
         ${partial}
         <div class="roster">${body || empty("No officials found for this spot")}</div>
-        ${local ? `<div data-level="special">${specialSummary(place)}</div>` : ""}
+        ${hasSpecial ? `<div data-level="special">${specialSummary(place)}</div>` : ""}
         ${judges.length ? `<details class="roster-section fine" data-level="courts"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
           <p class="muted small">Judges and justices whose courts cover this spot. Most are appointed or elected to serve the whole county, circuit or state.</p>
           ${groupRoster(judges).map((g) => g.sections.map((s) => `<h4 class="gap-top">${esc(s.name)} <span class="count">${formatNumber(s.items.length)}</span></h4>

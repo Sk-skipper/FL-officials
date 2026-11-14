@@ -58,10 +58,11 @@ NOT_A_NAME = re.compile(
     r"Biography|Profile|Message|Corner|Annual|Economic|Empowerment|Initiative|Program|Programs|Turns|Who|Is|My|Find|"
     r"Visit|Page|International|Trade|Consortium|Development|Advocacy|Legislative|Click|Email|Headshot|Show|Again|Arrow|"
     r"Left|Right|Slideshow|Mission|Statement|Site|Map|Maps|Copyright|Notices|Together|Great|Make|Previous|Next|Close|Portrait|"
-    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Ward|Pillar)\b")
+    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Ward|Pillar|All|Districts)\b")
 CARD_NOT_A_NAME = re.compile(r"\b(District|Seat|Commission|Commissioners?|Council|Programs?|Office|City|Town|Village|Policy|"
                              r"Services|Department|Division|Recreation|Compliance|Resources|Works|Gardens|Biography|Events|"
                              r"Meetings?|Agendas?|Vacant|Vacancy|Information|Contact|Elections?|Members?)\b", re.I)
+RANK_TITLES = {"Mayor", "Vice Mayor", "Chair", "Vice Chair", "Council President", "Council Vice President", "Deputy Mayor"}
 RANK = {"mayor": 0, "vice mayor": 1, "deputy mayor": 1, "mayor pro tem": 1, "council president": 0,
         "council vice president": 1, "chair": 0, "vice chair": 1}
 
@@ -124,7 +125,8 @@ def page_lines(html: str, selector: str | None = None, url: str | None = None, m
         for a in soup.select("a[href]"):
             path = urlsplit(urljoin(url, a["href"])).path.lower()
             text = clean_text(a.get_text(" "))
-            if (menu_links or (base and path.startswith(base + "/"))) and (_TITLE_FIRST.match(text) or _NAME_FIRST.match(text)):
+            if (menu_links or (base and path.startswith(base + "/"))) and (
+                    _TITLE_FIRST.match(text) or _NAME_FIRST.match(text) or (menu_links and _SEAT_NAME.match(text))):
                 lines.append(text)
     total = len((soup.body or soup).get_text(" ", strip=True)) or 1
     for tag in soup.select("nav, header, footer, aside, select, button, [class*='breadcrumb'], [id*='breadcrumb'], "
@@ -149,7 +151,7 @@ def page_lines(html: str, selector: str | None = None, url: str | None = None, m
     return lines
 
 
-_SEAT_NAME = re.compile(rf"^(?:District|Seat|Group)\s*\d{{1,2}}\s*[,:\-–—]\s*(?P<name>{NAME})$")
+_SEAT_NAME = re.compile(rf"^(?:District|Seat|Group)\s*\d{{1,2}}\s*[,:|\-–—]\s*(?:Commissioner\s+)?(?P<name>{NAME})$")
 
 
 def find_members(lines: list[str], member_title: str, exclude: set[str] | None = None, loose: bool = False,
@@ -370,6 +372,10 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
             "photo_url": m.get("photo_url"), "email": m.get("email"), "phone": m.get("phone"),
             "official_website": m.get("official_website"),
         }
+        renamed = (config.get("title_map") or {}).get(m["title"])
+        if renamed and renamed != m["title"] and m["title"] in RANK_TITLES:
+            # A commission's "Mayor" or "Chair" is a member holding a rotating role: keep the role as the seat label.
+            record["seat_label"] = f"{m['title']}{', ' + seat if seat else ''}"
         if municipality:
             record["municipality"] = municipality
         if config.get("special_district"):

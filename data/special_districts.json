@@ -8,7 +8,7 @@
       "type": "Drainage district",
       "area": "mapped",
       "status": "independent",
-      "board": "Board chosen as the district's charter sets out.",
+      "board": "Board elected by the district's landowners or voters",
       "phone": "954-680-3337",
       "website": "https://www.sbdd.org/",
       "sources": [
@@ -23,6 +23,10 @@
         {
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/south%20broward%20drainage%20district.htm"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
       "county": "Broward"
@@ -47,9 +51,14 @@
         {
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/central%20broward%20water%20control%20district.htm"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://centralbrowardwcd.org/contact/"
     },
     {
       "key": "Indian Trace",
@@ -67,9 +76,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.westonfl.org/government/public-works-and-utilities/flood-and-stormwater-information#anchor_1573757080343"
     },
     {
       "key": "Coral Bay",
@@ -87,9 +101,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.coralbaycdd.com/"
     },
     {
       "key": "Turtle Run",
@@ -107,9 +126,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.turtleruncdd.com/"
     },
     {
       "key": "Old Plantation",
@@ -127,9 +151,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.opwcd.org/"
     },
     {
       "key": "Plantation Acres",
@@ -147,9 +176,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.paidfl.org/"
     },
     {
       "key": "Pine Tree",
@@ -166,9 +200,15 @@
         {
           "name": "Florida Auditor General: special district annual financial reports",
           "url": "https://flauditor.gov/pages/specialdistricts_efile%20pages/pine%20tree%20water%20control%20district%20broward%20county.htm"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.pinetreewcd.com/",
+      "phone": "954-282-0081"
     },
     {
       "key": "Sunshine",
@@ -206,9 +246,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.csidfl.org/"
     },
     {
       "key": "NSID",
@@ -226,9 +271,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://nsidfl.gov/"
     },
     {
       "key": "North Lauderdale",
@@ -246,9 +296,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.nlauderdale.org/quick_links/water_control_district/index.php"
     },
     {
       "key": "Tindall Hammock",
@@ -266,9 +321,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": null
     },
     {
       "key": "Cocomar",
@@ -286,9 +346,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.broward.org/WaterManagement/Pages/cocomarwaterdistrict.aspx"
     },
     {
       "key": "Lauderdale Isles",
@@ -306,9 +371,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://liwmd.org/index.html"
     },
     {
       "key": "Broward WCD #2",
@@ -321,9 +391,15 @@
         {
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.broward.org/flood/Pages/default.aspx",
+      "phone": "954-831-0751"
     },
     {
       "key": "Broward WCD #3",
@@ -341,9 +417,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.broward.org/flood/Pages/default.aspx"
     },
     {
       "key": "Broward WCD #4",
@@ -361,9 +442,14 @@
         {
           "name": "South Florida Water Management District: water control districts within SFWMD boundaries",
           "url": "https://www.sfwmd.gov/sites/default/files/documents/298_special_districts_contacts.pdf"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.fortlauderdale.gov/government/departments-a-h/city-manager-s-office/strategic-communications/lauderserv"
     },
     {
       "key": "Bonaventure",
@@ -371,15 +457,21 @@
       "type": "Drainage district",
       "area": "mapped",
       "status": "independent",
-      "board": "Board chosen as the district's charter sets out.",
+      "board": "Board appointed",
       "note": "Full legal name not yet confirmed; the label is Broward County GIS's.",
       "sources": [
         {
           "name": "Broward County GIS: Drainage Districts",
           "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/DrainageDistricts/FeatureServer/0"
+        },
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ],
-      "county": "Broward"
+      "county": "Broward",
+      "website": "https://www.westonfl.org/government/bonaventure-development-district",
+      "phone": "954-385-2000"
     },
     {
       "key": "Oakridge",
@@ -517,6 +609,40 @@
         }
       ],
       "county": "Broward"
+    },
+    {
+      "key": "south-dade-swcd",
+      "name": "South Dade Soil and Water Conservation District",
+      "type": "Soil and water conservation district",
+      "area": "regional",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "area_note": "Southern Miami-Dade County",
+      "board": "Five supervisors elected countywide on the Miami-Dade ballot (Chapter 582, Florida Statutes)",
+      "website": "https://southdadesoilandwater.org/",
+      "sources": [
+        {
+          "name": "Miami-Dade Supervisor of Elections: Elected Officials Information",
+          "url": "https://www.miamidade.gov/elections/library/reports/elected-officials.pdf"
+        }
+      ]
+    },
+    {
+      "key": "childrens-trust",
+      "name": "The Children's Trust",
+      "type": "Children's services council",
+      "area": "countywide",
+      "status": "independent",
+      "county": "Miami-Dade",
+      "board": "Board of directors appointed by the Governor, the County and member institutions",
+      "website": "https://www.thechildrenstrust.org/",
+      "note": "Board members are not listed yet: the board page shows them a page at a time.",
+      "sources": [
+        {
+          "name": "The Children's Trust: Board of Directors",
+          "url": "https://www.thechildrenstrust.org/about-us/board-of-directors"
+        }
+      ]
     },
     {
       "key": "md-cdd-ah-at-turnpike-south",
@@ -2887,36 +3013,1009 @@
       ]
     },
     {
-      "key": "south-dade-swcd",
-      "name": "South Dade Soil and Water Conservation District",
-      "type": "Soil and water conservation district",
-      "area": "regional",
-      "status": "independent",
-      "county": "Miami-Dade",
-      "area_note": "Southern Miami-Dade County",
-      "board": "Five supervisors elected countywide on the Miami-Dade ballot (Chapter 582, Florida Statutes)",
-      "website": "https://southdadesoilandwater.org/",
+      "key": "sfwmd-acme-improvement-district",
+      "name": "Acme Improvement District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-791-4000",
+      "website": "https://acme.wellingtonfl.gov/",
+      "note": "Created under CHAPTER 298, F.S., 06/15/1953.",
       "sources": [
         {
-          "name": "Miami-Dade Supervisor of Elections: Elected Officials Information",
-          "url": "https://www.miamidade.gov/elections/library/reports/elected-officials.pdf"
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ]
     },
     {
-      "key": "childrens-trust",
-      "name": "The Children's Trust",
-      "type": "Children's services council",
-      "area": "countywide",
+      "key": "sfwmd-avenir-community-development-district",
+      "name": "Avenir Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
       "status": "independent",
-      "county": "Miami-Dade",
-      "board": "Board of directors appointed by the Governor, the County and member institutions",
-      "website": "https://www.thechildrenstrust.org/",
-      "note": "Board members are not listed yet: the board page shows them a page at a time.",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "877-737-4922",
+      "website": "https://avenircdd.org/",
+      "note": "Created under CHAPTER 190, F.S., 01/05/2017.",
       "sources": [
         {
-          "name": "The Children's Trust: Board of Directors",
-          "url": "https://www.thechildrenstrust.org/about-us/board-of-directors"
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-barron-water-control-district",
+      "name": "Barron Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Glades",
+      "area_note": "Glades, Hendry counties",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-675-0346",
+      "website": "https://bwcd.net/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-big-cypress-stewardship-district",
+      "name": "Big Cypress Stewardship District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Collier",
+      "area_note": "Collier County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "407-723-5900",
+      "website": "https://bigcypressstewardship.com/",
+      "note": "Created under CH. 298, FLORIDA STATUTES, 06/17/2004.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-bolles-drainage-district",
+      "name": "Bolles Drainage District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "863-228-0400",
+      "website": "https://www.floridawatercontroldistricts.org/bolles-drainage-district.html",
+      "note": "Created under CHAPTER 298, F.S., 07/26/1963.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-central-county-water-control-district",
+      "name": "Central County Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-982-7114",
+      "website": "http://ccwcdfl.com/",
+      "note": "Created under CHAPTER 298, F.S., 05/21/1970.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-central-florida-tourism-oversight-district",
+      "name": "Central Florida Tourism Oversight District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Orange",
+      "area_note": "Orange, Osceola counties",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "407-828-2250",
+      "website": "https://www.oversightdistrict.org/contact_us/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-clewiston-drainage-district",
+      "name": "Clewiston Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-983-1471",
+      "website": "https://www.clewiston-fl.gov/contact-us",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-collins-slough-water-control-district",
+      "name": "Collins Slough Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-655-0620",
+      "website": "https://www.collinssloughwcd.com/",
+      "note": "Created under CHAPTER 298, F.S., 07/14/1986.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-cooperative-producers-inc",
+      "name": "Cooperative Producers Inc.",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "dependent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "239-369-2169",
+      "website": null,
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-coquina-water-management-district",
+      "name": "Coquina Water Management District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Okeechobee",
+      "area_note": "Okeechobee County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "863-763-4601",
+      "website": "https://coquinawcd.com/",
+      "note": "Created under CHAPTER 298, F.S., 06/23/1971.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-county-line-drainage-district",
+      "name": "County Line Drainage District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Lee",
+      "area_note": "Lee County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "863-494-3800",
+      "website": "https://countylinedd.org/",
+      "note": "Created under CHAPTER 298, F.S., 01/18/1967.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-cow-slough-water-control-district",
+      "name": "Cow Slough Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-494-4021",
+      "website": "https://cowslough.mydistrictwebsite.com/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-cypress-cove-community-development-district",
+      "name": "Cypress Cove Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Broward",
+      "area_note": "Broward County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "954-721-8681",
+      "website": "https://www.cypresscovecdd.com/",
+      "note": "Created under CHAPTER 190, F.S, 09/05/1990.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-devils-garden-water-control-district",
+      "name": "Devils Garden Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Collier",
+      "area_note": "Collier, Hendry counties",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-655-0620",
+      "website": "https://www.devilsgardenwcd.com/",
+      "note": "Created under CHAPTER 298, F.S., 05/04/1971.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-disston-island-conservancy-district",
+      "name": "Disston Island Conservancy District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Glades",
+      "area_note": "Glades, Hendry counties",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-228-0400",
+      "website": "https://www.floridawatercontroldistricts.org/disston-island-conservancy-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-east-beach-water-control-district",
+      "name": "East Beach Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-996-2940",
+      "website": "https://www.floridawatercontroldistricts.org/east-beach-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S., 06/27/1945.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-east-hendry-county-drainage-district",
+      "name": "East Hendry County Drainage District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Governed by the county or city that created it",
+      "phone": "863-675-5252",
+      "website": "https://www.hendryfla.net/east_hendry_county_drainage_district/index.php",
+      "note": "Created under CHAPTER 298, F.S., 10/09/1984.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-east-mulloch-drainage-district",
+      "name": "East Mulloch Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Lee",
+      "area_note": "Lee County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "239-267-7472",
+      "website": "https://www.leegov.com/specialdistricts/emwcd",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-east-shore-water-control-district",
+      "name": "East Shore Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-996-2940",
+      "website": "https://www.floridawatercontroldistricts.org/east-shore-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S., 06/05/1941.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-flaghole-drainage-district",
+      "name": "Flaghole Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Glades",
+      "area_note": "Glades, Hendry counties",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-983-5111",
+      "website": "https://www.flagholedd.com/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-fort-pierce-farms-water-control-district",
+      "name": "Fort Pierce Farms Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "St. Lucie",
+      "area_note": "St. Lucie County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "772-461-5050",
+      "website": "https://fpfwcd.org/",
+      "note": "Created under CHAPTER 298, F.S., 07/10/1919.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-gateway-services-community-development-district",
+      "name": "Gateway Services Community Development District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Lee",
+      "area_note": "Lee County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "239-321-8100",
+      "website": "https://gatewaydistrict.org/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-gerber-groves-water-control-district",
+      "name": "Gerber Groves Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "863-675-3903",
+      "website": "https://gerbergroves.mydistrictwebsite.com/",
+      "note": "Created under CHAPTER 298, F.S., 01/05/1965.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-gladeview-drainage-district",
+      "name": "Gladeview Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "561-655-0620",
+      "website": "https://www.floridawatercontroldistricts.org/gladeview-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-hendry-hilliard-water-control-district",
+      "name": "Hendry Hilliard Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-673-2045",
+      "website": "https://www.hendryhilliardwcd.com/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-highland-glades-drainage-district",
+      "name": "Highland Glades Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "561-655-0620",
+      "website": "https://www.floridawatercontroldistricts.org/highland-glades-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-hobe-st-lucie-conservancy-district",
+      "name": "Hobe St. Lucie Conservancy District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Martin",
+      "area_note": "Martin County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "877-737-4922",
+      "website": "https://hobestluciecd.org/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-indian-trail-improvement-district",
+      "name": "Indian Trail Improvement District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-793-0874",
+      "website": "https://www.indiantrail.com/",
+      "note": "Created under CHAPTER 298, F.S., 05/30/1957.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-istokpoga-marsh-water-shed-improvement-district",
+      "name": "Istokpoga Marsh Water Shed Improvement District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "county": "Highlands",
+      "area_note": "Highlands County",
+      "board": "Governed by the county or city that created it",
+      "phone": "863-402-6937",
+      "website": "https://www.highlandsfl.gov/departments/PublicSafety/emergency_management/index.php",
+      "note": "Created under CHAPTER 582, F.S., 06/17/1980.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-lake-worth-drainage-district",
+      "name": "Lake Worth Drainage District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-498-5363",
+      "website": "https://www.lwdd.net/",
+      "note": "Created under CHAPTER 298, F.S., 06/15/1915.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-lehigh-acres-municpal-services-improvement-district",
+      "name": "Lehigh Acres Municpal Services Improvement District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Lee",
+      "area_note": "Lee County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "239-368-0044",
+      "website": "https://la-msid.com/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-loxahatchee-groves-water-control-district",
+      "name": "Loxahatchee Groves Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-793-2418",
+      "website": "https://loxahatcheegrovesfl.gov/268/Loxahatchee-Groves-Water-Control-Distric",
+      "note": "Created under CHAPTER 298, F.S., 04/04/1917.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-northern-palm-beach-county-improvement-district",
+      "name": "Northern Palm Beach County Improvement District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-624-7830",
+      "website": "https://www.npbcid.org/",
+      "note": "Created under CHAPTER 298, F.S., 07/14/1959.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-north-palm-beach-heights-water-control-district",
+      "name": "North Palm Beach Heights Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-743-7674",
+      "website": "https://npbhwcd.com/site/",
+      "note": "Created under CHAPTER 298, F.S., 11/05/1958.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-north-st-lucie-river-water-control-district",
+      "name": "North St. Lucie River Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "St. Lucie",
+      "area_note": "St. Lucie County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "561-461-5050",
+      "website": "https://nslrwcd.org/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-oakridge-community-development-district",
+      "name": "Oakridge Community Development District",
+      "type": "Community development district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Broward",
+      "area_note": "Broward County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "954-721-8681",
+      "website": "https://www.oakridgecdd.com/",
+      "note": "Created under CHAPTER 190, F.S., 11/22/1995.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-pahokee-drainage-district",
+      "name": "Pahokee Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "561-996-2940",
+      "website": "https://www.floridawatercontroldistricts.org/pahokee-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-pal-mar-water-control-district",
+      "name": "Pal Mar Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Martin",
+      "area_note": "Martin County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "877-737-4922",
+      "website": "https://palmarwcd.org/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-pelican-lake-water-control-district",
+      "name": "Pelican Lake Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-996-2940",
+      "website": "https://www.floridawatercontroldistricts.org/pelican-lake-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S., 04/04/1917.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-pine-tree-water-control-district-west-palm-beach",
+      "name": "Pine Tree Water Control District - West Palm Beach",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "863-228-0400",
+      "website": "https://ptwcd.org/",
+      "note": "Created under CHAPTER 2009-270, 05/17/1971.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-ritta-drainage-district",
+      "name": "Ritta Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-228-0400",
+      "website": "https://www.floridawatercontroldistricts.org/ritta-drainage-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-san-carlos-estates-water-control-district",
+      "name": "San Carlos Estates Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Lee",
+      "area_note": "Lee County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "239-495-4699",
+      "website": "https://www.scewcd.org/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-seminole-improvement-district",
+      "name": "Seminole Improvement District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "954-826-0056",
+      "website": "https://seminoleimprovementdistrict.com/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-shawano-drainage-district",
+      "name": "Shawano Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "561-655-0620",
+      "website": "https://www.floridawatercontroldistricts.org/shawano-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-south-florida-conservancy-district",
+      "name": "South Florida Conservancy District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Hendry",
+      "area_note": "Hendry, Palm Beach counties",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "561-996-2940",
+      "website": "https://www.floridawatercontroldistricts.org/south-florida-conservancy-district.html",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-south-indian-river-water-control-district",
+      "name": "South Indian River Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-339-0035",
+      "website": "https://www.sirwcd.org/",
+      "note": "Created under CHAPTER 298, F.S., 07/03/1923.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-south-shore-drainage-district",
+      "name": "South Shore Drainage District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Palm Beach",
+      "area_note": "Palm Beach County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-996-2940",
+      "website": "https://www.floridawatercontroldistricts.org/south-shore-drainage-district.html",
+      "note": "Created under CHAPTER 298, F.S., 06/08/1935.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-spring-lake-improvement-district",
+      "name": "Spring Lake Improvement District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Highlands",
+      "area_note": "Highlands County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "863-655-1715",
+      "website": "https://www.springlakefl.com/",
+      "note": "Created under CHAPTER 298, F.S., 07/01/1971.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-sugarland-drainage-district",
+      "name": "Sugarland Drainage District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Glades",
+      "area_note": "Glades, Hendry counties",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "863-983-5111",
+      "website": "https://www.sugarlanddd.com/",
+      "note": "Created under CHAPTER 298, F.S..",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-troup-indiantown-water-control-district",
+      "name": "Troup-indiantown Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Martin",
+      "area_note": "Martin County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "561-655-0620",
+      "website": "https://www.floridawatercontroldistricts.org/troup-indiantown-water-control-district.html",
+      "note": "Created under CHAPTER 298, F.S., 01/18/1962.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-twin-lakes-water-control-district",
+      "name": "Twin Lakes Water Control District",
+      "type": "Water control district",
+      "area": "mapped",
+      "status": "dependent",
+      "county": "Broward",
+      "area_note": "Broward County",
+      "board": "Board chosen as the district's charter sets out.",
+      "phone": "954-989-2688",
+      "website": null,
+      "note": "Created under CHAPTER 298, F.S., 12/29/1970.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
+        }
+      ]
+    },
+    {
+      "key": "sfwmd-valencia-water-control-district",
+      "name": "Valencia Water Control District",
+      "type": "Special district",
+      "area": "mapped",
+      "status": "independent",
+      "county": "Orange",
+      "area_note": "Orange County",
+      "board": "Board elected by the district's landowners or voters",
+      "phone": "407-841-5524, etx. 101",
+      "website": "https://vwcdfl.com/#contactinfo",
+      "note": "Created under CHAPTER 298, F.S., 05/27/1970.",
+      "sources": [
+        {
+          "name": "South Florida Water Management District: SFWMD Special Districts",
+          "url": "https://geoportal.sfwmd.gov/portal/home/item.html?id=ce0472e75fc84f02a6116ff946402972"
         }
       ]
     }
