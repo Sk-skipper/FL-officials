@@ -63,7 +63,9 @@ EXPECTED_SEATS = [
 NOT_YET_COVERED = [
     "County commissioners in 35 of the 65 counties outside Broward and Miami-Dade: the Florida Association of Counties "
     "directory lists the wrong number of members for them (it keeps some former commissioners), so they are held back",
-    "Property appraisers and tax collectors outside Broward and Miami-Dade (no statewide list names them)",
+    "Property appraisers, tax collectors and superintendents outside Broward, Miami-Dade, Escambia, Franklin, Gadsden, Lee, Leon "
+    "and Seminole (no statewide list names them; most Supervisors of Elections show office holders through VoterFocus, whose "
+    "robots.txt was unavailable when checked, which means it may not be collected)",
     "School boards outside Broward, Miami-Dade, Charlotte, Citrus, Escambia, Holmes, Jackson, Liberty, Orange, Palm Beach and "
     "Sumter (most district websites load their board pages with JavaScript), and school superintendents",
     "Judges outside Broward and Miami-Dade and the 1st, 2nd, 5th and 6th District Courts of Appeal",
@@ -243,23 +245,37 @@ def _fill(kept: dict, other: dict) -> None:
 
 def _person_key(record: dict) -> tuple:
     last = re.sub(r"[^a-z]", "", (record.get("last_name") or "").lower())
-    return record.get("municipality"), last, (record.get("first_name") or " ")[0].lower()
+    first = (record.get("first_name") or " ")[0].lower()
+    if record["government_level"] == "municipal":
+        return "municipal", record.get("municipality"), last, first
+    if record["office_title"] in SINGLE_SEAT:  # one holder per county, however the sources spell the name
+        return "seat", record.get("county"), record["office_title"]
+    return "county", record.get("county"), record["office_title"], last, first
 
 
-def _merge_municipal(records: list[dict]) -> tuple[list[dict], dict[str, str]]:
-    """A council member can be listed by the city's own site and by the county's GIS, with different titles
-    ("Vice Mayor" vs "Commissioner, District 4"). Keep one record: the leadership title wins, and the record
-    that has no district takes it from the other. Returns the records and {dropped id: kept id}."""
+SINGLE_SEAT = {"Sheriff", "Clerk of the Circuit Court", "Property Appraiser", "Tax Collector", "Supervisor of Elections",
+               "Superintendent of Schools", "County Mayor"}
+
+
+# Statewide association rosters trail elections; a county's own elections office is preferred over them.
+ASSOCIATION = re.compile(r"Association|Operations Corporation", re.I)
+
+
+def _merge_people(records: list[dict]) -> tuple[list[dict], dict[str, str]]:
+    """One person can be listed by two sources: a city's site and the county GIS ("Vice Mayor" vs
+    "Commissioner, District 4"), or a statewide association and the county's elections office. Keep one record:
+    a leadership title wins, then a county's own source over an association, then the record with a district.
+    Returns the records and {dropped id: kept id}."""
     groups: dict[tuple, list[dict]] = {}
     for record in records:
-        if record["government_level"] == "municipal" and record.get("municipality"):
+        if record["government_level"] == "municipal" and record.get("municipality") or                 record["government_level"] == "county" and record.get("county") and not record.get("special_district"):
             groups.setdefault(_person_key(record), []).append(record)
     aliases, dropped = {}, set()
     for group in groups.values():
         if len(group) < 2:
             continue
         group.sort(key=lambda r: (LEADERSHIP.get(r["office_title"], 9), r["verification_status"] == "manual",
-                                  not r.get("district")))
+                                  bool(ASSOCIATION.search(r.get("source_name") or "")), not r.get("district")))
         kept = group[0]
         for other in group[1:]:
             _fill(kept, other)
@@ -341,7 +357,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         seen.add(record["id"])
         first[record["id"]] = record
         unique.append(record)
-    unique, aliases = _merge_municipal(unique)
+    unique, aliases = _merge_people(unique)
     by_id = {r["id"]: r for r in unique}
     by_id.update({alias: by_id[target] for alias, target in aliases.items()})
 
