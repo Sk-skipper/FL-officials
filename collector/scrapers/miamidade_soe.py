@@ -14,7 +14,7 @@ import re
 from pypdf import PdfReader
 
 from collector.normalize import clean_text
-from collector.scrapers.base import BaseScraper
+from collector.scrapers.base import BaseScraper, FetchError
 
 CIRCUIT = "11th Judicial Circuit (Miami-Dade County)"
 COUNTY = "Miami-Dade County"
@@ -191,9 +191,35 @@ def parse_md_judges(text: str, source_url: str) -> list[dict]:
     return records
 
 
+def commission_portrait(html: str, page_url: str, last_name: str) -> str | None:
+    """The headshot on a commission district's home page: an image whose alt text names the commissioner."""
+    from urllib.parse import urljoin
+    from bs4 import BeautifulSoup
+    for img in BeautifulSoup(html, "lxml").select("img[src][alt]"):
+        alt = clean_text(img["alt"])
+        if re.match(r"(?i)commissioner\b", alt) and last_name.lower() in alt.lower():
+            url = urljoin(page_url, img["src"])
+            return url if url.startswith("https://") else None
+    return None
+
+
 class MiamiDadeSOEScraper(BaseScraper):
+    def add_portraits(self, records: list[dict]) -> None:
+        for r in records:
+            site = r.get("official_website") or ""
+            if r.get("office_title") != "County Commissioner" or "/commission/district" not in site:
+                continue
+            home = re.sub(r"/[^/]+\.page$", "/home.page", site)
+            try:
+                html = self.client.get(home)
+            except FetchError:
+                continue  # a portrait is a nice-to-have; the record stands without it
+            r["photo_url"] = commission_portrait(html, home, r["name"].split()[-1])
+
     def collect(self) -> list[dict]:
         records = parse_md_officials(pdf_lines(self.client.get_bytes(self.source_url)), self.source_url)
+        if self.config.get("portraits"):
+            self.add_portraits(records)
         judges_url = self.config.get("judges_url")
         if judges_url:
             reader = PdfReader(io.BytesIO(self.client.get_bytes(judges_url)))

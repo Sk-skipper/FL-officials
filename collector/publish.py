@@ -69,8 +69,10 @@ NOT_YET_COVERED = [
     "School boards outside Broward, Miami-Dade, Charlotte, Citrus, Escambia, Holmes, Jackson, Liberty, Orange, Palm Beach and "
     "Sumter (most district websites load their board pages with JavaScript), and school superintendents",
     "Judges outside Broward and Miami-Dade and the 1st, 2nd, 5th and 6th District Courts of Appeal",
-    "Mayors and councils outside Broward and Miami-Dade counties (Florida has 411 municipalities; the League of Cities "
-    "directory only answers its own website's search box)",
+    "Mayors and councils of most cities outside Broward and Miami-Dade: 25 of the largest are covered (Tampa, Orlando, "
+    "Tallahassee, Lakeland, Pensacola, Sarasota and others); Jacksonville, St. Petersburg, Port St. Lucie, Cape Coral, "
+    "Gainesville, Clearwater, Fort Myers, Palm Bay, Ocala, Naples, Delray Beach and Boca Raton are not yet (their pages "
+    "couldn't be read or refuse automated requests), nor are the other ~300 smaller municipalities",
     "Broward: Cooper City, Dania Beach and Lauderhill councils; Hallandale Beach, Lauderdale Lakes, Plantation, Sea Ranch Lakes, Sunrise, "
     "West Park and Weston list only their mayor (their websites refuse automated requests or could not be read)",
     "Miami-Dade: Doral, Hialeah, Hialeah Gardens, Indian Creek, Miami Shores, Miami Springs, South Miami and Sunny Isles Beach councils, "

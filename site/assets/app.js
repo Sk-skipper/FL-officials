@@ -958,6 +958,12 @@ const BOUNDARIES = {
   counties: "fl-counties", cities: "fl-cities", congress: "fl-congress", senate: "fl-senate", house: "fl-house",
   commission: "county-commission", school: "school-board", cityDistricts: "city-districts", special: "special-districts",
 };
+/** The "Show" dropdown, grouped by level of government. */
+const LAYER_GROUPS = [
+  ["Local (Broward and Miami-Dade)", ["commission", "school", "cityDistricts", "cities", "special"]],
+  ["State", ["house", "senate"]],
+  ["Federal", ["congress"]],
+];
 /** Counties mapped down to county, school board, city and special districts. */
 const LOCAL_COUNTIES = ["Broward", "Miami-Dade"];
 const boundaryRequests = new Map();
@@ -1008,7 +1014,7 @@ const BORDER_STYLE = {
   special: { color: "#2457a6", dashArray: "3 4", short: (p) => SPECIAL.get(p.key)?.name.replace(/ (Water Control|Improvement|Drainage|Community Development|Water Management|Irrigation and Soil Conservation) District$/, "") || p.key },
 };
 function partyColor(party, vacant = false) {
-  if (vacant || !party || party === "Party not listed") return PARTY_COLORS.none;
+  if (vacant || !party || party === "Party not listed" || party === "Nonpartisan") return PARTY_COLORS.none;
   return PARTY_COLORS[party] || PARTY_COLORS.other;
 }
 
@@ -1075,13 +1081,22 @@ function reps() {
       </form>
       <div class="rep-layout">
         <section class="panel flush rep-map-card" aria-label="Map of districts">
-          <div class="chips rep-layers" role="group" aria-label="Show districts on the map">
-            ${MAP_LAYERS.map((l) => `<button type="button" class="chip" data-layer="${l.key}" aria-pressed="false">${esc(l.label)}</button>`).join("")}
-          </div>
-          <div class="chips rep-borders" role="group" aria-label="Map background and district borders">
-            <button type="button" class="chip small-chip" data-streets aria-pressed="false">Street map</button>
-            <span class="muted small">Borders:</span>
-            ${MAP_LAYERS.map((l) => `<button type="button" class="chip small-chip" data-border="${l.key}" aria-pressed="false"><svg class="line-swatch" viewBox="0 0 24 6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke="${BORDER_STYLE[l.key].color}" stroke-width="2.5" ${BORDER_STYLE[l.key].dashArray ? `stroke-dasharray="${BORDER_STYLE[l.key].dashArray}"` : ""}/></svg>${esc(l.label.replace(" (mayors)", ""))}</button>`).join("")}
+          <div class="map-toolbar">
+            <label class="map-field"><span>Show</span>
+              <select id="rep-layer" aria-label="Districts to colour on the map">
+                <option value="">No districts (borders only)</option>
+                ${LAYER_GROUPS.map(([group, keys]) => `<optgroup label="${esc(group)}">${keys.map((k) => `<option value="${k}">${esc(MAP_LAYERS.find((l) => l.key === k).label)}</option>`).join("")}</optgroup>`).join("")}
+              </select></label>
+            <details class="borders-menu" id="rep-borders">
+              <summary><span>Borders</span> <span class="count" id="rep-border-count" hidden></span></summary>
+              <fieldset class="borders-list"><legend class="sr-only">Show district borders</legend>
+                ${MAP_LAYERS.map((l) => `<label class="border-option"><input type="checkbox" data-border="${l.key}">
+                  <svg class="line-swatch" viewBox="0 0 24 6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke="${BORDER_STYLE[l.key].color}" stroke-width="2.5" ${BORDER_STYLE[l.key].dashArray ? `stroke-dasharray="${BORDER_STYLE[l.key].dashArray}"` : ""}/></svg>
+                  <span>${esc(l.label.replace(" (mayors)", ""))}</span></label>`).join("")}
+                <p class="muted small borders-note">The coloured layer already shows its own borders.</p>
+              </fieldset>
+            </details>
+            <label class="switch"><input type="checkbox" role="switch" data-streets><span class="switch-track" aria-hidden="true"></span><span>Street map</span></label>
           </div>
           <div id="rep-map" class="rep-map"></div>
           <p class="muted small rep-map-note">District lines: U.S. Census Bureau (Congress and the Legislature, 2022 plans), Broward County GIS,
@@ -1105,7 +1120,7 @@ function reps() {
     function setStreets(on) {
       if (on) { streets.addTo(map); base.setStyle({ fillOpacity: 0, opacity: 0.5 }); }
       else { streets.remove(); base.setStyle({ fillOpacity: 1, opacity: 1 }); }
-      $("[data-streets]", app).setAttribute("aria-pressed", String(on));
+      $("[data-streets]", app).checked = on;
     }
     map.fitBounds(BROWARD_VIEW);
     map.on("focus", () => map.scrollWheelZoom.enable());
@@ -1144,14 +1159,20 @@ function reps() {
         if (!visible && map.hasLayer(entry.labels)) entry.labels.remove();
       }
     }
+    function updateBorderCount() {
+      const badge = $("#rep-border-count");
+      badge.textContent = String(borders.size);
+      badge.hidden = borders.size === 0;
+    }
     async function toggleBorder(key) {
-      const button = $(`[data-border="${key}"]`, app);
+      const button = $(`input[data-border="${key}"]`, app);
       if (borders.has(key)) {
         const entry = borders.get(key);
         entry.lines.remove();
         entry.labels.remove();
         borders.delete(key);
-        button.setAttribute("aria-pressed", "false");
+        button.checked = false;
+        updateBorderCount();
         return;
       }
       const spec = MAP_LAYERS.find((l) => l.key === key);
@@ -1164,7 +1185,8 @@ function reps() {
           .setLatLng([at[1], at[0]]).setContent(`<span style="color:${style.color}">${esc(style.short(f.properties))}</span>`) : null;
       }).filter(Boolean));
       borders.set(key, { lines, labels, count: data.features.length });
-      button.setAttribute("aria-pressed", "true");
+      button.checked = true;
+      updateBorderCount();
       drawBorderLabels();
     }
     map.on("zoomend", drawBorderLabels);
@@ -1248,12 +1270,12 @@ function reps() {
       if (on) row.layer.bringToFront();
     }
 
-    async function showLayer(key, { keepView = false } = {}) {
-      activeLayer = key === activeLayer && !keepView ? "" : key;
-      for (const chip of app.querySelectorAll("[data-layer]")) chip.setAttribute("aria-pressed", String(chip.dataset.layer === activeLayer));
+    async function showLayer(key, { keepView = false, select = false } = {}) {
+      activeLayer = select || keepView ? key : key === activeLayer ? "" : key;
+      $("#rep-layer").value = activeLayer;
       // The coloured layer already draws its own borders; don't stack a second copy on it.
       if (borders.has(activeLayer)) await toggleBorder(activeLayer);
-      for (const chip of app.querySelectorAll("[data-border]")) chip.disabled = chip.dataset.border === activeLayer;
+      for (const box of app.querySelectorAll("input[data-border]")) box.disabled = box.dataset.border === activeLayer;
       shown.clearLayers();
       markers.clearLayers();
       current = null;
@@ -1416,8 +1438,9 @@ function reps() {
       const covered = !place.municipality || records.some((r) => r.municipality === place.municipality);
       const partial = local
         ? (covered ? "" : `<p class="notice small">${esc(place.municipality)}'s council isn't in the directory yet: its website couldn't be collected automatically.</p>`)
-        : `<p class="notice small">Outside Broward and Miami-Dade counties the directory covers federal, state and statewide officials and the
-           Supervisor of Elections. County commissions, school boards and city officials are being added county by county.</p>`;
+        : `<p class="notice small">Outside Broward and Miami-Dade counties there are no district maps for county or city seats yet, so the
+           whole county commission${covered && place.municipality ? ` and ${esc(place.municipality)}'s council are` : " is"} listed where the
+           directory has them. Coverage of county and city offices is being added county by county.</p>`;
       panel.innerHTML = `
         <div class="panel-top rep-results-top"><div><h2>Your representatives</h2>
           <p class="muted small">${esc(label || `${lat.toFixed(5)}, ${lon.toFixed(5)}`)} · ${plural(total, "official")}</p></div>
@@ -1536,13 +1559,21 @@ function reps() {
       );
     });
     map.on("click", (event) => lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map"));
+    $("#rep-layer").addEventListener("change", (event) => {
+      showLayer(event.target.value, { select: true }).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
+    });
+    app.addEventListener("change", (event) => {
+      if (event.target.matches("[data-streets]")) setStreets(event.target.checked);
+      if (event.target.matches("input[data-border]")) {
+        toggleBorder(event.target.dataset.border).catch((error) => { panel.innerHTML = empty("Those borders could not be loaded", esc(error.message)); });
+      }
+    });
+    // Close the borders menu when clicking elsewhere, as native menus do.
+    document.addEventListener("click", (event) => {
+      const menu = $("#rep-borders");
+      if (menu?.open && !menu.contains(event.target)) menu.open = false;
+    });
     app.addEventListener("click", (event) => {
-      const chip = event.target.closest("[data-layer]");
-      if (chip) showLayer(chip.dataset.layer).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
-      const streetsButton = event.target.closest("[data-streets]");
-      if (streetsButton) setStreets(streetsButton.getAttribute("aria-pressed") !== "true");
-      const border = event.target.closest("[data-border]");
-      if (border) toggleBorder(border.dataset.border).catch((error) => { panel.innerHTML = empty("Those borders could not be loaded", esc(error.message)); });
       const filter = event.target.closest("[data-level-filter]");
       if (filter) {
         const level = filter.dataset.levelFilter;

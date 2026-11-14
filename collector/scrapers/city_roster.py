@@ -57,7 +57,8 @@ NOT_A_NAME = re.compile(
     r"Seal|Official|Photo|Photos|Edited|Website|Events|Newsletters?|Gallery|Training|Ethics|Certifications?|Policy|"
     r"Biography|Profile|Message|Corner|Annual|Economic|Empowerment|Initiative|Program|Programs|Turns|Who|Is|My|Find|"
     r"Visit|Page|International|Trade|Consortium|Development|Advocacy|Legislative|Click|Email|Headshot|Show|Again|Arrow|"
-    r"Left|Right|Slideshow|Mission|Statement|Site|Map|Copyright|Notices|Together|Great|Make|Previous|Next|Close)\b")
+    r"Left|Right|Slideshow|Mission|Statement|Site|Map|Maps|Copyright|Notices|Together|Great|Make|Previous|Next|Close|Portrait|"
+    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Ward|Pillar)\b")
 CARD_NOT_A_NAME = re.compile(r"\b(District|Seat|Commission|Commissioners?|Council|Programs?|Office|City|Town|Village|Policy|"
                              r"Services|Department|Division|Recreation|Compliance|Resources|Works|Gardens|Biography|Events|"
                              r"Meetings?|Agendas?|Vacant|Vacancy|Information|Contact|Elections?|Members?)\b", re.I)
@@ -225,7 +226,11 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
                     m["title"] = m["first"]
     if section := heading_section(lines, member_title):
         known = {re.sub(r"[^a-z]", "", m["name"].lower()) for m in members}
-        members += [m for m in section if re.sub(r"[^a-z]", "", m["name"].lower()) not in known]
+        for m in section:
+            key = re.sub(r"[^a-z]", "", m["name"].lower())
+            if key not in known:
+                known.add(key)
+                members.append(m)
     return members
 
 
@@ -278,7 +283,8 @@ def find_cards(html: str, url: str, member_title: str) -> list[dict]:
         href = urljoin(url, link["href"]) if link else ""
         slug = urlsplit(href).path.rsplit("/", 1)[-1].replace("-", " ")
         if title is None:
-            near = clean_text(heading.parent.get_text(" ").replace(heading.get_text(" "), " "))[:60]
+            box = heading.find_parent("header") or heading.parent
+            near = clean_text(box.get_text(" ").replace(heading.get_text(" "), " "))[:60]
             for candidate in (near, slug):
                 m = re.match(rf"^(?:{TITLE})\b", candidate, re.I) or re.search(r"\b(Vice Mayor|Mayor)\b", candidate, re.I)
                 if m:
@@ -290,6 +296,8 @@ def find_cards(html: str, url: str, member_title: str) -> list[dict]:
         img = card.select_one("img[src]")
         email = card.select_one("a[href^='mailto:']")
         phone = card.select_one(".contact-phone .field-value")
+        if any(f["name"] == _clean_name(name, strict=False) for f in found):
+            continue  # the same card shown twice (a slider and a grid)
         found.append({
             "name": _clean_name(name, strict=False), "title": _title(title or member_title, member_title),
             "seat": _seat(f"{title or ''} {context[:200]} {slug}"),
@@ -350,6 +358,8 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
     records = []
     for m in members:
         seat = m["seat"]
+        if m["title"] in ("Mayor", "Council President") and seat and not seat.startswith("At"):
+            seat = None  # a citywide office; a district beside it on the page is someone else's
         district = seat.split()[-1] if seat and seat.split()[0] in ("District", "Seat", "Group", "Ward", "Zone") else None
         record = {
             "name": m["name"], "office_title": (config.get("title_map") or {}).get(m["title"], f"{m['title']}{suffix}"), "government_level": level,

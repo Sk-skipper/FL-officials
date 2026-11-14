@@ -73,7 +73,8 @@
     "level": "county",
     "scraper": "miamidade_soe",
     "config": {
-      "judges_url": "https://www.miamidade.gov/elections/library/reports/judges.pdf"
+      "judges_url": "https://www.miamidade.gov/elections/library/reports/judges.pdf",
+      "portraits": true
     }
   },
   {
@@ -966,6 +967,335 @@
     "scraper": "soe_officeholders",
     "config": {
       "county": "Seminole"
+    }
+  },
+  {
+    "key": "city_hillsborough_tampa",
+    "name": "Tampa (Hillsborough County): mayor and council",
+    "url": "https://www.tampa.gov",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Hillsborough",
+      "municipality": "Tampa",
+      "member_title": "Councilmember",
+      "seats": 8
+    }
+  },
+  {
+    "key": "city_orange_orlando",
+    "name": "Orlando (Orange County): mayor and commission",
+    "url": "https://www.orlando.gov/Our-Government/Mayor-City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Orlando",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_leon_tallahassee",
+    "name": "Tallahassee (Leon County): mayor and commission",
+    "url": "https://www.talgov.com/cityleadership/city-commission.aspx",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Leon",
+      "municipality": "Tallahassee",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_west_palm_beach",
+    "name": "West Palm Beach (Palm Beach County): mayor and commission",
+    "url": "https://www.wpb.org/Our-City/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "West Palm Beach",
+      "member_title": "Commissioner",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_polk_lakeland",
+    "name": "Lakeland (Polk County): mayor and commission",
+    "url": "https://www.lakelandgov.net/government/mayor-city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Polk",
+      "municipality": "Lakeland",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_flagler_palm_coast",
+    "name": "Palm Coast (Flagler County): mayor and council",
+    "url": "https://www.palmcoast.gov/council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Flagler",
+      "municipality": "Palm Coast",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_volusia_deltona",
+    "name": "Deltona (Volusia County): mayor and commission",
+    "url": "https://www.deltonafl.gov/408/Mayor-City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Deltona",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_volusia_daytona_beach",
+    "name": "Daytona Beach (Volusia County): mayor and commission",
+    "url": "https://www.codb.us/384/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Daytona Beach",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_brevard_melbourne",
+    "name": "Melbourne (Brevard County): mayor and council",
+    "url": "https://www.melbourneflorida.org/Government/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Melbourne",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_sarasota_sarasota",
+    "name": "Sarasota (Sarasota County): mayor and commission",
+    "url": "https://www.sarasotafl.gov/Departments/Your-City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Sarasota",
+      "municipality": "Sarasota",
+      "member_title": "Commissioner",
+      "seats": 5,
+      "exclude": [
+        "Strategic Plan",
+        "Proclamation and Citations"
+      ]
+    }
+  },
+  {
+    "key": "city_escambia_pensacola",
+    "name": "Pensacola (Escambia County): mayor and council",
+    "url": "https://www.cityofpensacola.com/507/Council-Members",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Escambia",
+      "municipality": "Pensacola",
+      "member_title": "Councilmember",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_monroe_key_west",
+    "name": "Key West (Monroe County): mayor and commission",
+    "url": "https://www.cityofkeywest-fl.gov/379/City-Commissioners",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Monroe",
+      "municipality": "Key West",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_palm_beach_boynton_beach",
+    "name": "Boynton Beach (Palm Beach County): mayor and commission",
+    "url": "https://www.boynton-beach.org/174/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Boynton Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_volusia_port_orange",
+    "name": "Port Orange (Volusia County): mayor and council",
+    "url": "https://www.port-orange.org/173/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Port Orange",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_seminole_sanford",
+    "name": "Sanford (Seminole County): mayor and commission",
+    "url": "https://sanfordfl.gov/government/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Seminole",
+      "municipality": "Sanford",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_largo",
+    "name": "Largo (Pinellas County): mayor and commission",
+    "url": "https://www.largo.com/connect/mayor_and_commission/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Largo",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_sarasota_north_port",
+    "name": "North Port (Sarasota County): mayor and commission",
+    "url": "https://www.northportfl.gov/City-Government/City-Leadership/City-Commission/City-Commission-Districts",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Sarasota",
+      "municipality": "North Port",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_palm_beach_gardens",
+    "name": "Palm Beach Gardens (Palm Beach County): mayor and council",
+    "url": "https://www.pbgfl.com/244/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Palm Beach Gardens",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_polk_winter_haven",
+    "name": "Winter Haven (Polk County): mayor and commission",
+    "url": "https://www.mywinterhaven.com/220/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Polk",
+      "municipality": "Winter Haven",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_apopka",
+    "name": "Apopka (Orange County): mayor and commission",
+    "url": "https://www.apopka.gov/193/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Apopka",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_titusville",
+    "name": "Titusville (Brevard County): mayor and council",
+    "url": "https://www.titusville.com/515/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Titusville",
+      "member_title": "Councilmember",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_st_lucie_fort_pierce",
+    "name": "Fort Pierce (St. Lucie County): mayor and commission",
+    "url": "https://www.cityoffortpierce.com/182/Mayor-City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "St. Lucie",
+      "municipality": "Fort Pierce",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_lake_worth_beach",
+    "name": "Lake Worth Beach (Palm Beach County): mayor and commission",
+    "url": "https://lakeworthbeachfl.gov/government/city-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Lake Worth Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_seminole_altamonte_springs",
+    "name": "Altamonte Springs (Seminole County): mayor and commission",
+    "url": "https://www.altamonte.org/352/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Seminole",
+      "municipality": "Altamonte Springs",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_winter_park",
+    "name": "Winter Park (Orange County): mayor and commission",
+    "url": "https://cityofwinterpark.org/government/city-commission/bios/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Winter Park",
+      "member_title": "Commissioner",
+      "seats": 5
     }
   }
 ]
