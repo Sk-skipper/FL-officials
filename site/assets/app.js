@@ -543,7 +543,7 @@ function profile() {
           <h1>${esc(r.full_name)}</h1>
           <p class="lede">${esc(describe(r))}</p>
           <div class="badges">${levelBadge(r.government_level)}${selection}
-            <span class="badge green">${esc(VERIFICATION_LABELS[r.verification_status] || r.verification_status)}</span></div>
+            <span class="badge ${r.verification_status === "unconfirmed" ? "amber" : "green"}">${esc(VERIFICATION_LABELS[r.verification_status] || r.verification_status)}</span></div>
         </div>
       </header>
       <div class="profile-grid">
@@ -670,6 +670,7 @@ function personCard(r, { contact = false } = {}) {
     <span class="person-name">${esc(r.full_name)}</span>
     <span class="muted small">${esc(r.office_title)}${seat ? ` · ${esc(seat)}` : ""}</span>
     ${r.party ? `<span class="badge outline">${esc(r.party)}</span>` : ""}
+    ${r.verification_status === "unconfirmed" ? `<span class="badge amber">Wikipedia · not confirmed</span>` : ""}
   </span></a>${actions ? `<span class="person-actions">${actions}</span>` : ""}</li>`;
 }
 
@@ -1460,7 +1461,7 @@ function reps() {
         }).addTo(shown);
         const who = row.info ? `${esc(row.info.type)} · ${esc(row.info.status)}`
           : row.holder?.board ? `${esc(row.holder.names)}${row.holder.party ? `<br><span class="muted">Majority ${esc(partyLabel(row.holder.party))}</span>` : ""}`
-          : row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}` : "Not in the directory yet";
+          : row.holder ? `<strong>${esc(row.holder.full_name)}</strong>${row.holder.party ? ` (${esc(partyLabel(row.holder.party))})` : ""}${row.holder.verification_status === "unconfirmed" ? `<br><span class="muted">From Wikipedia, not confirmed</span>` : ""}` : "Not in the directory yet";
         row.layer.bindTooltip(`${esc(row.title)}<br>${who}`, { sticky: true });
         row.layer.on("mouseover", () => highlight(i, true));
         row.layer.on("mouseout", () => highlight(i, false));

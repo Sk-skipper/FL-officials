@@ -14,6 +14,7 @@ export const VERIFICATION_LABELS = {
   source_verified: "Verified against the source",
   corrected: "Corrected by the editors",
   manual: "Added by hand from an official page",
+  unconfirmed: "From Wikipedia, not yet confirmed by the city",
 };
 
 export const SOURCE_STATUS_LABELS = {

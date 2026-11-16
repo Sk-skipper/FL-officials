@@ -11,6 +11,7 @@ from collector.scrapers.fl_house import FLHouseScraper
 from collector.scrapers.fl_senate import FLSenateScraper
 from collector.scrapers.fl_supervisors import FLSupervisorsScraper
 from collector.scrapers.generic_directory import CountyDirectoryScraper, MunicipalDirectoryScraper
+from collector.scrapers.office_holder import OfficeHolderScraper
 from collector.scrapers.soe_officeholders import SOEOfficeHoldersScraper
 from collector.scrapers.us_house import USHouseScraper
 from collector.scrapers.us_senate import USSenateScraper
@@ -27,6 +28,7 @@ SCRAPERS: dict[str, type[BaseScraper]] = {
     "fl_clerks": ClerksScraper,
     "fac_commissioners": FACScraper,
     "soe_officeholders": SOEOfficeHoldersScraper,
+    "office_holder": OfficeHolderScraper,
     "us_senate": USSenateScraper,
     "us_house": USHouseScraper,
     "county_directory": CountyDirectoryScraper,

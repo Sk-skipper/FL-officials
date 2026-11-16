@@ -236,3 +236,26 @@ def test_a_source_not_confirmed_for_a_month_is_hidden_and_reported():
     assert officials["officials"] == []
     assert meta["coverage"]["stale_sources"][0]["records_hidden"] == 1
     assert any("not confirmed since 2026-09-01" in item for item in meta["coverage"]["not_yet_covered"])
+
+
+def _city_state(name, title, last):
+    return {"name": f"{name} council", "url": "https://example.gov/council", "level": "municipal",
+            "last_successful_collection": NOW.isoformat(), "records": [{
+                "id": f"{name}-{title}".lower().replace(" ", "-"), "full_name": f"Pat {last}", "first_name": "Pat", "last_name": last,
+                "office_title": title, "government_level": "municipal", "jurisdiction": name, "municipality": name,
+                "county": "Volusia", "source_url": "https://example.gov/council"}]}
+
+
+def test_wikipedia_mayors_fill_only_cities_without_an_official_mayor():
+    standins = {"source": "https://en.wikipedia.org/wiki/List", "municipalities": [
+        {"municipality": "Deltona", "county": "Volusia", "name": "William Rodriguez", "article": "https://en.wikipedia.org/wiki/Deltona,_Florida"},
+        {"municipality": "Ormond Beach", "county": "Volusia", "name": "Jason Leslie", "article": "https://en.wikipedia.org/wiki/Ormond_Beach,_Florida"},
+        {"municipality": "Edgewater", "county": "Volusia", "name": "Pat Kelly", "article": "https://en.wikipedia.org/wiki/Edgewater,_Florida"},
+        {"municipality": "DeBary", "county": "Volusia", "name": "Karen Chasez", "article": "https://en.wikipedia.org/wiki/DeBary,_Florida"}]}
+    collected = {"sources": {"a": _city_state("Deltona", "Mayor", "Avila"), "b": _city_state("Edgewater", "Council Member", "Kelly")}}
+    officials, *_ = build(collected, {}, {}, {}, NOW, env={}, standins=standins)
+    unconfirmed = {r["municipality"]: r for r in officials["officials"] if r["verification_status"] == "unconfirmed"}
+    # Deltona already has an official mayor; Edgewater lists the same person under another title.
+    assert set(unconfirmed) == {"Ormond Beach", "DeBary"}
+    assert unconfirmed["DeBary"]["office_title"] == "Mayor"
+    assert unconfirmed["DeBary"]["source_name"].startswith("Wikipedia")

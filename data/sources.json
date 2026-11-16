@@ -1928,5 +1928,1794 @@
         "Vice Chair": "School Board Member"
       }
     }
+  },
+  {
+    "key": "city_palm_beach_lantana",
+    "name": "Lantana (Palm Beach County): mayor and council",
+    "url": "http://www.lantana.org/244/Town-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Lantana",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_manatee_holmes_beach",
+    "name": "Holmes Beach (Manatee County): mayor and commission",
+    "url": "https://www.holmesbeachfl.org/government/elected_officials/city_commissioners/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Manatee",
+      "municipality": "Holmes Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_okaloosa_crestview",
+    "name": "Crestview (Okaloosa County): mayor and council",
+    "url": "https://www.cityofcrestview.org/557/City-Council-Members",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Okaloosa",
+      "municipality": "Crestview",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_st_lucie_port_st_lucie",
+    "name": "Port St. Lucie (St. Lucie County): mayor and council",
+    "url": "https://www.cityofpsl.com/Government/Your-City-Government/Mayor-City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "St. Lucie",
+      "municipality": "Port St. Lucie",
+      "member_title": "Council Member",
+      "seats": 3
+    }
+  },
+  {
+    "key": "city_broward_lauderdale_lakes",
+    "name": "Lauderdale Lakes (Broward County): mayor and commission",
+    "url": "http://www.lauderdalelakes.org/123/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "municipality": "Lauderdale Lakes",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_palm_beach_hypoluxo",
+    "name": "Hypoluxo (Palm Beach County): mayor and commission",
+    "url": "http://www.hypoluxo.org/bc-tc",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Hypoluxo",
+      "member_title": "Commissioner",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_sarasota_longboat_key",
+    "name": "Longboat Key (Sarasota County): mayor and commission",
+    "url": "http://www.longboatkey.org/293/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Sarasota",
+      "municipality": "Longboat Key",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_seminole_oviedo",
+    "name": "Oviedo (Seminole County): mayor and council",
+    "url": "http://www.cityofoviedo.net/340/Mayor-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Seminole",
+      "municipality": "Oviedo",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_seminole_casselberry",
+    "name": "Casselberry (Seminole County): mayor and commission",
+    "url": "https://www.casselberry.org/114/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Seminole",
+      "municipality": "Casselberry",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_rockledge",
+    "name": "Rockledge (Brevard County): mayor and council",
+    "url": "http://www.cityofrockledge.org/129/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Rockledge",
+      "member_title": "Council Member",
+      "seats": 7,
+      "exclude": [
+        "Shaun Ferguson"
+      ]
+    }
+  },
+  {
+    "key": "city_pinellas_pinellas_park",
+    "name": "Pinellas Park (Pinellas County): mayor and council",
+    "url": "http://www.pinellas-park.com/415/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Pinellas Park",
+      "member_title": "Council Member",
+      "seats": 3
+    }
+  },
+  {
+    "key": "city_seminole_winter_springs",
+    "name": "Winter Springs (Seminole County): mayor and commission",
+    "url": "http://www.winterspringsfl.org/221/Meet-Your-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Seminole",
+      "municipality": "Winter Springs",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_volusia_edgewater",
+    "name": "Edgewater (Volusia County): mayor and council",
+    "url": "http://www.cityofedgewater.org/535/City-Council-Members",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Edgewater",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lee_bonita_springs",
+    "name": "Bonita Springs (Lee County): mayor and council",
+    "url": "http://www.cityofbonitasprings.org/government/mayor___council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lee",
+      "municipality": "Bonita Springs",
+      "member_title": "Council Member",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_volusia_ormond_beach",
+    "name": "Ormond Beach (Volusia County): mayor and commission",
+    "url": "http://www.ormondbeach.org/116/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Ormond Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lee_sanibel",
+    "name": "Sanibel (Lee County): mayor and council",
+    "url": "http://www.mysanibel.com/201/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lee",
+      "municipality": "Sanibel",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_clay_orange_park",
+    "name": "Orange Park (Clay County): mayor and council",
+    "url": "https://www.townoforangepark.com/p/government/town-council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Clay",
+      "municipality": "Orange Park",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_palm_beach_shores",
+    "name": "Palm Beach Shores (Palm Beach County): mayor and commission",
+    "url": "http://www.palmbeachshoresfl.us/government/mayor_and_commission.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Palm Beach Shores",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_duval_atlantic_beach",
+    "name": "Atlantic Beach (Duval County): mayor and commission",
+    "url": "http://www.coab.us/135/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Duval",
+      "municipality": "Atlantic Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_glades_moore_haven",
+    "name": "Moore Haven (Glades County): mayor and council",
+    "url": "https://moorehaven.org/city-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Glades",
+      "municipality": "Moore Haven",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_hernando_brooksville",
+    "name": "Brooksville (Hernando County): mayor and council",
+    "url": "http://www.cityofbrooksville.us/266/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Hernando",
+      "municipality": "Brooksville",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_polk_auburndale",
+    "name": "Auburndale (Polk County): mayor and commission",
+    "url": "https://auburndalefl.com/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Polk",
+      "municipality": "Auburndale",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_fruitland_park",
+    "name": "Fruitland Park (Lake County): mayor and commission",
+    "url": "http://www.fruitlandpark.org/our-government/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Fruitland Park",
+      "member_title": "Commissioner",
+      "seats": 3
+    }
+  },
+  {
+    "key": "city_franklin_apalachicola",
+    "name": "Apalachicola (Franklin County): mayor and commission",
+    "url": "https://www.cityofapalachicola.com/government/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Franklin",
+      "municipality": "Apalachicola",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_desoto_arcadia",
+    "name": "Arcadia (DeSoto County): mayor and council",
+    "url": "https://arcadia-fl.gov/city-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "DeSoto",
+      "municipality": "Arcadia",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_alachua_archer",
+    "name": "Archer (Alachua County): mayor and commission",
+    "url": "http://www.cityofarcher.com/citycommission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "municipality": "Archer",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_gulf_port_st_joe",
+    "name": "Port St. Joe (Gulf County): mayor and commission",
+    "url": "http://www.cityofportstjoe.com/city-commissioners.cfm",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Gulf",
+      "municipality": "Port St. Joe",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_astatula",
+    "name": "Astatula (Lake County): mayor and council",
+    "url": "https://townofastatula.com/docs/town-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Astatula",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_atlantis",
+    "name": "Atlantis (Palm Beach County): mayor and council",
+    "url": "http://www.atlantisfl.gov/35/Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Atlantis",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_volusia_oak_hill",
+    "name": "Oak Hill (Volusia County): mayor and commission",
+    "url": "http://www.oakhillfl.com/city-commission/city-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Oak Hill",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_cocoa_beach",
+    "name": "Cocoa Beach (Brevard County): mayor and commission",
+    "url": "http://www.cityofcocoabeach.com/555/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Cocoa Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_putnam_palatka",
+    "name": "Palatka (Putnam County): mayor and commission",
+    "url": "http://palatka-fl.gov/151/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Putnam",
+      "municipality": "Palatka",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_cape_canaveral",
+    "name": "Cape Canaveral (Brevard County): mayor and commission",
+    "url": "https://www.cityofcapecanaveral.org/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Cape Canaveral",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_indian_river_vero_beach",
+    "name": "Vero Beach (Indian River County): mayor and council",
+    "url": "http://www.covb.org/283/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Indian River",
+      "municipality": "Vero Beach",
+      "member_title": "Council Member",
+      "seats": 5,
+      "exclude": [
+        "John E. Cotugno"
+      ]
+    }
+  },
+  {
+    "key": "city_alachua_alachua",
+    "name": "Alachua (Alachua County): mayor and commission",
+    "url": "http://www.cityofalachua.com/172",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "municipality": "Alachua",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_columbia_lake_city",
+    "name": "Lake City (Columbia County): mayor and council",
+    "url": "http://www.lcfla.com/170/City-Council-and-Charter-Officers",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Columbia",
+      "municipality": "Lake City",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_walton_defuniak_springs",
+    "name": "DeFuniak Springs (Walton County): mayor and council",
+    "url": "http://www.defuniaksprings.net/895/CITY-COUNCIL",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Walton",
+      "municipality": "DeFuniak Springs",
+      "member_title": "Council Member",
+      "seats": 6,
+      "exclude": [
+        "Robert Campbell"
+      ]
+    }
+  },
+  {
+    "key": "city_martin_stuart",
+    "name": "Stuart (Martin County): mayor and commission",
+    "url": "http://cityofstuart.us/230/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Martin",
+      "municipality": "Stuart",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_monroe_marathon",
+    "name": "Marathon (Monroe County): mayor and council",
+    "url": "http://www.ci.marathon.fl.us/departments/city_council/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Monroe",
+      "municipality": "Marathon",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_clay_green_cove_springs",
+    "name": "Green Cove Springs (Clay County): mayor and council",
+    "url": "http://www.greencovesprings.com/255/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Clay",
+      "municipality": "Green Cove Springs",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_seminole_lake_mary",
+    "name": "Lake Mary (Seminole County): mayor and commission",
+    "url": "http://www.lakemaryfl.com/356/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Seminole",
+      "municipality": "Lake Mary",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_mount_dora",
+    "name": "Mount Dora (Lake County): mayor and council",
+    "url": "http://ci.mount-dora.fl.us/443/Contacting-the-City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Mount Dora",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_pinellas_indian_rocks_beach",
+    "name": "Indian Rocks Beach (Pinellas County): mayor and commission",
+    "url": "https://www.indian-rocks-beach.com/government/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Indian Rocks Beach",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_monroe_key_colony_beach",
+    "name": "Key Colony Beach (Monroe County): mayor and commission",
+    "url": "http://www.keycolonybeach.net/key-colony-beach-commission-bios/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Monroe",
+      "municipality": "Key Colony Beach",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_brevard_indian_harbour_beach",
+    "name": "Indian Harbour Beach (Brevard County): mayor and council",
+    "url": "http://www.indianharbourbeach.org/1181/Mayor-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Indian Harbour Beach",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_alachua_high_springs",
+    "name": "High Springs (Alachua County): mayor and commission",
+    "url": "https://www.highsprings.us/node/98",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "municipality": "High Springs",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_okaloosa_mary_esther",
+    "name": "Mary Esther (Okaloosa County): mayor and council",
+    "url": "http://www.cityofmaryesther.com/219/Mayor-City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Okaloosa",
+      "municipality": "Mary Esther",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_flagler_bunnell",
+    "name": "Bunnell (Flagler County): mayor and commission",
+    "url": "http://www.bunnellcity.us/1202/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Flagler",
+      "municipality": "Bunnell",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_alachua_newberry",
+    "name": "Newberry (Alachua County): mayor and commission",
+    "url": "http://www.ci.newberry.fl.us/1210/City-Commission-Mayor",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "municipality": "Newberry",
+      "member_title": "Commissioner",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_palm_beach_south_palm_beach",
+    "name": "South Palm Beach (Palm Beach County): mayor and council",
+    "url": "http://www.southpalmbeach.com/202/Town-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "South Palm Beach",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_tavares",
+    "name": "Tavares (Lake County): mayor and council",
+    "url": "https://www.tavares.org/319/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Tavares",
+      "member_title": "Council Member",
+      "seats": 3
+    }
+  },
+  {
+    "key": "city_alachua_waldo",
+    "name": "Waldo (Alachua County): mayor and commission",
+    "url": "https://waldo-fl.com/form-of-government/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "municipality": "Waldo",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_gilchrist_trenton",
+    "name": "Trenton (Gilchrist County): mayor and commission",
+    "url": "https://www.trentonflorida.org/mayor-city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Gilchrist",
+      "municipality": "Trenton",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_umatilla",
+    "name": "Umatilla (Lake County): mayor and council",
+    "url": "http://www.umatillafl.org/173/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Umatilla",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_sumter_bushnell",
+    "name": "Bushnell (Sumter County): mayor and council",
+    "url": "https://www.cityofbushnellfl.com/government/city_council/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Sumter",
+      "municipality": "Bushnell",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_pinellas_gulfport",
+    "name": "Gulfport (Pinellas County): mayor and council",
+    "url": "https://mygulfport.us/city-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Gulfport",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_mascotte",
+    "name": "Mascotte (Lake County): mayor and council",
+    "url": "http://www.cityofmascotte.com/201/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Mascotte",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_edgewood",
+    "name": "Edgewood (Orange County): mayor and council",
+    "url": "http://www.edgewood-fl.gov/citycouncil",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Edgewood",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_putnam_crescent_city",
+    "name": "Crescent City (Putnam County): mayor and commission",
+    "url": "https://crescentcity-fl.com/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Putnam",
+      "municipality": "Crescent City",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_polk_lake_alfred",
+    "name": "Lake Alfred (Polk County): mayor and commission",
+    "url": "http://mylakealfred.com/204/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Polk",
+      "municipality": "Lake Alfred",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_belle_isle",
+    "name": "Belle Isle (Orange County): mayor and council",
+    "url": "http://www.cityofbelleislefl.org/citycouncil",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Belle Isle",
+      "member_title": "Council Member",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_martin_jupiter_island",
+    "name": "Jupiter Island (Martin County): mayor and commission",
+    "url": "http://townofjupiterisland.com/178/Commissioners",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Martin",
+      "municipality": "Jupiter Island",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_loxahatchee_groves",
+    "name": "Loxahatchee Groves (Palm Beach County): mayor and council",
+    "url": "https://www.loxahatcheegrovesfl.gov/166/Town-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Loxahatchee Groves",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_suwannee_live_oak",
+    "name": "Live Oak (Suwannee County): mayor and commission",
+    "url": "https://cityofliveoak.org/elected-officials/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Suwannee",
+      "municipality": "Live Oak",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pasco_dade_city",
+    "name": "Dade City (Pasco County): mayor and commission",
+    "url": "http://www.dadecityfl.com/government/city_commissioners.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pasco",
+      "municipality": "Dade City",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_franklin_carrabelle",
+    "name": "Carrabelle (Franklin County): mayor and commission",
+    "url": "https://www.mycarrabelle.com/government/city-commission/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Franklin",
+      "municipality": "Carrabelle",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_gadsden_midway",
+    "name": "Midway (Gadsden County): mayor and council",
+    "url": "http://www.mymidwayfl.com/government/mayor_and_councilmembers.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Gadsden",
+      "municipality": "Midway",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_pinellas_st_pete_beach",
+    "name": "St. Pete Beach (Pinellas County): mayor and commission",
+    "url": "http://www.stpetebeach.org/222/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "St. Pete Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_melbourne_beach",
+    "name": "Melbourne Beach (Brevard County): mayor and commission",
+    "url": "https://www.melbournebeachfl.org/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Melbourne Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_polk_lake_wales",
+    "name": "Lake Wales (Polk County): mayor and commission",
+    "url": "http://www.cityoflakewales.com/217/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Polk",
+      "municipality": "Lake Wales",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_walton_freeport",
+    "name": "Freeport (Walton County): mayor and council",
+    "url": "https://freeportflorida.gov/government/mayor___city_council/index.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Walton",
+      "municipality": "Freeport",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_marion_reddick",
+    "name": "Reddick (Marion County): mayor and commission",
+    "url": "https://townofreddick.com/town-officials/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Marion",
+      "municipality": "Reddick",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_nassau_fernandina_beach",
+    "name": "Fernandina Beach (Nassau County): mayor and commission",
+    "url": "http://www.fbfl.us/842/Meet-the-Commissioners",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Nassau",
+      "municipality": "Fernandina Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_marion_mcintosh",
+    "name": "McIntosh (Marion County): mayor and commission",
+    "url": "https://townofmcintosh.org/town-officials/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Marion",
+      "municipality": "McIntosh",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_oakland",
+    "name": "Oakland (Orange County): mayor and commission",
+    "url": "https://oaklandfl.gov/209/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Oakland",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_ocean_ridge",
+    "name": "Ocean Ridge (Palm Beach County): mayor and commission",
+    "url": "http://www.oceanridgeflorida.com/government/town_commissioners.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Ocean Ridge",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_indian_shores",
+    "name": "Indian Shores (Pinellas County): mayor and council",
+    "url": "http://www.myindianshores.com/2152/Town-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Indian Shores",
+      "member_title": "Council Member",
+      "seats": 3
+    }
+  },
+  {
+    "key": "city_bradford_starke",
+    "name": "Starke (Bradford County): mayor and commission",
+    "url": "http://www.cityofstarke.org/1202/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Bradford",
+      "municipality": "Starke",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_montverde",
+    "name": "Montverde (Lake County): mayor and council",
+    "url": "https://mymontverde.com/council-members/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Montverde",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_kenneth_city",
+    "name": "Kenneth City (Pinellas County): mayor and commission",
+    "url": "https://www.kennethcityfl.org/government/mayor",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Kenneth City",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_volusia_pierson",
+    "name": "Pierson (Volusia County): mayor and council",
+    "url": "http://www.townofpierson.org/mayor-and-council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "municipality": "Pierson",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_polk_lake_hamilton",
+    "name": "Lake Hamilton (Polk County): mayor and council",
+    "url": "http://www.townoflakehamilton.com/1192/Town-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Polk",
+      "municipality": "Lake Hamilton",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_putnam_pomona_park",
+    "name": "Pomona Park (Putnam County): mayor and council",
+    "url": "http://pomonapark.com/town-council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Putnam",
+      "municipality": "Pomona Park",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_north_redington_beach",
+    "name": "North Redington Beach (Pinellas County): mayor and commission",
+    "url": "https://townofnorthredingtonbeach.com/government/commissioners/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "North Redington Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_indian_river_indian_river_shores",
+    "name": "Indian River Shores (Indian River County): mayor and council",
+    "url": "http://www.irshores.com/town_government/town_council.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Indian River",
+      "municipality": "Indian River Shores",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_belleair",
+    "name": "Belleair (Pinellas County): mayor and commission",
+    "url": "http://www.townofbelleair.com/436/Town-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Belleair",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_nassau_hilliard",
+    "name": "Hilliard (Nassau County): mayor and council",
+    "url": "http://www.townofhilliard.com/towncouncil",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Nassau",
+      "municipality": "Hilliard",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_bay_parker",
+    "name": "Parker (Bay County): mayor and council",
+    "url": "https://cityofparker.com/government/city-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Bay",
+      "municipality": "Parker",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_maitland",
+    "name": "Maitland (Orange County): mayor and council",
+    "url": "http://www.itsmymaitland.com/258/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Maitland",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pasco_port_richey",
+    "name": "Port Richey (Pasco County): mayor and council",
+    "url": "http://www.cityofportrichey.com/207/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pasco",
+      "municipality": "Port Richey",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_lake_leesburg",
+    "name": "Leesburg (Lake County): mayor and commission",
+    "url": "https://www.leesburgflorida.gov/my_city/city_commission.php",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Leesburg",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_okaloosa_fort_walton_beach",
+    "name": "Fort Walton Beach (Okaloosa County): mayor and council",
+    "url": "http://www.fwb.org/165/Mayor-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Okaloosa",
+      "municipality": "Fort Walton Beach",
+      "member_title": "Council Member",
+      "seats": 8
+    }
+  },
+  {
+    "key": "city_indian_river_sebastian",
+    "name": "Sebastian (Indian River County): mayor and council",
+    "url": "http://www.cityofsebastian.org/266/City-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Indian River",
+      "municipality": "Sebastian",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_eustis",
+    "name": "Eustis (Lake County): mayor and commission",
+    "url": "https://www.eustis.org/Government/City-Commission/Commissioners",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "municipality": "Eustis",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_bay_lake",
+    "name": "Bay Lake (Orange County): mayor and council",
+    "url": "https://cityofbaylakefl.gov/city-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Bay Lake",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_lake_buena_vista",
+    "name": "Lake Buena Vista (Orange County): mayor and council",
+    "url": "https://cityoflakebuenavistafl.gov/city-council/",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Lake Buena Vista",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_indialantic",
+    "name": "Indialantic (Brevard County): mayor and council",
+    "url": "http://www.indialantic.com/1199/Town-Council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Indialantic",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "county_escambia_commission",
+    "name": "Escambia County: Board of County Commissioners",
+    "url": "https://myescambia.com/your-government",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Escambia",
+      "jurisdiction": "Escambia County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "county_washington_commission",
+    "name": "Washington County: Board of County Commissioners",
+    "url": "http://www.washingtonfl.com/departments/commission",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Washington",
+      "jurisdiction": "Washington County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "county_charlotte_commission",
+    "name": "Charlotte County: Board of County Commissioners",
+    "url": "http://www.CharlotteCountyfl.gov/commission-office/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Charlotte",
+      "jurisdiction": "Charlotte County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "county_nassau_commission",
+    "name": "Nassau County: Board of County Commissioners",
+    "url": "http://www.nassaucountyfl.com/95/Meet-the-Commissioners",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Nassau",
+      "jurisdiction": "Nassau County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 3,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "county_citrus_commission",
+    "name": "Citrus County: Board of County Commissioners",
+    "url": "https://www.citrusbocc.com/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Citrus",
+      "jurisdiction": "Citrus County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "county_alachua_commission",
+    "name": "Alachua County: Board of County Commissioners",
+    "url": "http://www.alachuacounty.us/Depts/BOCC",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "jurisdiction": "Alachua County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 3,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "county_martin_commission",
+    "name": "Martin County: Board of County Commissioners",
+    "url": "https://www.martin.fl.us/Commissioners",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Martin",
+      "jurisdiction": "Martin County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "title_map": {
+        "Chair": "County Commissioner",
+        "Vice Chair": "County Commissioner",
+        "Mayor": "County Commissioner",
+        "Vice Mayor": "County Commissioner"
+      }
+    }
+  },
+  {
+    "key": "office_alachua_tax_collector",
+    "name": "Alachua County Tax Collector",
+    "url": "http://www.alachuacollector.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Alachua",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_baker_superintendent",
+    "name": "Baker County Superintendent of Schools",
+    "url": "http://www.bakerk12.org/domain/348",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Baker",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Baker County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_baker_tax_collector",
+    "name": "Baker County Tax Collector",
+    "url": "http://www.mybakertc.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Baker",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_broward_superintendent",
+    "name": "Broward County Superintendent of Schools",
+    "url": "https://www.browardschools.com/Domain/12453",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Broward",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Broward County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_calhoun_tax_collector",
+    "name": "Calhoun County Tax Collector",
+    "url": "http://www.calhountc.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Calhoun",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_clay_tax_collector",
+    "name": "Clay County Tax Collector",
+    "url": "http://www.claycountytax.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Clay",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_columbia_tax_collector",
+    "name": "Columbia County Tax Collector",
+    "url": "http://www.columbiataxcollector.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Columbia",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_duval_tax_collector",
+    "name": "Duval County Tax Collector",
+    "url": "http://www.coj.net/departments/tax-collector.aspx",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Duval",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_escambia_superintendent",
+    "name": "Escambia County Superintendent of Schools",
+    "url": "https://www.escambiaschools.org/domain/77",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Escambia",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Escambia County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_franklin_superintendent",
+    "name": "Franklin County Superintendent of Schools",
+    "url": "https://www.franklincountyschools.org/our-district/board/franklin-county-school-board",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Franklin",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Franklin County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_franklin_tax_collector",
+    "name": "Franklin County Tax Collector",
+    "url": "http://www.franklintaxcollector.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Franklin",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_glades_tax_collector",
+    "name": "Glades County Tax Collector",
+    "url": "http://www.gladestc.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Glades",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_gulf_tax_collector",
+    "name": "Gulf County Tax Collector",
+    "url": "http://www.gulftaxcollector.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Gulf",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_hardee_tax_collector",
+    "name": "Hardee County Tax Collector",
+    "url": "http://www.hardeetaxcollector.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Hardee",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_hernando_superintendent",
+    "name": "Hernando County Superintendent of Schools",
+    "url": "https://www.hernandoschools.org/school-board/index",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Hernando",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Hernando County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_hernando_tax_collector",
+    "name": "Hernando County Tax Collector",
+    "url": "http://www.hernandotax.us/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Hernando",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_holmes_tax_collector",
+    "name": "Holmes County Tax Collector",
+    "url": "http://www.holmestax.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Holmes",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_jackson_tax_collector",
+    "name": "Jackson County Tax Collector",
+    "url": "http://www.jacksontc.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Jackson",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_lake_tax_collector",
+    "name": "Lake County Tax Collector",
+    "url": "http://www.laketax.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Lake",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_leon_superintendent",
+    "name": "Leon County Superintendent of Schools",
+    "url": "https://www.leonschools.net/school-board-home",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Leon",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Leon County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_liberty_tax_collector",
+    "name": "Liberty County Tax Collector",
+    "url": "http://www.libertytaxcollector.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Liberty",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_monroe_tax_collector",
+    "name": "Monroe County Tax Collector",
+    "url": "http://www.monroetaxcollector.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Monroe",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_okeechobee_tax_collector",
+    "name": "Okeechobee County Tax Collector",
+    "url": "http://www.okeechobeetc.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Okeechobee",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_orange_tax_collector",
+    "name": "Orange County Tax Collector",
+    "url": "http://www.octaxcol.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Orange",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_pinellas_superintendent",
+    "name": "Pinellas County Superintendent of Schools",
+    "url": "http://www.pcsb.org/domain/608",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Pinellas",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Pinellas County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_seminole_tax_collector",
+    "name": "Seminole County Tax Collector",
+    "url": "https://seminolecounty.tax/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Seminole",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_st_johns_superintendent",
+    "name": "St. Johns County Superintendent of Schools",
+    "url": "http://www.stjohns.k12.fl.us/board/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "St. Johns",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "St. Johns County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_sumter_superintendent",
+    "name": "Sumter County Superintendent of Schools",
+    "url": "https://www.sumter.k12.fl.us/school-board-members",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Sumter",
+      "office_title": "Superintendent of Schools",
+      "label": "Superintendent(?: of Schools)?",
+      "jurisdiction": "Sumter County Public Schools",
+      "nonpartisan": false
+    }
+  },
+  {
+    "key": "office_sumter_tax_collector",
+    "name": "Sumter County Tax Collector",
+    "url": "http://www.sumtertaxcollector.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Sumter",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_union_tax_collector",
+    "name": "Union County Tax Collector",
+    "url": "http://www.unioncountytaxcollector.com/",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Union",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_volusia_tax_collector",
+    "name": "Volusia County Tax Collector",
+    "url": "https://vctaxcollector.org/index.html",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Volusia",
+      "office_title": "Tax Collector"
+    }
+  },
+  {
+    "key": "office_wakulla_tax_collector",
+    "name": "Wakulla County Tax Collector",
+    "url": "http://www.wakullatax.com",
+    "level": "county",
+    "scraper": "office_holder",
+    "config": {
+      "county": "Wakulla",
+      "office_title": "Tax Collector"
+    }
   }
 ]
