@@ -219,6 +219,9 @@ in. To send reports somewhere else, set `report_url` (or `contact_email`) in `da
 
 ## Preview on your computer
 
+Quickest: `python3 tools/preview.py` (then open http://localhost:8000). It serves `site/` and tells the browser never to
+cache, so every reload shows your latest changes. Pass a port to use another one: `python3 tools/preview.py 8001`.
+
 Requires Python 3.11 or newer.
 
 ```bash
