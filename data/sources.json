@@ -1909,5 +1909,24 @@
       "render": true,
       "selection_method": "elected"
     }
+  },
+  {
+    "key": "school_collier",
+    "name": "Collier County School Board: board members",
+    "url": "https://www.collierschools.com/exploreccps/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Collier",
+      "jurisdiction": "Collier County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "role_pattern": "^(member|chair|vice chair)$",
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member"
+      }
+    }
   }
 ]

@@ -268,6 +268,7 @@ tools/build_boundaries.py  downloads district shapes for the representatives map
 tools/wikipedia.py     fills missing photos and birth dates from Wikipedia/Wikidata
 tools/find_council_pages.py  suggests each city's council roster page
 tools/find_district_boards.py  suggests each special district's board page and members
+tools/build_county_links.py  official school board and tax collector sites per county (data/county_links.json)
 tests/                 Python and JavaScript tests
 .github/workflows/     daily collection, deploy to Pages, tests
 ```
