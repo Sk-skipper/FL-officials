@@ -57,6 +57,17 @@ EXTRA_SCHOOL = {
     "Leon": "https://intervector.leoncountyfl.gov/intervector/rest/services/MapServices/SOE_DistrictsCurrent_D_WM/MapServer/2",
     "Volusia": "https://services.arcgis.com/YvSMAk2zZNXXVujI/arcgis/rest/services/Existing%20School%20Board%20Districts/FeatureServer/0",
 }
+# Counties' own commission district layers: (url, district field, commissioner-name field or None). The name, where
+# the county publishes one, lets the map match a commissioner whose directory record has no district number.
+EXTRA_COMMISSION = {
+    "Leon": ("https://intervector.leoncountyfl.gov/intervector/rest/services/MapServices/SOE_DistrictsCurrent_D_WM/MapServer/1", "DISTRICT", None),
+    "Sumter": ("https://services8.arcgis.com/FTrtUCmxaVKdPC5e/arcgis/rest/services/BOCC_Commission_Districts/FeatureServer/0", "DISTRICT", "NAME"),
+    "Flagler": ("https://services3.arcgis.com/hSKL9bYjhP4rHxSD/arcgis/rest/services/Commission_and_School_Board_Districts/FeatureServer/0", "DIST_ID", "Commission"),
+    "Hillsborough": ("https://services.arcgis.com/apTfC6SUmnNfnxuF/arcgis/rest/services/Commissioner_Districts_2023/FeatureServer/0", "COMMDIST", None),
+    "St. Lucie": ("https://slcgis.stlucieco.gov/hosting/rest/services/Political/CountyCommissionDistricts/MapServer/0", "District", "CommissionerName"),
+    "Palm Beach": ("https://services1.arcgis.com/ZWOoUZbtaYePLlPw/arcgis/rest/services/Commissioner_Districts/FeatureServer/0", "DISTRICT", "NAME"),
+    "Pasco": ("https://services6.arcgis.com/Mo4MddfRHpFwT7UF/arcgis/rest/services/Commission_District/FeatureServer/0", "DISTRICT", "COMMISSION"),
+}
 SFWMD_SD = "https://geoweb.sfwmd.gov/agsext1/rest/services/WaterManagementSystem/SFWMD_Special_Districts/FeatureServer/0"
 MIAMI_CITY = "https://gis.miami.gov/gis/rest/services/Maps/CommissionerDistricts/MapServer/0"
 HEADERS = {"User-Agent": "fl-officials-directory/1.0 (boundary builder)"}
@@ -352,6 +363,15 @@ def main() -> None:
         for row in query(url, "1=1", "DISTRICT", LOCAL_OFFSET):
             layers["school-board"]["features"].append(
                 feature(row["geometry"], county=county, district=district_number(str(row["properties"]["DISTRICT"]))))
+    for county, (url, dist_field, name_field) in EXTRA_COMMISSION.items():
+        print(f"Downloading {county} County commission districts...")
+        fields = ",".join(f for f in (dist_field, name_field) if f)
+        for row in query(url, "1=1", fields, LOCAL_OFFSET):
+            props = row["properties"]
+            member = re.sub(r",.*$", "", str(props.get(name_field) or "")).strip() if name_field else ""
+            layers["county-commission"]["features"].append(feature(
+                row["geometry"], county=county, district=district_number(str(props[dist_field])),
+                **({"member": member.title() if member.isupper() else member} if member else {})))
     path = ROOT / "data" / "special_districts.json"
     special = json.loads(path.read_text(encoding="utf-8"))
     kept = [d for d in special["districts"] if not d["key"].startswith(("md-cdd-", "sfwmd-"))]
