@@ -69,6 +69,10 @@ def parse_broward_districts(payload: str, source_url: str, mayor_cities: set[str
             records.append({**base, "office_title": "County Commissioner", "government_level": "county",
                             "district": district, "jurisdiction": "Broward County", "party": row.get("party1")})
         elif office == "School Board":
+            # The school district's images are wide banners with the name and district written on them, not
+            # portraits; cropped into a circle they show half a word, so initials are shown instead.
+            if re.search(r"(?i)banner|district|chair|/d\d[^/]*$", base["photo_url"] or ""):
+                base = {**base, "photo_url": None}
             countywide = "at-large" in label.lower()
             records.append({**base, "office_title": "School Board Member", "government_level": "county",
                             "district": district, "jurisdiction": "Broward County Public Schools",
