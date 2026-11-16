@@ -317,7 +317,7 @@ def _special_districts(raw: dict) -> list[dict]:
 
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
-          wikipedia: dict | None = None, special: dict | None = None):
+          wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -451,6 +451,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             ),
         },
         "county_coverage": county_coverage(unique),
+        "county_links": (links or {}).get("counties", {}),
         "county_coverage_columns": [{"key": k, "label": label} for k, label in COUNTY_OFFICES],
         "vacancies": _vacancies(vacancies or {}),
         "special_districts": special_districts,
@@ -520,6 +521,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         vacancies=load_json(data_dir / "vacancies.json", {}),
         wikipedia=load_json(data_dir / "wikipedia.json", {}),
         special=load_json(data_dir / "special_districts.json", {}),
+        links=load_json(data_dir / "county_links.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731

@@ -333,7 +333,8 @@ def find_board(lines: list[str], role_pattern: str, member_title: str) -> list[d
     role_re = re.compile(role_pattern, re.I)
     out, seen = [], set()
     for i, line in enumerate(lines[:-1]):
-        seat = _seat(line)
+        # The seat can be on the name line ("Jane Doe (Zone 3)") or alone just above it ("District 1").
+        seat = _seat(line) or (_seat(lines[i - 1]) if i and _SEAT_LINE.fullmatch(lines[i - 1]) else None)
         bare = _HONORIFIC.sub("", re.sub(r"\s*\((?:Zone|District|Seat|Group)[^)]*\)\s*$", "", line))
         n = _NAME_ONLY.match(bare)
         role = lines[i + 1]

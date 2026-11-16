@@ -679,6 +679,28 @@ const LONG_SECTION = 12;
  * The county explorer: a clickable map of all 67 counties beside a full roster for the
  * selected county, grouped by level and body. Used on the homepage and the Counties page.
  */
+/** Core county offices the directory doesn't list for a county yet, with the office's official site where known. */
+function missingOffices(records, meta, county) {
+  const here = records.filter((r) => r.county === county && r.government_level === "county" && !r.special_district);
+  const has = (test) => here.some((r) => test(r.office_title));
+  const links = (meta.county_links || {})[county] || {};
+  const soe = here.find((r) => r.office_title === "Supervisor of Elections")?.official_website;
+  return [
+    !has((t) => /^County (Commissioner|Council Member|Mayor)$/.test(t)) && { label: "County commission", url: soe, via: "elections office" },
+    !has((t) => t === "School Board Member") && { label: "School board", url: links.school_board, via: "school board" },
+    !has((t) => t === "Property Appraiser") && { label: "Property appraiser", url: soe, via: "elections office" },
+    !has((t) => t === "Tax Collector") && { label: "Tax collector", url: links.tax_collector, via: "tax collector" },
+  ].filter(Boolean);
+}
+function missingBox(records, meta, county) {
+  const gaps = missingOffices(records, meta, county);
+  if (!gaps.length) return "";
+  return `<div class="gap-box"><p class="strong small">Not in the directory yet for ${esc(county)} County</p>
+    <ul class="plain small">${gaps.map((g) => `<li>${esc(g.label)}${safeUrl(g.url)
+      ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">See the official ${esc(g.via)} site</a>` : ""}</li>`).join("")}</ul>
+    <p class="muted small">These offices are elected in every county; their own sites couldn't be read automatically yet.</p></div>`;
+}
+
 /** The people who run a county: its governing board, its constitutional officers and its school board. */
 const OFFICER_ORDER = ["Sheriff", "Clerk of the Circuit Court", "Property Appraiser", "Tax Collector", "Supervisor of Elections", "Superintendent of Schools"];
 function countyLeadership(records, county) {
@@ -890,6 +912,7 @@ function countyExplorer(root, records, meta, map, { initial = "Broward", syncPar
       </div>
       ${coverage}
       ${leadershipPanel(records, selected, meta)}
+      ${missingBox(records, meta, selected)}
       <details class="everyone"${filter || level ? " open" : ""}><summary><h3 class="group">Everyone who represents ${esc(selected)} County
         <span class="count">${formatNumber(total)}</span></h3><span class="muted small">Congress, the Legislature, statewide offices, judges, cities and districts</span></summary>
       <div class="roster-tools">
@@ -1582,6 +1605,7 @@ function reps() {
           ${tabs.map((t) => `<button type="button" class="chip" data-level-filter="${t.key}" aria-pressed="false">${esc(t.label)}${t.count != null ? ` <span class="count">${formatNumber(t.count)}</span>` : ""}</button>`).join("")}
         </div>
         ${partial}
+        ${missingBox(records, meta, county)}
         <div class="roster">${body || empty("No officials found for this spot")}</div>
         ${hasSpecial ? `<div data-level="special">${specialSummary(place)}</div>` : ""}
         ${judges.length ? `<details class="roster-section fine" data-level="courts"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
