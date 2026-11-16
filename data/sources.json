@@ -1594,5 +1594,71 @@
       "seats": 4,
       "selection_method": "elected"
     }
+  },
+  {
+    "key": "city_duval_jacksonville",
+    "name": "Jacksonville (Duval County): mayor and council",
+    "url": "https://www.coj.net/city-council.aspx",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Duval",
+      "municipality": "Jacksonville",
+      "member_title": "Councilmember",
+      "seats": 19
+    }
+  },
+  {
+    "key": "city_alachua_gainesville",
+    "name": "Gainesville (Alachua County): mayor and commission",
+    "url": "https://www.gainesvillefl.gov/Government-Pages/Government/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "municipality": "Gainesville",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_manatee_bradenton",
+    "name": "Bradenton (Manatee County): mayor and council",
+    "url": "https://cityofbradenton.com/council",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Manatee",
+      "municipality": "Bradenton",
+      "member_title": "Councilmember",
+      "seats": 6,
+      "seat_name_lines": true
+    }
+  },
+  {
+    "key": "city_bay_panama_city",
+    "name": "Panama City (Bay County): mayor and commission",
+    "url": "https://www.panamacity.gov/395/city-commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Bay",
+      "municipality": "Panama City",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_orange_ocoee",
+    "name": "Ocoee (Orange County): mayor and commission",
+    "url": "https://www.ocoee.org/125/City-Commission",
+    "level": "municipal",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Orange",
+      "municipality": "Ocoee",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
   }
 ]

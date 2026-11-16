@@ -226,3 +226,13 @@ def test_board_member_must_name_a_known_special_district():
               "source_url": "https://example.gov/board"}
     with pytest.raises(PublishError, match="special_district 'nope'"):
         build(collected(), {"officials": [member]}, {}, {}, NOW, env={}, special=_special())
+
+
+def test_a_source_not_confirmed_for_a_month_is_hidden_and_reported():
+    data = collected()
+    state = next(iter(data["sources"].values()))
+    state["last_successful_collection"] = "2026-09-01T00:00:00+00:00"
+    officials, sources, meta, _ = build(data, {"officials": []}, {}, {}, NOW, {})
+    assert officials["officials"] == []
+    assert meta["coverage"]["stale_sources"][0]["records_hidden"] == 1
+    assert any("not confirmed since 2026-09-01" in item for item in meta["coverage"]["not_yet_covered"])
