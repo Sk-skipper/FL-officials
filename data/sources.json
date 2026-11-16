@@ -1969,19 +1969,6 @@
     }
   },
   {
-    "key": "city_st_lucie_port_st_lucie",
-    "name": "Port St. Lucie (St. Lucie County): mayor and council",
-    "url": "https://www.cityofpsl.com/Government/Your-City-Government/Mayor-City-Council",
-    "level": "municipal",
-    "scraper": "city_roster",
-    "config": {
-      "county": "St. Lucie",
-      "municipality": "Port St. Lucie",
-      "member_title": "Council Member",
-      "seats": 3
-    }
-  },
-  {
     "key": "city_broward_lauderdale_lakes",
     "name": "Lauderdale Lakes (Broward County): mayor and commission",
     "url": "http://www.lauderdalelakes.org/123/City-Commission",
@@ -2060,19 +2047,6 @@
       "exclude": [
         "Shaun Ferguson"
       ]
-    }
-  },
-  {
-    "key": "city_pinellas_pinellas_park",
-    "name": "Pinellas Park (Pinellas County): mayor and council",
-    "url": "http://www.pinellas-park.com/415/City-Council",
-    "level": "municipal",
-    "scraper": "city_roster",
-    "config": {
-      "county": "Pinellas",
-      "municipality": "Pinellas Park",
-      "member_title": "Council Member",
-      "seats": 3
     }
   },
   {
@@ -2216,19 +2190,6 @@
       "municipality": "Auburndale",
       "member_title": "Commissioner",
       "seats": 5
-    }
-  },
-  {
-    "key": "city_lake_fruitland_park",
-    "name": "Fruitland Park (Lake County): mayor and commission",
-    "url": "http://www.fruitlandpark.org/our-government/city-commission/",
-    "level": "municipal",
-    "scraper": "city_roster",
-    "config": {
-      "county": "Lake",
-      "municipality": "Fruitland Park",
-      "member_title": "Commissioner",
-      "seats": 3
     }
   },
   {
@@ -2589,19 +2550,6 @@
     }
   },
   {
-    "key": "city_lake_tavares",
-    "name": "Tavares (Lake County): mayor and council",
-    "url": "https://www.tavares.org/319/City-Council",
-    "level": "municipal",
-    "scraper": "city_roster",
-    "config": {
-      "county": "Lake",
-      "municipality": "Tavares",
-      "member_title": "Council Member",
-      "seats": 3
-    }
-  },
-  {
     "key": "city_alachua_waldo",
     "name": "Waldo (Alachua County): mayor and commission",
     "url": "https://waldo-fl.com/form-of-government/",
@@ -2927,19 +2875,6 @@
     }
   },
   {
-    "key": "city_pinellas_indian_shores",
-    "name": "Indian Shores (Pinellas County): mayor and council",
-    "url": "http://www.myindianshores.com/2152/Town-Council",
-    "level": "municipal",
-    "scraper": "city_roster",
-    "config": {
-      "county": "Pinellas",
-      "municipality": "Indian Shores",
-      "member_title": "Council Member",
-      "seats": 3
-    }
-  },
-  {
     "key": "city_bradford_starke",
     "name": "Starke (Bradford County): mayor and commission",
     "url": "http://www.cityofstarke.org/1202/City-Commission",
@@ -3260,26 +3195,6 @@
     }
   },
   {
-    "key": "county_nassau_commission",
-    "name": "Nassau County: Board of County Commissioners",
-    "url": "http://www.nassaucountyfl.com/95/Meet-the-Commissioners",
-    "level": "county",
-    "scraper": "city_roster",
-    "config": {
-      "county": "Nassau",
-      "jurisdiction": "Nassau County",
-      "government_level": "county",
-      "member_title": "County Commissioner",
-      "seats": 3,
-      "title_map": {
-        "Chair": "County Commissioner",
-        "Vice Chair": "County Commissioner",
-        "Mayor": "County Commissioner",
-        "Vice Mayor": "County Commissioner"
-      }
-    }
-  },
-  {
     "key": "county_citrus_commission",
     "name": "Citrus County: Board of County Commissioners",
     "url": "https://www.citrusbocc.com/",
@@ -3291,26 +3206,6 @@
       "government_level": "county",
       "member_title": "County Commissioner",
       "seats": 5,
-      "title_map": {
-        "Chair": "County Commissioner",
-        "Vice Chair": "County Commissioner",
-        "Mayor": "County Commissioner",
-        "Vice Mayor": "County Commissioner"
-      }
-    }
-  },
-  {
-    "key": "county_alachua_commission",
-    "name": "Alachua County: Board of County Commissioners",
-    "url": "http://www.alachuacounty.us/Depts/BOCC",
-    "level": "county",
-    "scraper": "city_roster",
-    "config": {
-      "county": "Alachua",
-      "jurisdiction": "Alachua County",
-      "government_level": "county",
-      "member_title": "County Commissioner",
-      "seats": 3,
       "title_map": {
         "Chair": "County Commissioner",
         "Vice Chair": "County Commissioner",
