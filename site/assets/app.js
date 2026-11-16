@@ -1762,6 +1762,20 @@ function about() {
       </details>`).join("");
     }, "Loading sources");
   }
+  const table = $("#county-coverage-table");
+  if (table) {
+    withData(table, [loadMeta], (meta) => {
+      const cols = meta.county_coverage_columns || [];
+      const rows = meta.county_coverage || [];
+      const cell = (v) => (v ? `<td class="right tabular ok-cell">${v === 1 ? "✓" : v}</td>` : `<td class="right gap-cell" aria-label="Not covered">–</td>`);
+      const complete = rows.filter((r) => r.complete).length;
+      table.innerHTML = `<p class="strong">${complete} of ${rows.length} counties have every core office listed.</p>
+        <div class="panel flush"><div class="table-wrap always"><table class="coverage-table">
+        <thead><tr><th scope="col">County</th>${cols.map((c) => `<th scope="col" class="right">${esc(c.label)}</th>`).join("")}<th scope="col" class="right">Cities</th></tr></thead>
+        <tbody>${rows.map((r) => `<tr><th scope="row"><a href="county.html?name=${encodeURIComponent(r.county)}">${esc(r.county)}</a></th>
+          ${cols.map((c) => cell(r[c.key])).join("")}<td class="right tabular">${r.cities || "–"}</td></tr>`).join("")}</tbody></table></div></div>`;
+    }, "Loading coverage");
+  }
   const box = $("#coverage");
   withData(box, [loadMeta], (meta) => {
     const c = meta.coverage;

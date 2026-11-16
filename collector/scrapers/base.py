@@ -140,6 +140,38 @@ class PoliteHttpClient:
         """Fetch a file (a PDF, say) as bytes, or raise FetchError."""
         return self._fetch(url, accept="application/pdf,application/octet-stream,*/*;q=0.8").content
 
+    def get_rendered(self, url: str, wait_ms: int = 2500) -> str:
+        """Fetch a page that builds its content with JavaScript: load it in headless Chromium and return the HTML
+        after scripts have run. Same rules as get(): robots.txt is obeyed and the host's request slot is waited for.
+        Needs `pip install playwright && python -m playwright install chromium`."""
+        self.check_allowed(url)
+        self._wait(urlsplit(url).netloc)
+        try:
+            from playwright.sync_api import Error as PlaywrightError, sync_playwright
+        except ImportError as exc:
+            raise FetchError("This source needs Playwright (pip install playwright; python -m playwright install chromium)") from exc
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch()
+                try:
+                    page = browser.new_page(user_agent=self.user_agent)
+                    response = page.goto(url, wait_until="domcontentloaded", timeout=self.timeout_seconds * 1000)
+                    status = response.status if response else 0
+                    if status in (401, 403):
+                        raise FetchError(f"HTTP {status} for {url}: access is restricted and will not be bypassed")
+                    if status >= 400:
+                        raise FetchError(f"HTTP {status} for {url}")
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=wait_ms * 4)
+                    except PlaywrightError:
+                        pass  # some pages keep a connection open; take what has rendered
+                    page.wait_for_timeout(wait_ms)
+                    return page.content()
+                finally:
+                    browser.close()
+        except PlaywrightError as exc:
+            raise FetchError(f"{url} could not be rendered ({str(exc).splitlines()[0][:120]})") from exc
+
     def _fetch(self, url: str, accept: str | None = None) -> requests.Response:
         self.check_allowed(url)
         host = urlsplit(url).netloc

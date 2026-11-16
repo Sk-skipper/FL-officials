@@ -2,6 +2,7 @@
 
     python -m collector.publish                 # builds site/data/meta.json, which lists the districts
     python tools/find_district_boards.py > boards.json
+    python tools/find_district_boards.py --render --keys-file keys.txt   # headless Chromium, only these districts
 
 For each district in meta.json with a website, this follows the homepage's links that look like the board page
 ("Board of Supervisors", "Commissioners", "Governing board"...), reads each page three ways (member cards, a
@@ -47,19 +48,23 @@ def readings(html: str, url: str) -> list[tuple[str, list[dict]]]:
             ("board", find_board(lines, ROLES, "Supervisor"))]
 
 
+RENDER = "--render" in sys.argv
+
+
 def check(district: dict) -> dict:
-    client = PoliteHttpClient(user_agent(), 2, 20, 0, schedule=SCHEDULE)
+    client = PoliteHttpClient(user_agent(), 2, 30, 0, schedule=SCHEDULE)
+    fetch = client.get_rendered if RENDER else client.get
     result = {"key": district["key"], "name": district["name"], "county": district.get("county"),
               "website": district["website"], "best": None}
     try:
-        home = client.get(district["website"])
+        home = fetch(district["website"])
     except FetchError as exc:
         result["error"] = str(exc)[:120]
         return result
     pages = [(district["website"], home)]
     for url in links(home, district["website"]):
         try:
-            pages.append((url, client.get(url)))
+            pages.append((url, fetch(url)))
         except FetchError:
             continue
     best = None
@@ -75,9 +80,14 @@ def check(district: dict) -> dict:
 def main() -> None:
     meta = json.loads((ROOT / "site/data/meta.json").read_text(encoding="utf-8"))
     todo = [d for d in meta.get("special_districts", []) if d.get("website")]
-    if len(sys.argv) > 1:
-        todo = [d for d in todo if d["key"] in sys.argv[1:]]
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    args = sys.argv[1:]
+    if "--keys-file" in args:  # one key per line; keys can contain spaces
+        path = args[args.index("--keys-file") + 1]
+        args = [k.strip() for k in Path(path).read_text().splitlines() if k.strip()]
+    wanted = [a for a in args if not a.startswith("--")]
+    if wanted:
+        todo = [d for d in todo if d["key"] in wanted]
+    with ThreadPoolExecutor(max_workers=4 if RENDER else 8) as pool:
         results = list(pool.map(check, todo))
     print(json.dumps(results, indent=1, ensure_ascii=False))
 

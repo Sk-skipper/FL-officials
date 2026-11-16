@@ -40,7 +40,8 @@
             association lists for the sheriff, clerk, property appraiser, tax collector, superintendent and commission. When two sources name
             different people for a one-person office, the county's own elections office wins.</li>
             <li><strong>School district websites:</strong> the board-members page of each district the Florida School Boards Association
-            links to, where the page can be read without running JavaScript.</li>
+            links to. Pages that build their list with JavaScript are loaded in a headless browser, under the same robots.txt rules and
+            pacing as every other page.</li>
             <li><strong>County GIS:</strong> Broward County's "Electoral District Boundaries" layer names who holds each County Commission, School Board and city
             commission district seat. It also supplies the mayors of the few Broward cities whose websites refuse automated requests; those were checked against
             each city's own page when they were added.</li>
@@ -77,6 +78,8 @@
 
         <section id="refresh">
           <h2>How often records are refreshed</h2>
+          <p>If a source can't be read for more than 30 days, its officials are taken off the site and the source is listed under
+          "Not yet covered" until it works again, so people who may have left office aren't shown indefinitely.</p>
           <p>Every source is collected again once a day. Each profile shows the date its record was last confirmed against its source, and the
           <a href="sources.html">data sources page</a> shows the status of every source.</p>
         </section>
@@ -101,6 +104,13 @@
         <section id="coverage">
           <h2>What is and is not included</h2>
           <div id="coverage"></div>
+        </section>
+
+        <section id="county-coverage">
+          <h2>Coverage by county</h2>
+          <p>Every Florida county elects the same core offices. This table shows which of them the directory has for each county, so a gap is
+          visible rather than silently missing. Numbers are how many members of the commission or school board are listed.</p>
+          <div id="county-coverage-table"></div>
         </section>
 
         <section id="corrections">

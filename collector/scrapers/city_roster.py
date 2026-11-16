@@ -19,7 +19,8 @@ Config for each source (data/sources.json):
       "exclude": ["Jane Doe"],          # optional: names the page shows that do not hold a seat
       "menu_links": true,               # optional: also read links anywhere on the page ("Mayor Jane Doe")
       "loose": true,                    # optional: a name followed by an email address counts as a member
-      "title_map": {"Chair": "..."}     # optional: rename titles (a school board's "Chair" is still a board member)
+      "title_map": {"Chair": "..."},    # optional: rename titles (a school board's "Chair" is still a board member)
+      "render": true                    # optional: the page builds its list with JavaScript; load it in headless Chromium
     }
 
 Safety: if the page yields fewer than `seats - 2` or more than `seats + 2` people, nothing is returned
@@ -159,7 +160,7 @@ def page_lines(html: str, selector: str | None = None, url: str | None = None, m
     return lines
 
 
-_SEAT_NAME = re.compile(rf"^{SEATWORD}\s*[,:|\-–—]\s*(?:(?P<title>{TITLE})\s+)?(?P<name>{NAME})$")
+_SEAT_NAME = re.compile(rf"^{SEATWORD}\s*[,:|\-–—]\s*(?:(?P<title>{TITLE})\s+)?(?P<name>{NAME})(?P<after>\s*,\s*[^,]{{1,30}}(?:,[^,]{{1,30}})*)?$")
 
 
 _SEAT_LINE = re.compile(rf"\(?(?:{SEATWORD}|At[- ]Large(?:,?\s*Group\s*\d+)?)\)?", re.I)
@@ -202,7 +203,9 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
             add(m["name"], m["title"], line)
             continue
         if seat_lines and (sm := _SEAT_NAME.match(line)):
-            add(sm["name"], sm["title"] or member_title, line)  # "District 1, Jane Doe" (config "seat_name_lines")
+            # "District 1, Jane Doe" or "District 1: Jane Doe, M.Ed., Chair" (config "seat_name_lines")
+            role = next((t for t in re.split(r"\s*,\s*", sm["after"] or "") if re.fullmatch(TITLE, t.strip())), None)
+            add(sm["name"], sm["title"] or role or member_title, line)
             continue
         n = _NAME_ONLY.match(line)
         if not n:
@@ -398,5 +401,6 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
 class CityRosterScraper(BaseScraper):
     def collect(self) -> list[dict]:
         urls = [self.source_url, *(self.config.get("extra_urls") or [])]
-        pages = [(self.client.get(u), u) for u in urls]
+        fetch = self.client.get_rendered if self.config.get("render") else self.client.get
+        pages = [(fetch(u), u) for u in urls]
         return parse_city_roster(pages, self.config)

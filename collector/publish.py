@@ -450,6 +450,8 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
                 "official in Florida: offices in the 'not yet covered' list are absent until they are added."
             ),
         },
+        "county_coverage": county_coverage(unique),
+        "county_coverage_columns": [{"key": k, "label": label} for k, label in COUNTY_OFFICES],
         "vacancies": _vacancies(vacancies or {}),
         "special_districts": special_districts,
         "municipalities": sorted({r["municipality"] for r in unique if r.get("municipality")}),
@@ -467,6 +469,31 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         "officials": unique,
     }
     return officials, sources, meta, warnings
+
+
+COUNTY_OFFICES = [("commission", "County commission"), ("Sheriff", "Sheriff"), ("Clerk of the Circuit Court", "Clerk"),
+                  ("Property Appraiser", "Property appraiser"), ("Tax Collector", "Tax collector"),
+                  ("Supervisor of Elections", "Elections"), ("school", "School board")]
+
+
+def county_coverage(records: list[dict]) -> list[dict]:
+    """Every Florida county has the same core elected offices; this says which ones the directory has for each county,
+    so a missing office is visible rather than silently absent."""
+    out = []
+    for county in FLORIDA_COUNTIES:
+        here = [r for r in records if r.get("county") == county and r["government_level"] == "county" and not r.get("special_district")]
+        row = {"county": county}
+        for key, _label in COUNTY_OFFICES:
+            if key == "commission":
+                row[key] = sum(1 for r in here if r["office_title"] in ("County Commissioner", "County Council Member"))
+            elif key == "school":
+                row[key] = sum(1 for r in here if r["office_title"] == "School Board Member")
+            else:
+                row[key] = int(any(r["office_title"] == key for r in here))
+        row["cities"] = len({r["municipality"] for r in records if r.get("county") == county and r.get("municipality")})
+        row["complete"] = all(row[k] for k, _ in COUNTY_OFFICES)
+        out.append(row)
+    return out
 
 
 def to_csv(records: list[dict]) -> str:

@@ -134,7 +134,8 @@ sites (with photo, phone and email). For a city:
 }
 ```
 
-Optional config: `extra_urls` (more pages, e.g. one per member), `menu_links` (names listed only in the site
+Optional config: `render` (the page builds its list with JavaScript: load it in headless Chromium; needs
+`pip install playwright && python -m playwright install chromium`, which the collect workflow does), `extra_urls` (more pages, e.g. one per member), `menu_links` (names listed only in the site
 menu), `loose` (a name followed by an email address counts), `selector` (read only part of the page) and
 `exclude` (names to ignore). For a special district board add `jurisdiction`, `special_district` (a key in
 `special_districts.json`), `title_suffix` (", South Broward Drainage District") and `role_pattern` (a regex the
@@ -197,6 +198,13 @@ Each profile has a **Report an error** link. It opens a GitHub issue form with t
 in. To send reports somewhere else, set `report_url` (or `contact_email`) in `data/site.json`.
 
 ## How data quality is protected
+
+- Sources are collected in parallel (`COLLECT_WORKERS`, default 8), but each website gets at most one request every
+  `SCRAPER_DELAY_SECONDS` (default 2) across all sources, and robots.txt is fetched once per site per run.
+- A source that hasn't been read successfully for `STALE_DAYS` (default 30) has its officials hidden and is listed
+  under "Not yet covered".
+- The methodology page shows, for every county, which core offices (commission, the five constitutional officers,
+  school board) the directory has.
 
 - Names, phone numbers, emails and links are validated. Invalid values are dropped, not repaired,
   and vacant seats are skipped.

@@ -1660,5 +1660,254 @@
       "member_title": "Commissioner",
       "seats": 5
     }
+  },
+  {
+    "key": "school_alachua",
+    "name": "Alachua County School Board: board members",
+    "url": "https://www.alachuaschools.net/o/acps/page/board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Alachua",
+      "jurisdiction": "Alachua County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_bay",
+    "name": "Bay County School Board: board members",
+    "url": "https://www.bay.k12.fl.us/page/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Bay",
+      "jurisdiction": "Bay County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_duval",
+    "name": "Duval County School Board: board members",
+    "url": "https://dcps.duvalschools.org/o/dcps/page/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Duval",
+      "jurisdiction": "Duval County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 7,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_indian_river",
+    "name": "Indian River County School Board: board members",
+    "url": "https://www.indianriverschools.org/page/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Indian River",
+      "jurisdiction": "Indian River County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_lake",
+    "name": "Lake County School Board: board members",
+    "url": "https://www.lake.k12.fl.us/o/lcs/page/board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lake",
+      "jurisdiction": "Lake County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_leon",
+    "name": "Leon County School Board: board members",
+    "url": "https://www.leonschools.net/school-board-home",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Leon",
+      "jurisdiction": "Leon County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_monroe",
+    "name": "Monroe County School Board: board members",
+    "url": "https://www.keysschools.com/page/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Monroe",
+      "jurisdiction": "Monroe County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_nassau",
+    "name": "Nassau County School Board: board members",
+    "url": "https://www.nassau.k12.fl.us/page/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Nassau",
+      "jurisdiction": "Nassau County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_pasco",
+    "name": "Pasco County School Board: board members",
+    "url": "http://www.pasco.k12.fl.us/school_board/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Pasco",
+      "jurisdiction": "Pasco County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_volusia",
+    "name": "Volusia County School Board: board members",
+    "url": "https://www.vcsedu.org/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Volusia",
+      "jurisdiction": "Volusia County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "school_wakulla",
+    "name": "Wakulla County School Board: board members",
+    "url": "https://www.wakullaschooldistrict.org/page/school-board",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Wakulla",
+      "jurisdiction": "Wakulla County Public Schools",
+      "government_level": "county",
+      "member_title": "School Board Member",
+      "seats": 5,
+      "seat_name_lines": true,
+      "render": true,
+      "title_map": {
+        "Chair": "School Board Member",
+        "Vice Chair": "School Board Member",
+        "Chairman": "School Board Member"
+      }
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_devils_garden_water_control_district",
+    "name": "Devils Garden Water Control District: board",
+    "url": "https://www.devilsgardenwcd.com/board-of-supervisors.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Collier",
+      "jurisdiction": "Devils Garden Water Control District",
+      "special_district": "sfwmd-devils-garden-water-control-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Devils Garden Water Control District",
+      "seats": 3,
+      "render": true,
+      "selection_method": "elected"
+    }
   }
 ]
