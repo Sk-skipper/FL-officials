@@ -52,6 +52,11 @@ CITY_LIMITS = f"{BROWARD}/BCCity_Boundaries/FeatureServer/0"
 DRAINAGE = f"{BROWARD}/DrainageDistricts/FeatureServer/0"
 MD_VOTE = "https://gisweb.miamidade.gov/arcgis/rest/services/MD_KnowWhereToVote/MapServer"
 MD_CDD = "https://services.arcgis.com/8Pc9XBTAsYuxx9Ny/arcgis/rest/services/CommunityDevelopmentDistrict_gdb/FeatureServer/0"
+# Other counties' own school board member districts (official county GIS), drawn where the directory lists the members.
+EXTRA_SCHOOL = {
+    "Leon": "https://intervector.leoncountyfl.gov/intervector/rest/services/MapServices/SOE_DistrictsCurrent_D_WM/MapServer/2",
+    "Volusia": "https://services.arcgis.com/YvSMAk2zZNXXVujI/arcgis/rest/services/Existing%20School%20Board%20Districts/FeatureServer/0",
+}
 SFWMD_SD = "https://geoweb.sfwmd.gov/agsext1/rest/services/WaterManagementSystem/SFWMD_Special_Districts/FeatureServer/0"
 MIAMI_CITY = "https://gis.miami.gov/gis/rest/services/Maps/CommissionerDistricts/MapServer/0"
 HEADERS = {"User-Agent": "fl-officials-directory/1.0 (boundary builder)"}
@@ -342,6 +347,11 @@ def main() -> None:
     }
     for name, (b, d, note) in combined.items():
         layers[name] = collection(broward[b]["features"] + dade[d], "local", note)
+    for county, url in EXTRA_SCHOOL.items():
+        print(f"Downloading {county} County school board districts...")
+        for row in query(url, "1=1", "DISTRICT", LOCAL_OFFSET):
+            layers["school-board"]["features"].append(
+                feature(row["geometry"], county=county, district=district_number(str(row["properties"]["DISTRICT"]))))
     path = ROOT / "data" / "special_districts.json"
     special = json.loads(path.read_text(encoding="utf-8"))
     kept = [d for d in special["districts"] if not d["key"].startswith(("md-cdd-", "sfwmd-"))]
