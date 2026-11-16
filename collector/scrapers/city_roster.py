@@ -34,7 +34,7 @@ from bs4 import BeautifulSoup
 from collector.normalize import clean_text
 from collector.scrapers.base import BaseScraper, FetchError
 
-TITLE = (r"(?:(?:School )?Board Member|Vice[- ]Mayor|Deputy[- ]Mayor|Mayor[- ]Pro[- ]Tem(?:pore)?|Mayor|Council[- ]?(?:member|Member|man|woman|person)"
+TITLE = (r"(?:(?:School )?Board Member|(?<!Council )(?:Vice[- ])?President|(?:Board )?Supervisor(?! of Elections)|Vice[- ]Mayor|Deputy[- ]Mayor|Mayor[- ]Pro[- ]Tem(?:pore)?|Mayor|Council[- ]?(?:member|Member|man|woman|person)"
          r"|Commissioner|Council (?:Vice[- ])?President|(?:Vice[- ])?Chair(?:man|woman|person)?|Alderman|Village Trustee|Trustee)")
 _PARTICLE = r"(?:de|del|de la|la|van|von|da|dos|St\.)"
 _TOKEN = r"(?:(?:Mc|Mac|De|Di|Da|La|Le|Van|Von|O['’]|D['’])[A-Z][a-záéíóúñü]+|[A-ZÁÉÍÓÚÑ][a-záéíóúñü]+(?:['’][a-z]+)?(?:-[A-ZÁÉÍÓÚÑ]?[a-záéíóúñü]+)*|[A-Z]\.|[A-Z]{2,4}|\"[^\"]{2,20}\"|“[^”]{2,20}”|'[^']{2,20}'|\([A-Z][a-z]+\))"
@@ -58,12 +58,12 @@ NOT_A_NAME = re.compile(
     r"Biography|Profile|Message|Corner|Annual|Economic|Empowerment|Initiative|Program|Programs|Turns|Who|Is|My|Find|"
     r"Visit|Page|International|Trade|Consortium|Development|Advocacy|Legislative|Click|Email|Headshot|Show|Again|Arrow|"
     r"Left|Right|Slideshow|Mission|Statement|Site|Map|Maps|Copyright|Notices|Together|Great|Make|Previous|Next|Close|Portrait|"
-    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Ward|Pillar|All|Districts)\b")
+    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Pillar|All|Districts)\b|\bWard (?:One|Two|Three|Four|Five|Six|I{1,3}|IV|V|\d)\b")
 CARD_NOT_A_NAME = re.compile(r"\b(District|Seat|Commission|Commissioners?|Council|Programs?|Office|City|Town|Village|Policy|"
                              r"Services|Department|Division|Recreation|Compliance|Resources|Works|Gardens|Biography|Events|"
                              r"Meetings?|Agendas?|Vacant|Vacancy|Information|Contact|Elections?|Members?)\b", re.I)
-RANK_TITLES = {"Mayor", "Vice Mayor", "Chair", "Vice Chair", "Council President", "Council Vice President", "Deputy Mayor"}
-RANK = {"mayor": 0, "vice mayor": 1, "deputy mayor": 1, "mayor pro tem": 1, "council president": 0,
+RANK_TITLES = {"President", "Vice President", "Mayor", "Vice Mayor", "Chair", "Vice Chair", "Council President", "Council Vice President", "Deputy Mayor"}
+RANK = {"president": 0, "vice president": 1, "mayor": 0, "vice mayor": 1, "deputy mayor": 1, "mayor pro tem": 1, "council president": 0,
         "council vice president": 1, "chair": 0, "vice chair": 1}
 
 
@@ -79,7 +79,9 @@ def _clean_name(raw: str, strict: bool = True) -> str | None:
 
 def _title(raw: str, member_title: str) -> str:
     t = clean_text(raw).lower().replace("-", " ")
-    if "board member" in t:
+    if t in ("president", "vice president"):
+        return t.title()
+    if "board member" in t or t in ("supervisor", "board supervisor"):
         return member_title
     if t.startswith("council") and ("president" in t):
         return "Council Vice President" if "vice" in t else "Council President"

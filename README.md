@@ -256,6 +256,7 @@ tools/build-map.mjs    rebuilds the county map file (only needed if you want to 
 tools/build_boundaries.py  downloads district shapes for the representatives map
 tools/wikipedia.py     fills missing photos and birth dates from Wikipedia/Wikidata
 tools/find_council_pages.py  suggests each city's council roster page
+tools/find_district_boards.py  suggests each special district's board page and members
 tests/                 Python and JavaScript tests
 .github/workflows/     daily collection, deploy to Pages, tests
 ```

@@ -17,6 +17,7 @@ import json
 import logging
 import os
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -233,16 +234,26 @@ def run(sources_file: Path = SOURCES_FILE, collected_file: Path = COLLECTED_FILE
 
     new_sources: dict[str, dict] = {}
     results: list[SourceResult] = []
+    todo = []
     for source in sources:
         if only and source["key"] != only:
             if source["key"] in previous_sources:
                 new_sources[source["key"]] = previous_sources[source["key"]]
             continue
+        todo.append(source)
+
+    def run_one(source):
         logger.info("Collecting %s", source["name"])
         state, result = collect_source(source, previous_sources.get(source["key"], {}), scraper_factory, now)
-        new_sources[source["key"]] = state
-        results.append(result)
         logger.info("%s: %s, %d records", source["name"], result.status, result.kept)
+        return state, result
+
+    # Sources run in parallel; the shared host schedule keeps each website at one request every few seconds.
+    workers = max(1, int(os.environ.get("COLLECT_WORKERS", "8")))
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for source, (state, result) in zip(todo, pool.map(run_one, todo)):
+            new_sources[source["key"]] = state
+            results.append(result)
 
     collected = {"sources": new_sources}
     changed = _canonical(collected) != _canonical(previous)

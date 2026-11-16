@@ -8,6 +8,7 @@ Rules the client enforces for every source:
   * never tries to get around 401/403 responses, logins or bot checks
 """
 import logging
+import threading
 import time
 from collections.abc import Callable
 from urllib.parse import urlsplit
@@ -29,6 +30,30 @@ class RobotsDisallowed(FetchError):
     """robots.txt does not allow this URL to be collected."""
 
 
+class HostSchedule:
+    """Politeness shared by every client in a run: one request per host every `delay` seconds, and each
+    robots.txt fetched once. Thread-safe, so sources on different hosts can be collected in parallel while
+    sources that share a host still queue behind each other."""
+
+    def __init__(self):
+        self.lock = threading.Lock()
+        self.next_slot: dict[str, float] = {}
+        self.robots: dict[str, "RobotFileParser | None"] = {}
+        self.robots_locks: dict[str, threading.Lock] = {}
+
+    def reserve(self, host: str, delay: float, clock: Callable[[], float]) -> float:
+        """Book the host's next free slot; returns how long to wait for it."""
+        with self.lock:
+            now = clock()
+            slot = max(now, self.next_slot.get(host, now))
+            self.next_slot[host] = slot + delay
+            return slot - now
+
+    def robots_lock(self, origin: str) -> threading.Lock:
+        with self.lock:
+            return self.robots_locks.setdefault(origin, threading.Lock())
+
+
 class PoliteHttpClient:
     def __init__(
         self,
@@ -39,6 +64,7 @@ class PoliteHttpClient:
         session: requests.Session | None = None,
         sleep: Callable[[float], None] = time.sleep,
         clock: Callable[[], float] = time.monotonic,
+        schedule: HostSchedule | None = None,
     ):
         self.user_agent = user_agent
         self.delay_seconds = delay_seconds
@@ -48,7 +74,8 @@ class PoliteHttpClient:
         self._sleep = sleep
         self._clock = clock
         self._last_request: dict[str, float] = {}
-        self._robots: dict[str, RobotFileParser | None] = {}
+        self._schedule = schedule
+        self._robots: dict[str, RobotFileParser | None] = schedule.robots if schedule else {}
 
     # -- robots.txt ---------------------------------------------------------
     def _robots_for(self, url: str) -> RobotFileParser | None:
@@ -56,6 +83,14 @@ class PoliteHttpClient:
         origin = f"{parts.scheme}://{parts.netloc}"
         if origin in self._robots:
             return self._robots[origin]
+        if self._schedule:
+            with self._schedule.robots_lock(origin):  # another thread may be fetching it right now
+                if origin in self._robots:
+                    return self._robots[origin]
+                return self._fetch_robots(parts, origin)
+        return self._fetch_robots(parts, origin)
+
+    def _fetch_robots(self, parts, origin: str) -> RobotFileParser | None:
         parser: RobotFileParser | None = RobotFileParser()
         try:
             self._wait(parts.netloc)
@@ -85,6 +120,11 @@ class PoliteHttpClient:
         return {"User-Agent": self.user_agent, "Accept": accept}
 
     def _wait(self, host: str) -> None:
+        if self._schedule:
+            wait = self._schedule.reserve(host, self.delay_seconds, self._clock)
+            if wait > 0:
+                self._sleep(wait)
+            return
         last = self._last_request.get(host)
         if last is not None:
             remaining = self.delay_seconds - (self._clock() - last)

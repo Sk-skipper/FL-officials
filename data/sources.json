@@ -1317,5 +1317,282 @@
         "Vice Mayor": "County Commissioner"
       }
     }
+  },
+  {
+    "key": "board_sd_central_broward",
+    "name": "Central Broward Water Control District: board",
+    "url": "https://centralbrowardwcd.org/contact/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "jurisdiction": "Central Broward Water Control District",
+      "special_district": "Central Broward",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Central Broward Water Control District",
+      "seats": 6,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sbhd",
+    "name": "South Broward Hospital District (Memorial Healthcare System): board",
+    "url": "https://www.mhs.net/about/leadership/commissioners",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Broward",
+      "jurisdiction": "South Broward Hospital District (Memorial Healthcare System)",
+      "special_district": "sbhd",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", South Broward Hospital District (Memorial Healthcare System)",
+      "seats": 7,
+      "selection_method": "appointed",
+      "role_pattern": "^(chair|vice|supervisor|board supervisor|commissioner|secretary|assistant secretary|treasurer|member|trustee|director|president)"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_acme_improvement_district",
+    "name": "Acme Improvement District: board",
+    "url": "https://acme.wellingtonfl.gov/board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Acme Improvement District",
+      "special_district": "sfwmd-acme-improvement-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Acme Improvement District",
+      "seats": 5,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_big_cypress_stewardship_district",
+    "name": "Big Cypress Stewardship District: board",
+    "url": "https://bigcypressstewardship.com/",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Collier",
+      "jurisdiction": "Big Cypress Stewardship District",
+      "special_district": "sfwmd-big-cypress-stewardship-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Big Cypress Stewardship District",
+      "seats": 5,
+      "selection_method": "elected",
+      "exclude": [
+        "Assistant Secretary"
+      ]
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_bolles_drainage_district",
+    "name": "Bolles Drainage District: board",
+    "url": "https://www.floridawatercontroldistricts.org/bolles-drainage-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Hendry",
+      "jurisdiction": "Bolles Drainage District",
+      "special_district": "sfwmd-bolles-drainage-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Bolles Drainage District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_collins_slough_water_control_district",
+    "name": "Collins Slough Water Control District: board",
+    "url": "https://www.collinssloughwcd.com/board-of-supervisors.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Hendry",
+      "jurisdiction": "Collins Slough Water Control District",
+      "special_district": "sfwmd-collins-slough-water-control-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Collins Slough Water Control District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_coquina_water_management_district",
+    "name": "Coquina Water Management District: board",
+    "url": "https://coquinawcd.com/supervisors",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Okeechobee",
+      "jurisdiction": "Coquina Water Management District",
+      "special_district": "sfwmd-coquina-water-management-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Coquina Water Management District",
+      "seats": 3,
+      "selection_method": "elected",
+      "role_pattern": "^(chair|vice|supervisor|board supervisor|commissioner|secretary|assistant secretary|treasurer|member|trustee|director|president)"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_disston_island_conservancy_district",
+    "name": "Disston Island Conservancy District: board",
+    "url": "https://www.floridawatercontroldistricts.org/disston-island-conservancy-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Glades",
+      "jurisdiction": "Disston Island Conservancy District",
+      "special_district": "sfwmd-disston-island-conservancy-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Disston Island Conservancy District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_east_beach_water_control_district",
+    "name": "East Beach Water Control District: board",
+    "url": "https://www.floridawatercontroldistricts.org/east-beach-water-control-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "East Beach Water Control District",
+      "special_district": "sfwmd-east-beach-water-control-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", East Beach Water Control District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_gladeview_drainage_district",
+    "name": "Gladeview Drainage District: board",
+    "url": "https://www.floridawatercontroldistricts.org/gladeview-water-control-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Gladeview Drainage District",
+      "special_district": "sfwmd-gladeview-drainage-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Gladeview Drainage District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_highland_glades_drainage_district",
+    "name": "Highland Glades Drainage District: board",
+    "url": "https://www.floridawatercontroldistricts.org/highland-glades-water-control-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Highland Glades Drainage District",
+      "special_district": "sfwmd-highland-glades-drainage-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Highland Glades Drainage District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_northern_palm_beach_county_improvement_district",
+    "name": "Northern Palm Beach County Improvement District: board",
+    "url": "https://www.npbcid.org/board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Northern Palm Beach County Improvement District",
+      "special_district": "sfwmd-northern-palm-beach-county-improvement-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Northern Palm Beach County Improvement District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_san_carlos_estates_water_control_district",
+    "name": "San Carlos Estates Water Control District: board",
+    "url": "https://www.scewcd.org/board-members",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Lee",
+      "jurisdiction": "San Carlos Estates Water Control District",
+      "special_district": "sfwmd-san-carlos-estates-water-control-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", San Carlos Estates Water Control District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_shawano_drainage_district",
+    "name": "Shawano Drainage District: board",
+    "url": "https://www.floridawatercontroldistricts.org/shawano-water-control-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "Shawano Drainage District",
+      "special_district": "sfwmd-shawano-drainage-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", Shawano Drainage District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_south_florida_conservancy_district",
+    "name": "South Florida Conservancy District: board",
+    "url": "https://www.floridawatercontroldistricts.org/south-florida-conservancy-district.html",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Hendry",
+      "jurisdiction": "South Florida Conservancy District",
+      "special_district": "sfwmd-south-florida-conservancy-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", South Florida Conservancy District",
+      "seats": 3,
+      "selection_method": "elected"
+    }
+  },
+  {
+    "key": "board_sd_sfwmd_south_indian_river_water_control_district",
+    "name": "South Indian River Water Control District: board",
+    "url": "https://www.sirwcd.org/board-of-supervisors",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Palm Beach",
+      "jurisdiction": "South Indian River Water Control District",
+      "special_district": "sfwmd-south-indian-river-water-control-district",
+      "government_level": "county",
+      "member_title": "Supervisor",
+      "title_suffix": ", South Indian River Water Control District",
+      "seats": 4,
+      "selection_method": "elected"
+    }
   }
 ]
