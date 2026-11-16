@@ -33,6 +33,10 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # A few sources build their lists with JavaScript; they are loaded in headless Chromium.
+      - name: Install headless Chromium
+        run: python -m playwright install --with-deps chromium
+
       - name: Collect
         id: collect
         env:

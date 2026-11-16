@@ -1,7 +1,7 @@
 """Maps the "scraper" value in data/sources.json to the class that collects it."""
 import os
 
-from collector.scrapers.base import BaseScraper, PoliteHttpClient
+from collector.scrapers.base import BaseScraper, HostSchedule, PoliteHttpClient
 from collector.scrapers.broward_districts import BrowardDistrictsScraper
 from collector.scrapers.broward_soe import BrowardSOEScraper
 from collector.scrapers.city_roster import CityRosterScraper
@@ -45,6 +45,10 @@ def user_agent() -> str:
     return f"{name} (+{contact})" if contact else name
 
 
+# One schedule per process: politeness is per website, across every source collected in this run.
+SCHEDULE = HostSchedule()
+
+
 def build_scraper(scraper_key: str, source_url: str, config: dict | None) -> BaseScraper:
     try:
         scraper_cls = SCRAPERS[scraper_key]
@@ -55,5 +59,6 @@ def build_scraper(scraper_key: str, source_url: str, config: dict | None) -> Bas
         delay_seconds=float(os.environ.get("SCRAPER_DELAY_SECONDS", "2")),
         timeout_seconds=int(os.environ.get("SCRAPER_TIMEOUT_SECONDS", "30")),
         max_retries=int(os.environ.get("SCRAPER_MAX_RETRIES", "3")),
+        schedule=SCHEDULE,
     )
     return scraper_cls(source_url, config, client)

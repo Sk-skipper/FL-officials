@@ -134,7 +134,8 @@ sites (with photo, phone and email). For a city:
 }
 ```
 
-Optional config: `extra_urls` (more pages, e.g. one per member), `menu_links` (names listed only in the site
+Optional config: `render` (the page builds its list with JavaScript: load it in headless Chromium; needs
+`pip install playwright && python -m playwright install chromium`, which the collect workflow does), `extra_urls` (more pages, e.g. one per member), `menu_links` (names listed only in the site
 menu), `loose` (a name followed by an email address counts), `selector` (read only part of the page) and
 `exclude` (names to ignore). For a special district board add `jurisdiction`, `special_district` (a key in
 `special_districts.json`), `title_suffix` (", South Broward Drainage District") and `role_pattern` (a regex the
@@ -198,6 +199,13 @@ in. To send reports somewhere else, set `report_url` (or `contact_email`) in `da
 
 ## How data quality is protected
 
+- Sources are collected in parallel (`COLLECT_WORKERS`, default 8), but each website gets at most one request every
+  `SCRAPER_DELAY_SECONDS` (default 2) across all sources, and robots.txt is fetched once per site per run.
+- A source that hasn't been read successfully for `STALE_DAYS` (default 30) has its officials hidden and is listed
+  under "Not yet covered".
+- The methodology page shows, for every county, which core offices (commission, the five constitutional officers,
+  school board) the directory has.
+
 - Names, phone numbers, emails and links are validated. Invalid values are dropped, not repaired,
   and vacant seats are skipped.
 - Nothing collected goes live without your review. Every pull request lists new officials,
@@ -256,6 +264,7 @@ tools/build-map.mjs    rebuilds the county map file (only needed if you want to 
 tools/build_boundaries.py  downloads district shapes for the representatives map
 tools/wikipedia.py     fills missing photos and birth dates from Wikipedia/Wikidata
 tools/find_council_pages.py  suggests each city's council roster page
+tools/find_district_boards.py  suggests each special district's board page and members
 tests/                 Python and JavaScript tests
 .github/workflows/     daily collection, deploy to Pages, tests
 ```

@@ -377,3 +377,15 @@ def test_broward_districts_reads_district_seats_only():
 def test_broward_districts_reports_service_errors():
     with pytest.raises(FetchError):
         parse_broward_districts(_json.dumps({"error": {"code": 499, "message": "Token Required"}}), GIS_URL)
+
+
+def test_host_schedule_spaces_requests_to_one_host_across_clients():
+    from collector.scrapers.base import HostSchedule
+    now = [100.0]
+    schedule = HostSchedule()
+    clock = lambda: now[0]  # noqa: E731
+    waits = [schedule.reserve("a.example", 2, clock) for _ in range(3)]
+    assert waits == [0, 2, 4]  # three sources on one website queue up
+    assert schedule.reserve("b.example", 2, clock) == 0  # a different website doesn't wait
+    now[0] = 110.0
+    assert schedule.reserve("a.example", 2, clock) == 0  # the queue has drained

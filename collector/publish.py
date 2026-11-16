@@ -43,6 +43,7 @@ DATA = ROOT / "data"
 SITE_DATA = ROOT / "site" / "data"
 
 LEVELS = ("federal", "state", "county", "municipal")
+STALE_DAYS = int(os.environ.get("STALE_DAYS", "30"))
 
 # Seats that exist for each office with a source. A vacancy can leave
 # "collected" one or two below "expected".
@@ -77,8 +78,8 @@ NOT_YET_COVERED = [
     "West Park and Weston list only their mayor (their websites refuse automated requests or could not be read)",
     "Miami-Dade: Doral, Hialeah, Hialeah Gardens, Indian Creek, Miami Shores, Miami Springs, South Miami and Sunny Isles Beach councils, "
     "the mayors of Miami Lakes and North Miami, and one or two seats in Cutler Bay, Medley, North Miami and West Miami",
-    "Board members of most special districts, and special districts outside Broward and Miami-Dade (the state's official list "
-    "refuses automated requests)",
+    "Board members of most special districts, and special districts outside the South Florida Water Management District's "
+    "16 counties (the state's official list refuses automated requests)",
     "Appointed state boards and commissions",
 ]
 
@@ -322,7 +323,18 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
     records: list[dict] = []
     seen: set[str] = set()
 
+    stale_sources = []
     for state in collected.get("sources", {}).values():
+        last = state.get("last_successful_collection")
+        try:
+            age = (now - datetime.fromisoformat(last)).days if last else None
+        except ValueError:
+            age = None
+        if age is not None and age > STALE_DAYS:
+            # A source that hasn't worked for a month: its people may have left office, so stop showing them.
+            stale_sources.append({"name": state["name"], "url": state["url"], "last_successful_collection": last,
+                                  "records_hidden": len(state.get("records", []))})
+            continue
         for raw in state.get("records", []):
             record = dict(raw)
             record.update(source_name=state["name"], source_directory_url=state["url"],
@@ -429,12 +441,17 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         "coverage": {
             "rows": coverage_rows,
             "tracked_percent": round(collected_total / expected_total * 100, 1),
-            "not_yet_covered": NOT_YET_COVERED,
+            "not_yet_covered": NOT_YET_COVERED + [
+                f"{s['name']}: not confirmed since {s['last_successful_collection'][:10]}, so its "
+                f"{s['records_hidden']} officials are hidden until the source can be read again" for s in stale_sources],
+            "stale_sources": stale_sources,
             "explanation": (
                 "The percentage counts only offices that have a source. It is not a share of every elected "
                 "official in Florida: offices in the 'not yet covered' list are absent until they are added."
             ),
         },
+        "county_coverage": county_coverage(unique),
+        "county_coverage_columns": [{"key": k, "label": label} for k, label in COUNTY_OFFICES],
         "vacancies": _vacancies(vacancies or {}),
         "special_districts": special_districts,
         "municipalities": sorted({r["municipality"] for r in unique if r.get("municipality")}),
@@ -452,6 +469,31 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         "officials": unique,
     }
     return officials, sources, meta, warnings
+
+
+COUNTY_OFFICES = [("commission", "County commission"), ("Sheriff", "Sheriff"), ("Clerk of the Circuit Court", "Clerk"),
+                  ("Property Appraiser", "Property appraiser"), ("Tax Collector", "Tax collector"),
+                  ("Supervisor of Elections", "Elections"), ("school", "School board")]
+
+
+def county_coverage(records: list[dict]) -> list[dict]:
+    """Every Florida county has the same core elected offices; this says which ones the directory has for each county,
+    so a missing office is visible rather than silently absent."""
+    out = []
+    for county in FLORIDA_COUNTIES:
+        here = [r for r in records if r.get("county") == county and r["government_level"] == "county" and not r.get("special_district")]
+        row = {"county": county}
+        for key, _label in COUNTY_OFFICES:
+            if key == "commission":
+                row[key] = sum(1 for r in here if r["office_title"] in ("County Commissioner", "County Council Member"))
+            elif key == "school":
+                row[key] = sum(1 for r in here if r["office_title"] == "School Board Member")
+            else:
+                row[key] = int(any(r["office_title"] == key for r in here))
+        row["cities"] = len({r["municipality"] for r in records if r.get("county") == county and r.get("municipality")})
+        row["complete"] = all(row[k] for k, _ in COUNTY_OFFICES)
+        out.append(row)
+    return out
 
 
 def to_csv(records: list[dict]) -> str:

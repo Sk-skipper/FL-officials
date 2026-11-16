@@ -19,7 +19,8 @@ Config for each source (data/sources.json):
       "exclude": ["Jane Doe"],          # optional: names the page shows that do not hold a seat
       "menu_links": true,               # optional: also read links anywhere on the page ("Mayor Jane Doe")
       "loose": true,                    # optional: a name followed by an email address counts as a member
-      "title_map": {"Chair": "..."}     # optional: rename titles (a school board's "Chair" is still a board member)
+      "title_map": {"Chair": "..."},    # optional: rename titles (a school board's "Chair" is still a board member)
+      "render": true                    # optional: the page builds its list with JavaScript; load it in headless Chromium
     }
 
 Safety: if the page yields fewer than `seats - 2` or more than `seats + 2` people, nothing is returned
@@ -34,14 +35,18 @@ from bs4 import BeautifulSoup
 from collector.normalize import clean_text
 from collector.scrapers.base import BaseScraper, FetchError
 
-TITLE = (r"(?:(?:School )?Board Member|Vice[- ]Mayor|Deputy[- ]Mayor|Mayor[- ]Pro[- ]Tem(?:pore)?|Mayor|Council[- ]?(?:member|Member|man|woman|person)"
+TITLE = (r"(?:(?:School )?Board Member|(?<!Council )(?:Vice[- ])?President|(?:Board )?Supervisor(?! of Elections)|Vice[- ]Mayor|Deputy[- ]Mayor|Mayor[- ]Pro[- ]Tem(?:pore)?|Mayor|Council[- ]?(?:member|Member|man|woman|person)"
          r"|Commissioner|Council (?:Vice[- ])?President|(?:Vice[- ])?Chair(?:man|woman|person)?|Alderman|Village Trustee|Trustee)")
 _PARTICLE = r"(?:de|del|de la|la|van|von|da|dos|St\.)"
 _TOKEN = r"(?:(?:Mc|Mac|De|Di|Da|La|Le|Van|Von|O['’]|D['’])[A-Z][a-záéíóúñü]+|[A-ZÁÉÍÓÚÑ][a-záéíóúñü]+(?:['’][a-z]+)?(?:-[A-ZÁÉÍÓÚÑ]?[a-záéíóúñü]+)*|[A-Z]\.|[A-Z]{2,4}|\"[^\"]{2,20}\"|“[^”]{2,20}”|'[^']{2,20}'|\([A-Z][a-z]+\))"
 NAME = rf"(?:(?:Dr|Hon|Rev)\.?\s+)?{_TOKEN}(?:\s+(?:{_PARTICLE}\s+)?{_TOKEN}){{1,4}}(?:,?\s+(?:Jr\.?|Sr\.?|III|II|IV|Esq\.?|Ph\.?D\.?|M\.?D\.?))?"
-SEAT = re.compile(r"\b(?:(District|Seat|Group|Ward|Zone)\s*#?\s*([0-9]{1,2}|[A-H])\b|(At[- ]Large))", re.I)
+_SEAT_NO = r"(?:\d{1,2}|[A-H]|I{1,3}|IV|VI{0,2}|One|Two|Three|Four|Five|Six|Seven|Eight|Nine)"
+SEAT = re.compile(rf"\b(?:(District|Seat|Group|Ward|Zone)\s*#?\s*({_SEAT_NO})\b|(At[- ]Large))", re.I)
+SEATWORD = rf"(?:District|Seat|Group|Ward)\s*#?\s*{_SEAT_NO}"
+_SEAT_NUMBER = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", "six": "6", "seven": "7", "eight": "8", "nine": "9",
+                "i": "1", "ii": "2", "iii": "3", "iv": "4", "v": "5", "vi": "6", "vii": "7"}
 _TITLE_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?:(?:District|Seat|Group)\s*\w{{1,2}}\s+)?(?P<title>{TITLE})\b[\s,:\-–—]*(?P<name>{NAME})(?P<rest>(?:[\s,(\-–—|:].*)?)$")
-_NAME_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})\s*(?:[,\-–—|:]\s*|\s+(?=Council|Vice|Mayor|Commissioner))(?P<title>{TITLE})\b(?P<rest>.*)$")
+_NAME_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})\s*(?:[,\-–—|:]\s*|\s+(?=Council|Vice|Mayor|Commissioner))(?P<seatfirst>{SEATWORD}\s+)?(?P<title>{TITLE})\b(?P<rest>.*)$")
 _NAME_ONLY = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})$")
 _TITLE_ONLY = re.compile(rf"^(?:City |Town |Village )?(?P<title>{TITLE}|Council(?=,?\s*(?:Seat|District|Group)))\b(?P<rest>[^a-z]{{0,40}}|"
                          rf"\s*(?:[·•|/]|at[- ]large).{{0,40}}|[\s,\-–—]*(?:of|for)?\s*(?:District|Seat|Group|Ward|Zone|At[- ]Large).{{0,30}})$", re.I)
@@ -58,11 +63,12 @@ NOT_A_NAME = re.compile(
     r"Biography|Profile|Message|Corner|Annual|Economic|Empowerment|Initiative|Program|Programs|Turns|Who|Is|My|Find|"
     r"Visit|Page|International|Trade|Consortium|Development|Advocacy|Legislative|Click|Email|Headshot|Show|Again|Arrow|"
     r"Left|Right|Slideshow|Mission|Statement|Site|Map|Maps|Copyright|Notices|Together|Great|Make|Previous|Next|Close|Portrait|"
-    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Ward|Pillar)\b")
+    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Pillar|All|Districts)\b|\bWard (?:One|Two|Three|Four|Five|Six|I{1,3}|IV|V|\d)\b")
 CARD_NOT_A_NAME = re.compile(r"\b(District|Seat|Commission|Commissioners?|Council|Programs?|Office|City|Town|Village|Policy|"
                              r"Services|Department|Division|Recreation|Compliance|Resources|Works|Gardens|Biography|Events|"
                              r"Meetings?|Agendas?|Vacant|Vacancy|Information|Contact|Elections?|Members?)\b", re.I)
-RANK = {"mayor": 0, "vice mayor": 1, "deputy mayor": 1, "mayor pro tem": 1, "council president": 0,
+RANK_TITLES = {"President", "Vice President", "Mayor", "Vice Mayor", "Chair", "Vice Chair", "Council President", "Council Vice President", "Deputy Mayor"}
+RANK = {"president": 0, "vice president": 1, "mayor": 0, "vice mayor": 1, "deputy mayor": 1, "mayor pro tem": 1, "council president": 0,
         "council vice president": 1, "chair": 0, "vice chair": 1}
 
 
@@ -78,7 +84,9 @@ def _clean_name(raw: str, strict: bool = True) -> str | None:
 
 def _title(raw: str, member_title: str) -> str:
     t = clean_text(raw).lower().replace("-", " ")
-    if "board member" in t:
+    if t in ("president", "vice president"):
+        return t.title()
+    if "board member" in t or t in ("supervisor", "board supervisor"):
         return member_title
     if t.startswith("council") and ("president" in t):
         return "Council Vice President" if "vice" in t else "Council President"
@@ -98,8 +106,10 @@ def _seat(text: str) -> str | None:
     if not m:
         return None
     if m.group(3):
-        return "At-large"
-    return f"{m.group(1).title()} {m.group(2).upper()}"
+        group = re.search(r"At[- ]Large,?\s*Group\s*(\d+)", text, re.I)
+        return f"At-large Group {group.group(1)}" if group else "At-large"
+    number = _SEAT_NUMBER.get(m.group(2).lower(), m.group(2).upper())
+    return f"{m.group(1).title()} {number}"
 
 
 def _link_heavy(tag) -> bool:
@@ -124,7 +134,8 @@ def page_lines(html: str, selector: str | None = None, url: str | None = None, m
         for a in soup.select("a[href]"):
             path = urlsplit(urljoin(url, a["href"])).path.lower()
             text = clean_text(a.get_text(" "))
-            if (menu_links or (base and path.startswith(base + "/"))) and (_TITLE_FIRST.match(text) or _NAME_FIRST.match(text)):
+            if (menu_links or (base and path.startswith(base + "/"))) and (
+                    _TITLE_FIRST.match(text) or _NAME_FIRST.match(text) or (menu_links and _SEAT_NAME.match(text))):
                 lines.append(text)
     total = len((soup.body or soup).get_text(" ", strip=True)) or 1
     for tag in soup.select("nav, header, footer, aside, select, button, [class*='breadcrumb'], [id*='breadcrumb'], "
@@ -149,7 +160,10 @@ def page_lines(html: str, selector: str | None = None, url: str | None = None, m
     return lines
 
 
-_SEAT_NAME = re.compile(rf"^(?:District|Seat|Group)\s*\d{{1,2}}\s*[,:\-–—]\s*(?P<name>{NAME})$")
+_SEAT_NAME = re.compile(rf"^{SEATWORD}\s*[,:|\-–—]\s*(?:(?P<title>{TITLE})\s+)?(?P<name>{NAME})(?P<after>\s*,\s*[^,]{{1,30}}(?:,[^,]{{1,30}})*)?$")
+
+
+_SEAT_LINE = re.compile(rf"\(?(?:{SEATWORD}|At[- ]Large(?:,?\s*Group\s*\d+)?)\)?", re.I)
 
 
 def find_members(lines: list[str], member_title: str, exclude: set[str] | None = None, loose: bool = False,
@@ -189,12 +203,14 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
             add(m["name"], m["title"], line)
             continue
         if seat_lines and (sm := _SEAT_NAME.match(line)):
-            add(sm["name"], member_title, line)  # "District 1, Jane Doe" (config "seat_name_lines")
+            # "District 1, Jane Doe" or "District 1: Jane Doe, M.Ed., Chair" (config "seat_name_lines")
+            role = next((t for t in re.split(r"\s*,\s*", sm["after"] or "") if re.fullmatch(TITLE, t.strip())), None)
+            add(sm["name"], sm["title"] or role or member_title, line)
             continue
         n = _NAME_ONLY.match(line)
         if not n:
             continue
-        is_seat = re.fullmatch(r"\(?(?:District|Seat|Group)\s*#?\s*\w{1,2}\)?", lines[i + 1], re.I) if i + 1 < len(lines) else None
+        is_seat = _SEAT_LINE.fullmatch(lines[i + 1]) if i + 1 < len(lines) else None
         order = (i + 1, i + 2, i - 1) if titles_follow else (i - 1, i + 1, i + 2)
         title_line = None if (titles_follow and is_seat) else next(
             (j for j in order if 0 <= j < len(lines) and _TITLE_ONLY.match(lines[j])), None)
@@ -203,7 +219,7 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
             t = _TITLE_ONLY.match(lines[title_line])
             seat_after = after if title_line != i + 1 else (lines[i + 2] if i + 2 < len(lines) else "")
             add(n["name"], t["title"], f"{seat_after} {lines[title_line]}" if SEAT.fullmatch(seat_after.strip("() ").replace("#", "")) else f"{lines[title_line]} {seat_after}")
-        elif re.fullmatch(r"\(?(?:District|Seat|Group)\s*#?\s*\w{1,2}\)?", after, re.I):
+        elif _SEAT_LINE.fullmatch(after):
             add(n["name"], member_title, after)  # "Jane Doe" / "Group 3": a member listed by seat
         elif loose and re.fullmatch(r"(?:mailto:)?[\w.+-]+@[\w.-]+", after):
             add(n["name"], member_title, line)  # "Jane Doe" / "jdoe@city.gov" (config "loose")
@@ -370,6 +386,10 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
             "photo_url": m.get("photo_url"), "email": m.get("email"), "phone": m.get("phone"),
             "official_website": m.get("official_website"),
         }
+        renamed = (config.get("title_map") or {}).get(m["title"])
+        if renamed and renamed != m["title"] and m["title"] in RANK_TITLES:
+            # A commission's "Mayor" or "Chair" is a member holding a rotating role: keep the role as the seat label.
+            record["seat_label"] = f"{m['title']}{', ' + seat if seat else ''}"
         if municipality:
             record["municipality"] = municipality
         if config.get("special_district"):
@@ -381,5 +401,6 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
 class CityRosterScraper(BaseScraper):
     def collect(self) -> list[dict]:
         urls = [self.source_url, *(self.config.get("extra_urls") or [])]
-        pages = [(self.client.get(u), u) for u in urls]
+        fetch = self.client.get_rendered if self.config.get("render") else self.client.get
+        pages = [(fetch(u), u) for u in urls]
         return parse_city_roster(pages, self.config)
