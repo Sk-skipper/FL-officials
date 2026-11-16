@@ -1317,14 +1317,22 @@ function reps() {
       return chosen;
     }
 
+    // Portraits never overlap: at each zoom, show those that fit (in list order) and hide the rest; zooming in reveals more.
     function drawMarkers() {
       if (!current) return;
-      const many = current.rows.length > 40;
-      const visible = !many || map.getZoom() >= 9;
-      if (visible && !map.hasLayer(markers)) markers.addTo(map);
-      if (!visible && map.hasLayer(markers)) markers.remove();
+      if (!map.hasLayer(markers)) markers.addTo(map);
+      const placed = [];
+      const size = 44;
+      for (const marker of markers.getLayers()) {
+        const at = map.latLngToContainerPoint(marker.getLatLng());
+        const inView = at.x > -size && at.y > -size && at.x < map.getSize().x + size && at.y < map.getSize().y + size;
+        const clear = inView && placed.every((p) => Math.abs(p.x - at.x) >= size || Math.abs(p.y - at.y) >= size);
+        if (clear) placed.push(at);
+        const el = marker.getElement();
+        if (el) el.style.display = clear ? "" : "none";
+      }
     }
-    map.on("zoomend", drawMarkers);
+    map.on("moveend", drawMarkers);
 
     function legendPanel() {
       const { spec, rows } = current;
@@ -1414,7 +1422,13 @@ function reps() {
       // even after an address lookup (the panel offers a way back to those results).
       if (!pin || select) {
         legendPanel();
-        if (!keepView) map.fitBounds(spec.area === "local" ? LOCAL_VIEW : L.featureGroup(rows.map((r) => r.layer)).getBounds(), { padding: [10, 10] });
+        if (!keepView) {
+          // After an address lookup, frame the layer's districts in that county; otherwise the whole layer.
+          const mine = lastLookup?.county && spec.area === "local" ? rows.filter((r) => r.feature.properties.county === lastLookup.county) : [];
+          const frame = mine.length ? mine : rows;
+          map.invalidateSize();
+          map.fitBounds(spec.area === "local" && !mine.length ? LOCAL_VIEW : L.featureGroup(frame.map((r) => r.layer)).getBounds(), { padding: [10, 10] });
+        }
       }
       drawMarkers();
     }
@@ -1481,11 +1495,12 @@ function reps() {
 
     let lastLookup = null;
     async function lookup(lat, lon, label) {
-      lastLookup = { lat, lon, label };
+      lastLookup = { lat, lon, label, county: null };
       if (pin) pin.remove();
       pin = L.marker([lat, lon], { title: label || "Selected location" }).addTo(map);
       panel.innerHTML = loading("Finding your districts");
       const county = featureAt(counties, lon, lat)?.properties.name;
+      lastLookup.county = county || null;
       if (!county) {
         panel.innerHTML = empty("That spot is outside Florida", "Choose a place inside Florida, or check the address.");
         return;
