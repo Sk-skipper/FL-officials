@@ -362,6 +362,9 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
         for html, url in pages:
             lines += page_lines(html, config.get("selector"), url, bool(config.get("menu_links")))
         members = find_members(lines, member_title, exclude, bool(config.get("loose")), bool(config.get("seat_name_lines")))
+    # Excluded names match with or without a quoted nickname ("Robert \"Bob\" Campbell" = "Robert Campbell").
+    plain = lambda n: " ".join(re.sub(r"[\"“”'‘’(][^\"“”'‘’)]*[\"“”'‘’)]", " ", n).split()).lower()  # noqa: E731
+    members = [m for m in members if plain(m["name"]) not in exclude and m["name"].lower() not in exclude]
     seats = int(config.get("seats") or 5)
     if not seats - 2 <= len(members) <= seats + 2:
         names = ", ".join(f"{m['name']} ({m['title']})" for m in members[:12])

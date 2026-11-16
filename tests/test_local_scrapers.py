@@ -273,3 +273,18 @@ def test_commission_menu_links_with_rotating_mayor_role():
     got = {(r["name"], r["office_title"], r["district"], r["seat_label"]) for r in records}
     assert got == {("Jane Doe", "County Commissioner", "1", "District 1"), ("Sam Roe", "County Commissioner", "2", "District 2"),
                    ("Lee Poe", "County Commissioner", None, "Mayor"), ("Kim Moe", "County Commissioner", "4", "Vice Mayor, District 4")}
+
+
+def test_office_holder_finds_the_name_next_to_the_title():
+    from collector.scrapers.office_holder import find_holder, pick
+    lines = ["Welcome to the Lake County Tax Collector", "David W. Jordan, CFC, Tax Collector",
+             "Tax Collector David W. Jordan announces new hours", "Purple Heart Tax Collector program"]
+    votes = find_holder(lines, "Tax Collector")
+    assert pick(votes) == "David W. Jordan"
+    assert not any("County" in n or "Purple" in n for n in votes)
+
+
+def test_office_holder_reads_superintendent_with_a_doctor_title():
+    from collector.scrapers.office_holder import find_holder, pick
+    assert pick(find_holder(["Superintendent Dr. Maria Lopez", "Message from the Superintendent"],
+                            "Superintendent(?: of Schools)?")) == "Maria Lopez"

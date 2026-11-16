@@ -315,9 +315,39 @@ def _special_districts(raw: dict) -> list[dict]:
     return out
 
 
+def _standin_mayors(standins: dict, records: list[dict]) -> list[dict]:
+    """Wikipedia's mayor for each city with no official source naming its mayor (see tools/wikipedia_mayors.py).
+
+    Clearly labelled as unconfirmed, and dropped automatically once any official source lists the city's mayor
+    or the same person under another title."""
+    fold = lambda s: (s or "").lower()  # noqa: E731
+    official = {}
+    for r in records:
+        if r.get("municipality"):
+            official.setdefault(fold(r["municipality"]), []).append(r)
+    out = []
+    for row in standins.get("municipalities", []):
+        if not row.get("name") or not row.get("municipality"):
+            continue
+        listed = official.get(fold(row["municipality"]), [])
+        if any(r["office_title"].lower() == "mayor" for r in listed):
+            continue
+        county = canonical_county(row.get("county") or "")
+        validated, _ = validate_record({
+            "name": row["name"], "office_title": "Mayor", "government_level": "municipal", "selection_method": "unknown",
+            "jurisdiction": row["municipality"], "municipality": row["municipality"], "county": county,
+            "official_website": row.get("website"), "source_url": row["article"]})
+        if validated is None or any(fold(r["last_name"]) == fold(validated.last_name) for r in listed):
+            continue
+        out.append({"id": validated.record_id, **validated.model_dump(), "source_name": "Wikipedia (not confirmed by the city)",
+                    "source_directory_url": standins.get("source"), "verification_status": "unconfirmed"})
+    return out
+
+
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
-          wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None):
+          wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None,
+          standins: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -358,6 +388,8 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
         if entry.get("bio"):
             record["bio"] = _clean_bio(entry["bio"], f"manual_officials.json, entry {index}")
         records.append(record)
+
+    records.extend(_standin_mayors(standins or {}, records))
 
     unique = []
     first: dict[str, dict] = {}
@@ -522,6 +554,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         wikipedia=load_json(data_dir / "wikipedia.json", {}),
         special=load_json(data_dir / "special_districts.json", {}),
         links=load_json(data_dir / "county_links.json", {}),
+        standins=load_json(data_dir / "wikipedia_mayors.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731
