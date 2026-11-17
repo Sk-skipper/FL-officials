@@ -3,7 +3,7 @@
 A searchable directory of elected officials in Florida, built as a static website. It needs no
 server and no database, and hosting on GitHub Pages is free.
 
-- **GitHub Actions** collects the official government sources once a day.
+- **GitHub Actions** collects every source once a day: mostly official government websites, plus three statewide associations of county officials (sheriffs, clerks, county commissioners) and, for a few unconfirmed mayors, Wikipedia.
 - **You approve changes.** When a source shows something new, you get a pull request listing every
   change. Merging it publishes the update; closing it discards it.
 - **GitHub Pages** hosts the site at `https://YOUR-NAME.github.io/REPO-NAME/`.

@@ -557,7 +557,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
     officials = {
         "metadata": {
             "export_timestamp": generated,
-            "data_source": "Florida Government Officials Directory, compiled from official government websites",
+            "data_source": "Florida Government Officials Directory, compiled automatically from official government websites, three statewide associations of county officials and, for a few mayors marked unconfirmed, Wikipedia",
             "record_count": len(unique),
             "verification_status": statuses,
             "note": "Empty fields mean the source did not publish that information.",

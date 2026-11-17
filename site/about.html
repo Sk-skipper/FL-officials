@@ -20,9 +20,12 @@
 
         <section id="origin">
           <h2>Where the data comes from</h2>
-          <p>Every official in the directory is collected automatically from an official government source, and every record links to
-          the page it came from. Nothing is typed in by hand: when no official page can be collected, the office is listed under
-          "Not yet covered" below instead of being filled in manually.</p>
+          <p>Every official in the directory is collected automatically, and every record links to the page it came from. Nothing is
+          typed in by hand: when no source can be collected, the office is listed under "Not yet covered" below instead of being filled in
+          manually.</p>
+          <p>Most records (about nine in ten) come straight from government websites. The rest come from three statewide associations of
+          county officials, which are reputable but not government sites, and a handful of mayors come from Wikipedia and are labelled
+          "not confirmed". Each profile names its source.</p>
           <p>The sources, in order of authority:</p>
           <ul>
             <li><strong>Legislatures and Congress:</strong> the Florida Senate, the Florida House of Representatives, the U.S. Senate and the U.S. House of Representatives publish their own member lists.</li>
@@ -33,7 +36,8 @@
             <li><strong>Statewide associations of county officers:</strong> the Florida Sheriffs Association's sheriff directory and the
             Florida Clerks of Court Operations Corporation's list name the sheriff and clerk of all 67 counties. County commissioners
             outside Broward and Miami-Dade come from the Florida Association of Counties directory, which also keeps some former
-            members, so a county is published only when its list matches a real board size (five or seven commissioners). The rest
+            members, so a county is published only when its list has exactly as many commissioners as the board has seats under the Florida
+            Constitution and the county's charter, and the county's own website or elections office replaces it wherever one can be read. The rest
             are held back and listed under "Not yet covered". Association lists can trail an election by weeks or months.</li>
             <li><strong>County Supervisors of Elections:</strong> where a county's elections office lists its office holders in a page that
             can be read without JavaScript (so far Escambia, Franklin, Gadsden, Lee, Leon and Seminole), it is preferred over the statewide
@@ -53,6 +57,11 @@
             website and contacts) come from the South Florida Water Management District's "SFWMD Special Districts" layer for its 16 counties,
             Broward County GIS for Broward's water control districts, and Miami-Dade County GIS for Miami-Dade's community development districts,
             with the ordinance that created each. The state's official list of special districts (FloridaCommerce) refuses automated requests.</li>
+            <li><strong>Courts:</strong> circuit judges outside Broward and Miami-Dade come from the Florida Division of Elections' list of
+            judicial candidates, taking each seat's most recent winner. Judges appointed since their seat was last on the ballot are not in that list yet.</li>
+            <li><strong>Wikipedia (not a government source):</strong> used in two ways. Each city's Wikipedia article gives its official website, which is
+            how the city's own council page is found; the names then come from that city page. And for a city whose own page hasn't been read yet,
+            the mayor named in its Wikipedia article is shown, labelled "Wikipedia · not confirmed", until the city's page replaces it.</li>
           </ul>
           <p>The full list of sources, with when each was last collected and whether it worked, is generated from the collector's own records:</p>
           <div id="source-list" class="gap-top"></div>
@@ -60,7 +69,7 @@
           <p>Portraits are linked, not copied. For members of Congress they come from a public-domain image set built from the official Congressional Biographical
           Directory, matched to each member by state, district and surname. For other officials the portrait comes from the official's own government page or
           county GIS records. Where no official photo could be found, a freely licensed photo from Wikimedia Commons (the image library behind Wikipedia) may be
-          used; its author and licence are credited on the profile. Birth dates missing from official sources may likewise come from Wikidata, and profiles link
+          used; its author and licence are credited on the profile. Birth dates missing from official sources may likewise come from Wikidata (about 55 profiles), and profiles link
           to a Wikipedia article when one exists. These public, community-edited sources are used only to fill gaps, never to replace official information, and
           may occasionally be out of date. When there is no photo, or it fails to load, the person's initials are shown instead.</p>
           <p>District maps come from the U.S. Census Bureau (Congress, the Florida Legislature, counties and cities), Broward County GIS (County Commission,

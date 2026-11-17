@@ -170,7 +170,7 @@ export function exportPayload(records, filters, now = new Date()) {
   return {
     metadata: {
       export_timestamp: now.toISOString(),
-      data_source: "Florida Government Officials Directory, compiled from official government websites",
+      data_source: "Florida Government Officials Directory, compiled automatically from official government websites, three statewide associations of county officials and, for a few mayors marked unconfirmed, Wikipedia",
       record_count: records.length,
       verification_status: statuses,
       filters: activeFilters,
