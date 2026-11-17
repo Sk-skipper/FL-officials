@@ -300,3 +300,17 @@ def test_fl_judges_keeps_each_seats_latest_winner():
     assert judges[("2nd Judicial Circuit", "3")]["name"] == "Ann Lee"
     assert judges[("2nd Judicial Circuit", "4")]["name"] == "Cara M. Win"
     assert judges[("2nd Judicial Circuit", "3")]["counties"][3] == "Leon"
+
+
+def test_civicplus_directory_reads_title_and_seat_from_the_role_line():
+    from collector.scrapers.civicplus_directory import parse_directory
+    html = "<main>" + "".join(f"<p>{n}</p><p>{r}</p><p>Email</p>" for n, r in [
+        ("Karen Chasez", "Mayor - Seat 5 Term: 01/01/2023 to 12/31/2026"), ("Phyllis Butlien", "Vice Mayor - Seat 4"),
+        ("William Sell", "Council Member - Seat 1"), ("Teresa Watkins Brown", "Ward 2 - Councilperson"),
+        ("Privacy Notice", "Council/Staff email is public record")]) + "</main>"
+    rows = {r["name"]: r for r in parse_directory(html, "https://example.gov/Directory.aspx?did=1",
+                                                   {"county": "Volusia", "municipality": "DeBary", "seats": 4})}
+    assert set(rows) == {"Karen Chasez", "Phyllis Butlien", "William Sell", "Teresa Watkins Brown"}
+    assert (rows["Karen Chasez"]["office_title"], rows["Karen Chasez"]["seat_label"]) == ("Mayor", "Seat 5")
+    assert rows["Phyllis Butlien"]["office_title"] == "Vice Mayor"
+    assert rows["Teresa Watkins Brown"]["seat_label"] == "Ward 2"
