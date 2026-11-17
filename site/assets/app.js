@@ -1292,6 +1292,17 @@ function reps() {
       $("[data-streets]", app).checked = on;
     }
     map.fitBounds(BROWARD_VIEW);
+    // Once a spot is chosen, zooming (buttons, wheel, double-click, pinch) keeps that spot in the centre.
+    const plainZoom = { in: map.zoomIn, out: map.zoomOut };
+    map.zoomIn = function (delta = 1, options) {
+      return pin ? this.setView(pin.getLatLng(), this.getZoom() + delta * (this.options.zoomDelta || 1), options) : plainZoom.in.call(this, delta, options);
+    };
+    map.zoomOut = function (delta = 1, options) {
+      return pin ? this.setView(pin.getLatLng(), this.getZoom() - delta * (this.options.zoomDelta || 1), options) : plainZoom.out.call(this, delta, options);
+    };
+    function focusOnPin(on) {
+      for (const handler of ["scrollWheelZoom", "doubleClickZoom", "touchZoom"]) map.options[handler] = on ? "center" : handler !== "scrollWheelZoom";
+    }
     map.on("focus", () => map.scrollWheelZoom.enable());
     map.on("blur", () => map.scrollWheelZoom.disable());
 
@@ -1612,6 +1623,7 @@ function reps() {
       lastLookup = { lat, lon, label, county: null };
       if (pin) pin.remove();
       pin = L.marker([lat, lon], { title: label || "Selected location" }).addTo(map);
+      focusOnPin(true);
       panel.innerHTML = loading("Finding your districts");
       const county = featureAt(counties, lon, lat)?.properties.name;
       lastLookup.county = county || null;
@@ -1686,7 +1698,8 @@ function reps() {
       const partial = local && !covered
         ? `<p class="notice small">${esc(place.municipality)}'s council isn't in the directory yet.</p>` : "";
       panel.innerHTML = `
-        <div class="panel-top rep-results-top"><div><h2>Your representatives</h2>
+        <div class="panel-top rep-results-top">${activeLayer ? `<button type="button" class="close-x" data-close-results
+            aria-label="Close and go back to the ${esc(MAP_LAYERS.find((l) => l.key === activeLayer)?.label || "layer")} list" title="Back to the layer list">×</button>` : ""}<div><h2>Your representatives</h2>
           <p class="muted small">${esc(label || `${lat.toFixed(5)}, ${lon.toFixed(5)}`)} · ${plural(total, "official")}</p></div>
           <div class="rep-actions">
             <button type="button" class="button outline small-button" data-copy-link>Copy link</button>
@@ -1708,7 +1721,9 @@ function reps() {
       applyLevel(LAYER_LEVEL[activeLayer] || "");
       if (!activeLayer) {
         const local = found.at(-1);
-        map.fitBounds((local ? L.geoJSON(local.feature).getBounds() : L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2), { maxZoom: 15 });
+        // Zoom to fit the most local district, centred on the chosen spot.
+        const bounds = (local ? L.geoJSON(local.feature).getBounds() : L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2);
+        map.setView([lat, lon], Math.min(map.getBoundsZoom(bounds), 15));
       }
       const next = params();
       next.set("lat", lat.toFixed(5));
@@ -1816,6 +1831,10 @@ function reps() {
     }
 
     map.on("click", (event) => lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map"));
+    // Esc closes a spot's details and returns to the chosen layer's list.
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && current && panel.querySelector("[data-close-results]")) legendPanel();
+    });
     $("#rep-layer").addEventListener("change", (event) => {
       showLayer(event.target.value, { select: true }).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
     });
@@ -1840,6 +1859,10 @@ function reps() {
         if (layer !== undefined && LAYER_LEVEL[activeLayer] !== level) {
           showLayer(layer, { keepView: true }).catch(() => {});
         }
+      }
+      if (event.target.closest("[data-close-results]") && current) {
+        legendPanel();
+        return;
       }
       if (event.target.closest("[data-back-to-results]") && lastLookup) {
         lookup(lastLookup.lat, lastLookup.lon, lastLookup.label);

@@ -560,3 +560,8 @@ details.everyone > summary .muted { display: block; margin: 2px 0 0 18px; }
 .leaflet-container path.leaflet-interactive:focus,
 .leaflet-container .leaflet-interactive:focus:not(:focus-visible) { outline: none; }
 .chips.rep-filter { flex-wrap: wrap; overflow: visible; }
+.rep-results-top { position: relative; }
+.close-x { position: absolute; top: -6px; right: -6px; width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--border);
+  border-radius: 50%; background: var(--surface); color: var(--text); font-size: 1.375rem; line-height: 1; cursor: pointer; }
+.close-x:hover { background: var(--tint); }
+.rep-results-top:has(.close-x) { padding-right: 44px; }
