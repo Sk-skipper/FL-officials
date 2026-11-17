@@ -13,7 +13,7 @@ page that yields more than two people fewer or more than "seats" fails instead o
 import re
 
 from collector.scrapers.base import BaseScraper, FetchError
-from collector.scrapers.city_roster import find_board, page_lines
+from collector.scrapers.city_roster import find_board, match_photos, page_lines
 
 ROLE = (r"(?i)^(?:(?:ward|district|seat|group|at[- ]large)\s*\w*\s*[-–:,]\s*)?(?:mayor|vice[- ]mayor|deputy mayor|mayor pro tem|"
         r"council\s*(?:man|woman|women|member|person|president|chair)?|councilor|commissioner|city commissioner|alderman|chair)")
@@ -49,6 +49,7 @@ def parse_directory(html: str, url: str, config: dict) -> list[dict]:
     seats = int(config.get("seats") or 5)
     if not seats - 2 <= len(people) <= seats + 2:
         raise FetchError(f"Expected about {seats} council members in the directory but found {len(people)}.")
+    match_photos(html, url, people)
     out = []
     for p in people:
         role = p.get("role") or ""
@@ -56,7 +57,7 @@ def parse_directory(html: str, url: str, config: dict) -> list[dict]:
         out.append({"name": p["name"], "office_title": title_of(role, member_title), "government_level": "municipal",
                     "selection_method": "elected", "party": "Nonpartisan", "jurisdiction": config["municipality"],
                     "municipality": config["municipality"], "county": config["county"], "district": district,
-                    "seat_label": label, "source_url": url})
+                    "seat_label": label, "photo_url": p.get("photo_url"), "source_url": url})
     return out
 
 
