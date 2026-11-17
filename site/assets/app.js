@@ -1830,7 +1830,48 @@ function reps() {
       if (courts && level === "courts") courts.open = true;
     }
 
-    map.on("click", (event) => lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map"));
+    /** With a layer chosen, a map click keeps that layer's list in the panel: the spot's holder for the layer opens
+     *  on the map, the spot becomes the "Back to your representatives at…" target, and the URL points at it. */
+    function pickSpot(lat, lon) {
+      const label = "Point chosen on the map";
+      if (pin) pin.remove();
+      pin = L.marker([lat, lon], { title: label }).addTo(map);
+      focusOnPin(true);
+      lastLookup = { lat, lon, label, county: featureAt(counties, lon, lat)?.properties.name || null };
+      const next = params();
+      next.set("lat", lat.toFixed(5));
+      next.set("lon", lon.toFixed(5));
+      window.history.replaceState(null, "", `${window.location.pathname}?${next}`);
+      const hits = current.rows.map((row, i) => ({ row, i })).filter(({ row }) => pointInGeometry(lon, lat, row.feature.geometry));
+      legendPanel(); // refreshes the back link to this spot
+      current.rows.forEach((_, i) => highlight(i, false));
+      const people = (row) => row.info ? `${esc(row.info.type)} · ${esc(row.info.status)}`
+        : row.holder?.board ? `${row.holder.members.slice(0, 12).map((m) => `<a href="${profileHref(m)}">${esc(m.full_name)}</a>${
+          new Set(row.holder.members.map((x) => x.office_title)).size > 1 ? ` <span class="muted">· ${esc(m.office_title)}</span>` : ""}`).join("<br>")}${
+          row.holder.members.length > 12 ? `<br><span class="muted">and ${row.holder.members.length - 12} more</span>` : ""}`
+        : row.holder ? `<a href="${profileHref(row.holder)}">${esc(row.holder.full_name)}</a><br><span class="muted">${esc(row.holder.office_title)}</span>`
+        : `<span class="muted">Not in the directory yet</span>`;
+      const body = hits.length ? hits.map(({ row }) => `<strong>${esc(row.title)}</strong><br>${people(row)}`).join("<hr>")
+        : `<span class="muted">No ${esc(current.spec.label)} area here.</span>`;
+      L.popup({ maxHeight: 280 }).setLatLng([lat, lon])
+        .setContent(`${body}<br><button type="button" class="link-button" data-back-to-results>Everyone who represents this spot</button>`)
+        .openOn(map);
+      for (const { i } of hits) {
+        highlight(i, true);
+        panel.querySelector(`[data-row="${i}"]`)?.scrollIntoView({ block: "nearest" });
+      }
+    }
+
+    map.on("popupopen", (event) => {
+      event.popup.getElement()?.querySelector("[data-back-to-results]")?.addEventListener("click", () => {
+        map.closePopup();
+        if (lastLookup) lookup(lastLookup.lat, lastLookup.lon, lastLookup.label);
+      });
+    });
+    map.on("click", (event) => {
+      if (activeLayer && current) pickSpot(event.latlng.lat, event.latlng.lng);
+      else lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map");
+    });
     // Esc closes a spot's details and returns to the chosen layer's list.
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && current && panel.querySelector("[data-close-results]")) legendPanel();
