@@ -698,7 +698,8 @@ function missingBox(records, meta, county) {
   if (!gaps.length) return "";
   return `<div class="gap-box"><p class="strong small">Not in the directory yet for ${esc(county)} County</p>
     <ul class="plain small">${gaps.map((g) => `<li>${esc(g.label)}${safeUrl(g.url)
-      ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">See the official ${esc(g.via)} site</a>` : ""}</li>`).join("")}</ul>
+      ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${g.via === "elections office"
+        ? "Listed by the county elections office" : `Official ${esc(g.via)} site`}</a>` : ""}</li>`).join("")}</ul>
     </div>`;
 }
 
@@ -802,6 +803,8 @@ function leadershipPanel(records, county, meta) {
     ${spotlight(lead)}
     ${board.length || mayor ? `<div class="leader-block"><h4>${esc(bodyName)}${mayor ? " and County Mayor" : ""}</h4>
       <p class="muted small">Sets the county's budget, taxes and laws.${chair ? ` ${chair === mayor ? "The mayor" : "The chair"} sits in the centre seat.` : ""}</p>
+      ${(() => { const m = (meta.commission_mismatches || []).find((x) => x.county === county);
+        return m ? `<p class="notice small">The board has ${m.seats} seats but ${m.listed} people are listed; the list may include a former commissioner. Check the county's own site.</p>` : ""; })()}
       ${dais(mayor && !board.includes(mayor) ? [...board, mayor] : board, { chair, label: `${bodyName} of ${county} County` })}</div>` : ""}
     ${officers.length ? `<div class="leader-block"><h4>Constitutional officers</h4>
       <p class="muted small">Elected countywide to run the county's courts records, law enforcement, property values, taxes and elections.</p>
@@ -1585,13 +1588,17 @@ function reps() {
         { label: "Florida House", feature: featureAt(house, lon, lat) },
       ];
       const local = LOCAL_COUNTIES.includes(county);
-      if (local) {
+      // County seat maps exist for some counties beyond South Florida; a seat counts only if the directory knows its holder.
+      const seatKnown = (key, feature) => feature && records.some((r) => MAP_LAYERS.find((l) => l.key === key).holder(r, feature.properties));
+      const countyLayers = (await Promise.all(["commission", "school"].map(loadBoundary))).map((l) => l.features.filter((f) => f.properties.county === county));
+      if (local || countyLayers.some((fs) => fs.length)) {
         const mine = (layer) => ({ ...layer, features: layer.features.filter((f) => f.properties.county === county) });
         const [commission, school, cityDistricts] = (await Promise.all(["commission", "school", "cityDistricts"].map(loadBoundary))).map(mine);
         const own = cityDistricts.features.filter((f) => f.properties.municipality === place.municipality);
         const cityDistrict = own.find((f) => pointInGeometry(lon, lat, f.geometry));
+        const commissionHere = featureAt(commission, lon, lat);
         Object.assign(place, {
-          commission: featureAt(commission, lon, lat)?.properties.district,
+          commission: seatKnown("commission", commissionHere) ? commissionHere.properties.district : null,
           school: featureAt(school, lon, lat)?.properties.district,
           schoolDistricts: school.features.map((f) => f.properties.district),
           cityDistricts: own.map((f) => f.properties.district),
@@ -1606,7 +1613,7 @@ function reps() {
       place.special = specialHere?.properties.key || null;
       place.countywideSpecial = [...SPECIAL.values()].filter((d) => d.area !== "mapped" && (!d.county || d.county === county)).map((d) => d.key);
       const hasSpecial = Boolean(place.special) || place.countywideSpecial.length > 0;
-      if (specialHere) hits.splice(local ? 5 : 3, 0, { label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
+      if (specialHere) hits.splice(hits.length >= 5 ? 5 : 3, 0, { label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
 
       // One outline at a time: the most local district, or whichever label the visitor points at.
       const found = hits.filter((h) => h.feature);

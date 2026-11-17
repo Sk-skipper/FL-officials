@@ -259,3 +259,21 @@ def test_wikipedia_mayors_fill_only_cities_without_an_official_mayor():
     assert set(unconfirmed) == {"Ormond Beach", "DeBary"}
     assert unconfirmed["DeBary"]["office_title"] == "Mayor"
     assert unconfirmed["DeBary"]["source_name"].startswith("Wikipedia")
+
+
+def test_association_commissioners_give_way_to_the_countys_own_source():
+    def state(name, title, last, first, source):
+        return {"name": source, "url": "https://example.gov", "level": "county", "last_successful_collection": NOW.isoformat(),
+                "records": [{"full_name": f"{first} {last}", "first_name": first, "last_name": last, "office_title": title,
+                             "government_level": "county", "jurisdiction": "St. Lucie County", "county": "St. Lucie",
+                             "source_url": "https://example.gov", "id": f"cc-{last}".lower()}]}
+    collected = {"sources": {
+        "fac1": state("x", "County Commissioner", "Townsend", "Cathy", "Florida Association of Counties"),
+        "fac2": state("x", "County Commissioner", "Bartz", "Linda", "Florida Association of Counties"),
+        "cty": state("x", "County Commissioner", "Townsend", "Cathy", "St. Lucie County: Board of County Commissioners")}}
+    officials, _, meta, warnings = build(collected, {}, {}, {}, NOW, env={})
+    names = {r["full_name"]: r for r in officials["officials"]}
+    assert set(names) == {"Cathy Townsend"}  # Bartz is only in the association's list; the county lists someone else
+    assert names["Cathy Townsend"]["source_name"].startswith("St. Lucie County")
+    assert any("Linda Bartz" in w for w in warnings)
+    assert meta["commission_mismatches"] == [{"county": "St. Lucie", "listed": 1, "seats": 5}]

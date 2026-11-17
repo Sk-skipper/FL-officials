@@ -112,11 +112,8 @@
     "config": {
       "skip_counties": [
         "Broward",
-        "Miami-Dade"
-      ],
-      "board_sizes": [
-        5,
-        7
+        "Miami-Dade",
+        "Duval"
       ]
     }
   },

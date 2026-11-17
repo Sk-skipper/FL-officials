@@ -198,14 +198,14 @@ def _fac_box(name, position, county):
 
 
 def test_fac_commissioners_are_held_back_when_a_county_lists_too_many():
-    html = "".join(_fac_box(f"Member{i}, Pat", "Commissioner", "Leon County") for i in range(5))
+    html = "".join(_fac_box(f"Member{i}, Pat", "Commissioner", "Alachua County") for i in range(5))
     html += "".join(_fac_box(f"Member{i}, Lee", "Commissioner", "Palm Beach County") for i in range(9))
-    html += _fac_box("Mayor, Mo", "Mayor", "Palm Beach County") + _fac_box("Clerk, Cy", "Staff Assistant", "Leon County")
+    html += _fac_box("Mayor, Mo", "Mayor", "Palm Beach County") + _fac_box("Clerk, Cy", "Staff Assistant", "Alachua County")
     html += '<a href="/directory-results/?group=1&cpage=2">2</a>'
     records, pages = parse_fac(html, "https://www.fl-counties.com/directory-results/?group=1", set())
     assert pages == ["https://www.fl-counties.com/directory-results/?group=1&cpage=2"]
     kept = hold_back_stale_counties(records, {5, 7})
-    assert sum(1 for r in kept if r.get("county") == "Leon") == 5
+    assert sum(1 for r in kept if r.get("county") == "Alachua") == 5
     held = [r for r in kept if "_error" in r]
     assert len(held) == 1 and "Palm Beach County" in held[0]["_error"] and "9 commissioners" in held[0]["_error"]
 

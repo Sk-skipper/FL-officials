@@ -133,22 +133,25 @@ class ClerksScraper(_Base):
         return parse_clerks(self.client.get(self.source_url), self.source_url, self.skip)
 
 
-def hold_back_stale_counties(records: list[dict], sizes: set[int]) -> list[dict]:
-    """The directory keeps some former members. A county whose list doesn't match a real board size (5 or 7
-    commissioners) is held back, with a row for the report, rather than published with someone who has left."""
+def hold_back_stale_counties(records: list[dict], sizes: set[int] | None = None) -> list[dict]:
+    """The directory keeps some former members. A county whose list doesn't match its board's size in law
+    (collector.geo.commission_seats) is held back, with a row for the report, rather than published with someone
+    who has left. "sizes" is accepted for old configs and ignored."""
+    from collector.geo import commission_seats
     by_county: dict[str, list[dict]] = {}
     for r in records:
         by_county.setdefault(r["county"], []).append(r)
     out = []
     for county, people in sorted(by_county.items()):
         members = [r for r in people if r["office_title"] != "County Mayor"]
-        if len(members) in sizes:
+        expected = commission_seats(county)
+        if len(members) == expected:
             out += people
         else:
             out.append({"name": f"{county} County", "source_url": people[0]["source_url"],
-                        "_error": f"{county} County: the directory lists {len(members)} commissioners, which matches no board "
-                                  f"size ({', '.join(map(str, sorted(sizes)))}); it probably still lists former members, so "
-                                  "this county was held back"})
+                        "_error": f"{county} County: the directory lists {len(members)} commissioners but the board has "
+                                  f"{expected}, so the list is out of date (former members still listed, or new ones missing); this county "
+                                  "was held back"})
     return out
 
 
@@ -170,4 +173,6 @@ class FACScraper(_Base):
             more, links = parse_fac(self.client.get(url), self.source_url, self.skip)
             records += more
             queue += [p for p in links if p not in seen]
-        return records
+        # Pages overlap, so the same person can appear on two of them.
+        unique = {(r.get("county"), r.get("name"), r.get("office_title")): r for r in records if not r.get("_error")}
+        return list(unique.values()) + [r for r in records if r.get("_error")]
