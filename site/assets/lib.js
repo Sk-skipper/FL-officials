@@ -457,7 +457,8 @@ export function representativesFor(records, place, vacancies = []) {
         if (/^state representative/i.test(title)) return same(r.district, place.house);
         return r.statewide || (county && (r.counties || []).includes(county));
       case "county":
-        if (r.county !== county) return false;
+        // Multi-county offices (a judicial circuit) list their counties instead of one county.
+        if (r.county !== county && !(r.county == null && (r.counties || []).includes(county))) return false;
         if (r.special_district) return r.special_district === place.special || (place.countywideSpecial || []).includes(r.special_district);
         // Counties without a district map (outside Broward and Miami-Dade) show their whole commission.
         if (/county commissioner/i.test(title)) return place.commission == null || same(r.district, place.commission);

@@ -385,7 +385,7 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
             "name": m["name"], "office_title": (config.get("title_map") or {}).get(m["title"], f"{m['title']}{suffix}"), "government_level": level,
             "jurisdiction": jurisdiction, "county": config["county"],
             "district": (district if district and district.isdigit() and seat.startswith("District") else (seat if district else None)),
-            "seat_label": seat, "party": config.get("party", "Nonpartisan"),
+            "seat_label": seat, "party": config.get("party", None if level == "county" and "School" not in (config.get("member_title") or "") else "Nonpartisan"),
             "selection_method": config.get("selection_method", "elected"), "source_url": source_url,
             "photo_url": m.get("photo_url"), "email": m.get("email"), "phone": m.get("phone"),
             "official_website": m.get("official_website"),

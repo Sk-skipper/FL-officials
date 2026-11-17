@@ -1084,6 +1084,13 @@ const BOUNDARIES = {
   commission: "county-commission", school: "school-board", cityDistricts: "city-districts", special: "special-districts",
 };
 /** The "Show" dropdown, grouped by level of government. */
+/** The county's map names this seat's commissioner: match a record that has no district number by surname. */
+function sameSurname(r, name) {
+  if (!name || !r.last_name) return false;
+  const fold = (t) => t.normalize("NFKD").replace(/[^\p{L} ]/gu, "").toLowerCase();
+  return fold(name).split(/\s+/).includes(fold(r.last_name).split(/\s+/).pop());
+}
+
 const LAYER_GROUPS = [
   ["Counties (all of Florida)", ["commission", "school"]],
   ["Cities", ["cities", "cityDistricts"]],
@@ -1110,7 +1117,8 @@ const isSeat = (r, district) => r.district != null && districtKey(r.district) ==
 /** The layers a visitor can show on the map, and who holds each district in them. */
 const MAP_LAYERS = [
   { key: "commission", label: "County Commission", area: "state", partisan: true, wholeCounty: true,
-    holder: (r, p) => r.office_title === "County Commissioner" && r.county === p.county && isSeat(r, p.district),
+    holder: (r, p) => r.office_title === "County Commissioner" && r.county === p.county
+      && (isSeat(r, p.district) || (!r.district && sameSurname(r, p.member))),
     member: (r, p) => r.county === p.county && /^County (Commissioner|Council Member|Mayor)$/.test(r.office_title),
     name: (p) => (p.whole ? `${p.county} County Commission` : `${p.county} Commission District ${p.district}`) },
   { key: "school", label: "School Board", area: "state", wholeCounty: true,
@@ -1279,10 +1287,12 @@ function reps() {
       const data = await loadBoundary(spec.key);
       const countyShapes = (await loadBoundary("counties")).features;
       if (spec.wholeCounty) {
-        const mapped = new Set(data.features.map((f) => f.properties.county));
+        // A county's seat map is used only if at least one seat can be matched to someone in the directory;
+        // otherwise the whole county is shown with its board.
+        const mapped = new Set(data.features.filter((f) => records.some((r) => spec.holder(r, f.properties))).map((f) => f.properties.county));
         const whole = countyShapes.filter((c) => !mapped.has(c.properties.name))
           .map((c) => ({ type: "Feature", geometry: c.geometry, properties: { county: c.properties.name, whole: true, district: null } }));
-        return { ...data, features: [...data.features, ...whole] };
+        return { ...data, features: [...data.features.filter((f) => mapped.has(f.properties.county)), ...whole] };
       }
       if (spec.key !== "cities") return data;
       const listed = new Set(records.filter((r) => r.municipality).map((r) => r.municipality));

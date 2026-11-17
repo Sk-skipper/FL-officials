@@ -3612,5 +3612,649 @@
       "county": "Wakulla",
       "office_title": "Tax Collector"
     }
+  },
+  {
+    "key": "fl_circuit_judges",
+    "name": "Florida Division of Elections: judicial candidates (circuit judges)",
+    "url": "https://dos.elections.myflorida.com/candidates/downloadcanlist.asp",
+    "level": "county",
+    "scraper": "fl_judges",
+    "config": {
+      "elections": [
+        "20261103-GEN",
+        "20241105-GEN",
+        "20221108-GEN"
+      ],
+      "skip_circuits": [
+        11,
+        17
+      ]
+    }
+  },
+  {
+    "key": "county_flagler_commission",
+    "name": "Flagler County: Board of County Commissioners",
+    "url": "https://www.flaglercounty.gov/government/board-of-county-commissioners",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Flagler",
+      "jurisdiction": "Flagler County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "seat_name_lines": true
+    }
+  },
+  {
+    "key": "city_palm_beach_haverhill",
+    "name": "Haverhill (Palm Beach County): mayor and council",
+    "url": "http://www.townofhaverhill-fl.gov/Directory.aspx?did=16",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Haverhill",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_st_johns_st_augustine",
+    "name": "St. Augustine (St. Johns County): mayor and council",
+    "url": "https://www.citystaug.com/Directory.aspx?did=33",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "St. Johns",
+      "municipality": "St. Augustine",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_lee_fort_myers",
+    "name": "Fort Myers (Lee County): mayor and council",
+    "url": "https://www.cityftmyers.com/Directory.aspx?did=14",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Lee",
+      "municipality": "Fort Myers",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_manatee_bradenton_beach",
+    "name": "Bradenton Beach (Manatee County): mayor and council",
+    "url": "http://cityofbradentonbeach.com/Directory.aspx?did=12",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Manatee",
+      "municipality": "Bradenton Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_manatee_palmetto",
+    "name": "Palmetto (Manatee County): mayor and council",
+    "url": "http://www.palmettofl.org/Directory.aspx?did=25",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Manatee",
+      "municipality": "Palmetto",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_jupiter",
+    "name": "Jupiter (Palm Beach County): mayor and council",
+    "url": "https://www.jupiter.fl.us/Directory.aspx?did=104",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Jupiter",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_jupiter_inlet_colony",
+    "name": "Jupiter Inlet Colony (Palm Beach County): mayor and council",
+    "url": "http://www.jupiterinletcolony.org/Directory.aspx?did=11",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Jupiter Inlet Colony",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_manatee_anna_maria",
+    "name": "Anna Maria (Manatee County): mayor and council",
+    "url": "http://www.cityofannamaria.com/Directory.aspx?did=7",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Manatee",
+      "municipality": "Anna Maria",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_polk_bartow",
+    "name": "Bartow (Polk County): mayor and council",
+    "url": "http://www.cityofbartow.net/Directory.aspx?did=35",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Polk",
+      "municipality": "Bartow",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_baker_macclenny",
+    "name": "Macclenny (Baker County): mayor and council",
+    "url": "http://www.cityofmacclenny.com/Directory.aspx?did=16",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Baker",
+      "municipality": "Macclenny",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_davie",
+    "name": "Davie (Broward County): mayor and council",
+    "url": "http://www.davie-fl.gov/Directory.aspx?did=5",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Broward",
+      "municipality": "Davie",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_brevard_cocoa",
+    "name": "Cocoa (Brevard County): mayor and council",
+    "url": "http://www.cocoafl.org/Directory.aspx?did=46",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Cocoa",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_broward_hallandale_beach",
+    "name": "Hallandale Beach (Broward County): mayor and council",
+    "url": "http://www.hallandalebeachfl.gov/Directory.aspx?did=10",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Broward",
+      "municipality": "Hallandale Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_volusia_new_smyrna_beach",
+    "name": "New Smyrna Beach (Volusia County): mayor and council",
+    "url": "http://www.cityofnsb.com/Directory.aspx?did=11",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Volusia",
+      "municipality": "New Smyrna Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_hillsborough_temple_terrace",
+    "name": "Temple Terrace (Hillsborough County): mayor and council",
+    "url": "https://www.templeterrace.com/Directory.aspx?did=4",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Hillsborough",
+      "municipality": "Temple Terrace",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_orange_winter_garden",
+    "name": "Winter Garden (Orange County): mayor and council",
+    "url": "http://www.cwgdn.com/Directory.aspx?did=52",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Orange",
+      "municipality": "Winter Garden",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_volusia_debary",
+    "name": "DeBary (Volusia County): mayor and council",
+    "url": "http://www.debary.org/Directory.aspx?did=22",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Volusia",
+      "municipality": "DeBary",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_osceola_st_cloud",
+    "name": "St. Cloud (Osceola County): mayor and council",
+    "url": "http://www.stcloud.org/Directory.aspx?did=79",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Osceola",
+      "municipality": "St. Cloud",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_volusia_deland",
+    "name": "DeLand (Volusia County): mayor and council",
+    "url": "http://www.deland.org/Directory.aspx?did=32",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Volusia",
+      "municipality": "DeLand",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_greenacres",
+    "name": "Greenacres (Palm Beach County): mayor and council",
+    "url": "http://greenacresfl.gov/Directory.aspx?did=21",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Greenacres",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_palm_beach_wellington",
+    "name": "Wellington (Palm Beach County): mayor and council",
+    "url": "http://www.wellingtonfl.gov/Directory.aspx?did=30",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Wellington",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_juno_beach",
+    "name": "Juno Beach (Palm Beach County): mayor and council",
+    "url": "http://www.juno-beach.fl.us/Directory.aspx?did=15",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Juno Beach",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_palm_beach_palm_beach",
+    "name": "Palm Beach (Palm Beach County): mayor and council",
+    "url": "https://townofpalmbeach.com/Directory.aspx?did=5",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "Palm Beach",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_marion_belleview",
+    "name": "Belleview (Marion County): mayor and council",
+    "url": "http://www.belleviewfl.org/Directory.aspx?did=18",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Marion",
+      "municipality": "Belleview",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_safety_harbor",
+    "name": "Safety Harbor (Pinellas County): mayor and council",
+    "url": "http://www.cityofsafetyharbor.com/Directory.aspx?did=19",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Safety Harbor",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_oldsmar",
+    "name": "Oldsmar (Pinellas County): mayor and council",
+    "url": "http://www.myoldsmar.com/Directory.aspx?did=20",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Oldsmar",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_highlands_sebring",
+    "name": "Sebring (Highlands County): mayor and council",
+    "url": "http://www.mysebring.com/Directory.aspx?did=4",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Highlands",
+      "municipality": "Sebring",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_hendry_clewiston",
+    "name": "Clewiston (Hendry County): mayor and council",
+    "url": "http://www.clewiston-fl.gov/Directory.aspx?did=14",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Hendry",
+      "municipality": "Clewiston",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_duval_neptune_beach",
+    "name": "Neptune Beach (Duval County): mayor and council",
+    "url": "http://ci.neptune-beach.fl.us/Directory.aspx?did=13",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Duval",
+      "municipality": "Neptune Beach",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lee_fort_myers_beach",
+    "name": "Fort Myers Beach (Lee County): mayor and council",
+    "url": "http://www.fortmyersbeachfl.gov/Directory.aspx?did=6",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Lee",
+      "municipality": "Fort Myers Beach",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_flagler_flagler_beach",
+    "name": "Flagler Beach (Flagler County): mayor and council",
+    "url": "http://www.cityofflaglerbeach.com/Directory.aspx?did=4",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Flagler",
+      "municipality": "Flagler Beach",
+      "member_title": "Commissioner",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_bay_callaway",
+    "name": "Callaway (Bay County): mayor and council",
+    "url": "http://www.cityofcallaway.com/Directory.aspx?did=3",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Bay",
+      "municipality": "Callaway",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_sumter_wildwood",
+    "name": "Wildwood (Sumter County): mayor and council",
+    "url": "https://www.wildwood-fl.gov/Directory.aspx?did=22",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Sumter",
+      "municipality": "Wildwood",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_tavares",
+    "name": "Tavares (Lake County): mayor and council",
+    "url": "https://www.tavares.org/Directory.aspx?did=4",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Lake",
+      "municipality": "Tavares",
+      "member_title": "Council Member",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_lake_groveland",
+    "name": "Groveland (Lake County): mayor and council",
+    "url": "http://groveland-fl.gov/Directory.aspx?did=13",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Lake",
+      "municipality": "Groveland",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_miami_dade_south_miami",
+    "name": "South Miami (Miami-Dade County): mayor and council",
+    "url": "https://www.southmiamifl.gov/Directory.aspx?did=4",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Miami-Dade",
+      "municipality": "South Miami",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_pinellas_seminole",
+    "name": "Seminole (Pinellas County): mayor and council",
+    "url": "http://www.myseminole.com/Directory.aspx?did=7",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Seminole",
+      "member_title": "Council Member",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_pasco_zephyrhills",
+    "name": "Zephyrhills (Pasco County): mayor and council",
+    "url": "http://www.ci.zephyrhills.fl.us/Directory.aspx?did=7",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Pasco",
+      "municipality": "Zephyrhills",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_brevard_malabar",
+    "name": "Malabar (Brevard County): mayor and council",
+    "url": "http://www.townofmalabar.org/Directory.aspx?did=18",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Malabar",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_st_johns_st_augustine_beach",
+    "name": "St. Augustine Beach (St. Johns County): mayor and council",
+    "url": "http://www.staugbch.com/Directory.aspx?did=14",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "St. Johns",
+      "municipality": "St. Augustine Beach",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_highlands_lake_placid",
+    "name": "Lake Placid (Highlands County): mayor and council",
+    "url": "http://www.lakeplacidfl.net/Directory.aspx?did=10",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Highlands",
+      "municipality": "Lake Placid",
+      "member_title": "Commissioner",
+      "seats": 5
+    }
+  },
+  {
+    "key": "city_brevard_melbourne_village",
+    "name": "Melbourne Village (Brevard County): mayor and council",
+    "url": "http://www.melbournevillage.org/Directory.aspx?did=10",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Brevard",
+      "municipality": "Melbourne Village",
+      "member_title": "Commissioner",
+      "seats": 7
+    }
+  },
+  {
+    "key": "city_pinellas_indian_shores",
+    "name": "Indian Shores (Pinellas County): mayor and council",
+    "url": "http://www.myindianshores.com/Directory.aspx?did=20",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Pinellas",
+      "municipality": "Indian Shores",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_lake_howey_in_the_hills",
+    "name": "Howey-in-the-Hills (Lake County): mayor and council",
+    "url": "http://www.howey.org/Directory.aspx?did=19",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Lake",
+      "municipality": "Howey-in-the-Hills",
+      "member_title": "Council Member",
+      "seats": 6
+    }
+  },
+  {
+    "key": "city_volusia_south_daytona",
+    "name": "South Daytona (Volusia County): mayor and council",
+    "url": "http://www.southdaytona.org/Directory.aspx?did=9",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Volusia",
+      "municipality": "South Daytona",
+      "member_title": "Council Member",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_palm_beach_south_bay",
+    "name": "South Bay (Palm Beach County): mayor and council",
+    "url": "http://www.southbaycity.com/Directory.aspx?did=12",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Palm Beach",
+      "municipality": "South Bay",
+      "member_title": "Commissioner",
+      "seats": 4
+    }
+  },
+  {
+    "key": "city_brevard_west_melbourne",
+    "name": "West Melbourne (Brevard County): mayor and council",
+    "url": "http://www.westmelbourne.org/Directory.aspx?did=25",
+    "level": "municipal",
+    "scraper": "civicplus_directory",
+    "config": {
+      "county": "Brevard",
+      "municipality": "West Melbourne",
+      "member_title": "Council Member",
+      "seats": 7
+    }
   }
 ]

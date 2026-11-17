@@ -136,6 +136,10 @@ class PoliteHttpClient:
         """Fetch a page as text, or raise FetchError."""
         return self._fetch(url).text
 
+    def post(self, url: str, data: dict) -> str:
+        """Submit a public download form (same robots check, pacing and retries as get), or raise FetchError."""
+        return self._fetch(url, data=data).text
+
     def get_bytes(self, url: str) -> bytes:
         """Fetch a file (a PDF, say) as bytes, or raise FetchError."""
         return self._fetch(url, accept="application/pdf,application/octet-stream,*/*;q=0.8").content
@@ -172,7 +176,7 @@ class PoliteHttpClient:
         except PlaywrightError as exc:
             raise FetchError(f"{url} could not be rendered ({str(exc).splitlines()[0][:120]})") from exc
 
-    def _fetch(self, url: str, accept: str | None = None) -> requests.Response:
+    def _fetch(self, url: str, accept: str | None = None, data: dict | None = None) -> requests.Response:
         self.check_allowed(url)
         host = urlsplit(url).netloc
         last_error = "unknown error"
@@ -180,7 +184,10 @@ class PoliteHttpClient:
             self._wait(host)
             try:
                 headers = self._headers(accept) if accept else self._headers()
-                response = self.session.get(url, headers=headers, timeout=self.timeout_seconds)
+                if data is None:
+                    response = self.session.get(url, headers=headers, timeout=self.timeout_seconds)
+                else:
+                    response = self.session.post(url, data=data, headers=headers, timeout=self.timeout_seconds)
             except requests.RequestException as exc:
                 last_error = f"{type(exc).__name__}: {exc}"
                 logger.warning("GET %s failed (%s), attempt %d", url, last_error, attempt + 1)

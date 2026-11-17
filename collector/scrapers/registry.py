@@ -5,9 +5,11 @@ from collector.scrapers.base import BaseScraper, HostSchedule, PoliteHttpClient
 from collector.scrapers.broward_districts import BrowardDistrictsScraper
 from collector.scrapers.broward_soe import BrowardSOEScraper
 from collector.scrapers.city_roster import CityRosterScraper
+from collector.scrapers.civicplus_directory import CivicPlusDirectoryScraper
 from collector.scrapers.miamidade_soe import MiamiDadeSOEScraper
 from collector.scrapers.fl_county_officers import ClerksScraper, FACScraper, SheriffsScraper
 from collector.scrapers.fl_house import FLHouseScraper
+from collector.scrapers.fl_judges import FLJudgesScraper
 from collector.scrapers.fl_senate import FLSenateScraper
 from collector.scrapers.fl_supervisors import FLSupervisorsScraper
 from collector.scrapers.generic_directory import CountyDirectoryScraper, MunicipalDirectoryScraper
@@ -29,6 +31,8 @@ SCRAPERS: dict[str, type[BaseScraper]] = {
     "fac_commissioners": FACScraper,
     "soe_officeholders": SOEOfficeHoldersScraper,
     "office_holder": OfficeHolderScraper,
+    "fl_judges": FLJudgesScraper,
+    "civicplus_directory": CivicPlusDirectoryScraper,
     "us_senate": USSenateScraper,
     "us_house": USHouseScraper,
     "county_directory": CountyDirectoryScraper,
