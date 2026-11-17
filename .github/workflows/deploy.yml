@@ -30,6 +30,13 @@ jobs:
       - name: Build site data (stops here if a correction is invalid)
         run: python -m collector.publish
 
+      - name: Stamp asset links with this commit, so browsers fetch new code right after a deploy
+        run: |
+          v="${GITHUB_SHA::8}"
+          sed -i -E "s#(assets/(app\.js|style\.css))\"#\1?v=$v\"#g" site/*.html
+          sed -i -E "s#from \"\./lib\.js\"#from \"./lib.js?v=$v\"#" site/assets/app.js
+          grep -c "?v=$v" site/representatives.html site/assets/app.js
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
