@@ -1094,6 +1094,11 @@ function sameSurname(r, name) {
   return fold(name).split(/\s+/).includes(fold(r.last_name).split(/\s+/).pop());
 }
 
+/** Which level of officials each map layer shows, and the layer that best shows each level (chips <-> dropdown). */
+const LAYER_LEVEL = { commission: "county", school: "county", cities: "municipal", cityDistricts: "municipal",
+  special: "special", house: "state", senate: "state", congress: "federal" };
+const LEVEL_LAYER = { federal: "congress", state: "house", county: "commission", municipal: "cities", special: "special" };
+
 const LAYER_GROUPS = [
   ["Counties (all of Florida)", ["commission", "school"]],
   ["Cities", ["cities", "cityDistricts"]],
@@ -1660,6 +1665,7 @@ function reps() {
             ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
               : `<ul class="people">${s.items.map((r) => personCard(r, { contact: true })).join("")}</ul>`}`).join("")).join("")}
         </details>` : ""}`;
+      applyLevel(LAYER_LEVEL[activeLayer] || "");
       if (!activeLayer) {
         const local = found.at(-1);
         map.fitBounds((local ? L.geoJSON(local.feature).getBounds() : L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2), { maxZoom: 15 });
@@ -1757,6 +1763,18 @@ function reps() {
         { enableHighAccuracy: false, timeout: 15000 },
       );
     });
+    /** Press one level chip and show only that level's officials ("" = all). Falls back to All if absent. */
+    function applyLevel(level) {
+      const chips = [...panel.querySelectorAll("[data-level-filter]")];
+      if (!chips.length) return;
+      const pick = chips.find((c) => c.dataset.levelFilter === level) || chips[0];
+      level = pick.dataset.levelFilter;
+      for (const chip of chips) chip.setAttribute("aria-pressed", String(chip === pick));
+      for (const block of panel.querySelectorAll("[data-level]")) block.hidden = Boolean(level) && block.dataset.level !== level;
+      const courts = panel.querySelector('details[data-level="courts"]');
+      if (courts && level === "courts") courts.open = true;
+    }
+
     map.on("click", (event) => lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map"));
     $("#rep-layer").addEventListener("change", (event) => {
       showLayer(event.target.value, { select: true }).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
@@ -1776,10 +1794,12 @@ function reps() {
       const filter = event.target.closest("[data-level-filter]");
       if (filter) {
         const level = filter.dataset.levelFilter;
-        for (const chip of panel.querySelectorAll("[data-level-filter]")) chip.setAttribute("aria-pressed", String(chip === filter));
-        for (const block of panel.querySelectorAll("[data-level]")) block.hidden = Boolean(level) && block.dataset.level !== level;
-        const courts = panel.querySelector('details[data-level="courts"]');
-        if (courts && level === "courts") courts.open = true;
+        applyLevel(level);
+        // The map follows the chip: County shows the commission districts, State the Florida House, and so on.
+        const layer = LEVEL_LAYER[level];
+        if (layer !== undefined && LAYER_LEVEL[activeLayer] !== level) {
+          showLayer(layer, { keepView: true }).catch(() => {});
+        }
       }
       if (event.target.closest("[data-back-to-results]") && lastLookup) {
         lookup(lastLookup.lat, lastLookup.lon, lastLookup.label);

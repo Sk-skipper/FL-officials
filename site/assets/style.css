@@ -556,3 +556,7 @@ details.everyone > summary .muted { display: block; margin: 2px 0 0 18px; }
 .avatar-stack { display: inline-flex; flex: none; }
 .avatar-stack .avatar { box-shadow: 0 0 0 2px var(--surface); }
 .avatar-stack .avatar + .avatar { margin-left: -10px; }
+/* Clicking a district shape shouldn't draw the browser's focus box around it. */
+.leaflet-container path.leaflet-interactive:focus,
+.leaflet-container .leaflet-interactive:focus:not(:focus-visible) { outline: none; }
+.chips.rep-filter { flex-wrap: wrap; overflow: visible; }
