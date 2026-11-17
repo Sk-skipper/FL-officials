@@ -3630,5 +3630,20 @@
         17
       ]
     }
+  },
+  {
+    "key": "county_flagler_commission",
+    "name": "Flagler County: Board of County Commissioners",
+    "url": "https://www.flaglercounty.gov/government/board-of-county-commissioners",
+    "level": "county",
+    "scraper": "city_roster",
+    "config": {
+      "county": "Flagler",
+      "jurisdiction": "Flagler County",
+      "government_level": "county",
+      "member_title": "County Commissioner",
+      "seats": 5,
+      "seat_name_lines": true
+    }
   }
 ]
