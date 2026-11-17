@@ -698,7 +698,8 @@ function missingBox(records, meta, county) {
   if (!gaps.length) return "";
   return `<div class="gap-box"><p class="strong small">Not in the directory yet for ${esc(county)} County</p>
     <ul class="plain small">${gaps.map((g) => `<li>${esc(g.label)}${safeUrl(g.url)
-      ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">See the official ${esc(g.via)} site</a>` : ""}</li>`).join("")}</ul>
+      ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener noreferrer">${g.via === "elections office"
+        ? "Listed by the county elections office" : `Official ${esc(g.via)} site`}</a>` : ""}</li>`).join("")}</ul>
     </div>`;
 }
 
@@ -802,6 +803,8 @@ function leadershipPanel(records, county, meta) {
     ${spotlight(lead)}
     ${board.length || mayor ? `<div class="leader-block"><h4>${esc(bodyName)}${mayor ? " and County Mayor" : ""}</h4>
       <p class="muted small">Sets the county's budget, taxes and laws.${chair ? ` ${chair === mayor ? "The mayor" : "The chair"} sits in the centre seat.` : ""}</p>
+      ${(() => { const m = (meta.commission_mismatches || []).find((x) => x.county === county);
+        return m ? `<p class="notice small">The board has ${m.seats} seats but ${m.listed} people are listed; the list may include a former commissioner. Check the county's own site.</p>` : ""; })()}
       ${dais(mayor && !board.includes(mayor) ? [...board, mayor] : board, { chair, label: `${bodyName} of ${county} County` })}</div>` : ""}
     ${officers.length ? `<div class="leader-block"><h4>Constitutional officers</h4>
       <p class="muted small">Elected countywide to run the county's courts records, law enforcement, property values, taxes and elections.</p>
@@ -1082,6 +1085,9 @@ function county() {
 const BOUNDARIES = {
   counties: "fl-counties", cities: "fl-cities", congress: "fl-congress", senate: "fl-senate", house: "fl-house",
   commission: "county-commission", school: "school-board", cityDistricts: "city-districts", special: "special-districts",
+  circuits: "fl-circuits", statewide: "fl-state",
+  sheriff: "fl-counties", clerk: "fl-counties", appraiser: "fl-counties", taxCollector: "fl-counties",
+  elections: "fl-counties", superintendent: "fl-counties",
 };
 /** The "Show" dropdown, grouped by level of government. */
 /** The county's map names this seat's commissioner: match a record that has no district number by surname. */
@@ -1091,11 +1097,22 @@ function sameSurname(r, name) {
   return fold(name).split(/\s+/).includes(fold(r.last_name).split(/\s+/).pop());
 }
 
+/** Which level of officials each map layer shows, and the layer that best shows each level (chips <-> dropdown). */
+const LAYER_LEVEL = { commission: "county", school: "county", cities: "municipal", cityDistricts: "municipal",
+  special: "special", house: "state", senate: "state", congress: "federal", statewide: "state", circuits: "courts",
+  sheriff: "county", clerk: "county", appraiser: "county", taxCollector: "county", elections: "county", superintendent: "county" };
+const LEVEL_LAYER = { federal: "congress", state: "house", county: "commission", municipal: "cities", special: "special", courts: "circuits" };
+
+/** One layer per countywide office: every county shaded, with its office holder's portrait. */
+const countyOffice = (key, label, title) => ({ key, label, area: "state", countyShapes: true,
+  holder: (r, p) => r.office_title === title && r.county === p.county, name: (p) => `${p.county} County` });
+
 const LAYER_GROUPS = [
-  ["Counties (all of Florida)", ["commission", "school"]],
+  ["Counties (all of Florida)", ["commission", "school", "sheriff", "clerk", "appraiser", "taxCollector", "elections", "superintendent"]],
   ["Cities", ["cities", "cityDistricts"]],
   ["Special districts (South Florida)", ["special"]],
-  ["State", ["house", "senate"]],
+  ["Courts", ["circuits"]],
+  ["State", ["statewide", "house", "senate"]],
   ["Federal", ["congress"]],
 ];
 /** Counties mapped down to county, school board, city and special districts. */
@@ -1133,6 +1150,18 @@ const MAP_LAYERS = [
   { key: "special", label: "Special districts", area: "region", holder: () => false, name: (p) => SPECIAL.get(p.key)?.name || p.key,
     info: (p) => SPECIAL.get(p.key) || { name: p.key, type: "Special district", status: p.status } },
   { key: "congress", partisan: true, label: "U.S. House", holder: (r, p) => r.office_title === "U.S. Representative" && isSeat(r, p.district), name: (p) => `Congressional District ${p.district}` },
+  { key: "statewide", label: "Statewide officials", area: "state", wholeArea: true, noun: "official", faces: true,
+    member: (r) => r.office_title === "U.S. Senator" || (r.government_level === "state" && r.statewide && !/justice|judge/i.test(r.office_title)),
+    holder: () => false, name: () => "Florida" },
+  { key: "circuits", label: "Circuit courts (judges)", area: "state", wholeArea: true, noun: "judge",
+    member: (r, p) => /^circuit judge$/i.test(r.office_title) && (r.county ? p.counties.includes(r.county) : (r.counties || []).some((c) => p.counties.includes(c))),
+    holder: () => false, name: (p) => p.name },
+  countyOffice("sheriff", "Sheriffs", "Sheriff"),
+  countyOffice("clerk", "Clerks of Court", "Clerk of the Circuit Court"),
+  countyOffice("appraiser", "Property appraisers", "Property Appraiser"),
+  countyOffice("taxCollector", "Tax collectors", "Tax Collector"),
+  countyOffice("elections", "Supervisors of Elections", "Supervisor of Elections"),
+  countyOffice("superintendent", "School superintendents", "Superintendent of Schools"),
 ];
 const BROWARD_VIEW = [[26.33, -80.47], [25.95, -80.07]];
 const MIAMI_DADE_VIEW = [[25.98, -80.88], [25.23, -80.12]];
@@ -1153,6 +1182,7 @@ const BORDER_STYLE = {
   house: { color: "#6b2a7a", dashArray: "6 4", short: (p) => `House ${p.district}` },
   senate: { color: "#0b6e79", dashArray: "12 6", short: (p) => `Senate ${p.district}` },
   congress: { color: "#b3262e", dashArray: null, short: (p) => `CD ${p.district}` },
+  circuits: { color: "#3d3d8f", dashArray: "14 4 2 4", short: (p) => p.name.replace(" Judicial Circuit", "") },
   special: { color: "#2457a6", dashArray: "3 4", short: (p) => SPECIAL.get(p.key)?.name.replace(/ (Water Control|Improvement|Drainage|Community Development|Water Management|Irrigation and Soil Conservation) District$/, "") || p.key },
 };
 function partyColor(party, vacant = false) {
@@ -1231,7 +1261,7 @@ function reps() {
             <details class="borders-menu" id="rep-borders">
               <summary><span>Borders</span> <span class="count" id="rep-border-count" hidden></span></summary>
               <fieldset class="borders-list"><legend class="sr-only">Show district borders</legend>
-                ${MAP_LAYERS.map((l) => `<label class="border-option"><input type="checkbox" data-border="${l.key}">
+                ${MAP_LAYERS.filter((l) => BORDER_STYLE[l.key]).map((l) => `<label class="border-option"><input type="checkbox" data-border="${l.key}">
                   <svg class="line-swatch" viewBox="0 0 24 6" aria-hidden="true"><line x1="1" y1="3" x2="23" y2="3" stroke="${BORDER_STYLE[l.key].color}" stroke-width="2.5" ${BORDER_STYLE[l.key].dashArray ? `stroke-dasharray="${BORDER_STYLE[l.key].dashArray}"` : ""}/></svg>
                   <span>${esc(l.label.replace(" (mayors)", ""))}</span></label>`).join("")}
                 <p class="muted small borders-note">The coloured layer already shows its own borders.</p>
@@ -1294,6 +1324,11 @@ function reps() {
           .map((c) => ({ type: "Feature", geometry: c.geometry, properties: { county: c.properties.name, whole: true, district: null } }));
         return { ...data, features: [...data.features.filter((f) => mapped.has(f.properties.county)), ...whole] };
       }
+      if (spec.countyShapes) return { ...data, features: data.features.map((f) => ({ ...f, properties: { ...f.properties, county: f.properties.name } })) };
+      if (spec.wholeArea) {
+        return { ...data, features: data.features.map((f) => ({ ...f, properties: { ...f.properties, whole: true,
+          county: f.properties.counties?.length === 1 ? f.properties.counties[0] : undefined } })) };
+      }
       if (spec.key !== "cities") return data;
       const listed = new Set(records.filter((r) => r.municipality).map((r) => r.municipality));
       const countyOf = (f) => { const p = labelPoint(f.geometry); return p && countyShapes.find((c) => pointInGeometry(p[0], p[1], c.geometry))?.properties.name; };
@@ -1309,9 +1344,9 @@ function reps() {
       const tally = {};
       for (const m of members) if (m.party && m.party !== "Nonpartisan") tally[m.party] = (tally[m.party] || 0) + 1;
       const top = Object.entries(tally).sort((a, b) => b[1] - a[1])[0];
-      return { board: true, members, county: p.county, full_name: plural(members.length, "member"),
+      return { board: true, members, county: p.county, full_name: plural(members.length, spec.noun || "member"),
         party: top && top[1] > members.length / 2 ? top[0] : null,
-        names: members.map((m) => m.full_name).join(", ") };
+        names: members.slice(0, 6).map((m) => m.full_name).join(", ") + (members.length > 6 ? ` and ${members.length - 6} more` : "") };
     }
 
     // Border overlays, independent of the coloured layer.
@@ -1382,7 +1417,7 @@ function reps() {
       const placed = [];
       const size = 44;
       for (const marker of markers.getLayers()) {
-        const at = map.latLngToContainerPoint(marker.getLatLng());
+        const at = map.latLngToContainerPoint(marker.getLatLng()).add([marker.options.shiftX || 0, 0]);
         const inView = at.x > -size && at.y > -size && at.x < map.getSize().x + size && at.y < map.getSize().y + size;
         const clear = inView && placed.every((p) => Math.abs(p.x - at.x) >= size || Math.abs(p.y - at.y) >= size);
         if (clear) placed.push(at);
@@ -1432,7 +1467,7 @@ function reps() {
                 : row.holder?.board ? `${esc(row.holder.full_name)}${row.holder.party ? ` · majority ${esc(partyLabel(row.holder.party))}` : ""}`
                 : `${esc(row.title)}${row.holder?.party ? ` · ${esc(partyLabel(row.holder.party))}` : ""}`}</span></span>
           </button>
-          ${row.holder?.board ? `<a class="small" href="county.html?name=${encodeURIComponent(row.holder.county || "")}">County</a>`
+          ${row.holder?.board ? (row.holder.county ? `<a class="small" href="county.html?name=${encodeURIComponent(row.holder.county)}">County</a>` : "")
             : row.holder ? `<a class="small" href="${profileHref(row.holder)}">Profile</a>` : safeUrl(row.info?.website) ? `<a class="small" href="${esc(row.info.website)}" target="_blank" rel="noopener noreferrer">Website</a>` : ""}</li>`).join("")}</ul>
 `;
     }
@@ -1476,10 +1511,23 @@ function reps() {
         row.layer.on("mouseover", () => highlight(i, true));
         row.layer.on("mouseout", () => highlight(i, false));
         const at = labelPoint(row.feature.geometry);
-        if (row.holder?.board && at) {
+        if (row.holder?.board && at && spec.faces && row.holder.members.length <= 8) {
+          // A small group: each person's portrait in a row at the area's centre.
+          const n = row.holder.members.length;
+          row.holder.members.forEach((m, k) => {
+            const icon = portrait(m);
+            const shift = (k - (n - 1) / 2) * 46;
+            const anchor = icon.options.iconAnchor || [20, 20];
+            L.marker([at[1], at[0]], { icon: L.divIcon({ ...icon.options, iconAnchor: [anchor[0] - shift, anchor[1]] }),
+              title: `${m.full_name}, ${m.office_title}`, keyboard: true, shiftX: shift })
+              .bindPopup(`<strong>${esc(m.full_name)}</strong><br>${esc(m.office_title)}<br><a href="${profileHref(m)}">View profile</a>`)
+              .addTo(markers);
+          });
+        } else if (row.holder?.board && at) {
           L.marker([at[1], at[0]], { icon: L.divIcon({ className: "rep-marker", html: `<span class="board-marker">${row.holder.members.length}</span>`, iconSize: [34, 34], iconAnchor: [17, 17] }),
             title: `${row.title}: ${row.holder.names}`, keyboard: true })
-            .bindPopup(`<strong>${esc(row.title)}</strong><br>${row.holder.members.map((m) => `<a href="${profileHref(m)}">${esc(m.full_name)}</a>`).join("<br>")}`)
+            .bindPopup(`<strong>${esc(row.title)}</strong><br>${row.holder.members.slice(0, 12).map((m) => `<a href="${profileHref(m)}">${esc(m.full_name)}</a>`).join("<br>")}${
+              row.holder.members.length > 12 ? `<br><span class="muted">and ${row.holder.members.length - 12} more</span>` : ""}`, { maxHeight: 280 })
             .addTo(markers);
         } else if (row.holder && at) {
           L.marker([at[1], at[0]], { icon: portrait(row.holder), title: `${row.holder.full_name}, ${row.title}`, keyboard: true })
@@ -1585,13 +1633,17 @@ function reps() {
         { label: "Florida House", feature: featureAt(house, lon, lat) },
       ];
       const local = LOCAL_COUNTIES.includes(county);
-      if (local) {
+      // County seat maps exist for some counties beyond South Florida; a seat counts only if the directory knows its holder.
+      const seatKnown = (key, feature) => feature && records.some((r) => MAP_LAYERS.find((l) => l.key === key).holder(r, feature.properties));
+      const countyLayers = (await Promise.all(["commission", "school"].map(loadBoundary))).map((l) => l.features.filter((f) => f.properties.county === county));
+      if (local || countyLayers.some((fs) => fs.length)) {
         const mine = (layer) => ({ ...layer, features: layer.features.filter((f) => f.properties.county === county) });
         const [commission, school, cityDistricts] = (await Promise.all(["commission", "school", "cityDistricts"].map(loadBoundary))).map(mine);
         const own = cityDistricts.features.filter((f) => f.properties.municipality === place.municipality);
         const cityDistrict = own.find((f) => pointInGeometry(lon, lat, f.geometry));
+        const commissionHere = featureAt(commission, lon, lat);
         Object.assign(place, {
-          commission: featureAt(commission, lon, lat)?.properties.district,
+          commission: seatKnown("commission", commissionHere) ? commissionHere.properties.district : null,
           school: featureAt(school, lon, lat)?.properties.district,
           schoolDistricts: school.features.map((f) => f.properties.district),
           cityDistricts: own.map((f) => f.properties.district),
@@ -1606,7 +1658,7 @@ function reps() {
       place.special = specialHere?.properties.key || null;
       place.countywideSpecial = [...SPECIAL.values()].filter((d) => d.area !== "mapped" && (!d.county || d.county === county)).map((d) => d.key);
       const hasSpecial = Boolean(place.special) || place.countywideSpecial.length > 0;
-      if (specialHere) hits.splice(local ? 5 : 3, 0, { label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
+      if (specialHere) hits.splice(hits.length >= 5 ? 5 : 3, 0, { label: SPECIAL.get(place.special)?.name || place.special, feature: { ...specialHere, properties: { ...specialHere.properties, district: "" } } });
 
       // One outline at a time: the most local district, or whichever label the visitor points at.
       const found = hits.filter((h) => h.feature);
@@ -1653,6 +1705,7 @@ function reps() {
             ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
               : `<ul class="people">${s.items.map((r) => personCard(r, { contact: true })).join("")}</ul>`}`).join("")).join("")}
         </details>` : ""}`;
+      applyLevel(LAYER_LEVEL[activeLayer] || "");
       if (!activeLayer) {
         const local = found.at(-1);
         map.fitBounds((local ? L.geoJSON(local.feature).getBounds() : L.latLngBounds([[lat, lon], [lat, lon]])).pad(0.2), { maxZoom: 15 });
@@ -1750,6 +1803,18 @@ function reps() {
         { enableHighAccuracy: false, timeout: 15000 },
       );
     });
+    /** Press one level chip and show only that level's officials ("" = all). Falls back to All if absent. */
+    function applyLevel(level) {
+      const chips = [...panel.querySelectorAll("[data-level-filter]")];
+      if (!chips.length) return;
+      const pick = chips.find((c) => c.dataset.levelFilter === level) || chips[0];
+      level = pick.dataset.levelFilter;
+      for (const chip of chips) chip.setAttribute("aria-pressed", String(chip === pick));
+      for (const block of panel.querySelectorAll("[data-level]")) block.hidden = Boolean(level) && block.dataset.level !== level;
+      const courts = panel.querySelector('details[data-level="courts"]');
+      if (courts && level === "courts") courts.open = true;
+    }
+
     map.on("click", (event) => lookup(event.latlng.lat, event.latlng.lng, "Point chosen on the map"));
     $("#rep-layer").addEventListener("change", (event) => {
       showLayer(event.target.value, { select: true }).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
@@ -1769,10 +1834,12 @@ function reps() {
       const filter = event.target.closest("[data-level-filter]");
       if (filter) {
         const level = filter.dataset.levelFilter;
-        for (const chip of panel.querySelectorAll("[data-level-filter]")) chip.setAttribute("aria-pressed", String(chip === filter));
-        for (const block of panel.querySelectorAll("[data-level]")) block.hidden = Boolean(level) && block.dataset.level !== level;
-        const courts = panel.querySelector('details[data-level="courts"]');
-        if (courts && level === "courts") courts.open = true;
+        applyLevel(level);
+        // The map follows the chip: County shows the commission districts, State the Florida House, and so on.
+        const layer = LEVEL_LAYER[level];
+        if (layer !== undefined && LAYER_LEVEL[activeLayer] !== level) {
+          showLayer(layer, { keepView: true }).catch(() => {});
+        }
       }
       if (event.target.closest("[data-back-to-results]") && lastLookup) {
         lookup(lastLookup.lat, lastLookup.lon, lastLookup.label);

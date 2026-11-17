@@ -147,6 +147,17 @@ def build_statewide() -> dict[str, dict]:
     out["fl-counties"] = collection(
         [feature(f["geometry"], name=f["properties"]["BASENAME"]) for f in counties], "census", "Florida's 67 counties.",
     )
+    # Judicial circuits and the state outline: unions of the county shapes (circuits follow county lines by law).
+    from shapely.geometry import mapping, shape
+    from shapely.ops import unary_union
+    from collector.scrapers.fl_judges import CIRCUITS, circuit_name
+    shapes = {f["properties"]["BASENAME"]: shape(f["geometry"]).buffer(0) for f in counties}
+    out["fl-circuits"] = collection(
+        [feature(mapping(unary_union([shapes[c] for c in names if c in shapes]).simplify(0.002)),
+                 circuit=str(n), name=circuit_name(n), counties=names) for n, names in CIRCUITS.items()],
+        "census", "Florida's 20 judicial circuits (unions of their counties, s. 26.021, Florida Statutes).")
+    out["fl-state"] = collection(
+        [feature(mapping(unary_union(list(shapes.values())).simplify(0.003)), name="Florida")], "census", "Florida.")
     places = tiger("Places_CouSub_ConCity_SubMCD", 4, "BASENAME,NAME,LSADC")
     out["fl-cities"] = collection(
         [feature(f["geometry"], name=f["properties"]["BASENAME"]) for f in places], "census",

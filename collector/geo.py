@@ -47,3 +47,15 @@ def parse_county_list(text: str | None) -> list[str]:
         if county and county not in found:
             found.append(county)
     return found
+
+
+# Board of county commissioners size. Florida Constitution art. VIII, s. 1(e): five members unless a county's charter
+# provides otherwise (seven in the charter counties below; Broward 9 and Miami-Dade 13 by charter). County mayors are
+# counted separately. Used to check commission lists against an independent number, not against what a page showed.
+COMMISSION_SEATS = {"Broward": 9, "Miami-Dade": 13, "Hillsborough": 7, "Palm Beach": 7, "Pinellas": 7, "Leon": 7,
+                    "Manatee": 7, "Volusia": 7, "Orange": 6}
+DEFAULT_COMMISSION_SEATS = 5
+
+
+def commission_seats(county: str) -> int:
+    return COMMISSION_SEATS.get(county, DEFAULT_COMMISSION_SEATS)

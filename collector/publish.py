@@ -27,7 +27,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from collector.geo import FLORIDA_COUNTIES, canonical_county
+from collector.geo import FLORIDA_COUNTIES, canonical_county, commission_seats
 from collector.normalize import (
     normalize_email,
     normalize_party,
@@ -344,10 +344,63 @@ def _standin_mayors(standins: dict, records: list[dict]) -> list[dict]:
     return out
 
 
+def _districts_from_maps(records: list[dict], seat_maps: dict) -> None:
+    """A county commissioner with no district number gets one when the county's own district map names them for
+    exactly one district (tools/build_boundaries.py keeps that name as the "member" property)."""
+    fold = lambda t: re.sub(r"[^a-z ]", "", (t or "").lower())  # noqa: E731
+    named: dict[str, list[tuple[str, str]]] = {}
+    for f in seat_maps.get("features", []):
+        p = f.get("properties", {})
+        if p.get("member") and p.get("district"):
+            named.setdefault(p["county"], []).append((p["district"], fold(p["member"]).split()))
+    for r in records:
+        if r.get("district") or r.get("office_title") != "County Commissioner" or r.get("county") not in named:
+            continue
+        last = fold(r.get("last_name")).split()
+        hits = {d for d, words in named[r["county"]] if last and last[-1] in words}
+        if len(hits) == 1:
+            r["district"] = hits.pop()
+            r.setdefault("seat_label", None)
+            r["seat_label"] = r["seat_label"] or f"District {r['district']}"
+
+
+def _prune_commissions(records: list[dict], seat_maps: dict) -> tuple[list[dict], list[str]]:
+    """Drop county commissioners listed only by the counties association when an official county source disagrees:
+    the county's own page or elections office lists the commission, or the county's seat map names every district's
+    member and this person matched none. Returns (kept records, report lines)."""
+    is_cc = lambda r: r.get("office_title") == "County Commissioner"  # noqa: E731
+    assoc = lambda r: bool(ASSOCIATION.search(r.get("source_name") or ""))  # noqa: E731
+    official = {r["county"] for r in records if is_cc(r) and not assoc(r) and r.get("verification_status") != "unconfirmed"}
+    mapped: dict[str, set[str]] = {}
+    for f in seat_maps.get("features", []):
+        p = f.get("properties", {})
+        if p.get("member"):
+            mapped.setdefault(p["county"], set()).add(p["district"])
+    kept, notes = [], []
+    for r in records:
+        county = r.get("county")
+        full_map = county in mapped and len(mapped[county]) >= commission_seats(county)
+        if is_cc(r) and assoc(r) and (county in official or (full_map and not r.get("district"))):
+            notes.append(f"{r['full_name']} ({county} County Commissioner) left out: listed only by the counties association, "
+                         "and the county's own source names someone else")
+            continue
+        kept.append(r)
+    return kept, notes
+
+
+def commission_mismatches(records: list[dict]) -> list[dict]:
+    """Counties whose commission list doesn't match the board's size in law."""
+    counts: dict[str, int] = {}
+    for r in records:
+        if r.get("office_title") == "County Commissioner" and r.get("county"):
+            counts[r["county"]] = counts.get(r["county"], 0) + 1
+    return [{"county": c, "listed": n, "seats": commission_seats(c)} for c, n in sorted(counts.items()) if n != commission_seats(c)]
+
+
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
           wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None,
-          standins: dict | None = None):
+          standins: dict | None = None, seat_maps: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -398,7 +451,13 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             kept = first[record["id"]]
             if record["verification_status"] == "manual" or kept["verification_status"] == "manual":
                 warnings.append(f"'{record['id']}' appears twice; the second copy was skipped")
-            _fill(kept, record)  # two official sources list the same person in the same seat
+            if ASSOCIATION.search(kept.get("source_name") or "") and not ASSOCIATION.search(record.get("source_name") or ""):
+                # The county's own source outranks a statewide association for the same person and seat.
+                _fill(record, kept)
+                unique[unique.index(kept)] = record
+                first[record["id"]] = record
+            else:
+                _fill(kept, record)  # two official sources list the same person in the same seat
             continue
         seen.add(record["id"])
         first[record["id"]] = record
@@ -410,6 +469,9 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
     _apply_profiles(by_id, profiles or {}, warnings)
     _apply_wikipedia(by_id, wikipedia or {})
     _apply_districts(unique, districts or {})
+    _districts_from_maps(unique, seat_maps or {})
+    unique, dropped = _prune_commissions(unique, seat_maps or {})
+    warnings += dropped
 
     for record_id, fields in corrections.items():
         if record_id.startswith("_"):
@@ -483,6 +545,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
             ),
         },
         "county_coverage": county_coverage(unique),
+        "commission_mismatches": commission_mismatches(unique),
         "county_links": (links or {}).get("counties", {}),
         "county_coverage_columns": [{"key": k, "label": label} for k, label in COUNTY_OFFICES],
         "vacancies": _vacancies(vacancies or {}),
@@ -555,6 +618,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         special=load_json(data_dir / "special_districts.json", {}),
         links=load_json(data_dir / "county_links.json", {}),
         standins=load_json(data_dir / "wikipedia_mayors.json", {}),
+        seat_maps=load_json(ROOT / "site" / "assets" / "boundaries" / "county-commission.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731
