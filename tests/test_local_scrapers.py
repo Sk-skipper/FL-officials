@@ -288,3 +288,15 @@ def test_office_holder_reads_superintendent_with_a_doctor_title():
     from collector.scrapers.office_holder import find_holder, pick
     assert pick(find_holder(["Superintendent Dr. Maria Lopez", "Message from the Superintendent"],
                             "Superintendent(?: of Schools)?")) == "Maria Lopez"
+
+
+def test_fl_judges_keeps_each_seats_latest_winner():
+    from collector.scrapers.fl_judges import parse_judges
+    head = "OfficeDesc\tJuris1num\tJuris2num\tStatusDesc\tNameFirst\tNameMiddle\tNameLast\n"
+    newest = head + "Circuit Judge\t002\t003\tUnopposed\tANN\t\tLEE\nCircuit Judge\t002\t004\tDefeated\tBob\t\tLoser\n"
+    older = head + "Circuit Judge\t002\t003\tElected\tOld\t\tJudge\nCircuit Judge\t002\t004\tElected\tCara\tM.\tWin\n" + "".join(
+        f"Circuit Judge\t005\t{g}\tElected\tJo\t\tSeat{g}\n" for g in range(1, 200))
+    judges = {(j["jurisdiction"], j["district"]): j for j in parse_judges([newest, older], "https://example.gov")}
+    assert judges[("2nd Judicial Circuit", "3")]["name"] == "Ann Lee"
+    assert judges[("2nd Judicial Circuit", "4")]["name"] == "Cara M. Win"
+    assert judges[("2nd Judicial Circuit", "3")]["counties"][3] == "Leon"

@@ -196,3 +196,10 @@ test("representativesFor leaves out Miami-Dade community councils, which have no
   assert.deepEqual(names.sort(), ["Comm Five", "Mayor M"]);
   assert.equal(groups[0].sections[0].name, "County Commission");
 });
+
+test("a judge in a multi-county circuit is found from any of its counties", () => {
+  const judge = { full_name: "Ann Lee", office_title: "Circuit Judge", government_level: "county", county: null, counties: ["Gadsden", "Leon"] };
+  const { judges } = representativesFor([judge], { county: "Leon" });
+  assert.equal(judges.length, 1);
+  assert.equal(representativesFor([judge], { county: "Duval" }).judges.length, 0);
+});

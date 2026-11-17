@@ -3612,5 +3612,23 @@
       "county": "Wakulla",
       "office_title": "Tax Collector"
     }
+  },
+  {
+    "key": "fl_circuit_judges",
+    "name": "Florida Division of Elections: judicial candidates (circuit judges)",
+    "url": "https://dos.elections.myflorida.com/candidates/downloadcanlist.asp",
+    "level": "county",
+    "scraper": "fl_judges",
+    "config": {
+      "elections": [
+        "20261103-GEN",
+        "20241105-GEN",
+        "20221108-GEN"
+      ],
+      "skip_circuits": [
+        11,
+        17
+      ]
+    }
   }
 ]
