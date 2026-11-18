@@ -29,6 +29,7 @@ and the source fails with a clear message, so the previous records stay publishe
 import re
 import unicodedata
 from difflib import SequenceMatcher
+from functools import lru_cache
 from urllib.parse import urljoin, urlsplit
 
 from bs4 import BeautifulSoup
@@ -48,23 +49,33 @@ _SEAT_NUMBER = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", 
                 "i": "1", "ii": "2", "iii": "3", "iv": "4", "v": "5", "vi": "6", "vii": "7"}
 _TITLE_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?:(?:District|Seat|Group)\s*\w{{1,2}}\s+)?(?P<title>{TITLE})\b[\s,:\-–—]*(?P<name>{NAME})(?P<rest>(?:[\s,(\-–—|:].*)?)$")
 _NAME_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})\s*(?:[,\-–—|:]\s*|\s+(?=Council|Vice|Mayor|Commissioner))(?P<seatfirst>{SEATWORD}\s+)?(?P<title>{TITLE})\b(?P<rest>.*)$")
+_TITLE_NAME = re.compile(rf"\b(?:{TITLE})\s+{NAME}")
 _NAME_ONLY = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})$")
 _TITLE_ONLY = re.compile(rf"^(?:City |Town |Village )?(?P<title>{TITLE}|Council(?=,?\s*(?:Seat|District|Group)))\b(?P<rest>[^a-z]{{0,40}}|"
                          rf"\s*(?:[·•|/]|at[- ]large).{{0,40}}|[\s,\-–—]*(?:of|for)?\s*(?:District|Seat|Group|Ward|Zone|At[- ]Large).{{0,30}})$", re.I)
 STAFF = re.compile(r"\b(manager|clerk|attorney|assistant|aide|liaison|secretary|former|emeritus|director|staff|candidate|"
                    r"executive|coordinator|police|fire|chief|department|committee|board of|appointed to|county)\b", re.I)
+# With a real title on the line ("Commissioner Jane Doe, liaison to the county"), only these mean "not a member".
+STAFF_TITLED = re.compile(r"\b(manager|clerk|attorney|assistant|aide|secretary|former|emeritus|interim|candidate)\b", re.I)
 NOT_A_NAME = re.compile(
     r"\b(City|Town|Village|Commission|Council|Meeting|Meetings|Agenda|District|Seat|Office|Offices|Contact|Email|Phone|"
-    r"Florida|Street|Avenue|Road|Boulevard|Beach|Lakes|Park|Center|Hall|Government|Department|Read|More|View|Click|"
-    r"Here|Message|Welcome|Biography|Bio|Members|Elected|Officials|Minutes|Calendar|Video|Watch|News|Proclamations|"
-    r"Newsletter|Request|State|County|Board|Chambers|Search|Menu|Home|About|Our|Your|The|And|Meet|Term|Expires|"
+    r"Florida|Boulevard|Government|Department|Click|"
+    r"Here|Message|Welcome|Biography|Members|Elected|Officials|Minutes|Calendar|Video|News|Proclamations|"
+    r"Newsletter|Request|State|County|Board|Chambers|Search|Menu|About|Our|Your|The|And|Meet|Term|Expires|"
     r"Elections?|Mayors?|Commissioners?|Vice|Deputy|Council(?:member|man|woman)?s?|Members?|Pro|Tem|Chair|Report|"
     r"Address|Cell|Fax|Mobile|Tel|Phone|Agendas|Updates|Info|Information|Services|Resources|Documents|Directory|"
     r"Seal|Official|Photo|Photos|Edited|Website|Events|Newsletters?|Gallery|Training|Ethics|Certifications?|Policy|"
-    r"Biography|Profile|Message|Corner|Annual|Economic|Empowerment|Initiative|Program|Programs|Turns|Who|Is|My|Find|"
-    r"Visit|Page|International|Trade|Consortium|Development|Advocacy|Legislative|Click|Email|Headshot|Show|Again|Arrow|"
-    r"Left|Right|Slideshow|Mission|Statement|Site|Map|Maps|Copyright|Notices|Together|Great|Make|Previous|Next|Close|Portrait|"
-    r"Committee|Strategic|Plan|Proclamations?|Citations|Zone|Pillar|All|Districts)\b|\bWard (?:One|Two|Three|Four|Five|Six|I{1,3}|IV|V|\d)\b")
+    r"Biography|Profile|Message|Annual|Economic|Empowerment|Initiative|Program|Programs|Who|Is|My|"
+    r"International|Consortium|Development|Advocacy|Legislative|Click|Email|Headshot|Arrow|"
+    r"Slideshow|Statement|Site|Map|Maps|Copyright|Notices|Together|Previous|Next|Portrait|"
+    r"Committee|Strategic|Proclamations?|Citations|Zone|All|Districts)\b|\bWard (?:One|Two|Three|Four|Five|Six|I{1,3}|IV|V|\d)\b")
+# Words that are also surnames (Mary Park, Grace Hall, John Beach): they reject a "name" only when every word of it is
+# one of these or a hard word above ("City Hall", "Read More"), never a real person who happens to carry one.
+AMBIGUOUS_WORDS = re.compile(r"(?i)^(?:Beach|Lakes|Park|Center|Hall|Read|More|View|Page|Great|Make|Close|Left|Right|Street|Road|Avenue|Mission|Trade|Watch|Home|Corner|Show|Find|Visit|Turns|Bio|Plan|Pillar|Again)$")
+# Headline words a greedy name match can swallow ("Mayor Josh Levy Announces 2026 Budget").
+HEADLINE_WORDS = re.compile(r"(?i)^(?:Announces?|Named|Sworn|Appointed|Presents?|Welcomes?|Hosts?|Celebrates?|Signs?|Votes?|"
+                            r"Says|Joins|Receives?|Honou?red|Recognized|Proclaims?|Delivers?|Speaks?|Visits?|Attends?|Leads?|"
+                            r"Launches|Releases|Thanks|Invites?|Shares|Message|Update|Updates|Statement|Corner|Newsletter)$")
 CARD_NOT_A_NAME = re.compile(r"\b(District|Seat|Commission|Commissioners?|Council|Programs?|Office|City|Town|Village|Policy|"
                              r"Services|Department|Division|Recreation|Compliance|Resources|Works|Gardens|Biography|Events|"
                              r"Meetings?|Agendas?|Vacant|Vacancy|Information|Contact|Elections?|Members?)\b", re.I)
@@ -73,14 +84,39 @@ RANK = {"president": 0, "vice president": 1, "mayor": 0, "vice mayor": 1, "deput
         "council vice president": 1, "chair": 0, "vice chair": 1}
 
 
+@lru_cache(maxsize=16)
+def _read_only_soup(html: str) -> BeautifulSoup:
+    """One parse per page for the readers that only look (cards, photos); page_lines edits its own copy."""
+    return BeautifulSoup(html, "lxml")
+
+
 def _clean_name(raw: str, strict: bool = True) -> str | None:
     name = clean_text(re.sub(r"^(?:Dr|Hon|Rev)\.?\s+", "", raw))
+    name = re.sub(r"['’]s\b.*$", "", name)  # "Jane Doe's Message" -> "Jane Doe"
     name = re.sub(r"\s*,\s*(Esq|Ph\.?D|M\.?D)\.?$", "", name)
+    words = name.split()
+    while words and HEADLINE_WORDS.match(words[-1]):  # "Josh Levy Announces" -> "Josh Levy"
+        words.pop()
+    half = len(words) // 2
+    if len(words) >= 4 and len(words) % 2 == 0 and words[:half] == words[half:]:
+        words = words[:half]  # "Eileen Higgins Eileen Higgins" (photo caption + heading on one line)
+    name = " ".join(words)
     tokens = [t for t in re.split(r"\s+", name) if not re.fullmatch(r"[\"“'(].*[\"”')]", t)]
     if len(tokens) < 2 or len(tokens) > 6 or not re.match(r"[A-ZÁÉÍÓÚÑ]", name) or CARD_NOT_A_NAME.search(name) \
-            or (strict and NOT_A_NAME.search(name)):
+            or (strict and NOT_A_NAME.search(name)) \
+            or all(AMBIGUOUS_WORDS.match(t) or NOT_A_NAME.fullmatch(t) for t in tokens if not re.fullmatch(r"[A-Z]\.?", t)):
         return None
     return name
+
+
+def _smart_title(line: str) -> str:
+    """An ALL-CAPS roster line in normal case: "MAYOR JOHN MCDONALD" -> "Mayor John McDonald"."""
+    if not line.isupper() or len(re.findall(r"[A-Z]", line)) < 6:
+        return line
+    t = line.title()
+    t = re.sub(r"\bMc([a-z])", lambda m: "Mc" + m.group(1).upper(), t)
+    t = re.sub(r"\bMac([a-z])(?=[a-z]{3})", lambda m: "Mac" + m.group(1).upper(), t)
+    return re.sub(r"['’]S\b", "'s", t).replace(" Iii", " III").replace(" Ii", " II").replace(" Iv", " IV")
 
 
 def _title(raw: str, member_title: str) -> str:
@@ -167,21 +203,33 @@ _SEAT_NAME = re.compile(rf"^{SEATWORD}\s*[,:|\-–—]\s*(?:(?P<title>{TITLE})\s
 _SEAT_LINE = re.compile(rf"\(?(?:{SEATWORD}|At[- ]Large(?:,?\s*Group\s*\d+)?)\)?", re.I)
 
 
+def _same_person(a: str, b: str) -> bool:
+    """"Josh Levy" / "Joshua Levy" / "Joshua A. Levy": same surname, and one first name begins the other."""
+    def parts(n):
+        t = [re.sub(r"[^a-z]", "", w) for w in n.lower().split() if w.strip(".,") not in ("jr", "sr", "ii", "iii", "iv")]
+        return [w for w in t if w]
+    pa, pb = parts(a), parts(b)
+    if not pa or not pb or pa[-1] != pb[-1]:
+        return False
+    fa, fb = pa[0], pb[0]
+    return fa.startswith(fb) or fb.startswith(fa) or SequenceMatcher(None, a.lower(), b.lower()).ratio() > 0.85
+
+
 def find_members(lines: list[str], member_title: str, exclude: set[str] | None = None, loose: bool = False,
                  seat_lines: bool = False) -> list[dict]:
     """Every (name, title, seat) the lines describe, best title per person."""
     exclude = {e.lower() for e in exclude or ()}
     found: dict[str, dict] = {}
 
-    def add(name_raw: str, title_raw: str, context: str):
-        if STAFF.search(context):
+    def add(name_raw: str, title_raw: str, context: str, titled: bool = False):
+        if (STAFF_TITLED if titled else STAFF).search(context):
             return
         name = _clean_name(name_raw)
         if not name or name.lower() in exclude:
             return
         title = _title(title_raw, member_title)
         tokens = [t for t in name.lower().replace(",", " ").split() if t.strip(".") not in ("jr", "sr", "ii", "iii", "iv")]
-        key = re.sub(r"[^a-z]", "", tokens[-1]) + tokens[0][0]
+        key = re.sub(r"[^a-z]", "", "".join(tokens))  # full name: John Smith and Jane Smith stay two people
         seat = _seat(context)
         prev = found.get(key)
         if prev is None:
@@ -198,15 +246,22 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
     follow = sum(1 for i in names if i + 1 < len(lines) and _TITLE_ONLY.match(lines[i + 1]))
     precede = sum(1 for i in names if i > 0 and _TITLE_ONLY.match(lines[i - 1]))
     titles_follow = follow >= precede
+    lines = [_smart_title(line) for line in lines]
     for i, line in enumerate(lines):
+        pairs = list(_TITLE_NAME.finditer(line))
+        if len(pairs) > 1 and re.search(r"\band\b|;|&", line):  # "Commissioner Jane Doe (District 1) and Commissioner John Roe (District 2)"
+            for part in re.split(r"\s+(?:and|&)\s+|;\s*", line):
+                if pm := _TITLE_FIRST.match(part.strip()):
+                    add(pm["name"], pm["title"], part, titled=True)
+            continue
         m = _TITLE_FIRST.match(line) or _NAME_FIRST.match(line)
         if m:
-            add(m["name"], m["title"], line)
+            add(m["name"], m["title"], line, titled=True)
             continue
         if seat_lines and (sm := _SEAT_NAME.match(line)):
             # "District 1, Jane Doe" or "District 1: Jane Doe, M.Ed., Chair" (config "seat_name_lines")
             role = next((t for t in re.split(r"\s*,\s*", sm["after"] or "") if re.fullmatch(TITLE, t.strip())), None)
-            add(sm["name"], sm["title"] or role or member_title, line)
+            add(sm["name"], sm["title"] or role or member_title, line, titled=bool(sm["title"] or role))
             continue
         n = _NAME_ONLY.match(line)
         if not n:
@@ -227,12 +282,15 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
 
     members = []
     for m in found.values():
-        twin = next((x for x in members if x["name"].split()[0] == m["name"].split()[0]
-                     and SequenceMatcher(None, x["name"].lower(), m["name"].lower()).ratio() > 0.85), None)
+        twin = next((x for x in members if _same_person(x["name"], m["name"])), None)
         if twin is None:
             members.append(m)
-        else:
+        else:  # one person written two ways: keep the higher title, a seat, and the fuller name
+            if RANK.get(m["title"].lower(), 5) < RANK.get(twin["title"].lower(), 5):
+                twin["title"] = m["title"]
             twin["seat"] = twin["seat"] or m["seat"]
+            if len(m["name"]) > len(twin["name"]) and '"' not in twin["name"]:
+                twin["name"] = m["name"]
     # A leadership title held by two people means one mention was stale (a former mayor in a slideshow, say):
     # those people keep the title they were first listed with.
     for title in ("Mayor", "Vice Mayor", "Council President", "Chair"):
@@ -242,11 +300,8 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
                 if m["first"] != title:
                     m["title"] = m["first"]
     if section := heading_section(lines, member_title):
-        known = {re.sub(r"[^a-z]", "", m["name"].lower()) for m in members}
         for m in section:
-            key = re.sub(r"[^a-z]", "", m["name"].lower())
-            if key not in known:
-                known.add(key)
+            if not any(_same_person(m["name"], x["name"]) for x in members):
                 members.append(m)
     return members
 
@@ -288,7 +343,7 @@ def _card_title(text: str) -> tuple[str | None, str]:
 
 def find_cards(html: str, url: str, member_title: str) -> list[dict]:
     """Granicus OpenCities and similar platforms: one <article> card per member, name in .list-item-title."""
-    soup = BeautifulSoup(html, "lxml")
+    soup = _read_only_soup(html)
     found = []
     for card in soup.select("article"):
         heading = card.select_one(".list-item-title")
@@ -308,6 +363,9 @@ def find_cards(html: str, url: str, member_title: str) -> list[dict]:
                     title = m.group(0)
                     break
         name = re.sub(r"\s*[,\-–—]?\s*(?:District|Seat|Group)\s*\w+$", "", name)
+        header = clean_text((heading.find_parent("header") or heading.parent).get_text(" "))[:120]
+        if re.search(r"(?i)\b(former|past|emeritus|retired|in memoriam)\b", header):
+            continue  # "Former Mayor Jane Doe": the leading word is cut from the title, so check the card's header
         if STAFF.search(f"{title or ''} {name}") or not _clean_name(name, strict=False):
             continue
         img = card.select_one("img[src]")
@@ -358,6 +416,11 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
         members = [m for m in find_board(lines, config["role_pattern"], member_title) if m["name"].lower() not in exclude]
     else:
         members = [m for html, url in pages for m in find_cards(html, url, member_title) if m["name"].lower() not in exclude]
+    if members and len(members) < int(config.get("seats") or 5) - 2:
+        # A stray card on a list-style page: read the lines too, and keep the cards' people plus any new ones.
+        lines = [line for html, url in pages for line in page_lines(html, config.get("selector"), url, bool(config.get("menu_links")))]
+        extra = find_members(lines, member_title, exclude, bool(config.get("loose")), bool(config.get("seat_name_lines")))
+        members += [m for m in extra if not any(_same_person(m["name"], x["name"]) for x in members)]
     if not members:
         lines = []
         for html, url in pages:
@@ -416,7 +479,7 @@ class CityRosterScraper(BaseScraper):
 # -- photos -----------------------------------------------------------------------------------------------------
 _NOT_A_HEADSHOT = re.compile(r"(?i)logo|seal|banner|icon|header|footer|flag|map|button|arrow|social|facebook|twitter|"
                              r"instagram|youtube|linkedin|spacer|placeholder|default|blank|background|hero|sprite|flyer|poster|event|agenda|"
-                             r"notice|news|announcement|workshop|meeting|calendar|signature|autograph|\bsig\b|building|courthouse|exterior|qr[ %_-]?code|coming(?:[ _-]|%20)*soon|webex|no[ _-]?image|\.svg(\?|$)")
+                             r"notice|news|announcement|workshop|meeting|calendar|signature|autograph|\bsig\b|building|courthouse|exterior|qr(?:[ _-]|%20)?code|coming(?:[ _-]|%20)*soon|webex|no[ _-]?image|\.svg(\?|$)")
 
 
 def _img_src(img, url: str) -> str | None:
@@ -435,7 +498,7 @@ def _fold(text: str) -> str:
 def match_photos(html: str, url: str, members: list[dict]) -> None:
     """Give each member without a photo the headshot that names them (alt text, title or file name) or that sits in the
     same small block of the page as their name. An image that would go to two people (a group photo) goes to nobody."""
-    soup = BeautifulSoup(html, "lxml")
+    soup = _read_only_soup(html)
     images = []
     for img in soup.select("img"):
         src = _img_src(img, url)

@@ -330,3 +330,44 @@ def test_match_photos_finds_headshots_by_name_or_position():
     assert photos["Jane Doe"] == "https://example.gov/uploads/jdoe.jpg"
     assert photos["Raúl Pérez"] == "https://example.gov/files/IMG_2231.jpg"  # beside the name; upgraded to https
     assert photos["Kim Lee"] is None and photos["Sam Ray"] is None  # one group photo: nobody gets it
+
+
+# Regression tests from the city_roster code review: each line once produced a wrong or missing member.
+def _members(lines, title="Commissioner"):
+    from collector.scrapers.city_roster import find_members
+    return {(m["name"], m["title"]) for m in find_members(lines, title)}
+
+
+def test_review_headline_verbs_and_possessives_are_trimmed():
+    got = _members(["Mayor Josh Levy Announces 2026 Budget", "Commissioner Ann Lee", "Mayor Jane Doe's Message"])
+    assert ("Josh Levy", "Mayor") in got and ("Ann Lee", "Commissioner") in got
+    assert not any("Announces" in n or "Message" in n for n, _ in got)
+
+
+def test_review_real_surnames_that_look_like_words_are_kept():
+    from collector.scrapers.city_roster import _clean_name
+    assert [_clean_name(n) for n in ("Mary Park", "Grace Hall", "John Beach", "Josh Street")] == ["Mary Park", "Grace Hall", "John Beach", "Josh Street"]
+    assert _clean_name("City Hall") is None and _clean_name("Read More") is None and _clean_name("View Page") is None
+
+
+def test_review_titled_members_with_committee_or_liaison_notes_are_kept():
+    got = _members(["Commissioner Jane Doe, liaison to the county", "Councilmember John Roe — Finance Committee",
+                    "City Manager Bob Fox", "Commissioner Ann Lee"])
+    assert {n for n, _ in got} == {"Jane Doe", "John Roe", "Ann Lee"}
+
+
+def test_review_same_surname_same_initial_are_two_people_but_nicknames_merge():
+    got = _members(["Commissioner John Smith", "Commissioner Jane Smith", "Mayor Josh Levy", "Commissioner Joshua Levy"])
+    assert {n for n, _ in got} == {"John Smith", "Jane Smith", "Joshua Levy"}
+    assert ("Joshua Levy", "Mayor") in got
+
+
+def test_review_two_members_on_one_line_and_all_caps_lines():
+    got = _members(["Commissioner Jane Doe (District 1) and Commissioner John Roe (District 2)",
+                    "MAYOR JOHN MCDONALD", "Commissioner Eileen Higgins Eileen Higgins"])
+    assert {n for n, _ in got} == {"Jane Doe", "John Roe", "John McDonald", "Eileen Higgins"}
+
+
+def test_review_qr_codes_are_not_headshots():
+    from collector.scrapers.city_roster import _NOT_A_HEADSHOT
+    assert _NOT_A_HEADSHOT.search("/img/QR%20Code.png") and _NOT_A_HEADSHOT.search("/img/qr-code.jpg")
