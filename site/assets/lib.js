@@ -209,7 +209,9 @@ export function seatText(record) {
 }
 
 export function describe(record) {
-  const place = record.municipality && record.jurisdiction === record.municipality ? `City of ${record.municipality}` : record.jurisdiction;
+  // "Village of Sea Ranch Lakes", "Town of Davie": the Census says which kind each municipality is.
+  const kind = { town: "Town", village: "Village" }[record.municipality_type] || "City";
+  const place = record.municipality && record.jurisdiction === record.municipality ? `${kind} of ${record.municipality}` : record.jurisdiction;
   return [record.office_title, place, seatText(record)].filter(Boolean).join(" · ");
 }
 

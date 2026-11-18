@@ -412,7 +412,8 @@ def commission_mismatches(records: list[dict]) -> list[dict]:
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
           wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None,
-          standins: dict | None = None, seat_maps: dict | None = None, photos: dict | None = None):
+          standins: dict | None = None, seat_maps: dict | None = None, photos: dict | None = None,
+          municipal_types: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -501,7 +502,10 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
     for record in unique:
         if record.get("special_district") and record["special_district"] not in special_keys:
             raise PublishError(f"'{record['id']}': special_district '{record['special_district']}' is not in special_districts.json")
+    kinds = {k.lower(): v for k, v in (municipal_types or {}).items() if not k.startswith("_")}
     for record in unique:
+        if record.get("municipality"):
+            record["municipality_type"] = kinds.get(record["municipality"].lower())  # city, town or village (Census)
         record.setdefault("correction_note", None)
         record.setdefault("seat_label", None)
         record.setdefault("bio", None)
@@ -633,6 +637,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         standins=load_json(data_dir / "wikipedia_mayors.json", {}),
         seat_maps=load_json(ROOT / "site" / "assets" / "boundaries" / "county-commission.json", {}),
         photos=load_json(data_dir / "photos.json", {}),
+        municipal_types=load_json(data_dir / "municipal_types.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731
