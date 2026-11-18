@@ -314,3 +314,19 @@ def test_civicplus_directory_reads_title_and_seat_from_the_role_line():
     assert (rows["Karen Chasez"]["office_title"], rows["Karen Chasez"]["seat_label"]) == ("Mayor", "Seat 5")
     assert rows["Phyllis Butlien"]["office_title"] == "Vice Mayor"
     assert rows["Teresa Watkins Brown"]["seat_label"] == "Ward 2"
+
+
+def test_match_photos_finds_headshots_by_name_or_position():
+    from collector.scrapers.city_roster import match_photos
+    html = """<main>
+      <img src="/img/city-seal.png" alt="City of Example seal">
+      <div class="card"><img src="/uploads/jdoe.jpg" alt="Mayor Jane Doe"><h3>Jane Doe</h3><p>Mayor</p></div>
+      <div class="card"><img src="http://example.gov/files/IMG_2231.jpg"><h3>Raúl Pérez</h3><p>Commissioner</p></div>
+      <div class="card"><img src="/team.jpg" alt="Commission: Kim Lee and Sam Ray"><h3>Kim Lee</h3><h3>Sam Ray</h3></div>
+    </main>"""
+    members = [{"name": n} for n in ("Jane Doe", "Raúl Pérez", "Kim Lee", "Sam Ray")]
+    match_photos(html, "https://example.gov/council", members)
+    photos = {m["name"]: m.get("photo_url") for m in members}
+    assert photos["Jane Doe"] == "https://example.gov/uploads/jdoe.jpg"
+    assert photos["Raúl Pérez"] == "https://example.gov/files/IMG_2231.jpg"  # beside the name; upgraded to https
+    assert photos["Kim Lee"] is None and photos["Sam Ray"] is None  # one group photo: nobody gets it

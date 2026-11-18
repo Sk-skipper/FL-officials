@@ -27,6 +27,7 @@ Safety: if the page yields fewer than `seats - 2` or more than `seats + 2` peopl
 and the source fails with a clear message, so the previous records stay published and a person checks it.
 """
 import re
+import unicodedata
 from difflib import SequenceMatcher
 from urllib.parse import urljoin, urlsplit
 
@@ -365,6 +366,8 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
     # Excluded names match with or without a quoted nickname ("Robert \"Bob\" Campbell" = "Robert Campbell").
     plain = lambda n: " ".join(re.sub(r"[\"“”'‘’(][^\"“”'‘’)]*[\"“”'‘’)]", " ", n).split()).lower()  # noqa: E731
     members = [m for m in members if plain(m["name"]) not in exclude and m["name"].lower() not in exclude]
+    for html, url in pages:
+        match_photos(html, url, members)
     seats = int(config.get("seats") or 5)
     if not seats - 2 <= len(members) <= seats + 2:
         names = ", ".join(f"{m['name']} ({m['title']})" for m in members[:12])
@@ -408,3 +411,68 @@ class CityRosterScraper(BaseScraper):
         fetch = self.client.get_rendered if self.config.get("render") else self.client.get
         pages = [(fetch(u), u) for u in urls]
         return parse_city_roster(pages, self.config)
+
+
+# -- photos -----------------------------------------------------------------------------------------------------
+_NOT_A_HEADSHOT = re.compile(r"(?i)logo|seal|banner|icon|header|footer|flag|map|button|arrow|social|facebook|twitter|"
+                             r"instagram|youtube|linkedin|spacer|placeholder|default|blank|background|hero|sprite|flyer|poster|event|agenda|"
+                             r"notice|news|announcement|workshop|meeting|calendar|signature|autograph|\bsig\b|building|courthouse|exterior|qr[ %_-]?code|coming(?:[ _-]|%20)*soon|webex|no[ _-]?image|\.svg(\?|$)")
+
+
+def _img_src(img, url: str) -> str | None:
+    for attr in ("data-src", "data-lazy-src", "data-original", "src"):
+        value = (img.get(attr) or "").strip()
+        if value and not value.startswith("data:"):
+            return urljoin(url, value)
+    srcset = (img.get("srcset") or img.get("data-srcset") or "").strip()
+    return urljoin(url, srcset.split(",")[0].split()[0]) if srcset else None
+
+
+def _fold(text: str) -> str:
+    return re.sub(r"[^a-z]", "", unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode().lower())
+
+
+def match_photos(html: str, url: str, members: list[dict]) -> None:
+    """Give each member without a photo the headshot that names them (alt text, title or file name) or that sits in the
+    same small block of the page as their name. An image that would go to two people (a group photo) goes to nobody."""
+    soup = BeautifulSoup(html, "lxml")
+    images = []
+    for img in soup.select("img"):
+        src = _img_src(img, url)
+        if not src or src.split("#")[0] == url or _NOT_A_HEADSHOT.search(f"{src} {img.get('alt', '')} {' '.join(img.get('class', []))}"):
+            continue
+        try:
+            if int(img.get("width") or 999) < 48 or int(img.get("height") or 999) < 48:
+                continue
+        except ValueError:
+            pass
+        label = _fold(f"{img.get('alt', '')} {img.get('title', '')} {urlsplit(src).path.rsplit('/', 1)[-1]}")
+        block, context = img, ""
+        for _ in range(4):  # nearest ancestor with some text: the member's card or table row
+            block = block.parent
+            if block is None:
+                break
+            context = clean_text(block.get_text(" "))
+            if len(context) > 3:
+                break
+        images.append((src, label, _fold(context[:300]), len(block.select("img")) if block else 99))
+    chosen: dict[int, str] = {}
+    for i, m in enumerate(members):
+        if m.get("photo_url"):
+            continue
+        parts = [p for p in re.split(r"[\s.]+", m["name"]) if len(p) > 1]
+        if len(parts) < 2:
+            continue
+        last, first = _fold(parts[-1] if not re.fullmatch(r"(?i)jr|sr|ii|iii|iv", parts[-1]) else parts[-2]), _fold(parts[0])
+        hits = [src for src, label, context, n in images if last and (
+            (last in label and (first in label or len(last) > 4)) or (n == 1 and last in context and first in context))]
+        hits = list(dict.fromkeys(hits))
+        if len(hits) == 1:
+            chosen[i] = hits[0]
+    counts: dict[str, int] = {}
+    for src in chosen.values():
+        counts[src] = counts.get(src, 0) + 1
+    for i, src in chosen.items():
+        if counts[src] == 1:
+            # The site only shows https images; most city sites serve the same file over https.
+            members[i]["photo_url"] = re.sub(r"^http://", "https://", src)

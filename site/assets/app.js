@@ -123,7 +123,7 @@ function renderChrome(page) {
     <div class="container footer-row">
       <div>
         <p class="footer-title">Florida Government Officials Directory</p>
-        <p>An independent directory compiled from official government websites. It is not operated by, or
+        <p>An independent directory compiled automatically from official government websites, three statewide associations of county officials and, for a few mayors marked "not confirmed", Wikipedia. Every record links to its source. It is not operated by, or
         affiliated with, any government agency. Always confirm details with the official source linked on each profile.</p>
       </div>
       <nav aria-label="Footer" class="footer-links">

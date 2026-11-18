@@ -277,3 +277,19 @@ def test_association_commissioners_give_way_to_the_countys_own_source():
     assert names["Cathy Townsend"]["source_name"].startswith("St. Lucie County")
     assert any("Linda Bartz" in w for w in warnings)
     assert meta["commission_mismatches"] == [{"county": "St. Lucie", "listed": 1, "seats": 5}]
+
+
+def test_found_photos_fill_only_missing_portraits():
+    collected = {"sources": {"a": {"name": "x", "url": "https://example.gov", "level": "county",
+        "last_successful_collection": NOW.isoformat(), "records": [
+            {"id": "judge-a", "full_name": "Ann Lee", "first_name": "Ann", "last_name": "Lee", "office_title": "Circuit Judge",
+             "government_level": "county", "jurisdiction": "2nd Judicial Circuit", "source_url": "https://example.gov"},
+            {"id": "judge-b", "full_name": "Bo Ray", "first_name": "Bo", "last_name": "Ray", "office_title": "Circuit Judge",
+             "government_level": "county", "jurisdiction": "2nd Judicial Circuit", "source_url": "https://example.gov",
+             "photo_url": "https://example.gov/ray.jpg"}]}}}
+    photos = {"judge-a": {"photo_url": "https://court.example.gov/lee.jpg", "source_url": "https://court.example.gov/judges"},
+              "judge-b": {"photo_url": "https://court.example.gov/other.jpg"}, "gone": {"photo_url": "https://x.gov/y.jpg"}}
+    officials, *_ = build(collected, {}, {}, {}, NOW, env={}, photos=photos)
+    by = {r["id"]: r for r in officials["officials"]}
+    assert by["judge-a"]["photo_url"] == "https://court.example.gov/lee.jpg"
+    assert by["judge-b"]["photo_url"] == "https://example.gov/ray.jpg"  # the source's own photo wins
