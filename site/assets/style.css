@@ -592,3 +592,4 @@ details.everyone > summary .muted { display: block; margin: 2px 0 0 18px; }
   .hero-actions, .profile-hero .badges { justify-content: center; }
   .hero-actions .button { flex: 1 1 100%; justify-content: center; }
 }
+.district-list li.is-focus .district-row { border-color: #b3262e; box-shadow: 0 0 0 2px rgba(179, 38, 46, 0.25); }
