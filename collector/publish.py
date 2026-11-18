@@ -286,7 +286,18 @@ def _merge_people(records: list[dict]) -> tuple[list[dict], dict[str, str]]:
         if record["government_level"] == "municipal" and record.get("municipality") or                 record["government_level"] == "county" and record.get("county") and not record.get("special_district"):
             groups.setdefault(_person_key(record), []).append(record)
     aliases, dropped = {}, set()
+    # Same surname and first initial isn't enough ("Derrick Henry" and "Dannette Henry"): split each group into people
+    # whose first names match or one begins the other ("Josh" / "Joshua", "A.J." / "A").
+    def first(r):
+        return re.sub(r"[^a-z]", "", (r.get("first_name") or "").lower())
+    people = []
     for group in groups.values():
+        clusters: list[list[dict]] = []
+        for r in group:
+            home = next((c for c in clusters if any(first(r).startswith(first(x)) or first(x).startswith(first(r)) for x in c)), None)
+            (home.append(r) if home else clusters.append([r]))
+        people += clusters if group and _person_key(group[0])[0] != "seat" else [group]
+    for group in people:
         if len(group) < 2:
             continue
         group.sort(key=lambda r: (LEADERSHIP.get(r["office_title"], 9), r["verification_status"] == "manual",

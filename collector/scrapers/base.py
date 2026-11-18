@@ -30,6 +30,9 @@ class RobotsDisallowed(FetchError):
     """robots.txt does not allow this URL to be collected."""
 
 
+ROBOTS_RETRY_AFTER = 120  # seconds before an unreadable robots.txt is tried again
+
+
 class HostSchedule:
     """Politeness shared by every client in a run: one request per host every `delay` seconds, and each
     robots.txt fetched once. Thread-safe, so sources on different hosts can be collected in parallel while
@@ -76,39 +79,69 @@ class PoliteHttpClient:
         self._last_request: dict[str, float] = {}
         self._schedule = schedule
         self._robots: dict[str, RobotFileParser | None] = schedule.robots if schedule else {}
+        self._robots_failed: dict[str, float] = {}  # origin -> when robots.txt last could not be read
 
     # -- robots.txt ---------------------------------------------------------
     def _robots_for(self, url: str) -> RobotFileParser | None:
         parts = urlsplit(url)
         origin = f"{parts.scheme}://{parts.netloc}"
-        if origin in self._robots:
+        failed = self._robots_failed.get(origin)
+        if origin in self._robots and (failed is None or self._clock() - failed < ROBOTS_RETRY_AFTER):
             return self._robots[origin]
         if self._schedule:
             with self._schedule.robots_lock(origin):  # another thread may be fetching it right now
-                if origin in self._robots:
+                failed = self._robots_failed.get(origin)
+                if origin in self._robots and (failed is None or self._clock() - failed < ROBOTS_RETRY_AFTER):
                     return self._robots[origin]
                 return self._fetch_robots(parts, origin)
         return self._fetch_robots(parts, origin)
 
     def _fetch_robots(self, parts, origin: str) -> RobotFileParser | None:
+        """Read robots.txt, retrying a server error or timeout before concluding anything. RFC 9309: a robots.txt
+        that can't be reached means "assume disallowed" -- but only for now: it is fetched again after
+        ROBOTS_RETRY_AFTER seconds, so one hiccup doesn't shut a site out for the whole run."""
         parser: RobotFileParser | None = RobotFileParser()
-        try:
-            self._wait(parts.netloc)
-            response = self.session.get(
-                f"{origin}/robots.txt", headers=self._headers(), timeout=self.timeout_seconds
-            )
-            if response.status_code >= 500:
-                # RFC 9309: an unreachable robots.txt means "assume disallowed".
-                parser.parse(["User-agent: *", "Disallow: /"])
-            elif response.status_code >= 400:
-                parser = None  # no robots.txt -> no restrictions
+        problem = None
+        for attempt in range(3):
+            try:
+                self._wait(parts.netloc)
+                response = self.session.get(f"{origin}/robots.txt", headers=self._headers("text/plain,*/*;q=0.5"),
+                                            timeout=self.timeout_seconds)
+            except requests.RequestException as exc:
+                problem = f"{type(exc).__name__}"
             else:
-                parser.parse(response.text.splitlines())
-        except requests.RequestException as exc:
-            logger.warning("robots.txt unreachable for %s (%s); treating as disallowed", origin, exc)
+                if response.status_code >= 500 or response.status_code == 429:
+                    problem = f"HTTP {response.status_code}"
+                elif response.status_code >= 400:
+                    parser, problem = None, None  # no robots.txt -> no restrictions
+                    break
+                else:
+                    parser.parse(response.text.splitlines())
+                    problem = None
+                    break
+            self._sleep(min(5 * (attempt + 1), 15))
+        if problem:
+            logger.warning("robots.txt unreachable for %s (%s); treating as disallowed for now", origin, problem)
+            parser = RobotFileParser()
             parser.parse(["User-agent: *", "Disallow: /"])
+            self._robots_failed[origin] = self._clock()
+        else:
+            self._robots_failed.pop(origin, None)
         self._robots[origin] = parser
         return parser
+
+    def _crawl_delay(self, host: str) -> float:
+        """The pause a site asks for between requests (robots.txt Crawl-delay), capped at 30 seconds."""
+        for scheme in ("https", "http"):
+            parser = self._robots.get(f"{scheme}://{host}")
+            if parser is not None:
+                try:
+                    delay = parser.crawl_delay(self.user_agent)
+                except Exception:  # noqa: BLE001 - a malformed value is just ignored
+                    delay = None
+                if delay:
+                    return min(float(delay), 30.0)
+        return 0.0
 
     def check_allowed(self, url: str) -> None:
         parser = self._robots_for(url)
@@ -120,14 +153,15 @@ class PoliteHttpClient:
         return {"User-Agent": self.user_agent, "Accept": accept}
 
     def _wait(self, host: str) -> None:
+        delay = max(self.delay_seconds, self._crawl_delay(host))
         if self._schedule:
-            wait = self._schedule.reserve(host, self.delay_seconds, self._clock)
+            wait = self._schedule.reserve(host, delay, self._clock)
             if wait > 0:
                 self._sleep(wait)
             return
         last = self._last_request.get(host)
         if last is not None:
-            remaining = self.delay_seconds - (self._clock() - last)
+            remaining = delay - (self._clock() - last)
             if remaining > 0:
                 self._sleep(remaining)
         self._last_request[host] = self._clock()

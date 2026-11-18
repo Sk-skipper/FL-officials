@@ -565,3 +565,5 @@ details.everyone > summary .muted { display: block; margin: 2px 0 0 18px; }
   border-radius: 50%; background: var(--surface); color: var(--text); font-size: 1.375rem; line-height: 1; cursor: pointer; }
 .close-x:hover { background: var(--tint); }
 .rep-results-top:has(.close-x) { padding-right: 44px; }
+.profile-map { height: 220px; border-radius: var(--radius); border: 1px solid var(--border); background: #e8edf3; margin: 8px 0 6px; }
+.profile-map .leaflet-control-zoom a { width: 26px; height: 26px; line-height: 26px; }

@@ -570,6 +570,11 @@ function profile() {
         </section>
         </div>
         <div class="stack">
+          <section class="panel" id="where-panel" hidden>
+            <h2>Where they serve</h2>
+            <div id="profile-map" class="profile-map" role="img" aria-label="Map of the area this official represents"></div>
+            <p class="muted small" id="profile-map-caption"></p>
+          </section>
           <section class="panel">
             <h2>Contact</h2>
             <p class="muted small">Public office contact details only.</p>
@@ -598,7 +603,61 @@ function profile() {
           </section>
         </div>
       </div>`;
+    profileMap(r).catch(() => {}); // the map is a bonus: the profile works without it
   }, "Loading profile");
+}
+
+/** Which boundary shows the area an official represents, and how to pick its feature(s). */
+function serviceArea(r) {
+  const t = r.office_title || "";
+  const circuit = (r.jurisdiction || "").match(/^(\d+)\w\w Judicial Circuit/);
+  const countyShape = (names) => ({ key: "counties", pick: (p) => names.includes(p.name), label: names.length > 1 ? `${names.length} counties` : `${names[0]} County` });
+  if (r.statewide || t === "U.S. Senator") return { key: "statewide", pick: () => true, label: "All of Florida" };
+  if (t === "U.S. Representative") return { key: "congress", pick: (p) => isSeat(r, p.district), label: `Congressional District ${r.district}` };
+  if (/^state senator/i.test(t)) return { key: "senate", pick: (p) => isSeat(r, p.district), label: `Florida Senate District ${r.district}` };
+  if (/^state representative/i.test(t)) return { key: "house", pick: (p) => isSeat(r, p.district), label: `Florida House District ${r.district}` };
+  if (r.special_district) return { key: "special", pick: (p) => p.key === r.special_district, label: SPECIAL.get(r.special_district)?.name || "Special district", fallback: r.county && countyShape([r.county]) };
+  if (circuit) return { key: "circuits", pick: (p) => p.circuit === circuit[1], label: `${circuit[0]}` };
+  if (r.government_level === "municipal" && r.municipality) {
+    const city = { key: "cities", pick: (p) => p.name === r.municipality, label: describe(r).split(" · ").pop() };
+    return r.district ? { key: "cityDistricts", pick: (p) => p.municipality === r.municipality && isSeat(r, p.district),
+      label: `${r.municipality} District ${r.district}`, fallback: city } : city;
+  }
+  const counties = r.county ? [r.county] : r.counties || [];
+  if (!counties.length) return null;
+  if (r.district && t === "County Commissioner") return { key: "commission", pick: (p) => p.county === counties[0] && isSeat(r, p.district), label: `${counties[0]} Commission District ${r.district}`, fallback: countyShape(counties) };
+  if (r.district && /school board/i.test(t)) return { key: "school", pick: (p) => p.county === counties[0] && isSeat(r, p.district), label: `${counties[0]} School Board District ${r.district}`, fallback: countyShape(counties) };
+  return countyShape(counties);
+}
+
+/** A small map on the profile showing the area the official represents. */
+async function profileMap(r) {
+  if (typeof L === "undefined") return;
+  if (r.special_district && !SPECIAL.size) {  // district names for the caption
+    const meta = await loadMeta();
+    SPECIAL = new Map((meta.special_districts || []).map((d) => [d.key, d]));
+  }
+  let area = serviceArea(r);
+  let features = [];
+  while (area) {
+    features = (await loadBoundary(area.key)).features.filter((f) => area.pick(f.properties));
+    if (features.length) break;
+    area = area.fallback || null;
+  }
+  if (!features.length) return;
+  $("#where-panel").hidden = false;
+  const map = L.map("profile-map", { zoomControl: true, scrollWheelZoom: false, zoomSnap: 0.25 });
+  // Streets give a small area (a village, a city district) its surroundings; county lines on top for orientation.
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 17,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
+  const counties = await loadBoundary("counties");
+  L.geoJSON(counties, { interactive: false, style: { color: "#8a94a6", weight: 1, fill: false } }).addTo(map);
+  const shape = L.geoJSON({ type: "FeatureCollection", features }, { interactive: false,
+    style: { color: "#13294b", weight: 3, fillColor: "#2a78d6", fillOpacity: 0.25 } }).addTo(map);
+  map.fitBounds(shape.getBounds(), { padding: [16, 16], maxZoom: 15 });
+  const at = labelPoint(features[0].geometry);
+  const link = at ? ` · <a href="representatives.html?lat=${at[1].toFixed(5)}&lon=${at[0].toFixed(5)}">Open on the full map</a>` : "";
+  $("#profile-map-caption").innerHTML = `${esc(area.label)}${link}`;
 }
 
 /** Credit line for a portrait that did not come from the official source (e.g. Wikimedia Commons). */
