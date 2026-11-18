@@ -40,6 +40,13 @@ import {
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const params = () => new URLSearchParams(window.location.search);
+/** Keep what the visitor is looking at in the address, so Back, reload and shared links return to it. */
+function setParam(key, value) {
+  const next = params();
+  if (value) next.set(key, value); else next.delete(key);
+  const text = next.toString();
+  window.history.replaceState(window.history.state, "", `${window.location.pathname}${text ? `?${text}` : ""}${window.location.hash}`);
+}
 
 // -- data -----------------------------------------------------------------------
 const cache = new Map();
@@ -535,39 +542,47 @@ function profile() {
       report = '<a href="about.html#corrections">How to report an error</a>';
     }
 
+    const back = backLink();
+    const phone = r.phone ? `<a class="button" href="${telHref(r.phone)}">${ICON.phone}<span>Call <span class="tabular">${esc(r.phone)}</span></span></a>` : "";
+    const email = r.email ? `<a class="button outline" href="mailto:${esc(r.email)}">${ICON.mail}<span>Email</span></a>` : "";
+    const site = website ? `<a class="button outline" href="${esc(website)}" target="_blank" rel="noopener noreferrer">${ICON.globe}<span>Official website</span>${ICON.external}</a>` : "";
+    const seat = seatText(r);
+    const facts = [
+      ["Office", esc(r.office_title)],
+      ["Seat", seat ? esc(seat) : ""],
+      ["Represents", r.statewide ? "All of Florida"  // skipped when it only repeats the county or city below
+        : [r.municipality, ...counties.map((c) => `${c} County`)].includes(r.jurisdiction) ? "" : esc(r.jurisdiction)],
+      [counties.length > 1 ? "Counties" : "County", countyLinks],
+      ["City", r.municipality ? esc(`${{ town: "Town", village: "Village" }[r.municipality_type] || "City"} of ${r.municipality}`) : ""],
+      ["Party", r.party ? esc(partyLabel(r.party)) : ""],
+      ["How chosen", { elected: "Elected", appointed: "Appointed" }[r.selection_method] || ""],
+    ];  // term dates and birth date live in the About panel
+    const shown = facts.filter(([, v]) => v);
+    const notListed = [!r.phone && "phone", !r.email && "email", !website && "website"].filter(Boolean);
+
     app.innerHTML = `
-      <a class="back" href="officials.html">${ICON.back}Back to the directory</a>
-      <header class="profile-head">
+      <nav class="crumbs" aria-label="Back"><a class="back" href="${esc(back.href)}" ${back.history ? "data-history-back" : ""}>${ICON.back}${esc(back.label)}</a></nav>
+      <header class="profile-hero panel">
         ${avatar(r, "xl")}
-        <div>
+        <div class="hero-main">
           <h1>${esc(r.full_name)}</h1>
           <p class="lede">${esc(describe(r))}</p>
           <div class="badges">${levelBadge(r.government_level)}${selection}
             <span class="badge ${r.verification_status === "unconfirmed" ? "amber" : "green"}">${esc(VERIFICATION_LABELS[r.verification_status] || r.verification_status)}</span></div>
+          <div class="hero-actions">${phone}${email}${site}
+            <button type="button" class="button outline" data-copy-profile>Copy link</button></div>
+          ${r.email ? `<p class="muted small break">${esc(r.email)}</p>` : ""}
         </div>
       </header>
       <div class="profile-grid">
         <div class="stack">
-        ${aboutPanel(r)}
-        <section class="panel">
-          <h2>Office details</h2>
-          <dl class="rows">
-            ${row("Full name", esc(r.full_name))}
-            ${row("Official title", esc(r.office_title))}
-            ${row("Government level", esc(LEVEL_LABELS[r.government_level] || r.government_level))}
-            ${row("Jurisdiction", esc(r.jurisdiction))}
-            ${row(counties.length > 1 ? "Counties represented" : "County", countyLinks)}
-            ${r.municipality ? row("Municipality", esc(r.municipality)) : ""}
-            ${row(r.seat_label ? "Seat" : "District", esc(seatText(r)))}
-            ${row("Political party", esc(r.party || ""))}
-            ${row("Last verified", esc(formatDate(r.last_verified, "")))}
-          </dl>
-          ${r.counties_source ? `<p class="muted small fine">Counties in this district: ${
-            safeUrl(r.counties_source.url)
-              ? `<a href="${esc(r.counties_source.url)}" target="_blank" rel="noopener noreferrer">${esc(r.counties_source.name)}</a>`
-              : esc(r.counties_source.name)
-          }</p>` : ""}
-        </section>
+          <section class="panel">
+            <h2>Office</h2>
+            <dl class="facts">${shown.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
+            ${notListed.length ? `<p class="muted small fine">Not published by the source: ${notListed.join(", ")}.</p>` : ""}
+          </section>
+          ${aboutPanel(r)}
+          ${colleaguesPanel(r, records)}
         </div>
         <div class="stack">
           <section class="panel" id="where-panel" hidden>
@@ -576,36 +591,57 @@ function profile() {
             <p class="muted small" id="profile-map-caption"></p>
           </section>
           <section class="panel">
-            <h2>Contact</h2>
-            <p class="muted small">Public office contact details only.</p>
-            <ul class="contact-list">
-              <li>${ICON.phone}<div><p class="muted small">Official phone</p>${r.phone ? `<a class="tabular" href="${telHref(r.phone)}">${esc(r.phone)}</a>` : missing}</div></li>
-              <li>${ICON.mail}<div><p class="muted small">Official email</p>${r.email ? `<a class="break" href="mailto:${esc(r.email)}">${esc(r.email)}</a>` : missing}</div></li>
-              <li>${ICON.globe}<div><p class="muted small">Official government website</p>${
-                website
-                  ? `<a class="break" href="${esc(website)}" target="_blank" rel="noopener noreferrer">${esc(website.replace(/^https?:\/\//, "").replace(/\/$/, ""))}${ICON.external}<span class="sr-only">(opens in a new tab)</span></a>`
-                  : missing
-              }</div></li>
-            </ul>
-          </section>
-          <section class="panel">
-            <h2>Source</h2>
-            <p class="muted small">Where this record comes from. Empty fields were not published there.</p>
-            <dl class="rows compact">
-              ${row("Source directory", directoryUrl ? `<a href="${esc(directoryUrl)}" target="_blank" rel="noopener noreferrer">${esc(r.source_name)}</a>` : esc(r.source_name))}
-              ${row("Original record", sourceUrl ? `<a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">View the government page${ICON.external}<span class="sr-only">(opens in a new tab)</span></a>` : "")}
-              ${row("Last verified", esc(formatDate(r.last_verified, "")))}
-              ${r.correction_note ? row("Correction", esc(r.correction_note)) : ""}
-              ${safeUrl(r.wikipedia_url) ? row("More about them", `<a href="${esc(r.wikipedia_url)}" target="_blank" rel="noopener noreferrer">Wikipedia article${ICON.external}<span class="sr-only">(opens in a new tab)</span></a>`) : ""}
+            <h2>Source and accuracy</h2>
+            <dl class="facts compact">
+              <div><dt>Source</dt><dd>${directoryUrl ? `<a href="${esc(directoryUrl)}" target="_blank" rel="noopener noreferrer">${esc(r.source_name)}</a>` : esc(r.source_name)}</dd></div>
+              ${sourceUrl ? `<div><dt>Original page</dt><dd><a href="${esc(sourceUrl)}" target="_blank" rel="noopener noreferrer">View on the official site${ICON.external}</a></dd></div>` : ""}
+              <div><dt>Last verified</dt><dd>${esc(formatDate(r.last_verified, "Not recorded"))}</dd></div>
+              ${r.correction_note ? `<div><dt>Correction</dt><dd>${esc(r.correction_note)}</dd></div>` : ""}
+              ${safeUrl(r.wikipedia_url) ? `<div><dt>More</dt><dd><a href="${esc(r.wikipedia_url)}" target="_blank" rel="noopener noreferrer">Wikipedia article${ICON.external}</a></dd></div>` : ""}
             </dl>
             ${photoCredit(r)}
             <p class="small fine">See something wrong? ${report}<br><span class="muted">Record id: <code>${esc(r.id)}</code></span></p>
           </section>
         </div>
       </div>`;
+    // Back returns to the exact view the visitor came from (its filters, map layer and scroll position).
+    $("[data-history-back]", app)?.addEventListener("click", (event) => { event.preventDefault(); window.history.back(); });
+    $("[data-copy-profile]", app)?.addEventListener("click", (event) => {
+      navigator.clipboard?.writeText(window.location.href).then(() => { event.target.textContent = "Link copied"; }, () => {});
+    });
     profileMap(r).catch(() => {}); // the map is a bonus: the profile works without it
   }, "Loading profile");
 }
+
+/** Others on the same body, so the visitor can move across a council or board without going back to a list. */
+function colleaguesPanel(r, records) {
+  const t = r.office_title || "";
+  let peers = [];
+  let heading = "Serves with";
+  if (r.special_district) peers = records.filter((x) => x.special_district === r.special_district);
+  else if (r.government_level === "municipal" && r.municipality) {
+    peers = records.filter((x) => x.government_level === "municipal" && x.municipality === r.municipality);
+    heading = `${r.municipality} council`;
+  } else if (/school board|superintendent/i.test(t) && r.county) {
+    peers = records.filter((x) => x.county === r.county && /^(School Board Member|Superintendent of Schools)$/.test(x.office_title));
+    heading = `${r.county} County School Board`;
+  } else if (/^County (Commissioner|Mayor|Council Member)$/.test(t) && r.county) {
+    peers = records.filter((x) => x.county === r.county && /^County (Commissioner|Mayor|Council Member)$/.test(x.office_title));
+    heading = `${r.county} County Commission`;
+  } else if (r.government_level === "county" && r.county && !/judge/i.test(t)) {
+    peers = records.filter((x) => x.county === r.county && x.government_level === "county" && !x.special_district
+      && /^(Sheriff|Clerk of the Circuit Court|Property Appraiser|Tax Collector|Supervisor of Elections)$/.test(x.office_title));
+    heading = `${r.county} County officers`;
+  }
+  peers = peers.filter((x) => x.id !== r.id)
+    .sort((a, b) => (RANK_ORDER[a.office_title] ?? 9) - (RANK_ORDER[b.office_title] ?? 9) || a.last_name.localeCompare(b.last_name));
+  if (!peers.length) return "";
+  return `<section class="panel"><h2>${esc(heading)}</h2>
+    <ul class="peer-list">${peers.slice(0, 12).map((x) => `<li><a href="${profileHref(x)}">${avatar(x, "sm")}<span><span class="strong">${esc(x.full_name)}</span>
+      <span class="muted small">${esc(x.office_title)}${seatText(x) ? ` · ${esc(seatText(x))}` : ""}</span></span></a></li>`).join("")}</ul>
+    ${peers.length > 12 ? `<p class="small"><a href="county.html?name=${encodeURIComponent(r.county || "")}">See all ${peers.length + 1}</a></p>` : ""}</section>`;
+}
+const RANK_ORDER = { Mayor: 0, "County Mayor": 0, Chair: 1, "Vice Mayor": 1, "Deputy Mayor": 1, "Vice Chair": 2, "Superintendent of Schools": 3 };
 
 /** Which boundary shows the area an official represents, and how to pick its feature(s). */
 function serviceArea(r) {
@@ -1299,7 +1335,7 @@ function reps() {
     app.innerHTML = `<section class="panel">${empty("The map could not be loaded", "Check your connection and reload the page.")}</section>`;
     return;
   }
-  withData(app, [loadOfficials, loadMeta, () => loadBoundary("counties")], (records, meta, counties) => {
+  withData(app, [loadOfficials, loadMeta, () => loadBoundary("counties")], async (records, meta, counties) => {
     SPECIAL = new Map((meta.special_districts || []).map((d) => [d.key, d]));
     app.innerHTML = `
       <form class="rep-search panel" id="rep-form" role="search" autocomplete="off">
@@ -1381,6 +1417,7 @@ function reps() {
       if (hit) L.geoJSON(hit.feature, { style: { color: "#13294b", weight: 3, fill: false }, interactive: false }).addTo(yours);
     }
     let activeLayer = "";
+    let restoreLevel = null; // the level chip to re-press after a reload or Back (from ?level=)
 
     const portrait = (r) =>
       L.divIcon({ className: "rep-marker", html: avatar(r, "sm"), iconSize: [40, 40], iconAnchor: [20, 20] });
@@ -1504,6 +1541,7 @@ function reps() {
 
     function legendPanel() {
       const { spec, rows } = current;
+      setParam("view", "list");
       const single = oneParty(rows.map((r) => r.holder));
       const partisan = spec.partisan && colorMode === "party" && !single;
       const counts = {};
@@ -1557,6 +1595,7 @@ function reps() {
     async function showLayer(key, { keepView = false, select = false } = {}) {
       activeLayer = select || keepView ? key : key === activeLayer ? "" : key;
       $("#rep-layer").value = activeLayer;
+      setParam("layer", activeLayer);
       // The coloured layer already draws its own borders; don't stack a second copy on it.
       if (borders.has(activeLayer)) await toggleBorder(activeLayer);
       for (const box of app.querySelectorAll("input[data-border]")) box.disabled = box.dataset.border === activeLayer;
@@ -1782,7 +1821,9 @@ function reps() {
             ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
               : `<ul class="people">${s.items.map((r) => personCard(r, { contact: true })).join("")}</ul>`}`).join("")).join("")}
         </details>` : ""}`;
-      applyLevel(LAYER_LEVEL[activeLayer] || "");
+      setParam("view", null);
+      applyLevel(restoreLevel ?? LAYER_LEVEL[activeLayer] ?? "");
+      restoreLevel = null;
       if (!activeLayer) {
         const local = found.at(-1);
         // Zoom to fit the most local district, centred on the chosen spot.
@@ -1888,6 +1929,7 @@ function reps() {
       if (!chips.length) return;
       const pick = chips.find((c) => c.dataset.levelFilter === level) || chips[0];
       level = pick.dataset.levelFilter;
+      setParam("level", level);
       for (const chip of chips) chip.setAttribute("aria-pressed", String(chip === pick));
       for (const block of panel.querySelectorAll("[data-level]")) block.hidden = Boolean(level) && block.dataset.level !== level;
       const courts = panel.querySelector('details[data-level="courts"]');
@@ -1980,10 +2022,20 @@ function reps() {
       }
     });
 
-    const lat = Number(params().get("lat"));
-    const lon = Number(params().get("lon"));
-    if (lat && lon) lookup(lat, lon);
-    else showLayer("commission");
+    // Restore what was on screen: the spot, the layer, the level chip, and whether the layer's list was open.
+    const saved = params();
+    const lat = Number(saved.get("lat"));
+    const lon = Number(saved.get("lon"));
+    const layer = MAP_LAYERS.some((l) => l.key === saved.get("layer")) ? saved.get("layer") : "";
+    const view = saved.get("view");
+    restoreLevel = saved.get("level");
+    if (lat && lon) {
+      if (layer) await showLayer(layer, { keepView: true });
+      await lookup(lat, lon, view === "list" ? "Point chosen on the map" : undefined);
+      if (layer && view === "list" && current) legendPanel();
+    } else {
+      showLayer(layer || "commission", { select: Boolean(layer) });
+    }
   }, "Loading the map");
 }
 
@@ -2075,6 +2127,48 @@ function about() {
 }
 
 // -- start ------------------------------------------------------------------------
+// Coming back to a page returns to the same scroll position, even though its content is drawn after loading.
+const scrollKey = () => `scroll:${window.location.pathname}${window.location.search}`;
+window.addEventListener("pagehide", () => {
+  try { sessionStorage.setItem(scrollKey(), String(Math.round(window.scrollY))); } catch { /* private mode */ }
+});
+(function restoreScroll() {
+  let y = 0;
+  try { y = Number(sessionStorage.getItem(scrollKey())) || 0; } catch { return; }
+  if (!y) return;
+  if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+  const started = Date.now();
+  let userMoved = false;
+  const stop = () => { userMoved = true; };
+  ["wheel", "touchstart", "keydown"].forEach((e) => window.addEventListener(e, stop, { once: true, passive: true }));
+  const tick = () => {  // content arrives in steps: keep nudging until we are there (or the visitor scrolls)
+    if (userMoved) return;
+    window.scrollTo(0, y);
+    if (Math.abs(window.scrollY - y) > 4 && Date.now() - started < 6000) setTimeout(tick, 120);
+  };
+  tick();
+})();
+
+/** Where the visitor came from on this site, as a "Back to …" link that returns to exactly that view. */
+function backLink() {
+  let from = null;
+  try { from = document.referrer ? new URL(document.referrer) : null; } catch { from = null; }
+  if (!from || from.origin !== window.location.origin || from.href === window.location.href) {
+    return { href: "officials.html", label: "Back to the directory", history: false };
+  }
+  const q = from.searchParams;
+  const file = from.pathname.split("/").pop() || "index.html";
+  const label = {
+    "representatives.html": q.get("lat") ? "Back to your representatives" : "Back to the map",
+    "officials.html": [...q.keys()].length ? "Back to your search results" : "Back to the directory",
+    "county.html": `Back to ${q.get("name") || "the county"} County`,
+    "counties.html": "Back to counties",
+    "index.html": "Back to home",
+    "official.html": "Back to the previous official",
+  }[file] || "Back";
+  return { href: from.href, label, history: window.history.length > 1 };
+}
+
 const PAGES = { home, directory, profile, counties, county, reps, sources, about };
 const page = document.body.dataset.page;
 renderChrome(page === "profile" ? "official" : page);
