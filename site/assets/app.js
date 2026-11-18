@@ -666,6 +666,16 @@ function serviceArea(r) {
   return countyShape(counties);
 }
 
+/** The full-map layer that shows an official's area: their district, city, county office, circuit or the state. */
+function layerForArea(r, area) {
+  if (area.key !== "counties") return area.key;
+  const byTitle = { Sheriff: "sheriff", "Clerk of the Circuit Court": "clerk", "Property Appraiser": "appraiser", "Tax Collector": "taxCollector",
+    "Supervisor of Elections": "elections", "Superintendent of Schools": "superintendent", "School Board Member": "school" };
+  if (byTitle[r.office_title]) return byTitle[r.office_title];
+  if (/judge/i.test(r.office_title)) return "circuits";
+  return "commission";
+}
+
 /** A small map on the profile showing the area the official represents. */
 async function profileMap(r) {
   if (typeof L === "undefined") return;
@@ -691,8 +701,7 @@ async function profileMap(r) {
   const shape = L.geoJSON({ type: "FeatureCollection", features }, { interactive: false,
     style: { color: "#13294b", weight: 3, fillColor: "#2a78d6", fillOpacity: 0.25 } }).addTo(map);
   map.fitBounds(shape.getBounds(), { padding: [16, 16], maxZoom: 15 });
-  const at = labelPoint(features[0].geometry);
-  const link = at ? ` · <a href="representatives.html?lat=${at[1].toFixed(5)}&lon=${at[0].toFixed(5)}">Open on the full map</a>` : "";
+  const link = ` · <a href="representatives.html?layer=${encodeURIComponent(layerForArea(r, area))}&focus=${encodeURIComponent(r.id)}">Open on the full map</a>`;
   $("#profile-map-caption").innerHTML = `${esc(area.label)}${link}`;
 }
 
@@ -1585,6 +1594,42 @@ function reps() {
 `;
     }
 
+    /** Open the map on one official: their area outlined and framed, their row selected in the list. */
+    const focusOutline = L.layerGroup().addTo(map);
+    function focusOn(id) {
+      const r = records.find((x) => x.id === id);
+      if (!r || !current) return;
+      const area = serviceArea(r);
+      const { rows } = current;
+      const has = (row) => row.holder && (row.holder.id === id || (row.holder.members || []).some((m) => m.id === id));
+      let i = rows.findIndex(has);
+      if (i < 0 && area) i = rows.findIndex((row) => { try { return area.pick(row.feature.properties); } catch { return false; } });
+      if (i < 0 && area?.fallback) i = rows.findIndex((row) => { try { return area.fallback.pick(row.feature.properties); } catch { return false; } });
+      if (i < 0 && (r.county || r.municipality)) i = rows.findIndex((row) => row.feature.properties.county === r.county || row.feature.properties.name === r.municipality);
+      if (i < 0) return;
+      const row = rows[i];
+      focusOutline.clearLayers();
+      L.geoJSON(row.feature, { interactive: false, style: { color: "#b3262e", weight: 4, fill: false } }).addTo(focusOutline);
+      highlight(i, true);
+      map.invalidateSize();
+      map.stop();  // the layer's own "fit everything" zoom may still be animating; ours must win
+      map.fitBounds(row.layer.getBounds(), { padding: [30, 30], maxZoom: 15, animate: false });
+      const item = panel.querySelector(`[data-row="${i}"]`);
+      if (item) {
+        item.classList.add("is-focus");
+        // Scroll only the list to their row; keep the page itself on the map.
+        const list = item.closest(".district-list");
+        if (list && list.scrollHeight > list.clientHeight) list.scrollTop = item.offsetTop - list.offsetTop - list.clientHeight / 2;
+      }
+      $(".rep-layout")?.scrollIntoView({ block: "start" });
+      const at = labelPoint(row.feature.geometry);
+      if (at) {
+        L.popup({ maxHeight: 260 }).setLatLng([at[1], at[0]])
+          .setContent(`<strong>${esc(r.full_name)}</strong><br>${esc(r.office_title)}<br><span class="muted">${esc(row.title)}</span><br><a href="${profileHref(r)}">Back to their profile</a>`)
+          .openOn(map);
+      }
+    }
+
     function highlight(index, on) {
       const row = current?.rows[index];
       if (!row) return;
@@ -1596,6 +1641,7 @@ function reps() {
       activeLayer = select || keepView ? key : key === activeLayer ? "" : key;
       $("#rep-layer").value = activeLayer;
       setParam("layer", activeLayer);
+      focusOutline.clearLayers();
       // The coloured layer already draws its own borders; don't stack a second copy on it.
       if (borders.has(activeLayer)) await toggleBorder(activeLayer);
       for (const box of app.querySelectorAll("input[data-border]")) box.disabled = box.dataset.border === activeLayer;
@@ -1723,6 +1769,7 @@ function reps() {
 
     let lastLookup = null;
     async function lookup(lat, lon, label) {
+      setParam("focus", null);
       lastLookup = { lat, lon, label, county: null };
       if (pin) pin.remove();
       pin = L.marker([lat, lon], { title: label || "Selected location" }).addTo(map);
@@ -1940,6 +1987,7 @@ function reps() {
      *  on the map, the spot becomes the "Back to your representatives at…" target, and the URL points at it. */
     function pickSpot(lat, lon) {
       const label = "Point chosen on the map";
+      setParam("focus", null);
       if (pin) pin.remove();
       pin = L.marker([lat, lon], { title: label }).addTo(map);
       focusOnPin(true);
@@ -1983,6 +2031,7 @@ function reps() {
       if (event.key === "Escape" && current && panel.querySelector("[data-close-results]")) legendPanel();
     });
     $("#rep-layer").addEventListener("change", (event) => {
+      setParam("focus", null);  // the visitor has moved on from the official they arrived with
       showLayer(event.target.value, { select: true }).catch((error) => { panel.innerHTML = empty("That layer could not be loaded", esc(error.message)); });
     });
     app.addEventListener("change", (event) => {
@@ -2029,7 +2078,13 @@ function reps() {
     const layer = MAP_LAYERS.some((l) => l.key === saved.get("layer")) ? saved.get("layer") : "";
     const view = saved.get("view");
     restoreLevel = saved.get("level");
-    if (lat && lon) {
+    const focus = saved.get("focus");
+    if (focus && layer) {
+      await showLayer(layer, { select: true });
+      // Let the layer's own "show everything" zoom finish, then frame the official's area.
+      await new Promise((done) => { map.once("moveend", () => setTimeout(done, 50)); setTimeout(done, 1200); });
+      focusOn(focus);
+    } else if (lat && lon) {
       if (layer) await showLayer(layer, { keepView: true });
       await lookup(lat, lon, view === "list" ? "Point chosen on the map" : undefined);
       if (layer && view === "list" && current) legendPanel();
