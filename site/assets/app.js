@@ -663,6 +663,11 @@ async function profileMap(r) {
 /** Credit line for a portrait that did not come from the official source (e.g. Wikimedia Commons). */
 function photoCredit(r) {
   const c = r.photo_credit;
+  if (!c && r.photo_url && safeUrl(r.photo_source_url)) {
+    // Found on an official page other than the roster: say where, so a wrong portrait can be spotted and reported.
+    const host = new URL(r.photo_source_url).hostname.replace(/^www\./, "");
+    return `<p class="muted small fine">Photo: <a href="${esc(r.photo_source_url)}" target="_blank" rel="noopener noreferrer">${esc(host)}</a></p>`;
+  }
   if (!c || !r.photo_url) return "";
   const file = safeUrl(c.file_url) ? `<a href="${esc(c.file_url)}" target="_blank" rel="noopener noreferrer">${esc(c.source || "Photo")}</a>` : esc(c.source || "");
   const licence = safeUrl(c.license_url) ? `<a href="${esc(c.license_url)}" target="_blank" rel="noopener noreferrer">${esc(c.license)}</a>` : esc(c.license || "");
