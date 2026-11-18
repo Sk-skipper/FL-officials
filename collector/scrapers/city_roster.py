@@ -49,6 +49,7 @@ _SEAT_NUMBER = {"one": "1", "two": "2", "three": "3", "four": "4", "five": "5", 
                 "i": "1", "ii": "2", "iii": "3", "iv": "4", "v": "5", "vi": "6", "vii": "7"}
 _TITLE_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?:(?:District|Seat|Group)\s*\w{{1,2}}\s+)?(?P<title>{TITLE})\b[\s,:\-–—]*(?P<name>{NAME})(?P<rest>(?:[\s,(\-–—|:].*)?)$")
 _NAME_FIRST = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})\s*(?:[,\-–—|:]\s*|\s+(?=Council|Vice|Mayor|Commissioner))(?P<seatfirst>{SEATWORD}\s+)?(?P<title>{TITLE})\b(?P<rest>.*)$")
+_SEAT_TITLE = re.compile(rf"\(?{SEATWORD}\)?\s*[,\-–—|]\s*(?P<title>{TITLE})")
 _TITLE_NAME = re.compile(rf"\b(?:{TITLE})\s+{NAME}")
 _NAME_ONLY = re.compile(rf"^(?:The\s+)?(?:Honorable\s+)?(?P<name>{NAME})$")
 _TITLE_ONLY = re.compile(rf"^(?:City |Town |Village )?(?P<title>{TITLE}|Council(?=,?\s*(?:Seat|District|Group)))\b(?P<rest>[^a-z]{{0,40}}|"
@@ -277,6 +278,8 @@ def find_members(lines: list[str], member_title: str, exclude: set[str] | None =
             add(n["name"], t["title"], f"{seat_after} {lines[title_line]}" if SEAT.fullmatch(seat_after.strip("() ").replace("#", "")) else f"{lines[title_line]} {seat_after}")
         elif _SEAT_LINE.fullmatch(after):
             add(n["name"], member_title, after)  # "Jane Doe" / "Group 3": a member listed by seat
+        elif st := _SEAT_TITLE.fullmatch(after):
+            add(n["name"], st["title"], after, titled=True)  # "Jane Doe" / "District 1, Vice-Chair"
         elif loose and re.fullmatch(r"(?:mailto:)?[\w.+-]+@[\w.-]+", after):
             add(n["name"], member_title, line)  # "Jane Doe" / "jdoe@city.gov" (config "loose")
 

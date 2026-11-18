@@ -3154,7 +3154,7 @@
   {
     "key": "county_washington_commission",
     "name": "Washington County: Board of County Commissioners",
-    "url": "http://www.washingtonfl.com/departments/commission",
+    "url": "https://washingtonfl.com/our-county/board-of-commissioners/",
     "level": "county",
     "scraper": "city_roster",
     "config": {

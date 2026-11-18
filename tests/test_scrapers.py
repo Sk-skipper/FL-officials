@@ -389,3 +389,29 @@ def test_host_schedule_spaces_requests_to_one_host_across_clients():
     assert schedule.reserve("b.example", 2, clock) == 0  # a different website doesn't wait
     now[0] = 110.0
     assert schedule.reserve("a.example", 2, clock) == 0  # the queue has drained
+
+
+def test_client_honours_crawl_delay():
+    session = FakeSession({"https://a.gov/1": FakeResponse(text="one"), "https://a.gov/2": FakeResponse(text="two")},
+                          robots="User-agent: *\nDisallow: /admin\nCrawl-delay: 10\n")
+    client, sleeps = make_client(session)
+    client.get("https://a.gov/1")
+    client.get("https://a.gov/2")
+    assert 10.0 in sleeps  # the site's own pause, not just our default 2 seconds
+
+
+def test_one_robots_hiccup_is_retried_before_a_site_counts_as_blocked():
+    class Flaky(FakeSession):
+        def __init__(self):
+            super().__init__({"https://a.gov/1": FakeResponse(text="ok")})
+            self.tries = 0
+
+        def get(self, url, headers=None, timeout=None):
+            if url.endswith("/robots.txt"):
+                self.tries += 1
+                if self.tries == 1:
+                    raise requests.ConnectionError("timeout")
+            return super().get(url, headers, timeout)
+
+    client, _ = make_client(Flaky())
+    assert client.get("https://a.gov/1") == "ok"

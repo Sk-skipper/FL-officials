@@ -371,3 +371,8 @@ def test_review_two_members_on_one_line_and_all_caps_lines():
 def test_review_qr_codes_are_not_headshots():
     from collector.scrapers.city_roster import _NOT_A_HEADSHOT
     assert _NOT_A_HEADSHOT.search("/img/QR%20Code.png") and _NOT_A_HEADSHOT.search("/img/qr-code.jpg")
+
+
+def test_seat_line_that_also_carries_a_title():
+    got = _members(["Ashlynn Marquez", "District 1, Vice-Chair", "Joey Brock", "District 3"], "County Commissioner")
+    assert ("Ashlynn Marquez", "Vice Chair") in got and ("Joey Brock", "County Commissioner") in got
