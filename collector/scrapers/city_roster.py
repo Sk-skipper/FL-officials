@@ -416,7 +416,7 @@ class CityRosterScraper(BaseScraper):
 # -- photos -----------------------------------------------------------------------------------------------------
 _NOT_A_HEADSHOT = re.compile(r"(?i)logo|seal|banner|icon|header|footer|flag|map|button|arrow|social|facebook|twitter|"
                              r"instagram|youtube|linkedin|spacer|placeholder|default|blank|background|hero|sprite|flyer|poster|event|agenda|"
-                             r"notice|news|announcement|workshop|meeting|calendar|\.svg(\?|$)")
+                             r"notice|news|announcement|workshop|meeting|calendar|signature|autograph|\bsig\b|building|courthouse|exterior|qr[ %_-]?code|coming(?:[ _-]|%20)*soon|webex|no[ _-]?image|\.svg(\?|$)")
 
 
 def _img_src(img, url: str) -> str | None:

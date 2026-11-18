@@ -187,6 +187,18 @@ def _apply_profiles(by_id: dict, profiles: dict, warnings: list[str]) -> None:
             record["bio_sources"] = sources
 
 
+def _apply_photos(by_id: dict, photos: dict) -> None:
+    """Portraits found on official pages by tools/find_photos.py, used only where the record has no photo."""
+    for record_id, entry in photos.items():
+        record = by_id.get(record_id)
+        if record_id.startswith("_") or record is None or not isinstance(entry, dict) or record.get("photo_url"):
+            continue
+        photo = normalize_photo_url(entry.get("photo_url"))
+        if photo:
+            record["photo_url"] = photo
+            record["photo_source_url"] = entry.get("source_url")
+
+
 def _apply_wikipedia(by_id: dict, wiki: dict) -> None:
     """Last resort, after official sources and profiles: a Commons portrait, a birth date, an article link."""
     for record_id, entry in wiki.items():
@@ -400,7 +412,7 @@ def commission_mismatches(records: list[dict]) -> list[dict]:
 def build(collected: dict, manual: dict, corrections: dict, site: dict, now: datetime, env: dict | None = None,
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
           wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None,
-          standins: dict | None = None, seat_maps: dict | None = None):
+          standins: dict | None = None, seat_maps: dict | None = None, photos: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -467,6 +479,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
     by_id.update({alias: by_id[target] for alias, target in aliases.items()})
 
     _apply_profiles(by_id, profiles or {}, warnings)
+    _apply_photos(by_id, photos or {})
     _apply_wikipedia(by_id, wikipedia or {})
     _apply_districts(unique, districts or {})
     _districts_from_maps(unique, seat_maps or {})
@@ -619,6 +632,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         links=load_json(data_dir / "county_links.json", {}),
         standins=load_json(data_dir / "wikipedia_mayors.json", {}),
         seat_maps=load_json(ROOT / "site" / "assets" / "boundaries" / "county-commission.json", {}),
+        photos=load_json(data_dir / "photos.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731
