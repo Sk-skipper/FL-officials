@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 
 import {
+  describe,
   districtLabel,
   escapeHtml,
   exportPayload,
@@ -202,4 +203,9 @@ test("a judge in a multi-county circuit is found from any of its counties", () =
   const { judges } = representativesFor([judge], { county: "Leon" });
   assert.equal(judges.length, 1);
   assert.equal(representativesFor([judge], { county: "Duval" }).judges.length, 0);
+});
+
+test("profiles name a village or town as such", () => {
+  assert.match(describe({ office_title: "Mayor", municipality: "Sea Ranch Lakes", jurisdiction: "Sea Ranch Lakes", municipality_type: "village" }), /Village of Sea Ranch Lakes/);
+  assert.match(describe({ office_title: "Mayor", municipality: "Miami", jurisdiction: "Miami", municipality_type: "city" }), /City of Miami/);
 });
