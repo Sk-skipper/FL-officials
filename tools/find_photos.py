@@ -20,6 +20,8 @@ so when someone leaves office their entry is simply ignored. Re-run after collec
 import json
 import re
 import sys
+import threading
+from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -29,7 +31,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from collector.scrapers.base import FetchError, HostSchedule, PoliteHttpClient, RobotsDisallowed  # noqa: E402
-from collector.scrapers.city_roster import _NOT_A_HEADSHOT, _fold, _img_src, match_photos  # noqa: E402
+from collector.scrapers.city_roster import _fold, _img_src, match_photos  # noqa: E402
 from collector.scrapers.registry import user_agent  # noqa: E402
 
 OUT = ROOT / "data" / "photos.json"
@@ -63,8 +65,38 @@ OWN_PAGE_SKIP = re.compile(r"(?i)logo|seal|icon|facebook|twitter|instagram|youtu
 BROWARD_MD = {"Broward": 17, "Miami-Dade": 11}
 
 
+_LOCAL = threading.local()
+
+
 def client() -> PoliteHttpClient:
-    return PoliteHttpClient(user_agent(), 1.5, 25, 0, schedule=SCHEDULE)
+    """One client per thread, so connections are reused; pacing is shared through SCHEDULE."""
+    if not hasattr(_LOCAL, "client"):
+        _LOCAL.client = PoliteHttpClient(user_agent(), 1.5, 25, 0, schedule=SCHEDULE)
+    return _LOCAL.client
+
+
+def names_in(text: str, last: str) -> bool:
+    """The surname as a whole word: "Lee" in "/judges/ann-lee", not in "/fleet" or "/colleagues"."""
+    return bool(last) and bool(re.search(rf"(?<![a-z]){re.escape(last)}(?![a-z])", _fold_spaced(text)))
+
+
+def _fold_spaced(text: str) -> str:
+    """Lower-case ASCII with word breaks kept (unlike _fold, which removes them)."""
+    import unicodedata
+    plain = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode().lower()
+    return re.sub(r"[^a-z]+", " ", plain)
+
+
+def usable_image(url: str) -> str | None:
+    """The site only shows https images: keep the https address only if it really serves an image."""
+    https = re.sub(r"^http://", "https://", url)
+    try:
+        response = client().session.get(https, headers={"User-Agent": client().user_agent}, timeout=20, stream=True)
+        ok = response.status_code == 200 and response.headers.get("content-type", "").startswith("image/")
+        response.close()
+        return https if ok else None
+    except Exception:  # noqa: BLE001 - any failure means "don't use it"
+        return None
 
 
 def fetch(url: str, render: bool = False) -> str | None:
@@ -86,16 +118,18 @@ def own_page_photo(html: str, url: str, name: str = "") -> str | None:
     for junk in soup.select("body > header, body > nav, body > footer, nav, [role=banner], [role=navigation], [role=contentinfo]"):
         junk.decompose()
     main = soup.select_one("main, article, [role=main], #content, .content") or soup.body
-    for img in (main.select("img") if main else []):
-        src = _img_src(img, url)
-        if not src or OWN_PAGE_SKIP.search(f"{src} {img.get('alt', '')}"):
-            continue
+    heading = " ".join(t.get_text(" ") for t in soup.select("title, h1"))
+    if not main or (name and not (names_in(main.get_text(" "), surname(name)) or names_in(heading, surname(name)))):
+        return None  # not provably this person's page (name in its title, heading or text): take nothing
+    candidates = [img for img in main.select("img")
+                  if _img_src(img, url) and not OWN_PAGE_SKIP.search(f"{_img_src(img, url)} {img.get('alt', '')}")]
+    for img in candidates[:3]:  # the portrait leads a bio page; deep images are galleries and news
         try:
-            if int(img.get("width") or 999) < 80 or int(img.get("height") or 999) < 80:
+            if min(int(img.get("width") or 999), int(img.get("height") or 999)) < 120:
                 continue
         except ValueError:
             pass
-        return re.sub(r"^http://", "https://", src)
+        return _img_src(img, url)
     return None
 
 
@@ -104,10 +138,17 @@ def surname(name: str) -> str:
     return _fold(parts[-1]) if parts else ""
 
 
+ORDINAL_WORDS = {w: i for i, w in enumerate("first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth "
+                                             "thirteenth fourteenth fifteenth sixteenth seventeenth eighteenth nineteenth twentieth".split(), 1)}
+
+
 def circuit_of(r: dict) -> int | None:
-    m = re.match(r"(\d+)\w\w Judicial Circuit", r.get("jurisdiction") or "")
-    if m:
-        return int(m.group(1))
+    m = re.match(r"(?i)(\d+)\w\w|(\w+)\s+Judicial Circuit", r.get("jurisdiction") or "")
+    if m and re.search(r"(?i)judicial circuit", r.get("jurisdiction") or ""):
+        if m.group(1):
+            return int(m.group(1))
+        if m.group(2) and m.group(2).lower() in ORDINAL_WORDS:
+            return ORDINAL_WORDS[m.group(2).lower()]
     return BROWARD_MD.get(r.get("county")) if re.search(r"(?i)judge", r["office_title"]) else None
 
 
@@ -115,35 +156,40 @@ def find_judges(circuit: int, judges: list[dict]) -> dict[str, dict]:
     found: dict[str, dict] = {}
     links: list[tuple[str, str]] = []
     for url in CIRCUIT_PAGES[circuit]:
+        before = len(found)
         for render in (False, True):
             html = fetch(url, render)
             if not html:
                 continue
-            people = [{"name": j["full_name"]} for j in judges if j["id"] not in found]
+            waiting = [j for j in judges if j["id"] not in found]
+            people = [{"name": j["full_name"]} for j in waiting]
             match_photos(html, url, people)
-            for j, p in zip([j for j in judges if j["id"] not in found], people):
+            for j, p in zip(waiting, people):
                 if p.get("photo_url"):
-                    found[j["id"]] = {"photo_url": p["photo_url"], "source_url": url}
+                    found[j["id"]] = {"photo_url": p["photo_url"], "source_url": url, "rule": "directory"}
             host = urlsplit(url).netloc.removeprefix("www.")
-            links += [(urljoin(url, a["href"]).split("#")[0], _fold(a.get_text(" ") + " " + a["href"]))
+            links += [(urljoin(url, a["href"]).split("#")[0], a.get_text(" "))
                       for a in BeautifulSoup(html, "lxml").select("a[href]") if host in urlsplit(urljoin(url, a["href"])).netloc]
-            if found or sum(1 for j in judges if surname(j["full_name"]) in _fold(html)) > len(judges) / 3:
-                break  # the directory lists the judges without JavaScript
+            listed = sum(1 for j in judges if names_in(html, surname(j["full_name"])))
+            if len(found) > before or listed > len(judges) / 3:
+                break  # this page lists the judges without JavaScript
     # A judge's own page, linked from the directory: its address or link text names them.
     for j in judges:
         if j["id"] in found:
             continue
         last, first = surname(j["full_name"]), _fold(j["first_name"])
-        page = next((u for u, text in links if last and last in _fold(u) and (first in text or first in _fold(u))), None)
+        # The link's own text names the judge (best), else its address carries their surname and first name.
+        page = next((u for u, text in links if names_in(text, last) and (first in _fold(text) or names_in(text, first))), None) \
+            or next((u for u, text in links if names_in(u, last) and names_in(u, first)), None)
         if not page:
             continue
         html = fetch(page)
         photo = own_page_photo(html, page, j["full_name"]) if html else None
-        if not photo:  # portraits some sites add with JavaScript
-            html = fetch(page, render=True)
+        if not photo and (not html or not BeautifulSoup(html, "lxml").select("main img, article img, #content img")):
+            html = fetch(page, render=True)  # only when the plain page has no images at all (added by JavaScript)
             photo = own_page_photo(html, page, j["full_name"]) if html else None
         if photo:
-            found[j["id"]] = {"photo_url": photo, "source_url": page}
+            found[j["id"]] = {"photo_url": photo, "source_url": page, "rule": "own page"}
     return found
 
 
@@ -155,14 +201,14 @@ def find_on_site(r: dict) -> dict | None:
     if not html:
         return None
     last = surname(r["full_name"])
-    if last and last in _fold(urlsplit(url).path):  # the person's own page
+    if names_in(urlsplit(url).path, last):  # the person's own page
         photo = own_page_photo(html, url, r["full_name"])
         if photo:
-            return {"photo_url": photo, "source_url": url}
+            return {"photo_url": photo, "source_url": url, "rule": "own page"}
     person = [{"name": r["full_name"]}]
     match_photos(html, url, person)
     if person[0].get("photo_url"):
-        return {"photo_url": person[0]["photo_url"], "source_url": url}
+        return {"photo_url": person[0]["photo_url"], "source_url": url, "rule": "named"}
     host = urlsplit(url).netloc
     abouts = [urljoin(url, a["href"]).split("#")[0] for a in BeautifulSoup(html, "lxml").select("a[href]")
               if ABOUT.search(a.get_text(" ") + " " + a["href"]) and urlsplit(urljoin(url, a["href"])).netloc == host]
@@ -173,7 +219,7 @@ def find_on_site(r: dict) -> dict | None:
         person = [{"name": r["full_name"]}]
         match_photos(sub, page, person)
         if person[0].get("photo_url"):
-            return {"photo_url": person[0]["photo_url"], "source_url": page}
+            return {"photo_url": person[0]["photo_url"], "source_url": page, "rule": "named"}
     return None
 
 
@@ -185,24 +231,31 @@ def main() -> None:
     others = [] if judges_only else [r for r in missing if r not in judges and r.get("official_website")
                                      and r.get("verification_status") != "unconfirmed"]
     print(f"{len(judges)} judges and {len(others)} others without a photo", file=sys.stderr)
+    current = {r["id"]: r for r in officials}
     result: dict[str, dict] = {}
-    if judges_only and OUT.exists():  # keep what earlier runs found for everyone else
-        result = {k: v for k, v in json.loads(OUT.read_text(encoding="utf-8")).items() if not k.startswith("_")}
+    if judges_only and OUT.exists():  # keep what earlier runs found for everyone else (people still in office)
+        result = {k: v for k, v in json.loads(OUT.read_text(encoding="utf-8")).items() if k in current}
+    seeded = len(result)
     by_circuit: dict[int, list[dict]] = {}
     for j in judges:
         by_circuit.setdefault(circuit_of(j), []).append(j)
     with ThreadPoolExecutor(max_workers=8) as pool:
         for found in pool.map(lambda item: find_judges(*item), by_circuit.items()):
             result.update(found)
-        print(f"judges: {len(result)} found", file=sys.stderr)
+        print(f"judges: {len(result) - seeded} found", file=sys.stderr)
         for r, found in zip(others, pool.map(find_on_site, others)):
             if found:
                 result[r["id"]] = found
-    # A portrait used for two people is not a portrait.
-    counts: dict[str, int] = {}
-    for v in result.values():
-        counts[v["photo_url"]] = counts.get(v["photo_url"], 0) + 1
-    result = {k: v for k, v in sorted(result.items()) if counts[v["photo_url"]] == 1}
+    # Only images that really load over https (the site shows nothing else).
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        checked = list(pool.map(lambda v: usable_image(v["photo_url"]), result.values()))
+    result = {k: {**v, "photo_url": ok} for (k, v), ok in zip(result.items(), checked) if ok}
+    # A portrait used for two different people is not a portrait (one person with two records may share it).
+    plain = lambda u: re.sub(r"[?#].*$", "", u)  # noqa: E731 - "?v=2" mustn't hide a shared image
+    sharers: dict[str, set] = defaultdict(set)
+    for k, v in result.items():
+        sharers[plain(v["photo_url"])].add(current[k]["full_name"].lower() if k in current else k)
+    result = {k: v for k, v in sorted(result.items()) if len(sharers[plain(v["photo_url"])]) == 1}
     OUT.write_text(json.dumps({"_how_to": "Generated by tools/find_photos.py: portraits from official pages, used only "
                                           "where the collected record has none.", **result}, indent=2, ensure_ascii=False) + "\n",
                    encoding="utf-8")
