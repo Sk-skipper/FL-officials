@@ -417,6 +417,15 @@ def find_board(lines: list[str], role_pattern: str, member_title: str) -> list[d
     return out
 
 
+_VACANT = re.compile(r"(?i)^(?:(?:seat|district|group|ward|zone)\s*#?\s*\w{1,3}\s*[,:\-–—|]?\s*)?(?:\(?(?:vacant|vacancy)\)?)"
+                     r"(?:\s*(?:seat|position)?\s*[,:\-–—|(]?\s*(?:seat|district|group|ward)?\s*#?\s*\w{0,3}\)?)?$")
+
+
+def count_vacancies(lines: list[str]) -> int:
+    """Lines that only say a seat is vacant ("Vacant", "Seat 3 - Vacant", "District 2: Vacancy")."""
+    return len({line.lower() for line in lines if len(line) <= 40 and _VACANT.match(line.strip())})
+
+
 def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
     member_title = config.get("member_title") or "Commissioner"
     exclude = {e.lower() for e in config.get("exclude") or []}
@@ -442,7 +451,9 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
         match_photos(html, url, members)
         match_emails(html, members)
     seats = int(config.get("seats") or 5)
-    if not seats - 2 <= len(members) <= seats + 2:
+    # A seat the page marks "Vacant" is still a seat: count it, so a vacancy doesn't read as a broken page.
+    vacant = count_vacancies([line for html, url in pages for line in page_lines(html, config.get("selector"), url)])
+    if not seats - 2 <= len(members) + vacant <= seats + 2:
         names = ", ".join(f"{m['name']} ({m['title']})" for m in members[:12])
         raise FetchError(f"Expected about {seats} seats on the page but found {len(members)}: {names or 'none'}. "
                          "The page may have changed; check it and update the config.")

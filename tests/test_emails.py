@@ -27,3 +27,9 @@ def test_emails_go_to_their_own_block_and_must_name_the_member():
     members = [{"name": n} for n in ("Howard S. Weinberg", "Cindy Orlinsky", "Art Gonzalez", "Mary Davis")]
     match_emails(CARDS, members)
     assert [m.get("email") for m in members] == ["hweinberg@city.gov", "corlinsky@city.gov", None, "seat4@city.gov"]
+
+
+def test_vacant_seats_are_counted():
+    from collector.scrapers.city_roster import count_vacancies
+    assert count_vacancies(["Vacant", "Seat 3 - Vacant", "District 2: Vacancy", "Jane Doe", "Mayor"]) == 3
+    assert count_vacancies(["The vacant lot on Main Street will be a park"]) == 0

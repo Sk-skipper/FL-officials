@@ -13,7 +13,7 @@ page that yields more than two people fewer or more than "seats" fails instead o
 import re
 
 from collector.scrapers.base import BaseScraper, FetchError
-from collector.scrapers.city_roster import find_board, match_emails, match_photos, page_lines
+from collector.scrapers.city_roster import count_vacancies, find_board, match_emails, match_photos, page_lines
 
 ROLE = (r"(?i)^(?:(?:ward|district|seat|group|at[- ]large)\s*\w*\s*[-–:,]\s*)?(?:mayor|vice[- ]mayor|deputy mayor|mayor pro tem|"
         r"council\s*(?:man|woman|women|member|person|president|chair)?|councilor|commissioner|city commissioner|alderman|chair)")
@@ -45,9 +45,10 @@ def seat_of(role: str) -> tuple[str | None, str | None]:
 
 def parse_directory(html: str, url: str, config: dict) -> list[dict]:
     member_title = config.get("member_title") or "Council Member"
-    people = [m for m in find_board(page_lines(html, None, url), ROLE, member_title) if not NOT_A_PERSON.search(m["name"])]
+    lines = page_lines(html, None, url)
+    people = [m for m in find_board(lines, ROLE, member_title) if not NOT_A_PERSON.search(m["name"])]
     seats = int(config.get("seats") or 5)
-    if not seats - 2 <= len(people) <= seats + 2:
+    if not seats - 2 <= len(people) + count_vacancies(lines) <= seats + 2:
         raise FetchError(f"Expected about {seats} council members in the directory but found {len(people)}.")
     match_photos(html, url, people)
     match_emails(html, people)

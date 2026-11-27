@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -42,21 +42,24 @@ jobs:
         env:
           ONLY: ${{ inputs.only }}
           SCRAPER_CONTACT: ${{ vars.SCRAPER_CONTACT }}
-        run: python -m collector.collect --report collection-report.md --only "$ONLY"
+        run: |
+          python -m collector.collect --report collection-report.md --json collection-report.json \
+            --proposed collection-proposed.json --only "$ONLY" > /dev/null
+          # The full report on the run's summary page (the pull request body is cut off at 65,536 characters).
+          cat collection-report.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Open a pull request with the changes
-        if: steps.collect.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v7
+      - name: Save the report with the run
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          branch: data-update
-          add-paths: data/collected.json
-          commit-message: "Update officials from official sources"
-          title: "Data update: changes found in official sources"
-          body-path: collection-report.md
-          delete-branch: true
+          name: collection-report
+          path: |
+            collection-report.md
+            collection-report.json
+          if-no-files-found: ignore
 
-      - name: Save refreshed verification dates and redeploy
-        if: steps.collect.outputs.changed == 'false'
+      # Changes are published straight away; the site is redeployed. Held-back changes go to a pull request below.
+      - name: Publish the changes and redeploy
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -67,12 +70,40 @@ jobs:
             echo "Nothing to save."
             exit 0
           fi
-          git commit -m "Refresh verification dates"
+          git commit -m "Update officials from official sources"
           git push
           gh workflow run deploy.yml --ref "${GITHUB_REF_NAME}"
 
-      - name: Mark the run as failed if a source failed
-        if: steps.collect.outputs.failed == 'true'
+      - name: Offer held-back changes for review
+        if: steps.collect.outputs.held == 'true'
         run: |
-          echo "::error::At least one source failed. See the report above; its previous records are still published."
-          exit 1
+          cp collection-proposed.json data/collected.json
+          python - <<'PY'
+          import json
+          rows = json.load(open("collection-report.json"))
+          held = [r for r in rows if r["held"]]
+          lines = ["## Held for review", "",
+                   "These sources would lose several people at once, so their published lists were left unchanged. "
+                   "Check each against its official page: **merge** to publish the new lists, or **close** to keep the old ones.",
+                   "", "| Source | Removed | Added |", "|---|---:|---:|"]
+          lines += [f"| {r['name']} | {r['removed']} | {r['added']} |" for r in held]
+          lines += ["", "Names are in the full report on the workflow run's summary page."]
+          open("held-report.md", "w").write("\n".join(lines) + "\n")
+          PY
+
+      - name: Open a pull request with the held-back changes
+        if: steps.collect.outputs.held == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data-held-for-review
+          add-paths: data/collected.json
+          commit-message: "Held-back changes from official sources"
+          title: "Data held for review: sources that would lose several people"
+          body-path: held-report.md
+          delete-branch: true
+
+      # Red only when a statewide or county-wide source fails; city failures are listed as warnings.
+      - name: Name each failing source
+        if: always()
+        run: |
+          if [ -f collection-report.json ]; then python -m collector.gate collection-report.json; fi
