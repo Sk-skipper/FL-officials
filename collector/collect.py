@@ -9,8 +9,8 @@ Safety rules:
   * a source that suddenly returns fewer than half its usual records is
     treated as broken, and its previous records are kept
   * rows that cannot be read are reported, never guessed
-  * changes are published straight away, except a source that would lose
-    several people at once (HOLD_REMOVALS): that source's change is held back
+  * changes are published straight away, except a source whose list would
+    shrink by several people at once (HOLD_REMOVALS): that change is held back
     and offered as a pull request for a person to check
   * every change (added, removed, edited) is listed in the report; the full
     report goes on the workflow run's summary page and is saved with the run
@@ -41,7 +41,7 @@ COLLECTED_FILE = ROOT / "data" / "collected.json"
 # Fields that change on every successful run and are not, by themselves, news.
 VOLATILE_RECORD_FIELDS = {"last_verified", "updated_on"}
 SUSPICIOUS_DROP = 0.5
-# A source whose new list drops this many people (net of new ones), or this share of its list, is held for review.
+# A source whose list shrinks by this many people (net of new ones), or loses this share with nobody new, is held.
 HOLD_REMOVALS = 2
 HOLD_SHARE = 0.4
 
@@ -177,11 +177,18 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
     return state, result
 
 
+def _people(records: list) -> set:
+    return {" ".join(str(r.get("full_name", "")).lower().split()) for r in records if isinstance(r, dict)}
+
+
 def needs_review(result: SourceResult, previous_count: int) -> bool:
-    """Several people gone at once is the change most likely to be a broken page rather than news."""
-    net_loss = len(result.removed) - len(result.added)
-    return bool(result.removed) and (net_loss >= HOLD_REMOVALS or
-                                     (previous_count and len(result.removed) >= max(2, HOLD_SHARE * previous_count)))
+    """A list that shrinks by several people at once is the change most likely to be a broken page rather than news.
+    People are compared by name, so a title change (Commissioner -> Vice Mayor) is not a removal, and an election
+    that replaces members one for one is published like any other change."""
+    gone = _people(result.removed) - _people(result.added)
+    new = _people(result.added) - _people(result.removed)
+    net_loss = len(gone) - len(new)
+    return net_loss >= HOLD_REMOVALS or (not new and previous_count > 0 and len(gone) >= max(2, HOLD_SHARE * previous_count))
 
 
 def _canonical(collected: dict) -> dict:
