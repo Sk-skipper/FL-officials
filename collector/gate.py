@@ -6,7 +6,8 @@ A red run has to mean something a person should fix today, or it gets ignored:
   * a statewide or county-wide source failing fails the run on the first day: it covers a whole county or more;
   * a city or town source failing is a warning: one council's previous list stays published, and with 200+ city
     websites a few are always mid-redesign. Each warning says how long it has been failing, newest first;
-  * a site whose robots.txt refuses us is a warning too: that's the site's choice and nothing to fix here.
+  * a site that refuses us (robots.txt, or HTTP 401/403) is a warning too: that's the site's choice and nothing to
+    fix here.
 """
 import json
 import sys
@@ -23,7 +24,7 @@ def classify(rows: list[dict], today: date) -> tuple[list[str], list[str]]:
         age = "new today" if days <= 1 else f"failing {days} days, since {since}"
         error = (r.get("error") or "").replace("\n", " ")[:300]
         line = f"{r['name']} ({r['key']}): {age}. {error}"
-        refused = "robots.txt disallows" in error
+        refused = "robots.txt disallows" in error or "HTTP 403" in error or "HTTP 401" in error
         if r.get("level") in ("state", "federal", "county") and not refused:
             errors.append(line)
         else:

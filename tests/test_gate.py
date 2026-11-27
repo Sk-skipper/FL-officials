@@ -13,10 +13,12 @@ def test_county_failures_are_errors_and_city_failures_warnings():
          "error": "RobotsDisallowed: robots.txt disallows collecting x", "failing_since": "2026-11-01"},
         {"key": "ok", "name": "OK", "level": "state", "status": "success", "error": None, "failing_since": None},
     ]
+    rows.append({"key": "soe_x", "name": "X SOE", "level": "county", "status": "failed",
+                 "error": "FetchError: HTTP 403 for https://x: access is restricted", "failing_since": "2026-11-27"})
     errors, warnings = classify(rows, date(2026, 11, 27))
     assert len(errors) == 1 and "Lee SOE" in errors[0] and "new today" in errors[0]
-    assert [w.split(" (")[0] for w in warnings] == ["B Town", "A City", "R County"]  # newest first
-    assert "failing 8 days, since 2026-11-20" in warnings[1]
+    assert [w.split(" (")[0] for w in warnings] == ["B Town", "X SOE", "A City", "R County"]  # newest first
+    assert "failing 8 days, since 2026-11-20" in warnings[2]
 
 
 def test_only_a_shrinking_list_is_held_for_review():
