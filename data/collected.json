@@ -5,8 +5,8 @@
       "url": "https://www.senate.gov/senators/",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -72,8 +72,8 @@
       "url": "https://www.house.gov/representatives",
       "level": "federal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -839,8 +839,8 @@
       "url": "https://www.flsenate.gov/Senators",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -2079,8 +2079,8 @@
       "url": "https://www.flhouse.gov/Representatives",
       "level": "state",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -5450,8 +5450,8 @@
       "url": "https://dos.elections.myflorida.com/supervisors/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -7337,8 +7337,8 @@
       "url": "https://services.arcgis.com/JMAJrTsHNLrSsWf5/ArcGIS/rest/services/ElectionGeography_public_25135677cecf426483e4c6d93e58db0a/FeatureServer/2",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -9252,8 +9252,8 @@
       "url": "https://browardvotes.gov/candidates/elected-officials",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -13119,8 +13119,8 @@
       "url": "https://www.miamidade.gov/elections/library/reports/elected-officials.pdf",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -19714,8 +19714,8 @@
       "url": "https://flsheriffs.org/sheriffs/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -21545,8 +21545,8 @@
       "url": "https://flccoc.org/about-us/clerks/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -23376,8 +23376,8 @@
       "url": "https://www.fl-counties.com/directory-results/?group=156781",
       "level": "county",
       "status": "partial",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": "33 row(s) could not be read",
       "records": [
         {
@@ -27839,8 +27839,8 @@
       "url": "https://www.cityofaventura.com/200",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -28046,8 +28046,8 @@
       "url": "https://balharbourfl.gov/government/village-mayor-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -28197,8 +28197,8 @@
       "url": "https://www.bayharborislands-fl.gov/215/Mayor-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -28404,8 +28404,8 @@
       "url": "http://biscayneparkfl.gov/index.asp?SEC=E84C0D63-86B0-4D67-AE8C-42A0DDAF43AB",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -28555,8 +28555,8 @@
       "url": "https://www.coralgables.com/department/city-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -28706,7 +28706,7 @@
       "url": "https://www.cutlerbay-fl.gov/town-council",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so https://www.cutlerbay-fl.gov/town-council was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -28830,8 +28830,8 @@
       "url": "https://elportalvillage.com/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -28981,8 +28981,8 @@
       "url": "http://www.floridacityfl.gov/165/City-Commission-Members-Office",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -29132,8 +29132,8 @@
       "url": "https://goldenbeach.us/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -29283,8 +29283,8 @@
       "url": "http://www.cityofhomestead.com/89/Elected-Officials",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -29490,8 +29490,8 @@
       "url": "https://www.keybiscayne.fl.gov/government/council/index.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -29697,8 +29697,8 @@
       "url": "https://www.townofmedley.com/town-council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -29848,8 +29848,8 @@
       "url": "https://www.miami.gov/My-Government/City-Officials",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -30027,8 +30027,8 @@
       "url": "https://www.miamibeachfl.gov/city-hall/elected-officials/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -30234,8 +30234,8 @@
       "url": "http://www.miamigardens-fl.gov/269/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -30441,8 +30441,8 @@
       "url": "https://www.miamilakes-fl.gov/departments/town-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -30620,8 +30620,8 @@
       "url": "https://northbayvillage-fl.gov/commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -30771,7 +30771,7 @@
       "url": "https://www.northmiamifl.gov/1401/North-Miami-Elected-Officials",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "FetchError: HTTP 404 for https://www.northmiamifl.gov/1401/North-Miami-Elected-Officials",
       "records": [
@@ -30895,8 +30895,8 @@
       "url": "https://www.citynmb.com/385/Mayor-City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -31102,8 +31102,8 @@
       "url": "http://www.opalockafl.gov/171/Mayor-City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -31253,8 +31253,8 @@
       "url": "http://www.palmettobay-fl.gov/376/Mayor-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -31404,8 +31404,8 @@
       "url": "https://www.pinecrest-fl.gov/Government/Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -31555,8 +31555,8 @@
       "url": "http://www.townofsurfsidefl.gov/town-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -31706,8 +31706,8 @@
       "url": "http://www.cityofsweetwater.fl.gov/191/Elected-Officials",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -31885,8 +31885,8 @@
       "url": "https://virginiagardens-fl.gov/mayor-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32064,8 +32064,8 @@
       "url": "http://cityofwestmiamifl.com/index.asp?SEC=11625B96-B7DF-47FE-AD2E-97D2D1933ED9",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32187,8 +32187,8 @@
       "url": "https://www.coconutcreek.net/government/city-commission/city-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32338,8 +32338,8 @@
       "url": "https://www.coralsprings.gov/Government/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32489,8 +32489,8 @@
       "url": "https://www.fortlauderdale.gov/Government/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32640,8 +32640,8 @@
       "url": "https://www.townofhillsborobeach.com/259/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32791,8 +32791,8 @@
       "url": "https://www.hollywoodfl.org/89/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -32998,8 +32998,8 @@
       "url": "https://lauderdalebythesea-fl.gov/187/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -33149,8 +33149,8 @@
       "url": "https://lazylakefl.us/council-contact-info",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -33328,8 +33328,8 @@
       "url": "https://lighthousepointfl.gov/215/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -33507,8 +33507,8 @@
       "url": "https://margatefl.com/287/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -33630,8 +33630,8 @@
       "url": "https://www.miramarfl.gov/City-Government/Office-of-the-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -33781,7 +33781,7 @@
       "url": "http://www.nlauderdale.org/quick_links/city_commission/index.php",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt disallows collecting http://www.nlauderdale.org/quick_links/city_commission/index.php",
       "records": [
@@ -33905,8 +33905,8 @@
       "url": "https://www.oaklandparkfl.gov/276/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34056,8 +34056,8 @@
       "url": "https://cityofparkland.org/127/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34207,8 +34207,8 @@
       "url": "https://www.tppfl.gov/162/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34302,8 +34302,8 @@
       "url": "https://www.ppines.com/745/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34453,8 +34453,8 @@
       "url": "https://www.pompanobeachfl.gov/government/city-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34632,8 +34632,8 @@
       "url": "https://wiltonmanors.gov/220/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34783,8 +34783,8 @@
       "url": "https://www.sbdd.org/board-of-commissioners/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -34990,8 +34990,8 @@
       "url": "https://www.cscbroward.org/council-members/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -35281,8 +35281,8 @@
       "url": "https://www.sfwmd.gov/who-we-are/governing-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -35544,8 +35544,8 @@
       "url": "https://www.yourcharlotteschools.net/72943_3",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -35695,8 +35695,8 @@
       "url": "https://www.citrusschools.org/meet-school-board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -35846,8 +35846,8 @@
       "url": "https://www.escambiaschools.org/domain/77",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -35997,8 +35997,8 @@
       "url": "http://www.hdsb.org/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -36148,8 +36148,8 @@
       "url": "https://www.jcsb.org/421891_2",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -36299,8 +36299,8 @@
       "url": "https://www.lcsb.org/schoolboard",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -36450,8 +36450,8 @@
       "url": "https://www.ocps.net/school-board-members-home",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -36685,8 +36685,8 @@
       "url": "https://www.palmbeachschools.org/school_board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -36892,8 +36892,8 @@
       "url": "https://www.sumter.k12.fl.us/school-board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -37043,8 +37043,8 @@
       "url": "https://escambiavotes.gov/elected-officials-in-escambia-county",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -37166,8 +37166,8 @@
       "url": "https://www.votefranklinfl.gov/resources/elected_officials.php",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -37289,8 +37289,8 @@
       "url": "https://votegadsdenfl.gov/voter-info/federal-state-local-officials/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -37720,7 +37720,7 @@
       "url": "https://www.lee.vote/173/Elected-Officials",
       "level": "county",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-16T01:48:00+00:00",
       "last_error": "FetchError: HTTP 403 for https://www.lee.vote/173/Elected-Officials: access is restricted and will not be bypassed",
       "records": [
@@ -37872,8 +37872,8 @@
       "url": "https://www.leonvotes.gov/Candidates/Elected-Officials",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -38023,8 +38023,8 @@
       "url": "https://voteseminole.gov/elections/elected-officials/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -38230,8 +38230,8 @@
       "url": "https://www.tampa.gov",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -38465,8 +38465,8 @@
       "url": "https://www.orlando.gov/Our-Government/Mayor-City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -38672,8 +38672,8 @@
       "url": "https://www.talgov.com/cityleadership/city-commission.aspx",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -38795,8 +38795,8 @@
       "url": "https://www.wpb.org/Our-City/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -38946,8 +38946,8 @@
       "url": "https://www.lakelandgov.net/government/mayor-city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -39153,8 +39153,8 @@
       "url": "https://www.palmcoast.gov/council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -39304,8 +39304,8 @@
       "url": "https://www.deltonafl.gov/408/Mayor-City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -39511,8 +39511,8 @@
       "url": "https://www.codb.us/384/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -39718,8 +39718,8 @@
       "url": "https://www.melbourneflorida.org/Government/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -39925,8 +39925,8 @@
       "url": "https://www.sarasotafl.gov/Departments/Your-City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -40076,8 +40076,8 @@
       "url": "https://www.cityofpensacola.com/507/Council-Members",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -40283,8 +40283,8 @@
       "url": "https://www.cityofkeywest-fl.gov/379/City-Commissioners",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -40462,8 +40462,8 @@
       "url": "https://www.boynton-beach.org/174/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -40613,8 +40613,8 @@
       "url": "https://www.port-orange.org/173/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -40764,8 +40764,8 @@
       "url": "https://sanfordfl.gov/government/city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -40887,8 +40887,8 @@
       "url": "https://www.largo.com/connect/mayor_and_commission/index.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41094,8 +41094,8 @@
       "url": "https://www.northportfl.gov/City-Government/City-Leadership/City-Commission/City-Commission-Districts",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41245,8 +41245,8 @@
       "url": "https://www.pbgfl.com/244/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41396,8 +41396,8 @@
       "url": "https://www.mywinterhaven.com/220/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41547,8 +41547,8 @@
       "url": "https://www.apopka.gov/193/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41670,8 +41670,8 @@
       "url": "https://www.titusville.com/515/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41821,8 +41821,8 @@
       "url": "https://www.cityoffortpierce.com/182/Mayor-City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -41972,8 +41972,8 @@
       "url": "https://lakeworthbeachfl.gov/government/city-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -42123,8 +42123,8 @@
       "url": "https://www.altamonte.org/352/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -42274,8 +42274,8 @@
       "url": "https://cityofwinterpark.org/government/city-commission/bios/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -42425,8 +42425,8 @@
       "url": "https://discover.pbc.gov/countycommissioners/Pages/default.aspx",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -42632,8 +42632,8 @@
       "url": "https://centralbrowardwcd.org/contact/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -42811,8 +42811,8 @@
       "url": "https://www.mhs.net/about/leadership/commissioners",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43018,8 +43018,8 @@
       "url": "https://acme.wellingtonfl.gov/board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43169,8 +43169,8 @@
       "url": "https://bigcypressstewardship.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43264,8 +43264,8 @@
       "url": "https://www.floridawatercontroldistricts.org/bolles-drainage-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43359,8 +43359,8 @@
       "url": "https://www.collinssloughwcd.com/board-of-supervisors.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43454,8 +43454,8 @@
       "url": "https://coquinawcd.com/supervisors",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43549,8 +43549,8 @@
       "url": "https://www.floridawatercontroldistricts.org/disston-island-conservancy-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43644,8 +43644,8 @@
       "url": "https://www.floridawatercontroldistricts.org/east-beach-water-control-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43739,8 +43739,8 @@
       "url": "https://www.floridawatercontroldistricts.org/gladeview-water-control-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43834,8 +43834,8 @@
       "url": "https://www.floridawatercontroldistricts.org/highland-glades-water-control-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -43929,8 +43929,8 @@
       "url": "https://www.npbcid.org/board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -44024,8 +44024,8 @@
       "url": "https://www.scewcd.org/board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -44119,8 +44119,8 @@
       "url": "https://www.floridawatercontroldistricts.org/shawano-water-control-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -44214,8 +44214,8 @@
       "url": "https://www.floridawatercontroldistricts.org/south-florida-conservancy-district.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -44309,8 +44309,8 @@
       "url": "https://www.sirwcd.org/board-of-supervisors",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -44432,8 +44432,8 @@
       "url": "https://www.coj.net/city-council.aspx",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -44947,8 +44947,8 @@
       "url": "https://www.gainesvillefl.gov/Government-Pages/Government/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -45154,8 +45154,8 @@
       "url": "https://cityofbradenton.com/council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -45305,8 +45305,8 @@
       "url": "https://www.panamacity.gov/395/city-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -45456,8 +45456,8 @@
       "url": "https://www.ocoee.org/125/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -45579,8 +45579,8 @@
       "url": "https://www.alachuaschools.net/o/acps/page/board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -45730,8 +45730,8 @@
       "url": "https://www.bay.k12.fl.us/page/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -45881,8 +45881,8 @@
       "url": "https://dcps.duvalschools.org/o/dcps/page/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46088,8 +46088,8 @@
       "url": "https://www.indianriverschools.org/page/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46239,8 +46239,8 @@
       "url": "https://www.lake.k12.fl.us/o/lcs/page/board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46390,8 +46390,8 @@
       "url": "https://www.leonschools.net/school-board-home",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46541,8 +46541,8 @@
       "url": "https://www.keysschools.com/page/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46692,8 +46692,8 @@
       "url": "https://www.nassau.k12.fl.us/page/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46843,8 +46843,8 @@
       "url": "http://www.pasco.k12.fl.us/school_board/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -46994,8 +46994,8 @@
       "url": "https://www.vcsedu.org/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -47145,8 +47145,8 @@
       "url": "https://www.wakullaschooldistrict.org/page/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -47296,8 +47296,8 @@
       "url": "https://www.devilsgardenwcd.com/board-of-supervisors.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -47391,8 +47391,8 @@
       "url": "https://www.collierschools.com/exploreccps/school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -47542,8 +47542,8 @@
       "url": "http://www.lantana.org/244/Town-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -47665,7 +47665,7 @@
       "url": "https://www.holmesbeachfl.org/government/elected_officials/city_commissioners/index.php",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt disallows collecting https://www.holmesbeachfl.org/government/elected_officials/city_commissioners/index.php",
       "records": [
@@ -47761,8 +47761,8 @@
       "url": "https://www.cityofcrestview.org/557/City-Council-Members",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -47912,8 +47912,8 @@
       "url": "http://www.lauderdalelakes.org/123/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -48035,7 +48035,7 @@
       "url": "http://www.hypoluxo.org/bc-tc",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so http://www.hypoluxo.org/bc-tc was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -48215,8 +48215,8 @@
       "url": "http://www.longboatkey.org/293/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -48338,8 +48338,8 @@
       "url": "http://www.cityofoviedo.net/340/Mayor-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -48489,8 +48489,8 @@
       "url": "https://www.casselberry.org/114/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -48640,8 +48640,8 @@
       "url": "http://www.cityofrockledge.org/129/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -48819,8 +48819,8 @@
       "url": "http://www.winterspringsfl.org/221/Meet-Your-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -48970,8 +48970,8 @@
       "url": "http://www.cityofedgewater.org/535/City-Council-Members",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -49121,8 +49121,8 @@
       "url": "http://www.cityofbonitasprings.org/government/mayor___council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -49328,8 +49328,8 @@
       "url": "http://www.ormondbeach.org/116/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -49479,8 +49479,8 @@
       "url": "http://www.mysanibel.com/201/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -49630,8 +49630,8 @@
       "url": "https://www.townoforangepark.com/p/government/town-council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -49781,8 +49781,8 @@
       "url": "http://www.palmbeachshoresfl.us/government/mayor_and_commission.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -49932,8 +49932,8 @@
       "url": "http://www.coab.us/135/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50083,8 +50083,8 @@
       "url": "https://moorehaven.org/city-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50206,8 +50206,8 @@
       "url": "http://www.cityofbrooksville.us/266/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50357,8 +50357,8 @@
       "url": "https://auburndalefl.com/city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50508,8 +50508,8 @@
       "url": "https://www.cityofapalachicola.com/government/city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50659,8 +50659,8 @@
       "url": "https://arcadia-fl.gov/city-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50810,8 +50810,8 @@
       "url": "http://www.cityofarcher.com/citycommission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -50961,8 +50961,8 @@
       "url": "http://www.cityofportstjoe.com/city-commissioners.cfm",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51112,8 +51112,8 @@
       "url": "https://townofastatula.com/docs/town-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51263,8 +51263,8 @@
       "url": "http://www.atlantisfl.gov/35/Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51386,8 +51386,8 @@
       "url": "http://www.oakhillfl.com/city-commission/city-commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51537,8 +51537,8 @@
       "url": "http://www.cityofcocoabeach.com/555/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51688,8 +51688,8 @@
       "url": "http://palatka-fl.gov/151/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51839,8 +51839,8 @@
       "url": "https://www.cityofcapecanaveral.org/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -51990,8 +51990,8 @@
       "url": "http://www.covb.org/283/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -52141,8 +52141,8 @@
       "url": "http://www.cityofalachua.com/172",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -52292,8 +52292,8 @@
       "url": "http://www.lcfla.com/170/City-Council-and-Charter-Officers",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -52443,8 +52443,8 @@
       "url": "http://www.defuniaksprings.net/895/CITY-COUNCIL",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -52622,8 +52622,8 @@
       "url": "http://cityofstuart.us/230/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -52773,8 +52773,8 @@
       "url": "http://www.ci.marathon.fl.us/departments/city_council/index.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -52924,8 +52924,8 @@
       "url": "http://www.greencovesprings.com/255/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53075,8 +53075,8 @@
       "url": "http://www.lakemaryfl.com/356/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53226,8 +53226,8 @@
       "url": "http://ci.mount-dora.fl.us/443/Contacting-the-City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53405,8 +53405,8 @@
       "url": "https://www.indian-rocks-beach.com/government/city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53528,8 +53528,8 @@
       "url": "http://www.keycolonybeach.net/key-colony-beach-commission-bios/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53651,8 +53651,8 @@
       "url": "http://www.indianharbourbeach.org/1181/Mayor-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53802,8 +53802,8 @@
       "url": "https://www.highsprings.us/node/98",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -53953,8 +53953,8 @@
       "url": "http://www.cityofmaryesther.com/219/Mayor-City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -54132,8 +54132,8 @@
       "url": "http://www.bunnellcity.us/1202/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -54283,7 +54283,7 @@
       "url": "http://www.ci.newberry.fl.us/1210/City-Commission-Mayor",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so http://www.ci.newberry.fl.us/1210/City-Commission-Mayor was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -54463,8 +54463,8 @@
       "url": "http://www.southpalmbeach.com/202/Town-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -54614,8 +54614,8 @@
       "url": "https://waldo-fl.com/form-of-government/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -54765,8 +54765,8 @@
       "url": "https://www.trentonflorida.org/mayor-city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -54916,8 +54916,8 @@
       "url": "http://www.umatillafl.org/173/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -55067,8 +55067,8 @@
       "url": "https://www.cityofbushnellfl.com/government/city_council/index.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -55190,8 +55190,8 @@
       "url": "https://mygulfport.us/city-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -55341,8 +55341,8 @@
       "url": "http://www.cityofmascotte.com/201/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -55492,7 +55492,7 @@
       "url": "http://www.edgewood-fl.gov/citycouncil",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so http://www.edgewood-fl.gov/citycouncil was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -55644,8 +55644,8 @@
       "url": "https://crescentcity-fl.com/city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -55767,8 +55767,8 @@
       "url": "http://mylakealfred.com/204/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -55918,7 +55918,7 @@
       "url": "http://www.cityofbelleislefl.org/citycouncil",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so http://www.cityofbelleislefl.org/citycouncil was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -56126,8 +56126,8 @@
       "url": "http://townofjupiterisland.com/178/Commissioners",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -56277,8 +56277,8 @@
       "url": "https://www.loxahatcheegrovesfl.gov/166/Town-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -56428,8 +56428,8 @@
       "url": "https://cityofliveoak.org/elected-officials/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -56579,8 +56579,8 @@
       "url": "http://www.dadecityfl.com/government/city_commissioners.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -56730,8 +56730,8 @@
       "url": "https://www.mycarrabelle.com/government/city-commission/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -56881,8 +56881,8 @@
       "url": "http://www.mymidwayfl.com/government/mayor_and_councilmembers.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57004,8 +57004,8 @@
       "url": "http://www.stpetebeach.org/222/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57155,8 +57155,8 @@
       "url": "https://www.melbournebeachfl.org/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57306,8 +57306,8 @@
       "url": "http://www.cityoflakewales.com/217/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57429,8 +57429,8 @@
       "url": "https://freeportflorida.gov/government/mayor___city_council/index.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57580,8 +57580,8 @@
       "url": "https://townofreddick.com/town-officials/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57731,8 +57731,8 @@
       "url": "http://www.fbfl.us/842/Meet-the-Commissioners",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -57883,8 +57883,8 @@
       "url": "https://townofmcintosh.org/town-officials/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58034,8 +58034,8 @@
       "url": "https://oaklandfl.gov/209/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58185,8 +58185,8 @@
       "url": "http://www.oceanridgeflorida.com/government/town_commissioners.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58336,8 +58336,8 @@
       "url": "http://www.cityofstarke.org/1202/City-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58487,8 +58487,8 @@
       "url": "https://mymontverde.com/council-members/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58638,8 +58638,8 @@
       "url": "https://www.kennethcityfl.org/government/mayor",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58761,8 +58761,8 @@
       "url": "http://www.townofpierson.org/mayor-and-council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -58912,8 +58912,8 @@
       "url": "http://www.townoflakehamilton.com/1192/Town-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -59063,7 +59063,7 @@
       "url": "http://pomonapark.com/town-council",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so http://pomonapark.com/town-council was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -59215,8 +59215,8 @@
       "url": "https://townofnorthredingtonbeach.com/government/commissioners/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -59366,7 +59366,7 @@
       "url": "http://www.irshores.com/town_government/town_council.php",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-16T02:53:27+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (HTTP 522), so http://www.irshores.com/town_government/town_council.php was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -59518,8 +59518,8 @@
       "url": "http://www.townofbelleair.com/436/Town-Commission",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -59669,7 +59669,7 @@
       "url": "http://www.townofhilliard.com/towncouncil",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T23:37:04+00:00",
       "last_error": "RobotsDisallowed: robots.txt could not be read (ConnectionError), so http://www.townofhilliard.com/towncouncil was not collected (RFC 9309: an unreachable robots.txt means wait and try again later)",
       "records": [
@@ -59821,8 +59821,8 @@
       "url": "https://cityofparker.com/government/city-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -59972,8 +59972,8 @@
       "url": "http://www.itsmymaitland.com/258/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -60123,8 +60123,8 @@
       "url": "http://www.cityofportrichey.com/207/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -60302,8 +60302,8 @@
       "url": "https://www.leesburgflorida.gov/my_city/city_commission.php",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -60425,8 +60425,8 @@
       "url": "http://www.fwb.org/165/Mayor-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -60660,8 +60660,8 @@
       "url": "http://www.cityofsebastian.org/266/City-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -60811,8 +60811,8 @@
       "url": "https://www.eustis.org/Government/City-Commission/Commissioners",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -60962,8 +60962,8 @@
       "url": "https://cityofbaylakefl.gov/city-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61113,8 +61113,8 @@
       "url": "https://cityoflakebuenavistafl.gov/city-council/",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61264,8 +61264,8 @@
       "url": "http://www.indialantic.com/1199/Town-Council",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61415,8 +61415,8 @@
       "url": "https://myescambia.com/your-government",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61566,8 +61566,8 @@
       "url": "https://washingtonfl.com/our-county/board-of-commissioners/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61717,8 +61717,8 @@
       "url": "http://www.CharlotteCountyfl.gov/commission-office/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61868,8 +61868,8 @@
       "url": "https://www.citrusbocc.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -61991,8 +61991,8 @@
       "url": "https://www.martin.fl.us/Commissioners",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62142,8 +62142,8 @@
       "url": "http://www.alachuacollector.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62181,8 +62181,8 @@
       "url": "http://www.bakerk12.org/domain/348",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62220,8 +62220,8 @@
       "url": "http://www.mybakertc.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62259,8 +62259,8 @@
       "url": "https://www.browardschools.com/Domain/12453",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62298,8 +62298,8 @@
       "url": "http://www.calhountc.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62337,8 +62337,8 @@
       "url": "http://www.claycountytax.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62376,8 +62376,8 @@
       "url": "http://www.columbiataxcollector.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62415,7 +62415,7 @@
       "url": "http://www.coj.net/departments/tax-collector.aspx",
       "level": "county",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-16T03:01:23+00:00",
       "last_error": "FetchError: http://www.coj.net/departments/tax-collector.aspx failed after 4 attempts (HTTP 500)",
       "records": [
@@ -62455,8 +62455,8 @@
       "url": "https://www.escambiaschools.org/domain/77",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62494,8 +62494,8 @@
       "url": "https://www.franklincountyschools.org/our-district/board/franklin-county-school-board",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62533,8 +62533,8 @@
       "url": "http://www.franklintaxcollector.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62572,8 +62572,8 @@
       "url": "http://www.gladestc.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62611,8 +62611,8 @@
       "url": "http://www.gulftaxcollector.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62650,8 +62650,8 @@
       "url": "http://www.hardeetaxcollector.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62689,8 +62689,8 @@
       "url": "https://www.hernandoschools.org/school-board/index",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62728,8 +62728,8 @@
       "url": "http://www.hernandotax.us/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62767,8 +62767,8 @@
       "url": "http://www.holmestax.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62806,8 +62806,8 @@
       "url": "http://www.jacksontc.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62845,8 +62845,8 @@
       "url": "http://www.laketax.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62884,8 +62884,8 @@
       "url": "https://www.leonschools.net/school-board-home",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62923,8 +62923,8 @@
       "url": "http://www.libertytaxcollector.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -62962,8 +62962,8 @@
       "url": "http://www.monroetaxcollector.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63001,8 +63001,8 @@
       "url": "http://www.okeechobeetc.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63040,8 +63040,8 @@
       "url": "http://www.octaxcol.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63079,8 +63079,8 @@
       "url": "http://www.pcsb.org/domain/608",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63118,8 +63118,8 @@
       "url": "https://seminolecounty.tax/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63157,8 +63157,8 @@
       "url": "http://www.stjohns.k12.fl.us/board/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63196,8 +63196,8 @@
       "url": "https://www.sumter.k12.fl.us/school-board-members",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63235,8 +63235,8 @@
       "url": "http://www.sumtertaxcollector.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63274,8 +63274,8 @@
       "url": "http://www.unioncountytaxcollector.com/",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63313,8 +63313,8 @@
       "url": "https://vctaxcollector.org/index.html",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63352,8 +63352,8 @@
       "url": "http://www.wakullatax.com",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -63391,8 +63391,8 @@
       "url": "https://dos.elections.myflorida.com/candidates/downloadcanlist.asp",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -77943,8 +77943,8 @@
       "url": "https://www.flaglercounty.gov/government/board-of-county-commissioners",
       "level": "county",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78094,8 +78094,8 @@
       "url": "http://www.townofhaverhill-fl.gov/Directory.aspx?did=16",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78217,8 +78217,8 @@
       "url": "https://www.citystaug.com/Directory.aspx?did=33",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78340,8 +78340,8 @@
       "url": "https://www.cityftmyers.com/Directory.aspx?did=14",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78519,8 +78519,8 @@
       "url": "http://cityofbradentonbeach.com/Directory.aspx?did=12",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78642,8 +78642,8 @@
       "url": "http://www.palmettofl.org/Directory.aspx?did=25",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78793,8 +78793,8 @@
       "url": "https://www.jupiter.fl.us/Directory.aspx?did=104",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -78944,8 +78944,8 @@
       "url": "http://www.jupiterinletcolony.org/Directory.aspx?did=11",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -79095,8 +79095,8 @@
       "url": "http://www.cityofannamaria.com/Directory.aspx?did=7",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -79246,8 +79246,8 @@
       "url": "http://www.cityofbartow.net/Directory.aspx?did=35",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -79397,8 +79397,8 @@
       "url": "http://www.cityofmacclenny.com/Directory.aspx?did=16",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -79548,7 +79548,7 @@
       "url": "http://www.davie-fl.gov/Directory.aspx?did=5",
       "level": "municipal",
       "status": "failed",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
       "last_successful_collection": "2026-11-17T00:34:09+00:00",
       "last_error": "FetchError: HTTP 403 for http://www.davie-fl.gov/Directory.aspx?did=5: access is restricted and will not be bypassed",
       "records": [
@@ -79672,8 +79672,8 @@
       "url": "http://www.cocoafl.org/Directory.aspx?did=46",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -79823,8 +79823,8 @@
       "url": "http://www.hallandalebeachfl.gov/Directory.aspx?did=10",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -79974,8 +79974,8 @@
       "url": "http://www.cityofnsb.com/Directory.aspx?did=11",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -80125,8 +80125,8 @@
       "url": "https://www.templeterrace.com/Directory.aspx?did=4",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -80248,8 +80248,8 @@
       "url": "http://www.cwgdn.com/Directory.aspx?did=52",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -80399,8 +80399,8 @@
       "url": "http://www.debary.org/Directory.aspx?did=22",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -80550,8 +80550,8 @@
       "url": "http://www.stcloud.org/Directory.aspx?did=79",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -80701,8 +80701,8 @@
       "url": "http://www.deland.org/Directory.aspx?did=32",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -80852,8 +80852,8 @@
       "url": "http://greenacresfl.gov/Directory.aspx?did=21",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81031,8 +81031,8 @@
       "url": "http://www.wellingtonfl.gov/Directory.aspx?did=30",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81182,8 +81182,8 @@
       "url": "http://www.juno-beach.fl.us/Directory.aspx?did=15",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81333,8 +81333,8 @@
       "url": "https://townofpalmbeach.com/Directory.aspx?did=5",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81456,8 +81456,8 @@
       "url": "http://www.belleviewfl.org/Directory.aspx?did=18",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81607,8 +81607,8 @@
       "url": "http://www.cityofsafetyharbor.com/Directory.aspx?did=19",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81758,8 +81758,8 @@
       "url": "http://www.myoldsmar.com/Directory.aspx?did=20",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -81909,8 +81909,8 @@
       "url": "http://www.mysebring.com/Directory.aspx?did=4",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -82088,8 +82088,8 @@
       "url": "http://www.clewiston-fl.gov/Directory.aspx?did=14",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -82239,8 +82239,8 @@
       "url": "http://ci.neptune-beach.fl.us/Directory.aspx?did=13",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -82390,8 +82390,8 @@
       "url": "http://www.fortmyersbeachfl.gov/Directory.aspx?did=6",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -82541,8 +82541,8 @@
       "url": "http://www.cityofflaglerbeach.com/Directory.aspx?did=4",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -82720,8 +82720,8 @@
       "url": "http://www.cityofcallaway.com/Directory.aspx?did=3",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -82871,8 +82871,8 @@
       "url": "https://www.wildwood-fl.gov/Directory.aspx?did=22",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -83022,8 +83022,8 @@
       "url": "https://www.tavares.org/Directory.aspx?did=4",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -83173,8 +83173,8 @@
       "url": "http://groveland-fl.gov/Directory.aspx?did=13",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -83296,8 +83296,8 @@
       "url": "https://www.southmiamifl.gov/Directory.aspx?did=4",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -83447,8 +83447,8 @@
       "url": "http://www.myseminole.com/Directory.aspx?did=7",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -83654,8 +83654,8 @@
       "url": "http://www.ci.zephyrhills.fl.us/Directory.aspx?did=7",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -83833,8 +83833,8 @@
       "url": "http://www.townofmalabar.org/Directory.aspx?did=18",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84012,8 +84012,8 @@
       "url": "http://www.staugbch.com/Directory.aspx?did=14",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84163,8 +84163,8 @@
       "url": "http://www.lakeplacidfl.net/Directory.aspx?did=10",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84314,8 +84314,8 @@
       "url": "http://www.melbournevillage.org/Directory.aspx?did=10",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84521,8 +84521,8 @@
       "url": "http://www.myindianshores.com/Directory.aspx?did=20",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84644,8 +84644,8 @@
       "url": "http://www.howey.org/Directory.aspx?did=19",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84823,8 +84823,8 @@
       "url": "http://www.southdaytona.org/Directory.aspx?did=9",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -84974,8 +84974,8 @@
       "url": "http://www.southbaycity.com/Directory.aspx?did=12",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
@@ -85097,8 +85097,8 @@
       "url": "http://www.westmelbourne.org/Directory.aspx?did=25",
       "level": "municipal",
       "status": "success",
-      "last_attempt": "2026-11-27T04:06:42+00:00",
-      "last_successful_collection": "2026-11-27T04:06:42+00:00",
+      "last_attempt": "2026-11-27T19:30:30+00:00",
+      "last_successful_collection": "2026-11-27T19:30:30+00:00",
       "last_error": null,
       "records": [
         {
