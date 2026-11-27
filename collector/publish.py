@@ -187,6 +187,45 @@ def _apply_profiles(by_id: dict, profiles: dict, warnings: list[str]) -> None:
             record["bio_sources"] = sources
 
 
+ELECTION_RECORDS = {"name": "Florida Division of Elections: candidate records",
+                    "url": "https://dos.elections.myflorida.com/candidates/downloadcanlist.asp"}
+
+
+def _apply_tenure(by_id: dict, tenure: dict) -> None:
+    """Time in office, earlier offices and next election derived from state election records (tools/derive_tenure.py).
+    Fills only bio fields the source left empty; the derivation is kept in record["tenure"] for display."""
+    from datetime import date
+    for record_id, t in tenure.items():
+        record = by_id.get(record_id)
+        if record_id.startswith("_") or record is None or not isinstance(t, dict):
+            continue
+        bio = dict(record.get("bio") or {})
+        since = t.get("serving_since") or {}
+        if since.get("year") and not bio.get("serving_since"):
+            bio["serving_since"] = str(since["year"])
+        prev = [f"{p['office']} (elected {p['from']}{'' if p['last_won'] == p['from'] else f'–{p['last_won']}'})"
+                for p in t.get("previously") or []]
+        if prev and not bio.get("previously"):
+            bio["previously"] = prev
+        ne = t.get("next_election") or {}
+        stated = re.search(r"\b(19|20)\d\d\b", bio.get("next_election") or "")
+        if stated and int(stated.group()) <= date.today().year and (ne.get("year") or ne.get("leaving")):
+            bio.pop("next_election")  # a stated next election that has already happened is out of date
+        if not bio.get("next_election"):
+            if ne.get("year"):
+                day = date.fromisoformat(ne["date"])
+                text = f"{day:%B} {day.day}, {day.year}" + (" (August primary; nonpartisan)" if "primary" in ne.get("ballot", "") else "")
+                bio["next_election"] = text + (" — term-limited; cannot run for this office again" if ne.get("term_limited") else "")
+            elif ne.get("leaving"):
+                bio["next_election"] = f"Leaving office: the seat was on the {ne['seat_election']} ballot" + (
+                    " and they were term-limited" if "term-limited" in ne.get("basis", "") else "")
+        if bio:
+            record["bio"] = bio
+        record["tenure"] = {k: t[k] for k in ("serving_since", "previously", "next_election", "wins_in_office", "match") if k in t}
+        sources = [x for x in record.get("bio_sources") or [] if x.get("name") != ELECTION_RECORDS["name"]]
+        record["bio_sources"] = sources + [ELECTION_RECORDS]
+
+
 def _apply_photos(by_id: dict, photos: dict) -> None:
     """Portraits found on official pages by tools/find_photos.py, used only where the record has no photo."""
     for record_id, entry in photos.items():
@@ -424,7 +463,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
           profiles: dict | None = None, districts: dict | None = None, vacancies: dict | None = None,
           wikipedia: dict | None = None, special: dict | None = None, links: dict | None = None,
           standins: dict | None = None, seat_maps: dict | None = None, photos: dict | None = None,
-          municipal_types: dict | None = None):
+          municipal_types: dict | None = None, tenure: dict | None = None):
     env = os.environ if env is None else env
     warnings: list[str] = []
     records: list[dict] = []
@@ -492,6 +531,7 @@ def build(collected: dict, manual: dict, corrections: dict, site: dict, now: dat
 
     _apply_profiles(by_id, profiles or {}, warnings)
     _apply_photos(by_id, photos or {})
+    _apply_tenure(by_id, tenure or {})
     _apply_wikipedia(by_id, wikipedia or {})
     _apply_districts(unique, districts or {})
     _districts_from_maps(unique, seat_maps or {})
@@ -649,6 +689,7 @@ def publish(data_dir: Path = DATA, out_dir: Path = SITE_DATA, now: datetime | No
         seat_maps=load_json(ROOT / "site" / "assets" / "boundaries" / "county-commission.json", {}),
         photos=load_json(data_dir / "photos.json", {}),
         municipal_types=load_json(data_dir / "municipal_types.json", {}),
+        tenure=load_json(data_dir / "tenure.json", {}),
     )
     out_dir.mkdir(parents=True, exist_ok=True)
     dump = lambda obj: json.dumps(obj, indent=1, ensure_ascii=False) + "\n"  # noqa: E731

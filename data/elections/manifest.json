@@ -1,0 +1,1676 @@
+{
+ "19960427-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1996 Special: House 33",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19960427-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19960427-S01-STA.tsv": {
+  "sha256": "1b71df70efd0af289c305661f74f20934cbb9d25b2f7d8a199e529b8fc9c9ad9",
+  "label": "1996 Special: House 33",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19960427-S01",
+   "cantype": "STA"
+  }
+ },
+ "19961105-GEN-LOC.tsv": {
+  "sha256": "5a7cbefdbf216bf0a4066ee1fb6cd409c4290849d4b93608b0bf5d42497856ec",
+  "label": "1996 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19961105-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "19961105-GEN-STA.tsv": {
+  "sha256": "70e960520453e041ba9429d9ff05414416c9e5a10df491fc046bf50c488f1318",
+  "label": "1996 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19961105-GEN",
+   "cantype": "STA"
+  }
+ },
+ "19961105-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1996 Sp: Judicial Cir 2 Grp 2",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19961105-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19961105-S01-STA.tsv": {
+  "sha256": "f0fefb1d2a9b9fb3de4a2040057bf9ee8e63c636945474aa774abd172c7a0733",
+  "label": "1996 Sp: Judicial Cir 2 Grp 2",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19961105-S01",
+   "cantype": "STA"
+  }
+ },
+ "19961105-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1996 Sp: State Attorney Cir 7",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19961105-S02",
+   "cantype": "LOC"
+  }
+ },
+ "19961105-S02-STA.tsv": {
+  "sha256": "d89fa0206aba12d3257129c744b995c23b54843cc2c6508c1c1f42f5d6107c9d",
+  "label": "1996 Sp: State Attorney Cir 7",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19961105-S02",
+   "cantype": "STA"
+  }
+ },
+ "19971021-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1997 Special: House 58",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19971021-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19971021-S01-STA.tsv": {
+  "sha256": "0d21336665d5692f292106885bc553e91ea925babfbe2cd291c5c378cf5fdcf9",
+  "label": "1997 Special: House 58",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19971021-S01",
+   "cantype": "STA"
+  }
+ },
+ "19980310-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1998 Sp: Senate 17 & House 66",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19980310-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19980310-S01-STA.tsv": {
+  "sha256": "bd5d25df94b3c3c8e0f9498e57d95897ea021ff40596b789617f0264a2d69f33",
+  "label": "1998 Sp: Senate 17 & House 66",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19980310-S01",
+   "cantype": "STA"
+  }
+ },
+ "19980317-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1998 Sp: Senate 29 & House 101",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19980317-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19980317-S01-STA.tsv": {
+  "sha256": "3b55adaf2fba1731677d106bf982ba3b0923d04da077a394a910bd37d57ec87c",
+  "label": "1998 Sp: Senate 29 & House 101",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19980317-S01",
+   "cantype": "STA"
+  }
+ },
+ "19981103-GEN-LOC.tsv": {
+  "sha256": "8a1fcee146177b4cebb900b811b251ba0137e72e25220909ad0a598ccf288d6c",
+  "label": "1998 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19981103-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "19981103-GEN-STA.tsv": {
+  "sha256": "3d11cb845b267634750393c4eab06c14ceb6a015c865d239efee9ef3c0a2c261",
+  "label": "1998 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19981103-GEN",
+   "cantype": "STA"
+  }
+ },
+ "19990309-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1999 Senate 8 & House 17,35,61",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19990309-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19990309-S01-STA.tsv": {
+  "sha256": "241da663191c0e8e68c74e7040dc9beffcf0355f260f1ce5ccfab1b1c7263a1a",
+  "label": "1999 Senate 8 & House 17,35,61",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19990309-S01",
+   "cantype": "STA"
+  }
+ },
+ "19991102-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1999 Special: House 82",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19991102-S01",
+   "cantype": "LOC"
+  }
+ },
+ "19991102-S01-STA.tsv": {
+  "sha256": "4733b4f9bd9445c4ae3fe17bfe5e66414cd9d01de832594b6f5b1a283d1845cc",
+  "label": "1999 Special: House 82",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19991102-S01",
+   "cantype": "STA"
+  }
+ },
+ "19991102-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "1999 Special: House 15",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19991102-S02",
+   "cantype": "LOC"
+  }
+ },
+ "19991102-S02-STA.tsv": {
+  "sha256": "46483951fe9fc1bfc2b83e38cbd0e727365fe83f5274aa5d3fb39ca0dfa79ccf",
+  "label": "1999 Special: House 15",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "19991102-S02",
+   "cantype": "STA"
+  }
+ },
+ "20000125-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2000 Senate 34 & House 111,115",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20000125-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20000125-S01-STA.tsv": {
+  "sha256": "b57de847bf9efd26c6c60d6d6e4937fdf8e6c5a0d0e6b8fec1719cf862e69f18",
+  "label": "2000 Senate 34 & House 111,115",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20000125-S01",
+   "cantype": "STA"
+  }
+ },
+ "20000425-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2000 Special House 86",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20000425-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20000425-S01-STA.tsv": {
+  "sha256": "112b56b1841e61614fcd54d0cbafa6f82c482919e33df0ef74c619c26d981fdc",
+  "label": "2000 Special House 86",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20000425-S01",
+   "cantype": "STA"
+  }
+ },
+ "20001107-GEN-LOC.tsv": {
+  "sha256": "85a61a9d170d9a23b5100b453b16e3c23bd56272936f07cdad38537d38818a95",
+  "label": "2000 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20001107-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20001107-GEN-STA.tsv": {
+  "sha256": "18f8325ce5ef27921f6e73cfb2066d5e8809a7c7b1be511d6554a2c40d570b6b",
+  "label": "2000 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20001107-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20010821-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2001 Special Senate 18",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20010821-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20010821-S01-STA.tsv": {
+  "sha256": "46c52d2945a01f91ad7493c212e05c3051545acd26bfe960e28aa18b9882d1fa",
+  "label": "2001 Special Senate 18",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20010821-S01",
+   "cantype": "STA"
+  }
+ },
+ "20010925-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2001 Special Senate 6",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20010925-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20010925-S01-STA.tsv": {
+  "sha256": "7e3e536ab49730a5413b34f29becccc775e8f76709d831e30859aa560109fdbd",
+  "label": "2001 Special Senate 6",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20010925-S01",
+   "cantype": "STA"
+  }
+ },
+ "20011016-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2001 Special Congr 1 & House 1",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20011016-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20011016-S01-STA.tsv": {
+  "sha256": "0f2e00aaed30aa6a558b1c6f57338e34c4d47f583d824c90107575e921c958ea",
+  "label": "2001 Special Congr 1 & House 1",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20011016-S01",
+   "cantype": "STA"
+  }
+ },
+ "20021105-GEN-LOC.tsv": {
+  "sha256": "02a236b855e0e503e2cdab2b0fb887ee9969f60484561dc4e77c8ee33645fbf2",
+  "label": "2002 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20021105-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20021105-GEN-STA.tsv": {
+  "sha256": "319f7924c26ae46dba07ca15cbfbb6a4149a3730997a4e7f3202f65d4c7a29d0",
+  "label": "2002 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20021105-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20030325-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2003 Sp: Senate 26 & House 30",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20030325-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20030325-S01-STA.tsv": {
+  "sha256": "622d81eb7ab54f6c69a5caa6dbf5f4e37dc9154886449bf08680d5f5b3ae22b9",
+  "label": "2003 Sp: Senate 26 & House 30",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20030325-S01",
+   "cantype": "STA"
+  }
+ },
+ "20030513-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2003 Special: House 13",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20030513-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20030513-S01-STA.tsv": {
+  "sha256": "2fafbe6b99202613e01495df8830d3306f3faa5252ddb6a6f8c3f674269e24b9",
+  "label": "2003 Special: House 13",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20030513-S01",
+   "cantype": "STA"
+  }
+ },
+ "20031007-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2003 Special: House 54",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20031007-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20031007-S01-STA.tsv": {
+  "sha256": "c0453170f408f64f37a5fa7e0496a3313d25b48e8f570a4bffe81c6c96bca51f",
+  "label": "2003 Special: House 54",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20031007-S01",
+   "cantype": "STA"
+  }
+ },
+ "20040127-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2004 Special: House 91",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20040127-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20040127-S01-STA.tsv": {
+  "sha256": "f4e5632e2c5ac017f983df3212ea3d0a0e486af5c28d9d56403286e213361be8",
+  "label": "2004 Special: House 91",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20040127-S01",
+   "cantype": "STA"
+  }
+ },
+ "20041102-GEN-LOC.tsv": {
+  "sha256": "0092ea1075d62a87171f090cbc21ec9ed87dee6ba38ab3e66bddef1fff15a85d",
+  "label": "2004 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20041102-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20041102-GEN-STA.tsv": {
+  "sha256": "3c98ebbf5bd84e600f0992ab04866277a3b03642b0c8abf1ebc485222a863ef4",
+  "label": "2004 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20041102-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20050308-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2005 Special: Referendum",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20050308-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20050308-S01-STA.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2005 Special: Referendum",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20050308-S01",
+   "cantype": "STA"
+  }
+ },
+ "20050614-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2005 Special: House 7",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20050614-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20050614-S01-STA.tsv": {
+  "sha256": "fbe432f5aadb686a4a312302dd600142ee09fb85b56712eb8deb0e27932fc401",
+  "label": "2005 Special: House 7",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20050614-S01",
+   "cantype": "STA"
+  }
+ },
+ "20061107-GEN-LOC.tsv": {
+  "sha256": "9f6fecd9c478954c1b1a88ce3fc8781bc5dc58dd7744d8e0b892ba1ad443671d",
+  "label": "2006 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20061107-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20061107-GEN-STA.tsv": {
+  "sha256": "512237954b94cc0f61f8feeeebf71f6291c24d73bcd4d5178761d211c0d808ec",
+  "label": "2006 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20061107-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20070227-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2007 Special: House 3",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070227-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20070227-S01-STA.tsv": {
+  "sha256": "eeb6a5469498066daa3c8e8b768b1ab58d034358b4b97055b635b470b46dd9f3",
+  "label": "2007 Special: House 3",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070227-S01",
+   "cantype": "STA"
+  }
+ },
+ "20070424-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2007 Special: House 49",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070424-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20070424-S01-STA.tsv": {
+  "sha256": "4bfda0cdc9fcfa75b1bfd6217c422a7eec3a74cc3960259c767ad31189030a4d",
+  "label": "2007 Special: House 49",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070424-S01",
+   "cantype": "STA"
+  }
+ },
+ "20070626-S01-LOC.tsv": {
+  "sha256": "144e38fb2a055032fc39080d51e0ce4e7462220a6f7bb9d15f1f03f6790d5a02",
+  "label": "2007 Senate 3 & House 24 & 43",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070626-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20070626-S01-STA.tsv": {
+  "sha256": "d46bc61dc3579c6b608abdd2dfecf65b648a31e7427c0a7340f2c0d628f5e05a",
+  "label": "2007 Senate 3 & House 24 & 43",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070626-S01",
+   "cantype": "STA"
+  }
+ },
+ "20070918-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2007 Special: House 16",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070918-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20070918-S01-STA.tsv": {
+  "sha256": "b7161621e6aa22d1977adf9c287b4100350ed1cd34a3cd17f442711c8c96aba1",
+  "label": "2007 Special: House 16",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20070918-S01",
+   "cantype": "STA"
+  }
+ },
+ "20071106-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2007 Special: House 34",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20071106-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20071106-S01-STA.tsv": {
+  "sha256": "eebfb3419d39377d31248d3d4d61ff0af6bab5f26b378962a8425abb2e7bb92f",
+  "label": "2007 Special: House 34",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20071106-S01",
+   "cantype": "STA"
+  }
+ },
+ "20071120-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2007 Special: House 101",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20071120-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20071120-S01-STA.tsv": {
+  "sha256": "c4b7bfce3d29d9ed3104136b720e2c68466514fde44b442e39cc9d61195edb3a",
+  "label": "2007 Special: House 101",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20071120-S01",
+   "cantype": "STA"
+  }
+ },
+ "20080226-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2008 Special: House 32",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20080226-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20080226-S01-STA.tsv": {
+  "sha256": "8c3687d66fbcede9ec766cd33103e3e6f3adf8d918f73932e02648805c61b7d1",
+  "label": "2008 Special: House 32",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20080226-S01",
+   "cantype": "STA"
+  }
+ },
+ "20080304-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2008 Special: House 103",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20080304-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20080304-S01-STA.tsv": {
+  "sha256": "0e812d437059048d43a91abfc814adef6f3709b30a9c6d1ef209f11a3628fcbc",
+  "label": "2008 Special: House 103",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20080304-S01",
+   "cantype": "STA"
+  }
+ },
+ "20080415-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2008 Special: House 55",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20080415-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20080415-S01-STA.tsv": {
+  "sha256": "f713e3066368b854121da9aa3ec36109291dbdbb54c33df3accec471750254d5",
+  "label": "2008 Special: House 55",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20080415-S01",
+   "cantype": "STA"
+  }
+ },
+ "20081104-GEN-LOC.tsv": {
+  "sha256": "0a4abf677e89e4fed9768beab89af4cc28011f9328c4890b1b00c0f3381a3c1b",
+  "label": "2008 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20081104-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20081104-GEN-STA.tsv": {
+  "sha256": "1e875cdc9c6ee837a40d7b1caddb874d3befc3e7f98ba77d81c69108cd941c88",
+  "label": "2008 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20081104-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20090804-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2009 Special: Senate 28",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20090804-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20090804-S01-STA.tsv": {
+  "sha256": "58ea94f32ce8b5735cad4d6f0546e3590bbf8fe2f21e8b8e575006a25d2a9198",
+  "label": "2009 Special: Senate 28",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20090804-S01",
+   "cantype": "STA"
+  }
+ },
+ "20090922-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2009 Special: House 84",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20090922-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20090922-S01-STA.tsv": {
+  "sha256": "7428bbf21a5339d3b6a79a668aad809ce8eab0dc175662478361e0f6e0c5fd05",
+  "label": "2009 Special: House 84",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20090922-S01",
+   "cantype": "STA"
+  }
+ },
+ "20091006-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2009 Special: Senate 8",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20091006-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20091006-S01-STA.tsv": {
+  "sha256": "12a9ea2870f6e5bfb15b5b21abf0d2c5baf2ddee18b64df44749807a006626b6",
+  "label": "2009 Special: Senate 8",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20091006-S01",
+   "cantype": "STA"
+  }
+ },
+ "20100223-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2010 Special: House 58",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20100223-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20100223-S01-STA.tsv": {
+  "sha256": "ea2f74456c2e933e5ea982b8b59c0ce3fa23465ab199e7ff1425bf7a6328ed22",
+  "label": "2010 Special: House 58",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20100223-S01",
+   "cantype": "STA"
+  }
+ },
+ "20100413-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2010 Special: Congressional 19",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20100413-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20100413-S01-STA.tsv": {
+  "sha256": "313d366baed3f70ea848894e4b110b44d234967430a559d747039683d89a5c4b",
+  "label": "2010 Special: Congressional 19",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20100413-S01",
+   "cantype": "STA"
+  }
+ },
+ "20100413-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2010 Special: House 4",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20100413-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20100413-S02-STA.tsv": {
+  "sha256": "055fd7399e4ff6b8a251c5f123ae0a7ee82ff253e735aa7ea058757998bf6e68",
+  "label": "2010 Special: House 4",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20100413-S02",
+   "cantype": "STA"
+  }
+ },
+ "20101102-GEN-LOC.tsv": {
+  "sha256": "a8f1aeac9e3a78e7b6489abec795fd9c7a61bfffb4a45e660ee4be9e3ee2ff68",
+  "label": "2010 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20101102-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20101102-GEN-STA.tsv": {
+  "sha256": "8d0600e2a180bde488e8361e0eb399e36e3bf429014b35996fe30aa32afa1478",
+  "label": "2010 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20101102-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20110301-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2011 Special: H103 / S33",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20110301-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20110301-S01-STA.tsv": {
+  "sha256": "ace0ceeea3222a193e87b17bd29d27b24d0fca369e99a2d711627e88f15236b4",
+  "label": "2011 Special: H103 / S33",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20110301-S01",
+   "cantype": "STA"
+  }
+ },
+ "20110628-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2011 Special: House 110",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20110628-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20110628-S01-STA.tsv": {
+  "sha256": "592f6c84043a04951753ae9c6463f7a42a62dc93842b9235ea6df9a34521ac5e",
+  "label": "2011 Special: House 110",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20110628-S01",
+   "cantype": "STA"
+  }
+ },
+ "20111018-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2011 Special: Senate 1",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20111018-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20111018-S01-STA.tsv": {
+  "sha256": "9627ef6de5da27af3149ee1c742b7b9274de991ad0992a70e249a7bff4da2e55",
+  "label": "2011 Special: Senate 1",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20111018-S01",
+   "cantype": "STA"
+  }
+ },
+ "20121106-GEN-LOC.tsv": {
+  "sha256": "16fff789140be12e365c366ac62b49ff1eb583bfbc24a2a32d7a82a8b84b37f8",
+  "label": "2012 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20121106-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20121106-GEN-STA.tsv": {
+  "sha256": "22861fb9062e7822e4da6d357723e599688a0b46347eddfebb04790db5837624",
+  "label": "2012 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20121106-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20121106-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2012 Special: CCJ 20 Group 23",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20121106-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20121106-S01-STA.tsv": {
+  "sha256": "031becad7a61ffa81e2c3bd22bc2dc5f9b7ca4dbbed90df7a1c6badaf6341d28",
+  "label": "2012 Special: CCJ 20 Group 23",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20121106-S01",
+   "cantype": "STA"
+  }
+ },
+ "20121106-S03-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2012 Special: Loxahatchee Rive",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20121106-S03",
+   "cantype": "LOC"
+  }
+ },
+ "20121106-S03-STA.tsv": {
+  "sha256": "7fda82a099830f1333823e6fb01a2d31b852cbb8d9812a51852b68ac13eb114c",
+  "label": "2012 Special: Loxahatchee Rive",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20121106-S03",
+   "cantype": "STA"
+  }
+ },
+ "20130611-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2013 Special: State House 2",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20130611-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20130611-S01-STA.tsv": {
+  "sha256": "a734fdd7a38d412065efe0e619eed26ac356a94b2743200dc9e0f62b54e6eec2",
+  "label": "2013 Special: State House 2",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20130611-S01",
+   "cantype": "STA"
+  }
+ },
+ "20131015-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2013 Special: House 36",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20131015-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20131015-S01-STA.tsv": {
+  "sha256": "ccad291e721f936cf5fe3995355bc7481367f3487f367209b1005850884c6ae1",
+  "label": "2013 Special: House 36",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20131015-S01",
+   "cantype": "STA"
+  }
+ },
+ "20140311-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2014 Special: Congressional 13",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20140311-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20140311-S01-STA.tsv": {
+  "sha256": "6e6f52f858329a9e1ca9165bae4d3b2ef0c0dd4c78711dab6b770f6bc27d61bb",
+  "label": "2014 Special: Congressional 13",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20140311-S01",
+   "cantype": "STA"
+  }
+ },
+ "20140408-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2014 Special: State House 44",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20140408-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20140408-S01-STA.tsv": {
+  "sha256": "e844e76de9a21ae8b52859dffa1c26895a82338d370ba866f633f61eb2a017d6",
+  "label": "2014 Special: State House 44",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20140408-S01",
+   "cantype": "STA"
+  }
+ },
+ "20140624-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2014 Special: US House 19",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20140624-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20140624-S01-STA.tsv": {
+  "sha256": "6ab10697eb4398d8dea4669ff9c83a0fe349b0ef8e9499ce1683adefef70fb22",
+  "label": "2014 Special: US House 19",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20140624-S01",
+   "cantype": "STA"
+  }
+ },
+ "20141104-GEN-LOC.tsv": {
+  "sha256": "0566b15864c0a139f6c0231d19730002b342ba2c90440ccd1d8b54ff02c7963b",
+  "label": "2014 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20141104-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20141104-GEN-STA.tsv": {
+  "sha256": "cdf0eecccc226702891f1efaa78c9754a7bb195202acb5d679ca1d81c4725da1",
+  "label": "2014 General Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20141104-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20150217-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2015 Special: State House 13",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20150217-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20150217-S01-STA.tsv": {
+  "sha256": "85ae6bb19ff4f69a788d02ab2954c3e0910cc923189483b9b029b1f91fe692e5",
+  "label": "2015 Special: State House 13",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20150217-S01",
+   "cantype": "STA"
+  }
+ },
+ "20150407-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2015 Special: S6, H17 and H24",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20150407-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20150407-S01-STA.tsv": {
+  "sha256": "ad3c99003505f6c814f0eb77c5e4c8ff6a776a6a0c223029823438d5a80bf38f",
+  "label": "2015 Special: S6, H17 and H24",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20150407-S01",
+   "cantype": "STA"
+  }
+ },
+ "20150421-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2015 Special: House 64",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20150421-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20150421-S01-STA.tsv": {
+  "sha256": "94aaaf7230cb8f888b0042ad9c2b15baa5929cfe39579bfc0f46433b9f6344cb",
+  "label": "2015 Special: House 64",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20150421-S01",
+   "cantype": "STA"
+  }
+ },
+ "20161108-GEN-LOC.tsv": {
+  "sha256": "aa7412dc0562d92ee7ca0da3ca0e088b8c019b050219d07cbe65de68f4f1697f",
+  "label": "2016 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20161108-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20161108-GEN-STA.tsv": {
+  "sha256": "53dede29b21dc919e0fdb06236a19108cc4835389c825b3c65a51ad74995403b",
+  "label": "2016 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20161108-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20170926-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2017 Special: Senate 40",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20170926-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20170926-S01-STA.tsv": {
+  "sha256": "78e40afcecf3aa235d8e9233e701a7f4db04a8afb4c1c82f71b015ed6409eb6f",
+  "label": "2017 Special: Senate 40",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20170926-S01",
+   "cantype": "STA"
+  }
+ },
+ "20170926-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2017 Special: House 116",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20170926-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20170926-S02-STA.tsv": {
+  "sha256": "1210c416bcb0edf5516157446ee582cdb1fd730a2c426d07b5637cb9bd0295c7",
+  "label": "2017 Special: House 116",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20170926-S02",
+   "cantype": "STA"
+  }
+ },
+ "20171010-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2017 Special: House 44",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20171010-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20171010-S01-STA.tsv": {
+  "sha256": "638fceb595072207db227900119f677087900785704bf45d74eddf7ae960b9fe",
+  "label": "2017 Special: House 44",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20171010-S01",
+   "cantype": "STA"
+  }
+ },
+ "20171219-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2017 Special: House 58",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20171219-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20171219-S01-STA.tsv": {
+  "sha256": "67802d1d423c3a8f081f1947e659c69738f1bec669fab91249592019b8d1f61a",
+  "label": "2017 Special: House 58",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20171219-S01",
+   "cantype": "STA"
+  }
+ },
+ "20180213-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2018 Special: House 72",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180213-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20180213-S01-STA.tsv": {
+  "sha256": "5acdcd67b86101e262fad98f1935f4f67c7414541a5fd52f4d15d41b17de9fcb",
+  "label": "2018 Special: House 72",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180213-S01",
+   "cantype": "STA"
+  }
+ },
+ "20180410-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2018 Special: Senate 31",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180410-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20180410-S01-STA.tsv": {
+  "sha256": "fb632e7f303e931404082873c82cc55dcccd10d2567c7e589dafa1a05889b22c",
+  "label": "2018 Special: Senate 31",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180410-S01",
+   "cantype": "STA"
+  }
+ },
+ "20180501-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2018 Special: House 114",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180501-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20180501-S01-STA.tsv": {
+  "sha256": "963824c9ed3200a7a0fd9cd8f73fa72b165b5e31c214f2807b6b84906d8e48d7",
+  "label": "2018 Special: House 114",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180501-S01",
+   "cantype": "STA"
+  }
+ },
+ "20180501-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2018 Special: House 39",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180501-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20180501-S02-STA.tsv": {
+  "sha256": "592d4c65836b498a9c761dd2cbfb36917f5c0984d76242a0c74c2732289ef115",
+  "label": "2018 Special: House 39",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20180501-S02",
+   "cantype": "STA"
+  }
+ },
+ "20181106-GEN-LOC.tsv": {
+  "sha256": "94fa0415330ba2d14d2e9f867eb544de137d6e54b730cc5e917084a4b0b8e2b5",
+  "label": "2018 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20181106-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20181106-GEN-STA.tsv": {
+  "sha256": "b7ed62b9dec8d599a09fec19e516c72618c5b9d5ffedd4ccb760621039890e35",
+  "label": "2018 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20181106-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20181106-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2018 Special: Senate 23 and 25",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20181106-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20181106-S01-STA.tsv": {
+  "sha256": "70328c391acd1e848cd15f9b1a89e3129a1746b6549c8c4bbd9976dbbeed375b",
+  "label": "2018 Special: Senate 23 and 25",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20181106-S01",
+   "cantype": "STA"
+  }
+ },
+ "20190618-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2019 Special: H 7, 38 and 97",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20190618-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20190618-S01-STA.tsv": {
+  "sha256": "78b79fbe880b41a2c5e0472a689209adf357e3431c3f8345e1815b30018ca9e2",
+  "label": "2019 Special: H 7, 38 and 97",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20190618-S01",
+   "cantype": "STA"
+  }
+ },
+ "20201103-GEN-LOC.tsv": {
+  "sha256": "c705144448f1d739dc92fb9815989db5de86b04defdd71bdf0b661f50252d6d1",
+  "label": "2020 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20201103-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20201103-GEN-STA.tsv": {
+  "sha256": "23142f74b193143657378490e64e563a437f2aacd50874ee9709fab73535b4d6",
+  "label": "2020 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20201103-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20201103-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2020 Special: Senate 20",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20201103-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20201103-S01-STA.tsv": {
+  "sha256": "550bbc8c2e730c22678616a0aa734c656d999e28c304ad478fb458cc4d39bb7b",
+  "label": "2020 Special: Senate 20",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20201103-S01",
+   "cantype": "STA"
+  }
+ },
+ "20220111-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2022 Special: US House 20",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20220111-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20220111-S01-STA.tsv": {
+  "sha256": "734ca59df7b095678a63d1014116223d9a3dc4d9029900eb98e560ca2518ef50",
+  "label": "2022 Special: US House 20",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20220111-S01",
+   "cantype": "STA"
+  }
+ },
+ "20220308-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2022 Special: STR 88 & 94 & ST",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20220308-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20220308-S01-STA.tsv": {
+  "sha256": "336eed9c2d7e81643815cf005e738727bcbcb1093f67226161a1c888d3acaf6c",
+  "label": "2022 Special: STR 88 & 94 & ST",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20220308-S01",
+   "cantype": "STA"
+  }
+ },
+ "20221108-GEN-LOC.tsv": {
+  "sha256": "ea889b84165daa44da56da954e31fcde5bbfceee116fee334d5fe4131e6afe4f",
+  "label": "2022 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20221108-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20221108-GEN-STA.tsv": {
+  "sha256": "11dc5e5989433f49449661bb3e27e7d50e4fe8033c922e0249c6a615474158b2",
+  "label": "2022 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20221108-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20230516-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2023 Special: House 24",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20230516-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20230516-S01-STA.tsv": {
+  "sha256": "6ff6d8b93f4ed34bc46eed7b019201d49c20460f099465d51cf180fabe7cbac4",
+  "label": "2023 Special: House 24",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20230516-S01",
+   "cantype": "STA"
+  }
+ },
+ "20231205-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2023 Special: House 118",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20231205-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20231205-S01-STA.tsv": {
+  "sha256": "013e42c686f0cbd3c2afbdfdfe26016cd6e5c863252351fd19a1d4586c62e434",
+  "label": "2023 Special: House 118",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20231205-S01",
+   "cantype": "STA"
+  }
+ },
+ "20240116-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2024 Special: House 35",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20240116-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20240116-S01-STA.tsv": {
+  "sha256": "1c5756d1412936402b1a39664c60aa08b8b8ccddc37f0ff69de6d356aef00908",
+  "label": "2024 Special: House 35",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20240116-S01",
+   "cantype": "STA"
+  }
+ },
+ "20241105-GEN-LOC.tsv": {
+  "sha256": "81e16e018384d4017803831d89a4dc3deb329089aef6c54d0e8e0b83ac0c07cd",
+  "label": "2024 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20241105-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20241105-GEN-STA.tsv": {
+  "sha256": "1a8afebae3c0cf9fa790a5e603b7d81e49ecfc4f4fec92086b9c09615586d834",
+  "label": "2024 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20241105-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20241105-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2024 Special: Senate 24",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20241105-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20241105-S01-STA.tsv": {
+  "sha256": "03482fec2839b4699f943ff9e72ff1f8bbb3e61eb8b4a7b53f998ce376b8269b",
+  "label": "2024 Special: Senate 24",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20241105-S01",
+   "cantype": "STA"
+  }
+ },
+ "20250401-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: US House 1",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250401-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20250401-S01-STA.tsv": {
+  "sha256": "54321cc734d29ae93eb3705cf2fddd2f47387b1a622981cc03637e2919ac8de3",
+  "label": "2025 Special: US House 1",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250401-S01",
+   "cantype": "STA"
+  }
+ },
+ "20250401-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: US House 6",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250401-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20250401-S02-STA.tsv": {
+  "sha256": "8c27a10db63a360d80e6a4a576e4d05b647afb1cfbb56bf5f2f1f63e1784c3de",
+  "label": "2025 Special: US House 6",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250401-S02",
+   "cantype": "STA"
+  }
+ },
+ "20250610-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: Senate 19",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250610-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20250610-S01-STA.tsv": {
+  "sha256": "429c8742a23791a9a26426c9becc8f42184900daa3f187cb1949df9b82a37685",
+  "label": "2025 Special: Senate 19",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250610-S01",
+   "cantype": "STA"
+  }
+ },
+ "20250610-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: House 3",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250610-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20250610-S02-STA.tsv": {
+  "sha256": "30d577660e3f9ef168636c683a6f01e7fc705dcc591a6d2cee9cd39f92a32280",
+  "label": "2025 Special: House 3",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250610-S02",
+   "cantype": "STA"
+  }
+ },
+ "20250610-S03-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: House 32",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250610-S03",
+   "cantype": "LOC"
+  }
+ },
+ "20250610-S03-STA.tsv": {
+  "sha256": "a3dd1b7aa6023480979213465a708ee6e26f1651af8ec35e063bca2de4b2df1e",
+  "label": "2025 Special: House 32",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250610-S03",
+   "cantype": "STA"
+  }
+ },
+ "20250902-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: Senate 15",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250902-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20250902-S01-STA.tsv": {
+  "sha256": "0735250dd8240970283ef677a35ccd150de894a97045496dbbfa2ba7cc0c250a",
+  "label": "2025 Special: Senate 15",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250902-S01",
+   "cantype": "STA"
+  }
+ },
+ "20250902-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: House 40",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250902-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20250902-S02-STA.tsv": {
+  "sha256": "834499bc77c8b24f0724ed71ce34a884222d8c51dc59e65e182b151b00c8a3c7",
+  "label": "2025 Special: House 40",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20250902-S02",
+   "cantype": "STA"
+  }
+ },
+ "20251209-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2025 Special: SD 11 & HD 90",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20251209-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20251209-S01-STA.tsv": {
+  "sha256": "2a9539e1df6cd4127f614ace1dbcdffbc936494ee146ea6764997a34e0a250c6",
+  "label": "2025 Special: SD 11 & HD 90",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20251209-S01",
+   "cantype": "STA"
+  }
+ },
+ "20260324-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2026 Special: SD 14 & HD 87",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20260324-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20260324-S01-STA.tsv": {
+  "sha256": "c3638e440e8abdeeb95cf1b35df6cdfc40ecea45f9702755bb44645731f452bc",
+  "label": "2026 Special: SD 14 & HD 87",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20260324-S01",
+   "cantype": "STA"
+  }
+ },
+ "20260324-S02-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2026 Special: House 52",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20260324-S02",
+   "cantype": "LOC"
+  }
+ },
+ "20260324-S02-STA.tsv": {
+  "sha256": "9905735339f98b0540f8fee0d143be3b4f4c414c0214de3eccd0cb0570e8c460",
+  "label": "2026 Special: House 52",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20260324-S02",
+   "cantype": "STA"
+  }
+ },
+ "20260324-S03-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2026 Special: House 51",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20260324-S03",
+   "cantype": "LOC"
+  }
+ },
+ "20260324-S03-STA.tsv": {
+  "sha256": "93ec6725795591dccd2f711e934506db5b582c62d26f0d54191e084a06996fad",
+  "label": "2026 Special: House 51",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20260324-S03",
+   "cantype": "STA"
+  }
+ },
+ "20261103-GEN-LOC.tsv": {
+  "sha256": "5c51aa442b0841630407674ac74ec5316d2f8480640322d6001d38d501873566",
+  "label": "2026 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20261103-GEN",
+   "cantype": "LOC"
+  }
+ },
+ "20261103-GEN-STA.tsv": {
+  "sha256": "49ab9fa3039c7b21d67eacb480d351d8be694d74f090f7c82a6443394bd83050",
+  "label": "2026 Election",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20261103-GEN",
+   "cantype": "STA"
+  }
+ },
+ "20261103-S01-LOC.tsv": {
+  "sha256": "9e9843cb628940c7fb41f7a981ce1deadef0409dca94c435da5586970032864b",
+  "label": "2026 Special: Senate 21",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20261103-S01",
+   "cantype": "LOC"
+  }
+ },
+ "20261103-S01-STA.tsv": {
+  "sha256": "c42a980cd730077a148dfe7487ecf78b40246b632168f5a85f767af1e982d2d0",
+  "label": "2026 Special: Senate 21",
+  "source": "https://dos.elections.myflorida.com/candidates/extractCanList.asp",
+  "form": {
+   "elecID": "20261103-S01",
+   "cantype": "STA"
+  }
+ }
+}

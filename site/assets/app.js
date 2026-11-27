@@ -729,8 +729,12 @@ function aboutPanel(r) {
   }
   if (bio.serving_since) {
     const years = yearsSince(bio.serving_since);
-    const span = years === null ? "" : years < 1 ? " <span class=\"muted\">(newly in office)</span>" : ` <span class="muted">(${plural(years, "year")})</span>`;
-    facts.push(["In this office since", `${esc(formatPartialDate(bio.serving_since))}${span}`]);
+    const atLeast = r.tenure?.serving_since?.at_least && String(bio.serving_since).length === 4;
+    const span = years === null ? "" : years < 1 ? " <span class=\"muted\">(newly in office)</span>"
+      : ` <span class="muted">(${atLeast ? "at least " : ""}${plural(years, "year")})</span>`;
+    const wins = (r.tenure?.wins_in_office || []).filter((y) => y >= Number(String(bio.serving_since).slice(0, 4)));
+    const elected = wins.length > 1 ? `<br><span class="muted small">Elected ${wins[0]}; re-elected ${wins.slice(1).join(", ")}</span>` : "";
+    facts.push(["In this office since", `${atLeast ? "At least " : ""}${esc(formatPartialDate(bio.serving_since))}${span}${elected}`]);
   }
   if (bio.term_ends) facts.push(["Current term ends", esc(formatPartialDate(bio.term_ends))]);
   if (bio.next_election) facts.push(["Next election", esc(bio.next_election)]);
