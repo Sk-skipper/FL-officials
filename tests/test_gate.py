@@ -19,10 +19,14 @@ def test_county_failures_are_errors_and_city_failures_warnings():
     assert "failing 8 days, since 2026-11-20" in warnings[1]
 
 
-def test_losing_several_people_is_held_for_review():
-    r = SourceResult(key="k", name="n", removed=[{}, {}], added=[])
-    assert needs_review(r, 7)
-    turnover = SourceResult(key="k", name="n", removed=[{}], added=[{}])  # one seat changed hands
-    assert not needs_review(turnover, 7)
-    election = SourceResult(key="k", name="n", removed=[{}, {}], added=[{}, {}])  # two seats changed hands of five
-    assert needs_review(election, 5)  # 40% of the list at once: a person checks it
+def test_only_a_shrinking_list_is_held_for_review():
+    p = lambda n, t="Commissioner": {"full_name": n, "office_title": t}  # noqa: E731
+    shrink = SourceResult(key="k", name="n", removed=[p("A"), p("B")], added=[])
+    assert needs_review(shrink, 7)
+    election = SourceResult(key="k", name="n", removed=[p("A"), p("B"), p("C")], added=[p("D"), p("E"), p("F")])
+    assert not needs_review(election, 5)  # three seats changed hands: news, published
+    rotation = SourceResult(key="k", name="n", removed=[p("Ruzzano"), p("Caggiano", "Vice Mayor"), p("Arserio", "Mayor")],
+                            added=[p("Ruzzano", "Vice Mayor"), p("Caggiano", "Mayor"), p("Schwartz")])
+    assert not needs_review(rotation, 5)  # titles rotated, one new member
+    gone = SourceResult(key="k", name="n", removed=[p("A"), p("B"), p("C")], added=[p("D")])
+    assert needs_review(gone, 5)  # net two fewer people
