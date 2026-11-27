@@ -1,0 +1,1356 @@
+{
+ "ambiguous": [
+  {
+   "id": "sheriff-walton-county-michael-adkinson",
+   "name": "Michael A. Adkinson Jr.",
+   "office": "Sheriff",
+   "candidates": [
+    {
+     "person": "ncd8755458360533",
+     "score": 3
+    },
+    {
+     "person": "a92cd2d689ffaa4c",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-22-denise-almeida-pomponio",
+   "name": "Denise D. Almeida-Pomponio",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nc4e52571bb8fc50",
+     "score": 5
+    },
+    {
+     "person": "n36656c41690dce3",
+     "score": 5
+    },
+    {
+     "person": "f5b0afe51b046a85",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-baker-county-jimmy-anderson",
+   "name": "Jimmy Anderson",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "n6cf54a94510e942",
+     "score": 3
+    },
+    {
+     "person": "5b75d20ac2715d8e",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-8-susan-barthle",
+   "name": "Susan G. Barthle",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nd8152ad55324793",
+     "score": 5
+    },
+    {
+     "person": "de501d67c8ede8f5",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-3-sherwood-bauer",
+   "name": "Sherwood Bauer Jr.",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n095857011a53959",
+     "score": 5
+    },
+    {
+     "person": "029147d67f577cba",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "tax-collector-holmes-county-harry-bell",
+   "name": "Harry B. Bell III",
+   "office": "Tax Collector",
+   "candidates": [
+    {
+     "person": "na9a77f1d0a6e6aa",
+     "score": 3
+    },
+    {
+     "person": "n94011b4a47886ba",
+     "score": 3
+    },
+    {
+     "person": "446002f03bc41a29",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "state-representative-district-58-kimberly-berfield",
+   "name": "Kimberly Berfield",
+   "office": "State Representative",
+   "candidates": [
+    {
+     "person": "n5b869eb93f2b815",
+     "score": 5
+    },
+    {
+     "person": "7d19a638cf34070c",
+     "score": 5
+    },
+    {
+     "person": "nf9c24baa135e29a",
+     "score": 2
+    }
+   ]
+  },
+  {
+   "id": "state-representative-district-114-demi-busatta",
+   "name": "Demi Busatta",
+   "office": "State Representative",
+   "candidates": [
+    {
+     "person": "n69d67bb828803e7",
+     "score": 5
+    },
+    {
+     "person": "d4348dfd703aa1ad",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "state-representative-district-109-james-bush",
+   "name": "James Bush III",
+   "office": "State Representative",
+   "candidates": [
+    {
+     "person": "ndb9bc0f0b6fc63b",
+     "score": 5
+    },
+    {
+     "person": "n7f748728674d37d",
+     "score": 5
+    },
+    {
+     "person": "57968b121690982f",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-77-beatrice-butchko",
+   "name": "Beatrice A. Butchko",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n553a94590157dc1",
+     "score": 5
+    },
+    {
+     "person": "11db37e44caf04b0",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-16-kimberly-byrd",
+   "name": "Kimberly Sharpe Byrd",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n2f9bb4b851b546d",
+     "score": 5
+    },
+    {
+     "person": "33a418550f5cba2f",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-alachua-county-charles-chestnut",
+   "name": "Charles S. Chestnut",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "nce01bbb4c9c9ce1",
+     "score": 3
+    },
+    {
+     "person": "d0ee99d66718aba7",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "county-court-judge-district-26-mardi-cohen",
+   "name": "Mardi Levey Cohen",
+   "office": "County Court Judge",
+   "candidates": [
+    {
+     "person": "n7c33ed64002b93b",
+     "score": 3
+    },
+    {
+     "person": "0c9f7cdc87c686a6",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "school-board-member-district-2-gail-cook",
+   "name": "Gail Cook",
+   "office": "School Board Member",
+   "candidates": [
+    {
+     "person": "n21e5851316a8531",
+     "score": 3
+    },
+    {
+     "person": "80455b33ad4fd1fa",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-21-rochelle-curley",
+   "name": "Rochelle Taylor Curley",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n7c5f8a14a9944d5",
+     "score": 5
+    },
+    {
+     "person": "ba9ea007ac9d8caf",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "school-board-member-district-4-charlie-frost",
+   "name": "Charlie Frost",
+   "office": "School Board Member",
+   "candidates": [
+    {
+     "person": "nb4c0723f7441d60",
+     "score": 3
+    },
+    {
+     "person": "c144c9c4fec864f5",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "county-court-judge-district-1-john-fry",
+   "name": "John D. Fry",
+   "office": "County Court Judge",
+   "candidates": [
+    {
+     "person": "n2b82d304a972f3e",
+     "score": 3
+    },
+    {
+     "person": "d560f5a99636951f",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-district-6-quentin-furr",
+   "name": "Quentin Furr",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "e2c059e6981e9b99",
+     "score": 3
+    },
+    {
+     "person": "d8bddd6d474417cc",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "clerk-of-the-circuit-court-hamilton-county-w-godwin",
+   "name": "W. Greg Godwin",
+   "office": "Clerk of the Circuit Court",
+   "candidates": [
+    {
+     "person": "cf966d2cb3977ed1",
+     "score": 3
+    },
+    {
+     "person": "217d2db6fc31bde0",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-hillsborough-county-ken-hagan",
+   "name": "Ken Hagan",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "n308c875df43200e",
+     "score": 3
+    },
+    {
+     "person": "03db668f89352f03",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-6-mary-handsel",
+   "name": "Mary Morrissey Handsel",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "ne11bf4d2ee90b6c",
+     "score": 5
+    },
+    {
+     "person": "na62d4c1efcdbc22",
+     "score": 5
+    },
+    {
+     "person": "2278c9e1f3b1fae5",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "school-board-member-liberty-county-public-schools-doobie-hayes",
+   "name": "Doobie Hayes",
+   "office": "School Board Member",
+   "candidates": [
+    {
+     "person": "n6115bf425b489a7",
+     "score": 2
+    },
+    {
+     "person": "2ae2feb917e0cdf0",
+     "score": 2
+    }
+   ]
+  },
+  {
+   "id": "county-court-judge-district-12-john-hurley",
+   "name": "John Hurley",
+   "office": "County Court Judge",
+   "candidates": [
+    {
+     "person": "nddcc15d4bc6cef5",
+     "score": 3
+    },
+    {
+     "person": "85700191c709dc24",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "property-appraiser-seminole-county-david-johnson",
+   "name": "David Johnson",
+   "office": "Property Appraiser",
+   "candidates": [
+    {
+     "person": "n963312813376c83",
+     "score": 3
+    },
+    {
+     "person": "aca8ac6263d1d300",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-11-dawn-johnson",
+   "name": "Dawn Caloca Johnson",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n475d65f7aa6fa2d",
+     "score": 5
+    },
+    {
+     "person": "32583d7cae24c96d",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-lafayette-county-earnest-jones",
+   "name": "Earnest Jones",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "n14f810f2f85676a",
+     "score": 3
+    },
+    {
+     "person": "b12acd7fe73a6c8f",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "tax-collector-glades-county-gail-jones",
+   "name": "Gail A. Jones",
+   "office": "Tax Collector",
+   "candidates": [
+    {
+     "person": "ne5b10de2326cd49",
+     "score": 3
+    },
+    {
+     "person": "de0178392fc5ea07",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "county-court-judge-district-24-ginger-lerner-wren",
+   "name": "Ginger Lerner-Wren",
+   "office": "County Court Judge",
+   "candidates": [
+    {
+     "person": "n18308997a21d8fb",
+     "score": 3
+    },
+    {
+     "person": "37462f08eaa927ea",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "school-board-member-district-2-ginger-littleton",
+   "name": "Ginger Littleton",
+   "office": "School Board Member",
+   "candidates": [
+    {
+     "person": "n44a9ec884dbf231",
+     "score": 3
+    },
+    {
+     "person": "9fce30b4bf7fd472",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-leon-county-nick-maddox",
+   "name": "Nick Maddox",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "n43849a3e4fa5636",
+     "score": 3
+    },
+    {
+     "person": "98544875a2bf52df",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-80-marisa-mendez",
+   "name": "Marisa Tinkler Mendez",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nc767a17428614af",
+     "score": 5
+    },
+    {
+     "person": "6fc892c55a5f5cbc",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-26-lisa-porter",
+   "name": "Lisa Spader Porter",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "c3d3a17ddd385ddc",
+     "score": 5
+    },
+    {
+     "person": "0c2fdc20aa78ebf9",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-leon-county-william-proctor",
+   "name": "William Proctor",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "n2e9bb22c7726d0f",
+     "score": 3
+    },
+    {
+     "person": "8b02c46affe23c6f",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "school-board-member-district-1-jerry-register",
+   "name": "Jerry Register",
+   "office": "School Board Member",
+   "candidates": [
+    {
+     "person": "n442b9319a4e07b6",
+     "score": 3
+    },
+    {
+     "person": "54c0ac83355f8f5c",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "state-attorney-11th-judicial-circuit-miami-dade-county-katherine-rundle",
+   "name": "Katherine Fernandez Rundle",
+   "office": "State Attorney",
+   "candidates": [
+    {
+     "person": "ne4d67ecf1ca9f73",
+     "score": 3
+    },
+    {
+     "person": "nac7330c2eeab6a0",
+     "score": 3
+    },
+    {
+     "person": "n734c86fc5030bb7",
+     "score": 3
+    },
+    {
+     "person": "a0541e3bec79611c",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "us-representative-district-27-maria-salazar",
+   "name": "Maria Salazar",
+   "office": "U.S. Representative",
+   "candidates": [
+    {
+     "person": "n28246bddbdbd697",
+     "score": 5
+    },
+    {
+     "person": "1f14d30f1c8b0e48",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-74-george-sarduy",
+   "name": "George A. Sarduy",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n6b1af641ed4e99a",
+     "score": 5
+    },
+    {
+     "person": "d46cc7448fc95691",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-78-valerie-schurr",
+   "name": "Valerie Manno Schurr",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n1664ecc88da7218",
+     "score": 5
+    },
+    {
+     "person": "4ea5685a566274ef",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-37-andrew-siegel",
+   "name": "Andrew L. Siegel",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nf0382236d99c3c8",
+     "score": 5
+    },
+    {
+     "person": "9f5231e55fe5cb6b",
+     "score": 5
+    },
+    {
+     "person": "n929f1b5a96cb025",
+     "score": 4
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-57-michele-singer",
+   "name": "Michele Towbin Singer",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "n2058cf79310918b",
+     "score": 5
+    },
+    {
+     "person": "5aaf30fb598ec6cb",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "county-court-judge-district-22-linda-stein",
+   "name": "Linda Singer Stein",
+   "office": "County Court Judge",
+   "candidates": [
+    {
+     "person": "n09ca46559924c0e",
+     "score": 3
+    },
+    {
+     "person": "d65ed876de530d09",
+     "score": 3
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-13-hope-tieman-bristol",
+   "name": "Hope Tieman-Bristol",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nad354f67187461c",
+     "score": 5
+    },
+    {
+     "person": "ff1df17a01ac9a0b",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-30-kimberly-todd",
+   "name": "Kimberly Todd",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nc0753abc701af6c",
+     "score": 5
+    },
+    {
+     "person": "7f9669f3f5fcb9ad",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "circuit-judge-district-30-waddell-wallace",
+   "name": "Waddell Wallace",
+   "office": "Circuit Judge",
+   "candidates": [
+    {
+     "person": "nf805c50d63680eb",
+     "score": 5
+    },
+    {
+     "person": "n2d738e851744ec1",
+     "score": 5
+    },
+    {
+     "person": "2c9edf0b91575681",
+     "score": 5
+    }
+   ]
+  },
+  {
+   "id": "county-commissioner-columbia-county-ronald-williams",
+   "name": "Ronald Williams",
+   "office": "County Commissioner",
+   "candidates": [
+    {
+     "person": "n7263709e7aec83b",
+     "score": 3
+    },
+    {
+     "person": "n173b7817f43516d",
+     "score": 3
+    },
+    {
+     "person": "ab6d40f3f11d6649",
+     "score": 3
+    }
+   ]
+  }
+ ],
+ "unmatched": [
+  {
+   "id": "superintendent-of-schools-st-johns-county-public-schools-paul-abbatinozzi",
+   "name": "Paul Abbatinozzi",
+   "office": "Superintendent of Schools",
+   "county": "St. Johns"
+  },
+  {
+   "id": "county-court-judge-district-43-milena-abreu",
+   "name": "Milena Abreu",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "tax-collector-broward-county-abbey-ajayi",
+   "name": "Abbey Ajayi",
+   "office": "Tax Collector",
+   "county": "Broward"
+  },
+  {
+   "id": "sheriff-liberty-county-dusty-arnold",
+   "name": "Dusty Arnold",
+   "office": "Sheriff",
+   "county": "Liberty"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-calhoun-county-robin-barfield",
+   "name": "Robin Barfield",
+   "office": "Clerk of the Circuit Court",
+   "county": "Calhoun"
+  },
+  {
+   "id": "county-court-judge-district-40-michael-barket",
+   "name": "Michael G. Barket",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-court-judge-district-29-christopher-benjamin",
+   "name": "Christopher Benjamin",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-osceola-county-chris-blackmon",
+   "name": "Chris Blackmon",
+   "office": "Sheriff",
+   "county": "Osceola"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-orange-county-joyce-boudoin",
+   "name": "Joyce Boudoin",
+   "office": "Clerk of the Circuit Court",
+   "county": "Orange"
+  },
+  {
+   "id": "sheriff-sumter-county-patrick-breeden",
+   "name": "Patrick Breeden",
+   "office": "Sheriff",
+   "county": "Sumter"
+  },
+  {
+   "id": "county-commissioner-calhoun-county-marion-brown",
+   "name": "Marion Brown",
+   "office": "County Commissioner",
+   "county": "Calhoun"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-okeechobee-county-jerald-bryant",
+   "name": "Jerald Bryant",
+   "office": "Clerk of the Circuit Court",
+   "county": "Okeechobee"
+  },
+  {
+   "id": "sheriff-martin-county-john-budensiek",
+   "name": "John M. Budensiek",
+   "office": "Sheriff",
+   "county": "Martin"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-indian-river-county-ryan-butler",
+   "name": "Ryan L. Butler",
+   "office": "Clerk of the Circuit Court",
+   "county": "Indian River"
+  },
+  {
+   "id": "superintendent-of-schools-sumter-county-public-schools-joel-camp",
+   "name": "Joel Camp",
+   "office": "Superintendent of Schools",
+   "county": "Sumter"
+  },
+  {
+   "id": "county-commissioner-district-3-j-capps",
+   "name": "J. Blake Capps",
+   "office": "County Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "county-commissioner-calhoun-county-thomas-carter",
+   "name": "Thomas Carter",
+   "office": "County Commissioner",
+   "county": "Calhoun"
+  },
+  {
+   "id": "county-court-judge-district-9-corey-cawthon",
+   "name": "Corey Amanda Cawthon",
+   "office": "County Court Judge",
+   "county": "Broward"
+  },
+  {
+   "id": "county-commissioner-hernando-county-steven-champion",
+   "name": "Steven Champion",
+   "office": "County Commissioner",
+   "county": "Hernando"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-palm-beach-county-shannon-chessman",
+   "name": "Shannon R. Chessman",
+   "office": "Clerk of the Circuit Court",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "sheriff-volusia-county-mike-chitwood",
+   "name": "Mike Chitwood",
+   "office": "Sheriff",
+   "county": "Volusia"
+  },
+  {
+   "id": "sheriff-hillsborough-county-chad-chronister",
+   "name": "Chad Chronister",
+   "office": "Sheriff",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "sheriff-clay-county-michelle-cook",
+   "name": "Michelle Cook",
+   "office": "Sheriff",
+   "county": "Clay"
+  },
+  {
+   "id": "county-court-judge-district-12-mariano-corcilli",
+   "name": "Mariano Ariel Corcilli",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-miami-dade-county-rosanna-cordero-stutz",
+   "name": "Rosanna Cordero-Stutz",
+   "office": "Sheriff",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "circuit-judge-district-81-cristina-correa",
+   "name": "Cristina Rivera Correa",
+   "office": "Circuit Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-hardee-county-vent-crawford",
+   "name": "Vent Crawford",
+   "office": "Sheriff",
+   "county": "Hardee"
+  },
+  {
+   "id": "sheriff-hamilton-county-brian-creech",
+   "name": "Brian Creech",
+   "office": "Sheriff",
+   "county": "Hamilton"
+  },
+  {
+   "id": "county-court-judge-district-5-ritamaria-cuervo",
+   "name": "Ritamaria Cuervo",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-court-judge-district-27-miesha-darrough",
+   "name": "Miesha S. Darrough",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-putnam-county-homer-deloach",
+   "name": "Homer DeLoach III",
+   "office": "Sheriff",
+   "county": "Putnam"
+  },
+  {
+   "id": "supervisor-of-elections-leon-county-mark-earley",
+   "name": "Mark S. Earley",
+   "office": "Supervisor of Elections",
+   "county": "Leon"
+  },
+  {
+   "id": "sheriff-jackson-county-donald-edenfield",
+   "name": "Donald L. Edenfield",
+   "office": "Sheriff",
+   "county": "Jackson"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-santa-rosa-county-jason-english",
+   "name": "Jason D. English",
+   "office": "Clerk of the Circuit Court",
+   "county": "Santa Rosa"
+  },
+  {
+   "id": "county-court-judge-district-13-elisabeth-espinosa",
+   "name": "Elisabeth M. Espinosa",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "supervisor-of-elections-manatee-county-scott-farrington",
+   "name": "Scott Farrington",
+   "office": "Supervisor of Elections",
+   "county": "Manatee"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-miami-dade-county-juan-fernandez-barquin",
+   "name": "Juan Fernandez-Barquin",
+   "office": "Clerk of the Circuit Court",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-commissioner-charlotte-county-john-fleming",
+   "name": "John M. Fleming",
+   "office": "County Commissioner",
+   "county": "Charlotte"
+  },
+  {
+   "id": "sheriff-bay-county-tommy-ford",
+   "name": "Tommy Ford",
+   "office": "Sheriff",
+   "county": "Bay"
+  },
+  {
+   "id": "county-court-judge-district-14-gloria-gonzalez-meyer",
+   "name": "Gloria Gonzalez-Meyer",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-court-judge-district-31-christopher-green",
+   "name": "Christopher Green",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-st-johns-county-robert-hardwick",
+   "name": "Robert A. Hardwick",
+   "office": "Sheriff",
+   "county": "St. Johns"
+  },
+  {
+   "id": "sheriff-pasco-county-jeffrey-harrington",
+   "name": "Jeffrey Harrington",
+   "office": "Sheriff",
+   "county": "Pasco"
+  },
+  {
+   "id": "county-court-judge-district-3-ayana-harris",
+   "name": "Ayana Harris",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "supervisor-of-elections-lafayette-county-travis-hart",
+   "name": "Travis Hart",
+   "office": "Supervisor of Elections",
+   "county": "Lafayette"
+  },
+  {
+   "id": "superintendent-of-schools-hernando-county-public-schools-kayce-hawkins",
+   "name": "Kayce Hawkins",
+   "office": "Superintendent of Schools",
+   "county": "Hernando"
+  },
+  {
+   "id": "county-court-judge-district-8-kevin-hellmann",
+   "name": "Kevin Hellmann",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "superintendent-of-schools-broward-county-public-schools-howard-hepburn",
+   "name": "Howard Hepburn",
+   "office": "Superintendent of Schools",
+   "county": "Broward"
+  },
+  {
+   "id": "county-court-judge-district-9-joanne-hernandez",
+   "name": "Joanne Hernandez",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-sarasota-county-kurt-hoffman",
+   "name": "Kurt A. Hoffman",
+   "office": "Sheriff",
+   "county": "Sarasota"
+  },
+  {
+   "id": "supervisor-of-elections-duval-county-jerry-holland",
+   "name": "Jerry Holland",
+   "office": "Supervisor of Elections",
+   "county": "Duval"
+  },
+  {
+   "id": "county-commissioner-nassau-county-am-huppmann",
+   "name": "A.M. Huppmann",
+   "office": "County Commissioner",
+   "county": "Nassau"
+  },
+  {
+   "id": "county-court-judge-district-35-chiaka-ihekwaba",
+   "name": "Chiaka Ihekwaba",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "supervisor-of-elections-suwannee-county-jennifer-kinsey",
+   "name": "Jennifer Musgrove Kinsey",
+   "office": "Supervisor of Elections",
+   "county": "Suwannee"
+  },
+  {
+   "id": "county-court-judge-district-37-yara-klukas",
+   "name": "Yara Lorenzo Klukas",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-commissioner-collier-county-daniel-kowal",
+   "name": "Daniel Kowal",
+   "office": "County Commissioner",
+   "county": "Collier"
+  },
+  {
+   "id": "tax-collector-seminole-county-jr-kroll",
+   "name": "JR Kroll",
+   "office": "Tax Collector",
+   "county": "Seminole"
+  },
+  {
+   "id": "county-commissioner-suwannee-county-travis-land",
+   "name": "Travis Land",
+   "office": "County Commissioner",
+   "county": "Suwannee"
+  },
+  {
+   "id": "superintendent-of-schools-escambia-county-public-schools-keith-leonard",
+   "name": "Keith Leonard",
+   "office": "Superintendent of Schools",
+   "county": "Escambia"
+  },
+  {
+   "id": "county-court-judge-district-45-jennifer-levin",
+   "name": "Jennifer Trautman Levin",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-commissioner-indian-river-county-deryl-loar",
+   "name": "Deryl Loar",
+   "office": "County Commissioner",
+   "county": "Indian River"
+  },
+  {
+   "id": "county-commissioner-district-5-vicki-lopez",
+   "name": "Vicki L. Lopez",
+   "office": "County Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "judge-fourth-district-court-of-appeal-fourth-district-court-of-appeal-jonathan-lott",
+   "name": "Jonathan D. Lott",
+   "office": "Judge, Fourth District Court of Appeal",
+   "county": null
+  },
+  {
+   "id": "state-representative-district-54-randall-maggard",
+   "name": "Randall Scott Maggard",
+   "office": "State Representative",
+   "county": null
+  },
+  {
+   "id": "supervisor-of-elections-pinellas-county-julie-marcus",
+   "name": "Julie Marcus",
+   "office": "Supervisor of Elections",
+   "county": "Pinellas"
+  },
+  {
+   "id": "school-board-member-district-1-ryan-matthews",
+   "name": "Ryan Matthews",
+   "office": "School Board Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "sheriff-jefferson-county-alfred-mcneill",
+   "name": "Alfred Kenneth McNeill Jr.",
+   "office": "Sheriff",
+   "county": "Jefferson"
+  },
+  {
+   "id": "county-commissioner-levy-county-russell-meeks",
+   "name": "Russell Meeks",
+   "office": "County Commissioner",
+   "county": "Levy"
+  },
+  {
+   "id": "county-court-judge-district-15-linda-melendez",
+   "name": "Linda Melendez",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-commissioner-hernando-county-john-mitten",
+   "name": "John Mitten",
+   "office": "County Commissioner",
+   "county": "Hernando"
+  },
+  {
+   "id": "county-court-judge-district-34-natalie-moore",
+   "name": "Natalie Moore",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-court-judge-district-38-gordon-murray",
+   "name": "Gordon Murray",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-court-judge-district-39-julie-nelson",
+   "name": "Julie Harris Nelson",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-court-judge-district-2-kristy-nunez",
+   "name": "Kristy M. Nu\u00f1ez",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-commissioner-district-6-natalie-orbis",
+   "name": "Natalie Milian Orbis",
+   "office": "County Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "county-commissioner-dixie-county-david-osteen",
+   "name": "David Osteen",
+   "office": "County Commissioner",
+   "county": "Dixie"
+  },
+  {
+   "id": "county-court-judge-district-25-luis-perez-medina",
+   "name": "Luis Perez-Medina",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "clerk-of-the-circuit-court-citrus-county-traci-perry",
+   "name": "Traci Perry",
+   "office": "Clerk of the Circuit Court",
+   "county": "Citrus"
+  },
+  {
+   "id": "county-commissioner-district-2-theresa-pontieri",
+   "name": "Theresa Pontieri",
+   "office": "County Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "county-court-judge-district-42-alicia-priovolos",
+   "name": "Alicia Garcia Priovolos",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "school-board-member-district-2-tony-pumphry",
+   "name": "Tony Pumphry",
+   "office": "School Board Member",
+   "county": "Jackson"
+  },
+  {
+   "id": "county-court-judge-district-31-michele-ricca",
+   "name": "Michele McCaul Ricca",
+   "office": "County Court Judge",
+   "county": "Broward"
+  },
+  {
+   "id": "county-court-judge-district-44-jose-rohaidy",
+   "name": "Jose Rohaidy",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "school-board-member-district-6-maria-rojas",
+   "name": "Maria Teresa Rojas",
+   "office": "School Board Member",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "school-board-member-district-4-christina-romelus",
+   "name": "Christina Romelus",
+   "office": "School Board Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "county-court-judge-district-6-jorge-santiago",
+   "name": "Jorge Perez Santiago",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-alachua-county-chad-scott",
+   "name": "Chad Scott",
+   "office": "Sheriff",
+   "county": "Alachua"
+  },
+  {
+   "id": "county-court-judge-district-20-stephanie-silver",
+   "name": "Stephanie R. Silver",
+   "office": "County Court Judge",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "sheriff-bradford-county-george-smith",
+   "name": "George Paul Smith",
+   "office": "Sheriff",
+   "county": "Bradford"
+  },
+  {
+   "id": "school-board-member-district-2-tony-smith",
+   "name": "Tony Smith",
+   "office": "School Board Member",
+   "county": "Charlotte"
+  },
+  {
+   "id": "tax-collector-monroe-county-sam-steele",
+   "name": "Sam C. Steele",
+   "office": "Tax Collector",
+   "county": "Monroe"
+  },
+  {
+   "id": "sheriff-okeechobee-county-noel-stephen",
+   "name": "Noel E. Stephen",
+   "office": "Sheriff",
+   "county": "Okeechobee"
+  },
+  {
+   "id": "us-representative-district-17-w-steube",
+   "name": "W. Steube",
+   "office": "U.S. Representative",
+   "county": null
+  },
+  {
+   "id": "justice-of-the-florida-supreme-court-florida-adam-tanenbaum",
+   "name": "Adam S. Tanenbaum",
+   "office": "Justice of the Florida Supreme Court",
+   "county": null
+  },
+  {
+   "id": "supervisor-of-elections-charlotte-county-leah-valenti",
+   "name": "Leah Valenti",
+   "office": "Supervisor of Elections",
+   "county": "Charlotte"
+  },
+  {
+   "id": "sheriff-citrus-county-david-vincent",
+   "name": "David E. Vincent",
+   "office": "Sheriff",
+   "county": "Citrus"
+  },
+  {
+   "id": "county-commissioner-lafayette-county-alicia-walker",
+   "name": "Alicia Walker",
+   "office": "County Commissioner",
+   "county": "Lafayette"
+  },
+  {
+   "id": "sheriff-duval-county-tk-waters",
+   "name": "T.K. Waters",
+   "office": "Sheriff",
+   "county": "Duval"
+  },
+  {
+   "id": "supervisor-of-elections-marion-county-wesley-wilcox",
+   "name": "Wesley Wilcox",
+   "office": "Supervisor of Elections",
+   "county": "Marion"
+  },
+  {
+   "id": "supervisor-of-elections-holmes-county-h-williams",
+   "name": "H. Russell Williams",
+   "office": "Supervisor of Elections",
+   "county": "Holmes"
+  },
+  {
+   "id": "superintendent-of-schools-pinellas-county-public-schools-stephanie-woodford",
+   "name": "Stephanie Woodford",
+   "office": "Superintendent of Schools",
+   "county": "Pinellas"
+  },
+  {
+   "id": "sheriff-marion-county-billy-woods",
+   "name": "Billy Woods",
+   "office": "Sheriff",
+   "county": "Marion"
+  },
+  {
+   "id": "county-commissioner-pasco-county-lisa-yeager",
+   "name": "Lisa Yeager",
+   "office": "County Commissioner",
+   "county": "Pasco"
+  }
+ ],
+ "summary": {
+  "county": {
+   "matched": 432,
+   "ambiguous": 17,
+   "unmatched": 63
+  },
+  "state/federal": {
+   "matched": 186,
+   "ambiguous": 4,
+   "unmatched": 2
+  },
+  "judges": {
+   "matched": 700,
+   "ambiguous": 24,
+   "unmatched": 38
+  }
+ }
+}
