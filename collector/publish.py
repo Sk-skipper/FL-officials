@@ -212,7 +212,9 @@ def _apply_tenure(by_id: dict, tenure: dict) -> None:
         if stated and int(stated.group()) <= date.today().year and (ne.get("year") or ne.get("leaving")):
             bio.pop("next_election")  # a stated next election that has already happened is out of date
         if not bio.get("next_election"):
-            if ne.get("year"):
+            if ne.get("year") and not ne.get("date"):
+                bio["next_election"] = f"{ne['year']}" + (f" (the term ends {ne['term_ends']})" if ne.get("term_ends") else "")
+            elif ne.get("year"):
                 day = date.fromisoformat(ne["date"])
                 text = f"{day:%B} {day.day}, {day.year}" + (" (August primary; nonpartisan)" if "primary" in ne.get("ballot", "") else "")
                 bio["next_election"] = text + (" — term-limited; cannot run for this office again" if ne.get("term_limited") else "")
@@ -223,7 +225,13 @@ def _apply_tenure(by_id: dict, tenure: dict) -> None:
             record["bio"] = bio
         record["tenure"] = {k: t[k] for k in ("serving_since", "previously", "next_election", "wins_in_office", "match") if k in t}
         sources = [x for x in record.get("bio_sources") or [] if x.get("name") != ELECTION_RECORDS["name"]]
-        record["bio_sources"] = sources + [ELECTION_RECORDS]
+        links = {x.get("link") for x in (since, ne)} | ({"voter id"} if t.get("wins_in_office") else set())
+        extra = [ELECTION_RECORDS] if "voter id" in links or t.get("person") else []
+        for part in (since, ne):
+            if part.get("source") and part["source"] not in {x.get("url") for x in sources + extra}:
+                name = "Wikipedia" if "wikipedia.org" in part["source"] else "The official's page"
+                extra.append({"name": name, "url": part["source"]})
+        record["bio_sources"] = sources + extra
 
 
 def _apply_photos(by_id: dict, photos: dict) -> None:

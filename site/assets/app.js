@@ -734,7 +734,10 @@ function aboutPanel(r) {
     const span = years === null ? "" : years < 1 ? " <span class=\"muted\">(newly in office)</span>"
       : ` <span class="muted">(${atLeast ? "at least " : ""}${plural(years, "year")})</span>`;
     const wins = (r.tenure?.wins_in_office || []).filter((y) => y >= Number(String(bio.serving_since).slice(0, 4)));
-    const elected = wins.length > 1 ? `<br><span class="muted small">Elected ${wins[0]}; re-elected ${wins.slice(1).join(", ")}</span>` : "";
+    const since = r.tenure?.serving_since || {};
+    const elected = since.link === "wikipedia" || since.link === "official page"
+      ? `<br><span class="muted small">${esc(since.basis.replace(/^Wikipedia: /, "").replace(/^the official's page: /, "Their page: ").replace(/^./, (c) => c.toUpperCase()))}</span>`
+      : wins.length > 1 ? `<br><span class="muted small">Elected ${wins[0]}; re-elected ${wins.slice(1).join(", ")}</span>` : "";
     facts.push(["In this office since", `${atLeast ? "At least " : ""}${esc(formatPartialDate(bio.serving_since))}${span}${elected}`]);
   }
   if (bio.term_ends) facts.push(["Current term ends", esc(formatPartialDate(bio.term_ends))]);
