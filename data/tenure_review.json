@@ -1,40 +1,6 @@
 {
  "ambiguous": [
   {
-   "id": "sheriff-walton-county-michael-adkinson",
-   "name": "Michael A. Adkinson Jr.",
-   "office": "Sheriff",
-   "candidates": [
-    {
-     "person": "ncd8755458360533",
-     "score": 3
-    },
-    {
-     "person": "a92cd2d689ffaa4c",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-22-denise-almeida-pomponio",
-   "name": "Denise D. Almeida-Pomponio",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "nc4e52571bb8fc50",
-     "score": 5
-    },
-    {
-     "person": "n36656c41690dce3",
-     "score": 5
-    },
-    {
-     "person": "f5b0afe51b046a85",
-     "score": 5
-    }
-   ]
-  },
-  {
    "id": "county-commissioner-baker-county-jimmy-anderson",
    "name": "Jimmy Anderson",
    "office": "County Commissioner",
@@ -65,104 +31,17 @@
    ]
   },
   {
-   "id": "circuit-judge-district-3-sherwood-bauer",
-   "name": "Sherwood Bauer Jr.",
-   "office": "Circuit Judge",
+   "id": "county-court-judge-district-15-chris-brown",
+   "name": "Chris Marion Brown",
+   "office": "County Court Judge",
    "candidates": [
     {
-     "person": "n095857011a53959",
-     "score": 5
-    },
-    {
-     "person": "029147d67f577cba",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "tax-collector-holmes-county-harry-bell",
-   "name": "Harry B. Bell III",
-   "office": "Tax Collector",
-   "candidates": [
-    {
-     "person": "na9a77f1d0a6e6aa",
+     "person": "fbd08b56e72fb7a8",
      "score": 3
     },
     {
-     "person": "n94011b4a47886ba",
+     "person": "f9dfaea0795b3df0",
      "score": 3
-    },
-    {
-     "person": "446002f03bc41a29",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "state-representative-district-58-kimberly-berfield",
-   "name": "Kimberly Berfield",
-   "office": "State Representative",
-   "candidates": [
-    {
-     "person": "n5b869eb93f2b815",
-     "score": 5
-    },
-    {
-     "person": "7d19a638cf34070c",
-     "score": 5
-    },
-    {
-     "person": "nf9c24baa135e29a",
-     "score": 2
-    }
-   ]
-  },
-  {
-   "id": "state-representative-district-114-demi-busatta",
-   "name": "Demi Busatta",
-   "office": "State Representative",
-   "candidates": [
-    {
-     "person": "n69d67bb828803e7",
-     "score": 5
-    },
-    {
-     "person": "d4348dfd703aa1ad",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "state-representative-district-109-james-bush",
-   "name": "James Bush III",
-   "office": "State Representative",
-   "candidates": [
-    {
-     "person": "ndb9bc0f0b6fc63b",
-     "score": 5
-    },
-    {
-     "person": "n7f748728674d37d",
-     "score": 5
-    },
-    {
-     "person": "57968b121690982f",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-77-beatrice-butchko",
-   "name": "Beatrice A. Butchko",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "n553a94590157dc1",
-     "score": 5
-    },
-    {
-     "person": "11db37e44caf04b0",
-     "score": 5
     }
    ]
   },
@@ -178,81 +57,6 @@
     {
      "person": "33a418550f5cba2f",
      "score": 5
-    }
-   ]
-  },
-  {
-   "id": "county-commissioner-alachua-county-charles-chestnut",
-   "name": "Charles S. Chestnut",
-   "office": "County Commissioner",
-   "candidates": [
-    {
-     "person": "nce01bbb4c9c9ce1",
-     "score": 3
-    },
-    {
-     "person": "d0ee99d66718aba7",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "county-court-judge-district-26-mardi-cohen",
-   "name": "Mardi Levey Cohen",
-   "office": "County Court Judge",
-   "candidates": [
-    {
-     "person": "n7c33ed64002b93b",
-     "score": 3
-    },
-    {
-     "person": "0c9f7cdc87c686a6",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "school-board-member-district-2-gail-cook",
-   "name": "Gail Cook",
-   "office": "School Board Member",
-   "candidates": [
-    {
-     "person": "n21e5851316a8531",
-     "score": 3
-    },
-    {
-     "person": "80455b33ad4fd1fa",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-21-rochelle-curley",
-   "name": "Rochelle Taylor Curley",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "n7c5f8a14a9944d5",
-     "score": 5
-    },
-    {
-     "person": "ba9ea007ac9d8caf",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "school-board-member-district-4-charlie-frost",
-   "name": "Charlie Frost",
-   "office": "School Board Member",
-   "candidates": [
-    {
-     "person": "nb4c0723f7441d60",
-     "score": 3
-    },
-    {
-     "person": "c144c9c4fec864f5",
-     "score": 3
     }
    ]
   },
@@ -302,40 +106,6 @@
    ]
   },
   {
-   "id": "county-commissioner-hillsborough-county-ken-hagan",
-   "name": "Ken Hagan",
-   "office": "County Commissioner",
-   "candidates": [
-    {
-     "person": "n308c875df43200e",
-     "score": 3
-    },
-    {
-     "person": "03db668f89352f03",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-6-mary-handsel",
-   "name": "Mary Morrissey Handsel",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "ne11bf4d2ee90b6c",
-     "score": 5
-    },
-    {
-     "person": "na62d4c1efcdbc22",
-     "score": 5
-    },
-    {
-     "person": "2278c9e1f3b1fae5",
-     "score": 5
-    }
-   ]
-  },
-  {
    "id": "school-board-member-liberty-county-public-schools-doobie-hayes",
    "name": "Doobie Hayes",
    "office": "School Board Member",
@@ -347,21 +117,6 @@
     {
      "person": "2ae2feb917e0cdf0",
      "score": 2
-    }
-   ]
-  },
-  {
-   "id": "county-court-judge-district-12-john-hurley",
-   "name": "John Hurley",
-   "office": "County Court Judge",
-   "candidates": [
-    {
-     "person": "nddcc15d4bc6cef5",
-     "score": 3
-    },
-    {
-     "person": "85700191c709dc24",
-     "score": 3
     }
    ]
   },
@@ -381,174 +136,20 @@
    ]
   },
   {
-   "id": "circuit-judge-district-11-dawn-johnson",
-   "name": "Dawn Caloca Johnson",
-   "office": "Circuit Judge",
+   "id": "supervisor-south-dade-soil-and-water-conservation-district-district-4-s-mcmillan",
+   "name": "S. Cooper McMillan",
+   "office": "Supervisor, South Dade Soil and Water Conservation District",
    "candidates": [
     {
-     "person": "n475d65f7aa6fa2d",
-     "score": 5
-    },
-    {
-     "person": "32583d7cae24c96d",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "county-commissioner-lafayette-county-earnest-jones",
-   "name": "Earnest Jones",
-   "office": "County Commissioner",
-   "candidates": [
-    {
-     "person": "n14f810f2f85676a",
+     "person": "nccb1e24edff1f69",
      "score": 3
     },
     {
-     "person": "b12acd7fe73a6c8f",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "tax-collector-glades-county-gail-jones",
-   "name": "Gail A. Jones",
-   "office": "Tax Collector",
-   "candidates": [
-    {
-     "person": "ne5b10de2326cd49",
+     "person": "n6253c13fb0bd167",
      "score": 3
     },
     {
-     "person": "de0178392fc5ea07",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "county-court-judge-district-24-ginger-lerner-wren",
-   "name": "Ginger Lerner-Wren",
-   "office": "County Court Judge",
-   "candidates": [
-    {
-     "person": "n18308997a21d8fb",
-     "score": 3
-    },
-    {
-     "person": "37462f08eaa927ea",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "school-board-member-district-2-ginger-littleton",
-   "name": "Ginger Littleton",
-   "office": "School Board Member",
-   "candidates": [
-    {
-     "person": "n44a9ec884dbf231",
-     "score": 3
-    },
-    {
-     "person": "9fce30b4bf7fd472",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "county-commissioner-leon-county-nick-maddox",
-   "name": "Nick Maddox",
-   "office": "County Commissioner",
-   "candidates": [
-    {
-     "person": "n43849a3e4fa5636",
-     "score": 3
-    },
-    {
-     "person": "98544875a2bf52df",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-80-marisa-mendez",
-   "name": "Marisa Tinkler Mendez",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "nc767a17428614af",
-     "score": 5
-    },
-    {
-     "person": "6fc892c55a5f5cbc",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-26-lisa-porter",
-   "name": "Lisa Spader Porter",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "c3d3a17ddd385ddc",
-     "score": 5
-    },
-    {
-     "person": "0c2fdc20aa78ebf9",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "county-commissioner-leon-county-william-proctor",
-   "name": "William Proctor",
-   "office": "County Commissioner",
-   "candidates": [
-    {
-     "person": "n2e9bb22c7726d0f",
-     "score": 3
-    },
-    {
-     "person": "8b02c46affe23c6f",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "school-board-member-district-1-jerry-register",
-   "name": "Jerry Register",
-   "office": "School Board Member",
-   "candidates": [
-    {
-     "person": "n442b9319a4e07b6",
-     "score": 3
-    },
-    {
-     "person": "54c0ac83355f8f5c",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "state-attorney-11th-judicial-circuit-miami-dade-county-katherine-rundle",
-   "name": "Katherine Fernandez Rundle",
-   "office": "State Attorney",
-   "candidates": [
-    {
-     "person": "ne4d67ecf1ca9f73",
-     "score": 3
-    },
-    {
-     "person": "nac7330c2eeab6a0",
-     "score": 3
-    },
-    {
-     "person": "n734c86fc5030bb7",
-     "score": 3
-    },
-    {
-     "person": "a0541e3bec79611c",
+     "person": "6ec07e82712c448e",
      "score": 3
     }
    ]
@@ -567,153 +168,6 @@
      "score": 5
     }
    ]
-  },
-  {
-   "id": "circuit-judge-district-74-george-sarduy",
-   "name": "George A. Sarduy",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "n6b1af641ed4e99a",
-     "score": 5
-    },
-    {
-     "person": "d46cc7448fc95691",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-78-valerie-schurr",
-   "name": "Valerie Manno Schurr",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "n1664ecc88da7218",
-     "score": 5
-    },
-    {
-     "person": "4ea5685a566274ef",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-37-andrew-siegel",
-   "name": "Andrew L. Siegel",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "nf0382236d99c3c8",
-     "score": 5
-    },
-    {
-     "person": "9f5231e55fe5cb6b",
-     "score": 5
-    },
-    {
-     "person": "n929f1b5a96cb025",
-     "score": 4
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-57-michele-singer",
-   "name": "Michele Towbin Singer",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "n2058cf79310918b",
-     "score": 5
-    },
-    {
-     "person": "5aaf30fb598ec6cb",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "county-court-judge-district-22-linda-stein",
-   "name": "Linda Singer Stein",
-   "office": "County Court Judge",
-   "candidates": [
-    {
-     "person": "n09ca46559924c0e",
-     "score": 3
-    },
-    {
-     "person": "d65ed876de530d09",
-     "score": 3
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-13-hope-tieman-bristol",
-   "name": "Hope Tieman-Bristol",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "nad354f67187461c",
-     "score": 5
-    },
-    {
-     "person": "ff1df17a01ac9a0b",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-30-kimberly-todd",
-   "name": "Kimberly Todd",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "nc0753abc701af6c",
-     "score": 5
-    },
-    {
-     "person": "7f9669f3f5fcb9ad",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "circuit-judge-district-30-waddell-wallace",
-   "name": "Waddell Wallace",
-   "office": "Circuit Judge",
-   "candidates": [
-    {
-     "person": "nf805c50d63680eb",
-     "score": 5
-    },
-    {
-     "person": "n2d738e851744ec1",
-     "score": 5
-    },
-    {
-     "person": "2c9edf0b91575681",
-     "score": 5
-    }
-   ]
-  },
-  {
-   "id": "county-commissioner-columbia-county-ronald-williams",
-   "name": "Ronald Williams",
-   "office": "County Commissioner",
-   "candidates": [
-    {
-     "person": "n7263709e7aec83b",
-     "score": 3
-    },
-    {
-     "person": "n173b7817f43516d",
-     "score": 3
-    },
-    {
-     "person": "ab6d40f3f11d6649",
-     "score": 3
-    }
-   ]
   }
  ],
  "unmatched": [
@@ -724,16 +178,202 @@
    "county": "St. Johns"
   },
   {
-   "id": "county-court-judge-district-43-milena-abreu",
-   "name": "Milena Abreu",
-   "office": "County Court Judge",
+   "id": "council-member-west-melbourne-diana-adams",
+   "name": "Diana Adams",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-hallandale-beach-joy-adams",
+   "name": "Joy Adams",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-5-katherine-adams",
+   "name": "Katherine Adams",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "vice-mayor-sarasota-jen-ahearn-koch",
+   "name": "Jen Ahearn-Koch",
+   "office": "Vice Mayor",
+   "county": "Sarasota"
+  },
+  {
+   "id": "commissioner-ocean-ridge-ainar-aijala",
+   "name": "Ainar Aijala Jr.",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-3-clifford-ain",
+   "name": "Clifford B. Ain",
+   "office": "Commissioner",
    "county": "Miami-Dade"
   },
   {
-   "id": "tax-collector-broward-county-abbey-ajayi",
-   "name": "Abbey Ajayi",
-   "office": "Tax Collector",
+   "id": "councilmember-district-2-daniel-alfonso",
+   "name": "Daniel J. Alfonso",
+   "office": "Councilmember",
    "county": "Broward"
+  },
+  {
+   "id": "mayor-melbourne-paul-alfrey",
+   "name": "Paul Alfrey",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "councilmember-lazy-lake-arnie-aliff",
+   "name": "Arnie Aliff",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-3-jim-allbritton",
+   "name": "Jim Allbritton",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-fort-walton-beach-nic-allegretto",
+   "name": "Nic Allegretto",
+   "office": "Mayor",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "commissioner-hypoluxo-linda-allen",
+   "name": "Linda Allen",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "president-east-beach-water-control-district-east-beach-water-control-district-paul-allen",
+   "name": "Paul Allen",
+   "office": "President, East Beach Water Control District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-north-port-elaine-allen-emrich",
+   "name": "Elaine Allen-Emrich",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "mayor-fort-myers-beach-dan-allers",
+   "name": "Dan Allers",
+   "office": "Mayor",
+   "county": "Lee"
+  },
+  {
+   "id": "council-member-crestview-dusty-allison",
+   "name": "Dusty Allison",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-lauren-alperstein",
+   "name": "Lauren M. Alperstein",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-2-liz-alpert",
+   "name": "Liz Alpert",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "mayor-indian-river-shores-james-altieri",
+   "name": "James Altieri",
+   "office": "Mayor",
+   "county": "Indian River"
+  },
+  {
+   "id": "councilmember-palm-coast-tony-amaral",
+   "name": "Tony Amaral Jr.",
+   "office": "Councilmember",
+   "county": "Flagler"
+  },
+  {
+   "id": "councilmember-district-1-ken-amaro",
+   "name": "Ken Amaro",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-melbourne-village-fred-anderson",
+   "name": "Fred Anderson",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-district-4-jimmy-anderson",
+   "name": "Jimmy Anderson",
+   "office": "Council Member",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-district-3-nadia-anderson",
+   "name": "Nadia L. Anderson",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-orange-park-randy-anderson",
+   "name": "Randy Anderson",
+   "office": "Council Member",
+   "county": "Clay"
+  },
+  {
+   "id": "vice-mayor-coral-gables-rhonda-anderson",
+   "name": "Rhonda Anderson",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-hillsboro-beach-vinnie-andreano",
+   "name": "Vinnie Andreano",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-wellington-maria-antuna",
+   "name": "Maria Antu\u00f1a",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-palm-beach-julie-araskog",
+   "name": "Julie Araskog",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-virginia-gardens-jorge-arce",
+   "name": "Jorge Arce",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-11-raul-arias",
+   "name": "Raul Arias",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "supervisor-bolles-drainage-district-bolles-drainage-district-chris-arieta",
+   "name": "Chris Arieta",
+   "office": "Supervisor, Bolles Drainage District",
+   "county": "Hendry"
+  },
+  {
+   "id": "supervisor-disston-island-conservancy-district-disston-island-conservancy-district-chris-arieta",
+   "name": "Chris Arieta",
+   "office": "Supervisor, Disston Island Conservancy District",
+   "county": "Glades"
   },
   {
    "id": "sheriff-liberty-county-dusty-arnold",
@@ -742,22 +382,322 @@
    "county": "Liberty"
   },
   {
-   "id": "clerk-of-the-circuit-court-calhoun-county-robin-barfield",
-   "name": "Robin Barfield",
-   "office": "Clerk of the Circuit Court",
-   "county": "Calhoun"
+   "id": "council-member-district-2-jon-arnold",
+   "name": "Jon Arnold",
+   "office": "Council Member",
+   "county": "Lake"
   },
   {
-   "id": "county-court-judge-district-40-michael-barket",
-   "name": "Michael G. Barket",
-   "office": "County Court Judge",
+   "id": "mayor-margate-antonio-arserio",
+   "name": "Antonio V. Arserio",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-eustis-george-asbate",
+   "name": "George Asbate",
+   "office": "Commissioner",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-apalachicola-brenda-ash",
+   "name": "Brenda Ash",
+   "office": "Mayor",
+   "county": "Franklin"
+  },
+  {
+   "id": "vice-mayor-eustis-gary-ashcraft",
+   "name": "Gary Ashcraft",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-new-smyrna-beach-brian-ashley",
+   "name": "Brian Ashley",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-bunnell-david-atkinson",
+   "name": "David Atkinson",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "vice-mayor-south-palm-beach-francesca-attardi",
+   "name": "Francesca Attardi",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-3-patrick-austin",
+   "name": "Patrick Austin",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "council-member-indian-river-shores-bob-auwaerter",
+   "name": "Bob Auwaerter",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "mayor-trenton-robbi-avery",
+   "name": "Robbi Coarsey Avery",
+   "office": "Mayor",
+   "county": "Gilchrist"
+  },
+  {
+   "id": "commissioner-district-1-travis-avery",
+   "name": "Travis Avery",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "mayor-deltona-maritza-avila-vazquez",
+   "name": "Maritza Avila-Vazquez",
+   "office": "Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "councilmember-medley-edgar-ayala",
+   "name": "Edgar Ayala",
+   "office": "Councilmember",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-court-judge-district-29-christopher-benjamin",
-   "name": "Christopher Benjamin",
-   "office": "County Court Judge",
+   "id": "commissioner-district-4-kenneth-ayers",
+   "name": "Kenneth L. Ayers Jr.",
+   "office": "Commissioner",
+   "county": "Bay"
+  },
+  {
+   "id": "mayor-safety-harbor-joe-ayoub",
+   "name": "Joe Ayoub",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "vice-mayor-homestead-jenifer-bailey",
+   "name": "Jenifer N. Bailey",
+   "office": "Vice Mayor",
    "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-winter-springs-sarah-baker",
+   "name": "Sarah Baker",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-bartow-gary-ball",
+   "name": "Gary Ball",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "councilmember-district-2-charles-bare",
+   "name": "Charles Bare",
+   "office": "Councilmember",
+   "county": "Escambia"
+  },
+  {
+   "id": "commissioner-south-bay-betty-barnard",
+   "name": "Betty Barnard",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-district-2-marianne-barnebey",
+   "name": "Marianne Barnebey",
+   "office": "Councilmember",
+   "county": "Manatee"
+  },
+  {
+   "id": "council-member-seminole-thom-barnhorn",
+   "name": "Thom Barnhorn",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-4-yesenia-baron",
+   "name": "Yesenia Baron",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-belleair-patricia-barris",
+   "name": "Patricia Barris",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "vice-mayor-parker-tonya-barrow",
+   "name": "Tonya Barrow",
+   "office": "Vice Mayor",
+   "county": "Bay"
+  },
+  {
+   "id": "councilmember-miami-gardens-katrina-baskin",
+   "name": "Katrina L. Baskin",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-opa-locka-sherelean-bass",
+   "name": "Sherelean Bass",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-4-rachael-bassett",
+   "name": "Rachael Bassett",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-1-kyle-battie",
+   "name": "Kyle Battie",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "council-member-indian-shores-ellen-bauer",
+   "name": "Ellen A. Bauer",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-jupiter-island-maria-bayazid",
+   "name": "Maria Bayazid",
+   "office": "Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "commissioner-bradenton-beach-scott-bear",
+   "name": "Scott Bear",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "mayor-hilliard-john-beasley",
+   "name": "John Beasley",
+   "office": "Mayor",
+   "county": "Nassau"
+  },
+  {
+   "id": "commissioner-district-3-pamela-beasley-pittman",
+   "name": "Pamela Beasley-Pittman",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-south-palm-beach-sandra-beckett",
+   "name": "Sandra Beckett",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "supervisor-collins-slough-water-control-district-collins-slough-water-control-district-bryan-beer",
+   "name": "Bryan Beer II",
+   "office": "Supervisor, Collins Slough Water Control District",
+   "county": "Hendry"
+  },
+  {
+   "id": "council-member-seminole-ray-beliveau",
+   "name": "Ray Beliveau",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-5-christopher-bellingham",
+   "name": "Christopher Bellingham",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "vice-mayor-surfside-dayana-benmergui",
+   "name": "Dayana Benmergui",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-winter-garden-lisa-bennett",
+   "name": "Lisa L. Bennett",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-west-melbourne-pat-bentley",
+   "name": "Pat Bentley",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-hillsboro-beach-heather-berman",
+   "name": "Heather Berman",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-golden-beach-kenneth-bernstein",
+   "name": "Kenneth Bernstein",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-safety-harbor-nancy-besore",
+   "name": "Nancy Besore",
+   "office": "Vice Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-4-tanya-bhatt",
+   "name": "Tanya K. Bhatt",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-5-kevin-biederman",
+   "name": "Kevin D. Biederman",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-indian-rocks-beach-john-bigelow",
+   "name": "John Bigelow",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-1-bobby-birdsell",
+   "name": "Bobby Birdsell",
+   "office": "Commissioner",
+   "county": "Bay"
+  },
+  {
+   "id": "commissioner-winter-haven-nathaniel-birdsong",
+   "name": "Nathaniel J. Birdsong Jr.",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-sebring-roland-bishop",
+   "name": "Roland Bishop",
+   "office": "Council Member",
+   "county": "Highlands"
+  },
+  {
+   "id": "commissioner-district-1-gustavo-blachman",
+   "name": "Gustavo Blachman",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-dade-city-scott-black",
+   "name": "Scott Black",
+   "office": "Mayor",
+   "county": "Pasco"
   },
   {
    "id": "sheriff-osceola-county-chris-blackmon",
@@ -766,16 +706,232 @@
    "county": "Osceola"
   },
   {
+   "id": "mayor-cocoa-michael-blake",
+   "name": "Michael C. Blake",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-west-miami-juan-blanes",
+   "name": "Juan M. Blanes",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-district-2-barbara-blonder",
+   "name": "Barbara Blonder",
+   "office": "Vice Mayor",
+   "county": "St. Johns"
+  },
+  {
+   "id": "vice-mayor-district-2-wayne-bloodsworth",
+   "name": "Wayne Bloodsworth Jr.",
+   "office": "Vice Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-district-6-amit-bloom",
+   "name": "Amit Bloom",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-waldo-shannon-boal",
+   "name": "Shannon Boal",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-district-3-augusto-bobes",
+   "name": "Augusto Bobes",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-2-holly-bobrowski",
+   "name": "Holly Bobrowski",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-4-liston-bochette",
+   "name": "Liston Bochette III",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "council-member-district-4-jeff-boddiford",
+   "name": "Jeff Boddiford",
+   "office": "Council Member",
+   "county": "Seminole"
+  },
+  {
+   "id": "council-member-parker-katy-bodiford",
+   "name": "Katy Bodiford",
+   "office": "Council Member",
+   "county": "Bay"
+  },
+  {
+   "id": "council-member-district-1-jamie-bogacz",
+   "name": "Jamie Bogacz",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-district-2-bruce-bole",
+   "name": "Bruce Bole",
+   "office": "Commissioner",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-district-1-marlon-bolton",
+   "name": "Marlon D. Bolton",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-macclenny-lynward-bones",
+   "name": "Lynward Bones",
+   "office": "Council Member",
+   "county": "Baker"
+  },
+  {
+   "id": "commissioner-district-4-lisa-bonich",
+   "name": "Lisa Bonich",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-6-darla-bonk",
+   "name": "Darla Bonk",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "mayor-north-lauderdale-samson-borgelin",
+   "name": "Samson Borgelin",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-palatka-rufus-borom",
+   "name": "Rufus Borom",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
    "id": "clerk-of-the-circuit-court-orange-county-joyce-boudoin",
    "name": "Joyce Boudoin",
    "office": "Clerk of the Circuit Court",
    "county": "Orange"
   },
   {
-   "id": "sheriff-sumter-county-patrick-breeden",
-   "name": "Patrick Breeden",
-   "office": "Sheriff",
-   "county": "Sumter"
+   "id": "councilmember-district-6-michael-boylan",
+   "name": "Michael Boylan",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-wilton-manors-mike-bracchi",
+   "name": "Mike Bracchi",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-key-biscayne-michael-bracken",
+   "name": "Michael F. Bracken",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "supervisor-san-carlos-estates-water-control-district-san-carlos-estates-water-control-district-jim-bradford",
+   "name": "Jim Bradford",
+   "office": "Supervisor, San Carlos Estates Water Control District",
+   "county": "Lee"
+  },
+  {
+   "id": "council-vice-president-district-1-jennifer-brahier",
+   "name": "Jennifer Brahier",
+   "office": "Council Vice President",
+   "county": "Escambia"
+  },
+  {
+   "id": "commissioner-longboat-key-steve-branham",
+   "name": "Steve Branham",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "council-member-freeport-elizabeth-brannon",
+   "name": "Elizabeth Brannon",
+   "office": "Council Member",
+   "county": "Walton"
+  },
+  {
+   "id": "council-member-district-5-randy-brasher",
+   "name": "Randy Brasher",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-southwest-ranches-steve-breitkreuz",
+   "name": "Steve Breitkreuz",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-indian-river-shores-pat-brier",
+   "name": "Pat Brier",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "vice-mayor-parkland-simeon-brier",
+   "name": "Simeon Brier",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-ormond-beach-harold-briley",
+   "name": "Harold Briley",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-district-2-keith-britton",
+   "name": "Keith Britton",
+   "office": "Council Member",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-fort-pierce-michael-broderick",
+   "name": "Michael Broderick",
+   "office": "Commissioner",
+   "county": "St. Lucie"
+  },
+  {
+   "id": "vice-mayor-coconut-creek-john-brodie",
+   "name": "John A. Brodie",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-coral-springs-scott-brook",
+   "name": "Scott J. Brook",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-5-teniade-broughton",
+   "name": "Teniad\u00e9 Broughton",
+   "office": "Councilmember",
+   "county": "Escambia"
+  },
+  {
+   "id": "mayor-weston-margaret-brown",
+   "name": "Margaret Brown",
+   "office": "Mayor",
+   "county": "Broward"
   },
   {
    "id": "county-commissioner-calhoun-county-marion-brown",
@@ -784,22 +940,214 @@
    "county": "Calhoun"
   },
   {
-   "id": "clerk-of-the-circuit-court-okeechobee-county-jerald-bryant",
-   "name": "Jerald Bryant",
-   "office": "Clerk of the Circuit Court",
-   "county": "Okeechobee"
+   "id": "mayor-hypoluxo-michael-brown",
+   "name": "Michael C. Brown",
+   "office": "Mayor",
+   "county": "Palm Beach"
   },
   {
-   "id": "sheriff-martin-county-john-budensiek",
-   "name": "John M. Budensiek",
-   "office": "Sheriff",
-   "county": "Martin"
+   "id": "commissioner-florida-city-richard-brown",
+   "name": "Richard Brown",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
   },
   {
-   "id": "clerk-of-the-circuit-court-indian-river-county-ryan-butler",
-   "name": "Ryan L. Butler",
-   "office": "Clerk of the Circuit Court",
-   "county": "Indian River"
+   "id": "mayor-carrabelle-sebrina-brown",
+   "name": "Sebrina Brown",
+   "office": "Mayor",
+   "county": "Franklin"
+  },
+  {
+   "id": "commissioner-alachua-shirley-brown",
+   "name": "Shirley Green Brown",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-district-1-teresa-brown",
+   "name": "Teresa Watkins Brown",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "council-member-fort-walton-beach-logan-browning",
+   "name": "Logan Browning",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "commissioner-winter-springs-victoria-bruce",
+   "name": "Victoria Bruce",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "vice-mayor-bay-harbor-islands-stephanie-bruder",
+   "name": "Stephanie Bruder",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-district-4-jessica-bruno",
+   "name": "Jessica Bruno",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-west-park-felicia-brunson",
+   "name": "Felicia Mychele Brunson",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-mount-dora-doug-bryant",
+   "name": "Doug Bryant",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-macclenny-mark-bryant",
+   "name": "Mark Bryant",
+   "office": "Mayor",
+   "county": "Baker"
+  },
+  {
+   "id": "commissioner-oakland-park-fitz-budhoo",
+   "name": "Fitz Budhoo",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-south-palm-beach-adrian-burcet",
+   "name": "Adrian Burcet",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-zephyrhills-kenneth-burgess",
+   "name": "Kenneth Burgess",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "vice-mayor-seminole-chris-burke",
+   "name": "Chris Burke",
+   "office": "Vice Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-port-richey-lisa-burke",
+   "name": "Lisa Burke",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "commissioner-safety-harbor-jacob-burnett",
+   "name": "Jacob Burnett",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "councilmember-district-1-kevin-burns",
+   "name": "Kevin A. Burns",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "supervisor-south-florida-conservancy-district-south-florida-conservancy-district-richard-burns",
+   "name": "Richard H. Burns Jr.",
+   "office": "Supervisor, South Florida Conservancy District",
+   "county": "Hendry"
+  },
+  {
+   "id": "council-member-bay-lake-tim-burns",
+   "name": "Tim Burns",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-5-fred-burson",
+   "name": "Fred Burson",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-crescent-city-cynthia-burton",
+   "name": "Cynthia Burton",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
+   "id": "vice-mayor-north-lauderdale-mario-bustamante",
+   "name": "Mario Bustamante",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-melbourne-beach-anna-butler",
+   "name": "Anna Butler",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-hallandale-beach-mike-butler",
+   "name": "Mike Butler",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-port-st-joe-rex-buzzett",
+   "name": "Rex Buzzett",
+   "office": "Mayor",
+   "county": "Gulf"
+  },
+  {
+   "id": "mayor-neptune-beach-cori-bylund",
+   "name": "Cori Bylund",
+   "office": "Mayor",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-district-1-michael-cadore",
+   "name": "Michael A. Cadore Sr.",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "vice-mayor-margate-anthony-caggiano",
+   "name": "Anthony N. Caggiano",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-melbourne-village-valerie-calenda",
+   "name": "Valerie Calenda",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "vice-mayor-cutler-bay-michael-callahan",
+   "name": "Michael P. Callahan",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-steve-calle",
+   "name": "Steve Calle",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-hialeah-bryan-calvo",
+   "name": "Bryan Calvo",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-auburndale-alex-cam",
+   "name": "Alex Cam",
+   "office": "Mayor",
+   "county": "Polk"
   },
   {
    "id": "superintendent-of-schools-sumter-county-public-schools-joel-camp",
@@ -808,10 +1156,118 @@
    "county": "Sumter"
   },
   {
+   "id": "mayor-defuniak-springs-bob-campbell",
+   "name": "Bob Campbell",
+   "office": "Mayor",
+   "county": "Walton"
+  },
+  {
+   "id": "commissioner-palatka-justin-campbell",
+   "name": "Justin Campbell",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
+   "id": "commissioner-district-4-matt-campbell",
+   "name": "Matt Campbell",
+   "office": "Commissioner",
+   "county": "Suwannee"
+  },
+  {
+   "id": "councilmember-homestead-clemente-canabal",
+   "name": "Clemente Canabal",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-4-stacy-cantu",
+   "name": "Stacy Cantu",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-coral-springs-william-capplis",
+   "name": "William Capplis",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-crestview-doug-capps",
+   "name": "Doug Capps",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
    "id": "county-commissioner-district-3-j-capps",
    "name": "J. Blake Capps",
    "office": "County Commissioner",
    "county": "Martin"
+  },
+  {
+   "id": "vice-mayor-wilton-manors-chris-caputo",
+   "name": "Chris Caputo",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-lake-mary-nicholas-carlin",
+   "name": "Nicholas Carlin",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "councilmember-district-4-bill-carlson",
+   "name": "Bill Carlson",
+   "office": "Councilmember",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "vice-president-district-5-joe-carlucci",
+   "name": "Joe Carlucci",
+   "office": "Vice President",
+   "county": "Duval"
+  },
+  {
+   "id": "councilmember-jacksonville-matt-carlucci",
+   "name": "Matt Carlucci",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-district-3-laura-carr",
+   "name": "Laura E. Carr",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "councilmember-district-4-kevin-carrico",
+   "name": "Kevin Carrico",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-district-5-amy-carroll",
+   "name": "Amy Jo Carroll",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-vero-beach-john-carroll",
+   "name": "John Carroll",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "council-member-district-13-james-carter",
+   "name": "James Carter",
+   "office": "Council Member",
+   "county": "Columbia"
+  },
+  {
+   "id": "council-member-mary-esther-larry-carter",
+   "name": "Larry Carter",
+   "office": "Council Member",
+   "county": "Okaloosa"
   },
   {
    "id": "county-commissioner-calhoun-county-thomas-carter",
@@ -820,9 +1276,69 @@
    "county": "Calhoun"
   },
   {
-   "id": "county-court-judge-district-9-corey-cawthon",
-   "name": "Corey Amanda Cawthon",
-   "office": "County Court Judge",
+   "id": "commissioner-winter-springs-mark-caruso",
+   "name": "Mark Caruso",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-ocean-ridge-carolyn-cassidy",
+   "name": "Carolyn Cassidy",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-key-west-aaron-castillo",
+   "name": "Aaron Castillo",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "mayor-pembroke-pines-angelo-castillo",
+   "name": "Angelo Castillo",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-lantana-chris-castle",
+   "name": "Chris Castle",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-tampa-jane-castor",
+   "name": "Jane Castor",
+   "office": "Mayor",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "commissioner-coral-gables-melissa-castro",
+   "name": "Melissa Castro",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-3-al-causey",
+   "name": "Al Causey",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-lauderdale-lakes-tycie-causwell",
+   "name": "Tycie Causwell",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-1-tom-centracchio",
+   "name": "Tom Centracchio",
+   "office": "Council Member",
+   "county": "Clay"
+  },
+  {
+   "id": "commissioner-miramar-maxwell-chambers",
+   "name": "Maxwell B. Chambers",
+   "office": "Commissioner",
    "county": "Broward"
   },
   {
@@ -832,40 +1348,286 @@
    "county": "Hernando"
   },
   {
+   "id": "commissioner-kenneth-city-tony-chan",
+   "name": "Tony Chan",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-3-roger-chapin",
+   "name": "Roger Chapin",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-parker-ron-chaple",
+   "name": "Ron Chaple",
+   "office": "Council Member",
+   "county": "Bay"
+  },
+  {
+   "id": "mayor-bradenton-beach-john-chappie",
+   "name": "John Chappie",
+   "office": "Mayor",
+   "county": "Manatee"
+  },
+  {
+   "id": "mayor-lake-placid-colleen-charles",
+   "name": "Colleen Charles",
+   "office": "Mayor",
+   "county": "Highlands"
+  },
+  {
+   "id": "councilmember-district-4-pierre-charles",
+   "name": "Pierre Frantz Charles",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-west-miami-ivan-chavez",
+   "name": "Ivan Chavez Jr.",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-miramar-avril-cherasard",
+   "name": "Avril Cherasard",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-2-jay-chernoff",
+   "name": "Jay Chernoff",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-north-bay-village-richard-chervony",
+   "name": "Richard Chervony",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
    "id": "clerk-of-the-circuit-court-palm-beach-county-shannon-chessman",
    "name": "Shannon R. Chessman",
    "office": "Clerk of the Circuit Court",
    "county": "Palm Beach"
   },
   {
-   "id": "sheriff-volusia-county-mike-chitwood",
-   "name": "Mike Chitwood",
-   "office": "Sheriff",
-   "county": "Volusia"
+   "id": "commissioner-gainesville-cynthia-chestnut",
+   "name": "Cynthia Chestnut",
+   "office": "Commissioner",
+   "county": "Alachua"
   },
   {
-   "id": "sheriff-hillsborough-county-chad-chronister",
-   "name": "Chad Chronister",
-   "office": "Sheriff",
+   "id": "vice-mayor-jupiter-phyllis-choy",
+   "name": "Phyllis Choy",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-dade-city-kristin-church",
+   "name": "Kristin Church",
+   "office": "Commissioner",
+   "county": "Pasco"
+  },
+  {
+   "id": "commissioner-district-3-mark-ciarfella",
+   "name": "Mark Ciarfella",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-1-gene-cioffi",
+   "name": "Gene Cioffi",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-mcintosh-frank-ciotti",
+   "name": "Frank Ciotti",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "supervisor-shawano-drainage-district-shawano-drainage-district-baxter-clark",
+   "name": "Baxter Clark",
+   "office": "Supervisor, Shawano Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-newberry-mark-clark",
+   "name": "Mark Clark",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "councilmember-district-9-tyrona-clark-murray",
+   "name": "Tyrona Clark-Murray",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "mayor-stuart-eula-clarke",
+   "name": "Eula Clarke",
+   "office": "Mayor",
+   "county": "Martin"
+  },
+  {
+   "id": "councilmember-district-1-alan-clendenin",
+   "name": "Alan Clendenin",
+   "office": "Councilmember",
    "county": "Hillsborough"
   },
   {
-   "id": "sheriff-clay-county-michelle-cook",
-   "name": "Michelle Cook",
-   "office": "Sheriff",
-   "county": "Clay"
+   "id": "mayor-new-smyrna-beach-fred-cleveland",
+   "name": "Fred Cleveland",
+   "office": "Mayor",
+   "county": "Volusia"
   },
   {
-   "id": "county-court-judge-district-12-mariano-corcilli",
-   "name": "Mariano Ariel Corcilli",
-   "office": "County Court Judge",
+   "id": "mayor-deland-chris-cloudman",
+   "name": "Chris Cloudman",
+   "office": "Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "councilmember-district-5-pam-coachman",
+   "name": "Pam Coachman",
+   "office": "Councilmember",
+   "county": "Manatee"
+  },
+  {
+   "id": "vice-mayor-florida-city-ronda-cobb",
+   "name": "Ronda Cobb",
+   "office": "Vice Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "sheriff-miami-dade-county-rosanna-cordero-stutz",
-   "name": "Rosanna Cordero-Stutz",
-   "office": "Sheriff",
+   "id": "councilmember-district-2-steve-cody",
+   "name": "Steve Cody",
+   "office": "Councilmember",
    "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-gary-coffin",
+   "name": "Gary Coffin",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "councilmember-titusville-herman-cole",
+   "name": "Herman Cole",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-trenton-lucy-coleman",
+   "name": "Lucy Coleman",
+   "office": "Commissioner",
+   "county": "Gilchrist"
+  },
+  {
+   "id": "commissioner-newberry-rick-coleman",
+   "name": "Rick Coleman",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-district-3-josh-collier",
+   "name": "Josh Collier",
+   "office": "Council Member",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-district-1-adam-collins",
+   "name": "Adam Collins",
+   "office": "Commissioner",
+   "county": "Suwannee"
+  },
+  {
+   "id": "vice-mayor-key-colony-beach-doug-colonell",
+   "name": "Doug Colonell",
+   "office": "Vice Mayor",
+   "county": "Monroe"
+  },
+  {
+   "id": "commissioner-key-west-sarah-compton",
+   "name": "Sarah Compton",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "commissioner-lakeland-terry-coney",
+   "name": "Terry G. Coney",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-district-6-tara-connor",
+   "name": "Tara L. Connor",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-titusville-andrew-connors",
+   "name": "Andrew Connors",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "councilmember-virginia-gardens-debra-conover",
+   "name": "Debra Conover",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-flagler-beach-eric-cooley",
+   "name": "Eric Cooley",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "council-member-pomona-park-donna-cooney",
+   "name": "Donna Cooney",
+   "office": "Council Member",
+   "county": "Putnam"
+  },
+  {
+   "id": "council-member-atlantis-derek-cooper",
+   "name": "Derek Cooper",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-hallandale-beach-joy-cooper",
+   "name": "Joy Cooper",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-district-3-brian-corey",
+   "name": "Brian Corey",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-palmetto-tamara-cornwell",
+   "name": "Tamara Cornwell",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "mayor-pinecrest-joseph-corradino",
+   "name": "Joseph M. Corradino",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-palatka-robbi-corre",
+   "name": "Robbi Corre",
+   "office": "Commissioner",
+   "county": "Putnam"
   },
   {
    "id": "circuit-judge-district-81-cristina-correa",
@@ -874,28 +1636,250 @@
    "county": "Miami-Dade"
   },
   {
+   "id": "council-member-district-4-chris-corrie",
+   "name": "Chris Corrie",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "mayor-vero-beach-john-cotugno",
+   "name": "John Cotugno",
+   "office": "Mayor",
+   "county": "Indian River"
+  },
+  {
+   "id": "vice-mayor-mary-esther-susan-coxwell",
+   "name": "Susan Coxwell",
+   "office": "Vice Mayor",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "vice-mayor-ocean-ridge-steve-coz",
+   "name": "Steve Coz",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-4-marc-crail",
+   "name": "Marc Crail",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
    "id": "sheriff-hardee-county-vent-crawford",
    "name": "Vent Crawford",
    "office": "Sheriff",
    "county": "Hardee"
   },
   {
-   "id": "sheriff-hamilton-county-brian-creech",
-   "name": "Brian Creech",
-   "office": "Sheriff",
-   "county": "Hamilton"
+   "id": "mayor-umatilla-chris-creech",
+   "name": "Chris Creech",
+   "office": "Mayor",
+   "county": "Lake"
   },
   {
-   "id": "county-court-judge-district-5-ritamaria-cuervo",
-   "name": "Ritamaria Cuervo",
-   "office": "County Court Judge",
+   "id": "council-member-district-4-bear-crockett",
+   "name": "Bear Crockett",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-district-3-martha-cromwell",
+   "name": "Martha Cromwell",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "vice-mayor-melbourne-beach-terry-cronin",
+   "name": "Terry Cronin",
+   "office": "Vice Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-1-angela-cruz",
+   "name": "Angela Cruz",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-flagler-beach-john-cunningham",
+   "name": "John Cunningham",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "mayor-palmetto-bay-karyn-cunningham",
+   "name": "Karyn Cunningham",
+   "office": "Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-court-judge-district-27-miesha-darrough",
-   "name": "Miesha S. Darrough",
-   "office": "County Court Judge",
+   "id": "commissioner-wilton-manors-don-darminio",
+   "name": "Don D'Arminio",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-district-3-tara-derrico",
+   "name": "Tara D'Errico",
+   "office": "Vice Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "mayor-tallahassee-john-dailey",
+   "name": "John E. Dailey",
+   "office": "Mayor",
+   "county": "Leon"
+  },
+  {
+   "id": "commissioner-kenneth-city-ellen-dalbo",
+   "name": "Ellen Dalbo",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "vice-mayor-lake-alfred-nancy-daley",
+   "name": "Nancy Z. Daley",
+   "office": "Vice Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-district-4-kicia-daniel",
+   "name": "Kicia Daniel",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-surfside-shlomo-danzinger",
+   "name": "Shlomo Danzinger",
+   "office": "Mayor",
    "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-5-duane-daski",
+   "name": "Duane A. Daski",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "councilmember-lazy-lake-william-daugherty",
+   "name": "William Daugherty",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-1-jennifer-daunch",
+   "name": "Jennifer M. Daunch",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-palatka-anne-davis",
+   "name": "Anne Henderson Davis",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
+   "id": "commissioner-winter-haven-chad-davis",
+   "name": "Chad Davis",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "mayor-new-port-richey-chopper-davis",
+   "name": "Chopper Davis",
+   "office": "Mayor",
+   "county": "Pasco"
+  },
+  {
+   "id": "vice-mayor-district-5-diana-davis",
+   "name": "Diana Davis",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-live-oak-frank-davis",
+   "name": "Frank C. Davis",
+   "office": "Mayor",
+   "county": "Suwannee"
+  },
+  {
+   "id": "vice-mayor-deland-jessica-davis",
+   "name": "Jessica Davis",
+   "office": "Vice Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "mayor-waldo-louie-davis",
+   "name": "Louie Davis",
+   "office": "Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-trenton-mary-davis",
+   "name": "Mary Davis",
+   "office": "Commissioner",
+   "county": "Gilchrist"
+  },
+  {
+   "id": "council-member-district-3-dennis-dawson",
+   "name": "Dennis Dawson",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "councilmember-key-biscayne-luis-de-la-cruz",
+   "name": "Luis F. de la Cruz",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-mcintosh-lee-deaderick",
+   "name": "Lee Deaderick",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "commissioner-lake-alfred-jack-dearmin",
+   "name": "Jack Dearmin",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-ormond-beach-kristin-deaton",
+   "name": "Kristin Deaton",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-fort-walton-beach-gloria-deberry",
+   "name": "Gloria DeBerry",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "council-member-sanibel-laura-debruce",
+   "name": "Laura DeBruce",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "mayor-jacksonville-donna-deegan",
+   "name": "Donna Deegan",
+   "office": "Mayor",
+   "county": "Duval"
+  },
+  {
+   "id": "mayor-marathon-lynny-del-gaizo",
+   "name": "Lynny Del Gaizo",
+   "office": "Mayor",
+   "county": "Monroe"
+  },
+  {
+   "id": "council-member-jupiter-ron-delaney",
+   "name": "Ron Delaney",
+   "office": "Council Member",
+   "county": "Palm Beach"
   },
   {
    "id": "sheriff-putnam-county-homer-deloach",
@@ -904,10 +1888,286 @@
    "county": "Putnam"
   },
   {
-   "id": "supervisor-of-elections-leon-county-mark-earley",
-   "name": "Mark S. Earley",
-   "office": "Supervisor of Elections",
-   "county": "Leon"
+   "id": "council-member-district-4-carmen-demanche",
+   "name": "Carmen Demanche",
+   "office": "Council Member",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-lauderdale-by-the-sea-richard-denapoli",
+   "name": "Richard DeNapoli",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-melbourne-beach-alison-dennington",
+   "name": "Alison Dennington",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-virginia-gardens-fred-deno",
+   "name": "Fred Spencer Deno IV",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-palm-beach-shores-roby-dereuil",
+   "name": "Roby DeReuil",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-2-meghan-desoto",
+   "name": "Meghan DeSoto",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-new-smyrna-beach-jennifer-devine",
+   "name": "Jennifer Devine",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-crescent-city-lisa-devitto",
+   "name": "Lisa Kane DeVitto",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
+   "id": "councilmember-bay-harbor-islands-molly-diallo",
+   "name": "Molly Diallo",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-13-rory-diamond",
+   "name": "Rory Diamond",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "mayor-sweetwater-jose-diaz",
+   "name": "Jose Diaz",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-winter-springs-paul-diaz",
+   "name": "Paul Diaz",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-sweetwater-saul-diaz",
+   "name": "Saul Diaz",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-west-miami-eric-diaz-padron",
+   "name": "Eric Diaz-Padron",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-3-mike-dibrizzi",
+   "name": "Mike DiBrizzi",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-midway-ella-dickey",
+   "name": "Ella Parker Dickey",
+   "office": "Mayor",
+   "county": "Gadsden"
+  },
+  {
+   "id": "commissioner-key-colony-beach-kirk-diehl",
+   "name": "Kirk Diehl",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "commissioner-key-colony-beach-tom-difransico",
+   "name": "Tom DiFransico",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "vice-mayor-vero-beach-taylor-dingle",
+   "name": "Taylor Dingle",
+   "office": "Vice Mayor",
+   "county": "Indian River"
+  },
+  {
+   "id": "councilmember-lazy-lake-mark-dipaolo",
+   "name": "Mark DiPaolo",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-melbourne-village-susan-ditty",
+   "name": "Susan Ditty",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-belleview-christine-dobkowski",
+   "name": "Christine Dobkowski",
+   "office": "Mayor",
+   "county": "Marion"
+  },
+  {
+   "id": "council-member-sebastian-ed-dodd",
+   "name": "Ed Dodd",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "supervisor-gladeview-drainage-district-gladeview-drainage-district-thomas-dodgen",
+   "name": "Thomas Dodgen",
+   "office": "Supervisor, Gladeview Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-opa-locka-audrey-dominguez",
+   "name": "Audrey Dominguez",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-2-laura-dominguez",
+   "name": "Laura Dominguez",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-edgewood-john-dowless",
+   "name": "John Dowless",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-hypoluxo-bradley-doyle",
+   "name": "Bradley R. Doyle",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-deerfield-beach-todd-drosky",
+   "name": "Todd Drosky",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-3-judith-dugo",
+   "name": "Judith Dugo",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-4-donna-duncan",
+   "name": "Donna Duncan",
+   "office": "Commissioner",
+   "county": "Franklin"
+  },
+  {
+   "id": "councilmember-district-1-robert-duncan",
+   "name": "Robert Duncan",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-desmon-duncan-walker",
+   "name": "Desmon Duncan-Walker",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "vice-mayor-district-3-zack-durbin",
+   "name": "Zack Durbin",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-north-port-david-duval",
+   "name": "David Duval",
+   "office": "Mayor",
+   "county": "Sarasota"
+  },
+  {
+   "id": "commissioner-district-2-ray-dwyer",
+   "name": "Ray Dwyer",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "deputy-mayor-indian-harbour-beach-adam-dyer",
+   "name": "Adam Dyer",
+   "office": "Deputy Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-orlando-buddy-dyer",
+   "name": "Buddy Dyer",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-3-cliff-dykes",
+   "name": "Cliff Dykes",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-fort-pierce-chris-dzadovsky",
+   "name": "Chris Dzadovsky",
+   "office": "Commissioner",
+   "county": "St. Lucie"
+  },
+  {
+   "id": "council-member-district-4-susy-diaz",
+   "name": "Susy D\u00edaz",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-kissimmee-angela-eady",
+   "name": "Angela Eady",
+   "office": "Mayor",
+   "county": "Osceola"
+  },
+  {
+   "id": "council-member-district-4-nancy-earley",
+   "name": "Nancy Earley",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-4-bryan-eastman",
+   "name": "Bryan Eastman",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-lake-placid-joy-eberhardt",
+   "name": "Joy Eberhardt",
+   "office": "Commissioner",
+   "county": "Highlands"
+  },
+  {
+   "id": "council-member-crestview-sylvester-echols",
+   "name": "Sylvester Echols",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "commissioner-lake-alfred-brent-eden",
+   "name": "Brent Eden",
+   "office": "Commissioner",
+   "county": "Polk"
   },
   {
    "id": "sheriff-jackson-county-donald-edenfield",
@@ -916,58 +2176,670 @@
    "county": "Jackson"
   },
   {
-   "id": "clerk-of-the-circuit-court-santa-rosa-county-jason-english",
-   "name": "Jason D. English",
-   "office": "Clerk of the Circuit Court",
-   "county": "Santa Rosa"
+   "id": "commissioner-clewiston-barbara-edmonds",
+   "name": "Barbara Edmonds",
+   "office": "Commissioner",
+   "county": "Hendry"
   },
   {
-   "id": "county-court-judge-district-13-elisabeth-espinosa",
-   "name": "Elisabeth M. Espinosa",
-   "office": "County Court Judge",
+   "id": "councilmember-golden-beach-bernard-einstein",
+   "name": "Bernard Einstein",
+   "office": "Councilmember",
    "county": "Miami-Dade"
   },
   {
-   "id": "supervisor-of-elections-manatee-county-scott-farrington",
-   "name": "Scott Farrington",
-   "office": "Supervisor of Elections",
-   "county": "Manatee"
+   "id": "commissioner-district-2-adriane-elliott",
+   "name": "Adriane Elliott",
+   "office": "Commissioner",
+   "county": "Franklin"
   },
   {
-   "id": "clerk-of-the-circuit-court-miami-dade-county-juan-fernandez-barquin",
-   "name": "Juan Fernandez-Barquin",
-   "office": "Clerk of the Circuit Court",
+   "id": "commissioner-wildwood-joe-elliott",
+   "name": "Joe Elliott",
+   "office": "Commissioner",
+   "county": "Sumter"
+  },
+  {
+   "id": "mayor-beverly-beach-stephen-emmett",
+   "name": "Stephen Emmett",
+   "office": "Mayor",
+   "county": "Flagler"
+  },
+  {
+   "id": "commissioner-sarasota-flo-entler",
+   "name": "Flo Entler",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "mayor-port-richey-john-eric",
+   "name": "John Eric",
+   "office": "Mayor",
+   "county": "Pasco"
+  },
+  {
+   "id": "mayor-opa-locka-natasha-ervin",
+   "name": "Natasha L. Ervin",
+   "office": "Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-commissioner-charlotte-county-john-fleming",
-   "name": "John M. Fleming",
-   "office": "County Commissioner",
-   "county": "Charlotte"
+   "id": "commissioner-district-3-rolando-escalona",
+   "name": "Rolando Escalona",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
   },
   {
-   "id": "sheriff-bay-county-tommy-ford",
-   "name": "Tommy Ford",
-   "office": "Sheriff",
+   "id": "councilmember-district-3-mary-estime-irvin",
+   "name": "Mary Estim\u00e9-Irvin",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-district-5-tim-everline",
+   "name": "Tim Everline",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "councilmember-pinecrest-ken-fairman",
+   "name": "Ken Fairman",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-newberry-monty-farnsworth",
+   "name": "Monty Farnsworth",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-freeport-eddie-farris",
+   "name": "Eddie Farris",
+   "office": "Council Member",
+   "county": "Walton"
+  },
+  {
+   "id": "mayor-lake-buena-vista-andrea-fay",
+   "name": "Andrea Fay",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-riviera-beach-ronnie-felder",
+   "name": "Ronnie L. Felder",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-2-r-ferguson",
+   "name": "R. Shaun Ferguson",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-3-alex-fernandez",
+   "name": "Alex J. Fernandez",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-temple-terrace-alison-fernandez",
+   "name": "Alison Fernandez",
+   "office": "Council Member",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "commissioner-coral-gables-ariel-fernandez",
+   "name": "Ariel Fernandez",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-president-virginia-gardens-gabriel-fernandez",
+   "name": "Gabriel Fernandez",
+   "office": "Council President",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-3-juan-fernandez",
+   "name": "Juan Carlos Fernandez",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-south-miami-javier-fernandez",
+   "name": "Javier Fern\u00e1ndez",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-audrey-fesik",
+   "name": "Audrey Fesik",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-1-fred-fetterolf",
+   "name": "Fred Fetterolf",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "vice-president-san-carlos-estates-water-control-district-san-carlos-estates-water-control-district-jennifer-finazzo",
+   "name": "Jennifer Finazzo",
+   "office": "Vice President, San Carlos Estates Water Control District",
+   "county": "Lee"
+  },
+  {
+   "id": "councilmember-district-1-patrick-fiore",
+   "name": "Patrick Fiore",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-3-richard-firstner",
+   "name": "Richard Firstner",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-oakland-park-chris-fischer",
+   "name": "Chris Fischer",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-6-jim-fitzpatrick",
+   "name": "Jim Fitzpatrick",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-alachua-jacob-fletcher",
+   "name": "Jacob Fletcher",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "councilmember-homestead-sean-fletcher",
+   "name": "Sean L. Fletcher",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-5-mckenzie-fleurimond",
+   "name": "McKenzie Fleurimond",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-wildwood-marcos-flores",
+   "name": "Marcos Flores",
+   "office": "Commissioner",
+   "county": "Sumter"
+  },
+  {
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-alyssa-foganholi",
+   "name": "Alyssa Foganholi",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-atlantic-beach-curtis-ford",
+   "name": "Curtis Ford",
+   "office": "Mayor",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-midway-valarie-ford",
+   "name": "Valarie Ford",
+   "office": "Council Member",
+   "county": "Gadsden"
+  },
+  {
+   "id": "deputy-mayor-district-4-frank-forester",
+   "name": "Frank T. Forester",
+   "office": "Deputy Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "vice-mayor-melbourne-village-bridget-foster",
+   "name": "Bridget Foster",
+   "office": "Vice Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-key-colony-beach-freddie-foster",
+   "name": "Freddie Foster",
+   "office": "Mayor",
+   "county": "Monroe"
+  },
+  {
+   "id": "supervisor-gladeview-drainage-district-gladeview-drainage-district-sommer-foster",
+   "name": "Sommer Foster",
+   "office": "Supervisor, Gladeview Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "supervisor-highland-glades-drainage-district-highland-glades-drainage-district-sommer-foster",
+   "name": "Sommer Foster",
+   "office": "Supervisor, Highland Glades Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "supervisor-shawano-drainage-district-shawano-drainage-district-sommer-foster",
+   "name": "Sommer Foster",
+   "office": "Supervisor, Shawano Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-wildwood-david-fountaine",
+   "name": "David Fountaine",
+   "office": "Commissioner",
+   "county": "Sumter"
+  },
+  {
+   "id": "commissioner-district-3-alison-fournier",
+   "name": "Alison Fournier",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-district-3-jay-foy",
+   "name": "Jay Foy",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-doral-christi-fraga",
+   "name": "Christi Fraga",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-3-max-fraser",
+   "name": "Max Fraser",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-1-andrea-frazier-barnes",
+   "name": "Andrea Frazier-Barnes",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "councilmember-district-2-jeffrey-freimark",
+   "name": "Jeffrey P. Freimark",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-lake-placid-nell-frewin-hays",
+   "name": "Nell Frewin-Hays",
+   "office": "Commissioner",
+   "county": "Highlands"
+  },
+  {
+   "id": "commissioner-district-5-rachel-friedland",
+   "name": "Rachel S. Friedland",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-2-brandon-frost",
+   "name": "Brandon Frost",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "councilmember-bay-harbor-islands-joshua-fuller",
+   "name": "Joshua D. Fuller",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-lake-alfred-mac-fuller",
+   "name": "Mac Fuller",
+   "office": "Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-district-5-nigel-fullick",
+   "name": "Nigel P. Fullick",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "councilmember-district-8-reggie-gaffney",
+   "name": "Reggie Gaffney Jr.",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-fort-pierce-arnold-gaines",
+   "name": "Arnold S. Gaines",
+   "office": "Commissioner",
+   "county": "St. Lucie"
+  },
+  {
+   "id": "council-member-tavares-sandy-gamble",
+   "name": "Sandy Gamble",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-oldsmar-katie-gannon",
+   "name": "Katie Gannon",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-west-miami-victoria-gans",
+   "name": "Victoria De La Torre Gans",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-1-angelo-garcia",
+   "name": "Angelo Cuadra Garcia",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-2-ray-garcia",
+   "name": "Ray Garcia",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-clewiston-mali-gardner",
+   "name": "Mali Gardner",
+   "office": "Commissioner",
+   "county": "Hendry"
+  },
+  {
+   "id": "commissioner-district-4-cynthia-garris",
+   "name": "Cynthia Garris",
+   "office": "Commissioner",
+   "county": "St. Johns"
+  },
+  {
+   "id": "councilmember-district-2-mike-gay",
+   "name": "Mike Gay",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-west-melbourne-austin-gaylord",
+   "name": "Austin Gaylord",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-1-despina-george",
+   "name": "Despina George",
+   "office": "Commissioner",
+   "county": "Franklin"
+  },
+  {
+   "id": "commissioner-district-3-undine-george",
+   "name": "Undine George",
+   "office": "Commissioner",
+   "county": "St. Johns"
+  },
+  {
+   "id": "mayor-bonita-springs-mike-gibson",
+   "name": "Mike Gibson",
+   "office": "Mayor",
+   "county": "Lee"
+  },
+  {
+   "id": "deputy-mayor-district-4-ken-gilbert",
+   "name": "Ken Gilbert",
+   "office": "Deputy Mayor",
+   "county": "Osceola"
+  },
+  {
+   "id": "chair-san-carlos-estates-water-control-district-san-carlos-estates-water-control-district-james-gilchrist",
+   "name": "James Gilchrist",
+   "office": "Chair, San Carlos Estates Water Control District",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-district-2-laura-giobbi",
+   "name": "Laura Giobbi",
+   "office": "Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "council-member-district-2-diana-giraldo",
+   "name": "Diana Giraldo",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-district-3-nick-gladding",
+   "name": "Nick Gladding",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "commissioner-district-2-steven-glassman",
+   "name": "Steven Glassman",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-3-glee-glisson",
+   "name": "Glee Glisson",
+   "office": "Council Member",
+   "county": "Clay"
+  },
+  {
+   "id": "deputy-mayor-district-1-alex-goins",
+   "name": "Alex Goins",
+   "office": "Deputy Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-district-1-ed-gold",
+   "name": "Ed Gold",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-florida-city-james-gold",
+   "name": "James Gold",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-michael-goldman",
+   "name": "Michael Goldman",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "vice-mayor-biscayne-park-howard-goldmann",
+   "name": "Howard Goldmann",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-tamarac-michelle-gomez",
+   "name": "Michelle J. Gomez",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-3-rene-gomez",
+   "name": "Rene Gomez",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-biscayne-park-art-gonzalez",
+   "name": "Art Gonzalez",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-thomas-good",
+   "name": "Thomas Good Jr.",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-oakland-park-aisha-gordon",
+   "name": "Aisha Gordon",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-district-4-lawrence-gordon",
+   "name": "Lawrence Gordon",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-district-1-steve-graber",
+   "name": "Steve Graber",
+   "office": "Vice Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-3-thomas-grant",
+   "name": "Thomas Grant",
+   "office": "Commissioner",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-carrabelle-william-gray",
+   "name": "William Gray",
+   "office": "Commissioner",
+   "county": "Franklin"
+  },
+  {
+   "id": "commissioner-lauderdale-by-the-sea-john-graziano",
+   "name": "John Graziano",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-wildwood-julian-green",
+   "name": "Julian Green",
+   "office": "Commissioner",
+   "county": "Sumter"
+  },
+  {
+   "id": "councilmember-district-2-jerry-greenberg",
+   "name": "Jerry Greenberg",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-2-alvin-greene",
+   "name": "Alvin Greene",
+   "office": "Commissioner",
+   "county": "Bradford"
+  },
+  {
+   "id": "vice-mayor-district-3-robert-greenlund",
+   "name": "Robert Greenlund",
+   "office": "Vice Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "vice-mayor-tavares-bob-grenier",
+   "name": "Bob Grenier",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-district-2-david-griggs",
+   "name": "David Griggs",
+   "office": "Commissioner",
    "county": "Bay"
   },
   {
-   "id": "county-court-judge-district-14-gloria-gonzalez-meyer",
-   "name": "Gloria Gonzalez-Meyer",
-   "office": "County Court Judge",
+   "id": "commissioner-district-4-adam-gruber",
+   "name": "Adam Gruber",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-3-tristan-grunder",
+   "name": "Tristan Grunder",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-jupiter-dan-guisinger",
+   "name": "Dan Guisinger",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-cape-coral-john-gunter",
+   "name": "John Gunter",
+   "office": "Mayor",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-ocean-ridge-lanette-gustafson",
+   "name": "Lanette Gustafson",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-lake-hamilton-phyllis-hall",
+   "name": "Phyllis Hall",
+   "office": "Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "mayor-south-daytona-william-hall",
+   "name": "William C. Hall",
+   "office": "Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-district-4-dd-halpern",
+   "name": "DD Halpern",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-biscayne-park-judi-hamelburg",
+   "name": "Judi Hamelburg",
+   "office": "Commissioner",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-court-judge-district-31-christopher-green",
-   "name": "Christopher Green",
-   "office": "County Court Judge",
-   "county": "Miami-Dade"
+   "id": "supervisor-disston-island-conservancy-district-disston-island-conservancy-district-r-hammock",
+   "name": "R. Alan Hammock",
+   "office": "Supervisor, Disston Island Conservancy District",
+   "county": "Glades"
   },
   {
-   "id": "sheriff-st-johns-county-robert-hardwick",
-   "name": "Robert A. Hardwick",
-   "office": "Sheriff",
-   "county": "St. Johns"
+   "id": "council-member-astatula-kim-hanawalt",
+   "name": "Kim Hanawalt",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "councilmember-district-5-mimi-hanley",
+   "name": "Mimi Hanley",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-pompano-beach-rex-hardin",
+   "name": "Rex Hardin",
+   "office": "Mayor",
+   "county": "Broward"
   },
   {
    "id": "sheriff-pasco-county-jeffrey-harrington",
@@ -976,16 +2848,40 @@
    "county": "Pasco"
   },
   {
-   "id": "county-court-judge-district-3-ayana-harris",
-   "name": "Ayana Harris",
-   "office": "County Court Judge",
+   "id": "mayor-miami-gardens-rodney-harris",
+   "name": "Rodney Harris",
+   "office": "Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "supervisor-of-elections-lafayette-county-travis-hart",
-   "name": "Travis Hart",
-   "office": "Supervisor of Elections",
-   "county": "Lafayette"
+   "id": "council-member-district-12-tammy-harris",
+   "name": "Tammy Harris",
+   "office": "Council Member",
+   "county": "Columbia"
+  },
+  {
+   "id": "commissioner-lauderdale-lakes-easton-harrison",
+   "name": "Easton K. Harrison",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-1-bob-hartmann",
+   "name": "Bob Hartmann",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-key-west-monica-haskell",
+   "name": "Monica Haskell",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "council-member-sebring-harrison-havery",
+   "name": "Harrison Havery",
+   "office": "Council Member",
+   "county": "Highlands"
   },
   {
    "id": "superintendent-of-schools-hernando-county-public-schools-kayce-hawkins",
@@ -994,10 +2890,82 @@
    "county": "Hernando"
   },
   {
-   "id": "county-court-judge-district-8-kevin-hellmann",
-   "name": "Kevin Hellmann",
-   "office": "County Court Judge",
-   "county": "Miami-Dade"
+   "id": "commissioner-eustis-willie-hawkins",
+   "name": "Willie L. Hawkins",
+   "office": "Commissioner",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-district-1-shannon-hayes",
+   "name": "Shannon Hayes",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "council-member-district-2-lavander-hearn",
+   "name": "Lavander Hearn",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-holmes-beach-mark-hebden",
+   "name": "Mark Hebden",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "council-member-district-4-frederick-heiler",
+   "name": "Frederick Heiler",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-arcadia-robert-heine",
+   "name": "Robert W. Heine Jr.",
+   "office": "Council Member",
+   "county": "DeSoto"
+  },
+  {
+   "id": "mayor-naples-teresa-heitmann",
+   "name": "Teresa Heitmann",
+   "office": "Mayor",
+   "county": "Collier"
+  },
+  {
+   "id": "vice-mayor-district-4-jordan-helms",
+   "name": "Jordan Helms",
+   "office": "Vice Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "mayor-callaway-pamn-henderson",
+   "name": "Pamn Henderson",
+   "office": "Mayor",
+   "county": "Bay"
+  },
+  {
+   "id": "commissioner-district-5-dannette-henry",
+   "name": "Dannette Henry",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "mayor-daytona-beach-derrick-henry",
+   "name": "Derrick L. Henry",
+   "office": "Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "vice-mayor-sanibel-john-henshaw",
+   "name": "John Henshaw",
+   "office": "Vice Mayor",
+   "county": "Lee"
+  },
+  {
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-howard-hepburn",
+   "name": "Howard Hepburn",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
   },
   {
    "id": "superintendent-of-schools-broward-county-public-schools-howard-hepburn",
@@ -1006,16 +2974,70 @@
    "county": "Broward"
   },
   {
-   "id": "county-court-judge-district-9-joanne-hernandez",
-   "name": "Joanne Hernandez",
-   "office": "County Court Judge",
+   "id": "commissioner-district-1-john-herbst",
+   "name": "John C. Herbst",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-pembroke-pines-michael-hernandez",
+   "name": "Michael Hernandez",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-2-peter-hernandez",
+   "name": "Peter D. Hernandez",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-5-steven-herzberg",
+   "name": "Steven Herzberg",
+   "office": "Councilmember",
    "county": "Miami-Dade"
   },
   {
-   "id": "sheriff-sarasota-county-kurt-hoffman",
-   "name": "Kurt A. Hoffman",
-   "office": "Sheriff",
-   "county": "Sarasota"
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-debra-hixon",
+   "name": "Debra Hixon",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-royal-palm-beach-jeff-hmara",
+   "name": "Jeff Hmara",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-new-smyrna-beach-curtis-hodges",
+   "name": "Curtis Hodges",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-district-4-scott-hoffman",
+   "name": "Scott Hoffman",
+   "office": "Commissioner",
+   "county": "Gulf"
+  },
+  {
+   "id": "council-member-district-5-mary-hofmeister",
+   "name": "Mary Hofmeister",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-5-donna-holck",
+   "name": "Donna Holck",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "councilmember-jacksonville-mone-holder",
+   "name": "Mon\u00e9 Holder",
+   "office": "Councilmember",
+   "county": "Duval"
   },
   {
    "id": "supervisor-of-elections-duval-county-jerry-holland",
@@ -1024,34 +3046,490 @@
    "county": "Duval"
   },
   {
-   "id": "county-commissioner-nassau-county-am-huppmann",
-   "name": "A.M. Huppmann",
-   "office": "County Commissioner",
+   "id": "commissioner-eustis-michael-holland",
+   "name": "Michael Holland",
+   "office": "Commissioner",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-district-2-curtis-holmes",
+   "name": "Curtis Holmes",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-mount-dora-james-homich",
+   "name": "James Homich",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "council-president-edgewood-richard-horn",
+   "name": "Richard A. Horn",
+   "office": "Council President",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-macclenny-cecil-horne",
+   "name": "Cecil Horne Jr.",
+   "office": "Council Member",
+   "county": "Baker"
+  },
+  {
+   "id": "council-member-neptune-beach-tim-horvath",
+   "name": "Tim Horvath",
+   "office": "Council Member",
+   "county": "Duval"
+  },
+  {
+   "id": "vice-mayor-indian-shores-michael-howard",
+   "name": "Michael P. Howard",
+   "office": "Vice Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-4-chad-howell",
+   "name": "Chad Howell",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-district-4-dori-howington",
+   "name": "Dori Howington",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "president-jacksonville-nick-howland",
+   "name": "Nick Howland",
+   "office": "President",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-port-richey-robert-hubbard",
+   "name": "Robert Hubbard",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "commissioner-district-1-michael-hudak",
+   "name": "Michael Hudak",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-fort-pierce-linda-hudson",
+   "name": "Linda Hudson",
+   "office": "Mayor",
+   "county": "St. Lucie"
+  },
+  {
+   "id": "council-member-district-1-robin-hughes",
+   "name": "Robin Hughes",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "president-shawano-drainage-district-shawano-drainage-district-john-hundley",
+   "name": "John Scott Hundley",
+   "office": "President, Shawano Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-hilliard-dallis-hunt",
+   "name": "Dallis Hunt",
+   "office": "Council Member",
    "county": "Nassau"
   },
   {
-   "id": "county-court-judge-district-35-chiaka-ihekwaba",
-   "name": "Chiaka Ihekwaba",
-   "office": "County Court Judge",
+   "id": "commissioner-biscayne-park-ryan-huntington",
+   "name": "Ryan Huntington",
+   "office": "Commissioner",
    "county": "Miami-Dade"
   },
   {
-   "id": "supervisor-of-elections-suwannee-county-jennifer-kinsey",
-   "name": "Jennifer Musgrove Kinsey",
-   "office": "Supervisor of Elections",
-   "county": "Suwannee"
+   "id": "councilmember-district-3-lynn-hurtak",
+   "name": "Lynn Hurtak",
+   "office": "Councilmember",
+   "county": "Hillsborough"
   },
   {
-   "id": "county-court-judge-district-37-yara-klukas",
-   "name": "Yara Lorenzo Klukas",
-   "office": "County Court Judge",
+   "id": "vice-mayor-clewiston-hillary-hyslope",
+   "name": "Hillary Hyslope",
+   "office": "Vice Mayor",
+   "county": "Hendry"
+  },
+  {
+   "id": "supervisor-collins-slough-water-control-district-collins-slough-water-control-district-rusty-hyslope",
+   "name": "Rusty R. Hyslope",
+   "office": "Supervisor, Collins Slough Water Control District",
+   "county": "Hendry"
+  },
+  {
+   "id": "commissioner-gainesville-james-ingle",
+   "name": "James Ingle",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-parkland-jordan-isrow",
+   "name": "Jordan Isrow",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-2-gary-jablonski",
+   "name": "Gary Jablonski",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-cape-canaveral-kay-jackson",
+   "name": "Kay Jackson",
+   "office": "Vice Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-pembroke-park-geoffrey-jacobs",
+   "name": "Geoffrey Jacobs",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-west-palm-beach-keith-james",
+   "name": "Keith A. James",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-4-michael-jaycox",
+   "name": "Michael C. Jaycox",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-district-3-daniela-jean",
+   "name": "Daniela Jean",
+   "office": "Commissioner",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-commissioner-collier-county-daniel-kowal",
-   "name": "Daniel Kowal",
-   "office": "County Commissioner",
-   "county": "Collier"
+   "id": "commissioner-belleair-todd-jennings",
+   "name": "Todd Jennings",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-district-14-ricky-jernigan",
+   "name": "Ricky Jernigan",
+   "office": "Council Member",
+   "county": "Columbia"
+  },
+  {
+   "id": "council-member-fort-walton-beach-bryce-jeter",
+   "name": "Bryce Jeter",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "vice-mayor-medley-arturo-jinete",
+   "name": "Arturo Jinete",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-lighthouse-point-jason-joffe",
+   "name": "Jason D. Joffe",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-6-chris-johnson",
+   "name": "Chris Johnson",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-fort-pierce-curtis-johnson",
+   "name": "Curtis Johnson Jr.",
+   "office": "Commissioner",
+   "county": "St. Lucie"
+  },
+  {
+   "id": "council-member-district-2-matt-johnson",
+   "name": "Matt Johnson",
+   "office": "Council Member",
+   "county": "Clay"
+  },
+  {
+   "id": "councilmember-district-14-rahman-johnson",
+   "name": "Rahman Johnson",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-sanibel-richard-johnson",
+   "name": "Richard Johnson",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "mayor-ocoee-rusty-johnson",
+   "name": "Rusty Johnson",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-5-teresa-johnson",
+   "name": "Teresa Johnson",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-winter-garden-chloe-johnson-brunson",
+   "name": "Chloe Johnson-Brunson",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-2-sunshine-joiner",
+   "name": "Sunshine Joiner",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "councilmember-district-3-casey-jones",
+   "name": "Casey Jones",
+   "office": "Councilmember",
+   "county": "Escambia"
+  },
+  {
+   "id": "mayor-sebastian-fred-jones",
+   "name": "Fred Jones",
+   "office": "Mayor",
+   "county": "Indian River"
+  },
+  {
+   "id": "commissioner-winter-garden-iliana-jones",
+   "name": "Iliana R. Jones",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-palatka-will-jones",
+   "name": "Will Jones",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
+   "id": "mayor-north-miami-beach-michael-joseph",
+   "name": "Michael Joseph",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-miami-gardens-linda-julien",
+   "name": "Linda Julien",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-parkland-neil-kanterman",
+   "name": "Neil Kanterman",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-palm-beach-shores-anastasia-karloutsos",
+   "name": "Anastasia S. Karloutsos",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-5-sarah-karon",
+   "name": "Sarah Karon",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "vice-mayor-district-4-musfika-kashem",
+   "name": "Musfika Kashem",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-lazy-lake-patrick-kaufman",
+   "name": "Patrick Kaufman",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-arcadia-keith-keene",
+   "name": "Keith Keene",
+   "office": "Council Member",
+   "county": "DeSoto"
+  },
+  {
+   "id": "commissioner-district-1-kris-keller",
+   "name": "Kris Keller",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-4-aimee-kelley",
+   "name": "Aimee Kelley",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-opa-locka-joseph-kelley",
+   "name": "Joseph L. Kelley",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-parker-andrew-kelly",
+   "name": "Andrew Kelly",
+   "office": "Mayor",
+   "county": "Bay"
+  },
+  {
+   "id": "commissioner-district-4-candace-kelly",
+   "name": "Candace Kelly",
+   "office": "Commissioner",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-belleair-thomas-kelly",
+   "name": "Thomas Kelly",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "councilmember-palm-beach-gardens-john-kemp",
+   "name": "John D. Kemp",
+   "office": "Councilmember",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-district-6-julie-kennedy",
+   "name": "Julie Kennedy",
+   "office": "Vice Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-district-1-keith-keogh",
+   "name": "Keith Keogh",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-tavares-doug-keown",
+   "name": "Doug Keown",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-district-2-steve-kerigan",
+   "name": "Steve Kerigan",
+   "office": "Commissioner",
+   "county": "Gulf"
+  },
+  {
+   "id": "mayor-plant-city-nathan-kilton",
+   "name": "Nathan A. Kilton",
+   "office": "Mayor",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "commissioner-cape-canaveral-andrea-king",
+   "name": "Andrea King",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-south-bay-barbara-king",
+   "name": "Barbara King",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-5-christine-king",
+   "name": "Christine King",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-lake-buena-vista-gene-king",
+   "name": "Gene King",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-indian-rocks-beach-hilary-king",
+   "name": "Hilary King",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-fort-myers-beach-john-king",
+   "name": "John R. King",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "mayor-flagler-beach-patti-king",
+   "name": "Patti King",
+   "office": "Mayor",
+   "county": "Flagler"
+  },
+  {
+   "id": "commissioner-kenneth-city-donald-kinney",
+   "name": "Donald Kinney",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-macclenny-sam-kitching",
+   "name": "Sam Kitching",
+   "office": "Council Member",
+   "county": "Baker"
+  },
+  {
+   "id": "commissioner-south-broward-drainage-district-district-5-sean-knowles",
+   "name": "Sean Knowles",
+   "office": "Commissioner, South Broward Drainage District",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-3-donna-knutson",
+   "name": "Donna Knutson",
+   "office": "Commissioner",
+   "county": "Franklin"
+  },
+  {
+   "id": "council-member-sebring-rebekah-kogelschatz",
+   "name": "Rebekah Kogelschatz",
+   "office": "Council Member",
+   "county": "Highlands"
+  },
+  {
+   "id": "councilmember-homestead-kimberly-konsky",
+   "name": "Kimberly Konsky",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-4-lorraine-koss",
+   "name": "Lorraine Koss",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-temple-terrace-erik-kravets",
+   "name": "Erik Kravets",
+   "office": "Council Member",
+   "county": "Hillsborough"
   },
   {
    "id": "tax-collector-seminole-county-jr-kroll",
@@ -1060,10 +3538,166 @@
    "county": "Seminole"
   },
   {
-   "id": "county-commissioner-suwannee-county-travis-land",
-   "name": "Travis Land",
-   "office": "County Commissioner",
-   "county": "Suwannee"
+   "id": "commissioner-district-4-paul-kruss",
+   "name": "Paul A. Kruss",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-4-david-kuczenski",
+   "name": "David S. Kuczenski",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-pomona-park-alisha-kuleski",
+   "name": "Alisha Kuleski",
+   "office": "Council Member",
+   "county": "Putnam"
+  },
+  {
+   "id": "mayor-jupiter-jim-kuretski",
+   "name": "Jim Kuretski",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-south-bay-joe-kyles",
+   "name": "Joe Kyles",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-atlantis-michael-lacoursiere",
+   "name": "Michael LaCoursiere",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-coral-gables-vince-lago",
+   "name": "Vince C. Lago",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-3-will-lahnen",
+   "name": "Will Lahnen",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-lakeland-guy-lalonde",
+   "name": "Guy LaLonde Jr.",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-atlantis-keller-lanahan",
+   "name": "Keller Lanahan",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-4-bobby-lance",
+   "name": "Bobby Lance",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-marathon-lynn-landry",
+   "name": "Lynn Landry",
+   "office": "Council Member",
+   "county": "Monroe"
+  },
+  {
+   "id": "commissioner-north-port-barbara-langdon",
+   "name": "Barbara Langdon",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "commissioner-district-1-eric-langston",
+   "name": "Eric Langston",
+   "office": "Commissioner",
+   "county": "Gulf"
+  },
+  {
+   "id": "council-member-district-1-renee-lannaman",
+   "name": "Rene\u00e9 Lannaman",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-coral-gables-richard-lara",
+   "name": "Richard D. Lara",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-palm-beach-shores-tracy-larcher",
+   "name": "Tracy Larcher",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-district-2-mark-larusso",
+   "name": "Mark LaRusso",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "vice-mayor-crescent-city-william-laurie",
+   "name": "William Laurie",
+   "office": "Vice Mayor",
+   "county": "Putnam"
+  },
+  {
+   "id": "commissioner-district-4-john-lauser",
+   "name": "John Lauser",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-mary-esther-richard-lawson",
+   "name": "Richard Lawson",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "vice-mayor-hallandale-beach-michele-lazarow",
+   "name": "Michele Lazarow",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-key-west-donald-lee",
+   "name": "Donald Lee",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "mayor-eustis-emily-lee",
+   "name": "Emily A. Lee",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-district-5-elisa-leheny",
+   "name": "Elisa Leheny",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-sebring-david-leidel",
+   "name": "David Leidel",
+   "office": "Council Member",
+   "county": "Highlands"
+  },
+  {
+   "id": "commissioner-palm-beach-shores-tony-lembo",
+   "name": "Tony Lembo",
+   "office": "Commissioner",
+   "county": "Palm Beach"
   },
   {
    "id": "superintendent-of-schools-escambia-county-public-schools-keith-leonard",
@@ -1072,21 +3706,159 @@
    "county": "Escambia"
   },
   {
+   "id": "mayor-pierson-gray-leonhard",
+   "name": "Gray Leonhard",
+   "office": "Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-ormond-beach-jason-leslie",
+   "name": "Jason Leslie",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-hypoluxo-robert-leupp",
+   "name": "Robert Leupp",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-coral-springs-jennifer-levi",
+   "name": "Jennifer Levi",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
    "id": "county-court-judge-district-45-jennifer-levin",
    "name": "Jennifer Trautman Levin",
    "office": "County Court Judge",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-commissioner-indian-river-county-deryl-loar",
-   "name": "Deryl Loar",
-   "office": "County Commissioner",
-   "county": "Indian River"
+   "id": "council-member-wellington-stephen-levin",
+   "name": "Stephen A. Levin",
+   "office": "Council Member",
+   "county": "Palm Beach"
   },
   {
-   "id": "county-commissioner-district-5-vicki-lopez",
-   "name": "Vicki L. Lopez",
-   "office": "County Commissioner",
+   "id": "supervisor-acme-improvement-district-acme-improvement-district-stephen-levin",
+   "name": "Stephen Levin",
+   "office": "Supervisor, Acme Improvement District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-district-4-alejandro-levy",
+   "name": "Alejandro Levy",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-3-sean-levy",
+   "name": "Sean Levy",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-district-4-william-lewandowski",
+   "name": "William Lewandowski",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-district-district-a-luke-lewis",
+   "name": "Luke Lewis",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-district-d-darrell-lewis-ricketts",
+   "name": "Darrell Lewis-Ricketts",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-el-portal-anna-lightfoot-ward",
+   "name": "Anna E. Lightfoot-Ward",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-hallandale-beach-anabelle-lima-taub",
+   "name": "Anabelle Lima-Taub",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-fort-myers-beach-rebecca-link",
+   "name": "Rebecca Link",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-north-port-oleg-lisitsyn",
+   "name": "Oleg Lisitsyn",
+   "office": "Commissioner",
+   "county": "Sarasota"
+  },
+  {
+   "id": "councilmember-palm-beach-gardens-rachelle-litt",
+   "name": "Rachelle A. Litt",
+   "office": "Councilmember",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-neptune-beach-nia-livingston",
+   "name": "Nia Livingston",
+   "office": "Vice Mayor",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-district-3-ronald-livsey",
+   "name": "Ronald T. Livsey",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "commissioner-sweetwater-idania-llanio",
+   "name": "Idania Llanio",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-7-robin-lockett",
+   "name": "Robin Lockett",
+   "office": "Councilmember",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "commissioner-oakland-park-tim-lonergan",
+   "name": "Tim Lonergan",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-newberry-donald-long",
+   "name": "Donald Long",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "commissioner-bartow-leo-longworth",
+   "name": "Leo E. Longworth",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-lake-mary-dan-lopez",
+   "name": "Dan Lopez",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "mayor-homestead-steven-losner",
+   "name": "Steven D. Losner",
+   "office": "Mayor",
    "county": "Miami-Dade"
   },
   {
@@ -1096,22 +3868,298 @@
    "county": null
   },
   {
+   "id": "mayor-gulfport-karen-love",
+   "name": "Karen Love",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-district-5-beth-lowell",
+   "name": "Beth Lowell",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-3-brett-lowry",
+   "name": "Brett Lowry",
+   "office": "Commissioner",
+   "county": "Gulf"
+  },
+  {
+   "id": "councilmember-district-4-marlon-luis",
+   "name": "Marlon Luis",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-golden-beach-judy-lusskin",
+   "name": "Judy Lusskin",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-astatula-kay-macqueen",
+   "name": "Kay MacQueen",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-lakeland-stephanie-madden",
+   "name": "Stephanie Madden",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-district-6-joseph-magazine",
+   "name": "Joseph Magazine",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
    "id": "state-representative-district-54-randall-maggard",
    "name": "Randall Scott Maggard",
    "office": "State Representative",
    "county": null
   },
   {
-   "id": "supervisor-of-elections-pinellas-county-julie-marcus",
-   "name": "Julie Marcus",
-   "office": "Supervisor of Elections",
+   "id": "vice-mayor-port-richey-chris-maher",
+   "name": "Chris Maher",
+   "office": "Vice Mayor",
+   "county": "Pasco"
+  },
+  {
+   "id": "commissioner-district-4-jon-maldonado",
+   "name": "Jon Maldonado",
+   "office": "Commissioner",
    "county": "Pinellas"
   },
   {
-   "id": "school-board-member-district-1-ryan-matthews",
-   "name": "Ryan Matthews",
-   "office": "School Board Member",
+   "id": "mayor-lauderdale-by-the-sea-edmund-malkoon",
+   "name": "Edmund Malkoon",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-2-guido-maniscalco",
+   "name": "Guido Maniscalco",
+   "office": "Councilmember",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "mayor-ocala-ben-marciano",
+   "name": "Ben Marciano",
+   "office": "Mayor",
+   "county": "Marion"
+  },
+  {
+   "id": "mayor-newberry-tim-marden",
+   "name": "Tim Marden",
+   "office": "Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "vice-mayor-astatula-cheryl-marinelli",
+   "name": "Cheryl Marinelli",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-district-1-karen-marriott",
+   "name": "Karen Marriott",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-lighthouse-point-everett-marshall",
+   "name": "Everett Marshall III",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-el-portal-darian-martin",
+   "name": "Darian Martin",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-district-c-regina-martin",
+   "name": "Regina Martin",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-district-3-sammie-martin",
+   "name": "Sammie Brown Martin",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-lantana-kem-mason",
+   "name": "Kem Mason",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-key-west-chris-massicotte",
+   "name": "Chris Massicotte",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "vice-mayor-lake-hamilton-robert-mathis",
+   "name": "Robert Mathis",
+   "office": "Vice Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-marathon-kenny-matlock",
+   "name": "Kenny Matlock",
+   "office": "Council Member",
+   "county": "Monroe"
+  },
+  {
+   "id": "commissioner-tallahassee-jeremy-matlow",
+   "name": "Jeremy Matlow",
+   "office": "Commissioner",
+   "county": "Leon"
+  },
+  {
+   "id": "councilmember-district-3-marsha-matson",
+   "name": "Marsha Matson",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-monica-matteo-salinas",
+   "name": "Monica Matteo-Salinas",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-sebastian-sherrie-matthews",
+   "name": "Sherrie Matthews",
+   "office": "Council Member",
    "county": "Indian River"
+  },
+  {
+   "id": "commissioner-lauderdale-lakes-karlene-maxwell-williams",
+   "name": "Karlene Maxwell-Williams",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-3-mimi-may",
+   "name": "Mimi May",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-3-quanita-may",
+   "name": "Quanita May",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-newberry-tony-mazon",
+   "name": "Tony Mazon",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-bay-lake-sue-mccall",
+   "name": "Sue McCall",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-winter-springs-kevin-mccann",
+   "name": "Kevin McCann",
+   "office": "Mayor",
+   "county": "Seminole"
+  },
+  {
+   "id": "mayor-lakeland-sara-mccarley",
+   "name": "Sara Roberts McCarley",
+   "office": "Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-lake-buena-vista-william-mccoy",
+   "name": "William McCoy",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-2-mack-mccray",
+   "name": "Mack McCray",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-district-3-james-mcdonald",
+   "name": "James E. McDonald",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-palm-beach-nicki-mcdonald",
+   "name": "Nicki McDonald",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "chair-south-florida-conservancy-district-south-florida-conservancy-district-kenneth-mcduffie",
+   "name": "Kenneth McDuffie",
+   "office": "Chair, South Florida Conservancy District",
+   "county": "Hendry"
+  },
+  {
+   "id": "council-member-edgewood-casey-mcelroy",
+   "name": "Casey McElroy",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "deputy-mayor-west-melbourne-alexis-mcguire",
+   "name": "Alexis McGuire",
+   "office": "Deputy Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-new-smyrna-beach-jason-mcguirk",
+   "name": "Jason McGuirk",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-waldo-jerome-mcintyre",
+   "name": "Jerome McIntyre",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "vice-mayor-south-bay-taranza-mckelvin",
+   "name": "Taranza McKelvin",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-lakeland-chad-mcleod",
+   "name": "Chad McLeod",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-south-palm-beach-raymond-mcmillan",
+   "name": "Raymond McMillan",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-4-joseph-mcmullen",
+   "name": "Joseph McMullen",
+   "office": "Commissioner",
+   "county": "Orange"
   },
   {
    "id": "sheriff-jefferson-county-alfred-mcneill",
@@ -1120,16 +4168,172 @@
    "county": "Jefferson"
   },
   {
+   "id": "vice-mayor-sebastian-bob-mcpartlan",
+   "name": "Bob McPartlan",
+   "office": "Vice Mayor",
+   "county": "Indian River"
+  },
+  {
+   "id": "commissioner-district-2-christopher-mcvoy",
+   "name": "Christopher McVoy",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "chair-bolles-drainage-district-bolles-drainage-district-james-mcwhorter",
+   "name": "James McWhorter",
+   "office": "Chair, Bolles Drainage District",
+   "county": "Hendry"
+  },
+  {
+   "id": "council-member-pomona-park-pat-mead",
+   "name": "Pat Mead",
+   "office": "Council Member",
+   "county": "Putnam"
+  },
+  {
+   "id": "commissioner-mcintosh-don-medeiros",
+   "name": "Don Medeiros",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
    "id": "county-commissioner-levy-county-russell-meeks",
    "name": "Russell Meeks",
    "office": "County Commissioner",
    "county": "Levy"
   },
   {
-   "id": "county-court-judge-district-15-linda-melendez",
-   "name": "Linda Melendez",
-   "office": "County Court Judge",
+   "id": "mayor-cutler-bay-tim-meerbott",
+   "name": "Tim Meerbott",
+   "office": "Mayor",
    "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-wellington-johnny-meier",
+   "name": "Johnny Meier",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "supervisor-acme-improvement-district-acme-improvement-district-johnny-meier",
+   "name": "Johnny Meier",
+   "office": "Supervisor, Acme Improvement District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-miami-beach-steven-meiner",
+   "name": "Steven Meiner",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-indian-shores-nicholas-menchise",
+   "name": "Nicholas J. Menchise",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "vice-mayor-golden-beach-jessie-mendal",
+   "name": "Jessie Mendal",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-fort-walton-beach-ben-merrell",
+   "name": "Ben Merrell",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "vice-mayor-palmetto-bay-mark-merwitzer",
+   "name": "Mark Merwitzer",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-neptune-beach-josh-messinger",
+   "name": "Josh Messinger",
+   "office": "Council Member",
+   "county": "Duval"
+  },
+  {
+   "id": "councilmember-district-1-ariel-meyer",
+   "name": "Ariel Meyer",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-hilliard-joe-michaels",
+   "name": "Joe Michaels",
+   "office": "Council Member",
+   "county": "Nassau"
+  },
+  {
+   "id": "councilmember-palm-beach-gardens-dana-middleton",
+   "name": "Dana P. Middleton",
+   "office": "Councilmember",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-3-david-miles",
+   "name": "David Miles",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-carrabelle-anthony-millender",
+   "name": "Anthony Millender",
+   "office": "Commissioner",
+   "county": "Franklin"
+  },
+  {
+   "id": "mayor-high-springs-andrew-miller",
+   "name": "Andrew Miller",
+   "office": "Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "councilmember-jacksonville-chris-miller",
+   "name": "Chris Miller",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "mayor-hillsboro-beach-dawn-miller",
+   "name": "Dawn Miller",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "supervisor-south-broward-hospital-district-memorial-healthcare-system-south-broward-hospital-district-memorial-healthcare-system-laura-miller",
+   "name": "Laura Raybin Miller",
+   "office": "Supervisor, South Broward Hospital District (Memorial Healthcare System)",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-sanibel-mike-miller",
+   "name": "Mike Miller",
+   "office": "Mayor",
+   "county": "Lee"
+  },
+  {
+   "id": "councilmember-palm-coast-ty-miller",
+   "name": "Ty Miller",
+   "office": "Councilmember",
+   "county": "Flagler"
+  },
+  {
+   "id": "commissioner-district-3-bob-milner",
+   "name": "Bob Milner",
+   "office": "Commissioner",
+   "county": "Bradford"
+  },
+  {
+   "id": "councilmember-district-6-charlie-miranda",
+   "name": "Charlie Miranda",
+   "office": "Councilmember",
+   "county": "Hillsborough"
   },
   {
    "id": "county-commissioner-hernando-county-john-mitten",
@@ -1138,46 +4342,406 @@
    "county": "Hernando"
   },
   {
-   "id": "county-court-judge-district-34-natalie-moore",
-   "name": "Natalie Moore",
-   "office": "County Court Judge",
+   "id": "commissioner-district-5-ashira-mohammed",
+   "name": "Ashira Mohammed",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-zephyrhills-melonie-monson",
+   "name": "Melonie Bahr Monson",
+   "office": "Mayor",
+   "county": "Pasco"
+  },
+  {
+   "id": "mayor-palm-beach-danielle-moore",
+   "name": "Danielle H. Moore",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-district-4-jared-moore",
+   "name": "Jared Moore",
+   "office": "Councilmember",
+   "county": "Escambia"
+  },
+  {
+   "id": "commissioner-crescent-city-linda-moore",
+   "name": "Linda Moore",
+   "office": "Commissioner",
+   "county": "Putnam"
+  },
+  {
+   "id": "council-member-vero-beach-linda-moore",
+   "name": "Linda Moore",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "councilmember-district-4-lisa-moore",
+   "name": "Lisa Gonzalez Moore",
+   "office": "Councilmember",
+   "county": "Manatee"
+  },
+  {
+   "id": "commissioner-district-1-heather-moraitis",
+   "name": "Heather Moraitis",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-palm-beach-bridget-moran",
+   "name": "Bridget Moran",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-district-6-bryan-morera",
+   "name": "Bryan Morera",
+   "office": "Vice Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-court-judge-district-38-gordon-murray",
-   "name": "Gordon Murray",
-   "office": "County Court Judge",
+   "id": "council-member-indian-river-shores-theresa-morgan",
+   "name": "Theresa Morgan",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "vice-mayor-district-4-virginia-morgan",
+   "name": "Virginia Morgan",
+   "office": "Vice Mayor",
+   "county": "St. Johns"
+  },
+  {
+   "id": "mayor-cape-canaveral-wes-morrison",
+   "name": "Wes Morrison",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "councilmember-titusville-megan-moscoso",
+   "name": "Megan Moscoso",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-key-biscayne-brett-moss",
+   "name": "Brett G. Moss",
+   "office": "Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-court-judge-district-39-julie-nelson",
-   "name": "Julie Harris Nelson",
-   "office": "County Court Judge",
+   "id": "commissioner-district-3-yumeko-motley",
+   "name": "Yumeko Motley",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-atlantis-guy-motzer",
+   "name": "Guy Motzer",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-district-5-bill-muir",
+   "name": "Bill Muir",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-president-mcintosh-scott-mullikin",
+   "name": "Scott Mullikin",
+   "office": "Vice President",
+   "county": "Marion"
+  },
+  {
+   "id": "commissioner-parkland-cindy-murphy-salomone",
+   "name": "Cindy Murphy-Salomone",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-julia-musella",
+   "name": "Julia Musella",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-lakeland-mike-musick",
+   "name": "Mike Musick",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-melbourne-village-norton-muzzone",
+   "name": "Norton Muzzone",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-hypoluxo-christine-nagy",
+   "name": "Christine Nagy",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-wellington-michael-napoleone",
+   "name": "Michael Napoleone",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-titusville-jo-nelson",
+   "name": "Jo Lynn Nelson",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-4-anna-nemes",
+   "name": "Anna Nemes",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-apopka-nick-nesta",
+   "name": "Nick L Nesta III",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "councilmember-district-3-david-neuman",
+   "name": "David Neuman",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "vice-mayor-oakland-park-letitia-newbold",
+   "name": "Letitia Newbold",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-wilton-manors-scott-newton",
+   "name": "Scott Newton",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-el-portal-omarr-nickerson",
+   "name": "Omarr C. Nickerson",
+   "office": "Mayor",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-court-judge-district-2-kristy-nunez",
-   "name": "Kristy M. Nu\u00f1ez",
-   "office": "County Court Judge",
+   "id": "mayor-indian-harbour-beach-scott-nickle",
+   "name": "Scott Nickle",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-district-2-peter-noble",
+   "name": "Peter A. Noble",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-palm-coast-mike-norris",
+   "name": "Mike Norris",
+   "office": "Mayor",
+   "county": "Flagler"
+  },
+  {
+   "id": "council-member-macclenny-danny-norton",
+   "name": "Danny Norton",
+   "office": "Council Member",
+   "county": "Baker"
+  },
+  {
+   "id": "mayor-starke-danny-nugent",
+   "name": "Danny Nugent",
+   "office": "Mayor",
+   "county": "Bradford"
+  },
+  {
+   "id": "council-member-sebastian-christopher-nunn",
+   "name": "Christopher Nunn",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "council-member-indian-harbour-beach-david-nutt",
+   "name": "David Nutt",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-lazy-lake-ray-nyhuis",
+   "name": "Ray Nyhuis",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-6-christian-obrien",
+   "name": "Christian O'Brien",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-district-3-lisa-oneal",
+   "name": "Lisa O'Neal",
+   "office": "Council Member",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-mary-esther-bernie-oder",
+   "name": "Bernie Oder",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "mayor-sarasota-kathy-ohlrich",
+   "name": "Kathy Kelley Ohlrich",
+   "office": "Mayor",
+   "county": "Sarasota"
+  },
+  {
+   "id": "commissioner-district-4-george-oliver",
+   "name": "George Oliver III",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-6-christopher-oller",
+   "name": "Christopher Oller",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-2-cindy-orlinsky",
+   "name": "Cindy Orlinsky",
+   "office": "Commissioner",
    "county": "Miami-Dade"
   },
   {
-   "id": "county-commissioner-district-6-natalie-orbis",
-   "name": "Natalie Milian Orbis",
-   "office": "County Commissioner",
-   "county": "Miami-Dade"
+   "id": "council-member-district-1-marisol-ortega",
+   "name": "Marisol Ortega",
+   "office": "Council Member",
+   "county": "Polk"
   },
   {
-   "id": "county-commissioner-dixie-county-david-osteen",
-   "name": "David Osteen",
-   "office": "County Commissioner",
-   "county": "Dixie"
+   "id": "commissioner-district-2-tony-ortiz",
+   "name": "Tony Ortiz",
+   "office": "Commissioner",
+   "county": "Orange"
   },
   {
-   "id": "county-court-judge-district-25-luis-perez-medina",
-   "name": "Luis Perez-Medina",
-   "office": "County Court Judge",
-   "county": "Miami-Dade"
+   "id": "mayor-satellite-beach-steve-osmer",
+   "name": "Steve Osmer",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-district-3-alan-ott",
+   "name": "Alan Ott",
+   "office": "Council Member",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-district-4-dimple-overstreet",
+   "name": "Dimple Overstreet",
+   "office": "Commissioner",
+   "county": "Bradford"
+  },
+  {
+   "id": "commissioner-district-5-gladys-owens",
+   "name": "Gladys Owens",
+   "office": "Commissioner",
+   "county": "Suwannee"
+  },
+  {
+   "id": "commissioner-deland-richard-paiva",
+   "name": "Richard Paiva",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "president-collins-slough-water-control-district-collins-slough-water-control-district-charles-palmer",
+   "name": "Charles L. Palmer",
+   "office": "President, Collins Slough Water Control District",
+   "county": "Hendry"
+  },
+  {
+   "id": "commissioner-district-1-monica-paris",
+   "name": "Monica Paris",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-district-7-jim-partin",
+   "name": "Jim Partin",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-3-krystal-patterson",
+   "name": "Krystal Patterson",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-president-pensacola-allison-patton",
+   "name": "Allison Patton",
+   "office": "Council President",
+   "county": "Escambia"
+  },
+  {
+   "id": "council-member-district-2-jennifer-paul",
+   "name": "Jennifer A. Paul",
+   "office": "Council Member",
+   "county": "Osceola"
+  },
+  {
+   "id": "mayor-davie-judy-paul",
+   "name": "Judy Paul",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-bay-lake-tanya-peak-smith",
+   "name": "Tanya Peak-Smith",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-carrabelle-vance-pedrick",
+   "name": "Vance Pedrick",
+   "office": "Commissioner",
+   "county": "Franklin"
+  },
+  {
+   "id": "commissioner-district-3-bob-pelletier",
+   "name": "Bob Pelletier",
+   "office": "Commissioner",
+   "county": "Bay"
+  },
+  {
+   "id": "councilmember-district-7-jimmy-peluso",
+   "name": "Jimmy Peluso",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "commissioner-district-4-beverly-perkins",
+   "name": "Beverly Perkins",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-melbourne-village-scott-perrine",
+   "name": "Scott Perrine",
+   "office": "Commissioner",
+   "county": "Brevard"
   },
   {
    "id": "clerk-of-the-circuit-court-citrus-county-traci-perry",
@@ -1186,16 +4750,130 @@
    "county": "Citrus"
   },
   {
-   "id": "county-commissioner-district-2-theresa-pontieri",
-   "name": "Theresa Pontieri",
-   "office": "County Commissioner",
-   "county": "Flagler"
+   "id": "council-member-district-2-brandy-peterson",
+   "name": "Brandy Peterson",
+   "office": "Council Member",
+   "county": "Volusia"
   },
   {
-   "id": "county-court-judge-district-42-alicia-priovolos",
-   "name": "Alicia Garcia Priovolos",
-   "office": "County Court Judge",
+   "id": "commissioner-lighthouse-point-patty-petrone",
+   "name": "Patty Petrone",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-north-port-demetrius-petrow",
+   "name": "Demetrius Petrow",
+   "office": "Vice Mayor",
+   "county": "Sarasota"
+  },
+  {
+   "id": "commissioner-bartow-trish-pfeiffer",
+   "name": "Trish Pfeiffer",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "mayor-tavares-lori-pfister",
+   "name": "Lori Pfister",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-lauderdale-lakes-veronica-phillips",
+   "name": "Veronica Edwards Phillips",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-west-melbourne-stephen-phrampus",
+   "name": "Stephen Phrampus",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-south-palm-beach-rafael-pineiro",
+   "name": "Rafael Pineiro",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "mayor-clewiston-james-pittman",
+   "name": "James Pittman",
+   "office": "Mayor",
+   "county": "Hendry"
+  },
+  {
+   "id": "commissioner-district-4-tom-plaut",
+   "name": "Tom Plaut",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-tallahassee-jacqueline-porter",
+   "name": "Jacqueline Porter",
+   "office": "Commissioner",
+   "county": "Leon"
+  },
+  {
+   "id": "councilmember-miami-gardens-latoya-porter",
+   "name": "Latoya D. Porter",
+   "office": "Councilmember",
    "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-lauderdale-by-the-sea-theo-poulopoulos",
+   "name": "Theo Poulopoulos",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-miami-gardens-michelle-powell",
+   "name": "Michelle Powell",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-president-south-indian-river-water-control-district-south-indian-river-water-control-district-tom-powell",
+   "name": "Tom Powell",
+   "office": "Vice President, South Indian River Water Control District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-palm-beach-gardens-robert-premuroso",
+   "name": "Robert G. Premuroso",
+   "office": "Councilmember",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-2-ben-preston",
+   "name": "Ben Preston",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-rockledge-thomas-price",
+   "name": "Thomas J. Price",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-tavares-walter-price",
+   "name": "Walter B. Price Sr.",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-zephyrhills-charles-proctor",
+   "name": "Charles E. Proctor",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "mayor-ocean-ridge-geoff-pugh",
+   "name": "Geoff Pugh",
+   "office": "Mayor",
+   "county": "Palm Beach"
   },
   {
    "id": "school-board-member-district-2-tony-pumphry",
@@ -1204,10 +4882,280 @@
    "county": "Jackson"
   },
   {
-   "id": "county-court-judge-district-31-michele-ricca",
-   "name": "Michele McCaul Ricca",
-   "office": "County Court Judge",
+   "id": "council-member-district-2-jesse-purdon",
+   "name": "Jesse Purdon",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-melbourne-beach-sherri-quarrie",
+   "name": "Sherri Quarrie",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-district-2-doug-quartier",
+   "name": "Doug Quartier",
+   "office": "Council Member",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-district-6-idelma-quintana",
+   "name": "Idelma Quintana",
+   "office": "Commissioner",
    "county": "Broward"
+  },
+  {
+   "id": "commissioner-coconut-creek-jacqueline-railey",
+   "name": "Jacqueline M. Railey",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-lighthouse-point-peter-raimondi",
+   "name": "Peter M. Raimondi",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-hawthorne-jacquelyn-randall",
+   "name": "Jacquelyn Randall",
+   "office": "Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "vice-mayor-lake-buena-vista-renee-raper",
+   "name": "Renee Raper",
+   "office": "Vice Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "councilmember-bay-harbor-islands-eric-rappaport",
+   "name": "Eric Rappaport",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-hillsboro-beach-david-ravanesi",
+   "name": "David A. Ravanesi",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-district-5-andy-redding",
+   "name": "Andy Redding",
+   "office": "Vice Mayor",
+   "county": "Bradford"
+  },
+  {
+   "id": "supervisor-east-beach-water-control-district-east-beach-water-control-district-jerome-redish",
+   "name": "Jerome Redish",
+   "office": "Supervisor, East Beach Water Control District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-deland-daniel-reed",
+   "name": "Daniel Reed",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-district-6-paula-reed",
+   "name": "Paula R. Reed",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-district-4-sean-reed",
+   "name": "Sean Reed",
+   "office": "Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "commissioner-melbourne-beach-tim-reed",
+   "name": "Tim Reed",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-winter-garden-john-rees",
+   "name": "John Rees",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-pensacola-d-reeves",
+   "name": "D. C. Reeves",
+   "office": "Mayor",
+   "county": "Escambia"
+  },
+  {
+   "id": "council-member-parker-mark-rega",
+   "name": "Mark Rega",
+   "office": "Council Member",
+   "county": "Bay"
+  },
+  {
+   "id": "commissioner-deland-kevin-reid",
+   "name": "Kevin Reid",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-hillsboro-beach-jane-reiser",
+   "name": "Jane Reiser",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-lake-worth-beach-betty-resch",
+   "name": "Betty Resch",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-sweetwater-reinaldo-rey",
+   "name": "Reinaldo Rey",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-1-campbell-rich",
+   "name": "Campbell Rich",
+   "office": "Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "secretary-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-nan-rich",
+   "name": "Nan Rich",
+   "office": "Secretary, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-tallahassee-curtis-richardson",
+   "name": "Curtis Richardson",
+   "office": "Vice Mayor",
+   "county": "Leon"
+  },
+  {
+   "id": "council-member-district-1-linnie-richardson",
+   "name": "Linnie R. Richardson",
+   "office": "Council Member",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-astatula-susan-richert",
+   "name": "Susan Richert",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-fort-walton-beach-debi-riley",
+   "name": "Debi Riley",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "commissioner-district-5-jessica-ring",
+   "name": "Jessica Ring",
+   "office": "Commissioner",
+   "county": "Duval"
+  },
+  {
+   "id": "vice-mayor-alachua-jennifer-ringersen",
+   "name": "Jennifer Ringersen",
+   "office": "Vice Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "mayor-malabar-steve-rivet",
+   "name": "Steve Rivet",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-montverde-grant-roberts",
+   "name": "Grant Roberts",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-district-1-chris-robertson",
+   "name": "Chris Robertson",
+   "office": "Mayor",
+   "county": "Osceola"
+  },
+  {
+   "id": "mayor-bunnell-catherine-robinson",
+   "name": "Catherine Robinson",
+   "office": "Mayor",
+   "county": "Flagler"
+  },
+  {
+   "id": "commissioner-district-2-lisa-robinson",
+   "name": "Lisa Robinson",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-lake-alfred-ronnie-robinson",
+   "name": "Ronnie Robinson Jr.",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "council-president-live-oak-vanessa-robinson",
+   "name": "Vanessa Brown Robinson",
+   "office": "Council President",
+   "county": "Suwannee"
+  },
+  {
+   "id": "council-member-district-5-alex-rodriguez",
+   "name": "Alex Rodriguez",
+   "office": "Council Member",
+   "county": "Osceola"
+  },
+  {
+   "id": "commissioner-district-2-danny-rodriguez",
+   "name": "Danny Rodriguez",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-medley-lizelh-rodriguez",
+   "name": "Lizelh Rodriguez",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-medley-lourdes-rodriguez",
+   "name": "Lourdes Rodriguez",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-3-maria-rodriguez",
+   "name": "Maria Rodriguez",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-neptune-beach-brent-rogers",
+   "name": "Brent Rogers",
+   "office": "Council Member",
+   "county": "Duval"
+  },
+  {
+   "id": "council-member-montverde-jimmy-rogers",
+   "name": "Jimmy Rogers",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "vice-mayor-bunnell-john-rogers",
+   "name": "John R. Rogers",
+   "office": "Vice Mayor",
+   "county": "Flagler"
   },
   {
    "id": "county-court-judge-district-44-jose-rohaidy",
@@ -1216,34 +5164,502 @@
    "county": "Miami-Dade"
   },
   {
-   "id": "school-board-member-district-6-maria-rojas",
-   "name": "Maria Teresa Rojas",
-   "office": "School Board Member",
-   "county": "Miami-Dade"
+   "id": "council-member-pomona-park-michael-rohrbaugh",
+   "name": "Michael Rohrbaugh",
+   "office": "Council Member",
+   "county": "Putnam"
   },
   {
-   "id": "school-board-member-district-4-christina-romelus",
-   "name": "Christina Romelus",
-   "office": "School Board Member",
+   "id": "council-member-district-2-cal-rolfson",
+   "name": "Cal Rolfson",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "commissioner-wilton-manors-paul-rolli",
+   "name": "Paul Rolli",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-hypoluxo-richard-roney",
+   "name": "Richard J. Roney",
+   "office": "Vice Mayor",
    "county": "Palm Beach"
   },
   {
-   "id": "county-court-judge-district-6-jorge-santiago",
-   "name": "Jorge Perez Santiago",
-   "office": "County Court Judge",
+   "id": "commissioner-district-4-ralph-rosado",
+   "name": "Ralph Rosado",
+   "office": "Commissioner",
    "county": "Miami-Dade"
   },
   {
-   "id": "sheriff-alachua-county-chad-scott",
-   "name": "Chad Scott",
-   "office": "Sheriff",
+   "id": "commissioner-district-5-shan-rose",
+   "name": "Shan Rose",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-temple-terrace-andy-ross",
+   "name": "Andy Ross",
+   "office": "Mayor",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "commissioner-district-5-jennifer-rossi",
+   "name": "Jennifer Rossi",
+   "office": "Commissioner",
    "county": "Alachua"
   },
   {
-   "id": "county-court-judge-district-20-stephanie-silver",
-   "name": "Stephanie R. Silver",
-   "office": "County Court Judge",
+   "id": "commissioner-key-west-mark-rossi",
+   "name": "Mark Rossi",
+   "office": "Commissioner",
+   "county": "Monroe"
+  },
+  {
+   "id": "councilmember-homestead-larry-roth",
+   "name": "Larry Roth",
+   "office": "Councilmember",
    "county": "Miami-Dade"
+  },
+  {
+   "id": "president-gladeview-drainage-district-gladeview-drainage-district-ryan-roth",
+   "name": "Ryan Roth",
+   "office": "President, Gladeview Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-lake-placid-ray-royce",
+   "name": "Ray Royce",
+   "office": "Vice Mayor",
+   "county": "Highlands"
+  },
+  {
+   "id": "council-member-montverde-bryan-rubio",
+   "name": "Bryan Rubio",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "council-member-indian-harbour-beach-susan-ruimy",
+   "name": "Susan Ruimy",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-sweetwater-isidro-ruiz",
+   "name": "Isidro Ruiz",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-2-dylan-rumrell",
+   "name": "Dylan Rumrell",
+   "office": "Commissioner",
+   "county": "St. Johns"
+  },
+  {
+   "id": "council-member-midway-braheem-russ",
+   "name": "Braheem Russ",
+   "office": "Council Member",
+   "county": "Gadsden"
+  },
+  {
+   "id": "commissioner-district-1-sam-ruth",
+   "name": "Sam Ruth",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-trenton-randy-rutter",
+   "name": "Randy Rutter",
+   "office": "Commissioner",
+   "county": "Gilchrist"
+  },
+  {
+   "id": "commissioner-district-4-tommy-ruzzano",
+   "name": "Tommy Ruzzano",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-sunrise-michael-ryan",
+   "name": "Michael J. Ryan",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-coconut-creek-joshua-rydell",
+   "name": "Joshua Rydell",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-fort-myers-beach-scott-safford",
+   "name": "Scott Safford",
+   "office": "Vice Mayor",
+   "county": "Lee"
+  },
+  {
+   "id": "councilmember-jacksonville-ronald-salem",
+   "name": "Ronald B. Salem",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "mayor-bay-harbor-islands-isaac-salver",
+   "name": "Isaac Salver",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-bal-harbour-seth-salver",
+   "name": "Seth E. Salver",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-biscayne-park-dan-samaria",
+   "name": "Dan Samaria",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-5-don-samora",
+   "name": "Don Samora",
+   "office": "Commissioner",
+   "county": "St. Johns"
+  },
+  {
+   "id": "councilmember-district-4-alex-sanchez",
+   "name": "Alex Sanchez",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-4-eric-sander",
+   "name": "Eric Sander",
+   "office": "Council Member",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-district-2-emma-santiago",
+   "name": "Emma Santiago",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "commissioner-opa-locka-luis-santiago",
+   "name": "Luis B. Santiago",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-juno-beach-dave-santilli",
+   "name": "Dave Santilli",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-flagler-beach-rj-santore",
+   "name": "RJ Santore",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "council-member-edgewood-ryan-santurri",
+   "name": "Ryan Santurri",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-lake-placid-greg-sapp",
+   "name": "Greg Sapp",
+   "office": "Commissioner",
+   "county": "Highlands"
+  },
+  {
+   "id": "vice-mayor-key-biscayne-oscar-sardinas",
+   "name": "Oscar Sardi\u00f1as",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-ormond-beach-travis-sargent",
+   "name": "Travis Sargent",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "vice-mayor-district-2-michael-satterfield",
+   "name": "Michael Satterfield",
+   "office": "Vice Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-2-janet-saura",
+   "name": "Janet Saura",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-bradenton-beach-deborah-scaccianoce",
+   "name": "Deborah Scaccianoce",
+   "office": "Vice Mayor",
+   "county": "Manatee"
+  },
+  {
+   "id": "commissioner-holmes-beach-terry-schaefer",
+   "name": "Terry W. Schaefer",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "mayor-indian-shores-diantha-schear",
+   "name": "Diantha Schear",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-temple-terrace-gil-schisler",
+   "name": "Gil Schisler",
+   "office": "Council Member",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "council-member-fort-walton-beach-david-schmidt",
+   "name": "David Schmidt",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "vice-mayor-kenneth-city-jensyn-schmidt",
+   "name": "Jensyn Schmidt",
+   "office": "Vice Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-2-jay-schwartz",
+   "name": "Jay D. Schwartz",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-mcintosh-alison-scott",
+   "name": "Alison Scott",
+   "office": "Mayor",
+   "county": "Marion"
+  },
+  {
+   "id": "mayor-jupiter-island-anne-scott",
+   "name": "Anne Scott",
+   "office": "Mayor",
+   "county": "Martin"
+  },
+  {
+   "id": "commissioner-bunnell-dean-sechrist",
+   "name": "Dean Sechrist",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "commissioner-district-4-anthony-segrich",
+   "name": "Anthony Segrich",
+   "office": "Commissioner",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-bay-harbor-islands-elchonon-shagalov",
+   "name": "Elchonon Shagalov",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-3-daniel-shanetzky",
+   "name": "Daniel Shanetzky",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-safety-harbor-kevin-shanks",
+   "name": "Kevin Shanks",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-winter-garden-colin-sharman",
+   "name": "Colin Sharman",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-greenacres-chuck-shaw",
+   "name": "Chuck Shaw",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-gulfport-marlene-shaw",
+   "name": "Marlene Shaw",
+   "office": "Vice Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-district-1-scott-shaw",
+   "name": "Scott Shaw",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-robert-shea",
+   "name": "Robert Shea",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-mascotte-steven-sheffield",
+   "name": "Steven Sheffield",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "councilmember-palm-coast-darlene-shelley",
+   "name": "Darlene Shelley",
+   "office": "Councilmember",
+   "county": "Flagler"
+  },
+  {
+   "id": "deputy-mayor-belleair-tom-shelly",
+   "name": "Tom Shelly",
+   "office": "Deputy Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-boynton-beach-rebecca-shelton",
+   "name": "Rebecca Shelton",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-flagler-beach-james-sherman",
+   "name": "James Sherman",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "mayor-reddick-myra-sherman",
+   "name": "Myra Sherman",
+   "office": "Mayor",
+   "county": "Marion"
+  },
+  {
+   "id": "council-member-seminole-al-shields",
+   "name": "Al Shields",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-sebring-john-shoop",
+   "name": "John Shoop",
+   "office": "Mayor",
+   "county": "Highlands"
+  },
+  {
+   "id": "commissioner-cape-canaveral-tom-shoriak",
+   "name": "Tom Shoriak",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-district-3-karl-shuck",
+   "name": "Karl Shuck",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-district-1-caryl-shuham",
+   "name": "Caryl S. Shuham",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-district-1-dave-shula",
+   "name": "Dave Shula",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-district-2-stephen-shylkofski",
+   "name": "Stephen Shylkofski",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "vice-mayor-district-2-rhonda-sigerson-eaton",
+   "name": "Rhonda Sigerson-Eaton",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-st-augustine-nancy-sikes-kline",
+   "name": "Nancy Sikes-Kline",
+   "office": "Mayor",
+   "county": "St. Johns"
+  },
+  {
+   "id": "council-member-wellington-amanda-silvestri",
+   "name": "Amanda Silvestri",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-5-joanne-simone",
+   "name": "Joanne Simone",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-bartow-laura-simpson",
+   "name": "Laura Simpson",
+   "office": "Vice Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "council-president-hilliard-kenny-sims",
+   "name": "Kenny Sims",
+   "office": "Council President",
+   "county": "Nassau"
+  },
+  {
+   "id": "mayor-golden-beach-glenn-singer",
+   "name": "Glenn Singer",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-district-3-buzzy-sklar",
+   "name": "Buzzy Sklar",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-oviedo-megan-sladek",
+   "name": "Megan Sladek",
+   "office": "Mayor",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-district-5-darlene-smith",
+   "name": "Darlene Smith",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-1-elizabeth-smith",
+   "name": "Elizabeth Smith",
+   "office": "Commissioner",
+   "county": "Palm Beach"
   },
   {
    "id": "sheriff-bradford-county-george-smith",
@@ -1252,22 +5668,172 @@
    "county": "Bradford"
   },
   {
+   "id": "commissioner-district-1-harold-smith",
+   "name": "Harold Smith",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "council-member-sanibel-holly-smith",
+   "name": "Holly D. Smith",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-lake-mary-jordan-smith",
+   "name": "Jordan Smith",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "council-member-zephyrhills-lance-smith",
+   "name": "Lance A. Smith",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "councilmember-district-1-marcus-smith",
+   "name": "Marcus Smith",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-1-michael-smith",
+   "name": "Michael Smith",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "vice-mayor-district-6-phyllis-smith",
+   "name": "Phyllis Smith",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-4-robert-smith",
+   "name": "Robert Smith",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "vice-mayor-palm-beach-shores-steven-smith",
+   "name": "Steven Smith",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
    "id": "school-board-member-district-2-tony-smith",
    "name": "Tony Smith",
    "office": "School Board Member",
    "county": "Charlotte"
   },
   {
-   "id": "tax-collector-monroe-county-sam-steele",
-   "name": "Sam C. Steele",
-   "office": "Tax Collector",
-   "county": "Monroe"
+   "id": "commissioner-district-4-fortuna-smukler",
+   "name": "Fortuna Smukler",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
   },
   {
-   "id": "sheriff-okeechobee-county-noel-stephen",
-   "name": "Noel E. Stephen",
-   "office": "Sheriff",
-   "county": "Okeechobee"
+   "id": "supervisor-south-dade-soil-and-water-conservation-district-district-3-lanette-sobel",
+   "name": "Lanette Sobel",
+   "office": "Supervisor, South Dade Soil and Water Conservation District",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-lake-buena-vista-angie-sola",
+   "name": "Angie Sola",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "vice-mayor-district-4-ben-sorensen",
+   "name": "Ben Sorensen",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-plantation-nick-sortal",
+   "name": "Nick Sortal",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "council-member-zephyrhills-steve-spina",
+   "name": "Steve Spina",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "commissioner-flagler-beach-scott-spradley",
+   "name": "Scott Spradley",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "council-member-seminole-trish-springer",
+   "name": "Trish Springer",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-5-jim-springfield",
+   "name": "Jim Springfield",
+   "office": "Commissioner",
+   "county": "St. Johns"
+  },
+  {
+   "id": "commissioner-lighthouse-point-abby-stafford",
+   "name": "Abby Stafford",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "councilmember-district-3-susan-starkey",
+   "name": "Susan Starkey",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-district-4-cheryl-starnes",
+   "name": "Cheryl Starnes",
+   "office": "Vice Mayor",
+   "county": "Clay"
+  },
+  {
+   "id": "council-member-edgewood-beth-steele",
+   "name": "Beth Steele",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-mary-esther-chris-stein",
+   "name": "Chris Stein",
+   "office": "Mayor",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "supervisor-south-florida-conservancy-district-south-florida-conservancy-district-stewart-stein",
+   "name": "Stewart Stein",
+   "office": "Supervisor, South Florida Conservancy District",
+   "county": "Hendry"
+  },
+  {
+   "id": "commissioner-safety-harbor-andy-steingold",
+   "name": "Andy Steingold",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "council-member-district-3-amber-stephens",
+   "name": "Amber Stephens",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "vice-mayor-miami-gardens-robert-stephens",
+   "name": "Robert L. Stephens III",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
   },
   {
    "id": "us-representative-district-17-w-steube",
@@ -1276,22 +5842,430 @@
    "county": null
   },
   {
+   "id": "councilmember-palm-coast-ray-stevens",
+   "name": "Ray Stevens",
+   "office": "Councilmember",
+   "county": "Flagler"
+  },
+  {
+   "id": "vice-mayor-indian-river-shores-rob-stevenson",
+   "name": "Rob Stevenson",
+   "office": "Vice Mayor",
+   "county": "Indian River"
+  },
+  {
+   "id": "council-member-sebring-josh-stewart",
+   "name": "Josh Stewart",
+   "office": "Council Member",
+   "county": "Highlands"
+  },
+  {
+   "id": "supervisor-bolles-drainage-district-bolles-drainage-district-steve-stiles",
+   "name": "Steve Stiles",
+   "office": "Supervisor, Bolles Drainage District",
+   "county": "Hendry"
+  },
+  {
+   "id": "supervisor-highland-glades-drainage-district-highland-glades-drainage-district-steve-stiles",
+   "name": "Steve Stiles",
+   "office": "Supervisor, Highland Glades Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-marathon-robyn-still",
+   "name": "Robyn Still",
+   "office": "Council Member",
+   "county": "Monroe"
+  },
+  {
+   "id": "councilmember-titusville-sarah-stoeckel",
+   "name": "Sarah Stoeckel",
+   "office": "Councilmember",
+   "county": "Brevard"
+  },
+  {
+   "id": "councilmember-key-biscayne-nancy-stoner",
+   "name": "Nancy Stoner",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-dade-city-mike-stout",
+   "name": "Mike Stout",
+   "office": "Commissioner",
+   "county": "Pasco"
+  },
+  {
+   "id": "vice-mayor-lauderdale-by-the-sea-randy-strauss",
+   "name": "Randy Strauss",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-north-bay-village-rachel-streitfeld",
+   "name": "Rachel Streitfeld",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-2-ken-strickland",
+   "name": "Ken Strickland",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "vice-mayor-marathon-debra-struyf",
+   "name": "Debra Struyf",
+   "office": "Vice Mayor",
+   "county": "Monroe"
+  },
+  {
+   "id": "mayor-green-cove-springs-darren-stutts",
+   "name": "Darren Stutts",
+   "office": "Mayor",
+   "county": "Clay"
+  },
+  {
+   "id": "commissioner-district-7-lynn-su",
+   "name": "Lynn Su",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-5-david-suarez",
+   "name": "David Suarez",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-port-richey-christine-sullivan",
+   "name": "Christine Sullivan",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "vice-mayor-bushnell-victoria-summerlin",
+   "name": "Victoria Summerlin",
+   "office": "Vice Mayor",
+   "county": "Sumter"
+  },
+  {
+   "id": "council-member-jupiter-malise-sundstrom",
+   "name": "Malise Sundstrom",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-mary-esther-april-sutton",
+   "name": "April Sutton",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "mayor-sunny-isles-beach-larisa-svechin",
+   "name": "Larisa Svechin",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-pomona-park-mark-swanson",
+   "name": "Mark Swanson",
+   "office": "Council Member",
+   "county": "Putnam"
+  },
+  {
+   "id": "council-member-bay-lake-bryan-swartz",
+   "name": "Bryan Swartz",
+   "office": "Council Member",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-4-sean-swauger",
+   "name": "Sean Swauger",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-district-1-beth-sweeny",
+   "name": "Beth Sweeny",
+   "office": "Mayor",
+   "county": "St. Johns"
+  },
+  {
+   "id": "vice-mayor-jupiter-island-joe-taddeo",
+   "name": "Joe Taddeo",
+   "office": "Vice Mayor",
+   "county": "Martin"
+  },
+  {
+   "id": "commissioner-bradenton-beach-bob-talham",
+   "name": "Bob Talham",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
    "id": "justice-of-the-florida-supreme-court-florida-adam-tanenbaum",
    "name": "Adam S. Tanenbaum",
    "office": "Justice of the Florida Supreme Court",
    "county": null
   },
   {
-   "id": "supervisor-of-elections-charlotte-county-leah-valenti",
-   "name": "Leah Valenti",
-   "office": "Supervisor of Elections",
-   "county": "Charlotte"
+   "id": "councilmember-key-biscayne-silvia-tarafa",
+   "name": "Silvia P. Tarafa",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
   },
   {
-   "id": "sheriff-citrus-county-david-vincent",
-   "name": "David E. Vincent",
-   "office": "Sheriff",
-   "county": "Citrus"
+   "id": "council-member-district-2-valerie-tatarzewski",
+   "name": "Valerie Tatarzewski",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-st-pete-beach-scott-tate",
+   "name": "Scott Tate",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-lake-mary-colleen-taylor",
+   "name": "Colleen Taylor",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "council-member-orange-park-glenn-taylor",
+   "name": "Glenn Taylor",
+   "office": "Council Member",
+   "county": "Clay"
+  },
+  {
+   "id": "commissioner-waldo-monique-taylor",
+   "name": "Monique Taylor",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "mayor-oakland-shane-taylor",
+   "name": "Shane Taylor",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "mayor-astatula-zane-teeters",
+   "name": "Zane Teeters Jr.",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "deputy-mayor-district-1-natalie-teuchert",
+   "name": "Natalie Teuchert",
+   "office": "Deputy Mayor",
+   "county": "Seminole"
+  },
+  {
+   "id": "member-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-paula-thaqi",
+   "name": "Paula Thaqi",
+   "office": "Member, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "deputy-mayor-greenacres-john-tharp",
+   "name": "John Tharp",
+   "office": "Deputy Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-1-rick-thomas",
+   "name": "Rick Thomas",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-florida-city-charlotte-thompson",
+   "name": "Charlotte Thompson",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-chair-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-christine-thompson",
+   "name": "Christine Thompson",
+   "office": "Vice Chair, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-boca-raton-andy-thomson",
+   "name": "Andy Thomson",
+   "office": "Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-district-2-crystal-tijerina",
+   "name": "Crystal Tijerina",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "councilmember-north-miami-kassandra-timothe",
+   "name": "Kassandra Timothe",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-palm-beach-gardens-marcie-tinsley",
+   "name": "Marcie Tinsley",
+   "office": "Councilmember",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "commissioner-ormond-beach-lori-tolland",
+   "name": "Lori Tolland",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "mayor-fort-lauderdale-dean-trantalis",
+   "name": "Dean J. Trantalis",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-surfside-andrea-travani",
+   "name": "Andrea Travani",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-lakeland-ashley-troutman",
+   "name": "Ashley C. Troutman",
+   "office": "Commissioner",
+   "county": "Polk"
+  },
+  {
+   "id": "council-member-seminole-kadi-tubbs",
+   "name": "Kadi Hendricks Tubbs",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-bartow-tanya-tucker",
+   "name": "Tanya L. Tucker",
+   "office": "Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "councilmember-virginia-gardens-michael-tur",
+   "name": "Michael Tur",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "vice-mayor-district-3-thomas-turkin",
+   "name": "Thomas Turkin",
+   "office": "Vice Mayor",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-president-east-beach-water-control-district-east-beach-water-control-district-benton-tyson",
+   "name": "Benton Tyson",
+   "office": "Vice President, East Beach Water Control District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-2-mark-uptegraph",
+   "name": "Mark C. Uptegraph",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-3-kolby-urban",
+   "name": "Kolby Urban",
+   "office": "Council Member",
+   "county": "Osceola"
+  },
+  {
+   "id": "councilmember-el-portal-anders-urbom",
+   "name": "Anders Urbom",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-2-brian-vail",
+   "name": "Brian Vail",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-sweetwater-ian-vallecillo",
+   "name": "Ian Vallecillo",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-lighthouse-point-kyle-van-buskirk",
+   "name": "Kyle Van Buskirk",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-indian-rocks-beach-lan-vaughan",
+   "name": "Lan Vaughan",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "deputy-mayor-arcadia-luis-velasco",
+   "name": "Luis Velasco",
+   "office": "Deputy Mayor",
+   "county": "DeSoto"
+  },
+  {
+   "id": "commissioner-district-2-diane-velazquez",
+   "name": "Diane Velazquez",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "commissioner-jupiter-island-marshall-vi",
+   "name": "Marshall Field VI",
+   "office": "Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "councilmember-lazy-lake-glen-vick",
+   "name": "Glen Vick Jr.",
+   "office": "Councilmember",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-surfside-gerardo-vildostegui",
+   "name": "Gerardo Vildostegui",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-waldo-wendy-vivas",
+   "name": "Wendy Vivas",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "council-member-west-melbourne-helen-voltz",
+   "name": "Helen Voltz",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-vero-beach-aaron-vos",
+   "name": "Aaron Vos",
+   "office": "Council Member",
+   "county": "Indian River"
+  },
+  {
+   "id": "commissioner-carrabelle-russell-walden",
+   "name": "Russell Walden",
+   "office": "Commissioner",
+   "county": "Franklin"
   },
   {
    "id": "county-commissioner-lafayette-county-alicia-walker",
@@ -1300,16 +6274,214 @@
    "county": "Lafayette"
   },
   {
+   "id": "council-member-district-5-nate-walker",
+   "name": "Nate Walker",
+   "office": "Council Member",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-lake-city-noah-walker",
+   "name": "Noah Walker",
+   "office": "Mayor",
+   "county": "Columbia"
+  },
+  {
+   "id": "council-member-fort-walton-beach-payne-walker",
+   "name": "Payne Walker",
+   "office": "Council Member",
+   "county": "Okaloosa"
+  },
+  {
+   "id": "mayor-parkland-rich-walker",
+   "name": "Rich Walker",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-district-2-lucy-ward",
+   "name": "Lucy Ward",
+   "office": "Commissioner",
+   "county": "Marion"
+  },
+  {
+   "id": "commissioner-jupiter-island-patsy-warner",
+   "name": "Patsy Warner",
+   "office": "Commissioner",
+   "county": "Martin"
+  },
+  {
+   "id": "council-member-arcadia-dee-washington",
+   "name": "Dee Washington",
+   "office": "Council Member",
+   "county": "DeSoto"
+  },
+  {
+   "id": "mayor-seminole-leslie-waters",
+   "name": "Leslie Waters",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
    "id": "sheriff-duval-county-tk-waters",
    "name": "T.K. Waters",
    "office": "Sheriff",
    "county": "Duval"
   },
   {
-   "id": "supervisor-of-elections-marion-county-wesley-wilcox",
-   "name": "Wesley Wilcox",
-   "office": "Supervisor of Elections",
-   "county": "Marion"
+   "id": "council-member-district-3-terolyn-watson",
+   "name": "Terolyn Watson",
+   "office": "Council Member",
+   "county": "Lee"
+  },
+  {
+   "id": "commissioner-indian-rocks-beach-kellee-watt",
+   "name": "Kellee Watt",
+   "office": "Commissioner",
+   "county": "Pinellas"
+  },
+  {
+   "id": "mayor-bay-lake-todd-watzel",
+   "name": "Todd Watzel",
+   "office": "Mayor",
+   "county": "Orange"
+  },
+  {
+   "id": "council-member-district-3-jennifer-webb",
+   "name": "Jennifer N. Webb",
+   "office": "Council Member",
+   "county": "Pinellas"
+  },
+  {
+   "id": "president-highland-glades-drainage-district-highland-glades-drainage-district-keith-wedgworth",
+   "name": "Keith Wedgworth",
+   "office": "President, Highland Glades Drainage District",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "council-member-district-3-patricia-weeks",
+   "name": "Patricia Weeks",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-oak-hill-wayne-weeks",
+   "name": "Wayne Weeks",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "mayor-aventura-howard-weiberg",
+   "name": "Howard S. Weiberg",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-aventura-howard-weinberg",
+   "name": "Howard S. Weinberg",
+   "office": "Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-surfside-david-weingot",
+   "name": "David Weingot",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "commissioner-district-5-katherine-weitz",
+   "name": "Katherine Weitz",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "mayor-alachua-walter-welch",
+   "name": "Walter Welch",
+   "office": "Mayor",
+   "county": "Alachua"
+  },
+  {
+   "id": "mayor-district-4-graham-wells",
+   "name": "Graham Wells",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "mayor-arcadia-judy-wertz-strickland",
+   "name": "Judy Wertz-Strickland",
+   "office": "Mayor",
+   "county": "DeSoto"
+  },
+  {
+   "id": "commissioner-palmetto-scott-whitaker",
+   "name": "Scott Whitaker",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "commissioner-district-1-brandy-white",
+   "name": "Brandy White",
+   "office": "Commissioner",
+   "county": "Volusia"
+  },
+  {
+   "id": "councilmember-district-12-randy-white",
+   "name": "Randy White",
+   "office": "Councilmember",
+   "county": "Duval"
+  },
+  {
+   "id": "vice-mayor-district-1-michelle-whitman",
+   "name": "Michelle Whitman",
+   "office": "Vice Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-holmes-beach-carol-whitmore",
+   "name": "Carol Whitmore",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "councilmember-district-7-delarian-wiggins",
+   "name": "Delarian Wiggins",
+   "office": "Councilmember",
+   "county": "Escambia"
+  },
+  {
+   "id": "commissioner-district-2-kerry-wiggins",
+   "name": "Kerry S. Wiggins Sr.",
+   "office": "Commissioner",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-florida-city-trina-wilborn",
+   "name": "Trina Wilborn",
+   "office": "Commissioner",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-zephyrhills-jodi-wilkeson",
+   "name": "Jodi Wilkeson",
+   "office": "Council Member",
+   "county": "Pasco"
+  },
+  {
+   "id": "mayor-belleair-mike-wilkinson",
+   "name": "Mike Wilkinson",
+   "office": "Mayor",
+   "county": "Pinellas"
+  },
+  {
+   "id": "commissioner-district-3-brian-williams",
+   "name": "Brian Williams",
+   "office": "Commissioner",
+   "county": "Manatee"
+  },
+  {
+   "id": "council-member-midway-charles-williams",
+   "name": "Charles Williams",
+   "office": "Council Member",
+   "county": "Gadsden"
   },
   {
    "id": "supervisor-of-elections-holmes-county-h-williams",
@@ -1318,39 +6490,237 @@
    "county": "Holmes"
   },
   {
+   "id": "commissioner-clewiston-jason-williams",
+   "name": "Jason Williams II",
+   "office": "Commissioner",
+   "county": "Hendry"
+  },
+  {
+   "id": "commissioner-district-4-patricia-williams",
+   "name": "Patricia Williams",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "commissioner-trenton-russel-williams",
+   "name": "Russel Williams",
+   "office": "Commissioner",
+   "county": "Gilchrist"
+  },
+  {
+   "id": "chair-disston-island-conservancy-district-disston-island-conservancy-district-sam-williams",
+   "name": "Sam Williams",
+   "office": "Chair, Disston Island Conservancy District",
+   "county": "Glades"
+  },
+  {
+   "id": "commissioner-tallahassee-dianne-williams-cox",
+   "name": "Dianne Williams-Cox",
+   "office": "Commissioner",
+   "county": "Leon"
+  },
+  {
+   "id": "commissioner-cape-canaveral-don-willis",
+   "name": "Don Willis",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "commissioner-district-2-rosemary-wilsen",
+   "name": "Rosemary Wilsen",
+   "office": "Commissioner",
+   "county": "Orange"
+  },
+  {
+   "id": "councilmember-miami-gardens-paul-wilson",
+   "name": "Paul V. Wilson Jr.",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "councilmember-el-portal-charles-winters",
+   "name": "Charles Winters",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "council-member-district-1-dennis-withington",
+   "name": "Dennis Withington",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "vice-mayor-district-5-david-wolf",
+   "name": "David Wolf",
+   "office": "Vice Mayor",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-wildwood-ed-wolf",
+   "name": "Ed Wolf",
+   "office": "Mayor",
+   "county": "Sumter"
+  },
+  {
+   "id": "council-member-hilliard-jared-wollitz",
+   "name": "Jared Wollitz",
+   "office": "Council Member",
+   "county": "Nassau"
+  },
+  {
+   "id": "vice-mayor-montverde-carol-womack",
+   "name": "Carol Womack",
+   "office": "Vice Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "chair-childrens-services-council-of-broward-county-childrens-services-council-of-broward-county-jeffrey-wood",
+   "name": "Jeffrey S. Wood",
+   "office": "Chair, Children's Services Council of Broward County",
+   "county": "Broward"
+  },
+  {
+   "id": "vice-mayor-dade-city-normita-woodard",
+   "name": "Normita Woodard",
+   "office": "Vice Mayor",
+   "county": "Pasco"
+  },
+  {
    "id": "superintendent-of-schools-pinellas-county-public-schools-stephanie-woodford",
    "name": "Stephanie Woodford",
    "office": "Superintendent of Schools",
    "county": "Pinellas"
   },
   {
-   "id": "sheriff-marion-county-billy-woods",
-   "name": "Billy Woods",
-   "office": "Sheriff",
+   "id": "commissioner-district-2-morey-wright",
+   "name": "Morey Wright",
+   "office": "Commissioner",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-montverde-joe-wynkoop",
+   "name": "Joe Wynkoop",
+   "office": "Mayor",
+   "county": "Lake"
+  },
+  {
+   "id": "councilmember-bay-harbor-islands-robert-yaffe",
+   "name": "Robert H. Yaffe",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
+  },
+  {
+   "id": "mayor-sea-ranch-lakes-herb-yardley",
+   "name": "Herb Yardley",
+   "office": "Mayor",
+   "county": "Broward"
+  },
+  {
+   "id": "mayor-winter-haven-brian-yates",
+   "name": "Brian Yates",
+   "office": "Mayor",
+   "county": "Polk"
+  },
+  {
+   "id": "commissioner-melbourne-village-betty-yorio",
+   "name": "Betty Jo Yorio",
+   "office": "Commissioner",
+   "county": "Brevard"
+  },
+  {
+   "id": "council-member-indian-harbour-beach-neil-yorio",
+   "name": "Neil Yorio",
+   "office": "Council Member",
+   "county": "Brevard"
+  },
+  {
+   "id": "mayor-lake-mary-justin-york",
+   "name": "Justin York",
+   "office": "Mayor",
+   "county": "Seminole"
+  },
+  {
+   "id": "commissioner-district-4-shirley-youmans",
+   "name": "Shirley Youmans",
+   "office": "Commissioner",
    "county": "Marion"
   },
   {
-   "id": "county-commissioner-pasco-county-lisa-yeager",
-   "name": "Lisa Yeager",
-   "office": "County Commissioner",
-   "county": "Pasco"
+   "id": "commissioner-alachua-jackson-youmas",
+   "name": "Jackson Youmas",
+   "office": "Commissioner",
+   "county": "Alachua"
+  },
+  {
+   "id": "mayor-west-melbourne-andrea-young",
+   "name": "Andrea Young",
+   "office": "Mayor",
+   "county": "Brevard"
+  },
+  {
+   "id": "vice-mayor-district-1-brandon-young",
+   "name": "Brandon Young",
+   "office": "Vice Mayor",
+   "county": "Volusia"
+  },
+  {
+   "id": "council-member-district-10-chevella-young",
+   "name": "Chevella Young",
+   "office": "Council Member",
+   "county": "Columbia"
+  },
+  {
+   "id": "councilmember-district-5-naya-young",
+   "name": "Naya Young",
+   "office": "Councilmember",
+   "county": "Hillsborough"
+  },
+  {
+   "id": "commissioner-bunnell-pete-young",
+   "name": "Pete Young",
+   "office": "Commissioner",
+   "county": "Flagler"
+  },
+  {
+   "id": "council-member-lantana-mark-zeitler",
+   "name": "Mark Zeitler",
+   "office": "Council Member",
+   "county": "Palm Beach"
+  },
+  {
+   "id": "councilmember-homestead-erica-avila",
+   "name": "Erica G. \u00c1vila",
+   "office": "Councilmember",
+   "county": "Miami-Dade"
   }
  ],
  "summary": {
   "county": {
-   "matched": 432,
-   "ambiguous": 17,
-   "unmatched": 63
+   "matched": 481,
+   "ambiguous": 4,
+   "unmatched": 27
   },
   "state/federal": {
-   "matched": 186,
-   "ambiguous": 4,
+   "matched": 189,
+   "ambiguous": 1,
    "unmatched": 2
   },
   "judges": {
-   "matched": 700,
-   "ambiguous": 24,
-   "unmatched": 38
+   "matched": 749,
+   "ambiguous": 5,
+   "unmatched": 8
+  },
+  "city": {
+   "matched": 0,
+   "ambiguous": 0,
+   "unmatched": 1152,
+   "from official pages": 145
+  },
+  "special districts": {
+   "matched": 19,
+   "ambiguous": 1,
+   "unmatched": 72,
+   "from official pages": 31
   }
  }
 }

@@ -9,8 +9,13 @@ Safety rules:
   * a source that suddenly returns fewer than half its usual records is
     treated as broken, and its previous records are kept
   * rows that cannot be read are reported, never guessed
-  * every change (added, removed, edited) is listed in the report, which the
-    GitHub workflow uses as the body of a pull request for a person to review
+  * changes are published straight away, except a source that would lose
+    several people at once (HOLD_REMOVALS): that source's change is held back
+    and offered as a pull request for a person to check
+  * every change (added, removed, edited) is listed in the report; the full
+    report goes on the workflow run's summary page and is saved with the run
+
+    python -m collector.collect --report report.md --json report.json --proposed proposed.json
 """
 import argparse
 import json
@@ -36,6 +41,9 @@ COLLECTED_FILE = ROOT / "data" / "collected.json"
 # Fields that change on every successful run and are not, by themselves, news.
 VOLATILE_RECORD_FIELDS = {"last_verified", "updated_on"}
 SUSPICIOUS_DROP = 0.5
+# A source whose new list drops this many people (net of new ones), or this share of its list, is held for review.
+HOLD_REMOVALS = 2
+HOLD_SHARE = 0.4
 
 
 def load_json(path: Path, default):
@@ -63,6 +71,9 @@ class SourceResult:
     duplicates_dropped: int = 0
     error: str | None = None
     kept_previous: bool = False
+    level: str = ""
+    failing_since: str | None = None
+    held: bool = False
 
 
 def _substance(record: dict) -> dict:
@@ -91,7 +102,7 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
     now_iso = now.isoformat(timespec="seconds")
     today = now.date().isoformat()
     previous_records = previous.get("records", [])
-    result = SourceResult(key=source["key"], name=source["name"])
+    result = SourceResult(key=source["key"], name=source["name"], level=source.get("level", ""))
     state = {
         "name": source["name"],
         "url": source["url"],
@@ -101,6 +112,8 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
         "last_successful_collection": previous.get("last_successful_collection"),
         "last_error": None,
         "records": previous_records,
+        # The first day of the current run of failures, so the report can tell a new failure from an old one.
+        "failing_since": previous.get("failing_since") or today,
     }
 
     try:
@@ -110,6 +123,7 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
         result.error = state["last_error"] = f"{type(exc).__name__}: {exc}"[:500]
         result.kept_previous = bool(previous_records)
         result.kept = len(previous_records)
+        result.failing_since = state["failing_since"]
         return state, result
 
     result.found = len(raws)
@@ -149,6 +163,7 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
         result.status = state["status"] = "partial" if result.failed_rows else "success"
         state["last_successful_collection"] = now_iso
         state["records"] = new_records
+        state.pop("failing_since", None)
         if result.failed_rows:
             state["last_error"] = result.error = f"{len(result.failed_rows)} row(s) could not be read"
         result.kept = len(new_records)
@@ -158,7 +173,15 @@ def collect_source(source: dict, previous: dict, scraper_factory: Callable, now:
     result.kept_previous = bool(previous_records)
     result.kept = len(previous_records)
     result.with_photo = sum(1 for r in previous_records if r.get("photo_url"))
+    result.failing_since = state["failing_since"]
     return state, result
+
+
+def needs_review(result: SourceResult, previous_count: int) -> bool:
+    """Several people gone at once is the change most likely to be a broken page rather than news."""
+    net_loss = len(result.removed) - len(result.added)
+    return bool(result.removed) and (net_loss >= HOLD_REMOVALS or
+                                     (previous_count and len(result.removed) >= max(2, HOLD_SHARE * previous_count)))
 
 
 def _canonical(collected: dict) -> dict:
@@ -174,13 +197,19 @@ def _label(record: dict) -> str:
     return f"{record['full_name']} ({record['office_title']}, {place})"
 
 
-def write_report(results: list[SourceResult], duplicates: list[tuple], by_id: dict, changed: bool) -> str:
+def write_report(results: list[SourceResult], duplicates: list[tuple], by_id: dict, changed: bool, today: str = "") -> str:
     lines = ["## Collection report", ""]
+    held = [r for r in results if r.held]
     if changed:
-        lines += ["Official sources show changes. Review them below, then **merge** this pull request to publish "
-                  "them, or **close** it to discard them.", ""]
+        lines += ["Changes from official sources were published." + (
+            f" {len(held)} source(s) would lose several people at once; those changes are held back "
+            "(see \"Held for review\")." if held else ""), ""]
     else:
         lines += ["No data changed.", ""]
+    failed = [r for r in results if r.status == "failed"]
+    if failed:
+        lines += [f"**{len(failed)} source(s) failed**; their previous records are still published. "
+                  f"New today: {sum(1 for r in failed if r.failing_since == today)}.", ""]
     lines += ["| Source | Result | Records | With photo | Added | Removed | Changed | Unreadable rows |",
               "|---|---|---:|---:|---:|---:|---:|---:|"]
     labels = {"success": "OK", "partial": "OK, some rows unreadable", "failed": "Failed"}
@@ -193,13 +222,19 @@ def write_report(results: list[SourceResult], duplicates: list[tuple], by_id: di
         if not (r.error or r.added or r.removed or r.changed or r.failed_rows):
             continue
         lines += [f"### {r.name}", ""]
+        if r.held:
+            lines += ["> **Held for review:** this list would drop several people at once, so the published list "
+                      "is unchanged. If the change below is right, merge the pull request to publish it.", ""]
+        if r.failing_since:
+            lines.append(f"Failing since {r.failing_since}.")
+            lines.append("")
         if r.error:
             lines.append(f"> {r.error}" + (" The previous records are still published." if r.kept_previous else ""))
             lines.append("")
         if r.added:
             lines += ["**New**", ""] + [f"- {_label(x)}" for x in r.added] + [""]
         if r.removed:
-            lines += ["**No longer listed** (they may have left office; check before merging)", ""]
+            lines += ["**No longer listed** (they may have left office)", ""]
             lines += [f"- {_label(x)}" for x in r.removed] + [""]
         if r.changed:
             lines += ["**Changed**", ""]
@@ -255,6 +290,13 @@ def run(sources_file: Path = SOURCES_FILE, collected_file: Path = COLLECTED_FILE
             new_sources[source["key"]] = state
             results.append(result)
 
+    proposed = {"sources": dict(new_sources)}
+    for source, result in zip(todo, results):
+        before = previous_sources.get(source["key"])
+        if before and needs_review(result, len(before.get("records", []))):
+            result.held = True
+            new_sources[source["key"]] = {**new_sources[source["key"]], "records": before.get("records", []),
+                                          "held_for_review": True}
     collected = {"sources": new_sources}
     changed = _canonical(collected) != _canonical(previous)
     write_json(collected_file, collected)
@@ -264,8 +306,10 @@ def run(sources_file: Path = SOURCES_FILE, collected_file: Path = COLLECTED_FILE
     duplicates = find_duplicate_candidates(all_records)
     return {
         "changed": changed,
+        "held": [r.key for r in results if r.held],
+        "proposed": proposed,
         "failed": [r.key for r in results if r.status == "failed"],
-        "report": write_report(results, duplicates, by_id, changed),
+        "report": write_report(results, duplicates, by_id, changed, now.date().isoformat()),
         "results": results,
     }
 
@@ -275,18 +319,28 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--only", default="", help="collect a single source by its key")
     parser.add_argument("--report", default="", help="write a Markdown report to this file")
+    parser.add_argument("--json", default="", help="write one line per source (status, error, failing since) as JSON")
+    parser.add_argument("--proposed", default="", help="write collected.json with held-back changes applied")
     args = parser.parse_args()
 
     outcome = run(only=args.only.strip() or None)
     if args.report:
         Path(args.report).write_text(outcome["report"], encoding="utf-8")
-    print(outcome["report"])
+    if args.json:
+        Path(args.json).write_text(json.dumps([
+            {"key": r.key, "name": r.name, "level": r.level, "status": r.status, "error": r.error,
+             "failing_since": r.failing_since, "held": r.held, "added": len(r.added), "removed": len(r.removed),
+             "changed": len(r.changed)} for r in outcome["results"]], indent=1) + "\n", encoding="utf-8")
+    if args.proposed and outcome["held"]:
+        write_json(Path(args.proposed), outcome["proposed"])
+    print(outcome["report"][:20000])
 
     github_output = os.environ.get("GITHUB_OUTPUT")
     if github_output:
         with open(github_output, "a", encoding="utf-8") as fh:
             fh.write(f"changed={'true' if outcome['changed'] else 'false'}\n")
             fh.write(f"failed={'true' if outcome['failed'] else 'false'}\n")
+            fh.write(f"held={'true' if outcome['held'] else 'false'}\n")
     sys.exit(0)
 
 

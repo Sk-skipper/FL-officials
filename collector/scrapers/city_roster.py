@@ -210,9 +210,15 @@ def _same_person(a: str, b: str) -> bool:
         t = [re.sub(r"[^a-z]", "", w) for w in n.lower().split() if w.strip(".,") not in ("jr", "sr", "ii", "iii", "iv")]
         return [w for w in t if w]
     pa, pb = parts(a), parts(b)
-    if not pa or not pb or pa[-1] != pb[-1]:
+    if not pa or not pb:
         return False
     fa, fb = pa[0], pb[0]
+    if not pa or not pb:
+        return False
+    if pa[-1] != pb[-1]:
+        # A one-letter slip in the surname ("Weiberg" in a photo caption, "Weinberg" in the heading) with the same
+        # first name and middle initial is the same person; a real namesake on one council is far rarer.
+        return fa == fb and len(pa[-1]) > 4 and pa[1:-1] == pb[1:-1] and SequenceMatcher(None, pa[-1], pb[-1]).ratio() >= 0.85
     return fa.startswith(fb) or fb.startswith(fa) or SequenceMatcher(None, a.lower(), b.lower()).ratio() > 0.85
 
 
@@ -411,6 +417,15 @@ def find_board(lines: list[str], role_pattern: str, member_title: str) -> list[d
     return out
 
 
+_VACANT = re.compile(r"(?i)^(?:(?:seat|district|group|ward|zone)\s*#?\s*\w{1,3}\s*[,:\-–—|]?\s*)?(?:\(?(?:vacant|vacancy)\)?)"
+                     r"(?:\s*(?:seat|position)?\s*[,:\-–—|(]?\s*(?:seat|district|group|ward)?\s*#?\s*\w{0,3}\)?)?$")
+
+
+def count_vacancies(lines: list[str]) -> int:
+    """Lines that only say a seat is vacant ("Vacant", "Seat 3 - Vacant", "District 2: Vacancy")."""
+    return len({line.lower() for line in lines if len(line) <= 40 and _VACANT.match(line.strip())})
+
+
 def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
     member_title = config.get("member_title") or "Commissioner"
     exclude = {e.lower() for e in config.get("exclude") or []}
@@ -434,8 +449,11 @@ def parse_city_roster(pages: list[tuple[str, str]], config: dict) -> list[dict]:
     members = [m for m in members if plain(m["name"]) not in exclude and m["name"].lower() not in exclude]
     for html, url in pages:
         match_photos(html, url, members)
+        match_emails(html, members)
     seats = int(config.get("seats") or 5)
-    if not seats - 2 <= len(members) <= seats + 2:
+    # A seat the page marks "Vacant" is still a seat: count it, so a vacancy doesn't read as a broken page.
+    vacant = count_vacancies([line for html, url in pages for line in page_lines(html, config.get("selector"), url)])
+    if not seats - 2 <= len(members) + vacant <= seats + 2:
         names = ", ".join(f"{m['name']} ({m['title']})" for m in members[:12])
         raise FetchError(f"Expected about {seats} seats on the page but found {len(members)}: {names or 'none'}. "
                          "The page may have changed; check it and update the config.")
@@ -542,3 +560,61 @@ def match_photos(html: str, url: str, members: list[dict]) -> None:
         if counts[src] == 1:
             # The site only shows https images; most city sites serve the same file over https.
             members[i]["photo_url"] = re.sub(r"^http://", "https://", src)
+
+
+_ADDRESS = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
+
+
+_ROLE_ADDRESS = re.compile(r"^(?:(?:vice)?mayor|deputymayor|seat\d+|district\d+|ward\d+|group\d+|(?:commissioner|council(?:member|man|woman)?)\w*)$")
+
+
+def _address_fits(local: str, name: str) -> bool:
+    """An address is theirs only if it names them (jdoe@, jane.doe@, commissionerdoe@) or their seat (mayor@, seat3@);
+    an aide's or the clerk's address beside their name is not."""
+    flat = re.sub(r"[^a-z0-9]", "", local)
+    parts = [_fold(p) for p in re.split(r"[\s.,-]+", name) if len(_fold(p)) > 1 and not re.fullmatch(r"(?i)jr|sr|ii|iii|iv|vi|esq", p)]
+    if not parts:
+        return False
+    last, first = parts[-1], parts[0]
+    return bool(_ROLE_ADDRESS.match(flat) or (len(last) >= 3 and last in flat) or (len(first) >= 4 and first in flat)
+                or any(len(p) >= 4 and p in flat for p in parts[1:-1]))
+
+
+def match_emails(html: str, members: list[dict]) -> None:
+    """Give each member without an email the mailto link in their own block of the page: the nearest enclosing
+    element that names them and no other member. A shared address (clerk@, the whole commission) goes to nobody."""
+    soup = _read_only_soup(html)
+    surnames = []
+    for m in members:
+        parts = [p for p in re.split(r"[\s.,]+", m["name"]) if len(p) > 1 and not re.fullmatch(r"(?i)jr|sr|ii|iii|iv|esq|phd|md", p)]
+        surnames.append(_fold(parts[-1]) if len(parts) > 1 else None)
+    chosen: dict[int, str] = {}
+    for a in soup.select("a[href^='mailto:' i]"):
+        found = _ADDRESS.search(a["href"]) or _ADDRESS.search(a.get_text(" "))
+        if not found:
+            continue
+        address = found.group(0).lower()
+        block, owner = a, None
+        for _ in range(6):
+            block = block.parent
+            if block is None:
+                break
+            text = " ".join(re.sub(r"[^a-z]", " ", unicodedata.normalize("NFKD", block.get_text(" ")).encode("ascii", "ignore").decode().lower()).split())
+            named = [i for i, last in enumerate(surnames) if last and re.search(rf"\b{re.escape(last)}\b", text)]
+            if len(named) == 1:
+                owner = named[0]
+                break
+            if len(named) > 1:
+                break  # the block covers several members: this link isn't one person's
+        local = address.split("@")[0]
+        if owner is None:  # no block of its own: the address itself may name them (jdoe@, jane.doe@)
+            by_name = [i for i, last in enumerate(surnames) if last and len(last) > 3 and last in re.sub(r"[^a-z]", "", local)]
+            owner = by_name[0] if len(by_name) == 1 else None
+        if owner is not None and not members[owner].get("email") and _address_fits(local, members[owner]["name"]):
+            chosen.setdefault(owner, address)
+    counts: dict[str, int] = {}
+    for address in chosen.values():
+        counts[address] = counts.get(address, 0) + 1
+    for i, address in chosen.items():
+        if counts[address] == 1:
+            members[i]["email"] = address

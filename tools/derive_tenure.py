@@ -24,7 +24,7 @@ import json
 import re
 import sys
 import unicodedata
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -55,8 +55,10 @@ OFFICES = [
     (r"^Attorney General$", "Attorney General", "state", 4, False, 8),
     (r"^Chief Financial Officer$", "Chief Financial Officer", "state", 4, False, 8),
     (r"^Commissioner of Agriculture$", "Commissioner of Agriculture", "state", 4, False, 8),
-    (r"^(Chief )?Justice of the Florida Supreme Court$", "Supreme Court Justice", "state", 6, True, None),
-    (r"District Court of Appeal", "District Court of Appeal", "state", 6, True, None),
+    # Merit retention for justices and appellate judges is on the November general ballot (Art. V, s. 10), not the
+    # August primary where trial judges' nonpartisan races are, so these are not marked nonpartisan-primary.
+    (r"^(Chief )?Justice of the Florida Supreme Court$", "Supreme Court Justice", "state", 6, False, None),
+    (r"District Court of Appeal", "District Court of Appeal", "state", 6, False, None),
     (r"^Circuit Judge$", "Circuit Judge", "circuit", 6, True, None),
     (r"^State Attorney$", "State Attorney", "circuit", 4, False, None),
     (r"^Public Defender$", "Public Defender", "circuit", 4, False, None),
@@ -92,8 +94,35 @@ def fold(text: str) -> str:
 
 
 def canon(first: str) -> str:
-    f = fold(first)
+    """The given name alone: 'Michael A.' -> michael, 'Sherwood "Chip"' -> sherwood, 'W. Greg' -> greg."""
+    tokens = [fold(t) for t in re.sub(r"[\"\u201c\u201d(].*?[\"\u201c\u201d)]", " ", first or "").split()]
+    tokens = [t for t in tokens if t]
+    named = [t for t in tokens if len(t) > 1]
+    f = named[0] if named else (tokens[0] if tokens else "")
     return NICKNAMES.get(f, f)
+
+
+SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def surname_tokens(last: str) -> frozenset:
+    return frozenset(t for t in (fold(p) for p in re.split(r"[\s-]+", last or "")) if t and t not in SUFFIXES)
+
+
+def one_surname(sets: list) -> bool:
+    """Surnames that chain together by a shared part: Cabrera / Busatta Cabrera / Busatta; Bauer Jr. / Bauer Jr."""
+    sets = [x for x in sets if x]
+    if not sets:
+        return False
+    joined, rest = set(sets[0]), sets[1:]
+    while rest:
+        nxt = [x for x in rest if x & joined]
+        if not nxt:
+            return False
+        for x in nxt:
+            joined |= x
+            rest.remove(x)
+    return True
 
 
 def surname_ok(ours: str, theirs: str) -> bool:
@@ -133,11 +162,27 @@ def circuit_of(r: dict) -> int | None:
     return int(m.group(1)) if m else {"Broward": 17, "Miami-Dade": 11}.get(r.get("county"))
 
 
+# Special districts in the records, with the term state law sets for each kind (None: set by each district's act).
+SPECIAL_OFFICES = {"Community Development District": 4, "Fire Protection Districts": 4, "Soil & Water Conservation Districts": 4,
+                   "Water Control Districts": None, "Special Tax Districts": None, "Mosquito Control Districts": None,
+                   "Hospital Authority": None, "Port Authority": None, "Airport Authority": None, "Library District": None,
+                   "County Development": None, "County Miscellaneous Boards": None, "Local Miscellaneous or Other": None}
+CITY_OFFICES = ("City Commissioner/Council", "Mayor")
+
+
 def office_for(r: dict):
+    if r.get("special_district"):
+        return tuple(SPECIAL_OFFICES), "county", None, True, None
+    if r["government_level"] == "municipal":
+        return CITY_OFFICES, "county", None, True, None  # city terms vary by charter (2-4 years)
     for pattern, office, scope, term, nonpartisan, limit in OFFICES:
         if re.search(pattern, r["office_title"]):
             return office, scope, term, nonpartisan, limit
     return None
+
+
+def is_office(row: dict, office) -> bool:
+    return row["office"] in office if isinstance(office, tuple) else row["office"] == office
 
 
 def in_scope(r: dict, row: dict, scope: str) -> bool:
@@ -171,10 +216,23 @@ def label(row: dict) -> str:
 
 def derive(r: dict, rows: list[dict], office: str, term: int, nonpartisan: bool, limit: int | None) -> dict:
     won = sorted([x for x in rows if x["outcome"] in WON], key=lambda x: x["date"])
-    same = [x for x in won if x["office"] == office]
+    same = [x for x in won if is_office(x, office)]
     years = sorted({int(x["date"][:4]) for x in same})
     out: dict = {"wins_in_office": years}
     if not years:
+        return out
+    if term is None:
+        # Term set by statute for this kind of district, else by the spacing of this person's own re-elections.
+        statutory = {SPECIAL_OFFICES.get(x["office"]) for x in same} - {None}
+        gaps = [b - a for a, b in zip(years, years[1:]) if 2 <= b - a <= 4]
+        term = statutory.pop() if len(statutory) == 1 else (min(gaps) if gaps else None)
+        out["term_basis"] = "state law for this kind of district" if statutory or (len({SPECIAL_OFFICES.get(x["office"]) for x in same} - {None}) == 1) \
+            else ("spacing of their own re-elections" if term else None)
+    if term is None:
+        start = years[-1]
+        out["serving_since"] = {"year": start, "at_least": True, "link": "voter id",
+                                "basis": "most recent win in this office; the term length isn't known, so earlier service isn't joined up"}
+        out["next_election"] = {"year": None, "basis": "this office's term is set by its charter or act and isn't in the records"}
         return out
     # The current continuous run: walk back from the latest win while each gap is no longer than one term.
     run = [years[-1]]
@@ -184,17 +242,23 @@ def derive(r: dict, rows: list[dict], office: str, term: int, nonpartisan: bool,
         else:
             break
     start = run[0]
-    unrecorded = any(x["office"] == office and x["outcome"] == "not recorded" and int(x["date"][:4]) >= start - term for x in rows)
-    first_row = next(x for x in same if int(x["date"][:4]) == start)
+    unrecorded = any(is_office(x, office) and x["outcome"] == "not recorded" and int(x["date"][:4]) >= start - term for x in rows)
+    first_row = next((x for x in same if int(x["date"][:4]) == start), same[0])
     out["serving_since"] = {"year": start, "at_least": start - term < RECORDS_START or unrecorded,
                             "link": first_row.get("link", "voter id"),
                             "basis": "first win of continuous service in this office, Florida Division of Elections records"}
+    if isinstance(office, str) and re.search(r"Judge|Justice|Court", office):
+        # Most Florida judges are appointed by the Governor and first appear on the ballot a year or two later; a
+        # blind check against court bios found the first win 1-3 years after the bench start for 10 of 11 judges.
+        out["serving_since"].update(at_least=True, basis="first time on the ballot for this seat (Florida Division of "
+                                    "Elections records); judges are usually appointed by the Governor first, so most "
+                                    "took the bench a year or more before this")
     # Earlier offices this same person won, before the current run began.
     spans: dict[str, list[int]] = defaultdict(list)
     links: dict[str, set] = defaultdict(set)
     for x in won:
         y = int(x["date"][:4])
-        if x["office"] != office and y < start:
+        if not is_office(x, office) and y < start:
             spans[label(x)].append(y)
             links[label(x)].add(x.get("link", "voter id"))
     out["previously"] = [{"office": k, "from": min(v), "last_won": max(v), "link": "voter id" if "voter id" in links[k] else "name"}
@@ -216,7 +280,7 @@ def derive(r: dict, rows: list[dict], office: str, term: int, nonpartisan: bool,
         nxt = anchor + term
         if general_day(nxt) < TODAY:
             # The seat's regular election has already happened and this person didn't win it: they are leaving office.
-            ran = [x for x in rows if x["office"] == office and int(x["date"][:4]) == nxt]
+            ran = [x for x in rows if is_office(x, office) and int(x["date"][:4]) == nxt]
             out["next_election"] = {"year": None, "leaving": True, "seat_election": nxt,
                                     "basis": f"{term}-year term won in {anchor}; the seat was on the {nxt} ballot and "
                                              + ("they did not win it" if ran else "they were not on it")
@@ -237,14 +301,14 @@ def name_linked(r: dict, rows: list[dict], office: str, scope: str, by_last: dic
     """The same person's records from before 2012 (no voter id): same surname and first name, and either the same office
     and seat as now, or any office in a county where their voter-id records place them. Marked link="name"."""
     counties = {x["county"] for x in rows if x["county"]} | {COUNTY_CODE.get(c) for c in [r.get("county"), *(r.get("counties") or [])] if c}
-    seats = {(x["juris1"].lstrip("0"), x["juris2"].lstrip("0")) for x in rows if x["office"] == office}
+    seats = {(x["juris1"].lstrip("0"), x["juris2"].lstrip("0")) for x in rows if is_office(x, office)}
     out = []
     for row in by_last.get(fold(r["last_name"]), []):
         if first_score(r, row) < 3 and not row["person"].startswith("n"):
             continue  # another voter id: only an exact first name (or its nickname) counts
         if first_score(r, row) < 2:
             continue
-        same_seat = row["office"] == office and in_scope(r, row, scope) and (
+        same_seat = is_office(row, office) and in_scope(r, row, scope) and (
             scope in ("state", "county") or (row["juris1"].lstrip("0"), row["juris2"].lstrip("0")) in seats)
         nearby = row["county"] in counties if row["county"] else False
         if (same_seat or nearby) and row["person"] not in {x["person"] for x in rows}:
@@ -256,17 +320,84 @@ def same_person(keys: list[str], by_person: dict, office: str, scope: str = "cou
     """Several voter-record keys, one name, one seat (and at most one county): the same person who re-registered, or
     their records before and after voter ids began in 2012. Different people would have to share a name and have won
     the very same seat. Blank counties in the records are ignored."""
-    names, seats, counties = set(), set(), set()
+    firsts, lasts, seats, counties = set(), [], set(), set()
     for k in keys:
-        rows = [x for x in by_person[k] if x["office"] == office and x["outcome"] in WON]
-        names |= {(fold(x["last"]), canon(x["first"])) for x in rows}
+        rows = [x for x in by_person[k] if is_office(x, office) and x["outcome"] in WON]
+        firsts |= {canon(x["first"]) for x in rows}
+        lasts += [surname_tokens(x["last"]) for x in rows]
         seats |= {(x["juris1"].lstrip("0"), x["juris2"].lstrip("0")) for x in rows}
         counties |= {x["county"] for x in rows if x["level"] == "LOC" and x["county"]}
         if scope in ("district", "state"):  # district numbers change with redistricting: compare home counties instead
             counties |= {x["county"] for x in rows if x["county"]}
     if scope in ("district", "state"):
-        return len(names) == 1 and len(counties) <= 2  # one home county (two at most, for a move across a line)
-    return len(names) == 1 and len(seats) == 1 and len(counties) <= 1
+        return len(firsts) == 1 and one_surname(lasts) and len(counties) <= 2  # one home county (two at most, for a move across a line)
+    names = len(firsts) == 1 and one_surname(lasts)
+    if len([k for k in keys if not k.startswith("n")]) <= 1 and names and len(counties) <= 1:
+        # Records before 2012 (name keys) and one voter id after: one person whose seat number changed (redistricting,
+        # a move to an at-large seat). Name keys already share name, county and office.
+        return True
+    return names and len(seats) == 1 and len(counties) <= 1
+
+
+MONTHS = {"jan": "January", "feb": "February", "mar": "March", "apr": "April", "may": "May", "jun": "June", "jul": "July",
+          "aug": "August", "sep": "September", "oct": "October", "nov": "November", "dec": "December"}
+
+
+def apply_wikipedia_terms(tenure: dict, officials: list[dict]) -> None:
+    """The date each took office from the Wikipedia infobox (tools/wikipedia_terms.py). Election records date a
+    win, not an appointment, so where Wikipedia's date is earlier (an appointee, or service before 1996) it wins."""
+    path = ROOT / "data/wikipedia_terms.json"
+    terms = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    ids = {r["id"] for r in officials}
+    for rid, w in terms.items():
+        if rid.startswith("_") or rid not in ids:
+            continue
+        out = tenure.setdefault(rid, {"match": {"method": "Wikipedia article", "score": None}})
+        have = out.get("serving_since") or {}
+        if have.get("year") and have["year"] <= w["year"] and not have.get("at_least"):
+            continue  # the records already go back at least as far
+        how = f"appointed by {w['appointed_by']}" if w.get("appointed_by") else "took office"
+        when = w["assumed_office"]
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", when):
+            d = date.fromisoformat(when)
+            when = f"{d:%B} {d.day}, {d.year}"
+        basis = f"Wikipedia: {how} {when}"
+        if have.get("year"):
+            basis += f"; first won election in this office {have['year']} (state election records)"
+        out["serving_since"] = {"year": w["year"], "at_least": False, "link": "wikipedia", "basis": basis,
+                                "source": w["wikipedia_url"], **({"appointed": True} if w.get("appointed_by") else {})}
+
+
+def apply_roster_terms(tenure: dict, review: dict, officials: list[dict]) -> None:
+    """City and special-district officials whose own pages state a term (tools/roster_terms.py): fills what the
+    election records left empty, quoting the page."""
+    terms = json.loads((ROOT / "data/roster_terms.json").read_text(encoding="utf-8")) if (ROOT / "data/roster_terms.json").exists() else {}
+    by_id = {r["id"]: r for r in officials}
+    for rid, t in terms.items():
+        if rid.startswith("_") or rid not in by_id:
+            continue
+        r = by_id[rid]
+        out = tenure.setdefault(rid, {"match": {"method": "the official's own page", "score": None}})
+        cite = f"on {r.get('source_url')}"
+        if t.get("since") and not out.get("serving_since"):
+            since = t["since"]
+            out["serving_since"] = {"year": since["year"], "at_least": since.get("at_least", True), "link": "official page",
+                                    "basis": f"the official's page: \u201c{since['quote']}\u201d", "source": r.get("source_url")}
+            if since.get("office") == "the council":
+                out["serving_since"]["basis"] += " (service on the council, which may predate this office)"
+        if t.get("term_ends") and not (out.get("next_election") or {}).get("year"):
+            end = t["term_ends"]
+            month = (end.get("month") or "")[:3]
+            year = end["year"] - 1 if month == "jan" else end["year"]
+            basis = f"the official's page: \u201c{end['quote']}\u201d; the election is held at or just before the end of the term"
+            if year <= TODAY.year:
+                basis += f". The term ends in {end['year']}: the page may not show this year's result yet"
+            out["next_election"] = {"year": year, "basis": basis, "source": r.get("source_url"),
+                                    "term_ends": f"{MONTHS.get(month, '')} {end['year']}".strip()}
+        group = "special districts" if r.get("special_district") else "city"
+        s = review["summary"].setdefault(group, {"matched": 0, "ambiguous": 0, "unmatched": 0})
+        s["from official pages"] = s.get("from official pages", 0) + 1
+        review["unmatched"] = [u for u in review["unmatched"] if u["id"] != rid]
 
 
 def main() -> None:
@@ -283,6 +414,7 @@ def main() -> None:
             by_office[row["office"]].append(row)
     officials = json.loads((ROOT / "site/data/officials.json").read_text(encoding="utf-8"))["officials"]
     tenure, review = {}, {"ambiguous": [], "unmatched": [], "summary": {}}
+    namesakes = Counter((fold(r["last_name"]), canon(r["first_name"]), r["office_title"]) for r in officials)
     for r in officials:
         spec = office_for(r)
         if not spec:
@@ -291,15 +423,23 @@ def main() -> None:
         if only and scope in ("county", "circuit") and not ({r.get("county"), *(r.get("counties") or [])} & only):
             continue
         group = {"state": "state/federal", "district": "state/federal", "circuit": "judges", "county": "county"}[scope]
-        if "Judge" in office or "Justice" in office or "Court" in office:
+        if isinstance(office, str) and ("Judge" in office or "Justice" in office or "Court" in office):
             group = "judges"
+        if r.get("special_district"):
+            group = "special districts"
+        elif r["government_level"] == "municipal":
+            group = "city"
         candidates: dict[str, int] = {}
-        for row in by_office[office]:
-            if not in_scope(r, row, scope) or not surname_ok(r["last_name"], row["last"]):
+        blank_only: set[str] = set()  # people matched only on rows with no county (address withheld by law)
+        seen_in_county: set[str] = set()
+        for row in [x for o in (office if isinstance(office, tuple) else (office,)) for x in by_office[o]]:
+            blank = scope == "county" and not row["county"]
+            if not (blank or in_scope(r, row, scope)) or not surname_ok(r["last_name"], row["last"]):
                 continue
             score = first_score(r, row)
-            if not score:
+            if not score or (blank and (score < 3 or namesakes[(fold(r["last_name"]), canon(r["first_name"]), r["office_title"])] > 1)):
                 continue
+            (blank_only if blank else seen_in_county).add(row["person"])
             if r.get("district") and num(row["juris2"] if scope == "circuit" else row["juris1"]) == num(r["district"]):
                 score += 2
             candidates[row["person"]] = max(candidates.get(row["person"], 0), score)
@@ -313,6 +453,8 @@ def main() -> None:
             rows = [x for p in person.split("+") for x in by_person[p]]
             rows += name_linked(r, rows, office, scope, by_last)
             method = {5: "exact name + seat", 3: "exact name"}.get(strong[0][0], "nickname / middle name / initial")
+            if set(person.split("+")) <= blank_only - seen_in_county:
+                method += "; the records leave out the county (address withheld by law), and no other official has this name and office"
             tenure[r["id"]] = {"person": person.split("+")[0], "match": {"method": method, "score": strong[0][0],
                                **({"voter_records": len(person.split("+"))} if "+" in person else {})},
                                **derive(r, rows, office, term, nonpartisan, limit)}
@@ -324,12 +466,15 @@ def main() -> None:
         else:
             review["unmatched"].append({"id": r["id"], "name": r["full_name"], "office": r["office_title"], "county": r.get("county")})
             s["unmatched"] += 1
+    apply_roster_terms(tenure, review, officials)
+    apply_wikipedia_terms(tenure, officials)
     (ROOT / "data/tenure.json").write_text(json.dumps({"_how_to": "Generated by tools/derive_tenure.py; see its docstring.",
                                                        "_as_of": TODAY.isoformat(), **tenure}, indent=1) + "\n", encoding="utf-8")
     (ROOT / "data/tenure_review.json").write_text(json.dumps(review, indent=1) + "\n", encoding="utf-8")
     for group, s in review["summary"].items():
-        total = sum(s.values())
-        print(f"{group:15} matched {s['matched']:4}/{total:<4}  ambiguous {s['ambiguous']:3}  unmatched {s['unmatched']:3}", file=sys.stderr)
+        total = s["matched"] + s["ambiguous"] + s["unmatched"]
+        print(f"{group:17} election records {s['matched']:4}/{total:<4}  ambiguous {s['ambiguous']:3}  unmatched {s['unmatched']:4}"
+              f"  official pages {s.get('from official pages', 0):3}", file=sys.stderr)
 
 
 if __name__ == "__main__":

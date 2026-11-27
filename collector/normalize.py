@@ -161,6 +161,9 @@ def normalize_email(raw: object) -> str | None:
     text = clean_text(raw).lower()
     if text.startswith("mailto:"):
         text = text[7:].split("?")[0]
+        # Hand-typed links like "mailto:email to:jdoe@city.gov" or "mailto: jdoe@city.gov": keep the address.
+        found = re.search(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+", text)
+        text = found.group(0) if found else text
     return text if _EMAIL.match(text) else None
 
 

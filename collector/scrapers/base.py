@@ -80,6 +80,7 @@ class PoliteHttpClient:
         self._schedule = schedule
         self._robots: dict[str, RobotFileParser | None] = schedule.robots if schedule else {}
         self._robots_failed: dict[str, float] = {}  # origin -> when robots.txt last could not be read
+        self._robots_problem: dict[str, str] = {}  # origin -> why it could not be read
 
     # -- robots.txt ---------------------------------------------------------
     def _robots_for(self, url: str) -> RobotFileParser | None:
@@ -125,8 +126,10 @@ class PoliteHttpClient:
             parser = RobotFileParser()
             parser.parse(["User-agent: *", "Disallow: /"])
             self._robots_failed[origin] = self._clock()
+            self._robots_problem[origin] = problem
         else:
             self._robots_failed.pop(origin, None)
+            self._robots_problem.pop(origin, None)
         self._robots[origin] = parser
         return parser
 
@@ -146,6 +149,11 @@ class PoliteHttpClient:
     def check_allowed(self, url: str) -> None:
         parser = self._robots_for(url)
         if parser is not None and not parser.can_fetch(self.user_agent, url):
+            parts = urlsplit(url)
+            problem = self._robots_problem.get(f"{parts.scheme}://{parts.netloc}")
+            if problem:  # not a refusal: the site's robots.txt couldn't be read, so the standard says wait
+                raise RobotsDisallowed(f"robots.txt could not be read ({problem}), so {url} was not collected "
+                                       "(RFC 9309: an unreachable robots.txt means wait and try again later)")
             raise RobotsDisallowed(f"robots.txt disallows collecting {url}")
 
     # -- requests -----------------------------------------------------------

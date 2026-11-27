@@ -30,6 +30,7 @@ import {
   plural,
   pointInGeometry,
   representativesFor,
+  rosterSection,
   safeUrl,
   seatText,
   sortRecords,
@@ -639,7 +640,7 @@ function colleaguesPanel(r, records) {
   return `<section class="panel"><h2>${esc(heading)}</h2>
     <ul class="peer-list">${peers.slice(0, 12).map((x) => `<li><a href="${profileHref(x)}">${avatar(x, "sm")}<span><span class="strong">${esc(x.full_name)}</span>
       <span class="muted small">${esc(x.office_title)}${seatText(x) ? ` · ${esc(seatText(x))}` : ""}</span></span></a></li>`).join("")}</ul>
-    ${peers.length > 12 ? `<p class="small"><a href="county.html?name=${encodeURIComponent(r.county || "")}">See all ${peers.length + 1}</a></p>` : ""}</section>`;
+    ${peers.length > 12 ? `<p class="small"><a href="county.html?name=${encodeURIComponent(r.county || "")}&section=${encodeURIComponent(rosterSection(r))}">See all ${peers.length + 1}</a></p>` : ""}</section>`;
 }
 const RANK_ORDER = { Mayor: 0, "County Mayor": 0, Chair: 1, "Vice Mayor": 1, "Deputy Mayor": 1, "Vice Chair": 2, "Superintendent of Schools": 3 };
 
@@ -733,7 +734,10 @@ function aboutPanel(r) {
     const span = years === null ? "" : years < 1 ? " <span class=\"muted\">(newly in office)</span>"
       : ` <span class="muted">(${atLeast ? "at least " : ""}${plural(years, "year")})</span>`;
     const wins = (r.tenure?.wins_in_office || []).filter((y) => y >= Number(String(bio.serving_since).slice(0, 4)));
-    const elected = wins.length > 1 ? `<br><span class="muted small">Elected ${wins[0]}; re-elected ${wins.slice(1).join(", ")}</span>` : "";
+    const since = r.tenure?.serving_since || {};
+    const elected = since.link === "wikipedia" || since.link === "official page"
+      ? `<br><span class="muted small">${esc(since.basis.replace(/^Wikipedia: /, "").replace(/^the official's page: /, "Their page: ").replace(/^./, (c) => c.toUpperCase()))}</span>`
+      : wins.length > 1 ? `<br><span class="muted small">Elected ${wins[0]}; re-elected ${wins.slice(1).join(", ")}</span>` : "";
     facts.push(["In this office since", `${atLeast ? "At least " : ""}${esc(formatPartialDate(bio.serving_since))}${span}${elected}`]);
   }
   if (bio.term_ends) facts.push(["Current term ends", esc(formatPartialDate(bio.term_ends))]);
@@ -1141,7 +1145,8 @@ function county() {
     document.title = `${name} County | Florida Government Officials Directory`;
     const all = sortRecords(records.filter((r) => inCounty(r, name, true)), "level");
     const towns = [...new Set(all.map((r) => r.municipality).filter(Boolean))].sort();
-    let level = "";
+    let level = params().get("level") || "";
+    let section = params().get("section") || "";  // e.g. "Circuit Court judges", from a "See all" link
 
     app.innerHTML = `
       <a class="back" href="counties.html">${ICON.back}All counties</a>
@@ -1155,6 +1160,7 @@ function county() {
               ${["", ...LEVELS].map((value) => `<button type="button" class="chip" data-level="${value}" aria-pressed="${value === ""}">${value ? LEVEL_LABELS[value] : "All levels"}</button>`).join("")}
             </div>
           </div>
+          <div id="county-filter"></div>
           <div id="county-officials"></div>
       </section>
         <div class="grid-2 gap-top">
@@ -1172,7 +1178,13 @@ function county() {
       </div>`;
 
     const draw = () => {
-      const shown = level ? all.filter((r) => r.government_level === level) : all;
+      setParam("level", level);
+      setParam("section", section);
+      const inSection = section ? all.filter((r) => rosterSection(r) === section) : all;
+      const shown = level ? inSection.filter((r) => r.government_level === level) : inSection;
+      $("#county-filter").innerHTML = section ? `<p class="filter-pill">Showing only <strong>${esc(section)}</strong>
+        <span class="muted">(${formatNumber(inSection.length)})</span>
+        <button type="button" class="link-button" data-clear-section>Show everyone in ${esc(name)} County</button></p>` : "";
       $("#county-officials").innerHTML = shown.length
         ? officialsTable(shown)
         : empty("No officials found for this view", level ? "There are no records at this level for this county yet." : "No source currently lists officials for this county.");
@@ -1185,12 +1197,18 @@ function county() {
       for (const chip of app.querySelectorAll("[data-level]")) chip.setAttribute("aria-pressed", String(chip.dataset.level === level));
     };
     app.addEventListener("click", (event) => {
+      if (event.target.closest("[data-clear-section]")) {
+        section = "";
+        draw();
+        return;
+      }
       const chip = event.target.closest("[data-level]");
       if (!chip) return;
       level = chip.dataset.level;
       draw();
     });
     draw();
+    if (section) $("#county-filter")?.scrollIntoView({ block: "start" });
   }, "Loading county");
 }
 
@@ -1869,7 +1887,7 @@ function reps() {
         ${hasSpecial ? `<div data-level="special">${specialSummary(place)}</div>` : ""}
         ${judges.length ? `<details class="roster-section fine" data-level="courts"><summary><h4>Courts <span class="count">${formatNumber(judges.length)}</span></h4></summary>
           ${groupRoster(judges).map((g) => g.sections.map((s) => `<h4 class="gap-top">${esc(s.name)} <span class="count">${formatNumber(s.items.length)}</span></h4>
-            ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
+            ${s.items.length > LONG_SECTION ? `<p class="small"><a href="county.html?name=${encodeURIComponent(county)}&section=${encodeURIComponent(s.name)}">See all ${formatNumber(s.items.length)} on the ${esc(county)} County page</a></p>`
               : `<ul class="people">${s.items.map((r) => personCard(r, { contact: true })).join("")}</ul>`}`).join("")).join("")}
         </details>` : ""}`;
       setParam("view", null);
